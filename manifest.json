@@ -1,16 +1,16 @@
 {
   "id": "dev.replugged.ThemeTemplate",
-  "name": "Theme Template",
-  "description": "A theme template",
+  "name": "Flashcord Alpha",
+  "description": "The world's most advanced and unnecessarily complicated Discord Theme to ever exist.",
   "author": {
-    "name": "replugged",
-    "discordID": "1000992611840049192",
-    "github": "replugged-org"
+    "name": "SiriusBYT",
+    "discordID": "311057290562371586",
+    "github": "SiriusBYT"
   },
-  "version": "1.0.0",
+  "version": "aSID-230630",
   "updater": {
     "type": "github",
-    "id": "replugged-org/theme-template"
+    "id": "SiriusBYT/flashcord"
   },
   "license": "MIT",
   "type": "replugged-theme",
