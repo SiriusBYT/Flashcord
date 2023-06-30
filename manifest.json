@@ -1,0 +1,18 @@
+{
+  "id": "dev.replugged.ThemeTemplate",
+  "name": "Theme Template",
+  "description": "A theme template",
+  "author": {
+    "name": "replugged",
+    "discordID": "1000992611840049192",
+    "github": "replugged-org"
+  },
+  "version": "1.0.0",
+  "updater": {
+    "type": "github",
+    "id": "replugged-org/theme-template"
+  },
+  "license": "MIT",
+  "type": "replugged-theme",
+  "main": "src/main.css"
+}
