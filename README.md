@@ -1,3 +1,3 @@
-# Replugged theme template
+# Flashcord Alpha
 
-See the [theme development guide](https://guide.replugged.dev/docs/themes/getting-started) for more information on using this template.
+Flashcord is the self proclaimed "most advanced Discord Theme" to date.
