@@ -1,5 +1,8 @@
 # Flashcord Alpha
 ![alt text](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/GFX_Flashcord/aSID-230630_Still.png)
+# Invite Access now Available to all Members of the [SGN Discord Server](https://discord.gg/z93kHwGuZt)!
+Just ask nicely and I may give you access to it :p
+
 ## If everything goes according to plan, the first public alpha of Flashcord will be available sometime in early July.
 Flashcord is the self proclaimed "most advanced Discord Theme" to date.
 
