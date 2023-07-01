@@ -22,3 +22,18 @@ Latest version is currently "aSID-230630" which is not available here for the pu
 
 #### Oh and of course it has Discord Dark Mode Support. (Only fully in Flashcord Beta and Above)
 ![alt text](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/GFX_Flashcord/aSID-230630_StillDark.png)
+
+##### Plugin Support
+
+Flashcord supports many pretty cool Repluged Plugins such as:
+
+[Platform Indicators by @puyodead1](https://replugged.dev/install?identifier=me.puyodead1.PlatformIndicators)
+
+[Staff Tags (in Crown Mode) by @puyodead1](https://replugged.dev/install?identifier=me.puyodead1.StaffTags)
+
+[Statistic Counter by @harley.0](https://replugged.dev/install?identifier=griefmodz/statistic-counter&source=github)
+
+[Badges Everywhere by @12944qwerty](https://replugged.dev/install?identifier=dev.kingfish.BadgesEverywhere)
+
+
+More plugins are expected to be supported in the future.
