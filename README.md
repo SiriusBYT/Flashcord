@@ -3,7 +3,7 @@
 # Invite Access now Available to all Members of the [SGN Discord Server](https://discord.gg/z93kHwGuZt)!
 Just ask nicely and I may give you access to it :p
 
-## If everything goes according to plan, the first public alpha of Flashcord will be available sometime in early July.
+## Flashcord Alpha will release PUBLICLY on the 14th of July 2023!
 Flashcord is the self proclaimed "most advanced Discord Theme" to date.
 
 Latest version is currently "aSID-230701" which is not available here for the pubic yet.
