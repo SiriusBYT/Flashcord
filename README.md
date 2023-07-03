@@ -1,4 +1,5 @@
-# This is Flashcord. The most advanced Discord Theme to date.
+# This is Flashcord.
+## The most advanced Discord Theme to date.
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-LMH.gif)
 ## Flashcord Alpha will release PUBLICLY on the 14th of July 2023!
 ### Invite Access now Available to all Members of the [SGN Discord Server](https://discord.gg/z93kHwGuZt).
@@ -9,13 +10,13 @@
 # While also being the pinacle of Customisable Eye Candy.
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-CBGR.gif)
 
-## Instructions and Tips
+## 💡 Instructions and Tips
 ℹ️ Flashcord is **NOT OUT YET!** These instructions are set in place in advance for future Flashcord users or for Closed Alpha Testers.
 
 ### ⚠️ Flashcord requires the "Channel Emojis" Discord Experiment for the best experience.
 Flashcord can work without this experiment, however without it, Flashcord looks more dead and less full of life, it is very recommended to enable that experiment.
 
-### User Variables
+### 🔁 User Variables
 The following variables can be changed to improve your Flashcord Experience.
 ```
 :root, body {
@@ -30,7 +31,7 @@ The following variables can be changed to improve your Flashcord Experience.
 }
 ```
 
-### Plugin Support
+### 💉 Plugin Support
 
 Flashcord supports many pretty cool Repluged Plugins such as:
 
