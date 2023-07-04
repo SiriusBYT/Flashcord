@@ -25,6 +25,8 @@ The following variables can be changed to improve your Flashcord Experience.
   --AnimMult-Normal: 1;
   --AnimMult-Slow: 1;
 
+  --Enable-Animations: 1; /* Self Explanatory, set to 0 to Disable */
+
   /* Curstom Background Customisation */
   --CustomBGR-IMG: url("https://sirio-network.com/flashcord/bgr-test.jpg");
   --CustomBGR-Filter: blur(16px) brightness(0.5);
@@ -43,5 +45,8 @@ Flashcord supports many pretty cool Repluged Plugins such as:
 
 [Badges Everywhere by @12944qwerty](https://replugged.dev/install?identifier=dev.kingfish.BadgesEverywhere)
 
+[ShowHiddenChannels by @loneweeb.tsx](https://replugged.dev/install?identifier=dev.tharki.ShowHiddenChannels)
+
+Plugin support ranges from simple alignment fixes to complete visual overhaul.
 
 More plugins are expected to be supported in the future.
