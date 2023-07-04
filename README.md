@@ -13,12 +13,17 @@
 ## 💡 Instructions and Tips
 ℹ️ Flashcord is **NOT OUT YET!** These instructions are set in place in advance for future Flashcord users or for Closed Alpha Testers.
 
+It is not recommended to use Flashcord on Low-End Systems, you could, but in that case, disable animations and transitions with the variables provides.
+
 ### ⚠️ Flashcord requires the "Channel Emojis" Discord Experiment for the best experience.
 Flashcord can work without this experiment, however without it, Flashcord looks more dead and less full of life, it is very recommended to enable that experiment.
 
-### 🛑 NOTICE ABOUT CUSTOM BACKGROUND: Requires "LegalDiscordBypass" or Discord Nitro
+### 🛑 NOTICE ABOUT CUSTOM IMAGE BACKGROUNDS: Requires "LegalDiscordBypass" or Discord Nitro
 Due to the complexity of Flashcord, it is better to seperate the Custom Background Image Theme into another one, problem is that the only other "it just works" theme is a Discord Nitro theme. 
 Using the plugin [LegalDiscordBypasses by @loneweeb.tsx](https://replugged.dev/install?identifier=dev.tharki.LegalDiscordBypasses) is thus necessary if you wanna use said feature without Nitro.
+![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/DiscordCanary_6RUcvA0asO.png)
+Choosing any of those themes will activate the Custom IMG mode. It is recommended to use a dark themed one for visibility reasons.
+
 
 ### 🔁 User Variables
 The following variables can be changed to improve your Flashcord Experience.
