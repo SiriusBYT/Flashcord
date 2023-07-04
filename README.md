@@ -30,6 +30,8 @@ The following variables can be changed to improve your Flashcord Experience.
   /* Curstom Background Customisation */
   --CustomBGR-IMG: url("https://sirio-network.com/flashcord/bgr-test.jpg");
   --CustomBGR-Filter: blur(16px) brightness(0.5);
+
+  --Friend-Redesign: flex; /* If you are having severe issues in the friends tab because you have too many friends, set this to block */
 }
 ```
 
