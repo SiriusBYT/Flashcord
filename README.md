@@ -16,6 +16,10 @@
 ### ⚠️ Flashcord requires the "Channel Emojis" Discord Experiment for the best experience.
 Flashcord can work without this experiment, however without it, Flashcord looks more dead and less full of life, it is very recommended to enable that experiment.
 
+### 🛑 NOTICE ABOUT CUSTOM BACKGROUND: Requires "LegalDiscordBypass" or Discord Nitro
+Due to the complexity of Flashcord, it is better to seperate the Custom Background Image Theme into another one, problem is that the only other "it just works" theme is a Discord Nitro theme. 
+Using the plugin [LegalDiscordBypasses by @loneweeb.tsx](https://replugged.dev/install?identifier=dev.tharki.LegalDiscordBypasses) is thus necessary if you wanna use said feature without Nitro.
+
 ### 🔁 User Variables
 The following variables can be changed to improve your Flashcord Experience.
 ```
@@ -27,7 +31,7 @@ The following variables can be changed to improve your Flashcord Experience.
 
   --Enable-Animations: 1; /* Self Explanatory, set to 0 to Disable */
 
-  /* Curstom Background Customisation */
+  /* Custom Background Customisation */
   --CustomBGR-IMG: url("https://sirio-network.com/flashcord/bgr-test.jpg");
   --CustomBGR-Filter: blur(16px) brightness(0.5);
 
