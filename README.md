@@ -58,6 +58,8 @@ Flashcord supports many pretty cool Repluged Plugins such as:
 
 [ShowHiddenChannels by @loneweeb.tsx](https://replugged.dev/install?identifier=dev.tharki.ShowHiddenChannels)
 
+[ReMessageLogger by @sammcheese](https://replugged.dev/install?identifier=SammCheese/ReMessageLogger&source=github)
+
 Plugin support ranges from simple alignment fixes to complete visual overhaul.
 
 More plugins are expected to be supported in the future.
