@@ -41,6 +41,8 @@ The following variables can be changed to improve your Flashcord Experience.
   --CustomBGR-Filter: blur(16px) brightness(0.5);
 
   --Friend-Redesign: flex; /* If you are having severe issues in the friends tab because you have too many friends, set this to block */
+
+  --Brand-Mode: 1; /* Setting this to 0 disables most of the Flashcord Swag for specific users. */
 }
 ```
 
