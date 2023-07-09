@@ -29,6 +29,11 @@ Choosing any of those themes will activate the Custom IMG mode. It is recommende
 The following variables can be changed to improve your Flashcord Experience.
 ```
 :root, body {
+  /* Control Blur Intensity, recommended to set to 0px on low end systems. */
+  --BlurInt-Big: 16px;
+  --BlurInt-Med: 8px;
+  --BlurInt-Sma: 4px;
+
   /* Control the Transition Speed of Elements. Set to 0 to Disable.*/
   --AnimMult-Fast: 1;
   --AnimMult-Normal: 1;
@@ -65,3 +70,6 @@ Flashcord supports many pretty cool Repluged Plugins such as:
 Plugin support ranges from simple alignment fixes to complete visual overhaul.
 
 More plugins are expected to be supported in the future.
+
+
+## [Flashcord](https://github.com/SiriusBYT/flashcord) © 2023 by [SiriusBYT](https://sirio-network.com) is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
