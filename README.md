@@ -13,7 +13,7 @@
 ## 💡 Instructions and Tips
 ℹ️ Flashcord is **NOT OUT YET!** These instructions are set in place in advance for future Flashcord users or for Closed Alpha Testers.
 
-It is not recommended to use Flashcord on Low-End Systems, you could, but in that case, disable animations and transitions with the variables provides.
+It is not recommended to use Flashcord on Low-End Systems, you could, but in that case, disable animations and transitions with the variables provided.
 
 ### ⚠️ Flashcord requires the "Channel Emojis" Discord Experiment for the best experience.
 Flashcord can work without this experiment, however without it, Flashcord looks more dead and less full of life, it is very recommended to enable that experiment.
@@ -26,9 +26,11 @@ Choosing any of those themes will activate the Custom IMG mode. It is recommende
 
 
 ### 🔁 User Variables
-The following variables can be changed to improve your Flashcord Experience.
+The following variables can be changed to improve your Flashcord Experience. The values specified for each variable are their default values. 
+
+If you are running Flashcord SID, your variables **must be after the "@import" line**.
 ```
-:root, body {
+* {
   /* Control Blur Intensity, recommended to set to 0px on low end systems. */
   --BlurInt-Big: 16px;
   --BlurInt-Med: 8px;
@@ -45,9 +47,11 @@ The following variables can be changed to improve your Flashcord Experience.
   --CustomBGR-IMG: url("https://sirio-network.com/flashcord/bgr-test.jpg");
   --CustomBGR-Filter: blur(16px) brightness(0.5);
 
-  --Friend-Redesign: flex; /* If you are having severe issues in the friends tab because you have too many friends, set this to block */
+  /* If you are having severe issues in the friends tab because you have too many friends, set this to block */
+  --Friend-Redesign: flex; 
 
-  --Brand-Mode: 1; /* Setting this to 0 disables most of the Flashcord Swag for specific users. */
+  /* Setting this to 0 disables most of the Flashcord Swag for specific users. */
+  --Brand-Mode: 1; 
 }
 ```
 
@@ -71,5 +75,18 @@ Plugin support ranges from simple alignment fixes to complete visual overhaul.
 
 More plugins are expected to be supported in the future.
 
+## 🔥 Switching from Stable to Flashcord SID
+Flashcord SID is the very much unstable version of Flashcord. **Unlike Flashcord Stable, who's getting updates every week, SID gets updated every night** on average around 21:30 UTC+01.
 
-## [Flashcord](https://github.com/SiriusBYT/flashcord) © 2023 by [SiriusBYT](https://sirio-network.com) is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+⚠️ You cannot decide if you wanna update or not with Flashcord SID, it updates as soon as your client fetches for Flashcord's code.
+### It is SERIOUSLY NOT recommended to switch to SID. The Closed Alpha testers can tell you that when aSID-230703 came out, everyone died in pain and agony.
+To switch to Flashcord SID, please **Paste the Following Line** into your **Quick CSS** and then click on **"Apply Changes"**
+```
+Instructions are currently not available as Flashcord isn't out yet.
+```
+To force update Flashcord SID, open the **DevTools** (CTRL + SHIFT + I), head over to the **Network** Tab, then check **"Disable Cache"** and click on **"Apply Changes"**.
+
+ℹ️ Make sure to also not have Flashcord Stable still enabled after switching to SID to prevent code conflicts.
+
+
+##### [Flashcord](https://github.com/SiriusBYT/flashcord) © 2023 by [SiriusBYT](https://sirio-network.com) is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
