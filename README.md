@@ -15,6 +15,8 @@
 
 It is not recommended to use Flashcord on Low-End Systems, you could, but in that case, disable animations and transitions with the variables provided.
 
+Flashcord recommends using **Discord Canary** as it was made on it.
+
 ### ⚠️ Flashcord requires the "Channel Emojis" Discord Experiment for the best experience.
 Flashcord can work without this experiment, however without it, Flashcord looks more dead and less full of life, it is very recommended to enable that experiment.
 
@@ -88,5 +90,16 @@ To force update Flashcord SID, open the **DevTools** (CTRL + SHIFT + I), head ov
 
 ℹ️ Make sure to also not have Flashcord Stable still enabled after switching to SID to prevent code conflicts.
 
+## ✅ Platform Compatibility
+
+| Platform      | Replugged                | BetterDiscord             |
+|:-------------|:--------------------------|:--------------------------|
+| 🪟 Windows   | ✅ Perfect Compatibility | ❓Unknown Compatibility   |
+| 🍎 MacOS     | ☑️ Seems Perfectly Fine  | ❓Unknown Compatibility   |
+| 🐧 GNU/Linux | ❓Unknown Compatibility  | ⚠️ Minor Issues           |
+
+| 📱 Enmity (iOS)     | ☎️ Android             |
+|:--------------------|:------------------------|
+| ⛔ Color Theme Only | ⛔ Unsupported for now |
 
 ##### [Flashcord](https://github.com/SiriusBYT/flashcord) © 2023 by [SiriusBYT](https://sirio-network.com) is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
