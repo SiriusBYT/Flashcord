@@ -53,7 +53,10 @@ If you are running Flashcord SID, your variables **must be after the "@import" l
   --Friend-Redesign: flex; 
 
   /* Setting this to 0 disables most of the Flashcord Swag for specific users. */
-  --Brand-Mode: 1; 
+  --Brand-Mode: 1;
+
+  /* High End Systems Only. Puts a bunch more random crap that looks cool but blows computers up */
+  --Iridescent-Mode: 0;
 }
 ```
 
