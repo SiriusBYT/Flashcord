@@ -28,6 +28,14 @@ Using the plugin [LegalDiscordBypasses by @loneweeb.tsx](https://replugged.dev/i
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/DiscordCanary_6RUcvA0asO.png)
 Choosing any of those themes will activate the Custom IMG mode. It is recommended to use a dark themed one for visibility reasons.
 
+### 🎉 Flashcord Chat Effects
+
+Adding any of these URLs at the end of your Discord message will add a special effect to your message. This is an experimental feature that is currently being rolled out to only certain people or places.
+```
+Rainbow Text Effect: http://flashcord/rainbow
+Small Text Effect: http://flashcord/small
+Shake Effect: http://flashcord/shake
+```
 
 ### 🔁 User Variables
 The following variables can be changed to improve your Flashcord Experience. The values specified for each variable are their default values. 
