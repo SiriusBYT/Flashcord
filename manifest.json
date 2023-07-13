@@ -7,12 +7,12 @@
     "discordID": "311057290562371586",
     "github": "SiriusBYT"
   },
-  "version": "aSID-230714",
+  "version": "aSTB-230714",
   "updater": {
     "type": "github",
     "id": "SiriusBYT/flashcord"
   },
-  "license": "CC BY-NC-ND 4.0",
+  "license": "[Flashcord] © 2023 by [SiriusBYT] is licensed under [CC BY-NC-ND 4.0].",
   "type": "replugged-theme",
   "main": "src/main.css"
 }
