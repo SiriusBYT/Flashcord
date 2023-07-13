@@ -1,8 +1,7 @@
 # This is Flashcord.
 ## The most advanced Discord Theme to date.
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-LMH.gif)
-## Flashcord Alpha will release PUBLICLY on the 14th of July 2023!
-### Invite Access now Available to all Members of the [SGN Discord Server](https://discord.gg/z93kHwGuZt).
+## Flashcord Alpha is releasing publicly extremely soon.
 [Available for Repluged](https://replugged.dev/install?identifier=SiriusBYT/flashcord&source=github), BetterDiscord support will come later as it causes issue with certain things as it injects extra classes which somehow interfere with Flashcord.
 
 # Flashcord is all about Maximising your Chat Space,
@@ -10,10 +9,13 @@
 # While also being the pinacle of Customisable Eye Candy.
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-CBGR.gif)
 
-## 💡 Instructions and Tips
-ℹ️ Flashcord is **NOT OUT YET!** These instructions are set in place in advance for future Flashcord users or for Closed Alpha Testers.
+## 🔄️ Flashcord Version Status
+🦺 Flashcord Stable: [aSTB-Unreleased] | **0 Updates Behind Flashcord SID.**
 
-It is not recommended to use Flashcord on Low-End Systems, you could, but in that case, disable animations and transitions with the variables provided.
+🔥 Flashcord SID: [aSID-230713] | **2 Days without an Emergency Hotfix Update.**
+
+## 💡 Instructions and Tips
+ℹ️ It is not recommended to use Flashcord on Low-End Systems, you could, but in that case, disable animations, transitions and especially blur with the variables provided.
 
 Flashcord recommends using **Discord Canary** as it was made on it.
 
@@ -76,6 +78,8 @@ Flashcord supports many pretty cool Repluged Plugins such as:
 
 [ReMessageLogger by @sammcheese](https://replugged.dev/install?identifier=SammCheese/ReMessageLogger&source=github)
 
+[Channel Typing by @asportnoy](https://replugged.dev/install?identifier=dev.albertp.ChannelTyping)
+
 Plugin support ranges from simple alignment fixes to complete visual overhaul.
 
 More plugins are expected to be supported in the future.
@@ -103,6 +107,6 @@ To force update Flashcord SID, open the **DevTools** (CTRL + SHIFT + I), head ov
 
 | 📱 Enmity (iOS)     | ☎️ Android             |
 |:--------------------|:------------------------|
-| ⛔ Color Theme Only | ⛔ Unsupported for now |
+| [⛔ Color Theme Only](https://github.com/SiriusBYT/flashcord-ios) | ⛔ Unsupported for now |
 
 ##### [Flashcord](https://github.com/SiriusBYT/flashcord) © 2023 by [SiriusBYT](https://sirio-network.com) is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
