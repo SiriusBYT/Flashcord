@@ -1,46 +1,5 @@
-/* Have this while the theme is still private, Dark mode may look bad. */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-:root, body {
-  --font-primary: "Roboto";
-  --font-display: "Roboto";
-  --font-headline: "Roboto";
+/* REMINDER: Please read LISCENCE.MD before modifying Flashcord.
+[Flashcord] © 2023 by [SiriusBYT] is licensed under [CC BY-NC-ND 4.0].
+*/
 
-  --Flashcord-Branch: "Flashcord Alpha";
-  --Flashcord-Channel: "aPRELAUNCH";
-  --Flashcord-Version: "NULL";
-  
-  background: #000000;
-}
-::-webkit-scrollbar, .arrow-2HswgU.icon-3zI3d2, .wordmarkWindows-2dq6rw, .closeButton-PCZcma svg, .icon-2W8DHg, .content-1gYQeQ:has(.children-1MGS9G) .children-1MGS9G, .field-21XZwa.fieldSpacerBottom-3xUCTB, .userInfo-regn9W .button-ejjZWC.lookFilled-1H2Jvj.colorBrand-2M3O3N.sizeSmall-3R2P2p.grow-2T4nbg, .usernameRow-1x50RR:has(.h5-2feg8J.eyebrow-2wJAoF.fieldTitle-2g5r_V) h3, .bannerSVGWrapper-2CLfzN mask, .overflowMenuButton-1I3Jz1 {
-  display: none;
-}
-.theme-light {
-      --background-primary: #FFFFFF;
-      --background-secondary: #FFFFFF;
-      --background-secondary-alt: #FFFFFF;
-      --background-tertiary: #FFFFFF;
-      --background-accent: #FF99FF;
-      --background-floating: #FFF9FF;
-      --background-nested-floating: ##FF0000; /* Unknown Location */
-}
-
-.theme-dark {
-      --background-primary: #000000;
-      --background-secondary: #000000;
-      --background-secondary-alt: #000000;
-      --background-tertiary: #000000;
-      --background-accent: #660066;
-      --background-floating: #666966;
-      --background-nested-floating: ##FF0000; /* Unknown Location */
-}
-
-.contentColumn-1C7as6:has(#replugged-quickcss-wrapper .cm-editor) .divider-3nqZNm:before, .contentColumn-1C7as6:has(.replugged-addon-cards) .divider-3nqZNm:before  {
-  content: 'Flashcord Alpha is currently still in Closed Access. \A Come back later when it is publicly available!';
-  position: absolute;
-  top: 80px;
-  white-space: pre;
-}
-
-.platform-win body > :before { /* Flashcord Version */
-  content: var(--Flashcord-Branch)" | Version "var(--Flashcord-Channel) "-" var(--Flashcord-Version)"  [PRE-LAUNCH VERSION] - Report any bugs in the #🐞sgn-issues-reports channel on the SGN Server.";
-}
+/* Flashcord Alpha aSTB-230714's code would go here, if it was out. */
