@@ -2,15 +2,15 @@
 ## The most advanced Discord Theme to date.
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-LMH.gif)
 ## Flashcord Alpha is releasing publicly extremely soon.
-[Available for Repluged](https://replugged.dev/install?identifier=SiriusBYT/flashcord&source=github), BetterDiscord support will come later as it causes issue with certain things as it injects extra classes which somehow interfere with Flashcord.
+[Available for Repluged](https://replugged.dev/install?identifier=SiriusBYT/flashcord&source=github) Clients, BetterDiscord support will come later as it causes issue with certain things as it injects extra classes which somehow interfere with Flashcord.
 
-# Flashcord is all about Maximising your Chat Space,
+# Flashcord is all about Maximising your Chat Space.
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-DKM.gif)
 # While also being the pinacle of Customisable Eye Candy.
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-CBGR.gif)
 
 ## 🔄️ Flashcord Version Status
-🦺 Flashcord Stable: [aSTB-Unreleased] | **0 Updates Behind Flashcord SID.**
+🦺 Flashcord Stable: [aSTB-230714 ] | **0 Updates Behind Flashcord SID.** | 🌐 Root Code Base: aSID-230714
 
 🔥 Flashcord SID: [aSID-230713] | **2 Days without an Emergency Hotfix Update.**
 
