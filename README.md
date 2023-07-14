@@ -1,7 +1,7 @@
 # This is Flashcord.
 ## The most advanced Discord Theme to date.
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-LMH.gif)
-## Flashcord Alpha is releasing publicly later today.
+## Flashcord is currently in Early Alpha.
 [Available for Repluged](https://replugged.dev/install?identifier=SiriusBYT/flashcord&source=github) Clients, BetterDiscord support will come later as it causes issue with certain things as it injects extra classes which somehow interfere with Flashcord.
 
 # Flashcord is all about Maximising your Chat Space.
@@ -10,9 +10,9 @@
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-CBGR.gif)
 
 ## 🔄️ Flashcord Version Status
-🦺 Flashcord Stable: [aSTB-230714] | **0 Updates Behind Flashcord SID.** | 🌐 Root Code Base: aSID-230714
+🦺 Flashcord Stable: [aSTB-230714] | **0 Updates Behind Flashcord SID.** | 🌐 Root Code Base: aSID-230714-HF1
 
-🔥 Flashcord SID: [aSID-230714] | **3 Days without an Emergency Hotfix Update.**
+🔥 Flashcord SID: [aSID-230714-HF1] | **0 Days without an Emergency Hotfix Update.**
 
 ## 💡 Instructions and Tips
 ℹ️ It is not recommended to use Flashcord on Low-End Systems, you could, but in that case, disable animations, transitions and especially blur with the variables provided.
