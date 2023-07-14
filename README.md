@@ -1,7 +1,7 @@
 # This is Flashcord.
 ## The most advanced Discord Theme to date.
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-LMH.gif)
-## Flashcord Alpha is releasing publicly extremely soon.
+## Flashcord Alpha is releasing publicly later today.
 [Available for Repluged](https://replugged.dev/install?identifier=SiriusBYT/flashcord&source=github) Clients, BetterDiscord support will come later as it causes issue with certain things as it injects extra classes which somehow interfere with Flashcord.
 
 # Flashcord is all about Maximising your Chat Space.
