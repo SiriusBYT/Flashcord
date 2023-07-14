@@ -10,9 +10,9 @@
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-CBGR.gif)
 
 ## 🔄️ Flashcord Version Status
-🦺 Flashcord Stable: [aSTB-230714 ] | **0 Updates Behind Flashcord SID.** | 🌐 Root Code Base: aSID-230714
+🦺 Flashcord Stable: [aSTB-230714] | **0 Updates Behind Flashcord SID.** | 🌐 Root Code Base: aSID-230714
 
-🔥 Flashcord SID: [aSID-230713] | **2 Days without an Emergency Hotfix Update.**
+🔥 Flashcord SID: [aSID-230714] | **3 Days without an Emergency Hotfix Update.**
 
 ## 💡 Instructions and Tips
 ℹ️ It is not recommended to use Flashcord on Low-End Systems, you could, but in that case, disable animations, transitions and especially blur with the variables provided.
