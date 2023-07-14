@@ -108,7 +108,7 @@ Flashcord SID is the very much unstable version of Flashcord. **Unlike Flashcord
 ### It is SERIOUSLY NOT recommended to switch to SID. The Closed Alpha testers can tell you that when aSID-230703 came out, everyone died in pain and agony.
 To switch to Flashcord SID, please **Paste the Following Line** into your **Quick CSS** and then click on **"Apply Changes"**
 ```
-Instructions are currently not available as Flashcord isn't out yet.
+Instructions are currently not available. The SID branch is under closed invite.
 ```
 To force update Flashcord SID, open the **DevTools** (CTRL + SHIFT + I), head over to the **Network** Tab, then check **"Disable Cache"** and click on **"Apply Changes"**.
 
