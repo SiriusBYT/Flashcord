@@ -30,12 +30,16 @@ Choosing any of those themes will activate the Custom IMG mode. It is recommende
 
 ### 🎉 Flashcord Chat Effects
 
-Adding any of these URLs at the end of your Discord message will add a special effect to your message. This is an experimental feature that is currently being rolled out to only certain people or places.
+Adding any of these URLs at the end of your Discord message will add a special effect to your message.
 ```
 Rainbow Text Effect: http://flashcord/rainbow
 Small Text Effect: http://flashcord/small
 Shake Effect: http://flashcord/shake
+Dramatic Effect: http://flashcord/dramatic
+
+You can use markdown to hide the link to non-flashcord users. Example: [This message has a Flashcord Chat Effect. Install it to view the effect.](http://flashcord/rainbow)
 ```
+If these effects cause way too much lag, **consider disablming them using the variable provided below**.
 
 ### 🔁 User Variables
 The following variables can be changed to improve your Flashcord Experience. The values specified for each variable are their default values. 
@@ -53,7 +57,8 @@ If you are running Flashcord SID, your variables **must be after the "@import" l
   --AnimMult-Normal: 1;
   --AnimMult-Slow: 1;
 
-  --Enable-Animations: 1; /* Self Explanatory, set to 0 to Disable */
+  /* Self Explanatory, set to 0 to Disable. [!] DOES NOT DISABLE CHAT EFFECTS */
+  --Enable-Animations: 1;
 
   /* Custom Background Customisation */
   --CustomBGR-IMG: url("https://sirio-network.com/flashcord/bgr-test.jpg");
@@ -67,6 +72,10 @@ If you are running Flashcord SID, your variables **must be after the "@import" l
 
   /* High End Systems Only. Puts a bunch more random crap that looks cool but blows computers up */
   --Iridescent-Mode: 0;
+
+  /* Enable Chat Effects, disabling them will stop their animations. (Set to 0 to disable) */
+  --Enable-ChatEffects: 1;
+
 }
 ```
 
