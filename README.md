@@ -9,6 +9,17 @@
 # While also being the pinacle of Customisable Eye Candy.
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-CBGR.gif)
 
+# ⬇️ Installing Flashcord Stable
+To install Flashcord, for Repluged Users, simply click [here](https://replugged.dev/install?identifier=SiriusBYT/flashcord&source=github). If you get a warning about Flashcord not being verified by the Repluged Team, ignore them and blame them or I don't know. Being "store" compliant takes time. Flashcord is pure CSS anyways, it cannot do anything to your computer.
+To install Flashcord on other Clients such as BetterDiscord, add the following line at the very top of your QuickCSS:
+```
+@import url("https://raw.githubusercontent.com/SiriusBYT/flashcord/main/src/main.css");
+```
+The instructions to install Flashcord SID are the same across all clients. Check the section about SID to learn more and how to install Flashcord SID instead.
+
+After that, make sure to read the Instructions and Tips tab to make sure you get the full Flashcord Experience!
+
+
 ## 🔄️ Flashcord Version Status
 🦺 Flashcord Stable: [aSTB-230714] | **0 Updates Behind Flashcord SID.** | 🌐 Root Code Base: aSID-230714-HF1
 
