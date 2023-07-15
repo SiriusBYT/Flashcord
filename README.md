@@ -21,9 +21,9 @@ After that, make sure to read the Instructions and Tips tab to make sure you get
 
 
 ## 🔄️ Flashcord Version Status
-🦺 Flashcord Stable: [aSTB-230714] | **0 Updates Behind Flashcord SID.** | 🌐 Root Code Base: aSID-230714-HF1
+🦺 Flashcord Stable: [aSTB-230714] | **1 Update Behind Flashcord SID.** | 🌐 Root Code Base: aSID-230714-HF1
 
-🔥 Flashcord SID: [aSID-230714-HF1] | **0 Days without an Emergency Hotfix Update.**
+🔥 Flashcord SID: [aSID-230715] | **0 Days without an Emergency Hotfix Update.**
 
 ## 💡 Instructions and Tips
 ℹ️ It is not recommended to use Flashcord on Low-End Systems, you could, but in that case, disable animations, transitions and especially blur with the variables provided.
@@ -43,10 +43,14 @@ Choosing any of those themes will activate the Custom IMG mode. It is recommende
 
 Adding any of these URLs at the end of your Discord message will add a special effect to your message.
 ```
-Rainbow Text Effect: http://flashcord/rainbow
-Small Text Effect: http://flashcord/small
-Shake Effect: http://flashcord/shake
-Dramatic Effect: http://flashcord/dramatic
+(aSID-230714+) Rainbow Text Effect: http://flashcord/rainbow
+(aSID-230714+) Small Text Effect: http://flashcord/small
+(aSID-230714+) Shake Effect: http://flashcord/shake
+(aSID-230714+) Dramatic Effect: http://flashcord/dramatic
+
+(aSID-230715+) Red Background Message: http://flashcord/background/red
+(aSID-230715+) Green Background Message: http://flashcord/background/green
+(aSID-230715+) Blue Background Message: http://flashcord/background/blue
 
 You can use markdown to hide the link to non-flashcord users. Example: [This message has a Flashcord Chat Effect. Install it to view the effect.](http://flashcord/rainbow)
 ```
@@ -86,6 +90,9 @@ If you are running Flashcord SID, your variables **must be after the "@import" l
 
   /* Enable Chat Effects, disabling them will stop their animations. (Set to 0 to disable) */
   --Enable-ChatEffects: 1;
+
+  /* See the Flashcord Benchmark Channel on the SGN Discord Server for more information. This is not very useful honestly. */
+  --Flashcord-Benchmark: 0;
 
 }
 ```
@@ -136,5 +143,62 @@ To force update Flashcord SID, open the **DevTools** (CTRL + SHIFT + I), head ov
 | 📱 Enmity (iOS)     | ☎️ Android             |
 |:--------------------|:------------------------|
 | [⛔ Color Theme Only](https://github.com/SiriusBYT/flashcord-ios) | ⛔ Unsupported for now |
+
+## 💾 Flashcord Archive
+### This archive is currently not available. It will be later.
+Older versions of Flashcord are available on the [Sirio Network Website](https://sirio-network.com).
+To use an older version of Flashcord, add this to your QuickCSS while replacing [Branch] by either STB (Stable) or SID and [Version Number].
+```
+@import url("https://sirio-network.com/flashcord/archive/[Status][Branch]-[Version Number].css");
+
+Valid Example:
+@import url("https://sirio-network.com/flashcord/archive/aSID-230715.css");
+```
+
+### Available Versions
+#### Flashcord Stable Archive
+-  aSTB-230714
+
+#### Flashcord SID Archive
+-  aSID-230714
+-
+  -  aSID-230714-HF1
+-  aSID-230713
+-  aSID-230712
+-  aSID-230711
+
+  -  aSID-230711-HF1
+-  aSID-230710
+-  aSID-230709
+-
+  -  aSID-230709-HF1
+-  aSID-230708
+-  aSID-230707
+-  aSID-230706
+-  aSID-230705
+-
+  -  aSID-230705-HF1
+-  aSID-230704
+-  aSID-230703
+-
+  -  aSID-230703-HF1
+  -  aSID-230703-HF2
+  -  aSID-230703-HF3
+  -  aSID-230703-HF4
+  -  aSID-230703-HF5
+-  aSID-230702
+-  aSID-230701
+-  aSID-230630
+-  aSID-230629
+-
+  -  aSID-230629-HF1
+  -  aSID-230629-HF2
+-  aSID-230628
+-
+  -  aSID-230628-HF1
+-  aSID-230627
+-  aSID-230626
+
+If for some reason you wanna go even further back, way back before Flashcord's rewrite, check out [Flashcord Legacy](https://github.com/SiriusBYT/flashcord-legacy). It's not a good idea though.
 
 ##### [Flashcord](https://github.com/SiriusBYT/flashcord) © 2023 by [SiriusBYT](https://sirio-network.com) is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
