@@ -1,5 +1,13 @@
 # Here is an archive of all the Flashcord Changelogs posted inside the annoncement channel of the SGN Discord Server.
 
+**[  @📸 Flashcord Closed Alpha Tester  ]** ***New Alpha SID Build (230715)***
+This new update features:
+- Chat Effects: Some Background Colors (check github)
+- Attempts to fix performance (it's still awful right now)
+- Added FlashBench (Benchmark)
+- Better Image Focus Modal
+- Bug Fixes [This message has a green background, get Flashcord aSID-230715 or above to see it.](http://flashcord/background/green)
+- 
 **[  @📸 Flashcord Closed Alpha Tester  ]** ***New Alpha SID Build (230714) - "OSHIT FLASHCORD RELEASES TODAY"***
 This new update features:
 - Added chat effects, look up on how to use them on the GitHub.
