@@ -92,7 +92,7 @@ If you are running Flashcord SID, your variables **must be after the "@import" l
   --Enable-ChatEffects: 1;
 
   /* See the Flashcord Benchmark Channel on the SGN Discord Server for more information. This is not very useful honestly. */
-  --Flashcord-Benchmark: 0;
+  --Flashbench: 0;
 
 }
 ```
