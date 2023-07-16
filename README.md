@@ -10,7 +10,7 @@
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-CBGR.gif)
 
 # ⬇️ Installing Flashcord Stable
-To install Flashcord, for Replugged Users, simply click [here](https://replugged.dev/install?identifier=SiriusBYT/flashcord&source=github). If you get a warning about Flashcord not being verified by the Repluged Team, ignore them and blame them or I don't know. Being "store" compliant takes time. Flashcord is pure CSS anyways, it cannot do anything to your computer.
+To install Flashcord, for Replugged Users, simply click [here](https://replugged.dev/install?identifier=SiriusBYT/flashcord&source=github). If you get a warning about Flashcord not being verified by the Replugged Team, ignore them and blame them or I don't know. Being "store" compliant takes time. Flashcord is pure CSS anyways, it cannot do anything to your computer.
 To install Flashcord on other Clients such as BetterDiscord, add the following line at the very top of your QuickCSS:
 ```
 @import url("https://raw.githubusercontent.com/SiriusBYT/flashcord/main/src/main.css");
@@ -99,7 +99,7 @@ If you are running Flashcord SID, your variables **must be after the "@import" l
 
 ### 💉 Plugin Support
 
-Flashcord supports many pretty cool Repluged Plugins such as:
+Flashcord supports many pretty cool Replugged Plugins such as:
 
 [Platform Indicators by @puyodead1](https://replugged.dev/install?identifier=me.puyodead1.PlatformIndicators)
 
