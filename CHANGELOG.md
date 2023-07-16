@@ -1,5 +1,19 @@
 # Here is an archive of all the Flashcord Changelogs posted inside the annoncement channel of the SGN Discord Server.
 
+**[  @📸Flashcord Annoncements ]** ***New Alpha Stable Build (230714_HF1)***
+This new update features:
+- **EXTREMELY MAJOR PERFORMANCE IMPROVEMENTS. SERIOUSLY PLEASE UPDATE**
+- Brain fart fix: removing the text that assumed you were running SID
+- Finalized the Profile Modal 
+- Imported bug fixes from aSID-230716 and aSID-230715 [This message has a green background, get Flashcord aSID-230715 or above to see it.](http://flashcord/background/green)
+
+MISSING FEATURES FROM SID:
+- Flashcord Benchmark
+- Chat Effect Backgrounds
+- Improved Image Focus
+
+[Note: It may take time before the update actually happens]
+
 **[  @📸 Flashcord Closed Alpha Tester  ]** ***New Alpha SID Build (230716)***
 This new update features:
 - **EXTREMELY MAJOR PERFORMANCE IMPROVEMENTS. SERIOUSLY PLEASE UPDATE**
