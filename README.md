@@ -21,7 +21,7 @@ After that, make sure to read the Instructions and Tips tab to make sure you get
 
 
 ## 🔄️ Flashcord Version Status
-🦺 Flashcord Stable: [aSTB-230714] | **2 Update Behind Flashcord SID.** | 🌐 Root Code Base: aSID-230714-HF1
+🦺 Flashcord Stable: [aSTB-230714_HF1] | **2 Update Behind Flashcord SID.** | 🌐 Root Code Base: aSID-230714-HF1
 
 🔥 Flashcord SID: [aSID-230716] | **2 Days without an Emergency Hotfix Update.**
 
@@ -157,6 +157,8 @@ Valid Example:
 ### Available Versions
 #### Flashcord Stable Archive
 -  aSTB-230714
+-
+  -  aSTB-230714_HF1
 
 #### Flashcord SID Archive.
 -  aSID-230716
