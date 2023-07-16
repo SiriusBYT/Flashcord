@@ -1,5 +1,11 @@
 # Here is an archive of all the Flashcord Changelogs posted inside the annoncement channel of the SGN Discord Server.
 
+**[  @📸 Flashcord Closed Alpha Tester  ]** ***New Alpha SID Build (230716)***
+This new update features:
+- **EXTREMELY MAJOR PERFORMANCE IMPROVEMENTS. SERIOUSLY PLEASE UPDATE**
+- Finalized the Profile Modal
+- Bug Fixes [This message has a green background, get Flashcord aSID-230715 or above to see it.](http://flashcord/background/green)
+- 
 **[  @📸 Flashcord Closed Alpha Tester  ]** ***New Alpha SID Build (230715)***
 This new update features:
 - Chat Effects: Some Background Colors (check github)
