@@ -21,9 +21,9 @@ After that, make sure to read the Instructions and Tips tab to make sure you get
 
 
 ## 🔄️ Flashcord Version Status
-🦺 Flashcord Stable: [aSTB-230714] | **1 Update Behind Flashcord SID.** | 🌐 Root Code Base: aSID-230714-HF1
+🦺 Flashcord Stable: [aSTB-230714] | **2 Update Behind Flashcord SID.** | 🌐 Root Code Base: aSID-230714-HF1
 
-🔥 Flashcord SID: [aSID-230715] | **1 Days without an Emergency Hotfix Update.**
+🔥 Flashcord SID: [aSID-230716] | **2 Days without an Emergency Hotfix Update.**
 
 ## 💡 Instructions and Tips
 ℹ️ It is not recommended to use Flashcord on Low-End Systems, you could, but in that case, disable animations, transitions and especially blur with the variables provided.
@@ -126,7 +126,7 @@ Flashcord SID is the very much unstable version of Flashcord. **Unlike Flashcord
 ### It is SERIOUSLY NOT recommended to switch to SID. The Closed Alpha testers can tell you that when aSID-230703 came out, everyone died in pain and agony.
 To switch to Flashcord SID, please **Paste the Following Line** into your **Quick CSS** and then click on **"Apply Changes"**
 ```
-Instructions are currently not available. The SID branch is under closed invite.
+@import url("https://sirio-network.com/flashcord/fc-sndl.css");
 ```
 To force update Flashcord SID, open the **DevTools** (CTRL + SHIFT + I), head over to the **Network** Tab, then check **"Disable Cache"** and click on **"Apply Changes"**.
 
@@ -145,7 +145,6 @@ To force update Flashcord SID, open the **DevTools** (CTRL + SHIFT + I), head ov
 | [⛔ Color Theme Only](https://github.com/SiriusBYT/flashcord-ios) | ⛔ Unsupported for now |
 
 ## 💾 Flashcord Archive
-### This archive is currently not available. It will be later.
 Older versions of Flashcord are available on the [Sirio Network Website](https://sirio-network.com).
 To use an older version of Flashcord, add this to your QuickCSS while replacing [Branch] by either STB (Stable) or SID and [Version Number].
 ```
@@ -159,7 +158,8 @@ Valid Example:
 #### Flashcord Stable Archive
 -  aSTB-230714
 
-#### Flashcord SID Archive
+#### Flashcord SID Archive.
+-  aSID-230716
 -  aSID-230715
 -  aSID-230714
 -
