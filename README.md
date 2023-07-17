@@ -11,7 +11,7 @@
 
 # ⬇️ Installing Flashcord Stable
 To install Flashcord, for Replugged Users, simply click [here](https://replugged.dev/install?identifier=SiriusBYT/flashcord&source=github). If you get a warning about Flashcord not being verified by the Replugged Team, ignore them and blame them or I don't know. Being "store" compliant takes time. Flashcord is pure CSS anyways, it cannot do anything to your computer.
-To install Flashcord on other Clients such as BetterDiscord, add the following line at the very top of your QuickCSS:
+While not the main focus of Flashcord right now, you can install Flashcord for BetterDiscord and Vencord this way, add the following line to your client's QuickCSS and apply it.
 ```
 @import url("https://raw.githubusercontent.com/SiriusBYT/flashcord/main/src/main.css");
 ```
@@ -134,11 +134,11 @@ To force update Flashcord SID, open the **DevTools** (CTRL + SHIFT + I), head ov
 
 ## ✅ Platform Compatibility
 
-| Platform      | Replugged                | BetterDiscord             |
-|:-------------|:--------------------------|:--------------------------|
-| 🪟 Windows   | ✅ Perfect Compatibility | ❓Unknown Compatibility   |
-| 🍎 MacOS     | ☑️ Seems Perfectly Fine  | ❓Unknown Compatibility   |
-| 🐧 GNU/Linux | ❓Unknown Compatibility  | ⚠️ Minor Issues           |
+| Platform      | Replugged                | BetterDiscord             | Vencord                    |
+|:-------------|:--------------------------|:--------------------------| ---------------------------|
+| 🪟 Windows   | ✅ Perfect Compatibility | ❓Unknown Compatibility   | ⚠️ Unsupported Plugins    |
+| 🍎 MacOS     | ☑️ Seems Perfectly Fine  | ❓Unknown Compatibility   | ❓Unknown Compatibility   |
+| 🐧 GNU/Linux | ❓Unknown Compatibility  | ⚠️ Minor Issues           | ❓Unknown Compatibility   |
 
 | 📱 Enmity (iOS)     | ☎️ Android             |
 |:--------------------|:------------------------|
