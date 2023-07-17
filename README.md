@@ -136,9 +136,9 @@ To force update Flashcord SID, open the **DevTools** (CTRL + SHIFT + I), head ov
 
 | Platform      | Replugged                | BetterDiscord             | Vencord                    |
 |:-------------|:--------------------------|:--------------------------| ---------------------------|
-| 🪟 Windows   | ✅ Perfect Compatibility | ❓Unknown Compatibility   | ⚠️ Unsupported Plugins    |
+| 🪟 Windows   | ✅ Perfect Compatibility | ⚠️ Unsupported Plugins    | ⚠️ Unsupported Plugins    |
 | 🍎 MacOS     | ☑️ Seems Perfectly Fine  | ❓Unknown Compatibility   | ❓Unknown Compatibility   |
-| 🐧 GNU/Linux | ❓Unknown Compatibility  | ⚠️ Minor Issues           | ❓Unknown Compatibility   |
+| 🐧 GNU/Linux | ❓Unknown Compatibility  | ⚠️ Minor Issues + Plugins | ❓Unknown Compatibility   |
 
 | 📱 Enmity (iOS)     | ☎️ Android             |
 |:--------------------|:------------------------|
