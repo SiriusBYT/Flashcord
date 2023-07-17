@@ -1,13 +1,11 @@
 # This is Flashcord.
 ## The most advanced Discord Theme to date.
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-LMH.gif)
-## Flashcord is currently in Early Alpha.
-[Available for Replugged](https://replugged.dev/install?identifier=SiriusBYT/flashcord&source=github) Clients, BetterDiscord support will come later as it causes issue with certain things as it injects extra classes which somehow interfere with Flashcord.
-
 # Flashcord is all about Maximising your Chat Space.
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-DKM.gif)
 # While also being the pinacle of Customisable Eye Candy.
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-CBGR.gif)
+## Notice: Flashcord is still in very early Alpha.
 
 # ⬇️ Installing Flashcord Stable
 To install Flashcord, for Replugged Users, simply click [here](https://replugged.dev/install?identifier=SiriusBYT/flashcord&source=github). If you get a warning about Flashcord not being verified by the Replugged Team, ignore them and blame them or I don't know. Being "store" compliant takes time. Flashcord is pure CSS anyways, it cannot do anything to your computer.
@@ -137,11 +135,11 @@ To force update Flashcord SID, open the **DevTools** (CTRL + SHIFT + I), head ov
 
 ## ✅ Platform Compatibility
 
-| Platform      | Replugged                | BetterDiscord             | Vencord                    |
-|:-------------|:--------------------------|:--------------------------| ---------------------------|
-| 🪟 Windows   | ✅ Perfect Compatibility | ⚠️ Unsupported Plugins    | ⚠️ Unsupported Plugins    |
-| 🍎 MacOS     | ☑️ Seems Perfectly Fine  | ❓Unknown Compatibility   | ❓Unknown Compatibility   |
-| 🐧 GNU/Linux | ❓Unknown Compatibility  | ⚠️ Minor Issues + Plugins | ❓Unknown Compatibility   |
+| Platform     | Replugged                 | BetterDiscord                                    | Vencord                                          |
+|:-------------|:--------------------------|:-------------------------------------------------|:-------------------------------------------------|
+| 🪟 Windows   | ✅ Perfect Compatibility | ⚠️ Missing & Incompatible Plugins, seems fine    | ⚠️ Missing Plugins, some compatible, seems fine |
+| 🍎 MacOS     | ☑️ Seems Perfectly Fine  | ❓Unknown Compatibility                          | ❓Unknown Compatibility                         |
+| 🐧 GNU/Linux | ❓Unknown Compatibility  | ⚠️ Missing & Incompatible Plugins + Weird Issues | ❓Unknown Compatibility                         |
 
 | 📱 Enmity (iOS)     | ☎️ Android             |
 |:--------------------|:------------------------|
