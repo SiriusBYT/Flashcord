@@ -53,6 +53,7 @@ Adding any of these URLs at the end of your Discord message will add a special e
 (aSID-230715+) Blue Background Message: http://flashcord/background/blue
 
 (aSID-230717+) Loud Effect: http://flashcord/loud
+(aSID-230717+) Quiet Effect: http://flashcord/quiet
 
 You can use markdown to hide the link to non-flashcord users. Example: [This message has a Flashcord Chat Effect. Install it to view the effect.](http://flashcord/rainbow)
 ```
