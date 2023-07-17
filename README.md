@@ -21,9 +21,9 @@ After that, make sure to read the Instructions and Tips tab to make sure you get
 
 
 ## 🔄️ Flashcord Version Status
-🦺 Flashcord Stable: [aSTB-230714_HF1] | **2 Update Behind Flashcord SID.** | 🌐 Root Code Base: aSID-230714-HF1
+🦺 Flashcord Stable: [aSTB-230714_HF1] | **3 Feature Updates Behind SID.** | 🌐 Root Code Base: aSID-230714-HF1
 
-🔥 Flashcord SID: [aSID-230716] | **2 Days without an Emergency Hotfix Update.**
+🔥 Flashcord SID: [aSID-230717] | **3 Days without an Emergency Hotfix Update.**
 
 ## 💡 Instructions and Tips
 ℹ️ It is not recommended to use Flashcord on Low-End Systems, you could, but in that case, disable animations, transitions and especially blur with the variables provided.
@@ -51,6 +51,8 @@ Adding any of these URLs at the end of your Discord message will add a special e
 (aSID-230715+) Red Background Message: http://flashcord/background/red
 (aSID-230715+) Green Background Message: http://flashcord/background/green
 (aSID-230715+) Blue Background Message: http://flashcord/background/blue
+
+(aSID-230717+) Loud Effect: http://flashcord/loud
 
 You can use markdown to hide the link to non-flashcord users. Example: [This message has a Flashcord Chat Effect. Install it to view the effect.](http://flashcord/rainbow)
 ```
