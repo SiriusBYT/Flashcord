@@ -1,5 +1,13 @@
 # Here is an archive of all the Flashcord Changelogs posted inside the annoncement channel of the SGN Discord Server.
 
+**[  @📸 Flashcord Closed Alpha Tester  ]** ***New Alpha SID Build (230717)***
+This new update features:
+- Code improvements
+- Added animation when your internet drops out or when Discord starts if Flashcord loads early
+- Searching messages is now easier and bigger
+- Searching emojis, gifs, stickers is also now easier and bigger
+- Bug Fixes [This message has a green background, get Flashcord aSID-230715 or above to see it.](http://flashcord/background/green)
+
 **[  @📸Flashcord Annoncements ]** ***New Alpha Stable Build (230714_HF1)***
 This new update features:
 - **EXTREMELY MAJOR PERFORMANCE IMPROVEMENTS. SERIOUSLY PLEASE UPDATE**
