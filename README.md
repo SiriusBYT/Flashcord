@@ -164,6 +164,7 @@ Valid Example:
   -  aSTB-230714_HF1
 
 #### Flashcord SID Archive.
+-  aSID-230717
 -  aSID-230716
 -  aSID-230715
 -  aSID-230714
