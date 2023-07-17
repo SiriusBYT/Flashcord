@@ -6,6 +6,7 @@ This new update features:
 - Added animation when your internet drops out or when Discord starts if Flashcord loads early
 - Searching messages is now easier and bigger
 - Searching emojis, gifs, stickers is also now easier and bigger
+- Added new Chat Effects, check them on the GitHub or pinned message.
 - Bug Fixes [This message has a green background, get Flashcord aSID-230715 or above to see it.](http://flashcord/background/green)
 
 **[  @📸Flashcord Annoncements ]** ***New Alpha Stable Build (230714_HF1)***
