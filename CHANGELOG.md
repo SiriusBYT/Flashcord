@@ -1,5 +1,13 @@
 # Here is an archive of all the Flashcord Changelogs posted inside the annoncement channel of the SGN Discord Server.
 
+**[  @📸 Flashcord Closed Alpha Tester  ]** ***New Alpha SID Build (230718)***
+This new update features:
+- Slightly modified the "blackout" animation to be more flashcord-y
+- Added variables to disable the server gay glows, you can set the colors seperately, please note that the channel one is currently broken (for unreads, not mentions) check the Github for the variables
+- Flashcord Effects now apply to attachements
+- Made --Brand-Mode: 0; more useful
+- Bug Fixes [This message has a green background, get Flashcord aSID-230715 or above to see it.](http://flashcord/background/green)
+
 **[  @📸 Flashcord Closed Alpha Tester  ]** ***New Alpha SID Build (230717)***
 This new update features:
 - Code improvements
