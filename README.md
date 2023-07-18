@@ -64,38 +64,46 @@ The following variables can be changed to improve your Flashcord Experience. The
 If you are running Flashcord SID, your variables **must be after the "@import" line**.
 ```
 * {
-  /* Control Blur Intensity, recommended to set to 0px on low end systems. */
+  /* aSID-230707+: Control Blur Intensity, recommended to set to 0px on low end systems. */
   --BlurInt-Big: 16px;
   --BlurInt-Med: 8px;
   --BlurInt-Sma: 4px;
 
-  /* Control the Transition Speed of Elements. Set to 0 to Disable.*/
+  /* aSID-230702+: Control the Transition Speed of Elements. Set to 0 to Disable.*/
   --AnimMult-Fast: 1;
   --AnimMult-Normal: 1;
   --AnimMult-Slow: 1;
 
-  /* Self Explanatory, set to 0 to Disable. [!] DOES NOT DISABLE CHAT EFFECTS */
+  /* aSID-230704+: Self Explanatory, set to 0 to Disable. [!] DOES NOT DISABLE CHAT EFFECTS */
   --Enable-Animations: 1;
 
-  /* Custom Background Customisation */
+  /* aSID-230703+: Custom Background Customisation */
   --CustomBGR-IMG: url("https://sirio-network.com/flashcord/bgr-test.jpg");
   --CustomBGR-Filter: blur(16px) brightness(0.5);
 
-  /* If you are having severe issues in the friends tab because you have too many friends, set this to block */
+  /* aSID-230704+: If you are having severe issues in the friends tab because you have too many friends, set this to block */
   --Friend-Redesign: flex; 
 
-  /* Setting this to 0 disables most of the Flashcord Swag for specific users. */
+  /* aSID-230706+: Setting this to 0 disables most of the Flashcord Swag for specific users. */
   --Brand-Mode: 1;
 
-  /* High End Systems Only. Puts a bunch more random crap that looks cool but blows computers up */
+  /* aSID-230712+: High End Systems Only. Puts a bunch more random crap that looks cool but blows computers up */
   --Iridescent-Mode: 0;
 
-  /* Enable Chat Effects, disabling them will stop their animations. (Set to 0 to disable) */
+  /* aSID-230714+: Enable Chat Effects, disabling them will stop their animations. (Set to 0 to disable) */
   --Enable-ChatEffects: 1;
 
-  /* See the Flashcord Benchmark Channel on the SGN Discord Server for more information. This is not very useful honestly. */
+  /* aSID-230715+: See the Flashcord Benchmark Channel on the SGN Discord Server for more information. This is not very useful honestly. */
   --Flashbench: 0;
 
+  /* aSID-230718+: Edit the Server Unread Glow, set to 0 to disable it if it distracts you too much */
+  --Server-Glow: 1;
+  --Server-Glow_Color: blue;
+
+  /* aSID-230718+: Edit the Channel Unread Glow, set to 0 to disable it if it distracts you too much */
+  --Channel-Glow: 1;
+  --Channel-Glow_Unread_Color: rgba(0,0,255,0.5); /* Notice: Useless right now but will work one day */
+  --Channel-Glow_Mention_Color: rgba(255,0,0,0.5);
 }
 ```
 
