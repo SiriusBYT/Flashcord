@@ -102,7 +102,7 @@ If you are running Flashcord SID, your variables **must be after the "@import" l
 
   /* aSID-230718+: Edit the Channel Unread Glow, set to 0 to disable it if it distracts you too much */
   --Channel-Glow: 1;
-  --Channel-Glow_Unread_Color: rgba(0,0,255,0.5); /* Notice: Useless right now but will work one day */
+  --Channel-Glow_Unread_Color: rgba(0,0,255,0.5);
   --Channel-Glow_Mention_Color: rgba(255,0,0,0.5);
 }
 ```
