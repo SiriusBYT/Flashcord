@@ -20,9 +20,9 @@ After that, make sure to read the Instructions and Tips tab to make sure you get
 
 
 ## 🔄️ Flashcord Version Status
-🦺 Flashcord Stable: [aSTB-230714_HF1] | **3 Feature Updates Behind SID.** | 🌐 Root Code Base: aSID-230714-HF1
+🦺 Flashcord Stable: [aSTB-230714_HF1] | **4 Feature Updates Behind SID.** | 🌐 Root Code Base: aSID-230714-HF1
 
-🔥 Flashcord SID: [aSID-230717] | **3 Days without an Emergency Hotfix Update.**
+🔥 Flashcord SID: [aSID-230718] | **4 Days without an Emergency Hotfix Update.**
 
 ## 💡 Instructions and Tips
 ℹ️ It is not recommended to use Flashcord on Low-End Systems, you could, but in that case, disable animations, transitions and especially blur with the variables provided.
@@ -171,6 +171,7 @@ Valid Example:
   -  aSTB-230714_HF1
 
 #### Flashcord SID Archive.
+-  aSID-230718
 -  aSID-230717
 -  aSID-230716
 -  aSID-230715
