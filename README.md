@@ -9,7 +9,8 @@
 
 # ⬇️ Installing Flashcord Stable
 To install Flashcord, for Replugged Users, simply click [here](https://replugged.dev/install?identifier=SiriusBYT/flashcord&source=github). If you get a warning about Flashcord not being verified by the Replugged Team, ignore them and blame them or I don't know. Being "store" compliant takes time. Flashcord is pure CSS anyways, it cannot do anything to your computer.
-While not the main focus of Flashcord right now, you can install Flashcord for BetterDiscord and Vencord this way, add the following line to your client's QuickCSS and apply it.
+You can install Flashcord for BetterDiscord and Vencord this way, add the following line to your client's QuickCSS and apply it.
+### Please use Flashcord with Replugged if you can. Flashcord will never fully support BetterDiscord or Vencord due to plugin shenanigans.
 ```
 @import url("https://raw.githubusercontent.com/SiriusBYT/flashcord/main/src/main.css");
 ```
@@ -29,7 +30,7 @@ After that, make sure to read the Instructions and Tips tab to make sure you get
 Flashcord recommends using **Discord Canary** as it was made on it.
 
 ### ⚠️ Flashcord requires the "Channel Emojis" Discord Experiment for the best experience.
-Flashcord can work without this experiment, however without it, Flashcord looks more dead and less full of life, it is very recommended to enable that experiment.
+Flashcord can work without this experiment, however without it, Flashcord looks more dead and less full of life, it is very recommended to enable that experiment. Make sure to set it to "Treatment 2", not 1.
 
 ### 🛑 NOTICE ABOUT CUSTOM IMAGE BACKGROUNDS: Requires "LegalDiscordBypass" or Discord Nitro
 Due to the complexity of Flashcord, it is better to seperate the Custom Background Image Theme into another one, problem is that the only other "it just works" theme is a Discord Nitro theme. 
