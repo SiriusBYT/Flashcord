@@ -20,9 +20,9 @@ After that, make sure to read the Instructions and Tips tab to make sure you get
 
 
 ## 🔄️ Flashcord Version Status
-🦺 Flashcord Stable: [aSTB-230714_HF1] | **4 Feature Updates Behind SID.** | 🌐 Root Code Base: aSID-230714-HF1
+🦺 Flashcord Stable: [aSTB-230714_HF1] | **5 Feature Updates Behind SID.** | 🌐 Root Code Base: aSID-230714-HF1
 
-🔥 Flashcord SID: [aSID-230718] | **4 Days without an Emergency Hotfix Update.**
+🔥 Flashcord SID: [aSID-230719] | **5 Days without an Emergency Hotfix Update.**
 
 ## 💡 Instructions and Tips
 ℹ️ It is not recommended to use Flashcord on Low-End Systems, you could, but in that case, disable animations, transitions and especially blur with the variables provided.
@@ -40,7 +40,7 @@ Choosing any of those themes will activate the Custom IMG mode. It is recommende
 
 ### 🎉 Flashcord Chat Effects
 
-Adding any of these URLs at the end of your Discord message will add a special effect to your message.
+Adding any of these URLs at the end of your Discord message will add a special effect to your message. These also work for attachements.
 ```
 (aSID-230714+) Rainbow Text Effect: http://flashcord/rainbow
 (aSID-230714+) Small Text Effect: http://flashcord/small
@@ -53,6 +53,11 @@ Adding any of these URLs at the end of your Discord message will add a special e
 
 (aSID-230717+) Loud Effect: http://flashcord/loud
 (aSID-230717+) Quiet Effect: http://flashcord/quiet
+
+(aSID-230719+) Rainbow Shadow Effect: http://flashcord/rainbow-shadow
+(aSID-230719+) Spin Effect: http://flashcord/spin
+(aSID-230719+) Fade from Bottom Effect: http://flashcord/fade-bottom
+(aSID-230719+) Splash Text Effect: http://flashcord/splash
 
 You can use markdown to hide the link to non-flashcord users. Example: [This message has a Flashcord Chat Effect. Install it to view the effect.](http://flashcord/rainbow)
 ```
@@ -96,11 +101,11 @@ If you are running Flashcord SID, your variables **must be after the "@import" l
   /* aSID-230715+: See the Flashcord Benchmark Channel on the SGN Discord Server for more information. This is not very useful honestly. */
   --Flashbench: 0;
 
-  /* aSID-230718+: Edit the Server Unread Glow, set to 0 to disable it if it distracts you too much */
+  /* aSID-230718+: Edit the Server Unread Glow/Shadow, set to 0 to disable it if it distracts you too much */
   --Server-Glow: 1;
   --Server-Glow_Color: blue;
 
-  /* aSID-230718+: Edit the Channel Unread Glow, set to 0 to disable it if it distracts you too much */
+  /* aSID-230718+: Edit the Channel Unread Glow/Shadow, set to 0 to disable it if it distracts you too much */
   --Channel-Glow: 1;
   --Channel-Glow_Unread_Color: rgba(0,0,255,0.5);
   --Channel-Glow_Mention_Color: rgba(255,0,0,0.5);
@@ -171,6 +176,7 @@ Valid Example:
   -  aSTB-230714_HF1
 
 #### Flashcord SID Archive.
+-  aSID-230719
 -  aSID-230718
 -  aSID-230717
 -  aSID-230716
