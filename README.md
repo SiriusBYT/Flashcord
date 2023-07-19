@@ -58,6 +58,7 @@ Adding any of these URLs at the end of your Discord message will add a special e
 (aSID-230719+) Spin Effect: http://flashcord/spin
 (aSID-230719+) Fade from Bottom Effect: http://flashcord/fade-bottom
 (aSID-230719+) Splash Text Effect: http://flashcord/splash
+(aSID-230719+) burger
 
 You can use markdown to hide the link to non-flashcord users. Example: [This message has a Flashcord Chat Effect. Install it to view the effect.](http://flashcord/rainbow)
 ```
