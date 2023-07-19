@@ -1,5 +1,11 @@
 # Here is an archive of all the Flashcord Changelogs posted inside the annoncement channel of the SGN Discord Server.
 
+**[  @📸Flashcord Annoncements ]** ***New Alpha SID Build (230719)***
+This new update features:
+- New Flashcord Effects, check the github or the pinned message.
+- Toned down certain animations
+- Bug Fixes [This message has a green background, get Flashcord aSID-230715 or above to see it.](http://flashcord/background/blue)
+
 **[  @📸 Flashcord Closed Alpha Tester  ]** ***New Alpha SID Build (230718)***
 This new update features:
 - Slightly modified the "blackout" animation to be more flashcord-y
