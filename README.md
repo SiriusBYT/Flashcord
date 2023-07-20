@@ -110,6 +110,9 @@ If you are running Flashcord SID, your variables **must be after the "@import" l
   --Channel-Glow: 1;
   --Channel-Glow_Unread_Color: rgba(0,0,255,0.5);
   --Channel-Glow_Mention_Color: rgba(255,0,0,0.5);
+
+  /* aSID-230720+: IridescentMode starting from aSID-230720 no longers disables animations when you're not hovering Discord, set the variable to 1 to re-enable them. */
+  --Disable-Idle_Optimizations: 0;
 }
 ```
 
@@ -177,6 +180,7 @@ Valid Example:
   -  aSTB-230714_HF1
 
 #### Flashcord SID Archive.
+-  aSID-230720
 -  aSID-230719
 -  aSID-230718
 -  aSID-230717
