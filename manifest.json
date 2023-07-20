@@ -12,7 +12,8 @@
     "type": "github",
     "id": "SiriusBYT/flashcord"
   },
-  "license": "[Flashcord] © 2023 by [SiriusBYT] is licensed under [CC BY-NC-ND 4.0].",
+  "license": "CC BY-NC-ND 4.0",
   "type": "replugged-theme",
   "main": "src/main.css"
+  "image": '["https://cdn.discordapp.com/attachments/1074024973007605882/1131667628944007248/FC-LMH.gif", "https://cdn.discordapp.com/attachments/1074024973007605882/1131667628541345854/FC-DKM.gif", "https://cdn.discordapp.com/attachments/1074024973007605882/1131667628096757820/FC-CBGR.gif"]'
 }
