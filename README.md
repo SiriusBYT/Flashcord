@@ -8,9 +8,9 @@
 ## Notice: Flashcord is still in very early Alpha.
 
 # ⬇️ Installing Flashcord Stable
-To install Flashcord, for Replugged Users, simply click [here](https://replugged.dev/install?identifier=SiriusBYT/flashcord&source=github). If you get a warning about Flashcord not being verified by the Replugged Team, ignore it and blame em' or I don't know. Being "store" compliant takes time. Flashcord is pure CSS anyways, it cannot do anything to your computer.
+To install Flashcord, for [Replugged Users, simply click here](https://replugged.dev/install?identifier=SiriusBYT/flashcord&source=github).
 You can install Flashcord for BetterDiscord and Vencord this way, add the following line to your client's QuickCSS and apply it.
-### Please use Flashcord with Replugged if you can. Flashcord will never fully support BetterDiscord or Vencord due to plugin shenanigans.
+### Please use Flashcord with Replugged if you can. Flashcord will never fully support BetterDiscord or Vencord due to plugin shenanigans. Worst of all, certain clients introduces weird bugs that seem to be an absolute nightmare to fix, please stay away from clients other than Replugged if you can.
 ```
 @import url("https://raw.githubusercontent.com/SiriusBYT/flashcord/main/src/main.css");
 ```
@@ -37,6 +37,7 @@ Due to the complexity of Flashcord, it is better to seperate the Custom Backgrou
 Using the plugin [LegalDiscordBypasses by @loneweeb.tsx](https://replugged.dev/install?identifier=dev.tharki.LegalDiscordBypasses) is thus necessary if you wanna use said feature without Nitro.
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/DiscordCanary_6RUcvA0asO.png)
 Choosing any of those themes will activate the Custom IMG mode. It is recommended to use a dark themed one for visibility reasons.
+Notice: Since aSID-230720, this is no longer a problem thanks to the Apperance Tab redesign.
 
 ### 🎉 Flashcord Chat Effects
 
@@ -58,7 +59,6 @@ Adding any of these URLs at the end of your Discord message will add a special e
 (aSID-230719+) Spin Effect: http://flashcord/spin
 (aSID-230719+) Fade from Bottom Effect: http://flashcord/fade-bottom
 (aSID-230719+) Splash Text Effect: http://flashcord/splash
-(aSID-230719+) burger
 
 You can use markdown to hide the link to non-flashcord users. Example: [This message has a Flashcord Chat Effect. Install it to view the effect.](http://flashcord/rainbow)
 ```
