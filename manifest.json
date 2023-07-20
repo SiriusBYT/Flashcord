@@ -1,19 +1,23 @@
 {
-  "id": "com.sirio-network.flashcord",
-  "name": "Flashcord Alpha",
-  "description": "The world's most advanced and unnecessarily complicated Discord Theme to ever exist.",
-  "author": {
-    "name": "SiriusBYT",
-    "discordID": "311057290562371586",
-    "github": "SiriusBYT"
-  },
-  "version": "aSTB-230714_HF1",
-  "updater": {
-    "type": "github",
-    "id": "SiriusBYT/flashcord"
-  },
-  "license": "CC BY-NC-ND 4.0",
-  "type": "replugged-theme",
-  "main": "src/main.css"
-  "image": '["https://cdn.discordapp.com/attachments/1074024973007605882/1131667628944007248/FC-LMH.gif", "https://cdn.discordapp.com/attachments/1074024973007605882/1131667628541345854/FC-DKM.gif", "https://cdn.discordapp.com/attachments/1074024973007605882/1131667628096757820/FC-CBGR.gif"]'
+    "id": "com.sirio-network.flashcord",
+    "name": "Flashcord Alpha",
+    "description": "The world's most advanced and unnecessarily complicated Discord Theme to ever exist.",
+    "author": {
+        "name": "SiriusBYT",
+        "discordID": "311057290562371586",
+        "github": "SiriusBYT"
+    },
+    "version": "aSTB-230714_HF1",
+    "updater": {
+        "type": "github",
+        "id": "SiriusBYT/flashcord"
+    },
+    "license": "CC BY-NC-ND 4.0",
+    "type": "replugged-theme",
+    "main": "src/main.css",
+    "image": [
+        "https://cdn.discordapp.com/attachments/1074024973007605882/1131667628944007248/FC-LMH.gif",
+        "https://cdn.discordapp.com/attachments/1074024973007605882/1131667628541345854/FC-DKM.gif",
+        "https://cdn.discordapp.com/attachments/1074024973007605882/1131667628096757820/FC-CBGR.gif"
+    ]
 }
