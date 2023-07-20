@@ -8,7 +8,7 @@
 ## Notice: Flashcord is still in very early Alpha.
 
 # ⬇️ Installing Flashcord Stable
-To install Flashcord, for Replugged Users, simply click [here](https://replugged.dev/install?identifier=SiriusBYT/flashcord&source=github). If you get a warning about Flashcord not being verified by the Replugged Team, ignore them and blame them or I don't know. Being "store" compliant takes time. Flashcord is pure CSS anyways, it cannot do anything to your computer.
+To install Flashcord, for Replugged Users, simply click [here](https://replugged.dev/install?identifier=SiriusBYT/flashcord&source=github). If you get a warning about Flashcord not being verified by the Replugged Team, ignore it and blame em' or I don't know. Being "store" compliant takes time. Flashcord is pure CSS anyways, it cannot do anything to your computer.
 You can install Flashcord for BetterDiscord and Vencord this way, add the following line to your client's QuickCSS and apply it.
 ### Please use Flashcord with Replugged if you can. Flashcord will never fully support BetterDiscord or Vencord due to plugin shenanigans.
 ```
@@ -20,9 +20,9 @@ After that, make sure to read the Instructions and Tips tab to make sure you get
 
 
 ## 🔄️ Flashcord Version Status
-🦺 Flashcord Stable: [aSTB-230714_HF1] | **5 Feature Updates Behind SID.** | 🌐 Root Code Base: aSID-230714-HF1
+🦺 Flashcord Stable: [aSTB-230714_HF1] | **6 Feature Updates Behind SID.** | 🌐 Root Code Base: aSID-230714-HF1
 
-🔥 Flashcord SID: [aSID-230719] | **5 Days without an Emergency Hotfix Update.**
+🔥 Flashcord SID: [aSID-230720] | **6 Days without an Emergency Hotfix Update.**
 
 ## 💡 Instructions and Tips
 ℹ️ It is not recommended to use Flashcord on Low-End Systems, you could, but in that case, disable animations, transitions and especially blur with the variables provided.
@@ -154,7 +154,7 @@ To force update Flashcord SID, open the **DevTools** (CTRL + SHIFT + I), head ov
 |:-------------|:--------------------------|:-------------------------------------------------|:-------------------------------------------------|
 | 🪟 Windows   | ✅ Perfect Compatibility | ⚠️ Missing & Incompatible Plugins, seems fine    | ⚠️ Missing Plugins, some compatible, seems fine |
 | 🍎 MacOS     | ☑️ Seems Perfectly Fine  | ❓Unknown Compatibility                          | ❓Unknown Compatibility                         |
-| 🐧 GNU/Linux | ❓Unknown Compatibility  | ⚠️ Missing & Incompatible Plugins + Weird Issues | ❓Unknown Compatibility                         |
+| 🐧 GNU/Linux | ☑️ Seems Perfectly Fine  | ⚠️ Missing & Incompatible Plugins + Weird Issues | ❓Unknown Compatibility                         |
 
 | 📱 Enmity (iOS)     | ☎️ Android             |
 |:--------------------|:------------------------|
