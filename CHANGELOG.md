@@ -1,5 +1,14 @@
 # Here is an archive of all the Flashcord Changelogs posted inside the annoncement channel of the SGN Discord Server.
 
+**[  @:camera_with_flash:Flashcord Annoncements ]** ***New Alpha SID Build (230720)***
+This new update features:
+- Overhauled the Appearence tab
+- Emojis now have a shadow, I'm aware that it gets somewhat cut off
+- New variables
+- Brand-Mode is FINALLY doing something good without breaking shit
+- The burger has been removed, F
+- Bug Fixes [This message has a blue background, get Flashcord aSID-230715 or above to see it.](http://flashcord/background/blue)
+
 **[  @📸Flashcord Annoncements ]** ***New Alpha SID Build (230719)***
 This new update features:
 - New Flashcord Effects, check the github or the pinned message.
