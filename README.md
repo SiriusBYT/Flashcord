@@ -94,7 +94,7 @@ If you are running Flashcord SID, your variables **must be after the "@import" l
   --Brand-Mode: 1;
 
   /* aSID-230712+: High End Systems Only. Puts a bunch more random crap that looks cool but blows computers up */
-  --Iridescent-Mode: 0;
+  --IridescentMode: 0;
 
   /* aSID-230714+: Enable Chat Effects, disabling them will stop their animations. (Set to 0 to disable) */
   --Enable-ChatEffects: 1;
