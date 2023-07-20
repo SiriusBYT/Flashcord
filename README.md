@@ -113,6 +113,9 @@ If you are running Flashcord SID, your variables **must be after the "@import" l
 
   /* aSID-230720+: IridescentMode starting from aSID-230720 no longers disables animations when you're not hovering Discord, set the variable to 1 to re-enable them. */
   --Disable-Idle_Optimizations: 0;
+
+  /* aSID-230720+: Setting this to 0 causes most warnings such as "Flashcord is in Alpha; X Mode is unfinished" to get removed.*/
+  --Allow-Warnings: 1;
 }
 ```
 
