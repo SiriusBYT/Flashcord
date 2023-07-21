@@ -1,5 +1,28 @@
 # Here is an archive of all the Flashcord Changelogs posted inside the annoncement channel of the SGN Discord Server.
 
+**[  @:camera_with_flash:Flashcord Annoncements ]** ***New Alpha Stable Build (230721)***
+This new update features:
+- Flashcord Benchmark
+- Chat Effect Backgrounds
+- Improved Image Focus
+- Searching messages is now easier and bigger
+- Searching emojis, gifs, stickers is also now easier and bigger
+- Added new Chat Effects
+- Added animation when your internet drops out or when Discord starts if Flashcord loads early
+- Flashcord Effects now apply to attachements
+- Added variables to disable the server gay glows, you can set the colors seperately, please note that the channel one is currently broken (for unreads, not mentions) check the Github for the variables
+- Toned down certain animations
+- Overhauled the Appearence tab
+- Emojis now have a shadow
+- Bunch of new variables
+- Better MacOS support
+- Added the debug chat "effect" (please now send this everytime you post a bug report)
+- Added code to verify if all recommended plugins are detected
+- Entirely removed Flashcord Swag for certain users as the performance impact caused by it is so fucking insane that this is actually the biggest performancer improvement that Flashcord may get, EVER.
+- Bug Fixes [This message has a blue background, get Flashcord aSID-230715 or above to see it.](http://flashcord/background/blue)
+
+[NOTICE: This version migrates to the Replugged store, it may take a serious while before you can update]
+
 **Flashcord: aSID-230721-HF3 is now out**
 - Entirely removed Flashcord Swag for certain users as the performance impact caused by it is so fucking insane that this is actually the biggest performancer improvement that Flashcord may get, EVER.
 
