@@ -16,7 +16,7 @@
 # ⬇️ Installing Flashcord
 Before we can start, decide which version of Flashcord you would like to install, the Stable version gets updates every week or more while the "SID" versions gets updated daily. SID can be unstable at times so if you want a theme that just works then install Stable.
 ## 🦺 Installing Stable:
-[For Replugged Users, simply click here](https://replugged.dev/install?identifier=SiriusBYT/flashcord&source=github), this will open a page that will communicate with your client to install Flashcord.
+[For Replugged Users, simply click here](https://replugged.dev/install?identifier=SiriusBYT/flashcord&source=store), this will open a page that will communicate with your client to install Flashcord.
 ### You can install Flashcord Stable on other clients such as BetterDiscord or Vencord by adding this to your QuickCSS, please note that Flashcord doesn't fully support other clients!
 ⚠️ You cannot decide if you wanna update or not with this method, it updates as soon as your client fetches for Flashcord's code.
 ```
@@ -33,7 +33,7 @@ To force update Flashcord SID, open the **DevTools** (CTRL + SHIFT + I), head ov
 ℹ️ Make sure to also not have Flashcord Stable still enabled after switching to SID to prevent code conflicts.
 
 ## 🔄️ Flashcord Version Status
-🦺 Flashcord Stable: [aSTB-230714_HF1] | **7 Feature Updates Behind SID.** | 🌐 Root Code Base: aSID-230714-HF1
+🦺 Flashcord Stable: [aSTB-230721] | **0 Feature Updates Behind SID.** | 🌐 Root Code Base: aSID-230721-HF3
 
 🔥 Flashcord SID: [aSID-230721-HF3] | **0 Days without an Emergency Hotfix Update.**
 
