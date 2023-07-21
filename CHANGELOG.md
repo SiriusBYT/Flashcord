@@ -1,5 +1,8 @@
 # Here is an archive of all the Flashcord Changelogs posted inside the annoncement channel of the SGN Discord Server.
 
+**Flashcord: aSID-230721-HF3 is now out**
+- Entirely removed Flashcord Swag for certain users as the performance impact caused by it is so fucking insane that this is actually the biggest performancer improvement that Flashcord may get, EVER.
+
 **Flashcord: aSID-230721-HF2 is now out**
 - Disabled entirely the debug text's variable list, as it causes too many problems
 - Added a new variable to disable debug text.
