@@ -1,5 +1,9 @@
 # Here is an archive of all the Flashcord Changelogs posted inside the annoncement channel of the SGN Discord Server.
 
+**Flashcord: aSID-230721-HF2 is now out**
+- Disabled entirely the debug text's variable list, as it causes too many problems
+- Added a new variable to disable debug text.
+
 **Flashcord: aSID-230721-HF1 is now out**
 - Fixes a critical bug related to the new Debug ""Chat Effect"" causing it to appear at every message if the text was send once in a channel
 
