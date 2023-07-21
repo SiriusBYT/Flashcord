@@ -1,5 +1,8 @@
 # Here is an archive of all the Flashcord Changelogs posted inside the annoncement channel of the SGN Discord Server.
 
+**Flashcord: aSID-230721-HF1 is now out**
+- Fixes a critical bug related to the new Debug ""Chat Effect"" causing it to appear at every message if the text was send once in a channel
+
 **[  @📸Flashcord Annoncements ]** ***New Alpha SID Build (230721)***
 This new update features:
 - Added code to verify if all recommended plugins are detected
