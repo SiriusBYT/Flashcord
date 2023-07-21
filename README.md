@@ -35,7 +35,7 @@ To force update Flashcord SID, open the **DevTools** (CTRL + SHIFT + I), head ov
 ## 🔄️ Flashcord Version Status
 🦺 Flashcord Stable: [aSTB-230714_HF1] | **7 Feature Updates Behind SID.** | 🌐 Root Code Base: aSID-230714-HF1
 
-🔥 Flashcord SID: [aSID-230721-HF2] | **0 Days without an Emergency Hotfix Update.**
+🔥 Flashcord SID: [aSID-230721-HF3] | **0 Days without an Emergency Hotfix Update.**
 
 
 # 💡 Configuring Flashcord
