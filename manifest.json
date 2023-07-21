@@ -9,8 +9,8 @@
     },
     "version": "aSTB-230721",
     "updater": {
-        "type": "github",
-        "id": "SiriusBYT/flashcord"
+        "type": "store",
+        "id": "com.sirio-network.flashcord"
     },
     "license": "CC BY-NC-ND 4.0",
     "type": "replugged-theme",
