@@ -1,5 +1,13 @@
 # Here is an archive of all the Flashcord Changelogs posted inside the annoncement channel of the SGN Discord Server.
 
+**[  @📸Flashcord Annoncements ]** ***New Alpha SID Build (230721)***
+This new update features:
+- Added code to verify if all recommended plugins are detected
+- Added the debug chat "effect" (http://flashcord/debug)
+- Better MacOS support
+- Bug Fixes [This message has a blue background, get Flashcord aSID-230715 or above to see it.](http://flashcord/background/blue)
+
+
 **[  @:camera_with_flash:Flashcord Annoncements ]** ***New Alpha SID Build (230720)***
 This new update features:
 - Overhauled the Appearence tab
