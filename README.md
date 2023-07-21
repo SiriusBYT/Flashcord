@@ -33,9 +33,9 @@ To force update Flashcord SID, open the **DevTools** (CTRL + SHIFT + I), head ov
 ℹ️ Make sure to also not have Flashcord Stable still enabled after switching to SID to prevent code conflicts.
 
 ## 🔄️ Flashcord Version Status
-🦺 Flashcord Stable: [aSTB-230714_HF1] | **6 Feature Updates Behind SID.** | 🌐 Root Code Base: aSID-230714-HF1
+🦺 Flashcord Stable: [aSTB-230714_HF1] | **7 Feature Updates Behind SID.** | 🌐 Root Code Base: aSID-230714-HF1
 
-🔥 Flashcord SID: [aSID-230720] | **6 Days without an Emergency Hotfix Update.**
+🔥 Flashcord SID: [aSID-230721] | **7 Days without an Emergency Hotfix Update.**
 
 
 # 💡 Configuring Flashcord
@@ -144,6 +144,8 @@ Adding any of these URLs at the end of your Discord message will add a special e
 (aSID-230719+) Spin Effect: http://flashcord/spin
 (aSID-230719+) Fade from Bottom Effect: http://flashcord/fade-bottom
 (aSID-230719+) Splash Text Effect: http://flashcord/splash
+
+(aSID-230720+) Debug Information: http://flashcord/debug
 
 You can use markdown to hide the link to non-flashcord users. Example: [This message has a Flashcord Chat Effect. Install it to view the effect.](http://flashcord/rainbow)
 ```
