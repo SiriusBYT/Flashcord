@@ -1,5 +1,11 @@
 # Here is an archive of all the Flashcord Changelogs posted inside the annoncement channel of the SGN Discord Server.
 
+**[  @📸Flashcord Annoncements ]** ***New Alpha SID Build (230723)***
+This new update features:
+- Enhanced Popup user guild modal
+- Updated compatibility list
+- Bug Fixes [This message has a blue background, get Flashcord aSID-230715 or above to see it.](http://flashcord/background/blue)
+
 **[  @:camera_with_flash:Flashcord Annoncements ]** ***New Alpha Stable Build (230721)***
 This new update features:
 - Flashcord Benchmark
