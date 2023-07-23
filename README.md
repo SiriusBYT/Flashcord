@@ -152,7 +152,7 @@ Adding any of these URLs at the end of your Discord message will add a special e
 
 You can use markdown to hide the link to non-flashcord users. Example: [This message has a Flashcord Chat Effect. Install it to view the effect.](http://flashcord/rainbow)
 ```
-If these effects cause way too much lag, **consider disablming them using the variable "--Enable-ChatEffects**.
+If these effects cause way too much lag, **consider disabling them using the variable "--Enable-ChatEffects**.
 
 
 ## ✅ Platform Compatibility
