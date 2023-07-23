@@ -103,6 +103,9 @@ If you are running Flashcord using the @import code, your variables **must be af
 
   /* aSID-230721-HF2+: Setting this to "none" will remove the Debug Text caused by http://flashcord/debug, useful if people are spamming this. */
   --Debug-Text_Display: block;
+
+  /* aSID-230722+: Some dude randomly forked Flashcord and edited the stripe image, you can thank him for this feature now. */
+  --Custom-SHC_Stripe: url("https://sirio-network.com/flashcord/elements/stripe.png");
 }
 ```
 
