@@ -46,10 +46,10 @@ Refer to your client's way of enabling Experiments, then search for **"Channel E
 ## 🛑 NOTICE ABOUT CUSTOM IMAGE BACKGROUNDS: Requires ["LegalDiscordBypasses" by @loneweeb.tsx](https://replugged.dev/install?identifier=dev.tharki.LegalDiscordBypasses) or Discord Nitro
 Due to the complexity of Flashcord, it is better to seperate the Custom Background Image Theme into another one, problem is that the only other "it just works" theme is a Discord Nitro theme. 
 Using the plugin  is thus necessary if you wanna use said feature without Nitro.
-![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/DiscordCanary_6RUcvA0asO.png)
-Choosing any of those themes will activate the Custom IMG mode. It is recommended to use a dark themed one for visibility reasons. (ℹ️ In aSID-230720+, you no longer have to pick a random theme)
 
-## 🔁 User Variables
+## 🔁 User Variables (Flashcord Alpha)
+NOTICE: The next major release of Flashcord does not have the same variable names. Please remind yourself that they will change very soon.
+
 The following variables can be changed to improve your Flashcord Experience. The values specified for each variable are their default values. 
 
 If you are running Flashcord using the @import code, your variables **must be after the "@import" line**.
@@ -112,23 +112,12 @@ If you are running Flashcord using the @import code, your variables **must be af
 
 ## 💉 Plugin Support
 
-Flashcord supports many pretty cool Replugged Plugins, all of which are required if you want the best experience, those plugins are:
+Flashcord supports many pretty cool Replugged Plugins, all of which are required if you want the best experience.
 
-[Platform Indicators by @puyodead1](https://replugged.dev/install?identifier=me.puyodead1.PlatformIndicators)
+### Required Plugins
+[Magnificent by Socketlike](https://github.com/Socketlike/Magnificent),  [Click here to install](https://replugged.dev/install?identifier=Socketlike/Magnificent&source=github)
 
-[Staff Tags (in Crown Mode) by @puyodead1](https://replugged.dev/install?identifier=me.puyodead1.StaffTags)
-
-[Statistic Counter by @harley.0](https://replugged.dev/install?identifier=griefmodz/statistic-counter&source=github)
-
-[Badges Everywhere by @12944qwerty](https://replugged.dev/install?identifier=dev.kingfish.BadgesEverywhere)
-
-[ShowHiddenChannels by @loneweeb.tsx](https://replugged.dev/install?identifier=dev.tharki.ShowHiddenChannels)
-
-[ReMessageLogger by @sammcheese](https://replugged.dev/install?identifier=SammCheese/ReMessageLogger&source=github)
-
-[Channel Typing by @asportnoy](https://replugged.dev/install?identifier=dev.albertp.ChannelTyping)
-
-Plugin support ranges from simple alignment fixes to complete visual overhaul.
+The full plugin list will be brought back after the current on-going rewrite. To see compatible plugins, simply check the plugins tab (REPLUGGED ONLY)
 
 More plugins are expected to be supported in the future.
 
