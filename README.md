@@ -37,7 +37,7 @@ To force update Flashcord SID, open the **DevTools** (CTRL + SHIFT + I), head ov
 ## 🔄️ Flashcord Version Status
 🦺 Flashcord Stable: [aSTB-230721] | **2 Feature Updates Behind SID.** | 🌐 Root Code Base: aSID-230721-HF3
 
-🔥 Flashcord SID: [aSID-230723] | **2 Days without an Emergency Hotfix Update.** | ⚠️ Updating to Flashcord Beta soon.
+🔥 Flashcord SID: [bSID-230728] | **10 Days without an Emergency Hotfix Update.**
 
 
 # 💡 Configuring Flashcord
@@ -48,7 +48,7 @@ Refer to your client's way of enabling Experiments, then search for **"Channel E
 Due to the complexity of Flashcord, it is better to seperate the Custom Background Image Theme into another one, problem is that the only other "it just works" theme is a Discord Nitro theme. 
 Using the plugin  is thus necessary if you wanna use said feature without Nitro.
 
-## 🔁 User Variables (Flashcord Alpha)
+## 🔁 User Variables (Flashcord Alpha, does NOT work with Flashcord Beta)
 NOTICE: The next major release of Flashcord does not have the same variable names. Please remind yourself that they will change very soon.
 
 The following variables can be changed to improve your Flashcord Experience. The values specified for each variable are their default values. 
