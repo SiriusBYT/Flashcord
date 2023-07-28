@@ -23,6 +23,8 @@ Before we can start, decide which version of Flashcord you would like to install
 @import url("https://raw.githubusercontent.com/SiriusBYT/flashcord/main/src/main.css");
 ```
 ## 🔥 Installing SID:
+### ⛔WARNING: Flashcord SID is in a completely different universe right now!! It is transitionning to Flashcord Beta which is heavily unfinished and doesn't have every feature that Alpha has! Do NOT use SID right now unless you have to due to the severe performance issues.
+
 ⚠️ You cannot decide if you wanna update or not with Flashcord SID, it updates as soon as your client fetches for Flashcord's code.
 To switch to Flashcord SID, please **Paste the Following Line** into your **Quick CSS** and then click on **"Apply Changes"**
 ```
@@ -35,8 +37,7 @@ To force update Flashcord SID, open the **DevTools** (CTRL + SHIFT + I), head ov
 ## 🔄️ Flashcord Version Status
 🦺 Flashcord Stable: [aSTB-230721] | **2 Feature Updates Behind SID.** | 🌐 Root Code Base: aSID-230721-HF3
 
-🔥 Flashcord SID: [aSID-230723] | **2 Days without an Emergency Hotfix Update.**
-# Flashcord Updates are currently on hold: a major rewrite is in the works to address the severe performance issues.
+🔥 Flashcord SID: [aSID-230723] | **2 Days without an Emergency Hotfix Update.** | ⚠️ Updating to Flashcord Beta soon.
 
 
 # 💡 Configuring Flashcord
