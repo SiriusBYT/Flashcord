@@ -5,7 +5,7 @@
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-DKM.gif)
 # While also being the pinacle of Customisable Eye Candy.
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-CBGR.gif)
-## Notice: Flashcord is still in very early Alpha.
+## Notice: Flashcord is still very much unfinished.
 
 # 📑 Summary & Important Tabs
 - [⬇️ Installing Flashcord](https://github.com/SiriusBYT/flashcord/tree/main#-installing-flashcord-stable)
