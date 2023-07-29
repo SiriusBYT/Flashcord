@@ -13,9 +13,6 @@ lmfao why r u looking at this i'm not even done rewriting flashcord lol
 
 # 📑 Table of Contents
 #### That's right this theme is a bloody arch wiki manual page knock-off. Get ready to RTFM.
+Due to the complexity of Flashcord, yes, I am not kidding. This Discord Theme has a wiki page. **And trust me, you seriously need it.**
 
-| ⬇️ Installing Flashcord   |🔌Replugged     | ✨ Vencord | 🩹 BetterDiscord | 📱 Enmity (iOS) | ☎️ Android |
-|:--------------------------|:----------------|:-----------|:-----------------|:----------------|:-------------|
-| 🦺 Flashcord Stable (STB)   | [✅ Recommended] | [⚠️ Semi-Incompatible] | [⚠️ Semi-Incompatible] | ⛔ Won't be supported, yet. | ⛔ Won't be supported, yet. |
-| 🔥 Flashcord Unstable (SID) | [✅ Recommended] | [⚠️ Semi-Incompatible] | [⚠️ Semi-Incompatible] | ⛔ Won't be supported, yet. | ⛔ Won't be supported, yet. |
-
+[Instructions about anything and everything on Flashcord is available here.](https://github.com/SiriusBYT/flashcord/wiki)
