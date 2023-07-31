@@ -11,7 +11,7 @@ lmfao why r u looking at this i'm not even done rewriting flashcord lol
 ## And the sheer insane customisation and integration.
 [showcase compatible replugged plugins, modifying modules / cbm]
 
-# 📑 Table of Contents
+# 📑 Getting Started: Check the Flashcord Wiki
 ### That's right this theme has a bloody arch wiki manual page knock-off. Get ready to RTFM.
 Due to the complexity of Flashcord, yes, I am not kidding. This Discord Theme has a wiki page. **And trust me, you seriously need it.**
 
