@@ -54,6 +54,8 @@ NOTICE: The next major release of Flashcord does not have the same variable name
 The following variables can be changed to improve your Flashcord Experience. The values specified for each variable are their default values. 
 
 If you are running Flashcord using the @import code, your variables **must be after the "@import" line**.
+
+This is a list of all the variables Flashcord has, to edit them, simply put the following block of code in your QuickCSS and remove variables you aren't going to modify, as easy as that!
 ```
 :root {
   /* aSID-230707+: Control Blur Intensity, recommended to set to 0px on low end systems. */
@@ -70,7 +72,7 @@ If you are running Flashcord using the @import code, your variables **must be af
   --Enable-Animations: 1;
 
   /* aSID-230703+: Custom Background Customisation */
-  --CustomBGR-IMG: url("https://sirio-network.com/flashcord/bgr-test.jpg");
+  --CustomBGR-IMG: url("https://sirio-network.com/flashcord/bgr-test.jpg"); /* kiss your default weeb background goodbye soon, will be replaced by something i made instead of this placeholder that just stayed around */
   --CustomBGR-Filter: blur(16px) brightness(0.5);
 
   /* aSID-230704+: If you are having severe issues in the friends tab because you have too many friends, set this to block */
@@ -100,8 +102,8 @@ If you are running Flashcord using the @import code, your variables **must be af
   /* aSID-230720+: IridescentMode starting from aSID-230720 no longers disables animations when you're not hovering Discord, set the variable to 1 to re-enable them. */
   --Disable-Idle_Optimizations: 0;
 
-  /* aSID-230720+: Setting this to 0 causes most warnings such as "Flashcord is in Alpha; X Mode is unfinished" to get removed.*/
-  --Allow-Warnings: 1;
+  /* aSID-230720+: Setting this to anything causes most warnings such as "Flashcord is in Alpha; X Mode is unfinished" to get removed.*/
+  --Allow-Warnings
 
   /* aSID-230721-HF2+: Setting this to "none" will remove the Debug Text caused by http://flashcord/debug, useful if people are spamming this. */
   --Debug-Text_Display: block;
@@ -115,10 +117,9 @@ If you are running Flashcord using the @import code, your variables **must be af
 
 Flashcord supports many pretty cool Replugged Plugins, all of which are required if you want the best experience.
 
-### Required Plugins
-[Magnificent by Socketlike](https://github.com/Socketlike/Magnificent),  [Click here to install](https://replugged.dev/install?identifier=Socketlike/Magnificent&source=github)
+To see compatible plugins, simply check the plugins tab (REPLUGGED ONLY)
 
-The full plugin list will be brought back after the current on-going rewrite. To see compatible plugins, simply check the plugins tab (REPLUGGED ONLY)
+Some required plugins are shown in the Flashcord WIki.
 
 More plugins are expected to be supported in the future.
 
