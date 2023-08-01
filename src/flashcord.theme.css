@@ -10,56 +10,7 @@
  * @source https://github.com/SiriusBYT/flashcord/blob/main/src/flashcord.theme.css
  */
 
-/* Some variables are missing because Flashcord Alpha is incredibly janky */
-:root {
-  /* aSID-230707+: Control Blur Intensity, recommended to set to 0px on low end systems. */
-  --BlurInt-Big: 16px;
-  --BlurInt-Med: 8px;
-  --BlurInt-Sma: 4px;
-
-  /* aSID-230702+: Control the Transition Speed of Elements. Set to 0 to Disable.*/
-  --AnimMult-Fast: 1;
-  --AnimMult-Normal: 1;
-  --AnimMult-Slow: 1;
-
-  /* aSID-230704+: Self Explanatory, set to 0 to Disable. [!] DOES NOT DISABLE CHAT EFFECTS */
-  --Enable-Animations: 1;
-
-  /* aSID-230703+: Custom Background Customisation */
-  --CustomBGR-IMG: url("https://sirio-network.com/flashcord/bgr-test.jpg");
-  --CustomBGR-Filter: blur(16px) brightness(0.5);
-
-  /* aSID-230704+: If you are having severe issues in the friends tab because you have too many friends, set this to block */
-  --Friend-Redesign: flex; 
-
-  /* aSID-230712+: High End Systems Only. Puts a bunch more random crap that looks cool but blows computers up */
-  --IridescentMode: 0;
-
-  /* aSID-230714+: Enable Chat Effects, disabling them will stop their animations. (Set to 0 to disable) */
-  --Enable-ChatEffects: 1;
-
-  /* aSID-230715+: See the Flashcord Benchmark Channel on the SGN Discord Server for more information. This is not very useful honestly. */
-  --Flashbench: 0;
-
-  /* aSID-230718+: Edit the Server Unread Glow/Shadow, set to 0 to disable it if it distracts you too much */
-  --Server-Glow: 1;
-  --Server-Glow_Color: blue;
-
-  /* aSID-230718+: Edit the Channel Unread Glow/Shadow, set to 0 to disable it if it distracts you too much */
-  --Channel-Glow: 1;
-  --Channel-Glow_Unread_Color: rgba(0,0,255,0.5);
-  --Channel-Glow_Mention_Color: rgba(255,0,0,0.5);
-
-  /* aSID-230720+: IridescentMode starting from aSID-230720 no longers disables animations when you're not hovering Discord, set the variable to 1 to re-enable them. */
-  --Disable-Idle_Optimizations: 0;
-
-  /* aSID-230721-HF2+: Setting this to "none" will remove the Debug Text caused by http://flashcord/debug, useful if people are spamming this. */
-  --Debug-Text_Display: block;
-
-  /* aSID-230722+: Some dude randomly forked Flashcord and edited the stripe image, you can thank him for this feature now. */
-  --Custom-SHC_Stripe: url("https://sirio-network.com/flashcord/elements/stripe.png");
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
 
@@ -92,18 +43,17 @@ This license requires that reusers give credit to the creator. It allows reusers
 
 
 /* SNDL - Roboto Font Override  & Flashcord Variables */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root, body {
   --font-primary: "Roboto";
   --font-display: "Roboto";
   --font-headline: "Roboto";
   
   --Flashcord-Branch: "Flashcord Alpha";
-  --Flashcord-Channel: "aSTB";
+  --Flashcord-Channel: "aSTB-BD";
   --Flashcord-Version: "230721";
 
-  --SplashText: "Now Replugged\AStore Compliant!";
-  --SplashScale: 1;
+  --SplashText: "There's going to be\A4 Branches if this continues";
+  --SplashScale: 0.9;
   --SplashTranslateX: 0px;
   --SplashTranslateY: 0px;
   
@@ -222,7 +172,6 @@ html:has(link[href*="BadgesEverywhere"]):has(link[href*="ShowHiddenChannels"]):h
 
 .basicThemeSelectors-2wNKs6 > .themeSelectionContainer-3nGXK9:first-child .lightIcon-3JRYvU {
   background: unset !important;
-  background-image: url("https://sirio-network.com/flashcord/elements/theme-preview_light.png") !important;
   background-position: center !important;
   background-size: cover !important;
   border-radius: 25px;
@@ -233,7 +182,6 @@ html:has(link[href*="BadgesEverywhere"]):has(link[href*="ShowHiddenChannels"]):h
 
 .basicThemeSelectors-2wNKs6 > .themeSelectionContainer-3nGXK9:last-child .lightIcon-3JRYvU {
   background: unset !important;
-  background-image: url("https://sirio-network.com/flashcord/elements/theme-preview_sync.png") !important;
   background-position: center !important;
   background-size: cover !important;
   border-radius: 25px;
@@ -247,7 +195,6 @@ html:has(link[href*="BadgesEverywhere"]):has(link[href*="ShowHiddenChannels"]):h
 
 .darkIcon-e6uv7V {
   background: unset !important;
-  background-image: url("https://sirio-network.com/flashcord/elements/theme-preview_dark.png") !important;
   background-position: center !important;
   background-size: cover !important;
   border-radius: 25px;
@@ -284,7 +231,7 @@ html:has(link[href*="BadgesEverywhere"]):has(link[href*="ShowHiddenChannels"]):h
 }  
 .themeSelection-2u4ce0[style="background: var(--bg-overlay), linear-gradient(141.68deg, var(--bg-gradient-sunset-1) 27.57%, var(--bg-gradient-sunset-2) 71.25%);"] {
   background: unset !important;
-  background-image: var(--CustomBGR-IMG, url("https://sirio-network.com/flashcord/bgr-test.jpg") ) !important;
+  background-image: var(--CustomBGR-IMG) !important;
   background-position: center !important;
   background-size: cover !important;
   border-radius: 25px;
@@ -309,7 +256,6 @@ html:has(link[href*="BadgesEverywhere"]):has(link[href*="ShowHiddenChannels"]):h
 }  
 .themeSelection-2u4ce0[style="background: var(--bg-overlay), linear-gradient(180deg, var(--bg-gradient-mint-apple-1) 6.15%, var(--bg-gradient-mint-apple-2) 48.7%, var(--bg-gradient-mint-apple-3) 93.07%);"] {
   background: unset !important;
-  background-image: url("https://sirio-network.com/flashcord/elements/theme-preview_transparent.png") !important;
   filter: brightness(0.25);
   background-position: center !important;
   background-size: cover !important;
@@ -654,7 +600,6 @@ rect[id="82006d21-6f3a-467e-8eb9-72f3652362cd-lower_badge_masks"] {
       height: 85vh;
     }
     .noticeRegion-qjyUVg > .container-20TyK0 {
-      background: url("https://sirio-network.com/flashcord/elements/stripe-transparent.png");
       background-color: rgba(255,0,0,0.25) !important;
       backdrop-filter:  blur(var(--BlurInt-Sma, 4px));
       background-repeat: repeat-x;
@@ -1279,7 +1224,6 @@ rect[id="82006d21-6f3a-467e-8eb9-72f3652362cd-lower_badge_masks"] {
   margin-bottom: 0 !important;
 }
 .containerDefault-YUSmu3:has(.shc-hidden-channel) {
-  background: url("https://sirio-network.com/flashcord/elements/stripe.png");
   background-color: rgba(255,0,0,1);
   background-repeat: repeat-x;
   animation: StripeAnim calc(1s * var(--Enable-Animations, 1)) linear infinite reverse;
@@ -1301,7 +1245,6 @@ rect[id="82006d21-6f3a-467e-8eb9-72f3652362cd-lower_badge_masks"] {
 }
 .shc-hidden-wrapper > :before, .shc-hidden-wrapper > :after {
   content: "";
-  background: url("https://sirio-network.com/flashcord/elements/stripe.png");
   background-color: #ff0000;
   background-repeat: repeat-x;
   display: block;
@@ -1366,7 +1309,6 @@ rect[id="82006d21-6f3a-467e-8eb9-72f3652362cd-lower_badge_masks"] {
 
 /* aSID-230713: Channel Typing Plugin Support */
 .containerDefault-YUSmu3:has(.channel-typing-indicator) {
-  background: url("https://sirio-network.com/flashcord/elements/stripe-transparent.png");
   background-color: rgba(55,255,255,0.25) !important;
   background-repeat: repeat-x;
   animation: StripeAnim calc(1s * var(--Enable-Animations, 1)) linear infinite !important;
@@ -1413,7 +1355,7 @@ overflow: visible !important;
 }
 .theme-dark.custom-theme-background body {
 background: unset !important;
-background-image: var(--CustomBGR-IMG, url("https://sirio-network.com/flashcord/bgr-test.jpg") ) !important;
+background-image: var(--CustomBGR-IMG) !important;
 background-position: center !important;
 }
 .theme-dark.custom-theme-background #app-mount {
@@ -1957,7 +1899,6 @@ div[role="menu"] {
 }
 
 .notAppAsidePanel-3yzkgB:has(.selected-2TbFuo[data-dnd-name="🔥flashcord-benchmark"]) .containerDefault-YUSmu3{
-  background: url("https://sirio-network.com/flashcord/elements/stripe-transparent.png");
   background-color: rgba(155,155,155,0.25) !important;
   background-repeat: repeat-x;
   animation: StripeAnim calc(1s * var(--Flashbench, 0)) linear infinite !important;
@@ -2215,36 +2156,5 @@ html {
 ⚠️ Please also send the contents of your QuickCSS if you modified any Flashcord Variables. \A\A \
 == End of Flashcord's Debug Information. == \A\A";
 }
-
-/*  
-🔧 -- Flashcord Tweaks \A \
-  Blur Tweaks: \A \
-      --BlurInt-Big: " var(--BlurInt-Big, '16px') "\A \
-      --BlurInt-Med: " var(--BlurInt-Med, '8px') "\A \
-      --BlurInt-Sma: " var(--BlurInt-Sma, '4px') "\A\A \
-  Animation Tweaks: \A \
-      --AnimMult-Fast: " var(--Flashcord_AnimMult-Fast) "\A \
-      --AnimMult-Normal: " var(--Flashcord_AnimMult-Normal, '1') "\A \
-      --AnimMult-Slow: " var(--Flashcord_AnimMult-Slow, '1') "\A \
-      --Enable-Animations: " var(--Flashcord_Enable-Animations, '1') "\A\A \
-  Custom Background Tweaks: \A \
-      --CustomBGR-IMG: " var(--CustomBGR-IMG, 'url(https://sirio-network.com/flashcord/bgr-test.jpg)') "\A \
-      --CustomBGR-Filter: " var(--CustomBGR-Filter, 'blur(16px) brightness(0.5)') "\A\A \
-  Random Tweaks: \A \
-      --Enable-ChatEffects: " var(--Enable-ChatEffects, '✅') "\A \
-      --Friend-Redesign: " var(--Friend-Redesign, 'flex') "\A \
-      --Brand-Mode: " var(--Brand-Mode, 'Unset (✅)') "\A \
-      --IridescentMode: " var(--IridescentMode, 'Unset (❌)') "\A \
-      --Flashbench: " var(--Flashbench, 'Unset (❌)') "\A \
-      --Disable-Idle_Optimizations: "  var(--Disable-Idle_Optimizations, 'Unset (✅)') "\A \
-      --Allow-Warnings: "  var(--Allow-Warnings, 'Unset (✅)') "\A\A \
-  Unread Tweaks: \A \
-      --Server-Glow: " var(--Server-Glow, '✅') "\A \
-      --Channel-Glow: " var(--Channel-Glow, '✅') "\A\A \
-⚠️ Certain Variables cannot be shown due to weird bugs that can't seem to be fixed (blame CSS limitations), if you edited a variable not present in this list, please also send the value you've modified. \A \
-
---Server-Glow_Color: " var(--Server-Glow_Color, 'blue') "\A \
---Channel-Glow_Unread_Color: " var(--Channel-Glow_Unread_Color, 'rgba(0,0,255,0.5)') "\A \
---Channel-Glow_Mention_Color: " var(--Channel-Glow_Mention_Color, 'rgba(255,0,0,0.5)') "\A \    */
 
 /* End of E-fc-debug.css */
