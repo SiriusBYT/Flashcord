@@ -119,9 +119,9 @@ Flashcord supports many pretty cool Replugged Plugins, all of which are required
 
 To see compatible plugins, simply check the plugins tab (REPLUGGED ONLY)
 
-Some required plugins are shown in the Flashcord WIki.
+Some required plugins are shown in the [Flashcord WIki](https://github.com/SiriusBYT/flashcord/wiki/Installing-Flashcord-on-Replugged#-required-plugins).
 
-More plugins are expected to be supported in the future.
+For Flashcord Stable Users: Ignore the message about not getting the full experience because plugins are missing. That message will be gone soon, the real plugins you really need are shown in the wiki?
 
 # 🎉 Flashcord Chat Effects
 Adding any of these URLs at the end of your Discord message will add a special effect to your message. These also work for attachements.
