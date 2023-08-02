@@ -14,26 +14,8 @@
 - [🎉 Flashcord Chat Effects](https://github.com/SiriusBYT/flashcord/tree/main#-flashcord-chat-effects)
 
 # ⬇️ Installing Flashcord
-Before we can start, decide which version of Flashcord you would like to install, the Stable version gets updates every week or more while the "SID" versions gets updated daily. SID can be unstable at times so if you want a theme that just works then install Stable.
-## 🦺 Installing Stable:
-[For Replugged Users, simply click here](https://replugged.dev/install?identifier=com.sirio-network.flashcord), this will open a page that will communicate with your client to install Flashcord.
-#### WARNING: Flashcord Stable is no longer available for Replugged users via the Replugged Store (or will be very soon) due to certain parts of Flashcord that were accidentally approved when in the end they weren't intended to be. As I do not want to compromise on features, Flashcord is thus no longer approved by the Replugged Team (or will be extremely soon). The link to install stable thus == probably == no longer works.
-### You can install Flashcord Stable on other clients such as BetterDiscord or Vencord by adding this to your QuickCSS, please note that Flashcord doesn't fully support other clients!
-⚠️ You cannot decide if you wanna update or not with this method, it updates as soon as your client fetches for Flashcord's code.
-```
-@import url("https://raw.githubusercontent.com/SiriusBYT/flashcord/main/src/main.css");
-```
-## 🔥 Installing SID:
-### ⛔WARNING: Flashcord SID is in a completely different universe right now!! It is transitionning to Flashcord Beta which is heavily unfinished and doesn't have every feature that Alpha has! Do NOT use SID right now unless you have to due to the severe performance issues.
 
-⚠️ You cannot decide if you wanna update or not with Flashcord SID, it updates as soon as your client fetches for Flashcord's code.
-To switch to Flashcord SID, please **Paste the Following Line** into your **Quick CSS** and then click on **"Apply Changes"**
-```
-@import url("https://sirio-network.com/flashcord/fc-sndl.css");
-```
-To force update Flashcord SID, open the **DevTools** (CTRL + SHIFT + I), head over to the **Network** Tab, then check **"Disable Cache"** and click on **"Apply Changes"**.
-
-ℹ️ Make sure to also not have Flashcord Stable still enabled after switching to SID to prevent code conflicts.
+### Install instructions have moved to the [Flashcord Wiki](https://github.com/SiriusBYT/flashcord/wiki).
 
 ## 🔄️ Flashcord Version Status
 🦺 Flashcord Stable: [aSTB-230721] | **3 Feature Updates Behind SID.** | 🌐 Root Code Base: aSID-230721-HF3
