@@ -18,18 +18,12 @@
 ### Install instructions have moved to the [Flashcord Wiki](https://github.com/SiriusBYT/flashcord/wiki).
 
 ## 🔄️ Flashcord Version Status
-🦺 Flashcord Stable: [aSTB-230721] | **3 Feature Updates Behind SID.** | 🌐 Root Code Base: aSID-230721-HF3
+🦺 Flashcord Stable: [aSTB-230721] | **4 Feature Updates Behind SID.** | 🌐 Root Code Base: aSID-230721-HF3
 
-🔥 Flashcord SID: [bSID-230801] | **14 Days without an Emergency Hotfix Update.**
+🔥 Flashcord SID: [bSID-230802] | **15 Days without an Emergency Hotfix Update.**
 
 
 # 💡 Configuring Flashcord
-## ⚠️ Flashcord requires the "Channel Emojis" Discord Experiment for the best experience.
-Refer to your client's way of enabling Experiments, then search for **"Channel Emojis"** and set the **Treatment to 2**
-
-## 🛑 NOTICE ABOUT CUSTOM IMAGE BACKGROUNDS: Requires ["LegalDiscordBypasses" by @loneweeb.tsx](https://replugged.dev/install?identifier=dev.tharki.LegalDiscordBypasses) or Discord Nitro
-Due to the complexity of Flashcord, it is better to seperate the Custom Background Image Theme into another one, problem is that the only other "it just works" theme is a Discord Nitro theme. 
-Using the plugin  is thus necessary if you wanna use said feature without Nitro.
 
 ## 🔁 User Variables (Flashcord Alpha, does NOT work with Flashcord Beta)
 NOTICE: The next major release of Flashcord does not have the same variable names. Please remind yourself that they will change very soon.
