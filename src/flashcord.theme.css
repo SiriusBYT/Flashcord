@@ -812,7 +812,7 @@
          .theme-dark .sectionTitle-36PWt2 > :after {
            color: white;
          }
-         .peopleList-2VBrVI.auto-2TJ1RH.scrollerBase-1Pkza4 > div, .replugged-addon-cards {
+         .peopleList-2VBrVI.auto-2TJ1RH.scrollerBase-1Pkza4 > div {
            display: var(--Friend-Redesign, flex);
            flex-wrap: wrap;
            align-content: center;
@@ -822,7 +822,7 @@
            width: 95%;
            margin: auto;
          }
-         .peopleListItem-u6dGxF, .replugged-addon-card, .roleRow-230vCm {
+         .peopleListItem-u6dGxF, .roleRow-230vCm {
            margin: 0;
            min-width: 386px;
            min-height: 64px;
@@ -833,7 +833,7 @@
            border-radius: 25px;
            scale: 0.95;
          }
-         .peopleListItem-u6dGxF:hover, .replugged-addon-card:hover {
+         .peopleListItem-u6dGxF:hover {
            margin: 0 !important;
            padding: 8px !important;
            scale: 1.05;
