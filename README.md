@@ -22,6 +22,8 @@
 
 🔥 Flashcord SID: [bSID-230802] | **15 Days without an Emergency Hotfix Update.**
 
+# 🛠️ Want to mod Flashcord ?
+Checkout the [Flashcord Module Template](https://github.com/SiriusBYT/Flashcord-Module-Template), if you want to install extentions of Flashcord then check out the [Flashcord Modules Store](https://sirio-network.com/flashcord/store)
 
 # 💡 Configuring Flashcord
 
@@ -90,65 +92,16 @@ This is a list of all the variables Flashcord has, to edit them, simply put the 
 }
 ```
 
+# 🎉 Flashcord Chat Effects
+### Flashcord Chat Effects have moved to the [Flashcord Wiki](https://github.com/SiriusBYT/flashcord/wiki/Chat-Effects).
+If these effects cause way too much lag, **consider disabling them using the variable "--Enable-ChatEffects"**. (Flashcord Alpha)
+
 ## 💉 Plugin Support
 
-Flashcord supports many pretty cool Replugged Plugins, all of which are required if you want the best experience.
-
-To see compatible plugins, simply check the plugins tab (REPLUGGED ONLY)
+Flashcord supports many pretty cool Replugged Plugins, all of which are required if you want the best experience. To see compatible plugins, simply check the plugins tab (REPLUGGED ONLY)
 
 Some required plugins are shown in the [Flashcord WIki](https://github.com/SiriusBYT/flashcord/wiki/Installing-Flashcord-on-Replugged#-required-plugins).
 
-For Flashcord Stable Users: Ignore the message about not getting the full experience because plugins are missing. That message will be gone soon, the real plugins you really need are shown in the wiki.
-
-# 🎉 Flashcord Chat Effects
-Adding any of these URLs at the end of your Discord message will add a special effect to your message. These also work for attachements.
-```
-(aSID-230714+) Rainbow Text Effect: http://flashcord/rainbow
-(aSID-230714+) Small Text Effect: http://flashcord/small
-(aSID-230714+) Shake Effect: http://flashcord/shake
-(aSID-230714+) Dramatic Effect: http://flashcord/dramatic
-
-(aSID-230715+) Red Background Message: http://flashcord/background/red
-(aSID-230715+) Green Background Message: http://flashcord/background/green
-(aSID-230715+) Blue Background Message: http://flashcord/background/blue
-
-(aSID-230717+) Loud Effect: http://flashcord/loud
-(aSID-230717+) Quiet Effect: http://flashcord/quiet
-
-(aSID-230719+) Rainbow Shadow Effect: http://flashcord/rainbow-shadow
-(aSID-230719+) Spin Effect: http://flashcord/spin
-(aSID-230719+) Fade from Bottom Effect: http://flashcord/fade-bottom
-(aSID-230719+) Splash Text Effect: http://flashcord/splash
-
-(aSID-230720+) Debug Information: http://flashcord/debug
-
-You can use markdown to hide the link to non-flashcord users. Example: [This message has a Flashcord Chat Effect. Install it to view the effect.](http://flashcord/rainbow)
-```
-If these effects cause way too much lag, **consider disabling them using the variable "--Enable-ChatEffects**.
-
-
-## ✅ Platform Compatibility
-
-| Platform     | Replugged                 | BetterDiscord                                    | Vencord                                          |
-|:-------------|:--------------------------|:-------------------------------------------------|:-------------------------------------------------|
-| 🪟 Windows   | ✅ Perfect Compatibility | ⚠️ Missing & Incompatible Plugins, seems fine    | ⚠️ Missing Plugins, some compatible, seems fine |
-| 🍎 MacOS     | ☑️ Seems Perfectly Fine  | ❓Unknown Compatibility                          | ❓Unknown Compatibility                         |
-| 🐧 GNU/Linux | ☑️ Seems Perfectly Fine  | ⚠️ Missing & Incompatible Plugins + Weird Issues | ❓Unknown Compatibility                         |
-
-| 📱 Enmity (iOS)     | ☎️ Android             |
-|:--------------------|:------------------------|
-| [⛔ Color Theme Only](https://github.com/SiriusBYT/flashcord-ios) | ⛔ Unsupported for now |
-
-
-## 💾 Flashcord Archive
-Older versions of Flashcord are available on the [Sirio Network Website](https://sirio-network.com).
-To use an older version of Flashcord, add this to your QuickCSS while replacing [Branch] by either STB (Stable) or SID and [Version Number].
-```
-@import url("https://sirio-network.com/flashcord/archive/[Status][Branch]-[Version Number].css");
-
-Valid Example:
-@import url("https://sirio-network.com/flashcord/archive/aSID-230715.css");
-```
-To view the available versions, please look at https://sirio-network/flashcord/archive (Warning: Currently not Working)
+#### For Flashcord Stable Users: Ignore the message about not getting the full experience because plugins are missing. That message will be gone soon, the real plugins you really need are shown in the wiki.
 
 ##### [Flashcord](https://github.com/SiriusBYT/flashcord) © 2023 by [SiriusBYT](https://sirio-network.com) is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
