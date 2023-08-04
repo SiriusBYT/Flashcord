@@ -1,14 +1,11 @@
-lmfao why r u looking at this i'm not even done rewriting flashcord lol
-
 # 📸 This. This is Flashcord.
 ## The world's most complex Discord Theme.
-[gif showcasing every theme of flashcord, light, dark, cbm, iridescent, transparent, etc]
 ## It's all about the chat space.
 ![](https://sirio-network.com/flashcord/store/fc-light.gif)
 ## But also for the eye candy.
 ![](https://sirio-network.com/flashcord/store/fc-dark.gif)
-## And the sheer insane customization and integration.
-[showcase compatible replugged plugins, modifying modules / cbm]
+## And the ridiculously insane customization and integration.
+![](https://sirio-network.com/flashcord/store/fc-cbm_cc.gif)
 
 # 📑 Getting Started: Check the Flashcord Wiki
 ### That's right this theme has a bloody arch wiki manual page knock-off. Get ready to RTFM.
