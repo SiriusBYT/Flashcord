@@ -13,7 +13,7 @@ Due to the complexity of Flashcord, yes, I am not kidding. This Discord Theme ha
 
 [Instructions about anything and everything on Flashcord is available here.](https://github.com/SiriusBYT/flashcord/wiki)
 
-Flashcord is currently in Beta, expect lots of things to change and quickly! Next major version will be Flashcord Gamma, set to release in 2024.
+Flashcord is currently in Beta, expect lots of things to change and quickly! Next major version will be Flashcord Gamma, set to release in 2024 if everything goes according to plan.
 
 # 🛠️ Want to mod Flashcord?
 Check out the [Flashcord Module Template](https://github.com/SiriusBYT/Flashcord-Module-Template), if you want to install extensions of Flashcord then check out the [Flashcord Modules Store](https://sirio-network.com/flashcord/store)
