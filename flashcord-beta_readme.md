@@ -1,7 +1,6 @@
 lmfao why r u looking at this i'm not even done rewriting flashcord lol
 
 # 📸 This. This is Flashcord.
-[Insert epic video here, or nothing]
 ## The world's most complex Discord Theme.
 [gif showcasing every theme of flashcord, light, dark, cbm, iridescent, transparent, etc]
 ## It's all about the chat space.
