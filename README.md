@@ -15,3 +15,5 @@ Due to the complexity of Flashcord, yes, I am not kidding. This Discord Theme ha
 
 # 🛠️ Want to mod Flashcord?
 Check out the [Flashcord Module Template](https://github.com/SiriusBYT/Flashcord-Module-Template), if you want to install extensions of Flashcord then check out the [Flashcord Modules Store](https://sirio-network.com/flashcord/store)
+
+##### [Flashcord](https://github.com/SiriusBYT/flashcord) © 2023 by [SiriusBYT](https://sirio-network.com) is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
