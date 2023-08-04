@@ -1,7 +1,7 @@
 {
-  "name": "Flashcord Alpha",
-  "version": "aSTB-230721-HF0",
-  "description": "The world's most advanced and unnecessarily complicated Discord Theme to ever exist.",
+  "name": "Flashcord Beta",
+  "version": "bSID-Unknown",
+  "description": "The world's most advanced, complex and feature rich Discord Theme to ever exist. A complete visual overhaul for Discord. ⚠️ Make sure to read the Flashcord Wiki!",
   "engines": {
     "node": ">=18.0.0",
     "pnpm": ">=8.0.0"
