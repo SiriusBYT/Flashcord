@@ -1,10 +1,10 @@
-# This is Flashcord. (Alpha)
+# This is Flashcord Alpha.
 ## The most advanced Discord Theme to date.
-![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-LMH.gif)
+![](https://sirio-network.com/flashcord/alpha/FC-LMH.gif)
 # Flashcord is all about Maximising your Chat Space.
-![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-DKM.gif)
+![](https://sirio-network.com/flashcord/alpha/FC-DKM.gif)
 # While also being the pinacle of Customisable Eye Candy.
-![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-CBGR.gif)
+![](https://sirio-network.com/flashcord/alpha/FC-CBGR.gif)
 ## Notice: Flashcord is still very much unfinished.
 
 # 📑 Summary & Important Tabs
@@ -14,18 +14,40 @@
 - [🎉 Flashcord Chat Effects](https://github.com/SiriusBYT/flashcord/tree/main#-flashcord-chat-effects)
 
 # ⬇️ Installing Flashcord
+Before we can start, decide which version of Flashcord you would like to install, the Stable version gets updates every week or more while the "SID" versions gets updated daily. SID can be unstable at times so if you want a theme that just works then install Stable.
+## 🦺 Installing Stable:
+[For Replugged Users, simply click here](https://replugged.dev/install?identifier=com.sirio-network.flashcord), this will open a page that will communicate with your client to install Flashcord.
+#### WARNING: Flashcord Stable is no longer available for Replugged users via the Replugged Store (or will be very soon) due to certain parts of Flashcord that were accidentally approved when in the end they weren't intended to be. As I do not want to compromise on features, Flashcord is thus no longer approved by the Replugged Team (or will be extremely soon). The link to install stable thus == probably == no longer works.
+### You can install Flashcord Stable on other clients such as BetterDiscord or Vencord by adding this to your QuickCSS, please note that Flashcord doesn't fully support other clients!
+⚠️ You cannot decide if you wanna update or not with this method, it updates as soon as your client fetches for Flashcord's code.
+```
+@import url("https://raw.githubusercontent.com/SiriusBYT/flashcord/main/src/main.css");
+```
+## 🔥 Installing SID:
+### ⛔WARNING: Flashcord SID is in a completely different universe right now!! It is transitionning to Flashcord Beta which is heavily unfinished and doesn't have every feature that Alpha has! Do NOT use SID right now unless you have to due to the severe performance issues.
 
-### Install instructions have moved to the [Flashcord Wiki](https://github.com/SiriusBYT/flashcord/wiki).
+⚠️ You cannot decide if you wanna update or not with Flashcord SID, it updates as soon as your client fetches for Flashcord's code.
+To switch to Flashcord SID, please **Paste the Following Line** into your **Quick CSS** and then click on **"Apply Changes"**
+```
+@import url("https://sirio-network.com/flashcord/fc-sndl.css");
+```
+To force update Flashcord SID, open the **DevTools** (CTRL + SHIFT + I), head over to the **Network** Tab, then check **"Disable Cache"** and click on **"Apply Changes"**.
+
+ℹ️ Make sure to also not have Flashcord Stable still enabled after switching to SID to prevent code conflicts.
 
 ## 🔄️ Flashcord Version Status
-🦺 Flashcord Stable: [aSTB-230721] | **4 Feature Updates Behind SID.** | 🌐 Root Code Base: aSID-230721-HF3
+🦺 Flashcord Stable: [aSTB-230721] | **3 Feature Updates Behind SID.** | 🌐 Root Code Base: aSID-230721-HF3
 
-🔥 Flashcord SID: [bSID-230802] | **15 Days without an Emergency Hotfix Update.**
+🔥 Flashcord SID: [bSID-230801] | **14 Days without an Emergency Hotfix Update.**
 
-# 🛠️ Want to mod Flashcord ?
-Checkout the [Flashcord Module Template](https://github.com/SiriusBYT/Flashcord-Module-Template), if you want to install extentions of Flashcord then check out the [Flashcord Modules Store](https://sirio-network.com/flashcord/store)
 
 # 💡 Configuring Flashcord
+## ⚠️ Flashcord requires the "Channel Emojis" Discord Experiment for the best experience.
+Refer to your client's way of enabling Experiments, then search for **"Channel Emojis"** and set the **Treatment to 2**
+
+## 🛑 NOTICE ABOUT CUSTOM IMAGE BACKGROUNDS: Requires ["LegalDiscordBypasses" by @loneweeb.tsx](https://replugged.dev/install?identifier=dev.tharki.LegalDiscordBypasses) or Discord Nitro
+Due to the complexity of Flashcord, it is better to seperate the Custom Background Image Theme into another one, problem is that the only other "it just works" theme is a Discord Nitro theme. 
+Using the plugin  is thus necessary if you wanna use said feature without Nitro.
 
 ## 🔁 User Variables (Flashcord Alpha, does NOT work with Flashcord Beta)
 NOTICE: The next major release of Flashcord does not have the same variable names. Please remind yourself that they will change very soon.
@@ -92,16 +114,65 @@ This is a list of all the variables Flashcord has, to edit them, simply put the 
 }
 ```
 
-# 🎉 Flashcord Chat Effects
-### Flashcord Chat Effects have moved to the [Flashcord Wiki](https://github.com/SiriusBYT/flashcord/wiki/Chat-Effects).
-If these effects cause way too much lag, **consider disabling them using the variable "--Enable-ChatEffects"**. (Flashcord Alpha)
-
 ## 💉 Plugin Support
 
-Flashcord supports many pretty cool Replugged Plugins, all of which are required if you want the best experience. To see compatible plugins, simply check the plugins tab (REPLUGGED ONLY)
+Flashcord supports many pretty cool Replugged Plugins, all of which are required if you want the best experience.
+
+To see compatible plugins, simply check the plugins tab (REPLUGGED ONLY)
 
 Some required plugins are shown in the [Flashcord WIki](https://github.com/SiriusBYT/flashcord/wiki/Installing-Flashcord-on-Replugged#-required-plugins).
 
-#### For Flashcord Stable Users: Ignore the message about not getting the full experience because plugins are missing. That message will be gone soon, the real plugins you really need are shown in the wiki.
+For Flashcord Stable Users: Ignore the message about not getting the full experience because plugins are missing. That message will be gone soon, the real plugins you really need are shown in the wiki.
+
+# 🎉 Flashcord Chat Effects
+Adding any of these URLs at the end of your Discord message will add a special effect to your message. These also work for attachements.
+```
+(aSID-230714+) Rainbow Text Effect: http://flashcord/rainbow
+(aSID-230714+) Small Text Effect: http://flashcord/small
+(aSID-230714+) Shake Effect: http://flashcord/shake
+(aSID-230714+) Dramatic Effect: http://flashcord/dramatic
+
+(aSID-230715+) Red Background Message: http://flashcord/background/red
+(aSID-230715+) Green Background Message: http://flashcord/background/green
+(aSID-230715+) Blue Background Message: http://flashcord/background/blue
+
+(aSID-230717+) Loud Effect: http://flashcord/loud
+(aSID-230717+) Quiet Effect: http://flashcord/quiet
+
+(aSID-230719+) Rainbow Shadow Effect: http://flashcord/rainbow-shadow
+(aSID-230719+) Spin Effect: http://flashcord/spin
+(aSID-230719+) Fade from Bottom Effect: http://flashcord/fade-bottom
+(aSID-230719+) Splash Text Effect: http://flashcord/splash
+
+(aSID-230720+) Debug Information: http://flashcord/debug
+
+You can use markdown to hide the link to non-flashcord users. Example: [This message has a Flashcord Chat Effect. Install it to view the effect.](http://flashcord/rainbow)
+```
+If these effects cause way too much lag, **consider disabling them using the variable "--Enable-ChatEffects**.
+
+
+## ✅ Platform Compatibility
+
+| Platform     | Replugged                 | BetterDiscord                                    | Vencord                                          |
+|:-------------|:--------------------------|:-------------------------------------------------|:-------------------------------------------------|
+| 🪟 Windows   | ✅ Perfect Compatibility | ⚠️ Missing & Incompatible Plugins, seems fine    | ⚠️ Missing Plugins, some compatible, seems fine |
+| 🍎 MacOS     | ☑️ Seems Perfectly Fine  | ❓Unknown Compatibility                          | ❓Unknown Compatibility                         |
+| 🐧 GNU/Linux | ☑️ Seems Perfectly Fine  | ⚠️ Missing & Incompatible Plugins + Weird Issues | ❓Unknown Compatibility                         |
+
+| 📱 Enmity (iOS)     | ☎️ Android             |
+|:--------------------|:------------------------|
+| [⛔ Color Theme Only](https://github.com/SiriusBYT/flashcord-ios) | ⛔ Unsupported for now |
+
+
+## 💾 Flashcord Archive
+Older versions of Flashcord are available on the [Sirio Network Website](https://sirio-network.com).
+To use an older version of Flashcord, add this to your QuickCSS while replacing [Branch] by either STB (Stable) or SID and [Version Number].
+```
+@import url("https://sirio-network.com/flashcord/archive/[Status][Branch]-[Version Number].css");
+
+Valid Example:
+@import url("https://sirio-network.com/flashcord/archive/aSID-230715.css");
+```
+To view the available versions, please look at https://sirio-network/flashcord/archive (Warning: Currently not Working)
 
 ##### [Flashcord](https://github.com/SiriusBYT/flashcord) © 2023 by [SiriusBYT](https://sirio-network.com) is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
