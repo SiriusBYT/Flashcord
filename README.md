@@ -1,4 +1,4 @@
-# 📸 This. This is Flashcord.
+# 📸 This. This is Flashcord Beta.
 ## The world's most complex Discord Theme.
 ## It's all about the chat space.
 ![](https://sirio-network.com/flashcord/store/fc-light.gif)
@@ -12,6 +12,8 @@
 Due to the complexity of Flashcord, yes, I am not kidding. This Discord Theme has a wiki page. **And trust me, you seriously need it.**
 
 [Instructions about anything and everything on Flashcord is available here.](https://github.com/SiriusBYT/flashcord/wiki)
+
+Flashcord is currently in Beta, expect lots of things to change and quickly! Next major version will be Flashcord Gamma, set to release in 2024.
 
 # 🛠️ Want to mod Flashcord?
 Check out the [Flashcord Module Template](https://github.com/SiriusBYT/Flashcord-Module-Template), if you want to install extensions of Flashcord then check out the [Flashcord Modules Store](https://sirio-network.com/flashcord/store)
