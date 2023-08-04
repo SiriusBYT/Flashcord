@@ -3,7 +3,7 @@
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-LMH.gif)
 # Flashcord is all about Maximising your Chat Space.
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-DKM.gif)
-# While also being the pinacle of Customisable Eye Candy.
+# While also being the pinnacle of Customisable Eye Candy.
 ![](https://raw.githubusercontent.com/SiriusBYT/flashcord/main/FC-PREVIEW/FC-CBGR.gif)
 ## Notice: Flashcord is still very much unfinished.
 
@@ -23,7 +23,7 @@
 🔥 Flashcord SID: [bSID-230802] | **15 Days without an Emergency Hotfix Update.**
 
 # 🛠️ Want to mod Flashcord ?
-Checkout the [Flashcord Module Template](https://github.com/SiriusBYT/Flashcord-Module-Template), if you want to install extentions of Flashcord then check out the [Flashcord Modules Store](https://sirio-network.com/flashcord/store)
+Checkout the [Flashcord Module Template](https://github.com/SiriusBYT/Flashcord-Module-Template), if you want to install extensions of Flashcord then check out the [Flashcord Modules Store](https://sirio-network.com/flashcord/store)
 
 # 💡 Configuring Flashcord
 
