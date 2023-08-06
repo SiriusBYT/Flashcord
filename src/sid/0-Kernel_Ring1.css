@@ -1,0 +1,22 @@
+
+/* [START] = Flashcord Beta == Kernel [01] CSS = */
+
+.theme-light {
+    --background-primary: #FFFFFF;
+    --background-secondary: #FFFFFF;
+    --background-secondary-alt: #FFFFFF;
+    --background-tertiary: #FFFFFF;
+    --background-accent: #FF99FF;
+    --background-floating: #FFF9FF;
+}
+
+.theme-dark {
+    --background-primary: #000000;
+    --background-secondary: #000000;
+    --background-secondary-alt: #000000;
+    --background-tertiary: #000000;
+    --background-accent: #660066;
+    --background-floating: #666966;
+}
+
+/* [END] = Flashcord Beta == Kernel [01] CSS = */

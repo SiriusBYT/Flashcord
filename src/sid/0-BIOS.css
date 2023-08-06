@@ -1,0 +1,58 @@
+/* REMINDER: Please read LICENSE.md before modifying Flashcord.
+If you can't be bothered doing that, just know that:
+
+This license requires that reusers give credit to the creator. It allows reusers to copy and distribute the material in any medium or format in unadapted form and for noncommercial purposes only. 
+
+[Flashcord] © 2023 by [SiriusBYT] is licensed under [CC BY-NC-ND 4.0].
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* [START] = Flashcord Beta == BIOS [00] CSS = */
+
+/* NOTICE: Everytime there is a " [!] FC-Wildcard_PerfNuker " this means that using a wildcard will absolutely nuke performance so bad it would make Flashcord impossible to use */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root, body {
+  --font-primary: "Roboto";
+  --font-display: "Roboto";
+  --font-headline: "Roboto";
+  
+  --Flashcord-Branch: "Flashcord Beta";
+  --Flashcord-Channel: "bSID";
+  --Flashcord-Version: "230806";
+
+  --Flashcord-Splash: "FC-Badges, now with \A 1% less lag included!";
+  --Flashcord-SplashSca: 1;
+  --Flashcord-SplashTrX: -10px;
+  --Flashcord-SplashTrY: 0px;
+  --Flashcord-SplashMAR: 40px;
+  
+  background: #000000;
+  animation: Flashcord-Welcome_Win11 calc(1s * (var(--Enable-Animations, 1) * var(--DevMode, 1)) ) ease-out;
+}
+
+::-webkit-scrollbar { display: none; }
+[class*="wordmark-"] { display: none; }
+
+.stop-animation * {
+  animation: inherit !important;
+  transform: inherit !important;
+  transition: inherit !important;
+}
+
+/* [END] = Flashcord Beta == BIOS [00] CSS = */
