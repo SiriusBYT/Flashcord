@@ -4,9 +4,12 @@
 ![](https://sirio-network.com/flashcord/store/fc-light.gif)
 ## But also for the eye candy.
 ![](https://sirio-network.com/flashcord/store/fc-dark.gif)
-## And the ridiculously insane customization and integration.
+## The ridiculously insane customization and integration.
 ![](https://sirio-network.com/flashcord/store/fc-cbm_cc.gif)
-
+## And the whole [new layer of expression](https://github.com/SiriusBYT/flashcord/wiki/Chat-Effects) for messages.
+| Small Effect | Shaking Effect | Dramatic Effect | Fade from Bottom Effect | 4Chan Effect |
+|:---|:---|:---|:---|:---|
+![](https://sirio-network.com/flashcord/wiki/chat-effects/small.png) | ![](https://sirio-network.com/flashcord/wiki/chat-effects/shake.gif) | ![](https://sirio-network.com/flashcord/wiki/chat-effects/dramatic.gif) | ![](https://sirio-network.com/flashcord/wiki/chat-effects/fade-bottom.gif) | ![](https://sirio-network.com/flashcord/wiki/chat-effects/4chan-new.png)
 # 📑 Getting Started: Check the Flashcord Wiki
 ### That's right this theme has a bloody arch wiki manual page knock-off. Get ready to RTFM.
 Due to the complexity of Flashcord, yes, I am not kidding. This Discord Theme has a wiki page. **And trust me, you seriously need it.**
