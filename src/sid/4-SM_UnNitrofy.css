@@ -41,6 +41,7 @@ body {
     }
     
     [class^="premiumIconWrapper-"] { display: none; }
+    [href="/store"] { display: none; }
 }
 
 /* [End] = Flashcord Beta == Small Modifications - UnNitrofy CSS = */

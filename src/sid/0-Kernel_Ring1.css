@@ -7,7 +7,10 @@
     --background-secondary-alt: #FFFFFF;
     --background-tertiary: #FFFFFF;
     --background-accent: #FF99FF;
-    --background-floating: #FFF9FF;
+    --background-floating: #FFFfFF;
+    --channeltextarea-background: #f0f0f0;
+    --background-modifier-selected: #f0f0f0;
+    --background-modifier-hover: #e0e0e0;
 }
 
 .theme-dark {
@@ -16,7 +19,11 @@
     --background-secondary-alt: #000000;
     --background-tertiary: #000000;
     --background-accent: #660066;
-    --background-floating: #666966;
+    --background-floating: #060606;
+    --channeltextarea-background: #060606;
+    --background-modifier-selected: #0F0F0F;
+    --background-modifier-hover: #161616;
+    --FlashCore-Brightness: 2;
 }
 
 /* [END] = Flashcord Beta == Kernel [01] CSS = */

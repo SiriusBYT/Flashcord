@@ -1,7 +1,7 @@
 
 /* [Start] = Flashcord Beta == Major General Modifications - ChatEffects_CD CSS = */
 
-[class^="messageListItem-"]:nth-last-child(-n + 9 ):has([href^="http://flashcord/"]) {
+[class^="messageListItem-"]:nth-last-child(-n + 9 ):has([href^="http://flashcord/"], [class="replugged-greentext"]) {
     container-name: var(--Flashcord-Chat_Effects, FC-ChatEffects_Animated);
     container-type: inline-size;
 }
@@ -31,30 +31,61 @@
     }
 
     /* Green Text Mode from 4Chan */
-    [class^="message-"]:has([href="http://flashcord/4chan"]) {
+    [class^="message-"]:has([href="http://flashcord/4chan"], [class="replugged-greentext"]) {
         display: flex !important;
         background: #fffeed !important;
-        container-name: FC-ChatEffects_4Chan !important;
+        container-name: FC-ChatEffects_4Chan-L1 !important;
         container-type: inline-size !important;
     }
-}
-
-@container FC-ChatEffects_4Chan (min-width: 0px) {
-    [class^="contents-"] {
-        margin-left: 16px !important;
-        order: 1;
-    }
-    [class^="username-"] {
-        color: #337547 !important;
-    }
-    span {
-        color: #8dad68 !important;
-    }
-    [class^="avatar-2e8lTP"] {
-        display: none;
-    }
-    [class^="timestamp-"] {
-        color: #8d230b !important;
+    @container FC-ChatEffects_4Chan-L1 (min-width: 0px) {
+        [class^="contents-"] {
+            margin-left: 16px !important;
+            order: 1;
+        }
+        [class^="username-"] {
+            color: #117743 !important;
+        }
+        span {
+            color: #d00;
+        }
+        [class^="avatar-2e8lTP"] {
+            display: none;
+        }
+        [class^="timestamp-"] {
+            color: #800 !important;
+        }
+        .replugged-greentext > span {
+            color: #789922 !important;
+        }
+        [id^="message-reply-context-"] {
+            container-name: FC-ChatEffects_4Chan-L2 !important;
+            container-type: inline-size !important;
+            display: -webkit-box !important;
+            font-size: 1rem;
+            position: absolute;
+            top: 1.5rem;
+        }
+        [id^="message-reply-context-"]:before { display: none; }
+        [class^="contents-"] [class^="header-"] {
+            margin-bottom: 1rem;
+        }
+        .stafftag, .platform-indicators { display: none; }
+        @container FC-ChatEffects_4Chan-L2 (min-width: 0px) {
+            img, svg, span:has(.stafftag) { display: none; }
+            [class^="username-"]:before {
+                content: ">>";
+                color: #d00 !important;
+                margin-left: 1rem;
+            }
+            [class^="username-"] {
+                color: #d00 !important;
+                margin-top: 10px;
+            }
+            [class^="repliedTextPreview-"] {
+                margin-top: 0px;
+                opacity: 0.5;
+            }
+        }
     }
 }
 

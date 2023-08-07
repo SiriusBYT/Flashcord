@@ -67,10 +67,10 @@
     #my-account-tab > div > [class^="marginTop40-"]:last-child { display: none; }
 
     [class^="divider-"] {
-        margin-top: 0px;
+        margin-top: 16px;
         padding: 0;
     }
-
+    [class^="accountProfileCard-"] { margin-bottom: -16px; }
     h2 { margin-top: 20px; text-align: center;}
 
     [class^="changePasswordButton-"] {
@@ -85,9 +85,11 @@
         filter: blur(0px);
         transition: filter 1s;
     }
-
+    [class^="userSettingsSecurity-"] { margin: 0; }
+    [class^="userSettingsSecurity-"] [class^="h1-"] { margin: 8px; }
+    [class^="colorStandard-"]:has([class*="phoneRevealer-"]) { display: none; }
     #my-account-tab > :after {
-        content: "\A\A About Flashcord";
+        content: "\A About Flashcord";
         font-weight: 900;
         white-space: pre;
         color: var(--text-normal);

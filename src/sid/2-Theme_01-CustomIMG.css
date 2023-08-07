@@ -11,6 +11,7 @@
     --background-secondary: transparent !important;
     --background-secondary-alt: transparent !important;
     --background-tertiary: transparent !important;
+    --bg-overlay-6: transparent !important;
 }
 .theme-dark.custom-theme-background body {
     background: unset !important;
