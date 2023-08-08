@@ -73,7 +73,7 @@
         scale: 0.98;
     }
     [class^="layers-"]:has([class^="closeButton-"]:hover) .baseLayer-W6S8cY { /* [!] FC-Wildcard_PerfNuker */
-        filter: blur(0px) brightness(1);
+        filter: blur(var(--Flashcord-Blur-Close, 2px)) brightness(0.98);
         scale: 1;
     }
     [class^="closeButton-"]:hover {

@@ -54,11 +54,12 @@
         margin-left: -190px;
         translate: 190px;
         height: 100%;
+        z-index: 1;
 
-        transition-property: translate;
+        transition-property: translate, filter;
         transition-duration: calc(250ms * var(--Flashcord-TransMult-Normal, 1));
     }
-    [class^="membersWrap-"]:hover { translate: 0px; /*will-change: translate;*/ }
+    [class^="membersWrap-"]:hover { translate: 0px; filter: drop-shadow(0px 0px 16px var(--channeltextarea-background));  }
     [class^="member-"] { margin-left: 0px; }
     [class^="member-"] > div {
         padding-top: 0px;

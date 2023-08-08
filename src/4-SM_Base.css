@@ -20,4 +20,14 @@
     margin: -4px;
 }
 
+[class^="icon-"] {
+    transition-property: scale;
+    transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1)) !important;
+}
+[class^="icon-"]:hover {
+    scale: 1.1;
+}
+[class^="icon-"]:active {
+    scale: 0.9;
+}
 /* [End] = Flashcord Beta == Small Modifications - BaseLayer CSS = */
