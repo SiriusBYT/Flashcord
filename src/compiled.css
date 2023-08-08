@@ -1,0 +1,1965 @@
+/* REMINDER: Please read LICENSE.md before modifying Flashcord.
+If you can't be bothered doing that, just know that:
+
+This license requires that reusers give credit to the creator. It allows reusers to copy and distribute the material in any medium or format in unadapted form and for noncommercial purposes only. 
+
+[Flashcord] © 2023 by [SiriusBYT] is licensed under [CC BY-NC-ND 4.0].
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* [START] = Flashcord Beta == BIOS [00] CSS = */
+
+/* NOTICE: Everytime there is a " [!] FC-Wildcard_PerfNuker " this means that using a wildcard will absolutely nuke performance so bad it would make Flashcord impossible to use */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root, body {
+  --font-primary: "Roboto";
+  --font-display: "Roboto";
+  --font-headline: "Roboto";
+  
+  --Flashcord-Branch: "Flashcord Beta";
+  --Flashcord-Channel: "bSID";
+  --Flashcord-Version: "230807";
+
+  --Flashcord-Splash: "192.168.1.1";
+  --Flashcord-SplashSca: 1.5;
+  --Flashcord-SplashTrX: -10px;
+  --Flashcord-SplashTrY: 0px;
+  --Flashcord-SplashMAR: 20px;
+  
+  background: #000000;
+  animation: Flashcord-Welcome_Win11 calc(1s * (var(--Enable-Animations, 1) * var(--DevMode, 1)) ) ease-out;
+}
+
+::-webkit-scrollbar { display: none; }
+[class*="wordmark-"] { display: none; }
+
+.stop-animation * {
+  animation: inherit !important;
+  transform: inherit !important;
+  transition: inherit !important;
+}
+
+/* [END] = Flashcord Beta == BIOS [00] CSS = */
+
+/* [START] = Flashcord Beta == Kernel [00] CSS = */
+
+/* NOTICE: Everytime there is a " [!] FC-Wildcard_PerfNuker " this means that using a wildcard will absolutely nuke performance so bad it would make Flashcord impossible to use */
+[class^="app-"]:has([class^="problems-"]) {
+  container-name: var(--Flashcord-Blackout, FC-Boot_Blackout-Android);
+  container-type: inline-size;
+}
+
+@container FC-Boot_Blackout-Android (min-width: 0px) {
+  [class^="content-"] div, video, [class^="problems-"] div { display: none; }
+  [class^="problems-"]:before {
+    content: "⚠️ You are having connection problems.";
+    color: white;
+    text-align: center;
+    white-space: pre;
+    animation: FlashCore-FadeIn_Bottom calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ));
+  }
+  [class^="content-"]:before {
+    content: "Flashcord";
+    margin: auto;
+    text-align: center;
+    scale: 5;
+    font-weight: 900;
+    background-image: linear-gradient(90deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.05) 30%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.05) 80%, rgba(255,255,255,0.05) 100%);
+    background-size: 32vw;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: FlashCore-BackXMTL calc(4s * var(--Enable-Animations, 1)) linear infinite !important;
+  }
+  [class^="content-"] {
+    background: transparent;
+    width: 100vw;
+    height: 102vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: FlashCore-FadeIn calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) )) !important;
+    background: rgba(0,0,0,0.9);
+    backdrop-filter: blur(var(--Flashcord-Blur-Heavy, 16px));
+  }
+}
+/* [END] = Flashcord Beta == Kernel [00] CSS = */
+
+
+/* [START] = Flashcord Beta == Kernel [01] CSS = */
+
+.theme-light {
+    --background-primary: #FFFFFF;
+    --background-secondary: #FFFFFF;
+    --background-secondary-alt: #FFFFFF;
+    --background-tertiary: #FFFFFF;
+    --background-accent: #FF99FF;
+    --background-floating: #FFFfFF;
+    --channeltextarea-background: #f0f0f0;
+    --background-modifier-selected: #f0f0f0;
+    --background-modifier-hover: #e0e0e0;
+}
+
+.theme-dark {
+    --background-primary: #000000;
+    --background-secondary: #000000;
+    --background-secondary-alt: #000000;
+    --background-tertiary: #000000;
+    --background-accent: #660066;
+    --background-floating: #060606;
+    --channeltextarea-background: #060606;
+    --background-modifier-selected: #0F0F0F;
+    --background-modifier-hover: #161616;
+    --FlashCore-Brightness: 2;
+}
+
+/* [END] = Flashcord Beta == Kernel [01] CSS = */
+
+
+/* [START] = Flashcord Beta == Kernel [02] CSS = */
+
+@keyframes FlashCore-FadeIn {
+    0% { opacity: 0; }
+    100% { opacity: inherit; }
+}
+@keyframes FlashCore-FadeOut {
+    0% { opacity: inherit; }
+    100% { opacity: 0; }
+}
+@keyframes FlashCore-FadeIn_Top {
+    0% { opacity: 0; translate: 0px -5vh; }
+    100% { opacity: inherit; translate: 0px 0vh; }
+}
+@keyframes FlashCore-FadeIn_Bottom {
+    0% { opacity: 0; translate: 0px 5vh; }
+    100% { opacity: inherit; translate: 0px 0vh; }
+}
+@keyframes FlashCore-Splash {
+    0% { scale: 0.8; }
+    100% { scale: 1.0; }
+} 
+
+
+@keyframes Flashcord-Welcome_Win11 {
+    0% { scale: 0.95; opacity: 0;}
+    90% { scale: 0.98; opacity: 1;}
+    100% { scale: 1.0; }
+} 
+
+@keyframes Flashcord-MSG_Upload {
+    0% { opacity: 0; }
+    100% { opacity: 0.5; }
+}
+@keyframes Flashcord-MSG_Uploaded {
+    0% { opacity: 0.5; transform: translateX(10vw); }
+    100% { opacity: 1; transform: translateX(0vw); }
+}
+
+@keyframes Flashcord-SearchSlide {
+    0% { translate: 50vw; }
+    100% { translate: 0vw;}
+}
+
+@keyframes Flashcord-GuildPulse {
+    0% {  filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px) rgb(255,0,0));}
+    15% {  filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px) rgb(255,127,0));}
+    30% {  filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px)  rgb(255,255,0));}
+    45% {  filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px) rgb(0,255,0));}
+    60% {  filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px) rgb(0,0,255));}
+    75% {  filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px) rgb(170,0,170));}
+    90% {  filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px) rgb(255,170,255));}
+    100% {  filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px) rgb(255,0,0));}
+}
+
+@keyframes Flashcord-DNAO_Ripple {
+    0% { scale: 0; opacity: 0; }
+    20% { opacity: 1;}
+    100% { scale: 2; opacity: 0; }
+}
+
+@keyframes Flashcord-Rainbow_BGR {
+    0% { background: rgba(255,0,0,0.25); }
+    20% { background: rgba(255,255,0,0.25); }
+    40% { background: rgba(0,255,0,0.25); }
+    60% { background: rgba(0,255,255,0.25); }
+    80% { background: rgba(0,0,255,0.25); }
+    99% { background: rgba(255,0,255,0.25); }
+    100% { background: rgba(255,0,0,0.25); }
+}
+
+@keyframes FlashCore-BackXMTL {
+    0% { background-position-x: 0;}
+    100% { background-position-x: 64vw;}
+}
+
+@keyframes FlashCore-Shake {
+    0% {translate: 1px 1px;}
+    25% {translate: -1px -1px;}
+    50% {translate: 1px -1px;}
+    75% {translate: -1px 1px;}
+    100% {translate: 0px 1px;}
+}
+
+/* [END] = Flashcord Beta == Kernel [02] CSS = */
+
+
+/* [START] = Flashcord Beta == Kernel [03] CSS = */
+
+body > :before,
+body:before {
+    color: var(--text-normal);
+    font-size: 12px;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    font-weight: 900;
+    opacity: 0.5;
+    width: 100vw;
+    backdrop-filter: brightness(2);
+}
+
+.platform-win body > :before {
+    content: "🪟 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version)" | Report bugs in #🐞sgn-issues-reports on the SGN Discord Server.";
+}
+
+.platform-linux body > :before {
+    content: "🐧 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version)" | Report bugs in #🐞sgn-issues-reports on the SGN Discord Server.";
+}
+.platform-linux #app-mount {
+    margin-top: 24px;
+    height: calc(100vh - 24px);
+}
+
+.platform-osx body:before {
+    content: "Report bugs in #🐞sgn-issues-reports on the SGN Discord Server. | 🍎 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version) " " ;
+    color: #ffffff;
+    text-align: right; 
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 32px;
+    margin-left: -12px;
+}
+.platform-osx #app-mount {
+    margin-top: 32px;
+    height: calc(100vh - 32px);
+}
+[class^="macDragRegion-"] {
+    width: 100vw;
+}
+
+
+[class^="chat-"] [class^="children-"]:after {
+    color: red;
+    width: max-content;
+    margin: auto ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255,255,255);
+    border-radius: var(--Flashcord-Border_Radius, 25px);
+    white-space: pre;
+}
+.theme-dark [class^="chat-"] [class^="title-"] [class^="children-"]:after {
+    content: var(--Flashcord-Warnings,"  ⚠️ Flashcord is in Beta. 🌙 Dark Mode is unfinished.  ");
+}
+  
+.theme-light [class^="chat-"] [class^="title-"] [class^="children-"]:after {
+    content: var(--Flashcord-Warnings,"  ⚠️ Flashcord is in Beta.  ");
+}
+
+@container FC-ControlPanel_PopUp (min-width: 0px) {
+    [class^="layer-"]:nth-child(2) [class^="sidebar-"] > :before {
+        content: var(--Flashcord-Branch) "\A Version "var(--Flashcord-Channel) "-" var(--Flashcord-Version);
+        padding: 10px;
+        white-space: pre;
+        opacity: 0.8;
+        background-image: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,127,0,1) 15%, rgba(255,255,0,1) 30%, rgba(0,255,0,1) 45%, rgba(0,0,255,1) 60%, rgba(170,0,170,1) 75%, rgba(255,170,255,1) 90%, rgba(255,0,0,1) 100%);
+        background-size: 64vw;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: FlashCore-BackXMTL calc(8s * var(--Enable-Animations, 1)) linear infinite !important;
+        margin-bottom: var(--Flashcord-SplashMAR, 20px);
+    }
+    
+    [class^="layer-"]:nth-child(2) [class^="sidebarRegionScroller-"]:after {
+        position: absolute;
+        content: var(--Flashcord-Splash);
+        transform: rotate(-2deg) scale( var(--Flashcord-SplashSca) ) translateX( var(--Flashcord-SplashTrX) ) translateY( var(--Flashcord-SplashTrY) ) !important;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+        white-space: pre;
+        color: #CCCC00;
+        margin: 0px;
+        width: 1px;
+        left: 105px;
+        top: 48px;
+        animation: FlashCore-Splash calc(500ms * var(--Enable-Animations, 1)) ease-in-out infinite;
+        animation-direction: alternate;
+    }
+}
+
+
+[class^="messageListItem-"]:nth-last-child(-n + 33 ) [class^="message-"] {
+    container-name: var(--Flashcord-Badges, FC-Badges);
+    container-type: inline-size;
+}
+
+@container FC-Badges (min-width: 0px) {
+    h3:before {
+        background-size: 64vw !important;
+        border-radius: var(--Flashcord-Border_Radius, 25px);
+        text-align: center;
+        margin-right: 6px;
+        white-space: pre;
+        color: white;
+    }
+    [class^="contents-"]:has([src*="760781212511502336"], [src*="879808704206237776"], [src*="816129557442461747"], [src*="754348522026958948"], [src*="134142022092062720"], [src*="1025214794766221384"], [src*="516750892372852754"], [src*="285329659023851520"], [src*="786973560563957780"], [src*="403195964241739776"], [src*="573613510060146708"], [src*="705853948052897813"], [src*="327639826075484162"], [src*="538487970408300544"]) h3:before {
+        content: " ✅ ";
+        background: rgba(0,255,0,0.25);
+    }
+    [class^="contents-"]:has([src*="249560843639848970"], [src*="865192192820510721"]) h3:before {
+        content: " 📸 ";
+        background: var(--text-normal);
+    }
+    [class^="contents-"]:has([src*="587988801532723211"], [src*="470626055477133323"], [src*="275002623378063371"], [src*="113934571418025985"]) h3:before {
+        content: " 📸 ";
+        background-image: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,127,0,1) 15%, rgba(255,255,0,1) 30%, rgba(0,255,0,1) 45%, rgba(0,0,255,1) 60%, rgba(170,0,170,1) 75%, rgba(255,170,255,1) 90%, rgba(255,0,0,1) 100%);
+        animation: FlashCore-BackXMTL calc(2s * var(--Flashcord-Animations, 1) ) linear infinite;
+    }
+    [class^="contents-"]:has([src*="311057290562371586"]) h3:before {
+        content: " 📸 Flashcord Creator ";
+        background-image: linear-gradient(90deg, rgba(0,255,255,0.5) 0%, rgba(255,0,255,0.5) 25%, rgba(255,255,0,0.5) 50%, rgba(255,0,255,0.5) 75%, rgba(0,255,255,0.5) 100%);
+        animation: FlashCore-BackXMTL calc(2s * var(--Flashcord-Animations, 1) ) linear infinite;
+    }
+    [class^="contents-"]:has([src*="249560843639848970"]) h3:before {
+        content: " 💸 Flashcord Supporter " !important;
+        background-image: linear-gradient(90deg, rgba(0,255,255,0.5) 0%, rgba(255,0,255,0.5) 25%, rgba(255,255,0,0.5) 50%, rgba(255,0,255,0.5) 75%, rgba(0,255,255,0.5) 100%) !important;
+        animation: FlashCore-BackXMTL calc(2s * var(--Flashcord-Animations, 1) ) linear infinite !important;
+    }
+}
+
+
+/* [END] = Flashcord Beta == Kernel [03] CSS = */
+
+
+/* [Start] = Flashcord Beta == Kernel - Serial CSS = */
+
+html:has(link[href*="replugged"]) {
+    --FlashCore-Client: "🔌 Replugged";
+}
+html:has(#vencord-margins) {
+    --FlashCore-Client: "✨ Vencord";
+}
+html:has(body[class*="bd"]) {
+    --FlashCore-Client: "🩹 BetterDiscord";
+}
+
+html.platform-win {
+    --FlashCore-OS: "🪟 Windows"
+}
+html.platform-osx {
+    --FlashCore-OS: "🍎 MacOS"
+}
+html.platform-linux {
+    --FlashCore-OS: "🐧 GNU/Linux"
+}
+
+html.theme-light {
+    --FlashCore-Theme: "☀️ Light Mode";
+}
+html.theme-dark {
+    --FlashCore-Theme: "🌙 Dark Mode";
+}
+html.theme-dark.custom-theme-background {
+    --FlashCore-Theme: "🖼️ Custom Background Mode" !important;
+}
+html.theme-light.custom-theme-background {
+    --FlashCore-Theme: "👻 Transparent Mode" !important;
+}
+
+html:has([content*="canary"]) {
+    --FlashCore-Discord_Branch: "Canary";
+}
+html:has([content*="ptb"]) {
+    --FlashCore-Discord_Branch: "Public Beta Test";
+}
+
+html:has(link[href*="com.sirio-network.flashcord.asar"]) {
+    --FlashCore-Import_Method: "🛒 Replugged Store";
+}
+
+[id^="message-content-"]:has(a[href="http://flashcord/debug"]):after {
+    white-space: pre-wrap;
+    content: 
+"\A\A🔥 FLASHCORD DEBUG INFORMATION - This information is only visible to you, please screenshot it and send it to @SiriusBYT for debug purposes if needed. \A\A \
+📸 -- Flashcord Information \A
+    🔄️ Flashcord Branch: " var(--Flashcord-Branch) "\A \
+    🔗 Flashcord Channel: " var(--Flashcord-Channel) "\A \
+    💡 Flashcord Version: " var(--Flashcord-Version) "\A \
+    ⬇️ Flashcord Import Method: " var(--FlashCore-Import_Method, "🌐 @Import Method") " \A\A \
+💬 -- Discord Client Information \A\A \
+    🌳 Detected Discord Branch: " var(--FlashCore-Discord_Branch, 'Stable') " \A \
+    💻 Detected Operating System: " var(--FlashCore-OS, '⛔ CRITICAL ERROR: NO OS WAS DETECTED') "\A \
+    🎯 Detected Client: " var(--FlashCore-Client, '⛔ CRITICAL ERROR: NO CLIENT WAS DETECTED') "\A \
+    🌈 Detected Theme: " var(--FlashCore-Theme, '⛔ CRITICAL ERROR: NO THEME WAS DETECTED') "\A\A \
+🛠️ -- FlashCore Modules \A\A \
+    TBD \A\A \
+⚠️ Please also send the contents of your QuickCSS if you modified any Flashcord Variables. \A\A \
+== End of Flashcord's Debug Information. == \A\A";
+}
+
+/* [End] = Flashcord Beta == Kernel - Serial CSS = */
+
+
+/* [Start] = Flashcord Beta == Custom Theme: CBM CSS = */
+
+.custom-theme-background {
+    --FlashCore-ChatSlide: FC-ChatSlide_Legacy;
+}
+
+.theme-dark.custom-theme-background {
+    --bg-overlay-color: transparent !important;
+    --background-primary: transparent !important;
+    --background-secondary: transparent !important;
+    --background-secondary-alt: transparent !important;
+    --background-tertiary: transparent !important;
+    --bg-overlay-6: transparent !important;
+}
+.theme-dark.custom-theme-background body {
+    background: unset !important;
+    background-image: var(--Flashcord-CBM_Image, url("https://sirio-network.com/flashcord/bgr-test.jpg") ) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    object-fit: cover !important;
+    background-size: cover !important;
+}
+.theme-dark.custom-theme-background #app-mount {
+    backdrop-filter: var(--Flashcord-CBM_Filter, blur(16px) brightness(0.5));
+}
+.theme-dark.custom-theme-background [class^="chat-"] [class^="title-"] [class^="children-"]:after {
+    content: var(--Flashcord-Warnings,"  ⚠️ Flashcord is in Beta. 🖼️ Custom Mode is unfinished.  ") !important;
+}
+.theme-dark.custom-theme-background [class^="layer-"]:nth-child(2) {
+    border: 1px solid white;
+}
+
+/* [End] = Flashcord Beta == Custom Theme: CBM CSS = */
+
+
+/* [START] = Flashcord Beta == Major General Modifications [00] Control CSS = */
+
+/* Control Core */
+[class^="layers-"]:has([class^="layer-"]:nth-child(2)) {
+    container-name: var(--FlashCore-MGM-Control,FC-ControlPanel_PopUp);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-ControlPanel_PopUp (min-width: 0px) {
+    [class^="layer-"]:nth-child(2) {
+        width: 90vw;
+        height: 85vh;
+        margin: auto;
+        padding: 0;
+        border-radius: var(--Flashcord-Border_Radius, 25px);
+        z-index: 1;
+        transform: none !important;
+        animation: FlashCore-FadeIn calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+    }    
+    [class^="sidebarRegion-"] {
+        max-width: 220px;
+        max-height: 85vh;
+    }
+    [class^="contentRegion-"] {
+        height: 85vh;
+    }
+    [class^="layer-"]:nth-child(2) [class^="sidebar"] {
+        max-width: 200px;
+        padding: 0;
+    }
+    [class^="standardSidebarView-"] {
+        position: static !important;
+        height: 100%;
+    }
+    [class^="contentColumn-"] {
+        max-width: calc(100% - 16px);
+        margin: auto;
+        padding: 0;
+    }
+    [class^="closeButton-"] {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-radius: 0;
+        border: none;
+        margin: auto;
+        background: transparent;
+
+        transition-property: opacity;
+        transition-duration: calc(250ms * var(--Flashcord-TransMult-Normal, 1));
+    }
+    [class^="toolsContainer-"] {
+        position: absolute;
+        z-index: -1;
+    }
+    [class^="keybind-"] { display: none; }
+
+    /* Control Fluff */
+    [class*="baseLayer"] {
+        opacity: 1 !important;
+        z-index: 1;
+        transform: none !important;
+        /*will-change: filter, scale !important;*/
+        transition-property: filter, scale;
+        transition-duration: calc(250ms * var(--Flashcord-TransMult-Normal, 1));
+    }
+    [class^="layers-"]:has([class^="standardSidebarView-"]:hover) .baseLayer-W6S8cY { /* [!] FC-Wildcard_PerfNuker */
+        filter: blur(var(--Flashcord-Blur-Medium, 8px)) brightness(var(--FlashCore-Brightness,0.9));
+        scale: 0.98;
+    }
+    [class^="layers-"]:has([class^="closeButton-"]:hover) .baseLayer-W6S8cY { /* [!] FC-Wildcard_PerfNuker */
+        filter: blur(0px) brightness(1);
+        scale: 1;
+    }
+    [class^="closeButton-"]:hover {
+        background: transparent;
+        opacity: 0;
+        /*will-change: opacity;*/
+    }
+
+    [class^="sidebar-"] [class^="item-"] {
+        max-width: 180px;
+        border-radius: var(--Flashcord-Border_Radius, 25px) !important;
+        translate: 5px;
+        transition-property: translate, scale;
+        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+    }
+    [class^="sidebar-"] [class^="item-"]:hover {
+        translate: 15px;
+        scale: 1.05;
+        /*will-change: translate, scale;*/
+    }
+    [class^="sidebar-"] [class^="item-"]:active {
+        translate: 15px;
+        scale: 1;
+        /*will-change: translate, scale;*/
+    }
+    [class^="sidebar-"] [class*="selected-"] {
+        translate: 15px;
+        scale: 1.025;
+        /*will-change: translate, scale;*/
+    }
+}
+
+@container FC-ControlPanel_Full (min-width: 0px) {
+    [class^="layer-"]:nth-child(2) {
+        width: 100vw;
+        height: 100vh;
+        margin: auto;
+        padding: 0;
+        border-radius: 0;
+        animation: FlashCore-FadeIn calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+    }    
+    [class^="sidebarRegion-"] {
+        max-width: 220px;
+        max-height: 100vh;
+    }
+    [class^="contentRegion-"] {
+        height: 100vh;
+    }
+    [class^="layer-"]:nth-child(2) [class^="sidebar"] {
+        max-width: 200px;
+        padding: 0;
+    }
+    [class^="standardSidebarView-"] {
+        position: static !important;
+        height: 100%;
+    }
+    [class^="contentColumn-"] {
+        max-width: calc(100% - 16px);
+        margin: auto;
+        padding: 0;
+    }
+
+    /* Control Fluff */
+    [class^="sidebar-"] [class^="item-"] {
+        max-width: 180px;
+        border-radius: var(--Flashcord-Border_Radius, 25px) !important;
+        translate: 5px;
+        transition-property: translate, scale;
+        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+    }
+    [class^="sidebar-"] [class^="item-"]:hover {
+        translate: 15px;
+        scale: 1.05;
+        /*will-change: translate, scale;*/
+    }
+    [class^="sidebar-"] [class^="item-"]:active {
+        translate: 15px;
+        scale: 1;
+        /*will-change: translate, scale;*/
+    }
+    [class^="sidebar-"] [class*="selected-"] {
+        translate: 15px;
+        scale: 1.025;
+        /*will-change: translate, scale;*/
+    }
+}
+
+
+/* [END] = Flashcord Beta == Major General Modifications [00] Control CSS = */
+
+
+/* [START] = Flashcord Beta == Major General Modifications [00] Control MyAcc Overhaul CSS = */
+[class^="contentRegionScroller-"] [id="my-account-tab"] {
+    container-name: var(--FlashCore-SPGO_MAT, FC-SPGO_MAT);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-SPGO_MAT (min-width: 0px) {
+    [class^="userInfo-"] { 
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 10px;
+    }
+    [class^="userInfo-"] > div {
+        display: block;
+        position: relative;
+        top: 1px;
+        margin-right: 42px;
+    }
+    [class^="userInfo-"] > button {
+        margin-left: auto;
+        margin-right: 16px;
+    } 
+
+
+    [class^="fieldList-"] {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        height: auto;
+        align-content: center;
+        align-items: center;
+    }
+    [class^="field-"]:first-child { position: absolute; }
+    [class^="field-"]:first-child > div { display: none; }
+    [class^="field-"]:first-child > button {
+        translate: 150px -108px;
+        scale: 0.6;
+        font-size: x-large;
+        display: none;
+    }
+    [class^="field-"]:nth-child(2) { 
+        position: absolute;
+        translate: 90px -90px;
+    }
+    [class^="field-"]:nth-child(2) h3 { display: none; }
+    [class^="field-"]:nth-child(2) > button {
+        translate: -25px -7px;
+        scale: 0.6;
+        font-size: x-large;
+    }
+
+    [class^="badgeList-"] {
+        translate: 0 13px;
+    }
+    [class^="overflowMenuButton-"] { display: none; }
+
+    mask { display: none; }
+    #my-account-tab > div > [class^="marginTop40-"]:last-child { display: none; }
+
+    [class^="divider-"] {
+        margin-top: 16px;
+        padding: 0;
+    }
+    [class^="accountProfileCard-"] { margin-bottom: -16px; }
+    h2 { margin-top: 20px; text-align: center;}
+
+    [class^="changePasswordButton-"] {
+        margin: auto;
+    }
+
+    [class^="field-"]:nth-last-child(-n + 2) [class^="text-md-normal-"] {
+        filter: blur(var(--Flashcord-Blur-Medium, 8px));
+        transition: filter 250ms;
+    }
+    [class^="field-"]:nth-last-child(-n + 2) [class^="text-md-normal-"]:hover {
+        filter: blur(0px);
+        transition: filter 1s;
+    }
+    [class^="userSettingsSecurity-"] { margin: 0; }
+    [class^="userSettingsSecurity-"] [class^="h1-"] { margin: 8px; }
+    [class^="colorStandard-"]:has([class*="phoneRevealer-"]) { display: none; }
+    #my-account-tab > :after {
+        content: "\A About Flashcord";
+        font-weight: 900;
+        white-space: pre;
+        color: var(--text-normal);
+    }
+    
+    #my-account-tab:after {
+        white-space: pre;
+        color: var(--text-normal);
+        content: 'Flashcord is a personal project maintained with love by SiriusBYT, it takes the design language of "SNWE/SNDL" and applies it to Discord. \A \
+      Support is held on The Sirio Network Discord Server (https://discord.gg/z93kHwGuZt). \A \A \
+      Please give a thanks to these amazing people who helped with the Closed Alpha of Flashcord 💖 \A \
+      🗨️  "be racist for me"\A \
+                - Atacantul, 2023\A\A \
+      🗨️  "https://www.pixiv.net/en/artworks/107406646"\A \
+                - trueirony, 2023\A\A \
+      🗨️  "do linux, be crime"\A \
+                - Lööps, 2023 \A\A \
+      🗨️  "Come play with me on Club Pinguin"\A \
+                - Ectalite, August 2023 \A\A \A \
+Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A\A\A\A';
+    }
+}
+
+/* [End] = Flashcord Beta == Major General Modifications [00] Control MyAcc Overhaul CSS = */
+
+
+/* [START] = Flashcord Beta == Major General Modifications [00] Control Appearance Tab Overhaul CSS = */
+
+[class^="contentRegionScroller-"] #appearance-tab {
+    container-name: var(--FlashCore-SPGO_AT, FC-SPGO_AT);
+    container-type: inline-size;
+}
+
+@container FC-SPGO_AT (min-width: 0px) {
+  [class^="themeTitle-"]:before {
+    content: "📸 Flashcord Themes\A⚠️ Advanced Themes require LegalDiscordBypasses or Nitro to enable them.";
+    color: var(--text-normal);
+    white-space: pre;
+    font-weight: 900;
+    font-size: x-large;
+    text-transform: none;
+    line-height: normal;
+  }
+  [class^="themeTitle-"] div { display: none; }
+  [class^="themeTitle-"] button > div { display: block !important; }
+
+  [class^="children-"] {
+    flex-direction: column-reverse;
+  }
+  div[tabindex="-1"] {
+    display: inline-flex;
+    order: 1;
+    margin: 0;
+  }
+  div[tabindex="-1"] > div {
+    width: 100%;
+    margin: 0;
+  }
+  [class^="divider-"]:last-of-type, [class^="defaultColor-"]:last-of-type { display: none; }
+
+  [class*="basicThemeSelectors-"] > [class^="themeSelectionContainer-"]:first-child > [class^="themeSelection-"] {
+    background: unset !important;
+    background-image: url("https://sirio-network.com/flashcord/elements/theme-preview_light.png") !important;
+    background-position: center !important;
+    background-size: cover !important;
+    border-radius: 25px;
+  }
+  [class*="basicThemeSelectors-"] > [class^="themeSelectionContainer-"]:first-child > [class^="themeSelection-"]:before {
+    content: "Light Mode";
+  }
+
+  [class*="basicThemeSelectors-"] > [class^="themeSelectionContainer-"]:last-of-type > [class^="themeSelection-"] {
+    background: unset !important;
+    background-image: url("https://sirio-network.com/flashcord/elements/theme-preview_sync.png") !important;
+    background-position: center !important;
+    background-size: cover !important;
+    border-radius: 25px;
+  }
+  [class*="basicThemeSelectors-"] > [class^="themeSelectionContainer-"]:last-of-type > [class^="themeSelection-"]:before {
+    content: "Sync Mode";
+  }
+  [class^="themeSelection-"] svg { display: none; }
+
+  [class*="basicThemeSelectors-"] > [class^="themeSelectionContainer-"]:nth-child(2) > [class^="themeSelection-"] {
+    background: unset !important;
+    background-image: url("https://sirio-network.com/flashcord/elements/theme-preview_dark.png") !important;
+    background-position: center !important;
+    background-size: cover !important;
+    border-radius: 25px;
+  }
+  [class*="basicThemeSelectors-"] > [class^="themeSelectionContainer-"]:nth-child(2) > [class^="themeSelection-"]:before {
+    content: "Dark Mode";
+  }
+
+  [class^="themeSelection-"][style*="--bg-gradient-sunset"] {
+    background: unset !important;
+    background-image: var(--CustomBGR-IMG, url("https://sirio-network.com/flashcord/bgr-test.jpg") ) !important;
+    background-position: center !important;
+    background-size: cover !important;
+    border-radius: 25px;
+  }
+  [class^="themeSelection-"][style*="--bg-gradient-sunset-2"]:before {
+    content: "Custom Background Image Mode";
+  }
+
+
+  [class^="themeSelection-"][style*="--bg-gradient-midnight-blurple"] {
+    background: unset !important;
+    background-image: url("https://sirio-network.com/flashcord/elements/theme-preview_transparent.png") !important;
+    filter: brightness(0.25);
+    background-position: center !important;
+    background-size: cover !important;
+    border-radius: 25px;
+  }
+  [class^="themeSelection-"][style*="--bg-gradient-midnight-blurple"]:before {
+    content: "Iridescent Mode\A(Not an actual feature yet)";
+  } 
+
+  [class^="themeSelectionContainer-"]:has([style*="--bg-gradient-mint-apple"]) {
+    order: 1;
+  }
+  [class^="themeSelection-"][style*="bg-gradient-mint-apple"] {
+    background: unset !important;
+    background-image: url("https://sirio-network.com/flashcord/elements/theme-preview_transparent.png") !important;
+    filter: brightness(0.25);
+    background-position: center !important;
+    background-size: cover !important;
+    border-radius: 25px;
+  }
+  [class^="themeSelection-"][style*="bg-gradient-mint-apple"]:before {
+    content: "Transparent Window Mode\A(Not an actual feature yet)";
+  }
+  
+  [class*="basicThemeSelectors-"] > div,
+  [class^="themeSelectionContainer-"] .selectionCircle-3s5Uex,
+  [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-sunset"]),
+  [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-mint-apple"]),
+  [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-midnight-blurple"]) {
+    display: block !important;
+    border-radius: 25px;
+    width: 100%;
+    height: 24vh;
+    margin: auto;
+    translate: 2px 2px;
+  }
+  [class^="themeSelection-"]:before {
+    color: white;
+    filter: drop-shadow(0 0 4px black);
+    white-space: pre;
+    font-weight: 900;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  [class^="themeSelectionContainer-"], 
+  [class^="header-"] { display: none; }
+}
+
+
+/* [End] = Flashcord Beta == Major General Modifications [00] Control Appearance Tab Overhaul CSS = */
+
+
+/* [START] = Flashcord Beta == Major General Modifications [00] ChatEx CSS = */
+
+/* Channel Slide Core */
+[class^="base-"] > [class^="content-"]:first-of-type {
+    container-name: var(--FlashCore-ChatSlide, FC-ChatSlide_SNDL);
+    container-type: inline-size;
+    contain: paint;
+}
+[class^="content-"]:has([class*="threadSidebarOpen-"]) {
+    container-name: FC-VOID;
+}
+
+@container FC-ChatSlide_SNDL (min-width: 0px) {
+    [class^="sidebar-"] {
+        z-index: 0;
+    }
+    [class^="chat-"]:not(:has([role="complementary"], [class^="submitContainer-"])) {
+        margin-right: -200px;
+        translate: -198px;
+        transition-property: translate;
+        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+    }
+    [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover) .chat-2ZfjoI,  /* [!] FC-Wildcard_PerfNuker */
+    [class^="notAppAsidePanel-"]:has([id*="guild-"]) .chat-2ZfjoI { /* [!] FC-Wildcard_PerfNuker */
+        translate: 0px;
+        /*will-change: translate;*/
+    }
+}
+
+@container FC-ChatSlide_Legacy (min-width: 0px) {
+    [class^="sidebar-"] {
+      width: 48px;
+      transition-property: width;
+      transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+    }
+    [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover) .sidebar-1tnWFu,  /* [!] FC-Wildcard_PerfNuker */
+    [class^="notAppAsidePanel-"]:has([id*="guild-"]) .sidebar-1tnWFu { /* [!] FC-Wildcard_PerfNuker */
+      width: 256px;
+      /*will-change: width;*/
+    }
+}
+
+/* Member Slide Core */
+[class^="chat-"] {
+    container-name: var(--FlashCore-MemberSlide, FC-MemberSlide);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-MemberSlide (min-width: 0px) {
+    [class^="membersWrap-"] {
+        position: relative;
+        margin-left: -190px;
+        translate: 190px;
+        height: 100%;
+
+        transition-property: translate;
+        transition-duration: calc(250ms * var(--Flashcord-TransMult-Normal, 1));
+    }
+    [class^="membersWrap-"]:hover { translate: 0px; /*will-change: translate;*/ }
+    [class^="member-"] { margin-left: 0px; }
+    [class^="member-"] > div {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        border-radius: var(--Flashcord-Border_Radius, 25px) !important;
+        transition-property: scale, translate;
+        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+    }
+    [class^="member-"]:hover > div {
+        scale: 1.05;
+        translate: 6px;
+        /*will-change: scale, translate;*/
+    }
+    [class^="membersGroup-"] {  
+        text-align: right;
+        padding: 8px 8px 0 64px;
+        height: auto;
+        opacity: 0.25;
+
+        transition-property: opacity;
+        transition-duration: calc(500ms * var(--Flashcord-TransMult-Slow, 1));
+    }
+    [class^="membersGroup-"]:hover { opacity: 1; }
+}
+
+/* GuildNav_Glow Core */
+
+nav[class^="wrapper-"] > ul {
+    container-name: var(--FlashCore-GuildNav_Notification, FC-GuildNav_Animated);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-GuildNav_Animated (min-width: 0px) {
+    [class^="listItem-"] {
+        transition-property: scale, filter !important;
+        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+    }
+    [class^="listItem-"]:has([style*="height: 8px"], [class^="lowerBadge-"]), [class^="listItem-"]:hover {
+        scale: 0.975;
+        animation: Flashcord-GuildPulse calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) linear reverse infinite;
+        /*will-change: scale, filter;*/
+    }
+    [class^="pill-"] {  
+        display: none;
+    }
+}
+
+@container FC-GuildNav_Static (min-width: 0px) {
+  [class^="listItem-"] {
+      transition-property: scale, filter !important;
+      transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+  }
+  [class^="listItem-"]:has([style*="height: 8px"], [class^="lowerBadge-"]), [class^="listItem-"]:hover {
+      scale: 0.975;
+      filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px) var(--Flashcord-GuildShadow_Unread, #0000FF));
+      /*will-change: scale, filter;*/
+  }
+  [class^="pill-"] {  
+      display: none;
+  }
+}
+
+/* GuildNav_Compact Core */
+
+[class^="container-"]:has(nav[class^="wrapper-"]) {
+  container-name: var(--FlashCore-GuildNav_Compact, FC-GuildNav_Compact);
+  container-type: inline-size;
+  contain: paint;
+}
+
+@container FC-GuildNav_Compact (min-width: 0px) {
+  nav[class^="wrapper-"] { width: 60px; }
+  ul[data-list-id="guildsnav"] > [class^="scroller-"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  [class^="listItem-"] {
+    margin: 0;
+    transition-property: scale;
+    transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+  }
+  foreignObject { border-radius: var(--Flashcord-Border_Radius, 25px); }
+  [id^="folder-items-"] { height: auto !important; }
+  [class^="listItem-"] { scale: 0.9; }
+  [class^="listItem-"]:has([class*="selected-"]) { scale: 0.95; }
+  [class^="guildSeparator-"] { display: none; }
+}
+
+@container FC-GuildNav_Compact-Horizontal (min-width: 0px) {
+  [class^="base-"] { margin-top: 60px; }
+  nav[class^="wrapper-"] { 
+    left: -58px;
+    width: 60px;
+    position: absolute;
+    z-index: 1;
+    rotate: -90deg;
+    transform-origin: right top;
+  }
+  ul[data-list-id="guildsnav"] > [class^="scroller-"] {
+    padding: 0 !important;
+    height: 100vw;
+  }
+  [class^="listItem-"] {
+    rotate: 90deg;
+    margin: 0;
+    transition-property: scale;
+    transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+  }
+  foreignObject { border-radius: var(--Flashcord-Border_Radius, 25px); }
+  [class^="listItem-"] { scale: 0.9; }
+  [class^="listItem-"]:has([class*="selected-"]) { scale: 0.95; }
+  [id^="folder-items-"] { height: auto !important; }
+  [class^="listItem-"]:has([class^="guildSeparator-"]) { display: none; }
+}
+
+/* ChannelNav_Compact Core */
+[class^="content-"] > [class^="sidebar-"] {
+  container-name: var(--FlashCore-ChannelNav_Compact, FC-ChannelNav_Compact);
+  container-type: inline-size;
+  contain: paint;
+}
+
+/* ChannelNav_Compact Core */
+[class^="content-"] > [class^="sidebar-"] {
+  container-name: var(--FlashCore-ChannelNav_Compact, FC-ChannelNav_Compact);
+  container-type: inline-size;
+  contain: paint;
+}
+
+@container FC-ChannelNav_Compact (min-width: 0px) {
+  li > div > div > a,
+  [class^="emojiColorFill-"],
+  li,
+  [class^="container-"] [class^="link-"],
+  [class^="channel-"] {
+    scale: 0.95;
+    translate: -4px;
+    margin: -1px 0px -1px 0px;
+    border-radius: var(--Flashcord-Border_Radius, 25px);
+    transition-property: scale, background-color !important;
+    transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1)) !important;
+  }
+  li:hover {
+    scale: 1;
+    /*will-change: scale;*/
+  }
+  li:active {
+    scale: 0.90;
+    /*will-change: scale;*/
+  }
+  [class^="ripple-"] { 
+    opacity: 0;
+    scale: 0; 
+    transform: unset !important;
+    animation: Flashcord-DNAO_Ripple calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) ) ease-in;
+  }
+
+  li:has([class^="channelEmoji-"]) .name-28HaxV { /* [!] FC-Wildcard_PerfNuker */
+    text-align: left !important;
+    /*text-transform: capitalize;*/
+  }
+
+  [class^="emojiColorFill-"] { width: 240px; }
+  [class^="name-"] { text-align: center !important; }
+  li:has(h3) { margin: 4px; }
+  [class^="container-"] [class^="name-"] { text-align: left; }
+  [class^="arrow-"], [class^="addButtonIcon-"], [class^="children-"] [class^="iconItem-"] { display: none !important; }
+  [class^="iconContainer-"] {
+    position: absolute !important;
+    translate: 126px;
+    scale: 0.8;
+    opacity: 0.3;
+    transition-property: opacity !important;
+    transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1)) !important;
+  }
+  li:hover [class^="iconContainer-"] {
+    opacity: 0.5;
+  }
+  li[role="button"] [class^="iconContainer-"],
+  li[role="listitem"] [class^="iconContainer-"] {
+    translate: 0 !important;
+  }
+}
+
+/* ChannelNav_Glow Core */
+#channels {
+  container-name: var(--FlashCore-ChannelNav_Notification, FC-ChannelNav_Animated);
+  container-type: inline-size;
+}
+
+@container FC-ChannelNav_Animated (min-width: 0px) {
+  [class^="containerDefault-"]:has([class^="mentionsBadge-"]) {
+    animation: Flashcord-Rainbow_BGR calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) linear reverse infinite;
+  }
+  [class^="mentionsBadge-"] { 
+    translate: -106px;
+    display: block !important;
+  }
+  li[class^="container-"] [class^="mentionsBadge-"] { 
+    translate: -114px;
+    display: block !important;
+  }
+  [class^="children-"] { position: absolute;}
+  [class^="unread-"] { 
+    border-radius: var(--Flashcord-Border_Radius, 25px);
+    translate: 13px 4px;
+    width: 24px;
+    height: 24px;
+    top: 0;
+    margin: 0;
+    animation: Flashcord-Rainbow_BGR calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) linear reverse infinite;
+  }
+}
+
+@container FC-ChannelNav_Static (min-width: 0px) {
+  [class^="containerDefault-"]:has([class^="mentionsBadge-"]) {
+   background: var(--Flashcord-ChannelNav_Color-Mention, rgba(255,0,0,0.5) );
+  }
+  [class^="channelInfo-"] { 
+    translate: -106px;
+    display: block !important;
+  }
+  [class^="children-"] { position: absolute;}
+  [class^="unread-"] { 
+    border-radius: var(--Flashcord-Border_Radius, 25px);
+    translate: 13px 4px;
+    width: 24px;
+    height: 24px;
+    top: 0;
+    margin: 0;
+    background: var(--Flashcord-ChannelNav_Color-Unread, rgba(0,0,255,0.5) );
+  }
+}
+
+/* [END] = Flashcord Beta == Major General Modifications [00] ChatEx CSS = */
+
+/* [START] = Flashcord Beta == Major General Modifications [00] ChatIn CSS = */
+
+/* Message Slide Core */
+[class^="messagesWrapper-"] [class^="scrollerContent-"] {
+    container-name: var(--FlashCore-MessageSlide, FC-MessageSlide);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-MessageSlide (min-width: 0px) {
+    [class^="messageListItem-"]:last-of-type {
+        animation: calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) Flashcord-MSG_Uploaded;
+    }
+    [class^="messageListItem-"]:last-of-type:has([class*="isSending-"]) {
+        opacity: 0.5;
+        translate: 10vw;
+        animation: calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) ) Flashcord-MSG_Upload; 
+    }
+}
+
+/* Jumbomojis Core */
+[class^="contents-"] > [id^="message-content-"]:has([class^="emojiContainer-"]) {
+    container-name: var(--Flashcord-Jumbomojis, FC-Jumbomojis);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-Jumbomojis (min-width: 0) {
+    [class^="emojiContainer-"] .jumboable {
+        width: 8rem !important;
+        height: 8rem !important;
+    }
+    [class^="emojiContainer-"] .emoji {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+/* Shadowed Images Core [Container-less] */
+[class^="mediaAttachmentsContainer-"], [class^="clickableSticker-"], [class^="inlineMediaEmbed-"], [class^="emojiContainer-"] .emoji {
+    filter: drop-shadow(0px 0px var(--FC-Shadowmage, 1px) var(--text-normal));  
+}
+
+
+/* Imagivid Zoom Core */
+[class^="layer-"]:has([class^="focusLock-"] [class*="downloadLink-"]) {
+    container-name: var(--FlashCore-ImagividZoom, FC-ImagividZoom);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-ImagividZoom (min-width: 0px) {
+    [class^="focusLock-"] [class^="imageWrapper-"]:hover { 
+        width: 90vw !important;
+        /*will-change: width, height;*/
+    }
+    [class^="focusLock-"] [class^="imageWrapper-"] { 
+        height: auto !important;
+        transition-property: width, height;
+        transition-duration: calc(500ms * var(--Flashcord-TransMult-Slow, 1)) !important;
+    }
+    [class^="focusLock-"] > div { 
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: scroll;
+        flex-direction: row;
+    }
+    [class^="carouselModal-"] {
+        justify-content: flex-sta0t !important;
+    }
+    [class^="focusLock-"] img, [class^="focusLock-"] video, [class^="imageWrapper-"] [class^="wrapper-"] {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        object-fit: contain;
+        overflow: scroll;
+    }
+    [class^="anchor-"] {
+        display: none;
+    }
+}
+
+/* Menthrepin Core */
+[class^="layerContainer-"]:has([class^="messagesPopoutWrap-"], [class^="threadIcon-"], [class^="recentMentionsPopout-"]) {
+    container-name: var(--FlashCore-Menthrepin, FC-Menthrepin);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-Menthrepin (min-width: 0px) {
+    [id^="popout_"] {
+        top: 0 !important;
+        left: 0 !important;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition-property: backdrop-filter;
+        transition-duration: calc(500ms * var(--Flashcord-TransMult-Slow, 1));
+        backdrop-filter: blur(0px);
+    }
+    [id^="popout_"]:has( > div > div:hover) {
+        backdrop-filter: blur(var(--Flashcord-Blur-Light, 4px));
+        /*will-change: backdrop-filter;*/
+    }
+    [id^="popout_"] > div > div {
+        width: 90vw;
+        height: 80vh;
+        max-width: unset !important;
+        min-width: unset !important;
+        border-radius: var(--Flashcord-Border_Radius, 25px );
+        padding: 0;
+        transition-property: opacity;
+        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+        animation: FlashCore-FadeIn_Top calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+    }
+    [id^="popout_"]:active > div > div {
+        opacity: 0;
+        /*will-change: opacity;*/
+    }
+}
+
+/* Xearch Core */
+[class^="content-"]:has([class^="searchResultsWrap-"]) {
+    container-name: var(--FlashCore-Xearch, FC-Xearch);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-Xearch (min-width: 0px) {
+    [class^="searchResultsWrap-"] {
+        width: 50vw;
+        animation: Flashcord-SearchSlide calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) );
+    }
+}
+
+/* Stimogi Core */
+[class^="positionLayer-"] {
+    container-name: var(--Flashcord-Stimogi, FC-Stimogi);
+    container-type: inline-size;
+}
+
+@container FC-Stimogi (min-width: 0px) {
+    [class^="drawerSizingWrapper-"]  {
+        width: 69vw !important;
+        animation: FlashCore-FadeIn calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+    }
+}
+
+/* Focus Core */
+[class^="appAsidePanelWrapper-"]:has([class^="backdrop-"]) {
+    container-name: var(--Flashcord-Focus, FC-Focus);
+    container-type: inline-size;
+    contain: paint;
+}
+@container FC-Focus (min-width: 0px) {
+    [class^="notAppAsidePanel-"]:has([class^="focusLock-"]:hover) .app-3xd6d0 { /* [!] FC-Wildcard_PerfNuker */
+        filter: blur(var(--Flashcord-Blur-Medium, 8px)) brightness(var(--FlashCore-Brightness,0.5));
+        /*will-change: filter;*/
+    }
+    [class^="app-"] {
+        transition-property: filter;
+        transition-duration: calc(500ms * var(--Flashcord-TransMult-Slow, 1));
+        filter: blur(0px) brightness(0.8);
+    }
+    [class^="backdrop-"] {
+        opacity: 0 !important;
+    }
+}
+
+/* Chatype Bar */
+[class^="chatContent-"] {
+    container-name: var(--Flashcord-Chatype, FC-Chatype-L1);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-Chatype-L1 (min-width: 0px) {
+    [class^="form-"] {
+        padding: 0 0px 0 8px;
+    }
+    [class^="channelTextArea-"] {
+        margin-bottom: 4px;
+    }
+    [class^="scrollableContainer-"] {
+        border-radius: var(--Flashcord-Border_Radius, 25px);
+        container-name: var(--Flashcord-Chatype, FC-Chatype-L2);
+        container-type: inline-size;
+    }
+    [class^="typing-"] {
+        top: -24px;
+        z-index: -1;
+        animation: FlashCore-FadeIn_Bottom calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+    }
+    [class^="cooldownWrapper-"] {
+        margin: auto !important;
+    }
+    @container FC-Chatype-L2 (min-width: 0px) {
+        [class^="inner-"] {
+            padding: 0 8px 0 8px;
+            display: flex;
+            align-items: center;
+        }
+        [class^="attachWrapper-"] {
+            translate: 4px;
+            margin: auto;
+            width: min-content;
+            height: min-content;
+        }
+        [class^="attachButton-"] {
+            width: min-content;
+            height: min-content;
+        }
+        [class^="placeholder-"] {
+            display: none;
+        }
+        [class^="sprite-"], svg {
+            opacity: 0.5;
+            transition-property: opacity, scale;
+            transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+        }
+        [class^="sprite-"]:hover, svg:hover {
+            opacity: 0.8;
+            scale: 1.1;
+        }
+        [class^="sprite-"]:active, svg:active {
+            scale: 0.9;
+        }
+    }
+}
+
+[class^="messagesWrapper-"] {
+    container-name: var(--Flashcord-JumpBars, FC-JumpBars);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-JumpBars (min-width: 0px) {
+    [class^="jumpToPresentBar-"] {
+        width: fit-content;
+        left: auto;
+        right: 16px;
+        animation: FlashCore-FadeIn_Bottom calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+    }
+    [class^="newMessagesBar-"] {
+        width: fit-content;
+        left: auto;
+        right: 16px;
+        animation: FlashCore-FadeIn_Top calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+    }
+    [class^="jumpToPresentBar-"] [class^="barButtonMain-"] {
+        display: none;
+    }
+}
+
+/* [END] = Flashcord Beta == Major General Modifications [00] ChatIn CSS = */
+
+/* [Start] = Flashcord Beta == Major General Modifications [00] OTUI_Base CSS = */
+
+[class^="peopleList-"] {
+    container-name: var(--FlashCore-Friends, FC-FlexGrid);
+    container-type: inline-size;
+    contain: paint;
+}
+[id="rp-plugins-tab"], [id="rp-themes-tab"] {
+    container-name: var(--FlashCore-Replugged_Addons, FC-FlexGrid);
+    container-type: inline-size;
+    contain: paint;
+}
+[class^="userPopoutOverlayBackground-"]:has([class^="role-"]) {
+    container-name: var(--FlashCore-UPFG, FC-FlexGrid);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-FlexGrid (min-width: 0px) {
+    [class^="peopleList-"] > div,
+    [class="replugged-addon-cards"],
+    [class^="section-"]:nth-child(4) {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        margin: auto;
+    }
+    [class^="role-"],
+    [class^="peopleListItem-"],
+    [class="replugged-addon-card"] {
+        margin: 0;
+        min-width: 386px;
+        min-height: 64px;
+        flex-grow: 1;
+        flex-basis: 1px;
+        padding: 8px;
+        transition: calc(250ms * var(--AnimMult-Normal, 1));
+        border-radius: var(--Flashcord-Border_Radius, 25px );
+        scale: 0.95;
+      }
+    [class^="role-"]:hover,
+    [class^="peopleListItem-"]:hover,
+    [class="replugged-addon-card"]:hover {
+        margin: 0 !important;
+        padding: 8px !important;
+        scale: 1.05;
+        transition: calc(250ms * var(--AnimMult-Normal, 1));
+        border-radius: var(--Flashcord-Border_Radius, 25px );
+    }
+    [class^="role-"] {
+        min-width: fit-content !important;
+        min-height: 24px !important;
+        border-radius: 0px !important;
+        scale: 1 !important;
+    }
+    h2 { width: 100%; }
+}
+
+/* [END] = Flashcord Beta == Major General Modifications [00] OTUI_Base CSS = */
+
+
+/* [Start] = Flashcord Beta == Major General Modifications [00] OTUI_Pop CSS = */
+
+/* UPMO Core | What's UPMO? Go fit those nuts UMPO ass bud. */
+[class^="layer-"]:has([class^="userProfileModalOuter-"]) {
+    container-name: var(--FlashCore-UPMO, FC-UPMO);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-UPMO (min-width: 0px) {
+    [class^="focusLock-"] { border-radius: var(--Flashcord-Border_Radius, 25px) }
+    [class^="userProfileModalOuter-"] {
+        width: 70vw;
+        height: 70vh;
+    }
+    mask { display: none; }
+    [class^="topSection-"] {
+        min-width: 70vw !important;
+        min-height: 16vh !important;
+        height: 16vh;
+        width: 70vw;
+        max-width: 70vw;
+        max-height: 16vh;
+        margin: 0 auto;
+    }
+    [class^="header-"] {
+        top: 50%;
+        position: fixed;
+    }
+    [class^="userProfileModalOverlayBackground-"] {
+        margin: 16px;
+        height: 55vh;
+    }
+    header {
+        max-width: fit-content;
+        max-height: 16vh;
+        width: fit-content;
+        height: 16vh;
+        contain: paint;
+    }
+    [class^="body-"] {
+        margin-top: 2vw;
+        min-height: 51vh;
+    }
+    [class^="headerTop-"] {
+        position: absolute;
+        left: 160px;
+        top: 20px;
+        display: flex;
+        justify-content: flex-start;
+        width: max-content;
+      }
+    [class^="bannerSVGWrapper"]:has([class^="premiumIconWrapper-"]) {
+        min-height: 130% !important;
+    }
+    [class^="bannerSVGWrapper"] {
+        min-width: 70vw !important;
+    }
+}
+
+/* UPFGL Core | User Popup Role Addition List */
+[id^="popout_"]:nth-child(2):has([class^="roleCircle-"]) {
+    container-name: var(--FlashCore-UPRAL, FC-UPRAL);
+    container-type: inline-size;
+}
+
+@container FC-UPRAL (min-width: 0px) {
+    [role="dialog"], [role="list"] {
+        width: 20vw;
+        height: 70vh !important;
+        max-height: unset !important;
+    }
+}
+
+
+/* [END] = Flashcord Beta == Major General Modifications [00] OTUI_Pop CSS = */
+
+/* [Start] = Flashcord Beta == Small Modifications - BaseLayer CSS = */
+
+[class^="updateIconForeground-"] {
+    fill: red !important;
+    animation: FlashCore-Shake calc(100ms * var(--Enable-Animations, 1)) infinite;
+}
+
+[href="https://support.discord.com"] {
+    display: none;
+}
+
+/* @ Before Usernames */
+[class^="userTagUsernameBase-"]:before, [class^="usernameInnerRow-"]:before {
+    content: "@"
+}
+
+[class^="submenuPaddingContainer-"] {
+    padding: 0;
+    margin: -4px;
+}
+
+/* [End] = Flashcord Beta == Small Modifications - BaseLayer CSS = */
+
+
+/* [Start] = Flashcord Beta == Small Modifications - Popup CSS = */
+
+
+
+/* [End] = Flashcord Beta == Small Modifications - Popup CSS = */
+
+
+/* [Start] = Flashcord Beta == Small Modifications - UnNitrofy CSS = */
+
+body {
+    container-name: var(--FlashCore-DeNitrofy, FC-DeNitrofy);
+    container-type: inline-size;
+}
+
+@container FC-DeNitrofy (min-width: 0px) {
+    button:has(path[d="M16.886 7.999H20C21.104 7.999 22 8.896 22 9.999V11.999H2V9.999C2 8.896 2.897 7.999 4 7.999H7.114C6.663 7.764 6.236 7.477 5.879 7.121C4.709 5.951 4.709 4.048 5.879 2.879C7.012 1.746 8.986 1.746 10.121 2.877C11.758 4.514 11.979 7.595 11.998 7.941C11.9991 7.9525 11.9966 7.96279 11.9941 7.97304C11.992 7.98151 11.99 7.98995 11.99 7.999H12.01C12.01 7.98986 12.0079 7.98134 12.0058 7.97287C12.0034 7.96282 12.0009 7.95286 12.002 7.942C12.022 7.596 12.242 4.515 13.879 2.878C15.014 1.745 16.986 1.746 18.121 2.877C19.29 4.049 19.29 5.952 18.121 7.121C17.764 7.477 17.337 7.764 16.886 7.999ZM7.293 5.707C6.903 5.316 6.903 4.682 7.293 4.292C7.481 4.103 7.732 4 8 4C8.268 4 8.519 4.103 8.707 4.292C9.297 4.882 9.641 5.94 9.825 6.822C8.945 6.639 7.879 6.293 7.293 5.707ZM14.174 6.824C14.359 5.941 14.702 4.883 15.293 4.293C15.481 4.103 15.732 4 16 4C16.268 4 16.519 4.103 16.706 4.291C17.096 4.682 17.097 5.316 16.707 5.707C16.116 6.298 15.057 6.642 14.174 6.824ZM3 13.999V19.999C3 21.102 3.897 21.999 5 21.999H11V13.999H3ZM13 13.999V21.999H19C20.104 21.999 21 21.102 21 19.999V13.999H13Z"]) { display: none; }
+    [data-testid="v2-marketing-page-hero-header"], [class^="perksContainer-"], [class^="planComparisonTableContainer-"], [data-testid="v2-marketing-page-footer"] { display: none; }
+    [class^="wrapper-"]:has([class^="topPerksCard"]) { display: none; }
+    [class^="tier0-"], [class^="tier2-"] { display: block; }
+    #discord-nitro-tab img, #discord-nitro-tab svg  { display: none !important; }
+    #nitro-server-boost-tab, #discord-nitro-tab {
+        display: flex;
+        align-items: center;
+    }
+    [class^="tierComparisonTable-"], [class^="lowerBody-"] { display: none; }
+    [class^="banner-"]:has([class^="ctaContainer-"]) { display: none; }
+
+    /* Message to the two bitches  who since day 1 keeps fucking bullying me: Cope. I'm leaving this in. I will shit on Nitro and try to prevent people from wasting money. */
+    .breadcrumb:after {
+        content: "\A⚠️ Are you sure you want to buy Nitro?\A💭 You're using a custom client, you probably REALLY don't need this.\A💸 For the price of this, you could buy a pizza or support your favorite content creator.\A";
+        font-weight: 900;
+        white-space: pre-line;
+        color: orange;
+    }
+    [class^="planSelectStep-"]:before {
+    content: "⚠️ Are you sure you want to buy Server Boosts?\A💭 Tell everyone in the server to use a custom Discord client.\A💸 It may be ''cheap'', but it really adds up in the end.\A\A\A";
+        font-weight: 900;
+        white-space: pre-line;
+        color: orange;
+    }
+    [class^="children-"]:has([class^="cardIconSmall-"]):before {
+        content: "\A\A\A\A\A\A\A\A\A\A⛔ Stop what you're doing right now.\AIf you're seriously okay with this. Scroll down.\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\A\AIf it wasn't clear, Flashcord hates wasting money.\A\A";
+        font-weight: 900;
+        white-space: pre-line;
+        color: red;
+        text-align: center;
+    }
+    
+    [class^="premiumIconWrapper-"] { display: none; }
+    [href="/store"] { display: none; }
+}
+
+/* [End] = Flashcord Beta == Small Modifications - UnNitrofy CSS = */
+
+
+/* [Start] = Flashcord Beta == Major General Modifications - ChatEffects_CD CSS = */
+
+[class^="messageListItem-"]:nth-last-child(-n + 9 ):has([href^="http://flashcord/"], [class="replugged-greentext"]) {
+    container-name: var(--Flashcord-Chat_Effects, FC-ChatEffects_Animated);
+    container-type: inline-size;
+}
+
+@container FC-ChatEffects_Animated (min-width: 0px) {
+    [href="http://flashcord/small"],
+    [href="http://flashcord/shake"],
+    [href="http://flashcord/dramatic"],
+    [href="http://flashcord/fade-bottom"],
+    [href="http://flashcord/4chan"] {
+        display: none;
+    }
+    [class^="message-"]:has(a[href="http://flashcord/small"]) {
+        animation: FCME-Small 1s;
+        scale: 0.8;
+        transform-origin: left center;
+    }
+    [class^="message-"]:has(a[href="http://flashcord/shake"]) {
+        animation: FlashCore-Shake 100ms infinite;
+    }
+    [class^="message-"]:has(a[href="http://flashcord/dramatic"]) {
+        animation: FCME-Dramatic 8s ease-out;
+        transform-origin: left center;
+    }
+    [class^="message-"]:has(a[href="http://flashcord/fade-bottom"]) {
+        animation: FCME-Old_BottomFade 2s;
+    }
+
+    /* Green Text Mode from 4Chan */
+    [class^="message-"]:has([href="http://flashcord/4chan"], [class="replugged-greentext"]) {
+        display: flex !important;
+        background: #fffeed !important;
+        container-name: FC-ChatEffects_4Chan-L1 !important;
+        container-type: inline-size !important;
+    }
+    @container FC-ChatEffects_4Chan-L1 (min-width: 0px) {
+        [class^="contents-"] {
+            margin-left: 16px !important;
+            order: 1;
+        }
+        [class^="username-"] {
+            color: #117743 !important;
+        }
+        span {
+            color: #d00;
+        }
+        [class^="avatar-2e8lTP"] {
+            display: none;
+        }
+        [class^="timestamp-"] {
+            color: #800 !important;
+        }
+        .replugged-greentext > span {
+            color: #789922 !important;
+        }
+        [id^="message-reply-context-"] {
+            container-name: FC-ChatEffects_4Chan-L2 !important;
+            container-type: inline-size !important;
+            display: -webkit-box !important;
+            font-size: 1rem;
+            position: absolute;
+            top: 1.5rem;
+        }
+        [id^="message-reply-context-"]:before { display: none; }
+        [class^="contents-"] [class^="header-"] {
+            margin-bottom: 1rem;
+        }
+        .stafftag, .platform-indicators { display: none; }
+        @container FC-ChatEffects_4Chan-L2 (min-width: 0px) {
+            img, svg, span:has(.stafftag) { display: none; }
+            [class^="username-"]:before {
+                content: ">>";
+                color: #d00 !important;
+                margin-left: 1rem;
+            }
+            [class^="username-"] {
+                color: #d00 !important;
+                margin-top: 10px;
+            }
+            [class^="repliedTextPreview-"] {
+                margin-top: 0px;
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+@container FC-ChatEffects_Text (min-width: 0px) {
+    [href="http://flashcord/small"],
+    [href="http://flashcord/shake"],
+    [href="http://flashcord/dramatic"],
+    [href="http://flashcord/fade-bottom"], 
+    [href="http://flashcord/4chan"]{
+        display: none;
+    }
+
+    [id^="message-content-"]:has([href="http://flashcord/small"]):after {
+        content: "\A 🎉 Flashcord Effect: Small";
+        white-space: pre;
+        color: var(--text-normal);
+        font-size: small;
+    }
+    [id^="message-content-"]:has([href="http://flashcord/shake"]):after {
+        content: "\A 🎉 Flashcord Effect: Shaking";
+        white-space: pre;
+        color: var(--text-normal);
+        font-size: small;
+    }
+    [id^="message-content-"]:has([href="http://flashcord/dramatic"]):after {
+        content: "\A 🎉 Flashcord Effect: Dramatic";
+        white-space: pre;
+        color: var(--text-normal);
+        font-size: small;
+    }
+    [id^="message-content-"]:has([href="http://flashcord/fade-bottom"]):after {
+        content: "\A 🎉 Flashcord Effect: Fading from the Bottom";
+        white-space: pre;
+        color: var(--text-normal);
+        font-size: small;
+    }
+    [id^="message-content-"]:has([href="http://flashcord/4chan"]):after {
+        content: "\A 🎉 Flashcord Effect: 4Chan";
+        white-space: pre;
+        color: var(--text-normal);
+        font-size: small;
+    }
+}
+
+
+/* [END] = Flashcord Beta == Major General Modifications - ChatEffects_CD = */
+
+
+/* [Start] = Flashcord Beta == Replugged Plugin Compatibility Fix CSS = */
+
+/* dev.albertp.RoleDividers.asar */
+.role-divider-collapse {
+    min-height: 16px !important;
+    padding: 0;
+}
+
+/* [End] = Flashcord Beta == Replugged Plugin Compatibility Fix CSS = */
+
+
+/* [Start] = Flashcord Beta == Replugged Theme Compatibility Fix CSS = */
+
+/* net.saltssaumure.Squared.asar */
+html:has([href*="net.saltssaumure.Squared.asar"]) {
+    --Flashcord-Border_Radius: 0px;
+}
+
+/* net.saltssaumure.piOS.asar */
+html:has([href*="net.saltssaumure.piOS.asar"]) {
+    --Flashcord-Border_Radius: 0px;
+}
+
+/* [End] = Flashcord Beta == Replugged Theme Compatibility Fix CSS = */
+
+
+/* [Start] = Flashcord Beta == Replugged Plugin Compatibility List CSS = */
+.replugged-addon-cards {
+    container-name: var(--FlashCore-RPCL, FC-RPCL);
+    container-type: inline-size;
+    contain: layout;
+}
+#rp-plugins-tab:before {
+    content: "\A\A⚠️ As of right now, approved plugins may actually have minor issues with Flashcord.\A\A";
+    white-space: pre;
+    font-weight: 900;
+    color: var(--text-normal);
+}
+
+@container FC-RPCL (min-width: 0px) {
+    .replugged-addon-card:before {
+        white-space: pre-wrap;
+        content: "🔧 Flashcord Compatibility: ❓ Unknown\A\A";
+        font-size: small;
+        width: 100%;
+        color: var(--text-normal);
+    }
+    .replugged-addon-card {
+        display: grid;
+    }
+
+    .replugged-addon-card:has([href*="Magnificent"]):before {
+        content: "🔧 Flashcord Compatibility: ⚠️ REQUIRED PLUGIN: Enhances the Imagivid Module\A\A";
+    }
+    .replugged-addon-card:has([href*="Magnificent"]) {
+        order: -6948;
+    }
+    .replugged-addon-card:has([href*="dev.albertp.RoleDividers"]):before {
+        content: "🔧 Flashcord Compatibility: ⚠️ REQUIRED PLUGIN: Enhances the UPFG Module\A\A";
+    }
+    .replugged-addon-card:has([href*="dev.albertp.RoleDividers"]) {
+        order: -6948;
+    }
+    
+    .replugged-addon-card:has([href*="dev.kingfish.InvisibleTyping"], [href*="dev.albertp.ChannelTyping"], [href*="dev.kingfish.BadgesEverywhere"], [href*="dev.tharki.ShowHiddenChannels"], [href*="com.cafeed28.NitroSpoof"], [href*="dev.tharki.LegalDiscordBypasses"], [href*="net.sammcheese.messageLogger"]):before {
+        content: "🔧 Flashcord Compatibility: ❤️ Recommended\A\A";
+    }
+    .replugged-addon-card:has([href*="dev.kingfish.InvisibleTyping"], [href*="dev.albertp.ChannelTyping"], [href*="dev.kingfish.BadgesEverywhere"], [href*="dev.tharki.ShowHiddenChannels"], [href*="com.cafeed28.NitroSpoof"],[href*="dev.tharki.LegalDiscordBypasses"], [href*="net.sammcheese.messageLogger"]) {
+        order: -512;
+    }
+
+    .replugged-addon-card:has([href*="dev.replugged.RevertRebrand"], [href*="net.saltssaumure.CRT"], [href*="dev.oirnoir.onekoanimation"], [href*="nyria.discolored"]):before {
+        content: "🔧 Flashcord Compatibility: ✅ Compatible\A\A";
+    }
+    .replugged-addon-card:has([href*="dev.replugged.RevertRebrand"], [href*="net.saltssaumure.CRT"], [href*="dev.oirnoir.onekoanimation"], [href*="nyria.discolored"]) {
+        order: -386;
+    }
+
+    .replugged-addon-card:has([href*="xyz.griefmodz.StatisticCounter"]):before {
+        content: "🔧 Flashcord Compatibility: ⚠️ Minor Issues\A\A";
+    }
+    .replugged-addon-card:has([href*="xyz.griefmodz.StatisticCounter"]) {
+        order: -256;
+    }
+}
+
+/* [End] = Flashcord Beta == Replugged Plugin Compatibility List CSS = */
+
+
+/* [Start] = Flashcord Beta == Replugged Theme Compatibility List CSS = */
+
+#rp-themes-tab:before,
+#rp-quickcss-tab:before {
+    content: "\A\A📸 Welcome to " var(--Flashcord-Branch) " ! You are using the " var(--Flashcord-Channel) " Channel of Flashcord.\A\A";
+    white-space: pre;
+    font-weight: 900;
+    color: var(--text-normal);
+}
+
+@container FC-RPCL (min-width: 0px) {
+    .replugged-addon-card:has([href*="com.sirio-network.flashcord"]):before {
+        content: "💖 Thank you for using Flashcord!\A\A";
+    }
+    .replugged-addon-card:has([href*="dev.LuckFire.BubbleBar"], [href*="net.saltssaumure.Squared"]):before {
+        content: "🔧 Flashcord Compatibility: ❤️ Recommended\A\A";
+    }
+    .replugged-addon-card:has([href*="dev.replugged.RevertRebrand"], [href*="net.saltssaumure.CRT"], [href*="dev.oirnoir.onekoanimation"], [href*="nyria.discolored"]):before {
+        content: "🔧 Flashcord Compatibility: ✅ Compatible\A\A";
+    }
+    .replugged-addon-card:has([href*="net.saltssaumure.piOS"]):before {
+        content: "🔧 Flashcord Compatibility: ⚠️ Minor Issues\A\A";
+    }
+    .replugged-addon-card:has([href*="net.saltssaumure.Exponent"], [href*="net.saltssaumure.NineX"], [href*="dev.albertp.CompactDiscord"]):before {
+        content: "🔧 Flashcord Compatibility: ⛔ Disable most modules\A\A";
+    }
+    .replugged-addon-card:has([href*="flashcord-legacy"]):before {
+        content: "Don't. Don't do it.\A\A";
+        font-weight: 900;
+    }
+
+    .replugged-addon-card:has([href*="com.sirio-network.flashcord"]) {
+        order: -6948;
+    }
+    .replugged-addon-card:has([href*="dev.LuckFire.BubbleBar"], [href*="net.saltssaumure.Squared"]) {
+        order: -512;
+    }
+    .replugged-addon-card:has([href*="dev.replugged.RevertRebrand"], [href*="net.saltssaumure.CRT"], [href*="dev.oirnoir.onekoanimation"], [href*="nyria.discolored"]) {
+        order: -386;
+    }
+    .replugged-addon-card:has([href*="FCM"]) {
+        order: -6942;
+    }
+    .replugged-addon-card:has([href*="net.saltssaumure.piOS"]) {
+        order: -256;
+    }
+    .replugged-addon-card:has([href*="net.saltssaumure.Exponent"], [href*="net.saltssaumure.NineX"], [href*="dev.albertp.CompactDiscord"]) {
+        order: -128;
+    }
+    .replugged-addon-card:has([href*="flashcord-legacy"]) {
+        order: 6948;
+    }
+
+    .replugged-addon-card:has([href*="FCM"]):before {
+        content: "[🛠️] ⚠️ Unverified Flashcord Module\A\A";
+    }
+    .replugged-addon-card:has([href*="SiriusBYT/FCM_Extended-Chat-Effects"]):before {
+        content: "[🛠️] ✅ Official Flashcord Module\A\A";
+    }
+    .replugged-addon-card:has([href*="SiriusBYT/FCM_Infinite-Chat-Effects"]):before {
+        content: "[🛠️] ✅ Official Flashcord Module\A\A";
+    }
+
+}
+
+/* [End] = Flashcord Beta == Replugged Theme Compatibility List CSS = */
+
