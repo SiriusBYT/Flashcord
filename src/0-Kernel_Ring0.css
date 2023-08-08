@@ -1,0 +1,42 @@
+/* [START] = Flashcord Beta == Kernel [00] CSS = */
+
+/* NOTICE: Everytime there is a " [!] FC-Wildcard_PerfNuker " this means that using a wildcard will absolutely nuke performance so bad it would make Flashcord impossible to use */
+[class^="app-"]:has([class^="problems-"]) {
+  container-name: var(--Flashcord-Blackout, FC-Boot_Blackout-Android);
+  container-type: inline-size;
+}
+
+@container FC-Boot_Blackout-Android (min-width: 0px) {
+  [class^="content-"] div, video, [class^="problems-"] div { display: none; }
+  [class^="problems-"]:before {
+    content: "⚠️ You are having connection problems.";
+    color: white;
+    text-align: center;
+    white-space: pre;
+    animation: FlashCore-FadeIn_Bottom calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ));
+  }
+  [class^="content-"]:before {
+    content: "Flashcord";
+    margin: auto;
+    text-align: center;
+    scale: 5;
+    font-weight: 900;
+    background-image: linear-gradient(90deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.05) 30%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.05) 80%, rgba(255,255,255,0.05) 100%);
+    background-size: 32vw;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: FlashCore-BackXMTL calc(4s * var(--Enable-Animations, 1)) linear infinite !important;
+  }
+  [class^="content-"] {
+    background: transparent;
+    width: 100vw;
+    height: 102vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: FlashCore-FadeIn calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) )) !important;
+    background: rgba(0,0,0,0.9);
+    backdrop-filter: blur(var(--Flashcord-Blur-Heavy, 16px));
+  }
+}
+/* [END] = Flashcord Beta == Kernel [00] CSS = */

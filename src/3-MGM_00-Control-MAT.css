@@ -1,0 +1,116 @@
+
+/* [START] = Flashcord Beta == Major General Modifications [00] Control MyAcc Overhaul CSS = */
+[class^="contentRegionScroller-"] [id="my-account-tab"] {
+    container-name: var(--FlashCore-SPGO_MAT, FC-SPGO_MAT);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-SPGO_MAT (min-width: 0px) {
+    [class^="userInfo-"] { 
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 10px;
+    }
+    [class^="userInfo-"] > div {
+        display: block;
+        position: relative;
+        top: 1px;
+        margin-right: 42px;
+    }
+    [class^="userInfo-"] > button {
+        margin-left: auto;
+        margin-right: 16px;
+    } 
+
+
+    [class^="fieldList-"] {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        height: auto;
+        align-content: center;
+        align-items: center;
+    }
+    [class^="field-"]:first-child { position: absolute; }
+    [class^="field-"]:first-child > div { display: none; }
+    [class^="field-"]:first-child > button {
+        translate: 150px -108px;
+        scale: 0.6;
+        font-size: x-large;
+        display: none;
+    }
+    [class^="field-"]:nth-child(2) { 
+        position: absolute;
+        translate: 90px -90px;
+    }
+    [class^="field-"]:nth-child(2) h3 { display: none; }
+    [class^="field-"]:nth-child(2) > button {
+        translate: -25px -7px;
+        scale: 0.6;
+        font-size: x-large;
+    }
+
+    [class^="badgeList-"] {
+        translate: 0 13px;
+    }
+    [class^="overflowMenuButton-"] { display: none; }
+
+    mask { display: none; }
+    #my-account-tab > div > [class^="marginTop40-"]:last-child { display: none; }
+
+    [class^="divider-"] {
+        margin-top: 16px;
+        padding: 0;
+    }
+    [class^="accountProfileCard-"] { margin-bottom: -16px; }
+    h2 { margin-top: 20px; text-align: center;}
+
+    [class^="changePasswordButton-"] {
+        margin: auto;
+    }
+
+    [class^="field-"]:nth-last-child(-n + 2) [class^="text-md-normal-"] {
+        filter: blur(var(--Flashcord-Blur-Medium, 8px));
+        transition: filter 250ms;
+    }
+    [class^="field-"]:nth-last-child(-n + 2) [class^="text-md-normal-"]:hover {
+        filter: blur(0px);
+        transition: filter 1s;
+    }
+    [class^="userSettingsSecurity-"] { margin: 0; }
+    [class^="userSettingsSecurity-"] [class^="h1-"] { margin: 8px; }
+    [class^="colorStandard-"]:has([class*="phoneRevealer-"]) { display: none; }
+    #my-account-tab > :after {
+        content: "\A About Flashcord";
+        font-weight: 900;
+        white-space: pre;
+        color: var(--text-normal);
+    }
+    
+    #my-account-tab:after {
+        white-space: pre;
+        color: var(--text-normal);
+        content: 'Flashcord is a personal project maintained with love by SiriusBYT, it takes the design language of "SNWE/SNDL" and applies it to Discord. \A \
+      Support is held on The Sirio Network Discord Server (https://discord.gg/z93kHwGuZt). \A \A \
+      Please give a thanks to these amazing people who helped with the Closed Alpha of Flashcord 💖 \A \
+      🗨️  "be racist for me"\A \
+                - Atacantul, 2023\A\A \
+      🗨️  "https://www.pixiv.net/en/artworks/107406646"\A \
+                - trueirony, 2023\A\A \
+      🗨️  "do linux, be crime"\A \
+                - Lööps, 2023 \A\A \
+      🗨️  "Come play with me on Club Pinguin"\A \
+                - Ectalite, August 2023 \A\A \A \
+Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A\A\A\A';
+    }
+}
+
+/* [End] = Flashcord Beta == Major General Modifications [00] Control MyAcc Overhaul CSS = */

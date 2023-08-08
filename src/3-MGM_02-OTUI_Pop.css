@@ -1,0 +1,77 @@
+
+/* [Start] = Flashcord Beta == Major General Modifications [00] OTUI_Pop CSS = */
+
+/* UPMO Core | What's UPMO? Go fit those nuts UMPO ass bud. */
+[class^="layer-"]:has([class^="userProfileModalOuter-"]) {
+    container-name: var(--FlashCore-UPMO, FC-UPMO);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-UPMO (min-width: 0px) {
+    [class^="focusLock-"] { border-radius: var(--Flashcord-Border_Radius, 25px) }
+    [class^="userProfileModalOuter-"] {
+        width: 70vw;
+        height: 70vh;
+    }
+    mask { display: none; }
+    [class^="topSection-"] {
+        min-width: 70vw !important;
+        min-height: 16vh !important;
+        height: 16vh;
+        width: 70vw;
+        max-width: 70vw;
+        max-height: 16vh;
+        margin: 0 auto;
+    }
+    [class^="header-"] {
+        top: 50%;
+        position: fixed;
+    }
+    [class^="userProfileModalOverlayBackground-"] {
+        margin: 16px;
+        height: 55vh;
+    }
+    header {
+        max-width: fit-content;
+        max-height: 16vh;
+        width: fit-content;
+        height: 16vh;
+        contain: paint;
+    }
+    [class^="body-"] {
+        margin-top: 2vw;
+        min-height: 51vh;
+    }
+    [class^="headerTop-"] {
+        position: absolute;
+        left: 160px;
+        top: 20px;
+        display: flex;
+        justify-content: flex-start;
+        width: max-content;
+      }
+    [class^="bannerSVGWrapper"]:has([class^="premiumIconWrapper-"]) {
+        min-height: 130% !important;
+    }
+    [class^="bannerSVGWrapper"] {
+        min-width: 70vw !important;
+    }
+}
+
+/* UPFGL Core | User Popup Role Addition List */
+[id^="popout_"]:nth-child(2):has([class^="roleCircle-"]) {
+    container-name: var(--FlashCore-UPRAL, FC-UPRAL);
+    container-type: inline-size;
+}
+
+@container FC-UPRAL (min-width: 0px) {
+    [role="dialog"], [role="list"] {
+        width: 20vw;
+        height: 70vh !important;
+        max-height: unset !important;
+    }
+}
+
+
+/* [END] = Flashcord Beta == Major General Modifications [00] OTUI_Pop CSS = */
