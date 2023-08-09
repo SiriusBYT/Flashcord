@@ -70,7 +70,10 @@
         margin-top: 16px;
         padding: 0;
     }
-    [class^="accountProfileCard-"] { margin-bottom: -16px; }
+    [class^="accountProfileCard-"] {
+        margin-bottom: -16px;
+        border-radius: var(--Flashcord-Border_Radius, 0px);
+    }
     h2 { margin-top: 20px; text-align: center;}
 
     [class^="changePasswordButton-"] {

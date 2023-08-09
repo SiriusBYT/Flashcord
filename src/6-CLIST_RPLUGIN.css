@@ -36,7 +36,13 @@
     .replugged-addon-card:has([href*="dev.albertp.RoleDividers"]) {
         order: -6948;
     }
-    
+    .replugged-addon-card:has([href*="/store/dev.alyxia.greentext"]):before {
+        content: "🔧 Flashcord Compatibility: ⚠️ REQUIRED PLUGIN: Enhances the 4Chan Chat Effect\A\A";
+    }
+    .replugged-addon-card:has([href*="/store/dev.alyxia.greentext"]) {
+        order: -6948;
+    }
+
     .replugged-addon-card:has([href*="dev.kingfish.InvisibleTyping"], [href*="dev.albertp.ChannelTyping"], [href*="dev.kingfish.BadgesEverywhere"], [href*="dev.tharki.ShowHiddenChannels"], [href*="com.cafeed28.NitroSpoof"], [href*="dev.tharki.LegalDiscordBypasses"], [href*="net.sammcheese.messageLogger"]):before {
         content: "🔧 Flashcord Compatibility: ❤️ Recommended\A\A";
     }
