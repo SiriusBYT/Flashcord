@@ -1,0 +1,30 @@
+
+/* [START] = Flashcord Beta == Kernel [01] CSS = */
+
+.theme-light {
+    --background-primary: #FFFFFF;
+    --background-secondary: #FFFFFF;
+    --background-secondary-alt: #FFFFFF;
+    --background-tertiary: #FFFFFF;
+    --background-accent: #FF99FF;
+    --background-floating: #FFFfFF;
+    --channeltextarea-background: #f0f0f0;
+    --background-modifier-selected: #f0f0f0;
+    --background-modifier-hover: #f9f9f9;
+    --home-background: #ffffff;
+}
+
+.theme-dark {
+    --background-primary: #000000;
+    --background-secondary: #000000;
+    --background-secondary-alt: #000000;
+    --background-tertiary: #000000;
+    --background-accent: #660066;
+    --background-floating: #060606;
+    --channeltextarea-background: #060606;
+    --background-modifier-selected: #0F0F0F;
+    --background-modifier-hover: #161616;
+    --FlashCore-Brightness: 2;
+}
+
+/* [END] = Flashcord Beta == Kernel [01] CSS = */

@@ -1,0 +1,163 @@
+
+/* [Start] = Flashcord Beta == Major General Modifications [00] OTUI_Base CSS = */
+
+[class^="peopleList-"] {
+    container-name: var(--FlashCore-Friends, FC-FlexGrid);
+    container-type: inline-size;
+    contain: paint;
+}
+[id="rp-plugins-tab"], [id="rp-themes-tab"] {
+    container-name: var(--FlashCore-Replugged_Addons, FC-FlexGrid);
+    container-type: inline-size;
+    contain: paint;
+}
+[class^="userPopoutOverlayBackground-"]:has([class^="role-"]) {
+    container-name: var(--FlashCore-UPFG, FC-FlexGrid);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-FlexGrid (min-width: 0px) {
+    [class^="peopleList-"] > div,
+    [class="replugged-addon-cards"],
+    [class^="section-"]:nth-child(4) {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        margin: auto;
+    }
+    [class^="role-"],
+    [class^="peopleListItem-"],
+    [class="replugged-addon-card"] {
+        margin: 0;
+        min-width: 386px;
+        min-height: 64px;
+        flex-grow: 1;
+        flex-basis: 1px;
+        padding: 8px;
+        transition: calc(250ms * var(--AnimMult-Normal, 1));
+        border-radius: var(--Flashcord-Border_Radius, 25px );
+        scale: 0.95;
+      }
+    [class^="role-"]:hover,
+    [class^="peopleListItem-"]:hover,
+    [class="replugged-addon-card"]:hover {
+        margin: 0 !important;
+        padding: 8px !important;
+        scale: 1.05;
+        transition: calc(250ms * var(--AnimMult-Normal, 1));
+        border-radius: var(--Flashcord-Border_Radius, 25px );
+    }
+    [class^="role-"] {
+        min-width: fit-content !important;
+        min-height: 24px !important;
+        border-radius: 0px !important;
+        scale: 1 !important;
+    }
+    h2 { width: 100%; }
+}
+
+/*
+[class^="wrapper-"]:has([class^="callContainer-"]) {
+    container-name: var(--FlashCore-Call, FC-Call);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-Call (min-width: 0px) {
+    [class^="callContainer-"] { background: transparent; }
+    [class^="bottomControls-"] [class^="flex-"] { flex: unset !important; }
+    [class^="bottomControls-"] {
+        justify-content: center !important;
+        opacity: 1 !important;
+        height: 100%;
+        pointer-events: none;
+    }
+    [class^="bottomControls-"] button {
+        pointer-events: all;
+    }
+    [class^="topControls-"] { opacity: 1 !important; }
+    [class^="gradientTop-"], [class^="gradientBottom-"] { display: none; }
+    [class^="controlButton-"]:has([d="M21.526 8.149C21.231 7.966 20.862 7.951 20.553 8.105L18 9.382V7C18 5.897 17.103 5 16 5H4C2.897 5 2 5.897 2 7V17C2 18.104 2.897 19 4 19H16C17.103 19 18 18.104 18 17V14.618L20.553 15.894C20.694 15.965 20.847 16 21 16C21.183 16 21.365 15.949 21.526 15.851C21.82 15.668 22 15.347 22 15V9C22 8.653 21.82 8.332 21.526 8.149Z"]) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        scale: 0.8;
+    }
+    [class^="bottomControls-"] > [class^="flex-"]:first-child {
+        flex-direction: column-reverse;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    [class^="bottomControls-"] > [class^="flex-"]:last-child {
+        flex-direction: column;
+    }
+    [class^="leftDivider-"] { display: none; }
+    [class^="flex-"] div[style="opacity: 1; transform: scale(1);"] {
+        position: absolute;
+        right: 0;
+        bottom: 0
+    }
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(2) [class^="wrapper-"] div:nth-child(3) {
+        position: absolute;
+        right: 0;
+        top: 40%;
+    }
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(2) [class^="wrapper-"] div:nth-child(4) {
+        position: absolute;
+        right: 0;
+        top: 50%;
+    }
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(2) [class^="wrapper-"] div:nth-child(5) {
+        bottom: 0;
+    }
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(3) > div,
+    [class^="voiceEffectsActionBar-"],
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) [class^="flex-"]:first-child,
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) div:last-child {
+        position: absolute;
+        right: 8px;
+        width: 56px;
+        height: 56px;
+        background: var(--background-floating);
+        border-radius: 6948px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(3) button,
+    [class^="voiceEffectsActionBar-"] button,
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) [class^="flex-"]:first-child button,
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) div:last-child button {
+        width: 56px;
+        height: 56px;
+        margin: 0;
+    }
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(3) > div:nth-child(1) { top: 70%; }
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(3) > div:nth-child(2) { top: 80%; }
+    [class^="voiceEffectsActionBar-"] { top: 60%; }
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) [class^="flex-"]:first-child {
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        scale: 0.5;
+    }
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) div:last-child {
+        left: 0;
+        top: 0;
+        position: absolute;
+        scale: 0.5;
+    }
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) [class^="flex-"]:first-child svg,
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) div:last-child svg {
+        scale: 2;
+    }
+}*/
+
+/* [END] = Flashcord Beta == Major General Modifications [00] OTUI_Base CSS = */

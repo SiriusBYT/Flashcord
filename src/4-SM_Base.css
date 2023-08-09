@@ -1,0 +1,33 @@
+
+/* [Start] = Flashcord Beta == Small Modifications - BaseLayer CSS = */
+
+[class^="updateIconForeground-"] {
+    fill: red !important;
+    animation: FlashCore-Shake calc(100ms * var(--Enable-Animations, 1)) infinite;
+}
+
+[href="https://support.discord.com"] {
+    display: none;
+}
+
+/* @ Before Usernames */
+[class^="userTagUsernameBase-"]:before, [class^="usernameInnerRow-"]:before {
+    content: "@"
+}
+
+[class^="submenuPaddingContainer-"] {
+    padding: 0;
+    margin: -4px;
+}
+
+[class^="icon-"] {
+    transition-property: scale;
+    transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1)) !important;
+}
+[class^="icon-"]:hover {
+    scale: 1.1;
+}
+[class^="icon-"]:active {
+    scale: 0.9;
+}
+/* [End] = Flashcord Beta == Small Modifications - BaseLayer CSS = */

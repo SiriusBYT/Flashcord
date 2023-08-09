@@ -1,6 +1,6 @@
 {
-  "name": "Flashcord Beta",
-  "version": "bSID-230811",
+  "name": "Flashcord Beta (SID)",
+  "version": "bSID-230807",
   "description": "The world's most advanced, complex and feature rich Discord Theme to ever exist. A complete visual overhaul for Discord. ⚠️ Make sure to read the Flashcord Wiki!",
   "engines": {
     "node": ">=18.0.0",

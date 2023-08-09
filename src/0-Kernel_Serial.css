@@ -1,0 +1,68 @@
+
+/* [Start] = Flashcord Beta == Kernel - Serial CSS = */
+
+html:has(link[href*="replugged"]) {
+    --FlashCore-Client: "🔌 Replugged";
+}
+html:has(#vencord-margins) {
+    --FlashCore-Client: "✨ Vencord";
+}
+html:has(body[class*="bd"]) {
+    --FlashCore-Client: "🩹 BetterDiscord";
+}
+
+html.platform-win {
+    --FlashCore-OS: "🪟 Windows"
+}
+html.platform-osx {
+    --FlashCore-OS: "🍎 MacOS"
+}
+html.platform-linux {
+    --FlashCore-OS: "🐧 GNU/Linux"
+}
+
+html.theme-light {
+    --FlashCore-Theme: "☀️ Light Mode";
+}
+html.theme-dark {
+    --FlashCore-Theme: "🌙 Dark Mode";
+}
+html.theme-dark.custom-theme-background {
+    --FlashCore-Theme: "🖼️ Custom Background Mode" !important;
+}
+html.theme-light.custom-theme-background {
+    --FlashCore-Theme: "👻 Transparent Mode" !important;
+}
+
+html:has([content*="canary"]) {
+    --FlashCore-Discord_Branch: "Canary";
+}
+html:has([content*="ptb"]) {
+    --FlashCore-Discord_Branch: "Public Beta Test";
+}
+
+html:has(link[href*="com.sirio-network.flashcord.asar"]) {
+    --FlashCore-Import_Method: "🛒 Replugged Store";
+}
+
+[id^="message-content-"]:has(a[href="http://flashcord/debug"]):after {
+    white-space: pre-wrap;
+    content: 
+"\A\A🔥 FLASHCORD DEBUG INFORMATION - This information is only visible to you, please screenshot it and send it to @SiriusBYT for debug purposes if needed. \A\A \
+📸 -- Flashcord Information \A
+    🔄️ Flashcord Branch: " var(--Flashcord-Branch) "\A \
+    🔗 Flashcord Channel: " var(--Flashcord-Channel) "\A \
+    💡 Flashcord Version: " var(--Flashcord-Version) "\A \
+    ⬇️ Flashcord Import Method: " var(--FlashCore-Import_Method, "🌐 @Import Method") " \A\A \
+💬 -- Discord Client Information \A\A \
+    🌳 Detected Discord Branch: " var(--FlashCore-Discord_Branch, 'Stable') " \A \
+    💻 Detected Operating System: " var(--FlashCore-OS, '⛔ CRITICAL ERROR: NO OS WAS DETECTED') "\A \
+    🎯 Detected Client: " var(--FlashCore-Client, '⛔ CRITICAL ERROR: NO CLIENT WAS DETECTED') "\A \
+    🌈 Detected Theme: " var(--FlashCore-Theme, '⛔ CRITICAL ERROR: NO THEME WAS DETECTED') "\A\A \
+🛠️ -- FlashCore Modules \A\A \
+    TBD \A\A \
+⚠️ Please also send the contents of your QuickCSS if you modified any Flashcord Variables. \A\A \
+== End of Flashcord's Debug Information. == \A\A";
+}
+
+/* [End] = Flashcord Beta == Kernel - Serial CSS = */

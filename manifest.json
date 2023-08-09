@@ -1,20 +1,20 @@
 {
-	"id": "com.sirio-network.flashcord",
-	"name": "Flashcord Beta",
+	"id": "com.sirio-network.Flashcord-SID",
+	"name": "Flashcord Beta (SID)",
 	"description": "The world's most advanced, complex and feature rich Discord Theme to ever exist. A complete visual overhaul for Discord. ⚠️ Make sure to read the Flashcord Wiki!",
 	"author": {
 		"name": "SiriusBYT",
 		"discordID": "311057290562371586",
 		"github": "SiriusBYT"
 	},
-	"version": "bSID-230811",
+	"version": "bSID-230807",
 	"updater": {
             "type": "github",
-            "id": "SiriusBYT/flashcord"
+            "id": "SiriusBYT/Flashcord"
 	},
 	"license": "CC BY-NC-ND 4.0",
 	"type": "replugged-theme",
-	"main": "src/stb/compiled.css",
+	"main": "src/sid.css",
 	"image": [
 		"https://sirio-network.com/flashcord/store/fc-light.gif",
 		"https://sirio-network.com/flashcord/store/fc-dark.gif",
