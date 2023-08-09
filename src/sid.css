@@ -34,13 +34,13 @@ This license requires that reusers give credit to the creator. It allows reusers
   
   --Flashcord-Branch: "Flashcord Beta";
   --Flashcord-Channel: "bSID";
-  --Flashcord-Version: "230807";
+  --Flashcord-Version: "230809";
 
-  --Flashcord-Splash: "192.168.1.1";
-  --Flashcord-SplashSca: 1.5;
-  --Flashcord-SplashTrX: -10px;
+  --Flashcord-Splash: "going to die of cringe for 4 \A days starting monday again";
+  --Flashcord-SplashSca: 1;
+  --Flashcord-SplashTrX: 0px;
   --Flashcord-SplashTrY: 0px;
-  --Flashcord-SplashMAR: 20px;
+  --Flashcord-SplashMAR: 40px;
   
   background: #000000;
   animation: Flashcord-Welcome_Win11 calc(1s * (var(--Enable-Animations, 1) * var(--DevMode, 1)) ) ease-out;
@@ -112,7 +112,8 @@ This license requires that reusers give credit to the creator. It allows reusers
     --background-floating: #FFFfFF;
     --channeltextarea-background: #f0f0f0;
     --background-modifier-selected: #f0f0f0;
-    --background-modifier-hover: #e0e0e0;
+    --background-modifier-hover: #f9f9f9;
+    --home-background: #ffffff;
 }
 
 .theme-dark {
@@ -432,6 +433,24 @@ html:has(link[href*="com.sirio-network.flashcord.asar"]) {
 /* [End] = Flashcord Beta == Kernel - Serial CSS = */
 
 
+/* [Start] = Flashcord Beta == France = */
+
+[class^="message-"]:hover [class^="buttons-"] {
+    opacity: 0.5 !important;
+    animation: FlashCore-FadeIn 1s;
+    transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1)) !important;
+}
+[class^="message-"] [class^="buttons-"]:hover {
+    opacity: 1 !important;
+}
+
+[class^="message-"] {
+    transition-property: background-color;
+    transition-duration: calc(250ms * var(--Flashcord-TransMult-Normal, 1)) !important;
+}
+
+/* [End] = Flashcord Beta == France = */
+
 /* [Start] = Flashcord Beta == Custom Theme: CBM CSS = */
 
 .custom-theme-background {
@@ -541,7 +560,7 @@ html:has(link[href*="com.sirio-network.flashcord.asar"]) {
         scale: 0.98;
     }
     [class^="layers-"]:has([class^="closeButton-"]:hover) .baseLayer-W6S8cY { /* [!] FC-Wildcard_PerfNuker */
-        filter: blur(0px) brightness(1);
+        filter: blur(var(--Flashcord-Blur-Close, 2px)) brightness(0.98);
         scale: 1;
     }
     [class^="closeButton-"]:hover {
@@ -704,7 +723,10 @@ html:has(link[href*="com.sirio-network.flashcord.asar"]) {
         margin-top: 16px;
         padding: 0;
     }
-    [class^="accountProfileCard-"] { margin-bottom: -16px; }
+    [class^="accountProfileCard-"] {
+        margin-bottom: -16px;
+        border-radius: var(--Flashcord-Border_Radius, 0px);
+    }
     h2 { margin-top: 20px; text-align: center;}
 
     [class^="changePasswordButton-"] {
@@ -946,11 +968,12 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
         margin-left: -190px;
         translate: 190px;
         height: 100%;
+        z-index: 1;
 
-        transition-property: translate;
+        transition-property: translate, filter;
         transition-duration: calc(250ms * var(--Flashcord-TransMult-Normal, 1));
     }
-    [class^="membersWrap-"]:hover { translate: 0px; /*will-change: translate;*/ }
+    [class^="membersWrap-"]:hover { translate: 0px; filter: drop-shadow(0px 0px 16px var(--channeltextarea-background));  }
     [class^="member-"] { margin-left: 0px; }
     [class^="member-"] > div {
         padding-top: 0px;
@@ -1250,6 +1273,10 @@ nav[class^="wrapper-"] > ul {
         transition-property: width, height;
         transition-duration: calc(500ms * var(--Flashcord-TransMult-Slow, 1)) !important;
     }
+    [class^="focusLock-"] [class^="imageWrapper-"] [class^="wrapper-"] { 
+        width: auto !important;
+        height: auto !important;
+    }
     [class^="focusLock-"] > div { 
         display: flex;
         justify-content: center;
@@ -1258,7 +1285,7 @@ nav[class^="wrapper-"] > ul {
         flex-direction: row;
     }
     [class^="carouselModal-"] {
-        justify-content: flex-sta0t !important;
+        justify-content: flex-start !important;
     }
     [class^="focusLock-"] img, [class^="focusLock-"] video, [class^="imageWrapper-"] [class^="wrapper-"] {
         width: 100% !important;
@@ -1271,10 +1298,19 @@ nav[class^="wrapper-"] > ul {
     [class^="anchor-"] {
         display: none;
     }
+    [class*="modalCarouselWrapper-"] {
+        -webkit-box-align: unset !important;
+        align-items: unset !important;
+        margin: auto;
+        position: static;
+    }
+    [class*="modalCarouselWrapper-"] button {
+        margin: 0;
+    }
 }
 
 /* Menthrepin Core */
-[class^="layerContainer-"]:has([class^="messagesPopoutWrap-"], [class^="threadIcon-"], [class^="recentMentionsPopout-"]) {
+[class^="layerContainer-"]:has([class^="messagesPopoutWrap-"], [class^="threadIcon-"], [class^="recentMentionsPopout-"], [class*="recentMentionsPopout-"]) {
     container-name: var(--FlashCore-Menthrepin, FC-Menthrepin);
     container-type: inline-size;
     contain: paint;
@@ -1513,6 +1549,105 @@ nav[class^="wrapper-"] > ul {
     h2 { width: 100%; }
 }
 
+/*
+[class^="wrapper-"]:has([class^="callContainer-"]) {
+    container-name: var(--FlashCore-Call, FC-Call);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-Call (min-width: 0px) {
+    [class^="callContainer-"] { background: transparent; }
+    [class^="bottomControls-"] [class^="flex-"] { flex: unset !important; }
+    [class^="bottomControls-"] {
+        justify-content: center !important;
+        opacity: 1 !important;
+        height: 100%;
+        pointer-events: none;
+    }
+    [class^="bottomControls-"] button {
+        pointer-events: all;
+    }
+    [class^="topControls-"] { opacity: 1 !important; }
+    [class^="gradientTop-"], [class^="gradientBottom-"] { display: none; }
+    [class^="controlButton-"]:has([d="M21.526 8.149C21.231 7.966 20.862 7.951 20.553 8.105L18 9.382V7C18 5.897 17.103 5 16 5H4C2.897 5 2 5.897 2 7V17C2 18.104 2.897 19 4 19H16C17.103 19 18 18.104 18 17V14.618L20.553 15.894C20.694 15.965 20.847 16 21 16C21.183 16 21.365 15.949 21.526 15.851C21.82 15.668 22 15.347 22 15V9C22 8.653 21.82 8.332 21.526 8.149Z"]) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        scale: 0.8;
+    }
+    [class^="bottomControls-"] > [class^="flex-"]:first-child {
+        flex-direction: column-reverse;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    [class^="bottomControls-"] > [class^="flex-"]:last-child {
+        flex-direction: column;
+    }
+    [class^="leftDivider-"] { display: none; }
+    [class^="flex-"] div[style="opacity: 1; transform: scale(1);"] {
+        position: absolute;
+        right: 0;
+        bottom: 0
+    }
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(2) [class^="wrapper-"] div:nth-child(3) {
+        position: absolute;
+        right: 0;
+        top: 40%;
+    }
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(2) [class^="wrapper-"] div:nth-child(4) {
+        position: absolute;
+        right: 0;
+        top: 50%;
+    }
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(2) [class^="wrapper-"] div:nth-child(5) {
+        bottom: 0;
+    }
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(3) > div,
+    [class^="voiceEffectsActionBar-"],
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) [class^="flex-"]:first-child,
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) div:last-child {
+        position: absolute;
+        right: 8px;
+        width: 56px;
+        height: 56px;
+        background: var(--background-floating);
+        border-radius: 6948px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(3) button,
+    [class^="voiceEffectsActionBar-"] button,
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) [class^="flex-"]:first-child button,
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) div:last-child button {
+        width: 56px;
+        height: 56px;
+        margin: 0;
+    }
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(3) > div:nth-child(1) { top: 70%; }
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(3) > div:nth-child(2) { top: 80%; }
+    [class^="voiceEffectsActionBar-"] { top: 60%; }
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) [class^="flex-"]:first-child {
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        scale: 0.5;
+    }
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) div:last-child {
+        left: 0;
+        top: 0;
+        position: absolute;
+        scale: 0.5;
+    }
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) [class^="flex-"]:first-child svg,
+    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) div:last-child svg {
+        scale: 2;
+    }
+}*/
+
 /* [END] = Flashcord Beta == Major General Modifications [00] OTUI_Base CSS = */
 
 
@@ -1614,6 +1749,16 @@ nav[class^="wrapper-"] > ul {
     margin: -4px;
 }
 
+[class^="icon-"] {
+    transition-property: scale;
+    transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1)) !important;
+}
+[class^="icon-"]:hover {
+    scale: 1.1;
+}
+[class^="icon-"]:active {
+    scale: 0.9;
+}
 /* [End] = Flashcord Beta == Small Modifications - BaseLayer CSS = */
 
 
@@ -1870,7 +2015,13 @@ html:has([href*="net.saltssaumure.piOS.asar"]) {
     .replugged-addon-card:has([href*="dev.albertp.RoleDividers"]) {
         order: -6948;
     }
-    
+    .replugged-addon-card:has([href*="/store/dev.alyxia.greentext"]):before {
+        content: "🔧 Flashcord Compatibility: ⚠️ REQUIRED PLUGIN: Enhances the 4Chan Chat Effect\A\A";
+    }
+    .replugged-addon-card:has([href*="/store/dev.alyxia.greentext"]) {
+        order: -6948;
+    }
+
     .replugged-addon-card:has([href*="dev.kingfish.InvisibleTyping"], [href*="dev.albertp.ChannelTyping"], [href*="dev.kingfish.BadgesEverywhere"], [href*="dev.tharki.ShowHiddenChannels"], [href*="com.cafeed28.NitroSpoof"], [href*="dev.tharki.LegalDiscordBypasses"], [href*="net.sammcheese.messageLogger"]):before {
         content: "🔧 Flashcord Compatibility: ❤️ Recommended\A\A";
     }
@@ -1958,6 +2109,15 @@ html:has([href*="net.saltssaumure.piOS.asar"]) {
     .replugged-addon-card:has([href*="SiriusBYT/FCM_Infinite-Chat-Effects"]):before {
         content: "[🛠️] ✅ Official Flashcord Module\A\A";
     }
+    .replugged-addon-card:has([href*="FCM"]) .text-sm-medium-2-Xzsi { display: none; } /* [!] FC-Wildcard_PerfNuker */
+    .replugged-addon-card:has([href*="FCM"]) .iconDiv-3ISDKO:after { /* [!] FC-Wildcard_PerfNuker */
+        content: "Flashcord Modules are not supposed to be verified by the Replugged Team. Make sure to download Modules only from the Flashcord Store.";
+        white-space: pre-warp;
+        font-size: small;
+        margin-left: 8px; 
+    }
+
+
 
 }
 
