@@ -26,6 +26,10 @@
         translate: 0px;
         /*will-change: translate;*/
     }
+    [class^="chat-"]:has([class^="pageBody-"]) {
+      margin-right: 0;
+      translate: 0;
+    }
 }
 
 @container FC-ChatSlide_Legacy (min-width: 0px) {

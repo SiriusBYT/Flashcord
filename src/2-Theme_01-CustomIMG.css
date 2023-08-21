@@ -6,12 +6,25 @@
 }
 
 .theme-dark.custom-theme-background {
-    --bg-overlay-color: transparent !important;
-    --background-primary: transparent !important;
-    --background-secondary: transparent !important;
-    --background-secondary-alt: transparent !important;
-    --background-tertiary: transparent !important;
-    --bg-overlay-6: transparent !important;
+    --bg-overlay-color: transparent;
+    --background-primary: transparent;
+    --background-secondary: transparent;
+    --background-secondary-alt: transparent;
+    --background-tertiary: transparent;
+    --bg-overlay-1: transparent;
+    --bg-overlay-2: transparent;
+    --bg-overlay-3: transparent;
+    --bg-overlay-4: transparent;
+    --bg-overlay-5: transparent;
+    --bg-overlay-6: transparent;
+
+
+    --background-accent: #660066;
+    --background-floating: rgba(6,6,6,0.5);
+    --background-modifier-selected: rgba(16,16,16,0.5);
+    --background-modifier-hover: rgba(22,22,22,0.5);
+    --FlashCore-Brightness: 0.5;
+
 }
 .theme-dark.custom-theme-background body {
     background: unset !important;
@@ -29,6 +42,12 @@
 }
 .theme-dark.custom-theme-background [class^="layer-"]:nth-child(2) {
     border: 1px solid white;
+}
+
+@container FC-ChatSlide_Legacy (min-width: 0px) {
+    [class^="chat-"] > section, [class^="chat-"] > div, [class^="chat-"] {
+        background: transparent !important;
+    }
 }
 
 /* [End] = Flashcord Beta == Custom Theme: CBM CSS = */
