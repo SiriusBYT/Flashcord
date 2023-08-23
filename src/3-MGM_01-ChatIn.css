@@ -74,7 +74,7 @@
     [class^="carouselModal-"] {
         justify-content: flex-start !important;
     }
-    [class^="focusLock-"] img, [class^="focusLock-"] video, [class^="imageWrapper-"] [class^="wrapper-"] {
+    [class^="focusLock-"] img, [class^="focusLock-"] video, [class^="imageWrapper-"] [class^="wrapper"] {
         width: 100% !important;
         height: 100% !important;
         max-width: 100% !important;
