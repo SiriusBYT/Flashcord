@@ -83,4 +83,15 @@
     100% {translate: 0px 1px;}
 }
 
+@keyframes Flashcord-PopUp_In {
+    0% {
+        scale: 0.9;
+        opacity: 0;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+
 /* [END] = Flashcord Beta == Kernel [02] CSS = */
