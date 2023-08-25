@@ -1,0 +1,24 @@
+
+/* [Start] = Flashcord Beta == Custom Theme: Iridescent Mode CSS = */
+
+/* Iridescent Mode will exist one day, but for now, all the following code is commented out.
+
+@container FC-AdvancedTheme_Iridescent {
+    .theme-midnight_burple.theme-light [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
+    .theme-midnight_burple.theme-dark [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
+
+    @container FC-PM (min-width: 0px) {
+        [class*="menu"] {
+            animation: Flashcord-PopUp_In calc(125ms * ( var(--Flashcord-AnimMult-Fast, 1) * var(--Flashcord-Animations, 1) ) ) ease-in;
+        }
+        .theme-midnight_burple.theme-light [class*="menu"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
+        .theme-midnight_burple.theme-dark [class*="menu"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
+        [class*="menu"]:hover {
+            outline-width: 2px;
+        }
+    }
+}
+
+*/
+
+/* [Start] = Flashcord Beta == Custom Theme: Iridescent Mode CSS = */

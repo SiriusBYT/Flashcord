@@ -8,11 +8,7 @@
 
 [class^="tooltip-"] {
     border-radius: var(--Flashcord-Border_Radius, 25px);
-    animation: Flashcord-PopUp_In calc(62.5ms * ( var(--Flashcord-AnimMult-XFast, 1) * var(--Flashcord-Animations, 1) ) ) ease-in;
 }
-
-.theme-light [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
-.theme-dark [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
 [class^="tooltipPointer-"] { display: none; }
 
 /* [End] = Flashcord Beta == Small Modifications - Popup CSS = */

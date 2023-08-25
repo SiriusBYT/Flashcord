@@ -87,14 +87,6 @@
     [class*="menu"] {
         border-radius: var(--Flashcord-Border_Radius, 25px);
         min-width: 0px;
-        transition-property: outline-width;
-        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
-        animation: Flashcord-PopUp_In calc(125ms * ( var(--Flashcord-AnimMult-Fast, 1) * var(--Flashcord-Animations, 1) ) ) ease-in;
-    }
-    .theme-light [class*="menu"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
-    .theme-dark [class*="menu"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
-    [class*="menu"]:hover {
-        outline-width: 2px;
     }
     [class^="item-"] {
         border-radius: var(--Flashcord-Border_Radius, 25px);

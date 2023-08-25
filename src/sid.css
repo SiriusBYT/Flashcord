@@ -34,9 +34,9 @@ This license requires that reusers give credit to the creator. It allows reusers
   
   --Flashcord-Branch: "Flashcord Beta";
   --Flashcord-Channel: "bSID";
-  --Flashcord-Version: "230824";
+  --Flashcord-Version: "230825";
 
-  --Flashcord-Splash: "Flashcord VS AOF7 \A Who will win Sirius' Attention?";
+  --Flashcord-Splash: "how 2 unaddicted to \A aof7 plez????";
   --Flashcord-SplashSca: 0.9;
   --Flashcord-SplashTrX: 0px;
   --Flashcord-SplashTrY: 0px;
@@ -467,6 +467,31 @@ html:has(link[href*="com.sirio-network.flashcord.asar"]) {
 
 /* [End] = Flashcord Beta == France = */
 
+/* [Start] = Flashcord Beta == Custom Theme: Iridescent Mode CSS = */
+
+/* Iridescent Mode will exist one day, but for now, all the following code is commented out.
+
+@container FC-AdvancedTheme_Iridescent {
+    .theme-midnight_burple.theme-light [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
+    .theme-midnight_burple.theme-dark [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
+
+    @container FC-PM (min-width: 0px) {
+        [class*="menu"] {
+            animation: Flashcord-PopUp_In calc(125ms * ( var(--Flashcord-AnimMult-Fast, 1) * var(--Flashcord-Animations, 1) ) ) ease-in;
+        }
+        .theme-midnight_burple.theme-light [class*="menu"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
+        .theme-midnight_burple.theme-dark [class*="menu"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
+        [class*="menu"]:hover {
+            outline-width: 2px;
+        }
+    }
+}
+
+*/
+
+/* [Start] = Flashcord Beta == Custom Theme: Iridescent Mode CSS = */
+
+
 /* [Start] = Flashcord Beta == Custom Theme: CBM CSS = */
 
 .custom-theme-background {
@@ -518,7 +543,44 @@ html:has(link[href*="com.sirio-network.flashcord.asar"]) {
     }
 }
 
+/* For future Module-Based Advanced Themes */
+@container FC-AdvancedTheme_Custom-Background-Mode {
+}
+
 /* [End] = Flashcord Beta == Custom Theme: CBM CSS = */
+
+
+/* [Start] = Flashcord Beta == Custom Theme: Transparent Mode CSS = */
+
+/* Transparent Mode will exist one day, but for now, all the following code is commented out.
+
+@container FC-AdvancedTheme_Transparent {
+    .theme-mint_apple {
+        --bg-overlay-color: transparent;
+        --background-primary: transparent;
+        --background-secondary: transparent;
+        --background-secondary-alt: transparent;
+        --background-tertiary: transparent;
+        --bg-overlay-1: transparent;
+        --bg-overlay-2: transparent;
+        --bg-overlay-3: transparent;
+        --bg-overlay-4: transparent;
+        --bg-overlay-5: transparent;
+        --bg-overlay-6: transparent;
+        --FlashCore-Brightness: 0.5;
+
+    }
+    .theme-mint_apple body,
+    .theme-mint_apple html {
+        background: transparent !important;
+    }
+    .theme-mint_apple #app-mount {
+        backdrop-filter: var(--Flashcord-CBM_Filter, blur(16px) brightness(0.5));
+    }
+}
+*/
+
+/* [Start] = Flashcord Beta == Custom Theme: Transparent Mode CSS = */
 
 
 /* [START] = Flashcord Beta == Major General Modifications [00] Control CSS = */
@@ -1778,14 +1840,6 @@ nav[class^="wrapper-"] > ul {
     [class*="menu"] {
         border-radius: var(--Flashcord-Border_Radius, 25px);
         min-width: 0px;
-        transition-property: outline-width;
-        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
-        animation: Flashcord-PopUp_In calc(125ms * ( var(--Flashcord-AnimMult-Fast, 1) * var(--Flashcord-Animations, 1) ) ) ease-in;
-    }
-    .theme-light [class*="menu"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
-    .theme-dark [class*="menu"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
-    [class*="menu"]:hover {
-        outline-width: 2px;
     }
     [class^="item-"] {
         border-radius: var(--Flashcord-Border_Radius, 25px);
@@ -1835,11 +1889,7 @@ nav[class^="wrapper-"] > ul {
 
 [class^="tooltip-"] {
     border-radius: var(--Flashcord-Border_Radius, 25px);
-    animation: Flashcord-PopUp_In calc(62.5ms * ( var(--Flashcord-AnimMult-XFast, 1) * var(--Flashcord-Animations, 1) ) ) ease-in;
 }
-
-.theme-light [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
-.theme-dark [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
 [class^="tooltipPointer-"] { display: none; }
 
 /* [End] = Flashcord Beta == Small Modifications - Popup CSS = */
@@ -1893,7 +1943,7 @@ body {
 /* [End] = Flashcord Beta == Small Modifications - UnNitrofy CSS = */
 
 
-/* [Start] = Flashcord Beta == Major General Modifications - ChatEffects_CD CSS = */
+/* [Start] = Flashcord Beta == ChatEffects Code CSS = */
 
 [class^="messageListItem-"]:nth-last-child(-n + 9 ):has([href^="http://flashcord/"], [class="replugged-greentext"]) {
     container-name: var(--Flashcord-Chat_Effects, FC-ChatEffects_Animated);
@@ -2025,7 +2075,7 @@ body {
 }
 
 
-/* [END] = Flashcord Beta == Major General Modifications - ChatEffects_CD = */
+/* [END] = Flashcord Beta == ChatEffects Code CSS = */
 
 
 /* [Start] = Flashcord Beta == Replugged Plugin Compatibility Fix CSS = */

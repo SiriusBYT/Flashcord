@@ -1,5 +1,5 @@
 
-/* [Start] = Flashcord Beta == Major General Modifications - ChatEffects_CD CSS = */
+/* [Start] = Flashcord Beta == ChatEffects Code CSS = */
 
 [class^="messageListItem-"]:nth-last-child(-n + 9 ):has([href^="http://flashcord/"], [class="replugged-greentext"]) {
     container-name: var(--Flashcord-Chat_Effects, FC-ChatEffects_Animated);
@@ -131,4 +131,4 @@
 }
 
 
-/* [END] = Flashcord Beta == Major General Modifications - ChatEffects_CD = */
+/* [END] = Flashcord Beta == ChatEffects Code CSS = */
