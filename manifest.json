@@ -1,13 +1,13 @@
 {
 	"id": "com.sirio-network.Flashcord-SID",
 	"name": "Flashcord Beta (SID)",
-	"description": "The world's most advanced, complex and feature rich Discord Theme to ever exist. A complete visual overhaul for Discord. ⚠️ Make sure to read the Flashcord Wiki!",
+	"description": "[!] Make sure to read the Flashcord Wiki! [!] The world's most advanced, complex and feature rich Discord Theme to ever exist. A complete visual overhaul for Discord.",
 	"author": {
 		"name": "SiriusBYT",
 		"discordID": "311057290562371586",
 		"github": "SiriusBYT"
 	},
-	"version": "bSID-230825",
+	"version": "bSID-230826",
 	"updater": {
             "type": "github",
             "id": "SiriusBYT/Flashcord"
