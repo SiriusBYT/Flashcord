@@ -34,13 +34,14 @@ This license requires that reusers give credit to the creator. It allows reusers
   
   --Flashcord-Branch: "Flashcord Beta";
   --Flashcord-Channel: "bSID";
-  --Flashcord-Version: "230825";
+  --Flashcord-Version: "230826";
 
-  --Flashcord-Splash: "how 2 unaddicted to \A aof7 plez????";
-  --Flashcord-SplashSca: 0.9;
+  --Flashcord-Splash: "Plugin Devs! Please check \A 2-Theme_01-CustomIMG.css!";
+  --Flashcord-SplashSca: 1;
   --Flashcord-SplashTrX: 0px;
   --Flashcord-SplashTrY: 0px;
   --Flashcord-SplashMAR: 40px;
+  --custom-theme-background: unset;
   
   background: #000000;
   animation: Flashcord-Welcome_Win11 calc(1s * (var(--Enable-Animations, 1) * var(--DevMode, 1)) ) ease-out;
@@ -53,6 +54,37 @@ This license requires that reusers give credit to the creator. It allows reusers
   animation: inherit !important;
   transform: inherit !important;
   transition: inherit !important;
+}
+
+/* Read the code comment at 2-Theme_01-CustomIMG.css // DOES NOT WORK YET OBVIOUSLY */
+.themehooker-present {
+  container-name: var(--FlashCore-Global_Theme, FC-Theme_Hooker) !important;
+  container-type: inline-size;
+}
+
+.theme-dark.custom-theme-background {
+  container-name: var(--FlashCore-Global_Theme, FC-AdvancedTheme-LEGACY_Custom-Background-Mode);
+  container-type: inline-size;
+
+  --custom-theme-background: transparent;
+
+  --bg-overlay-color: transparent;
+  --background-primary: transparent;
+  --background-secondary: transparent;
+  --background-secondary-alt: transparent;
+  --background-tertiary: transparent;
+  --bg-overlay-1: transparent;
+  --bg-overlay-2: transparent;
+  --bg-overlay-3: transparent;
+  --bg-overlay-4: transparent;
+  --bg-overlay-5: transparent;
+  --bg-overlay-6: transparent;
+
+  --background-floating: rgba(6,6,6,0.5);
+  --background-modifier-selected: rgba(16,16,16,0.5);
+  --background-modifier-hover: rgba(22,22,22,0.5);
+  --FlashCore-ChatSlide: FC-ChatSlide_Legacy;
+  --FlashCore-Brightness: 0.5;
 }
 
 /* [END] = Flashcord Beta == BIOS [00] CSS = */

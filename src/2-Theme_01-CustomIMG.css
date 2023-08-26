@@ -1,57 +1,116 @@
 
 /* [Start] = Flashcord Beta == Custom Theme: CBM CSS = */
 
-.custom-theme-background {
-    --FlashCore-ChatSlide: FC-ChatSlide_Legacy;
-}
+/* Hey there Plugin devs! Or whoever snoops around in this mess of a code thingy.
+I'm in serious need of a plugin that adds the .theme-[nitro theme name here] to the
+<html> and <body> tag. When you select a theme, it shows ".theme-light" or ".theme-dark" for
+example in the <html> tag. When you use a nitro theme, it shows ".custom-theme-background"
+and nothing else, I'd like someone to make a plugin that thus when for example, I have
+the "Mint Apple" Nitro theme, that it shows on the HTML and body tag, ".theme-mint_apple"
+the reason I also want it on the body tag is because of CSS bullshit, I seriously need it on
+both. If someone is able to do such a plugin, then holy shit my creativity is going to be able
+to go through the roof, and I'll thank you forever for it.
+There was a Replugged Issue or pull request or whatever about missing core class attributes or
+something, but that shit is dead as fuck, and I honestly think that's not going to ever happen
+So anyways, if someone can make a plugin that responds to my very specific problems, I'd thank you
+so many times you'd drown in them.
 
-.theme-dark.custom-theme-background {
-    --bg-overlay-color: transparent;
-    --background-primary: transparent;
-    --background-secondary: transparent;
-    --background-secondary-alt: transparent;
-    --background-tertiary: transparent;
-    --bg-overlay-1: transparent;
-    --bg-overlay-2: transparent;
-    --bg-overlay-3: transparent;
-    --bg-overlay-4: transparent;
-    --bg-overlay-5: transparent;
-    --bg-overlay-6: transparent;
+- SiriusBYT*/
 
+@container FC-AdvancedTheme-LEGACY_Custom-Background-Mode (min-width: 0px) {
+    @container FC-SPGO_AT (min-width: 0px) {
+        [class^="themeSelection-"][style*="--bg-gradient-midnight-blurple"]:before {
+            content: "Iridescent Mode (Unavailable) \A(Set Global Theme to FC-AdvancedTheme_Iridescent-Mode.)";
+        }
+        [class^="themeSelection-"][style*="bg-gradient-mint-apple"]:before {
+            content: "Transparent Window Mode (Unavailable) \A(Set Global Theme to FC-AdvancedTheme_Transparent-Mode.)";
+        }
+    }
 
-    --background-accent: #660066;
-    --background-floating: rgba(6,6,6,0.5);
-    --background-modifier-selected: rgba(16,16,16,0.5);
-    --background-modifier-hover: rgba(22,22,22,0.5);
-    --FlashCore-Brightness: 0.5;
+    body {
+        background: unset !important;
+        background-image: var(--Flashcord-CBM_Image, url("https://sirio-network.com/flashcord/bgr-test.jpg") ) !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        object-fit: cover !important;
+        background-size: cover !important;
+    }
+    [class^="layer-"]:nth-child(2) {
+        border: 1px solid white;
+    }
+    .custom-theme-background [class^="chat-"] [class^="title-"] [class^="children-"]:after {
+        content: var(--Flashcord-Warnings,"  ⚠️ Flashcord is in Beta. 🖼️ Custom Mode is unfinished.  ") !important;
+    }
 
-}
-.theme-dark.custom-theme-background body {
-    background: unset !important;
-    background-image: var(--Flashcord-CBM_Image, url("https://sirio-network.com/flashcord/bgr-test.jpg") ) !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    object-fit: cover !important;
-    background-size: cover !important;
-}
-.theme-dark.custom-theme-background #app-mount {
-    backdrop-filter: var(--Flashcord-CBM_Filter, blur(16px) brightness(0.5));
-}
-.theme-dark.custom-theme-background [class^="chat-"] [class^="title-"] [class^="children-"]:after {
-    content: var(--Flashcord-Warnings,"  ⚠️ Flashcord is in Beta. 🖼️ Custom Mode is unfinished.  ") !important;
-}
-.theme-dark.custom-theme-background [class^="layer-"]:nth-child(2) {
-    border: 1px solid white;
-}
-
-@container FC-ChatSlide_Legacy (min-width: 0px) {
-    [class^="chat-"] > section, [class^="chat-"] > div, [class^="chat-"] {
-        background: transparent !important;
+    @container FC-ChatSlide_Legacy (min-width: 0px) {
+        [class^="chat-"] > section, [class^="chat-"] > div, [class^="chat-"] {
+            background: transparent !important;
+        }
+    }
+    #app-mount {
+        backdrop-filter: var(--Flashcord-CBM_Filter, blur(16px) brightness(0.5));
     }
 }
 
-/* For future Module-Based Advanced Themes */
-@container FC-AdvancedTheme_Custom-Background-Mode {
+/* DOES NOT WORK RIGHT NOW: FOR FUCK SAKES SOMEONE MAKES A PLUGIN THAT ADDS A CLASS TO THE <HTML> TAG WITH THE CURRENTLY SELECTED NITRO THEME AAAAAAAAAAAAAAAAAAAA- */
+@container FC-Theme_Hooker {
+    .theme-sunset body,
+    .theme-mint_apple body {
+        --FlashCore-ChatSlide: FC-ChatSlide_Legacy;
+        --bg-overlay-color: transparent;
+        --background-primary: transparent;
+        --background-secondary: transparent;
+        --background-secondary-alt: transparent;
+        --background-tertiary: transparent;
+        --bg-overlay-1: transparent;
+        --bg-overlay-2: transparent;
+        --bg-overlay-3: transparent;
+        --bg-overlay-4: transparent;
+        --bg-overlay-5: transparent;
+        --bg-overlay-6: transparent;
+
+        container-name: var(--FlashCore-Global_Theme, FC-AdvancedTheme_Custom-Background-Mode) !important;
+        container-type: inline-size;
+    }
+    .theme-sunset body {
+        --background-accent: #660066;
+        --background-floating: rgba(6,6,6,0.5);
+        --background-modifier-selected: rgba(16,16,16,0.5);
+        --background-modifier-hover: rgba(22,22,22,0.5);
+        --FlashCore-Brightness: 2;
+    }
+    .theme-mint_apple body {
+        --background-accent: #EE00EE;
+        --background-floating: rgba(200,200,200,0.5);
+        --background-modifier-selected: rgba(225,225,225,0.5);
+        --background-modifier-hover: rgba(255,255,255,0.5);
+        --FlashCore-Brightness: 1;
+    }
+    .theme-mint_apple [class^="chat-"] [class^="title-"] [class^="children-"]:after,
+    .theme-citrus_sherbert [class^="chat-"] [class^="title-"] [class^="children-"]:after {
+        content: var(--Flashcord-Warnings,"  ⚠️ Flashcord is in Beta. 🖼️ Custom Mode is unfinished.  ") !important;
+    }
+    .theme-mint_apple [class^="layer-"]:nth-child(2) {
+        border: 1px solid black;
+    }
+    .theme-citrus_sherbert [class^="layer-"]:nth-child(2) {
+        border: 1px solid white;
+    }
+
+    body.theme-mint_apple, body.theme-citrus_sherbert {
+        container-name: var(--FlashCore-Global_Theme, FC-Theme_CBM) !important;
+        container-type: inline-size;
+    }
+    @container FC-Theme_CBM (min-width: 0px) {
+        @container FC-ChatSlide_Legacy (min-width: 0px) {
+            [class^="chat-"] > section, [class^="chat-"] > div, [class^="chat-"] {
+                background: transparent !important;
+            }
+        }
+        #app-mount {
+            backdrop-filter: var(--Flashcord-CBM_Filter, blur(16px) brightness(0.5));
+        }
+    }
 }
 
 /* [End] = Flashcord Beta == Custom Theme: CBM CSS = */

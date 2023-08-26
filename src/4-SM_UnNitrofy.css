@@ -1,7 +1,7 @@
 
 /* [Start] = Flashcord Beta == Small Modifications - UnNitrofy CSS = */
 
-body {
+[class^="appAsidePanelWrapper-"] {
     container-name: var(--FlashCore-DeNitrofy, FC-DeNitrofy);
     container-type: inline-size;
 }

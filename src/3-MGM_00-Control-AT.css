@@ -87,9 +87,6 @@
     background-size: cover !important;
     border-radius: 25px;
   }
-  [class^="themeSelection-"][style*="--bg-gradient-midnight-blurple"]:before {
-    content: "Iridescent Mode\A(Not an actual feature yet)";
-  } 
 
   [class^="themeSelectionContainer-"]:has([style*="--bg-gradient-mint-apple"]) {
     order: 1;
@@ -101,9 +98,6 @@
     background-position: center !important;
     background-size: cover !important;
     border-radius: 25px;
-  }
-  [class^="themeSelection-"][style*="bg-gradient-mint-apple"]:before {
-    content: "Transparent Window Mode\A(Not an actual feature yet)";
   }
   
   [class*="basicThemeSelectors-"] > div,

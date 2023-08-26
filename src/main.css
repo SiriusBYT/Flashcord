@@ -7,7 +7,9 @@
 
 @import url("1-Anarchy_SID.css");
 
+@import url("2-Theme_00-Iridescent.css");
 @import url("2-Theme_01-CustomIMG.css");
+@import url("2-Theme_03-Transparent.css");
 
 @import url("3-MGM_00-Control.css");
 @import url("3-MGM_00-Control-MAT.css");
