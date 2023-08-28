@@ -100,10 +100,11 @@ body:before {
     }
 }
 
-
+/*
 [class^="messageListItem-"]:nth-last-child(-n + 33 ) [class^="message-"] {
     container-name: var(--Flashcord-Badges, FC-Badges);
     container-type: inline-size;
+    contain: ;
 }
 
 @container FC-Badges (min-width: 0px) {
@@ -138,7 +139,7 @@ body:before {
         background-image: linear-gradient(90deg, rgba(0,255,255,0.5) 0%, rgba(255,0,255,0.5) 25%, rgba(255,255,0,0.5) 50%, rgba(255,0,255,0.5) 75%, rgba(0,255,255,0.5) 100%) !important;
         animation: FlashCore-BackXMTL calc(2s * var(--Flashcord-Animations, 1) ) linear infinite !important;
     }
-}
+}*/
 
 
 /* [END] = Flashcord Beta == Kernel [03] CSS = */

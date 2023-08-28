@@ -188,13 +188,6 @@ nav[class^="wrapper-"] > ul {
   contain: paint;
 }
 
-/* ChannelNav_Compact Core */
-[class^="content-"] > [class^="sidebar-"] {
-  container-name: var(--FlashCore-ChannelNav_Compact, FC-ChannelNav_Compact);
-  container-type: inline-size;
-  contain: paint;
-}
-
 @container FC-ChannelNav_Compact (min-width: 0px) {
   li > div > div > a,
   [class^="emojiColorFill-"],

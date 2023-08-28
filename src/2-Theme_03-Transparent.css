@@ -2,7 +2,7 @@
 /* [Start] = Flashcord Beta == Custom Theme: Transparent Mode CSS = */
 
 @container FC-AdvancedTheme_Transparent {
-    :root {
+    .theme-sepia {
         --bg-overlay-color: transparent;
         --background-primary: transparent;
         --background-secondary: transparent;
@@ -18,7 +18,7 @@
 
         background: transparent !important;
     }
-    #app-mount {
+    .theme-sepia #app-mount {
         backdrop-filter: var(--Flashcord-CBM_Filter, blur(16px) brightness(0.5));
     }
 }

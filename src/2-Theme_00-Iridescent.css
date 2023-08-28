@@ -3,15 +3,15 @@
 
 
 @container FC-AdvancedTheme_Iridescent {
-    .theme-midnight_burple.theme-light [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
-    .theme-midnight_burple.theme-dark [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
+    .theme-citrus-sherbert [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
+    .theme-chroma-glow [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
 
     @container FC-PM (min-width: 0px) {
         [class*="menu"] {
             animation: Flashcord-PopUp_In calc(125ms * ( var(--Flashcord-AnimMult-Fast, 1) * var(--Flashcord-Animations, 1) ) ) ease-in;
         }
-        .theme-midnight_burple.theme-light [class*="menu"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
-        .theme-midnight_burple.theme-dark [class*="menu"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
+        .theme-citrus-sherbert [class*="menu"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
+        .theme-chroma-glow [class*="menu"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
         [class*="menu"]:hover {
             outline-width: 2px;
         }

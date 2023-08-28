@@ -18,15 +18,6 @@ so many times you'd drown in them.
 - SiriusBYT*/
 
 @container FC-AdvancedTheme-LEGACY_Custom-Background-Mode (min-width: 0px) {
-    @container FC-SPGO_AT (min-width: 0px) {
-        [class^="themeSelection-"][style*="--bg-gradient-midnight-blurple"]:before {
-            content: "Iridescent Mode (Unavailable) \A(Set Global Theme to FC-AdvancedTheme_Iridescent-Mode.)";
-        }
-        [class^="themeSelection-"][style*="bg-gradient-mint-apple"]:before {
-            content: "Transparent Window Mode (Unavailable) \A(Set Global Theme to FC-AdvancedTheme_Transparent-Mode.)";
-        }
-    }
-
     body {
         background: unset !important;
         background-image: var(--Flashcord-CBM_Image, url("https://sirio-network.com/flashcord/bgr-test.jpg") ) !important;
@@ -54,8 +45,8 @@ so many times you'd drown in them.
 
 /* DOES NOT WORK RIGHT NOW: FOR FUCK SAKES SOMEONE MAKES A PLUGIN THAT ADDS A CLASS TO THE <HTML> TAG WITH THE CURRENTLY SELECTED NITRO THEME AAAAAAAAAAAAAAAAAAAA- */
 @container FC-Theme_Hooker {
-    .theme-sunset body,
-    .theme-mint_apple body {
+    .theme-sunset,
+    .theme-mint_apple {
         --FlashCore-ChatSlide: FC-ChatSlide_Legacy;
         --bg-overlay-color: transparent;
         --background-primary: transparent;
@@ -68,36 +59,35 @@ so many times you'd drown in them.
         --bg-overlay-4: transparent;
         --bg-overlay-5: transparent;
         --bg-overlay-6: transparent;
-
-        container-name: var(--FlashCore-Global_Theme, FC-AdvancedTheme_Custom-Background-Mode) !important;
-        container-type: inline-size;
     }
-    .theme-sunset body {
+    .theme-sunset {
         --background-accent: #660066;
         --background-floating: rgba(6,6,6,0.5);
         --background-modifier-selected: rgba(16,16,16,0.5);
         --background-modifier-hover: rgba(22,22,22,0.5);
         --FlashCore-Brightness: 2;
+        background-image: var(--Flashcord-CBM_Light-Image, url("https://sirio-network.com/flashcord/hypernner.jpg") ) !important;
     }
-    .theme-mint_apple body {
+    .theme-mint_apple {
         --background-accent: #EE00EE;
         --background-floating: rgba(200,200,200,0.5);
         --background-modifier-selected: rgba(225,225,225,0.5);
         --background-modifier-hover: rgba(255,255,255,0.5);
         --FlashCore-Brightness: 1;
+        background-image: var(--Flashcord-CBM_Dark-Image, url("https://sirio-network.com/flashcord/bgr-test.jpg") ) !important;
     }
     .theme-mint_apple [class^="chat-"] [class^="title-"] [class^="children-"]:after,
-    .theme-citrus_sherbert [class^="chat-"] [class^="title-"] [class^="children-"]:after {
-        content: var(--Flashcord-Warnings,"  ⚠️ Flashcord is in Beta. 🖼️ Custom Mode is unfinished.  ") !important;
+    .theme-sunset [class^="chat-"] [class^="title-"] [class^="children-"]:after {
+        content: var(--Flashcord-Warnings,"  ⚠️ Flashcord is in Beta. 🖼️ Custom Background Mode is unfinished.  ") !important;
     }
     .theme-mint_apple [class^="layer-"]:nth-child(2) {
         border: 1px solid black;
     }
-    .theme-citrus_sherbert [class^="layer-"]:nth-child(2) {
+    .theme-sunset [class^="layer-"]:nth-child(2) {
         border: 1px solid white;
     }
 
-    body.theme-mint_apple, body.theme-citrus_sherbert {
+    .theme-mint_apple, .theme-sunset {
         container-name: var(--FlashCore-Global_Theme, FC-Theme_CBM) !important;
         container-type: inline-size;
     }

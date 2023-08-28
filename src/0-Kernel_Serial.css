@@ -42,13 +42,13 @@ html:has([content*="ptb"]) {
 }
 
 html:has(link[href*="com.sirio-network.flashcord.asar"]) {
-    --FlashCore-Import_Method: "🛒 Replugged Store";
+    --FlashCore-Import_Method: "🔥 Addon Method";
 }
 
 [id^="message-content-"]:has(a[href="http://flashcord/debug"]):after {
     white-space: pre-wrap;
     content: 
-"\A\A🔥 FLASHCORD DEBUG INFORMATION - This information is only visible to you, please screenshot it and send it to @SiriusBYT for debug purposes if needed. \A\A \
+"\A\A💿 FLASHCORD DEBUG INFORMATION - This information is only visible to you, please screenshot it and send it to @SiriusBYT for debug purposes if needed. \A\A \
 📸 -- Flashcord Information \A
     🔄️ Flashcord Branch: " var(--Flashcord-Branch) "\A \
     🔗 Flashcord Channel: " var(--Flashcord-Channel) "\A \

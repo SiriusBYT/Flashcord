@@ -81,7 +81,7 @@
     }
 
     [class^="field-"]:nth-last-child(-n + 2) [class^="text-md-normal-"] {
-        filter: blur(var(--Flashcord-Blur-Medium, 8px));
+        filter: blur(8px);
         transition: filter 250ms;
     }
     [class^="field-"]:nth-last-child(-n + 2) [class^="text-md-normal-"]:hover {

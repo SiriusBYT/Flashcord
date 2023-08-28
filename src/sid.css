@@ -34,9 +34,9 @@ This license requires that reusers give credit to the creator. It allows reusers
   
   --Flashcord-Branch: "Flashcord Beta";
   --Flashcord-Channel: "bSID";
-  --Flashcord-Version: "230826";
+  --Flashcord-Version: "230828";
 
-  --Flashcord-Splash: "Plugin Devs! Please check \A 2-Theme_01-CustomIMG.css!";
+  --Flashcord-Splash: "RIP FC-Badges, the biggest\A bloated part ever.";
   --Flashcord-SplashSca: 1;
   --Flashcord-SplashTrX: 0px;
   --Flashcord-SplashTrY: 0px;
@@ -85,6 +85,51 @@ This license requires that reusers give credit to the creator. It allows reusers
   --background-modifier-hover: rgba(22,22,22,0.5);
   --FlashCore-ChatSlide: FC-ChatSlide_Legacy;
   --FlashCore-Brightness: 0.5;
+}
+
+html:not(html:hover) #app-mount {
+  container-name: var(--FlashCore-Idle_Optimizations, FC-Idle_OptiMin) !important;
+  container-type: inline-size;
+
+}
+
+@container FC-Idle_OptiMax (min-width: 0px) {
+  [class^="appAsidePanelWrapper-"] {
+    --Flashcord-AnimMult-XFast: 0;
+    --Flashcord-AnimMult-Fast: 0;
+    --Flashcord-AnimMult-Normal: 0;
+    --Flashcord-AnimMult-Slow: 0;
+    --Flashcord-AnimMult-XSlow: 0;
+    --Flashcord-TransMult-XFast: 0;
+    --Flashcord-TranMult-Fast: 0;
+    --Flashcord-TranMult-Normal: 0;
+    --Flashcord-TranMult-Slow: 0;
+    --Flashcord-TranMult-XSlow: 0;
+    --Flashcord-Blur-Heavy: 0;
+    --Flashcord-Blur-Medium: 0;
+    --Flashcord-Blur-Light: 0;
+  
+    --FlashCore-GuildNav_Notification: FC-GuildNav_Static;
+    --FlashCore-ChannelNav_Notification: FC-ChannelNav_Static;
+    --Flashcord-Chat_Effects: FC-ChatEffects_Text;
+  
+    --Flashcord-Badges: FC-VOID;
+  }
+}
+
+@container FC-Idle_OptiMin (min-width: 0px) {
+  [class^="appAsidePanelWrapper-"] {
+    --Flashcord-TransMult-XFast: 0;
+    --Flashcord-TranMult-Fast: 0;
+    --Flashcord-TranMult-Normal: 0;
+    --Flashcord-TranMult-Slow: 0;
+    --Flashcord-TranMult-XSlow: 0;
+    --Flashcord-Blur-Heavy: 0;
+    --Flashcord-Blur-Medium: 0;
+    --Flashcord-Blur-Light: 0;
+
+    --Flashcord-Chat_Effects: FC-ChatEffects_Text;
+  }
 }
 
 /* [END] = Flashcord Beta == BIOS [00] CSS = */
@@ -148,8 +193,8 @@ This license requires that reusers give credit to the creator. It allows reusers
     --background-accent: #FF99FF;
     --background-floating: #FFFfFF;
     --channeltextarea-background: #f0f0f0;
-    --background-modifier-selected: #f0f0f0;
-    --background-modifier-hover: #f9f9f9;
+    --background-modifier-selected: #eaeaea;
+    --background-modifier-hover: #f0f0f0;
     --home-background: #ffffff;
 }
 
@@ -368,10 +413,11 @@ body:before {
     }
 }
 
-
+/*
 [class^="messageListItem-"]:nth-last-child(-n + 33 ) [class^="message-"] {
     container-name: var(--Flashcord-Badges, FC-Badges);
     container-type: inline-size;
+    contain: ;
 }
 
 @container FC-Badges (min-width: 0px) {
@@ -406,7 +452,7 @@ body:before {
         background-image: linear-gradient(90deg, rgba(0,255,255,0.5) 0%, rgba(255,0,255,0.5) 25%, rgba(255,255,0,0.5) 50%, rgba(255,0,255,0.5) 75%, rgba(0,255,255,0.5) 100%) !important;
         animation: FlashCore-BackXMTL calc(2s * var(--Flashcord-Animations, 1) ) linear infinite !important;
     }
-}
+}*/
 
 
 /* [END] = Flashcord Beta == Kernel [03] CSS = */
@@ -455,13 +501,13 @@ html:has([content*="ptb"]) {
 }
 
 html:has(link[href*="com.sirio-network.flashcord.asar"]) {
-    --FlashCore-Import_Method: "🛒 Replugged Store";
+    --FlashCore-Import_Method: "🔥 Addon Method";
 }
 
 [id^="message-content-"]:has(a[href="http://flashcord/debug"]):after {
     white-space: pre-wrap;
     content: 
-"\A\A🔥 FLASHCORD DEBUG INFORMATION - This information is only visible to you, please screenshot it and send it to @SiriusBYT for debug purposes if needed. \A\A \
+"\A\A💿 FLASHCORD DEBUG INFORMATION - This information is only visible to you, please screenshot it and send it to @SiriusBYT for debug purposes if needed. \A\A \
 📸 -- Flashcord Information \A
     🔄️ Flashcord Branch: " var(--Flashcord-Branch) "\A \
     🔗 Flashcord Channel: " var(--Flashcord-Channel) "\A \
@@ -503,15 +549,15 @@ html:has(link[href*="com.sirio-network.flashcord.asar"]) {
 
 
 @container FC-AdvancedTheme_Iridescent {
-    .theme-midnight_burple.theme-light [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
-    .theme-midnight_burple.theme-dark [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
+    .theme-citrus-sherbert [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
+    .theme-chroma-glow [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
 
     @container FC-PM (min-width: 0px) {
         [class*="menu"] {
             animation: Flashcord-PopUp_In calc(125ms * ( var(--Flashcord-AnimMult-Fast, 1) * var(--Flashcord-Animations, 1) ) ) ease-in;
         }
-        .theme-midnight_burple.theme-light [class*="menu"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
-        .theme-midnight_burple.theme-dark [class*="menu"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
+        .theme-citrus-sherbert [class*="menu"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
+        .theme-chroma-glow [class*="menu"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
         [class*="menu"]:hover {
             outline-width: 2px;
         }
@@ -541,15 +587,6 @@ so many times you'd drown in them.
 - SiriusBYT*/
 
 @container FC-AdvancedTheme-LEGACY_Custom-Background-Mode (min-width: 0px) {
-    @container FC-SPGO_AT (min-width: 0px) {
-        [class^="themeSelection-"][style*="--bg-gradient-midnight-blurple"]:before {
-            content: "Iridescent Mode (Unavailable) \A(Set Global Theme to FC-AdvancedTheme_Iridescent-Mode.)";
-        }
-        [class^="themeSelection-"][style*="bg-gradient-mint-apple"]:before {
-            content: "Transparent Window Mode (Unavailable) \A(Set Global Theme to FC-AdvancedTheme_Transparent-Mode.)";
-        }
-    }
-
     body {
         background: unset !important;
         background-image: var(--Flashcord-CBM_Image, url("https://sirio-network.com/flashcord/bgr-test.jpg") ) !important;
@@ -577,8 +614,8 @@ so many times you'd drown in them.
 
 /* DOES NOT WORK RIGHT NOW: FOR FUCK SAKES SOMEONE MAKES A PLUGIN THAT ADDS A CLASS TO THE <HTML> TAG WITH THE CURRENTLY SELECTED NITRO THEME AAAAAAAAAAAAAAAAAAAA- */
 @container FC-Theme_Hooker {
-    .theme-sunset body,
-    .theme-mint_apple body {
+    .theme-sunset,
+    .theme-mint_apple {
         --FlashCore-ChatSlide: FC-ChatSlide_Legacy;
         --bg-overlay-color: transparent;
         --background-primary: transparent;
@@ -591,36 +628,35 @@ so many times you'd drown in them.
         --bg-overlay-4: transparent;
         --bg-overlay-5: transparent;
         --bg-overlay-6: transparent;
-
-        container-name: var(--FlashCore-Global_Theme, FC-AdvancedTheme_Custom-Background-Mode) !important;
-        container-type: inline-size;
     }
-    .theme-sunset body {
+    .theme-sunset {
         --background-accent: #660066;
         --background-floating: rgba(6,6,6,0.5);
         --background-modifier-selected: rgba(16,16,16,0.5);
         --background-modifier-hover: rgba(22,22,22,0.5);
         --FlashCore-Brightness: 2;
+        background-image: var(--Flashcord-CBM_Light-Image, url("https://sirio-network.com/flashcord/hypernner.jpg") ) !important;
     }
-    .theme-mint_apple body {
+    .theme-mint_apple {
         --background-accent: #EE00EE;
         --background-floating: rgba(200,200,200,0.5);
         --background-modifier-selected: rgba(225,225,225,0.5);
         --background-modifier-hover: rgba(255,255,255,0.5);
         --FlashCore-Brightness: 1;
+        background-image: var(--Flashcord-CBM_Dark-Image, url("https://sirio-network.com/flashcord/bgr-test.jpg") ) !important;
     }
     .theme-mint_apple [class^="chat-"] [class^="title-"] [class^="children-"]:after,
-    .theme-citrus_sherbert [class^="chat-"] [class^="title-"] [class^="children-"]:after {
-        content: var(--Flashcord-Warnings,"  ⚠️ Flashcord is in Beta. 🖼️ Custom Mode is unfinished.  ") !important;
+    .theme-sunset [class^="chat-"] [class^="title-"] [class^="children-"]:after {
+        content: var(--Flashcord-Warnings,"  ⚠️ Flashcord is in Beta. 🖼️ Custom Background Mode is unfinished.  ") !important;
     }
     .theme-mint_apple [class^="layer-"]:nth-child(2) {
         border: 1px solid black;
     }
-    .theme-citrus_sherbert [class^="layer-"]:nth-child(2) {
+    .theme-sunset [class^="layer-"]:nth-child(2) {
         border: 1px solid white;
     }
 
-    body.theme-mint_apple, body.theme-citrus_sherbert {
+    .theme-mint_apple, .theme-sunset {
         container-name: var(--FlashCore-Global_Theme, FC-Theme_CBM) !important;
         container-type: inline-size;
     }
@@ -642,7 +678,7 @@ so many times you'd drown in them.
 /* [Start] = Flashcord Beta == Custom Theme: Transparent Mode CSS = */
 
 @container FC-AdvancedTheme_Transparent {
-    :root {
+    .theme-sepia {
         --bg-overlay-color: transparent;
         --background-primary: transparent;
         --background-secondary: transparent;
@@ -658,7 +694,7 @@ so many times you'd drown in them.
 
         background: transparent !important;
     }
-    #app-mount {
+    .theme-sepia #app-mount {
         backdrop-filter: var(--Flashcord-CBM_Filter, blur(16px) brightness(0.5));
     }
 }
@@ -914,7 +950,7 @@ so many times you'd drown in them.
     }
 
     [class^="field-"]:nth-last-child(-n + 2) [class^="text-md-normal-"] {
-        filter: blur(var(--Flashcord-Blur-Medium, 8px));
+        filter: blur(8px);
         transition: filter 250ms;
     }
     [class^="field-"]:nth-last-child(-n + 2) [class^="text-md-normal-"]:hover {
@@ -960,12 +996,52 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
 }
 
 @container FC-SPGO_AT (min-width: 0px) {
+  [class^="themeTitle-"] { display: block; }
+  [class^="themeTitle-"] button { 
+    height: unset;
+    width: unset;
+    min-width: unset;
+    min-height: unset;
+    background: transparent !important;
+    margin: 0;
+    padding: 0; 
+  }
+  [class^="themeTitle-"] [class^="contents-"] { display: none !important; }
   [class^="themeTitle-"]:before {
-    content: "📸 Flashcord Themes\A⚠️ Advanced Themes require LegalDiscordBypasses or Nitro to enable them.";
+    content: "📷 Flashcord Basic Themes";
     color: var(--text-normal);
-    white-space: pre;
+    white-space: pre-line;
     font-weight: 900;
     font-size: x-large;
+    text-transform: none;
+    line-height: normal;
+  }
+  [class^="themeTitle-"] > :before {
+    content: "📖 Certain modifications such as the horizontal server list is available only after modifying a variable, refer to the Flashcord Wiki for more information.";
+    color: var(--text-normal);
+    white-space: pre-line;
+    font-weight: 500;
+    font-size: large;
+    text-transform: none;
+    line-height: normal;
+    text-align: left !important;
+  }
+  [class^=marginTop8-] [class^="header-"] { display: block; }
+  [class^=marginTop8-] [class^="header-"]:before {
+    content: "📸 Flashcord Advanced Themes";
+    color: var(--text-normal);
+    white-space: pre-line;
+    font-weight: 900;
+    font-size: x-large;
+    text-transform: none;
+    line-height: normal;
+  }
+  [class^=marginTop8-] [class^="header-"] > :before {
+    content: "⚠️ Advanced Themes require LegalDiscordBypasses or Discord Nitro to enable them. \A ⛔ Certain themes may not work for now, refer to the code comment inside ''2-Theme_01-CustomIMG.css'' for more information if you know how to code plugins.";
+    color: var(--text-normal);
+    white-space: pre-line;
+    font-weight: 500;
+    font-size: large;
     text-transform: none;
     line-height: normal;
   }
@@ -986,6 +1062,7 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
   }
   [class^="divider-"]:last-of-type, [class^="defaultColor-"]:last-of-type { display: none; }
 
+  /* Basic Themes */
   [class*="basicThemeSelectors-"] > [class^="themeSelectionContainer-"]:first-child > [class^="themeSelection-"] {
     background: unset !important;
     background-image: url("https://sirio-network.com/flashcord/elements/theme-preview_light.png") !important;
@@ -1020,31 +1097,66 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
     content: "Dark Mode";
   }
 
+  /* Advanced Theme: CBM */
+  [class^="themeSelection-"][style*="--bg-gradient-mint-apple"] {
+    background: unset !important;
+    background-image: var(--Flashcord-CBM_Image, url("https://sirio-network.com/flashcord/bgr-test.jpg") ) !important;
+    background-position: center !important;
+    background-size: cover !important;
+    border-radius: 25px;
+  }
+  [class^="themeSelection-"][style*="--bg-gradient-mint-apple"]:before {
+    content: "Custom Background Image Mode (Light Mode)";
+  }
   [class^="themeSelection-"][style*="--bg-gradient-sunset"] {
     background: unset !important;
-    background-image: var(--CustomBGR-IMG, url("https://sirio-network.com/flashcord/bgr-test.jpg") ) !important;
+    background-image: var(--Flashcord-CBM_Dark-Image, url("https://sirio-network.com/flashcord/hypernner.jpg") ) !important;
     background-position: center !important;
     background-size: cover !important;
     border-radius: 25px;
   }
-  [class^="themeSelection-"][style*="--bg-gradient-sunset-2"]:before {
-    content: "Custom Background Image Mode";
+  [class^="themeSelection-"][style*="--bg-gradient-sunset"]:before {
+    content: "Custom Background Image Mode (Dark Mode)";
   }
-
-
-  [class^="themeSelection-"][style*="--bg-gradient-midnight-blurple"] {
-    background: unset !important;
-    background-image: url("https://sirio-network.com/flashcord/elements/theme-preview_transparent.png") !important;
-    filter: brightness(0.25);
-    background-position: center !important;
-    background-size: cover !important;
-    border-radius: 25px;
-  }
-
   [class^="themeSelectionContainer-"]:has([style*="--bg-gradient-mint-apple"]) {
-    order: 1;
+    order: -25;
   }
-  [class^="themeSelection-"][style*="bg-gradient-mint-apple"] {
+  [class^="themeSelectionContainer-"]:has([style*="--bg-gradient-sunset"]) {
+    order: -24;
+  }
+
+  /* Advanced Theme: Irdescent */
+  [class^="themeSelection-"][style*="--bg-gradient-citrus-sherbert"] {
+    background-image: url("https://sirio-network.com/flashcord/elements/PSWave.png") !important;
+    background-position-y: center !important;
+    background-size: 64vw !important;
+    border-radius: 25px;
+    animation: FlashCore-BackXMTL calc(2s * var(--Flashcord-Animations, 1) ) linear infinite !important;
+  }
+  [class^="themeSelection-"][style*="--bg-gradient-citrus-sherbert"]:before {
+    content: "Iridescent Mode (Light Mode)";
+  }
+  [class^="themeSelection-"][style*="--bg-gradient-chroma-glow"] {
+    background-image: url("https://sirio-network.com/flashcord/elements/PSWave.png") !important;
+    background-position-y: center !important;
+    background-size: 64vw !important;
+    filter: invert();
+    border-radius: 25px;
+    animation: FlashCore-BackXMTL calc(2s * var(--Flashcord-Animations, 1) ) linear infinite !important;
+  }
+  [class^="themeSelection-"][style*="--bg-gradient-chroma-glow"]:before {
+    content: "Iridescent Mode (Dark Mode)";
+  }
+  [class^="themeSelectionContainer-"]:has([style*="--bg-gradient-citrus-sherbert"]) {
+    order: -23;
+  }
+  [class^="themeSelectionContainer-"]:has([style*="--bg-gradient-chroma-glow"]) {
+    order: -22;
+  }
+
+
+/* Advanced Theme: Transparent */
+  [class^="themeSelection-"][style*="bg-gradient-sepia"] {
     background: unset !important;
     background-image: url("https://sirio-network.com/flashcord/elements/theme-preview_transparent.png") !important;
     filter: brightness(0.25);
@@ -1052,12 +1164,20 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
     background-size: cover !important;
     border-radius: 25px;
   }
-  
+  [class^="themeSelection-"][style*="--bg-gradient-sepia"]:before {
+    content: "Transparent Mode";
+  }
+  [class^="themeSelectionContainer-"]:has([style*="--bg-gradient-sepia"]) {
+    order: 0;
+  }
+
   [class*="basicThemeSelectors-"] > div,
   [class^="themeSelectionContainer-"] .selectionCircle-3s5Uex,
-  [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-sunset"]),
-  [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-mint-apple"]),
-  [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-midnight-blurple"]) {
+  [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-mint-apple"]), /* CBM LIGHT */
+  [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-sunset"]), /* CBM DARK */
+  [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-citrus-sherbert"]), /* IRIDESCENT LIGHT */
+  [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-chroma-glow"]), /* IRIDESCENT DARK */
+  [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-sepia"]) /* TRANSPARENT */ {
     display: block !important;
     border-radius: 25px;
     width: 100%;
@@ -1079,8 +1199,8 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
     text-align: center;
     margin: 0;
   }
-  [class^="themeSelectionContainer-"], 
-  [class^="header-"] { display: none; }
+  [class^="themeSelectionContainer-"],
+  [class^="header-"] [class^="title-"] { display: none; }
 }
 
 
@@ -1267,13 +1387,6 @@ nav[class^="wrapper-"] > ul {
   [class^="listItem-"]:has([class*="selected-"]) { scale: 0.95; }
   [id^="folder-items-"] { height: auto !important; }
   [class^="listItem-"]:has([class^="guildSeparator-"]) { display: none; }
-}
-
-/* ChannelNav_Compact Core */
-[class^="content-"] > [class^="sidebar-"] {
-  container-name: var(--FlashCore-ChannelNav_Compact, FC-ChannelNav_Compact);
-  container-type: inline-size;
-  contain: paint;
 }
 
 /* ChannelNav_Compact Core */
@@ -1735,96 +1848,141 @@ nav[class^="wrapper-"] > ul {
 }
 
 @container FC-Call (min-width: 0px) {
-    [class^="callContainer-"] { background: transparent; }
-    [class^="bottomControls-"] [class^="flex-"] { flex: unset !important; }
-    [class^="bottomControls-"] {
-        justify-content: center !important;
-        opacity: 1 !important;
+    [class^="topControls-"], [class^="bottomControls-"] { opacity: 1 !important; transform: none !important;}
+    .custom-background-theme [class^="callContainer-"] { background: transparent; }
+    button { pointer-events: all; }
+    [class^="bottomControls-"] [class^="flex-"] {
+        position: absolute;
+        width: 100%;
         height: 100%;
         pointer-events: none;
     }
-    [class^="bottomControls-"] button {
-        pointer-events: all;
+    [class^="bottomControls-"] [class^="flex-"]:nth-child(2) {
+        justify-content: start;
+        align-items: flex-end;
     }
-    [class^="topControls-"] { opacity: 1 !important; }
-    [class^="gradientTop-"], [class^="gradientBottom-"] { display: none; }
-    [class^="controlButton-"]:has([d="M21.526 8.149C21.231 7.966 20.862 7.951 20.553 8.105L18 9.382V7C18 5.897 17.103 5 16 5H4C2.897 5 2 5.897 2 7V17C2 18.104 2.897 19 4 19H16C17.103 19 18 18.104 18 17V14.618L20.553 15.894C20.694 15.965 20.847 16 21 16C21.183 16 21.365 15.949 21.526 15.851C21.82 15.668 22 15.347 22 15V9C22 8.653 21.82 8.332 21.526 8.149Z"]) {
+    [class^="bottomControls-"]  { height: 100%; display: block !important; }
+
+    // Camera 
+    [class^="bottomControls-"] [class^="flex-"]:nth-child(2) [class^="wrapper-"] > [class^="controlButton-"]:nth-of-type(1) {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: -24px;
+        left: -8px;
         scale: 0.8;
-    }
-    [class^="bottomControls-"] > [class^="flex-"]:first-child {
-        flex-direction: column-reverse;
-        position: absolute;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-    [class^="bottomControls-"] > [class^="flex-"]:last-child {
-        flex-direction: column;
-    }
-    [class^="leftDivider-"] { display: none; }
-    [class^="flex-"] div[style="opacity: 1; transform: scale(1);"] {
-        position: absolute;
-        right: 0;
-        bottom: 0
-    }
-    [class^="bottomControls-"] > [class^="flex-"]:nth-child(2) [class^="wrapper-"] div:nth-child(3) {
-        position: absolute;
-        right: 0;
-        top: 40%;
-    }
-    [class^="bottomControls-"] > [class^="flex-"]:nth-child(2) [class^="wrapper-"] div:nth-child(4) {
-        position: absolute;
-        right: 0;
-        top: 50%;
-    }
-    [class^="bottomControls-"] > [class^="flex-"]:nth-child(2) [class^="wrapper-"] div:nth-child(5) {
-        bottom: 0;
-    }
-    [class^="bottomControls-"] > [class^="flex-"]:nth-child(3) > div,
-    [class^="voiceEffectsActionBar-"],
-    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) [class^="flex-"]:first-child,
-    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) div:last-child {
-        position: absolute;
-        right: 8px;
-        width: 56px;
-        height: 56px;
-        background: var(--background-floating);
-        border-radius: 6948px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    [class^="bottomControls-"] > [class^="flex-"]:nth-child(3) button,
-    [class^="voiceEffectsActionBar-"] button,
-    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) [class^="flex-"]:first-child button,
-    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) div:last-child button {
-        width: 56px;
-        height: 56px;
         margin: 0;
     }
-    [class^="bottomControls-"] > [class^="flex-"]:nth-child(3) > div:nth-child(1) { top: 70%; }
-    [class^="bottomControls-"] > [class^="flex-"]:nth-child(3) > div:nth-child(2) { top: 80%; }
-    [class^="voiceEffectsActionBar-"] { top: 60%; }
-    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) [class^="flex-"]:first-child {
-        left: 0;
-        bottom: 0;
+    // Activity
+    [class^="bottomControls-"] [class^="flex-"]:nth-child(2) [class^="wrapper-"] > div:nth-of-type(3) {
         position: absolute;
-        scale: 0.5;
+        top: -24px;
+        left: 34px;
+        scale: 0.8;
+        margin: 0;
     }
-    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) div:last-child {
-        left: 0;
-        top: 0;
+
+    // ScreenShare
+    [class^="bottomControls-"] [class^="flex-"]:nth-child(2) [class^="wrapper-"] > div:nth-of-type(4) {
         position: absolute;
-        scale: 0.5;
+        bottom: 64px;
+        left: 56px;
+        margin: 0;
     }
-    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) [class^="flex-"]:first-child svg,
-    [class^="bottomControls-"] > [class^="flex-"]:nth-child(1) div:last-child svg {
-        scale: 2;
+
+    // Mic
+    [class^="bottomControls-"] [class^="flex-"]:nth-child(2) [class^="wrapper-"] > div:nth-of-type(5) {
+        margin: 0;
     }
-}*/
+    // Soundboard
+    [class^="voiceEffectsActionBar-"] { 
+        position: absolute;
+        bottom: 64px;
+        left: 0;
+        width: 56px;
+        height: 56px;
+        background: var(--primary-130);
+        justify-content: center;
+        align-items: center;
+        border-radius: 6948px;
+    }
+    [class^="voiceEffectsActionBar-"]:hover { background: var(--primary-230); }
+    [class^="voiceEffectsActionBar-"] button {
+        margin: 0;
+        width: 56px;
+        height: 56px;
+    }
+    [class^="voiceEffectsActionBar-"] svg { color: black !important; }
+    [class^="leftDivider-"] { display: none; }
+
+    // Xbox
+    [class^="bottomControls-"] [class^="flex-"]:nth-child(1) > div:last-of-type { 
+        position: absolute;
+        top: -24px;
+        left: 92px;
+        width: 56px;
+        height: 56px;
+        background: var(--primary-130);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6948px;
+        scale: 0.8;
+    }
+    [class^="bottomControls-"] [class^="flex-"]:nth-child(1) > div:last-of-type:hover { background: var(--primary-230); }
+    [class^="bottomControls-"] [class^="flex-"]:nth-child(1) > div:last-of-type button {
+        margin: 0;
+        width: 56px;
+        height: 56px;
+    }
+    [class^="bottomControls-"] [class^="flex-"]:nth-child(1) > div:last-of-type svg { color: black !important; }
+
+    //  PIP
+    [class^="bottomControls-"] [class^="flex-"]:nth-child(3) > div:nth-of-type(1) { 
+        position: absolute;
+        top: 28px;
+        left: 42px;
+        width: 56px;
+        height: 56px;
+        background: var(--primary-130);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6948px;
+        scale: 0.8;
+    }
+    [class^="bottomControls-"] [class^="flex-"]:nth-child(3) > div:nth-of-type(1):hover { background: var(--primary-230); }
+    [class^="bottomControls-"] [class^="flex-"]:nth-child(3) > div:nth-of-type(1) button {
+        margin: 0;
+        width: 56px;
+        height: 56px;
+    }
+    [class^="bottomControls-"] [class^="flex-"]:nth-child(3) > div:nth-of-type(1) svg { color: black !important; }
+
+    // Fullscreen
+    [class^="bottomControls-"] [class^="flex-"]:nth-child(3) > div:nth-of-type(2) { 
+        position: absolute;
+        top: 28px;
+        left: -8px;
+        width: 56px;
+        height: 56px;
+        background: var(--primary-130);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6948px;
+        scale: 0.8;
+    }
+    [class^="bottomControls-"] [class^="flex-"]:nth-child(3) > div:nth-of-type(2):hover { background: var(--primary-230); }
+    [class^="bottomControls-"] [class^="flex-"]:nth-child(3) > div:nth-of-type(2) button {
+        margin: 0;
+        width: 56px;
+        height: 56px;
+    }
+    [class^="bottomControls-"] [class^="flex-"]:nth-child(3) > div:nth-of-type(2) svg { color: black !important; }
+
+    [class^="leftDivider-"] { display: none; }
+    [class^="gradient"] { display: none; }
+}
+*/
 
 /* [END] = Flashcord Beta == Major General Modifications [00] OTUI_Base CSS = */
 
