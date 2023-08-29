@@ -51,26 +51,6 @@
     .replugged-addon-card:has([href*="flashcord-legacy"]) {
         order: 6948;
     }
-
-    .replugged-addon-card:has([href*="FCM"]):before {
-        content: "[🛠️] ⚠️ Unverified Flashcord Module\A\A";
-    }
-    .replugged-addon-card:has([href*="SiriusBYT/FCM_Extended-Chat-Effects"]):before {
-        content: "[🛠️] ✅ Official Flashcord Module\A\A";
-    }
-    .replugged-addon-card:has([href*="SiriusBYT/FCM_Infinite-Chat-Effects"]):before {
-        content: "[🛠️] ✅ Official Flashcord Module\A\A";
-    }
-    .replugged-addon-card:has([href*="FCM"]) .text-sm-medium-2-Xzsi { display: none; } /* [!] FC-Wildcard_PerfNuker */
-    .replugged-addon-card:has([href*="FCM"]) .iconDiv-3ISDKO:after { /* [!] FC-Wildcard_PerfNuker */
-        content: "Flashcord Modules are not supposed to be verified by the Replugged Team. Make sure to download Modules only from the Flashcord Store.";
-        white-space: pre-warp;
-        font-size: small;
-        margin-left: 8px; 
-    }
-
-
-
 }
 
 /* [End] = Flashcord Beta == Replugged Theme Compatibility List CSS = */

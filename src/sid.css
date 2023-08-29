@@ -34,9 +34,9 @@ This license requires that reusers give credit to the creator. It allows reusers
   
   --Flashcord-Branch: "Flashcord Beta";
   --Flashcord-Channel: "bSID";
-  --Flashcord-Version: "230828";
+  --Flashcord-Version: "230829";
 
-  --Flashcord-Splash: "RIP FC-Badges, the biggest\A bloated part ever.";
+  --Flashcord-Splash: "new flashcord modules\A store front page looking 🔥";
   --Flashcord-SplashSca: 1;
   --Flashcord-SplashTrX: 0px;
   --Flashcord-SplashTrY: 0px;
@@ -776,7 +776,7 @@ so many times you'd drown in them.
         scale: 0.98;
     }
     [class^="layers-"]:has([class^="closeButton-"]:hover) .baseLayer-W6S8cY { /* [!] FC-Wildcard_PerfNuker */
-        filter: blur(var(--Flashcord-Blur-Close, 2px)) brightness(0.98);
+        filter: blur(var(--Flashcord-Blur-Light, 2px)) brightness(0.98);
         scale: 1;
     }
     [class^="closeButton-"]:hover {
@@ -2460,26 +2460,6 @@ html:has([href*="net.saltssaumure.piOS.asar"]) {
     .replugged-addon-card:has([href*="flashcord-legacy"]) {
         order: 6948;
     }
-
-    .replugged-addon-card:has([href*="FCM"]):before {
-        content: "[🛠️] ⚠️ Unverified Flashcord Module\A\A";
-    }
-    .replugged-addon-card:has([href*="SiriusBYT/FCM_Extended-Chat-Effects"]):before {
-        content: "[🛠️] ✅ Official Flashcord Module\A\A";
-    }
-    .replugged-addon-card:has([href*="SiriusBYT/FCM_Infinite-Chat-Effects"]):before {
-        content: "[🛠️] ✅ Official Flashcord Module\A\A";
-    }
-    .replugged-addon-card:has([href*="FCM"]) .text-sm-medium-2-Xzsi { display: none; } /* [!] FC-Wildcard_PerfNuker */
-    .replugged-addon-card:has([href*="FCM"]) .iconDiv-3ISDKO:after { /* [!] FC-Wildcard_PerfNuker */
-        content: "Flashcord Modules are not supposed to be verified by the Replugged Team. Make sure to download Modules only from the Flashcord Store.";
-        white-space: pre-warp;
-        font-size: small;
-        margin-left: 8px; 
-    }
-
-
-
 }
 
 /* [End] = Flashcord Beta == Replugged Theme Compatibility List CSS = */
