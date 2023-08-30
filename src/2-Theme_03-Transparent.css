@@ -1,25 +1,35 @@
 
 /* [Start] = Flashcord Beta == Custom Theme: Transparent Mode CSS = */
 
-@container FC-AdvancedTheme_Transparent {
-    .theme-sepia {
-        --bg-overlay-color: transparent;
-        --background-primary: transparent;
-        --background-secondary: transparent;
-        --background-secondary-alt: transparent;
-        --background-tertiary: transparent;
-        --bg-overlay-1: transparent;
-        --bg-overlay-2: transparent;
-        --bg-overlay-3: transparent;
-        --bg-overlay-4: transparent;
-        --bg-overlay-5: transparent;
-        --bg-overlay-6: transparent;
-        --FlashCore-Brightness: 0.5;
+[theme-hooker="theme-sepia"] {
+    --bg-overlay-color: transparent;
+    --background-primary: transparent;
+    --background-secondary: transparent;
+    --background-secondary-alt: transparent;
+    --background-tertiary: transparent;
+    --bg-overlay-1: transparent;
+    --bg-overlay-2: transparent;
+    --bg-overlay-3: transparent;
+    --bg-overlay-4: transparent;
+    --bg-overlay-5: transparent;
+    --bg-overlay-6: transparent;
+    --FlashCore-Brightness: 0.5;
 
-        background: transparent !important;
+    background: transparent !important;
+    --FlashCore-ChatSlide: FC-ChatSlide_Legacy;
+}
+
+
+@container FC-Theme_Hooker (min-width: 0px) {
+    [theme-hooker="theme-sepia"] #app-mount {
+        backdrop-filter: var(--Flashcord-Iridescent_Filter, blur(16px) brightness(0.5));
     }
-    .theme-sepia #app-mount {
-        backdrop-filter: var(--Flashcord-CBM_Filter, blur(16px) brightness(0.5));
+    [theme-hooker="theme-sepia"] {
+        container-name: FC-Theme_Transparent !important;
+        container-type: inline-size;
+    }
+    [theme-hooker="theme-sepia"] [class^="chat-"] [class^="title-"] [class^="children-"]:after {
+        content: var(--Flashcord-Warnings,"  ⚠️ Flashcord is in Beta. 👻 Transparent Mode is unfinished.  ") !important;
     }
 }
 

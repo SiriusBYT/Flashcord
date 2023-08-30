@@ -48,7 +48,7 @@
     line-height: normal;
   }
   [class^=marginTop8-] [class^="header-"] > :before {
-    content: "⚠️ Advanced Themes require LegalDiscordBypasses or Discord Nitro to enable them. \A ⛔ Certain themes may not work for now, refer to the code comment inside ''2-Theme_01-CustomIMG.css'' for more information if you know how to code plugins.";
+    content: "⚠️ Advanced Themes require LegalDiscordBypasses or Discord Nitro to enable them. \A ⛔ Certain themes may not work as you need the ''ThemeHooker'' plugin.";
     color: var(--text-normal);
     white-space: pre-line;
     font-weight: 500;

@@ -1,19 +1,70 @@
 
 /* [Start] = Flashcord Beta == Custom Theme: Iridescent Mode CSS = */
 
+[theme-hooker="theme-citrus-sherbert"], [theme-hooker="theme-chroma-glow"] {
+    --bg-overlay-color: transparent;
+    --background-primary: transparent;
+    --background-secondary: transparent;
+    --background-secondary-alt: transparent;
+    --background-tertiary: transparent;
+    --bg-overlay-1: transparent;
+    --bg-overlay-2: transparent;
+    --bg-overlay-3: transparent;
+    --bg-overlay-4: transparent;
+    --bg-overlay-5: transparent;
+    --bg-overlay-6: transparent;
+    --FlashCore-Brightness: 0.5;
 
-@container FC-AdvancedTheme_Iridescent {
-    .theme-citrus-sherbert [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
-    .theme-chroma-glow [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
+    --FlashCore-ChatSlide: FC-ChatSlide_Legacy;
+}
 
-    @container FC-PM (min-width: 0px) {
-        [class*="menu"] {
-            animation: Flashcord-PopUp_In calc(125ms * ( var(--Flashcord-AnimMult-Fast, 1) * var(--Flashcord-Animations, 1) ) ) ease-in;
+@container FC-Theme_Hooker (min-width: 0px) {
+    [theme-hooker="theme-citrus-sherbert"],
+    [theme-hooker="theme-chroma-glow"] {
+        background-repeat: repeat !important;
+        background-size: 100vw !important;
+    }
+    [theme-hooker="theme-citrus-sherbert"] {
+        background-image: var(--Flashcord-Iridescent-Image, url("https://sirio-network.com/flashcord/elements/PSWave.png") ) !important;
+        animation: FlashCore-BackXMTL 1s linear infinite !important;
+    }
+    [theme-hooker="theme-chroma-glow"] {
+        background-image: var(--Flashcord-Iridescent-Image, url("https://sirio-network.com/flashcord/elements/PSWave.png") ) !important;
+        animation: FlashCore-BackXMTL var(Flashcord-AnimMult-XSlow, 1s) linear infinite !important;
+        filter: invert();
+    }
+    [theme-hooker="theme-citrus-sherbert"] #app-mount {
+        backdrop-filter: var(--Flashcord-Iridescent_Filter-Light, blur(4px) brightness(1));
+    }
+    [theme-hooker="theme-chroma-glow"] #app-mount {
+        backdrop-filter: var(--Flashcord-Iridescent_Filter-Dark, blur(4px) brightness(0.5));
+    }
+    [theme-hooker="theme-citrus-sherbert"] [class^="chat-"] [class^="title-"] [class^="children-"]:after,
+    [theme-hooker="theme-chroma-glow"]  [class^="chat-"] [class^="title-"] [class^="children-"]:after {
+        content: var(--Flashcord-Warnings,"  ⚠️ Flashcord is in Beta. 💥 Iridescent Mode is unfinished.  ") !important;
+    }
+    [theme-hooker="theme-citrus-sherbert"] [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
+    [theme-hooker="theme-chroma-glow"] [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
+    
+    [theme-hooker="theme-citrus-sherbert"], [theme-hooker="theme-chroma-glow"] {
+        container-name: FC-Theme_Iridescent !important;
+        container-type: inline-size;
+    }
+    @container FC-Theme_Iridescent (min-width: 0px) {
+        @container FC-ChatSlide_Legacy (min-width: 0px) {
+            [class^="chat-"] > section, [class^="chat-"] > div, [class^="chat-"] {
+                background: transparent !important;
+            }
         }
-        .theme-citrus-sherbert [class*="menu"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
-        .theme-chroma-glow [class*="menu"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
-        [class*="menu"]:hover {
-            outline-width: 2px;
+        @container FC-PM (min-width: 0px) {
+            [class*="menu"] {
+                transition: outline-width 250ms;
+            }
+            [theme-hooker="theme-citrus-sherbert"] [class*="menu"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
+            [theme-hooker="theme-chroma-glow"] [class*="menu"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
+            [class*="menu"]:hover {
+                outline-width: 2px;
+            }
         }
     }
 }

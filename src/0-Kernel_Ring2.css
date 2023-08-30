@@ -71,8 +71,8 @@
 }
 
 @keyframes FlashCore-BackXMTL {
-    0% { background-position-x: 0;}
-    100% { background-position-x: 64vw;}
+    0% { background-position-x: 0%;}
+    100% { background-position-x: 100vw;}
 }
 
 @keyframes FlashCore-Shake {

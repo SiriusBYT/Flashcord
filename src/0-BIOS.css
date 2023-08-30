@@ -34,13 +34,13 @@ This license requires that reusers give credit to the creator. It allows reusers
   
   --Flashcord-Branch: "Flashcord Beta";
   --Flashcord-Channel: "bSID";
-  --Flashcord-Version: "230829";
+  --Flashcord-Version: "230830";
 
-  --Flashcord-Splash: "new flashcord modules\A store front page looking 🔥";
-  --Flashcord-SplashSca: 1;
+  --Flashcord-Splash: "ThemeHooker is FINALLY here!";
+  --Flashcord-SplashSca: 0.8;
   --Flashcord-SplashTrX: 0px;
   --Flashcord-SplashTrY: 0px;
-  --Flashcord-SplashMAR: 40px;
+  --Flashcord-SplashMAR: 20px;
   --custom-theme-background: unset;
   
   background: #000000;
@@ -56,12 +56,21 @@ This license requires that reusers give credit to the creator. It allows reusers
   transition: inherit !important;
 }
 
-/* Read the code comment at 2-Theme_01-CustomIMG.css // DOES NOT WORK YET OBVIOUSLY */
-.themehooker-present {
+
+html[theme-hooker^="theme-"] {
   container-name: var(--FlashCore-Global_Theme, FC-Theme_Hooker) !important;
   container-type: inline-size;
 }
 
+body {
+  background: unset;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+}
+
+/* Legacy Theming */
 .theme-dark.custom-theme-background {
   container-name: var(--FlashCore-Global_Theme, FC-AdvancedTheme-LEGACY_Custom-Background-Mode);
   container-type: inline-size;
@@ -87,7 +96,7 @@ This license requires that reusers give credit to the creator. It allows reusers
   --FlashCore-Brightness: 0.5;
 }
 
-html:not(html:hover) #app-mount {
+html:not(html:hover) #app-mount > {
   container-name: var(--FlashCore-Idle_Optimizations, FC-Idle_OptiMin) !important;
   container-type: inline-size;
 
@@ -101,17 +110,16 @@ html:not(html:hover) #app-mount {
     --Flashcord-AnimMult-Slow: 0;
     --Flashcord-AnimMult-XSlow: 0;
     --Flashcord-TransMult-XFast: 0;
-    --Flashcord-TranMult-Fast: 0;
-    --Flashcord-TranMult-Normal: 0;
-    --Flashcord-TranMult-Slow: 0;
-    --Flashcord-TranMult-XSlow: 0;
+    --Flashcord-TransMult-Fast: 0;
+    --Flashcord-TransMult-Normal: 0;
+    --Flashcord-TransMult-Slow: 0;
+    --Flashcord-TransMult-XSlow: 0;
     --Flashcord-Blur-Heavy: 0;
     --Flashcord-Blur-Medium: 0;
     --Flashcord-Blur-Light: 0;
   
     --FlashCore-GuildNav_Notification: FC-GuildNav_Static;
     --FlashCore-ChannelNav_Notification: FC-ChannelNav_Static;
-    --Flashcord-Chat_Effects: FC-ChatEffects_Text;
   
     --Flashcord-Badges: FC-VOID;
   }
@@ -120,15 +128,13 @@ html:not(html:hover) #app-mount {
 @container FC-Idle_OptiMin (min-width: 0px) {
   [class^="appAsidePanelWrapper-"] {
     --Flashcord-TransMult-XFast: 0;
-    --Flashcord-TranMult-Fast: 0;
-    --Flashcord-TranMult-Normal: 0;
-    --Flashcord-TranMult-Slow: 0;
-    --Flashcord-TranMult-XSlow: 0;
+    --Flashcord-TransMult-Fast: 0;
+    --Flashcord-TransMult-Normal: 0;
+    --Flashcord-TransMult-Slow: 0;
+    --Flashcord-TransMult-XSlow: 0;
     --Flashcord-Blur-Heavy: 0;
     --Flashcord-Blur-Medium: 0;
     --Flashcord-Blur-Light: 0;
-
-    --Flashcord-Chat_Effects: FC-ChatEffects_Text;
   }
 }
 
