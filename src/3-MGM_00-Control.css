@@ -53,6 +53,7 @@
         transition-property: opacity;
         transition-duration: calc(250ms * var(--Flashcord-TransMult-Normal, 1));
     }
+    [class^="closeButton-"] svg { display: none; }
     [class^="toolsContainer-"] {
         position: absolute;
         z-index: -1;

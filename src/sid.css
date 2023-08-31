@@ -34,13 +34,13 @@ This license requires that reusers give credit to the creator. It allows reusers
   
   --Flashcord-Branch: "Flashcord Beta";
   --Flashcord-Channel: "bSID";
-  --Flashcord-Version: "230830";
+  --Flashcord-Version: "230831";
 
-  --Flashcord-Splash: "ThemeHooker is FINALLY here!";
-  --Flashcord-SplashSca: 0.8;
+  --Flashcord-Splash: "screw replugged store \A we have chinese knockoff";
+  --Flashcord-SplashSca: 0.9;
   --Flashcord-SplashTrX: 0px;
   --Flashcord-SplashTrY: 0px;
-  --Flashcord-SplashMAR: 20px;
+  --Flashcord-SplashMAR: 40px;
   --custom-theme-background: unset;
   
   background: #000000;
@@ -135,6 +135,9 @@ html:not(html:hover) #app-mount > {
     --Flashcord-Blur-Heavy: 0;
     --Flashcord-Blur-Medium: 0;
     --Flashcord-Blur-Light: 0;
+
+    --FlashCore-ChannelNav_Notification: FC-ChannelNav_Static;
+    --Flashcord-Badges: FC-VOID;
   }
 }
 
@@ -189,6 +192,8 @@ html:not(html:hover) #app-mount > {
 :root {
     --Flashcolord-Light_Accent: rgba(0,155,255,0.5);
     --Flashcolord-Dark_Accent: rgba(255,55,0,0.5);
+    --Flashcolord-CBM_Light-Floating: rgba(255,255,255,0.5);
+    --Flashcolord-CBM_Dark-Floating: rgba(0,0,0,0.5);
 }
 
 .theme-light {
@@ -669,24 +674,17 @@ html[theme-hooker="theme-mint-apple"] {
     --FlashCore-ChatSlide: FC-ChatSlide_Legacy;
 }
 [theme-hooker="theme-sunset"] {
-    --background-accent: #660066;
-    --background-floating: rgba(6,6,6,0.5);
-    --background-modifier-selected: rgba(16,16,16,0.5);
-    --background-modifier-hover: rgba(22,22,22,0.5);
     --FlashCore-Brightness: 2;
 }
 [theme-hooker="theme-mint-apple"] {
-    --background-accent: #EE00EE;
-    --background-floating: rgba(200,200,200,0.5);
-    --background-modifier-selected: rgba(225,225,225,0.5);
-    --background-modifier-hover: rgba(255,255,255,0.5);
     --FlashCore-Brightness: 1;
 }
-body[theme-hooker="theme-sunset"],
-body[theme-hooker="theme-mint-apple"] {
-    background-repeat: no-repeat;
-}
+
 @container FC-Theme_Hooker (min-width: 0px) {
+    [theme-hooker="theme-sunset"],
+    [theme-hooker="theme-mint-apple"] {
+        background-repeat: no-repeat;
+    }
     [theme-hooker="theme-mint-apple"] { background-image: var(--Flashcord-CBM_Light-Image, url("https://sirio-network.com/flashcord/bgr-test.jpg") ) !important; }
     [theme-hooker="theme-sunset"] { background-image: var(--Flashcord-CBM_Dark-Image, url("https://sirio-network.com/flashcord/hypernner.jpg") ) !important; }
     
@@ -696,11 +694,30 @@ body[theme-hooker="theme-mint-apple"] {
     [theme-hooker="theme-sunset"] [class^="chat-"] [class^="title-"] [class^="children-"]:after {
         content: var(--Flashcord-Warnings,"  ⚠️ Flashcord is in Beta. 🖼️ Dark Custom Background Mode is unfinished.") !important;
     }
-    [theme-hooker="theme-mint-apple"] [class^="layer-"]:nth-child(2) {
-        border: 1px solid black;
+
+    @container FC-ControlPanel_PopUp (min-width: 0px) {
+        [theme-hooker="theme-mint-apple"] [class^="layer-"]:nth-child(2) {
+            border: 1px solid var(--Flashcolord-Light_Accent);
+            background: rgba(255,255,255,0.5);
+        }
+
+        [theme-hooker="theme-sunset"] [class^="layer-"]:nth-child(2) {
+            border: 1px solid var(--Flashcolord-Dark_Accent);
+            background: rgba(0,0,0,0.5);
+        }
     }
-    [theme-hooker="theme-sunset"] [class^="layer-"]:nth-child(2) {
-        border: 1px solid white;
+    
+    @container FC-ChatSlide_Legacy (min-width: 0px) {
+        [theme-hooker="theme-mint-apple"] [class^="chat-"] > section, [class^="chat-"] > div, [class^="chat-"],
+        [theme-hooker="theme-sunset"] [class^="chat-"] > section, [class^="chat-"] > div, [class^="chat-"] {
+            background: transparent !important;
+        }
+    }
+    [theme-hooker="theme-mint-apple"] #app-mount {
+        backdrop-filter: var(--Flashcord-CBM_Light-Filter, blur(8px) brightness(1));
+    }
+    [theme-hooker="theme-sunset"] #app-mount {
+        backdrop-filter: var(--Flashcord-CBM_Dark-Filter, blur(16px) brightness(0.5));
     }
 
     [theme-hooker="theme-mint-apple"] {
@@ -711,24 +728,19 @@ body[theme-hooker="theme-mint-apple"] {
         container-name: var(--FlashCore-Global_Theme, FC-Theme_CBM-Dark) !important;
         container-type: inline-size;
     }
+
     @container FC-Theme_CBM-Light (min-width: 0px) {
-        @container FC-ChatSlide_Legacy (min-width: 0px) {
-            [class^="chat-"] > section, [class^="chat-"] > div, [class^="chat-"] {
-                background: transparent !important;
+        @container FC-PM (min-width: 0px) {
+            [role="menu"] {
+                background: var(--Flashcolord-CBM_Light-Floating);
             }
-        }
-        #app-mount {
-            backdrop-filter: var(--Flashcord-CBM_Filter-Light, blur(8px) brightness(1));
         }
     }
     @container FC-Theme_CBM-Dark (min-width: 0px) {
-        @container FC-ChatSlide_Legacy (min-width: 0px) {
-            [class^="chat-"] > section, [class^="chat-"] > div, [class^="chat-"] {
-                background: transparent !important;
+        @container FC-PM (min-width: 0px) {
+            [role="menu"] {
+                background: var(--Flashcolord-CBM_Dark-Floating);
             }
-        }
-        #app-mount {
-            backdrop-filter: var(--Flashcord-CBM_Filter-Dark, blur(16px) brightness(0.5));
         }
     }
 }
@@ -827,6 +839,7 @@ body[theme-hooker="theme-mint-apple"] {
         transition-property: opacity;
         transition-duration: calc(250ms * var(--Flashcord-TransMult-Normal, 1));
     }
+    [class^="closeButton-"] svg { display: none; }
     [class^="toolsContainer-"] {
         position: absolute;
         z-index: -1;
@@ -1300,8 +1313,7 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
         transition-property: translate;
         transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
     }
-    [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover) .chat-2ZfjoI,  /* [!] FC-Wildcard_PerfNuker */
-    [class^="notAppAsidePanel-"]:has([id*="guild-"]) .chat-2ZfjoI { /* [!] FC-Wildcard_PerfNuker */
+    :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .chat-2ZfjoI { /* [!] FC-Wildcard_PerfNuker */
         translate: 0px;
         /*will-change: translate;*/
     }
@@ -1317,10 +1329,19 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
       transition-property: width;
       transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
     }
-    [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover) .sidebar-1tnWFu,  /* [!] FC-Wildcard_PerfNuker */
-    [class^="notAppAsidePanel-"]:has([id*="guild-"]) .sidebar-1tnWFu { /* [!] FC-Wildcard_PerfNuker */
-      width: 256px;
+    :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .sidebar-1tnWFu {  /* [!] FC-Wildcard_PerfNuker */
+      width: 240px;
       /*will-change: width;*/
+    }
+    [class^="newChannel-"] { display: none; }
+    nav[class^="container-"] [class^="name-"], nav[class^="container-"] [class^="spine-"], nav[class^="container-"] [class^="spineBorder-"] {
+      opacity: 0;
+      transition-property: opacity;
+      transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+    }
+    [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover, nav:hover) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1), /* [!] FC-Wildcard_PerfNuker */
+    [class^="notAppAsidePanel-"]:has([id*="guild-"]) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1) { /* [!] FC-Wildcard_PerfNuker */
+      opacity: 1 !important;
     }
 }
 
@@ -1479,6 +1500,9 @@ nav[class^="wrapper-"] > ul {
     border-radius: var(--Flashcord-Border_Radius, 25px);
     transition-property: scale, background-color !important;
     transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1)) !important;
+  }
+  [class^="container-"] [class^="link-"]:hover {
+    background: unset !important;
   }
   li:hover {
     scale: 1;

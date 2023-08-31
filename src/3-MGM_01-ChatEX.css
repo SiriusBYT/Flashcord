@@ -21,8 +21,7 @@
         transition-property: translate;
         transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
     }
-    [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover) .chat-2ZfjoI,  /* [!] FC-Wildcard_PerfNuker */
-    [class^="notAppAsidePanel-"]:has([id*="guild-"]) .chat-2ZfjoI { /* [!] FC-Wildcard_PerfNuker */
+    :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .chat-2ZfjoI { /* [!] FC-Wildcard_PerfNuker */
         translate: 0px;
         /*will-change: translate;*/
     }
@@ -38,10 +37,19 @@
       transition-property: width;
       transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
     }
-    [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover) .sidebar-1tnWFu,  /* [!] FC-Wildcard_PerfNuker */
-    [class^="notAppAsidePanel-"]:has([id*="guild-"]) .sidebar-1tnWFu { /* [!] FC-Wildcard_PerfNuker */
-      width: 256px;
+    :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .sidebar-1tnWFu {  /* [!] FC-Wildcard_PerfNuker */
+      width: 240px;
       /*will-change: width;*/
+    }
+    [class^="newChannel-"] { display: none; }
+    nav[class^="container-"] [class^="name-"], nav[class^="container-"] [class^="spine-"], nav[class^="container-"] [class^="spineBorder-"] {
+      opacity: 0;
+      transition-property: opacity;
+      transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+    }
+    [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover, nav:hover) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1), /* [!] FC-Wildcard_PerfNuker */
+    [class^="notAppAsidePanel-"]:has([id*="guild-"]) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1) { /* [!] FC-Wildcard_PerfNuker */
+      opacity: 1 !important;
     }
 }
 
@@ -200,6 +208,9 @@ nav[class^="wrapper-"] > ul {
     border-radius: var(--Flashcord-Border_Radius, 25px);
     transition-property: scale, background-color !important;
     transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1)) !important;
+  }
+  [class^="container-"] [class^="link-"]:hover {
+    background: unset !important;
   }
   li:hover {
     scale: 1;
