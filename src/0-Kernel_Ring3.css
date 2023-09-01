@@ -77,7 +77,7 @@ body:before {
         background-size: 64vw;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: FlashCore-BackXMTL calc(8s * var(--Enable-Animations, 1)) linear infinite !important;
+        animation: FlashCore-BackXMTL calc(8s * var(--Flashcord-Animations, 1)) linear infinite !important;
         margin-bottom: var(--Flashcord-SplashMAR, 20px);
     }
     
@@ -95,7 +95,7 @@ body:before {
         width: 1px;
         left: 105px;
         top: 48px;
-        animation: FlashCore-Splash calc(500ms * var(--Enable-Animations, 1)) ease-in-out infinite;
+        animation: FlashCore-Splash var(--Flashcord-AnimMult-Slow, 500ms) ease-in-out infinite;
         animation-direction: alternate;
     }
 }
@@ -104,12 +104,12 @@ body:before {
 [class^="messageListItem-"]:nth-last-child(-n + 33 ) [class^="message-"] {
     container-name: var(--Flashcord-Badges, FC-Badges);
     container-type: inline-size;
-    contain: ;
+    contain: paint;
 }
 
 @container FC-Badges (min-width: 0px) {
     h3:before {
-        background-size: 64vw !important;
+        background-size: 100vw !important;
         border-radius: var(--Flashcord-Border_Radius, 25px);
         text-align: center;
         margin-right: 6px;

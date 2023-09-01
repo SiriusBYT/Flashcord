@@ -99,10 +99,10 @@
     }
     
     #my-account-tab:after {
-        white-space: pre;
+        white-space: pre-line;
         color: var(--text-normal);
         content: 'Flashcord is a personal project maintained with love by SiriusBYT, it takes the design language of "SNWE/SNDL" and applies it to Discord. \A \
-      Support is held on The Sirio Network Discord Server (https://discord.gg/z93kHwGuZt). \A \A \
+      Support is held on The Sirio Network Discord Server (https://sirio-network.com/redirect/discord). \A \A \
       Please give a thanks to these amazing people who helped with the Closed Alpha of Flashcord 💖 \A \
       🗨️  "be racist for me"\A \
                 - Atacantul, 2023\A\A \
@@ -112,6 +112,17 @@
                 - Lööps, 2023 \A\A \
       🗨️  "Come play with me on Club Pinguin"\A \
                 - Ectalite, August 2023 \A\A \A \
+    Of course, thanks to you, Flashcord Supporters 💸! \A \
+      🗨️  "Ohren Steif Halten""\A \
+                - termedagain, 2023\A\A \
+    Thanks to those who joined the SGN Discord Server for Flashcord 🗣️ ! \A \
+    Kinoisseur, __Chara__, Written, Darian465, Lasaga Man, Phantom, Fishy <3, pguap, Pixel, raffy309, Birb, Sundae.C, timebendingTrickster, Volk, Yukiko, Galaxy. \A\A \
+    And finally, thanks for those who stared the Flashcord GitHub Repo ✨ ! \A \
+    s3nkwr, WA1Jl, LuftVerbot, PixelHir, MacDingleNut, christiangrothaus, zeo-return-null, trebor048, kisakimeowr, haiku-balls, bxrlin, Lypuss, roushjosh, Zaannaah, littlepriceonu, mog77a, TheLastZombie, ItsGfue. \A\A \
+    🌠 Special Thanks: \A \
+    - Evelyn: Created "Magnificent" and was ok being bullied by me to fix specific bugs that were found with Flashcord \A \
+    - Tharki-God: Person to have given me the idea (accidentally) to create the Plugins section of the Flashcord Store \A \
+    - East_Arctica: Posted a plugin to the Flashcord Store, also is a super cool person \A\A \
 Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A\A\A\A';
     }
 }

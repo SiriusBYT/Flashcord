@@ -17,7 +17,7 @@
         border-radius: var(--Flashcord-Border_Radius, 25px);
         z-index: 1;
         transform: none !important;
-        animation: FlashCore-FadeIn calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+        animation: FlashCore-FadeIn var(--Flashcord-AnimMult-XSlow, 1) !important;
     }    
     [class^="sidebarRegion-"] {
         max-width: 220px;
@@ -51,7 +51,7 @@
         background: transparent;
 
         transition-property: opacity;
-        transition-duration: calc(250ms * var(--Flashcord-TransMult-Normal, 1));
+        transition-duration: var(--Flashcord-TransMult-Normal, 250ms);
     }
     [class^="closeButton-"] svg { display: none; }
     [class^="toolsContainer-"] {
@@ -67,7 +67,7 @@
         transform: none !important;
         /*will-change: filter, scale !important;*/
         transition-property: filter, scale;
-        transition-duration: calc(250ms * var(--Flashcord-TransMult-Normal, 1));
+        transition-duration: var(--Flashcord-TransMult-Normal, 250ms);
     }
     [class^="layers-"]:has([class^="standardSidebarView-"]:hover) .baseLayer-W6S8cY { /* [!] FC-Wildcard_PerfNuker */
         filter: blur(var(--Flashcord-Blur-Medium, 8px)) brightness(var(--FlashCore-Brightness,0.9));
@@ -88,7 +88,7 @@
         border-radius: var(--Flashcord-Border_Radius, 25px) !important;
         translate: 5px;
         transition-property: translate, scale;
-        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
     [class^="sidebar-"] [class^="item-"]:hover {
         translate: 15px;
@@ -114,7 +114,7 @@
         margin: auto;
         padding: 0;
         border-radius: 0;
-        animation: FlashCore-FadeIn calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+        animation: FlashCore-FadeIn var(--Flashcord-AnimMult-XSlow, 1s) !important;
     }    
     [class^="sidebarRegion-"] {
         max-width: 220px;
@@ -143,7 +143,7 @@
         border-radius: var(--Flashcord-Border_Radius, 25px) !important;
         translate: 5px;
         transition-property: translate, scale;
-        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
     [class^="sidebar-"] [class^="item-"]:hover {
         translate: 15px;

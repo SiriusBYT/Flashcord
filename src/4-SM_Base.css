@@ -3,7 +3,7 @@
 
 [class^="updateIconForeground-"] {
     fill: red !important;
-    animation: FlashCore-Shake calc(100ms * var(--Enable-Animations, 1)) infinite;
+    animation: FlashCore-Shake calc(100ms * var(--Flashcord-Animations, 1)) infinite;
 }
 
 [href="https://support.discord.com"] {
@@ -17,7 +17,7 @@
 
 [class^="icon-"] {
     transition-property: scale;
-    transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1)) !important;
+    transition-duration: var(--Flashcord-TransMult-Fast, 125ms) !important;
 }
 [class^="icon-"]:hover {
     scale: 1.1;

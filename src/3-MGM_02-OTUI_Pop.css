@@ -91,7 +91,7 @@
     [class^="item-"] {
         border-radius: var(--Flashcord-Border_Radius, 25px);
         transition-property: background-color;
-        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
 }
 

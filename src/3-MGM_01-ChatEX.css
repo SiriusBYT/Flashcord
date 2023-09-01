@@ -19,7 +19,7 @@
         margin-right: -200px;
         translate: -198px;
         transition-property: translate;
-        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
     :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .chat-2ZfjoI { /* [!] FC-Wildcard_PerfNuker */
         translate: 0px;
@@ -35,17 +35,17 @@
     [class^="sidebar-"] {
       width: 48px;
       transition-property: width;
-      transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+      transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
     :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .sidebar-1tnWFu {  /* [!] FC-Wildcard_PerfNuker */
       width: 240px;
       /*will-change: width;*/
     }
     [class^="newChannel-"] { display: none; }
-    nav[class^="container-"] [class^="name-"], nav[class^="container-"] [class^="spine-"], nav[class^="container-"] [class^="spineBorder-"] {
+    nav[class^="container-"] div[class^="name-"], nav[class^="container-"] [class^="spine-"], nav[class^="container-"] [class^="spineBorder-"] {
       opacity: 0;
       transition-property: opacity;
-      transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+      transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
     [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover, nav:hover) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1), /* [!] FC-Wildcard_PerfNuker */
     [class^="notAppAsidePanel-"]:has([id*="guild-"]) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1) { /* [!] FC-Wildcard_PerfNuker */
@@ -69,7 +69,7 @@
         z-index: 1;
 
         transition-property: translate, filter;
-        transition-duration: calc(250ms * var(--Flashcord-TransMult-Normal, 1));
+        transition-duration: var(--Flashcord-TransMult-Normal, 250ms);
     }
     [class^="membersWrap-"]:hover { translate: 0px; filter: drop-shadow(0px 0px 16px var(--channeltextarea-background));  }
     [class^="member-"] { margin-left: 0px; }
@@ -78,7 +78,7 @@
         padding-bottom: 0px;
         border-radius: var(--Flashcord-Border_Radius, 25px) !important;
         transition-property: scale, translate;
-        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
     [class^="member-"]:hover > div {
         scale: 1.05;
@@ -92,7 +92,7 @@
         opacity: 0.25;
 
         transition-property: opacity;
-        transition-duration: calc(500ms * var(--Flashcord-TransMult-Slow, 1));
+        transition-duration: var(--Flashcord-TransMult-Slow, 500ms);
     }
     [class^="membersGroup-"]:hover { opacity: 1; }
 }
@@ -108,11 +108,11 @@ nav[class^="wrapper-"] > ul {
 @container FC-GuildNav_Animated (min-width: 0px) {
     [class^="listItem-"] {
         transition-property: scale, filter !important;
-        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
     [class^="listItem-"]:has([style*="height: 8px"], [class^="lowerBadge-"]), [class^="listItem-"]:hover {
         scale: 0.975;
-        animation: Flashcord-GuildPulse calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) linear reverse infinite;
+        animation: Flashcord-GuildPulse var(--Flashcord-AnimMult-XSlow, 1s) linear reverse infinite;
         /*will-change: scale, filter;*/
     }
     [class^="pill-"] {  
@@ -123,7 +123,7 @@ nav[class^="wrapper-"] > ul {
 @container FC-GuildNav_Static (min-width: 0px) {
   [class^="listItem-"] {
       transition-property: scale, filter !important;
-      transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+      transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
   }
   [class^="listItem-"]:has([style*="height: 8px"], [class^="lowerBadge-"]), [class^="listItem-"]:hover {
       scale: 0.975;
@@ -153,7 +153,7 @@ nav[class^="wrapper-"] > ul {
   [class^="listItem-"] {
     margin: 0;
     transition-property: scale;
-    transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+    transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
   }
   foreignObject { border-radius: var(--Flashcord-Border_Radius, 25px); }
   [id^="folder-items-"] { height: auto !important; }
@@ -180,7 +180,7 @@ nav[class^="wrapper-"] > ul {
     rotate: 90deg;
     margin: 0;
     transition-property: scale;
-    transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+    transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
   }
   foreignObject { border-radius: var(--Flashcord-Border_Radius, 25px); }
   [class^="listItem-"] { scale: 0.9; }
@@ -207,7 +207,7 @@ nav[class^="wrapper-"] > ul {
     margin: -1px 0px -1px 0px;
     border-radius: var(--Flashcord-Border_Radius, 25px);
     transition-property: scale, background-color !important;
-    transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1)) !important;
+    transition-duration: var(--Flashcord-TransMult-Fast, 125ms) !important;
   }
   [class^="container-"] [class^="link-"]:hover {
     background: unset !important;
@@ -224,7 +224,7 @@ nav[class^="wrapper-"] > ul {
     opacity: 0;
     scale: 0; 
     transform: unset !important;
-    animation: Flashcord-DNAO_Ripple calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) ) ease-in;
+    animation: Flashcord-DNAO_Ripple var(--Flashcord-AnimMult-Normal, 250ms) ease-in;
   }
 
   li:has([class^="channelEmoji-"]) .name-28HaxV { /* [!] FC-Wildcard_PerfNuker */
@@ -243,7 +243,7 @@ nav[class^="wrapper-"] > ul {
     scale: 0.8;
     opacity: 0.3;
     transition-property: opacity !important;
-    transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1)) !important;
+    transition-duration: var(--Flashcord-TransMult-Fast, 125ms) !important;
   }
   li:hover [class^="iconContainer-"] {
     opacity: 0.5;
@@ -262,7 +262,7 @@ nav[class^="wrapper-"] > ul {
 
 @container FC-ChannelNav_Animated (min-width: 0px) {
   [class^="containerDefault-"]:has([class^="mentionsBadge-"]) {
-    animation: Flashcord-Rainbow_BGR calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) linear reverse infinite;
+    animation: Flashcord-Rainbow_BGR var(--Flashcord-AnimMult-XSlow, 1s) linear reverse infinite;
   }
   [class^="mentionsBadge-"] { 
     translate: -106px;
@@ -280,13 +280,13 @@ nav[class^="wrapper-"] > ul {
     height: 24px;
     top: 0;
     margin: 0;
-    animation: Flashcord-Rainbow_BGR calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) linear reverse infinite;
+    animation: Flashcord-Rainbow_BGR var(--Flashcord-AnimMult-XSlow, 1s) linear reverse infinite;
   }
 }
 
 @container FC-ChannelNav_Static (min-width: 0px) {
   [class^="containerDefault-"]:has([class^="mentionsBadge-"]) {
-   background: var(--Flashcord-ChannelNav_Color-Mention, rgba(255,0,0,0.5) );
+   background: var(--Flashcord-ChannelNav_Color-Mention, rgba(255,0,0,0.5));
   }
   [class^="channelInfo-"] { 
     translate: -106px;
@@ -300,7 +300,7 @@ nav[class^="wrapper-"] > ul {
     height: 24px;
     top: 0;
     margin: 0;
-    background: var(--Flashcord-ChannelNav_Color-Unread, rgba(0,0,255,0.5) );
+    background: var(--Flashcord-ChannelNav_Color-Unread, rgba(0,0,255,0.5));
   }
 }
 

@@ -34,9 +34,9 @@ This license requires that reusers give credit to the creator. It allows reusers
   
   --Flashcord-Branch: "Flashcord Beta";
   --Flashcord-Channel: "bSID";
-  --Flashcord-Version: "230831";
+  --Flashcord-Version: "230901";
 
-  --Flashcord-Splash: "screw replugged store \A we have chinese knockoff";
+  --Flashcord-Splash: "help my k100 air dissapeared \A out of thin air today";
   --Flashcord-SplashSca: 0.9;
   --Flashcord-SplashTrX: 0px;
   --Flashcord-SplashTrY: 0px;
@@ -44,7 +44,7 @@ This license requires that reusers give credit to the creator. It allows reusers
   --custom-theme-background: unset;
   
   background: #000000;
-  animation: Flashcord-Welcome_Win11 calc(1s * (var(--Enable-Animations, 1) * var(--DevMode, 1)) ) ease-out;
+  animation: Flashcord-Welcome_Win11 var(--Flashcord-AnimMult-XSlow, 1s) ease-out;
 }
 
 ::-webkit-scrollbar { display: none; }
@@ -71,7 +71,8 @@ body {
 }
 
 /* Legacy Theming */
-.theme-dark.custom-theme-background {
+.theme-dark.custom-theme-background,
+.theme-light.custom-theme-background {
   container-name: var(--FlashCore-Global_Theme, FC-AdvancedTheme-LEGACY_Custom-Background-Mode);
   container-type: inline-size;
 
@@ -96,7 +97,7 @@ body {
   --FlashCore-Brightness: 0.5;
 }
 
-html:not(html:hover) #app-mount > {
+html:not(html:hover) #app-mount {
   container-name: var(--FlashCore-Idle_Optimizations, FC-Idle_OptiMin) !important;
   container-type: inline-size;
 
@@ -109,6 +110,8 @@ html:not(html:hover) #app-mount > {
     --Flashcord-AnimMult-Normal: 0;
     --Flashcord-AnimMult-Slow: 0;
     --Flashcord-AnimMult-XSlow: 0;
+    --Flashcord-AnimMult-XTSlow: 0;
+    --Flashcord-AnimMult-XTXSlow: 0;
     --Flashcord-TransMult-XFast: 0;
     --Flashcord-TransMult-Fast: 0;
     --Flashcord-TransMult-Normal: 0;
@@ -127,6 +130,8 @@ html:not(html:hover) #app-mount > {
 
 @container FC-Idle_OptiMin (min-width: 0px) {
   [class^="appAsidePanelWrapper-"] {
+    --Flashcord-AnimMult-XSlow: 0;
+    --Flashcord-AnimMult-XTSlow: 0;
     --Flashcord-TransMult-XFast: 0;
     --Flashcord-TransMult-Fast: 0;
     --Flashcord-TransMult-Normal: 0;

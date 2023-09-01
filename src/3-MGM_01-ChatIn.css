@@ -10,12 +10,12 @@
 
 @container FC-MessageSlide (min-width: 0px) {
     [class^="messageListItem-"]:last-of-type {
-        animation: calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) Flashcord-MSG_Uploaded;
+        animation: var(--Flashcord-AnimMult-XSlow, 1s) Flashcord-MSG_Uploaded;
     }
     [class^="messageListItem-"]:last-of-type:has([class*="isSending-"]) {
         opacity: 0.5;
         translate: 10vw;
-        animation: calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) ) Flashcord-MSG_Upload; 
+        animation: var(--Flashcord-AnimMult-Normal, 250ms) Flashcord-MSG_Upload; 
     }
 }
 
@@ -58,7 +58,7 @@
     [class^="focusLock-"] [class^="imageWrapper-"] { 
         height: auto !important;
         transition-property: width, height;
-        transition-duration: calc(500ms * var(--Flashcord-TransMult-Slow, 1)) !important;
+        transition-duration: var(--Flashcord-TransMult-Slow, 500ms) !important;
     }
     [class^="focusLock-"] [class^="imageWrapper-"] [class^="wrapper-"] { 
         width: auto !important;
@@ -115,7 +115,7 @@
         justify-content: center;
 
         transition-property: backdrop-filter;
-        transition-duration: calc(500ms * var(--Flashcord-TransMult-Slow, 1));
+        transition-duration: var(--Flashcord-TransMult-Slow, 500ms);
         backdrop-filter: blur(0px);
     }
     [id^="popout_"]:has( > div > div:hover) {
@@ -130,8 +130,8 @@
         border-radius: var(--Flashcord-Border_Radius, 25px );
         padding: 0;
         transition-property: opacity;
-        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
-        animation: FlashCore-FadeIn_Top calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
+        animation: FlashCore-FadeIn_Top var(--Flashcord-AnimMult-XSlow, 1s) !important;
     }
     [id^="popout_"]:active > div > div {
         opacity: 0;
@@ -149,7 +149,7 @@
 @container FC-Xearch (min-width: 0px) {
     [class^="searchResultsWrap-"] {
         width: 50vw;
-        animation: Flashcord-SearchSlide calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) );
+        animation: Flashcord-SearchSlide var(--Flashcord-AnimMult-Normal, 250ms);
     }
 }
 
@@ -162,7 +162,7 @@
 @container FC-Stimogi (min-width: 0px) {
     [class^="drawerSizingWrapper-"]  {
         width: 69vw !important;
-        animation: FlashCore-FadeIn calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+        animation: FlashCore-FadeIn var(--Flashcord-AnimMult-Normal, 250ms) !important;
     }
 }
 
@@ -179,7 +179,7 @@
     }
     [class^="app-"] {
         transition-property: filter;
-        transition-duration: calc(500ms * var(--Flashcord-TransMult-Slow, 1));
+        transition-duration: var(--Flashcord-TransMult-Slow, 500ms);
         filter: blur(0px) brightness(0.8);
     }
     [class^="backdrop-"] {
@@ -209,7 +209,7 @@
     [class^="typing-"] {
         top: -24px;
         z-index: -1;
-        animation: FlashCore-FadeIn_Bottom calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+        animation: FlashCore-FadeIn_Bottom var(--Flashcord-AnimMult-Normal, 250ms) !important;
     }
     [class^="cooldownWrapper-"] {
         margin: auto !important;
@@ -236,7 +236,7 @@
         [class^="sprite-"], svg {
             opacity: 0.5;
             transition-property: opacity, scale;
-            transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+            transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
         }
         [class^="sprite-"]:hover, svg:hover {
             opacity: 0.8;
@@ -259,17 +259,60 @@
         width: fit-content;
         left: auto;
         right: 16px;
-        animation: FlashCore-FadeIn_Bottom calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+        animation: FlashCore-FadeIn_Bottom var(--Flashcord-AnimMult-Normal, 250ms) !important;
     }
     [class^="newMessagesBar-"] {
         width: fit-content;
         left: auto;
         right: 16px;
-        animation: FlashCore-FadeIn_Top calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+        animation: FlashCore-FadeIn_Top var(--Flashcord-AnimMult-Normal, 250ms) !important;
     }
     [class^="jumpToPresentBar-"] [class^="barButtonMain-"] {
         display: none;
     }
+}
+
+
+ol[class^="scrollerInner-"] {
+    container-name: var(--FlashCore-ChatEdits, FC-ChatEdits);
+    container-type: inline-size;
+}
+@container FC-ChatEdits (min-width: 0px) {
+
+    /* Better Embeds */
+    [id^="message-accessories-"]:has(article) {
+        display: table;
+    }
+    [id^="message-accessories-"]:has(article) article {
+        max-width: unset !important;
+        display: table-cell;
+    }
+    [id^="message-accessories-"]:has([href^="https://sirio-network.com/flashcord/store"]) article::after {
+        content: "✅ Flashcord Store Link";
+        display: block;
+        white-space: pre-warp;
+        width: 90%;
+        background: rgba(0,155,255,0.25);
+        border: 1px solid rgba(0,155,255,1);
+        border-radius: var(--Flashcord-Border_Radius, 25px );
+        padding: 1px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    [id^="message-accessories-"] article [class^="clickableWrapper-"] img,
+    [id^="message-accessories-"] article [class^="imageContent-"],
+    [id^="message-accessories-"] article [class^="imageContainer-"],
+    [id^="message-accessories-"] article [class^="imageWrapper-"],
+    [id^="message-accessories-"] article [class^="embedVideo-"] {
+        max-width: unset !important;
+        max-height: unset !important;
+        border-radius: var(--Flashcord-Border_Radius, 25px );
+    }
+
 }
 
 /* [END] = Flashcord Beta == Major General Modifications [00] ChatIn CSS = */

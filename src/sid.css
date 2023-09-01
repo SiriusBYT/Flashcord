@@ -34,9 +34,9 @@ This license requires that reusers give credit to the creator. It allows reusers
   
   --Flashcord-Branch: "Flashcord Beta";
   --Flashcord-Channel: "bSID";
-  --Flashcord-Version: "230831";
+  --Flashcord-Version: "230901";
 
-  --Flashcord-Splash: "screw replugged store \A we have chinese knockoff";
+  --Flashcord-Splash: "help my k100 air dissapeared \A out of thin air today";
   --Flashcord-SplashSca: 0.9;
   --Flashcord-SplashTrX: 0px;
   --Flashcord-SplashTrY: 0px;
@@ -44,7 +44,7 @@ This license requires that reusers give credit to the creator. It allows reusers
   --custom-theme-background: unset;
   
   background: #000000;
-  animation: Flashcord-Welcome_Win11 calc(1s * (var(--Enable-Animations, 1) * var(--DevMode, 1)) ) ease-out;
+  animation: Flashcord-Welcome_Win11 var(--Flashcord-AnimMult-XSlow, 1s) ease-out;
 }
 
 ::-webkit-scrollbar { display: none; }
@@ -71,7 +71,8 @@ body {
 }
 
 /* Legacy Theming */
-.theme-dark.custom-theme-background {
+.theme-dark.custom-theme-background,
+.theme-light.custom-theme-background {
   container-name: var(--FlashCore-Global_Theme, FC-AdvancedTheme-LEGACY_Custom-Background-Mode);
   container-type: inline-size;
 
@@ -96,7 +97,7 @@ body {
   --FlashCore-Brightness: 0.5;
 }
 
-html:not(html:hover) #app-mount > {
+html:not(html:hover) #app-mount {
   container-name: var(--FlashCore-Idle_Optimizations, FC-Idle_OptiMin) !important;
   container-type: inline-size;
 
@@ -109,6 +110,8 @@ html:not(html:hover) #app-mount > {
     --Flashcord-AnimMult-Normal: 0;
     --Flashcord-AnimMult-Slow: 0;
     --Flashcord-AnimMult-XSlow: 0;
+    --Flashcord-AnimMult-XTSlow: 0;
+    --Flashcord-AnimMult-XTXSlow: 0;
     --Flashcord-TransMult-XFast: 0;
     --Flashcord-TransMult-Fast: 0;
     --Flashcord-TransMult-Normal: 0;
@@ -127,6 +130,8 @@ html:not(html:hover) #app-mount > {
 
 @container FC-Idle_OptiMin (min-width: 0px) {
   [class^="appAsidePanelWrapper-"] {
+    --Flashcord-AnimMult-XSlow: 0;
+    --Flashcord-AnimMult-XTSlow: 0;
     --Flashcord-TransMult-XFast: 0;
     --Flashcord-TransMult-Fast: 0;
     --Flashcord-TransMult-Normal: 0;
@@ -158,7 +163,7 @@ html:not(html:hover) #app-mount > {
     color: white;
     text-align: center;
     white-space: pre;
-    animation: FlashCore-FadeIn_Bottom calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ));
+    animation: FlashCore-FadeIn_Bottom var(--Flashcord-AnimMult-XSlow, 1s);
   }
   [class^="content-"]:before {
     content: "Flashcord";
@@ -170,7 +175,7 @@ html:not(html:hover) #app-mount > {
     background-size: 32vw;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: FlashCore-BackXMTL calc(4s * var(--Enable-Animations, 1)) linear infinite !important;
+    animation: FlashCore-BackXMTL var(--Flashcord-AnimMult-XTXSlow, 4s) linear infinite !important;
   }
   [class^="content-"] {
     background: transparent;
@@ -179,7 +184,7 @@ html:not(html:hover) #app-mount > {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: FlashCore-FadeIn calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) )) !important;
+    animation: FlashCore-FadeIn var(--Flashcord-AnimMult-XSlow, 1s) !important;
     background: rgba(0,0,0,0.9);
     backdrop-filter: blur(var(--Flashcord-Blur-Heavy, 16px));
   }
@@ -401,7 +406,7 @@ body:before {
         background-size: 64vw;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: FlashCore-BackXMTL calc(8s * var(--Enable-Animations, 1)) linear infinite !important;
+        animation: FlashCore-BackXMTL calc(8s * var(--Flashcord-Animations, 1)) linear infinite !important;
         margin-bottom: var(--Flashcord-SplashMAR, 20px);
     }
     
@@ -419,7 +424,7 @@ body:before {
         width: 1px;
         left: 105px;
         top: 48px;
-        animation: FlashCore-Splash calc(500ms * var(--Enable-Animations, 1)) ease-in-out infinite;
+        animation: FlashCore-Splash var(--Flashcord-AnimMult-Slow, 500ms) ease-in-out infinite;
         animation-direction: alternate;
     }
 }
@@ -428,12 +433,12 @@ body:before {
 [class^="messageListItem-"]:nth-last-child(-n + 33 ) [class^="message-"] {
     container-name: var(--Flashcord-Badges, FC-Badges);
     container-type: inline-size;
-    contain: ;
+    contain: paint;
 }
 
 @container FC-Badges (min-width: 0px) {
     h3:before {
-        background-size: 64vw !important;
+        background-size: 100vw !important;
         border-radius: var(--Flashcord-Border_Radius, 25px);
         text-align: center;
         margin-right: 6px;
@@ -543,7 +548,7 @@ html:has(link[href*="com.sirio-network.flashcord.asar"]) {
 [class^="message-"]:hover [class^="buttons-"] {
     opacity: 0.5 !important;
     animation: FlashCore-FadeIn 1s;
-    transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1)) !important;
+    transition-duration: var(--Flashcord-TransMult-Fast, 125ms) !important;
 }
 [class^="message-"] [class^="buttons-"]:hover {
     opacity: 1 !important;
@@ -551,7 +556,7 @@ html:has(link[href*="com.sirio-network.flashcord.asar"]) {
 
 [class^="message-"] {
     transition-property: background-color;
-    transition-duration: calc(250ms * var(--Flashcord-TransMult-Normal, 1)) !important;
+    transition-duration: var(--Flashcord-TransMult-Normal, 250ms) !important;
 }
 
 /* [End] = Flashcord Beta == France = */
@@ -576,25 +581,68 @@ html:has(link[href*="com.sirio-network.flashcord.asar"]) {
 }
 
 @container FC-Theme_Hooker (min-width: 0px) {
+    @container FC-SPGO_AT (min-width: 0px) {
+        [class^=marginTop8-] [class^="header-"] > :before {
+            content: "⚠️ Advanced Themes require LegalDiscordBypasses or Discord Nitro to enable them. \A ✅ ThemeHooker is present and has enabled new themes." !important;
+          }
+
+        [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-citrus-sherbert"]), /* IRIDESCENT LIGHT */
+        [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-chroma-glow"]) {
+          display: block !important;
+          border-radius: 25px;
+          width: 100%;
+          height: 24vh;
+          margin: auto;
+          translate: 2px 2px;
+        }
+        
+        /* Advanced Theme: Irdescent */
+        [class^="themeSelection-"][style*="--bg-gradient-citrus-sherbert"] {
+            background-image: url("https://sirio-network.com/flashcord/ressources/backgrounds/PSWave.png") !important;
+            background-position-y: center !important;
+            background-size: 100vw !important;
+            border-radius: 25px;
+            animation: FlashCore-BackXMTL var(--Flashcord-AnimMult-XTSlow, 2s) linear infinite !important;
+        }
+        [class^="themeSelection-"][style*="--bg-gradient-citrus-sherbert"]:before {
+            content: "Iridescent Mode (Light Mode)";
+        }
+        [class^="themeSelection-"][style*="--bg-gradient-chroma-glow"] {
+            background-image: url("https://sirio-network.com/flashcord/ressources/backgrounds/PSWave-Inverted.png") !important;
+            background-position-y: center !important;
+            background-size: 100vw !important;
+            border-radius: 25px;
+            animation: FlashCore-BackXMTL var(--Flashcord-AnimMult-XTSlow, 2s) linear infinite !important;
+        }
+        [class^="themeSelection-"][style*="--bg-gradient-chroma-glow"]:before {
+            content: "Iridescent Mode (Dark Mode)";
+        }
+        [class^="themeSelectionContainer-"]:has([style*="--bg-gradient-citrus-sherbert"]) {
+            order: -23;
+        }
+        [class^="themeSelectionContainer-"]:has([style*="--bg-gradient-chroma-glow"]) {
+            order: -22;
+        }
+    }
+
     [theme-hooker="theme-citrus-sherbert"],
     [theme-hooker="theme-chroma-glow"] {
         background-repeat: repeat !important;
         background-size: 100vw !important;
     }
     [theme-hooker="theme-citrus-sherbert"] {
-        background-image: var(--Flashcord-Iridescent-Image, url("https://sirio-network.com/flashcord/elements/PSWave.png") ) !important;
-        animation: FlashCore-BackXMTL 1s linear infinite !important;
+        background-image: var(--Flashcord-Iridescent_Light-Image, url("https://sirio-network.com/flashcord/ressources/backgrounds/PSWave.png") ) !important;
+        animation: FlashCore-BackXMTL var(--Flashcord-AnimMult-XTSlow, 2s) linear infinite !important;
     }
     [theme-hooker="theme-chroma-glow"] {
-        background-image: var(--Flashcord-Iridescent-Image, url("https://sirio-network.com/flashcord/elements/PSWave.png") ) !important;
-        animation: FlashCore-BackXMTL var(Flashcord-AnimMult-XSlow, 1s) linear infinite !important;
-        filter: invert();
+        background-image: var(--Flashcord-Iridescent_Dark-Image, url("https://sirio-network.com/flashcord/ressources/backgrounds/PSWave-Inverted.png") ) !important;
+        animation: FlashCore-BackXMTL var(--Flashcord-AnimMult-XTSlow, 2s) linear infinite !important;
     }
     [theme-hooker="theme-citrus-sherbert"] #app-mount {
-        backdrop-filter: var(--Flashcord-Iridescent_Filter-Light, blur(4px) brightness(1));
+        backdrop-filter: var(--Flashcord-Iridescent_Light-Filter, blur(4px) brightness(1));
     }
     [theme-hooker="theme-chroma-glow"] #app-mount {
-        backdrop-filter: var(--Flashcord-Iridescent_Filter-Dark, blur(4px) brightness(0.5));
+        backdrop-filter: var(--Flashcord-Iridescent_Light-Filter, blur(4px) brightness(0.5));
     }
     [theme-hooker="theme-citrus-sherbert"] [class^="chat-"] [class^="title-"] [class^="children-"]:after,
     [theme-hooker="theme-chroma-glow"]  [class^="chat-"] [class^="title-"] [class^="children-"]:after {
@@ -607,6 +655,19 @@ html:has(link[href*="com.sirio-network.flashcord.asar"]) {
         container-name: FC-Theme_Iridescent !important;
         container-type: inline-size;
     }
+
+    @container FC-ControlPanel_PopUp (min-width: 0px) {
+        [theme-hooker="theme-citrus-sherbert"] [class^="layer-"]:nth-child(2) {
+            border: 1px solid var(--Flashcolord-Light_Accent);
+            background: rgba(255,255,255,0.5);
+        }
+
+        [theme-hooker="theme-chroma-glow"] [class^="layer-"]:nth-child(2) {
+            border: 1px solid var(--Flashcolord-Dark_Accent);
+            background: rgba(0,0,0,0.5);
+        }
+    }
+
     @container FC-Theme_Iridescent (min-width: 0px) {
         @container FC-ChatSlide_Legacy (min-width: 0px) {
             [class^="chat-"] > section, [class^="chat-"] > div, [class^="chat-"] {
@@ -633,14 +694,17 @@ html:has(link[href*="com.sirio-network.flashcord.asar"]) {
 /* [Start] = Flashcord Beta == Custom Theme: CBM CSS = */
 
 @container FC-AdvancedTheme-LEGACY_Custom-Background-Mode (min-width: 0px) {
-    body {
-        background-image: var(--Flashcord-CBM_Image, url("https://sirio-network.com/flashcord/bgr-test.jpg") ) !important;
+    .theme-light body {
+        background-image: var(--Flashcord-CBM_Light-Image, url("https://sirio-network.com/flashcord/ressources/backgrounds/bgr-test.jpg") ) !important;
+    }
+    .theme-dark body {
+        background-image: var(--Flashcord-CBM_Light-Image, url("https://sirio-network.com/flashcord/ressources/backgrounds/hypernner.jpg") ) !important;
     }
     [class^="layer-"]:nth-child(2) {
         border: 1px solid white;
     }
     .custom-theme-background [class^="chat-"] [class^="title-"] [class^="children-"]:after {
-        content: var(--Flashcord-Warnings,"  ⚠️ Flashcord is in Beta. 🖼️ Custom Mode is unfinished.  ") !important;
+        content: var(--Flashcord-Warnings,"  ⚠️ Custom Mode without ThemeHooker is no longer supported.") !important;
     }
 
     @container FC-ChatSlide_Legacy (min-width: 0px) {
@@ -648,8 +712,11 @@ html:has(link[href*="com.sirio-network.flashcord.asar"]) {
             background: transparent !important;
         }
     }
-    #app-mount {
-        backdrop-filter: var(--Flashcord-CBM_Filter, blur(16px) brightness(0.5));
+    .custom-theme-background.theme-light #app-mount {
+        backdrop-filter: var(--Flashcord-CBM_Light-Filter, blur(8px) brightness(1));
+    }
+    .custom-theme-background.theme-dark #app-mount {
+        backdrop-filter: var(--Flashcord-CBM_Dark-Filter, blur(16px) brightness(0.5));
     }
 }
 
@@ -770,6 +837,33 @@ html[theme-hooker="theme-mint-apple"] {
 
 
 @container FC-Theme_Hooker (min-width: 0px) {
+    @container FC-SPGO-AT (min-width: 0px) {
+        [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-sepia"]) /* TRANSPARENT */ {
+            display: block !important;
+            border-radius: 25px;
+            width: 100%;
+            height: 24vh;
+            margin: auto;
+            translate: 2px 2px;
+        }
+
+        /* Advanced Theme: Transparent */
+        [class^="themeSelection-"][style*="bg-gradient-sepia"] {
+            background: unset !important;
+            background-image: url("https://sirio-network.com/flashcord/ressources/backgrounds/theme-transparent.png") !important;
+            filter: brightness(0.25);
+            background-position: center !important;
+            background-size: cover !important;
+            border-radius: 25px;
+        }
+        [class^="themeSelection-"][style*="--bg-gradient-sepia"]:before {
+            content: "Transparent Mode";
+        }
+        [class^="themeSelectionContainer-"]:has([style*="--bg-gradient-sepia"]) {
+            order: 0;
+        }
+    }
+    
     [theme-hooker="theme-sepia"] #app-mount {
         backdrop-filter: var(--Flashcord-Iridescent_Filter, blur(16px) brightness(0.5));
     }
@@ -780,6 +874,8 @@ html[theme-hooker="theme-mint-apple"] {
     [theme-hooker="theme-sepia"] [class^="chat-"] [class^="title-"] [class^="children-"]:after {
         content: var(--Flashcord-Warnings,"  ⚠️ Flashcord is in Beta. 👻 Transparent Mode is unfinished.  ") !important;
     }
+
+
 }
 
 /* [Start] = Flashcord Beta == Custom Theme: Transparent Mode CSS = */
@@ -803,7 +899,7 @@ html[theme-hooker="theme-mint-apple"] {
         border-radius: var(--Flashcord-Border_Radius, 25px);
         z-index: 1;
         transform: none !important;
-        animation: FlashCore-FadeIn calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+        animation: FlashCore-FadeIn var(--Flashcord-AnimMult-XSlow, 1) !important;
     }    
     [class^="sidebarRegion-"] {
         max-width: 220px;
@@ -837,7 +933,7 @@ html[theme-hooker="theme-mint-apple"] {
         background: transparent;
 
         transition-property: opacity;
-        transition-duration: calc(250ms * var(--Flashcord-TransMult-Normal, 1));
+        transition-duration: var(--Flashcord-TransMult-Normal, 250ms);
     }
     [class^="closeButton-"] svg { display: none; }
     [class^="toolsContainer-"] {
@@ -853,7 +949,7 @@ html[theme-hooker="theme-mint-apple"] {
         transform: none !important;
         /*will-change: filter, scale !important;*/
         transition-property: filter, scale;
-        transition-duration: calc(250ms * var(--Flashcord-TransMult-Normal, 1));
+        transition-duration: var(--Flashcord-TransMult-Normal, 250ms);
     }
     [class^="layers-"]:has([class^="standardSidebarView-"]:hover) .baseLayer-W6S8cY { /* [!] FC-Wildcard_PerfNuker */
         filter: blur(var(--Flashcord-Blur-Medium, 8px)) brightness(var(--FlashCore-Brightness,0.9));
@@ -874,7 +970,7 @@ html[theme-hooker="theme-mint-apple"] {
         border-radius: var(--Flashcord-Border_Radius, 25px) !important;
         translate: 5px;
         transition-property: translate, scale;
-        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
     [class^="sidebar-"] [class^="item-"]:hover {
         translate: 15px;
@@ -900,7 +996,7 @@ html[theme-hooker="theme-mint-apple"] {
         margin: auto;
         padding: 0;
         border-radius: 0;
-        animation: FlashCore-FadeIn calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+        animation: FlashCore-FadeIn var(--Flashcord-AnimMult-XSlow, 1s) !important;
     }    
     [class^="sidebarRegion-"] {
         max-width: 220px;
@@ -929,7 +1025,7 @@ html[theme-hooker="theme-mint-apple"] {
         border-radius: var(--Flashcord-Border_Radius, 25px) !important;
         translate: 5px;
         transition-property: translate, scale;
-        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
     [class^="sidebar-"] [class^="item-"]:hover {
         translate: 15px;
@@ -1052,10 +1148,10 @@ html[theme-hooker="theme-mint-apple"] {
     }
     
     #my-account-tab:after {
-        white-space: pre;
+        white-space: pre-line;
         color: var(--text-normal);
         content: 'Flashcord is a personal project maintained with love by SiriusBYT, it takes the design language of "SNWE/SNDL" and applies it to Discord. \A \
-      Support is held on The Sirio Network Discord Server (https://discord.gg/z93kHwGuZt). \A \A \
+      Support is held on The Sirio Network Discord Server (https://sirio-network.com/redirect/discord). \A \A \
       Please give a thanks to these amazing people who helped with the Closed Alpha of Flashcord 💖 \A \
       🗨️  "be racist for me"\A \
                 - Atacantul, 2023\A\A \
@@ -1065,12 +1161,22 @@ html[theme-hooker="theme-mint-apple"] {
                 - Lööps, 2023 \A\A \
       🗨️  "Come play with me on Club Pinguin"\A \
                 - Ectalite, August 2023 \A\A \A \
+    Of course, thanks to you, Flashcord Supporters 💸! \A \
+      🗨️  "Ohren Steif Halten""\A \
+                - termedagain, 2023\A\A \
+    Thanks to those who joined the SGN Discord Server for Flashcord 🗣️ ! \A \
+    Kinoisseur, __Chara__, Written, Darian465, Lasaga Man, Phantom, Fishy <3, pguap, Pixel, raffy309, Birb, Sundae.C, timebendingTrickster, Volk, Yukiko, Galaxy. \A\A \
+    And finally, thanks for those who stared the Flashcord GitHub Repo ✨ ! \A \
+    s3nkwr, WA1Jl, LuftVerbot, PixelHir, MacDingleNut, christiangrothaus, zeo-return-null, trebor048, kisakimeowr, haiku-balls, bxrlin, Lypuss, roushjosh, Zaannaah, littlepriceonu, mog77a, TheLastZombie, ItsGfue. \A\A \
+    🌠 Special Thanks: \A \
+    - Evelyn: Created "Magnificent" and was ok being bullied by me to fix specific bugs that were found with Flashcord \A \
+    - Tharki-God: Person to have given me the idea (accidentally) to create the Plugins section of the Flashcord Store \A \
+    - East_Arctica: Posted a plugin to the Flashcord Store, also is a super cool person \A\A \
 Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A\A\A\A';
     }
 }
 
 /* [End] = Flashcord Beta == Major General Modifications [00] Control MyAcc Overhaul CSS = */
-
 
 /* [START] = Flashcord Beta == Major General Modifications [00] Control Appearance Tab Overhaul CSS = */
 
@@ -1121,7 +1227,7 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
     line-height: normal;
   }
   [class^=marginTop8-] [class^="header-"] > :before {
-    content: "⚠️ Advanced Themes require LegalDiscordBypasses or Discord Nitro to enable them. \A ⛔ Certain themes may not work as you need the ''ThemeHooker'' plugin.";
+    content: "⚠️ Advanced Themes require LegalDiscordBypasses or Discord Nitro to enable them. \A ⛔ ThemeHooker is missing. Certain themes have been removed.";
     color: var(--text-normal);
     white-space: pre-line;
     font-weight: 500;
@@ -1149,7 +1255,7 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
   /* Basic Themes */
   [class*="basicThemeSelectors-"] > [class^="themeSelectionContainer-"]:first-child > [class^="themeSelection-"] {
     background: unset !important;
-    background-image: url("https://sirio-network.com/flashcord/elements/theme-preview_light.png") !important;
+    background-image: url("https://sirio-network.com/flashcord/ressources/theme-previews/theme-light.png") !important;
     background-position: center !important;
     background-size: cover !important;
     border-radius: 25px;
@@ -1160,7 +1266,7 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
 
   [class*="basicThemeSelectors-"] > [class^="themeSelectionContainer-"]:last-of-type > [class^="themeSelection-"] {
     background: unset !important;
-    background-image: url("https://sirio-network.com/flashcord/elements/theme-preview_sync.png") !important;
+    background-image: url("https://sirio-network.com/flashcord/ressources/theme-previews/theme-sync.png") !important;
     background-position: center !important;
     background-size: cover !important;
     border-radius: 25px;
@@ -1172,7 +1278,7 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
 
   [class*="basicThemeSelectors-"] > [class^="themeSelectionContainer-"]:nth-child(2) > [class^="themeSelection-"] {
     background: unset !important;
-    background-image: url("https://sirio-network.com/flashcord/elements/theme-preview_dark.png") !important;
+    background-image: url("https://sirio-network.com/flashcord/ressources/theme-previews/theme-dark.png") !important;
     background-position: center !important;
     background-size: cover !important;
     border-radius: 25px;
@@ -1184,7 +1290,7 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
   /* Advanced Theme: CBM */
   [class^="themeSelection-"][style*="--bg-gradient-mint-apple"] {
     background: unset !important;
-    background-image: var(--Flashcord-CBM_Image, url("https://sirio-network.com/flashcord/bgr-test.jpg") ) !important;
+    background-image: var(--Flashcord-CBM_Light-Image, url("https://sirio-network.com/flashcord/ressources/backgrounds/bgr-test.jpg") ) !important;
     background-position: center !important;
     background-size: cover !important;
     border-radius: 25px;
@@ -1194,7 +1300,7 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
   }
   [class^="themeSelection-"][style*="--bg-gradient-sunset"] {
     background: unset !important;
-    background-image: var(--Flashcord-CBM_Dark-Image, url("https://sirio-network.com/flashcord/hypernner.jpg") ) !important;
+    background-image: var(--Flashcord-CBM_Dark-Image, url("https://sirio-network.com/flashcord/ressources/backgrounds/hypernner.jpg") ) !important;
     background-position: center !important;
     background-size: cover !important;
     border-radius: 25px;
@@ -1209,59 +1315,10 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
     order: -24;
   }
 
-  /* Advanced Theme: Irdescent */
-  [class^="themeSelection-"][style*="--bg-gradient-citrus-sherbert"] {
-    background-image: url("https://sirio-network.com/flashcord/elements/PSWave.png") !important;
-    background-position-y: center !important;
-    background-size: 64vw !important;
-    border-radius: 25px;
-    animation: FlashCore-BackXMTL calc(2s * var(--Flashcord-Animations, 1) ) linear infinite !important;
-  }
-  [class^="themeSelection-"][style*="--bg-gradient-citrus-sherbert"]:before {
-    content: "Iridescent Mode (Light Mode)";
-  }
-  [class^="themeSelection-"][style*="--bg-gradient-chroma-glow"] {
-    background-image: url("https://sirio-network.com/flashcord/elements/PSWave.png") !important;
-    background-position-y: center !important;
-    background-size: 64vw !important;
-    filter: invert();
-    border-radius: 25px;
-    animation: FlashCore-BackXMTL calc(2s * var(--Flashcord-Animations, 1) ) linear infinite !important;
-  }
-  [class^="themeSelection-"][style*="--bg-gradient-chroma-glow"]:before {
-    content: "Iridescent Mode (Dark Mode)";
-  }
-  [class^="themeSelectionContainer-"]:has([style*="--bg-gradient-citrus-sherbert"]) {
-    order: -23;
-  }
-  [class^="themeSelectionContainer-"]:has([style*="--bg-gradient-chroma-glow"]) {
-    order: -22;
-  }
-
-
-/* Advanced Theme: Transparent */
-  [class^="themeSelection-"][style*="bg-gradient-sepia"] {
-    background: unset !important;
-    background-image: url("https://sirio-network.com/flashcord/elements/theme-preview_transparent.png") !important;
-    filter: brightness(0.25);
-    background-position: center !important;
-    background-size: cover !important;
-    border-radius: 25px;
-  }
-  [class^="themeSelection-"][style*="--bg-gradient-sepia"]:before {
-    content: "Transparent Mode";
-  }
-  [class^="themeSelectionContainer-"]:has([style*="--bg-gradient-sepia"]) {
-    order: 0;
-  }
-
   [class*="basicThemeSelectors-"] > div,
   [class^="themeSelectionContainer-"] .selectionCircle-3s5Uex,
   [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-mint-apple"]), /* CBM LIGHT */
-  [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-sunset"]), /* CBM DARK */
-  [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-citrus-sherbert"]), /* IRIDESCENT LIGHT */
-  [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-chroma-glow"]), /* IRIDESCENT DARK */
-  [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-sepia"]) /* TRANSPARENT */ {
+  [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-sunset"]) /* CBM DARK */ {
     display: block !important;
     border-radius: 25px;
     width: 100%;
@@ -1311,7 +1368,7 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
         margin-right: -200px;
         translate: -198px;
         transition-property: translate;
-        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
     :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .chat-2ZfjoI { /* [!] FC-Wildcard_PerfNuker */
         translate: 0px;
@@ -1327,17 +1384,17 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
     [class^="sidebar-"] {
       width: 48px;
       transition-property: width;
-      transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+      transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
     :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .sidebar-1tnWFu {  /* [!] FC-Wildcard_PerfNuker */
       width: 240px;
       /*will-change: width;*/
     }
     [class^="newChannel-"] { display: none; }
-    nav[class^="container-"] [class^="name-"], nav[class^="container-"] [class^="spine-"], nav[class^="container-"] [class^="spineBorder-"] {
+    nav[class^="container-"] div[class^="name-"], nav[class^="container-"] [class^="spine-"], nav[class^="container-"] [class^="spineBorder-"] {
       opacity: 0;
       transition-property: opacity;
-      transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+      transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
     [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover, nav:hover) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1), /* [!] FC-Wildcard_PerfNuker */
     [class^="notAppAsidePanel-"]:has([id*="guild-"]) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1) { /* [!] FC-Wildcard_PerfNuker */
@@ -1361,7 +1418,7 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
         z-index: 1;
 
         transition-property: translate, filter;
-        transition-duration: calc(250ms * var(--Flashcord-TransMult-Normal, 1));
+        transition-duration: var(--Flashcord-TransMult-Normal, 250ms);
     }
     [class^="membersWrap-"]:hover { translate: 0px; filter: drop-shadow(0px 0px 16px var(--channeltextarea-background));  }
     [class^="member-"] { margin-left: 0px; }
@@ -1370,7 +1427,7 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
         padding-bottom: 0px;
         border-radius: var(--Flashcord-Border_Radius, 25px) !important;
         transition-property: scale, translate;
-        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
     [class^="member-"]:hover > div {
         scale: 1.05;
@@ -1384,7 +1441,7 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
         opacity: 0.25;
 
         transition-property: opacity;
-        transition-duration: calc(500ms * var(--Flashcord-TransMult-Slow, 1));
+        transition-duration: var(--Flashcord-TransMult-Slow, 500ms);
     }
     [class^="membersGroup-"]:hover { opacity: 1; }
 }
@@ -1400,11 +1457,11 @@ nav[class^="wrapper-"] > ul {
 @container FC-GuildNav_Animated (min-width: 0px) {
     [class^="listItem-"] {
         transition-property: scale, filter !important;
-        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
     [class^="listItem-"]:has([style*="height: 8px"], [class^="lowerBadge-"]), [class^="listItem-"]:hover {
         scale: 0.975;
-        animation: Flashcord-GuildPulse calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) linear reverse infinite;
+        animation: Flashcord-GuildPulse var(--Flashcord-AnimMult-XSlow, 1s) linear reverse infinite;
         /*will-change: scale, filter;*/
     }
     [class^="pill-"] {  
@@ -1415,7 +1472,7 @@ nav[class^="wrapper-"] > ul {
 @container FC-GuildNav_Static (min-width: 0px) {
   [class^="listItem-"] {
       transition-property: scale, filter !important;
-      transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+      transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
   }
   [class^="listItem-"]:has([style*="height: 8px"], [class^="lowerBadge-"]), [class^="listItem-"]:hover {
       scale: 0.975;
@@ -1445,7 +1502,7 @@ nav[class^="wrapper-"] > ul {
   [class^="listItem-"] {
     margin: 0;
     transition-property: scale;
-    transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+    transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
   }
   foreignObject { border-radius: var(--Flashcord-Border_Radius, 25px); }
   [id^="folder-items-"] { height: auto !important; }
@@ -1472,7 +1529,7 @@ nav[class^="wrapper-"] > ul {
     rotate: 90deg;
     margin: 0;
     transition-property: scale;
-    transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+    transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
   }
   foreignObject { border-radius: var(--Flashcord-Border_Radius, 25px); }
   [class^="listItem-"] { scale: 0.9; }
@@ -1499,7 +1556,7 @@ nav[class^="wrapper-"] > ul {
     margin: -1px 0px -1px 0px;
     border-radius: var(--Flashcord-Border_Radius, 25px);
     transition-property: scale, background-color !important;
-    transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1)) !important;
+    transition-duration: var(--Flashcord-TransMult-Fast, 125ms) !important;
   }
   [class^="container-"] [class^="link-"]:hover {
     background: unset !important;
@@ -1516,7 +1573,7 @@ nav[class^="wrapper-"] > ul {
     opacity: 0;
     scale: 0; 
     transform: unset !important;
-    animation: Flashcord-DNAO_Ripple calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) ) ease-in;
+    animation: Flashcord-DNAO_Ripple var(--Flashcord-AnimMult-Normal, 250ms) ease-in;
   }
 
   li:has([class^="channelEmoji-"]) .name-28HaxV { /* [!] FC-Wildcard_PerfNuker */
@@ -1535,7 +1592,7 @@ nav[class^="wrapper-"] > ul {
     scale: 0.8;
     opacity: 0.3;
     transition-property: opacity !important;
-    transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1)) !important;
+    transition-duration: var(--Flashcord-TransMult-Fast, 125ms) !important;
   }
   li:hover [class^="iconContainer-"] {
     opacity: 0.5;
@@ -1554,7 +1611,7 @@ nav[class^="wrapper-"] > ul {
 
 @container FC-ChannelNav_Animated (min-width: 0px) {
   [class^="containerDefault-"]:has([class^="mentionsBadge-"]) {
-    animation: Flashcord-Rainbow_BGR calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) linear reverse infinite;
+    animation: Flashcord-Rainbow_BGR var(--Flashcord-AnimMult-XSlow, 1s) linear reverse infinite;
   }
   [class^="mentionsBadge-"] { 
     translate: -106px;
@@ -1572,13 +1629,13 @@ nav[class^="wrapper-"] > ul {
     height: 24px;
     top: 0;
     margin: 0;
-    animation: Flashcord-Rainbow_BGR calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) linear reverse infinite;
+    animation: Flashcord-Rainbow_BGR var(--Flashcord-AnimMult-XSlow, 1s) linear reverse infinite;
   }
 }
 
 @container FC-ChannelNav_Static (min-width: 0px) {
   [class^="containerDefault-"]:has([class^="mentionsBadge-"]) {
-   background: var(--Flashcord-ChannelNav_Color-Mention, rgba(255,0,0,0.5) );
+   background: var(--Flashcord-ChannelNav_Color-Mention, rgba(255,0,0,0.5));
   }
   [class^="channelInfo-"] { 
     translate: -106px;
@@ -1592,7 +1649,7 @@ nav[class^="wrapper-"] > ul {
     height: 24px;
     top: 0;
     margin: 0;
-    background: var(--Flashcord-ChannelNav_Color-Unread, rgba(0,0,255,0.5) );
+    background: var(--Flashcord-ChannelNav_Color-Unread, rgba(0,0,255,0.5));
   }
 }
 
@@ -1609,12 +1666,12 @@ nav[class^="wrapper-"] > ul {
 
 @container FC-MessageSlide (min-width: 0px) {
     [class^="messageListItem-"]:last-of-type {
-        animation: calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) Flashcord-MSG_Uploaded;
+        animation: var(--Flashcord-AnimMult-XSlow, 1s) Flashcord-MSG_Uploaded;
     }
     [class^="messageListItem-"]:last-of-type:has([class*="isSending-"]) {
         opacity: 0.5;
         translate: 10vw;
-        animation: calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) ) Flashcord-MSG_Upload; 
+        animation: var(--Flashcord-AnimMult-Normal, 250ms) Flashcord-MSG_Upload; 
     }
 }
 
@@ -1657,7 +1714,7 @@ nav[class^="wrapper-"] > ul {
     [class^="focusLock-"] [class^="imageWrapper-"] { 
         height: auto !important;
         transition-property: width, height;
-        transition-duration: calc(500ms * var(--Flashcord-TransMult-Slow, 1)) !important;
+        transition-duration: var(--Flashcord-TransMult-Slow, 500ms) !important;
     }
     [class^="focusLock-"] [class^="imageWrapper-"] [class^="wrapper-"] { 
         width: auto !important;
@@ -1714,7 +1771,7 @@ nav[class^="wrapper-"] > ul {
         justify-content: center;
 
         transition-property: backdrop-filter;
-        transition-duration: calc(500ms * var(--Flashcord-TransMult-Slow, 1));
+        transition-duration: var(--Flashcord-TransMult-Slow, 500ms);
         backdrop-filter: blur(0px);
     }
     [id^="popout_"]:has( > div > div:hover) {
@@ -1729,8 +1786,8 @@ nav[class^="wrapper-"] > ul {
         border-radius: var(--Flashcord-Border_Radius, 25px );
         padding: 0;
         transition-property: opacity;
-        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
-        animation: FlashCore-FadeIn_Top calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
+        animation: FlashCore-FadeIn_Top var(--Flashcord-AnimMult-XSlow, 1s) !important;
     }
     [id^="popout_"]:active > div > div {
         opacity: 0;
@@ -1748,7 +1805,7 @@ nav[class^="wrapper-"] > ul {
 @container FC-Xearch (min-width: 0px) {
     [class^="searchResultsWrap-"] {
         width: 50vw;
-        animation: Flashcord-SearchSlide calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) );
+        animation: Flashcord-SearchSlide var(--Flashcord-AnimMult-Normal, 250ms);
     }
 }
 
@@ -1761,7 +1818,7 @@ nav[class^="wrapper-"] > ul {
 @container FC-Stimogi (min-width: 0px) {
     [class^="drawerSizingWrapper-"]  {
         width: 69vw !important;
-        animation: FlashCore-FadeIn calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+        animation: FlashCore-FadeIn var(--Flashcord-AnimMult-Normal, 250ms) !important;
     }
 }
 
@@ -1778,7 +1835,7 @@ nav[class^="wrapper-"] > ul {
     }
     [class^="app-"] {
         transition-property: filter;
-        transition-duration: calc(500ms * var(--Flashcord-TransMult-Slow, 1));
+        transition-duration: var(--Flashcord-TransMult-Slow, 500ms);
         filter: blur(0px) brightness(0.8);
     }
     [class^="backdrop-"] {
@@ -1808,7 +1865,7 @@ nav[class^="wrapper-"] > ul {
     [class^="typing-"] {
         top: -24px;
         z-index: -1;
-        animation: FlashCore-FadeIn_Bottom calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+        animation: FlashCore-FadeIn_Bottom var(--Flashcord-AnimMult-Normal, 250ms) !important;
     }
     [class^="cooldownWrapper-"] {
         margin: auto !important;
@@ -1835,7 +1892,7 @@ nav[class^="wrapper-"] > ul {
         [class^="sprite-"], svg {
             opacity: 0.5;
             transition-property: opacity, scale;
-            transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+            transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
         }
         [class^="sprite-"]:hover, svg:hover {
             opacity: 0.8;
@@ -1858,17 +1915,60 @@ nav[class^="wrapper-"] > ul {
         width: fit-content;
         left: auto;
         right: 16px;
-        animation: FlashCore-FadeIn_Bottom calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+        animation: FlashCore-FadeIn_Bottom var(--Flashcord-AnimMult-Normal, 250ms) !important;
     }
     [class^="newMessagesBar-"] {
         width: fit-content;
         left: auto;
         right: 16px;
-        animation: FlashCore-FadeIn_Top calc(250ms * ( var(--Flashcord-AnimMult-Normal, 1) * var(--Flashcord-Animations, 1) ) ) !important;
+        animation: FlashCore-FadeIn_Top var(--Flashcord-AnimMult-Normal, 250ms) !important;
     }
     [class^="jumpToPresentBar-"] [class^="barButtonMain-"] {
         display: none;
     }
+}
+
+
+ol[class^="scrollerInner-"] {
+    container-name: var(--FlashCore-ChatEdits, FC-ChatEdits);
+    container-type: inline-size;
+}
+@container FC-ChatEdits (min-width: 0px) {
+
+    /* Better Embeds */
+    [id^="message-accessories-"]:has(article) {
+        display: table;
+    }
+    [id^="message-accessories-"]:has(article) article {
+        max-width: unset !important;
+        display: table-cell;
+    }
+    [id^="message-accessories-"]:has([href^="https://sirio-network.com/flashcord/store"]) article::after {
+        content: "✅ Flashcord Store Link";
+        display: block;
+        white-space: pre-warp;
+        width: 90%;
+        background: rgba(0,155,255,0.25);
+        border: 1px solid rgba(0,155,255,1);
+        border-radius: var(--Flashcord-Border_Radius, 25px );
+        padding: 1px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    [id^="message-accessories-"] article [class^="clickableWrapper-"] img,
+    [id^="message-accessories-"] article [class^="imageContent-"],
+    [id^="message-accessories-"] article [class^="imageContainer-"],
+    [id^="message-accessories-"] article [class^="imageWrapper-"],
+    [id^="message-accessories-"] article [class^="embedVideo-"] {
+        max-width: unset !important;
+        max-height: unset !important;
+        border-radius: var(--Flashcord-Border_Radius, 25px );
+    }
+
 }
 
 /* [END] = Flashcord Beta == Major General Modifications [00] ChatIn CSS = */
@@ -1913,7 +2013,7 @@ nav[class^="wrapper-"] > ul {
         flex-grow: 1;
         flex-basis: 1px;
         padding: 8px;
-        transition: calc(250ms * var(--AnimMult-Normal, 1));
+        transition: var(--Flashcord-AnimMult-Normal, 250ms);
         border-radius: var(--Flashcord-Border_Radius, 25px );
         scale: 0.95;
       }
@@ -1923,7 +2023,7 @@ nav[class^="wrapper-"] > ul {
         margin: 0 !important;
         padding: 8px !important;
         scale: 1.05;
-        transition: calc(250ms * var(--AnimMult-Normal, 1));
+        transition: var(--Flashcord-AnimMult-Normal, 250ms);
         border-radius: var(--Flashcord-Border_Radius, 25px );
     }
     [class^="role-"] {
@@ -2174,7 +2274,7 @@ nav[class^="wrapper-"] > ul {
     [class^="item-"] {
         border-radius: var(--Flashcord-Border_Radius, 25px);
         transition-property: background-color;
-        transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1));
+        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
 }
 
@@ -2184,7 +2284,7 @@ nav[class^="wrapper-"] > ul {
 
 [class^="updateIconForeground-"] {
     fill: red !important;
-    animation: FlashCore-Shake calc(100ms * var(--Enable-Animations, 1)) infinite;
+    animation: FlashCore-Shake calc(100ms * var(--Flashcord-Animations, 1)) infinite;
 }
 
 [href="https://support.discord.com"] {
@@ -2198,7 +2298,7 @@ nav[class^="wrapper-"] > ul {
 
 [class^="icon-"] {
     transition-property: scale;
-    transition-duration: calc(125ms * var(--Flashcord-TransMult-Fast, 1)) !important;
+    transition-duration: var(--Flashcord-TransMult-Fast, 125ms) !important;
 }
 [class^="icon-"]:hover {
     scale: 1.1;
@@ -2459,24 +2559,86 @@ html:has([href*="net.saltssaumure.piOS.asar"]) {
         display: grid;
     }
 
+    .replugged-addon-card:has([href*="SiriusBYT/ThemeHooker"]):before {
+        content: "🔧 Flashcord Compatibility: 💥 REQUIRED PLUGIN: Enables new Advanced Themes\A\A";
+    }
+    .replugged-addon-card:has([href*="SiriusBYT/ThemeHooker"]) .error-3GXRR-:after { /* [!] FC-Wildcard_PerfNuker */
+        content: "This plugin was approved for the Flashcord Store, but wasn't by Replugged, use at your own risk. Yes Replugged didn't approve this too. \A\A";
+        margin: 1px;
+        font-weight: normal;
+        font-size: small;
+    }
+    .replugged-addon-card:has([href*="SiriusBYT/ThemeHooker"]) .error-3GXRR- {
+        background: rgba(255,255,0,0.1);
+        border: 1px solid rgba(255,255,0,0.5);
+    }
+    .replugged-addon-card:has([href*="SiriusBYT/ThemeHooker"]) .iconDiv-3ISDKO {
+        display: none;
+    }
+
+    .replugged-addon-card:has([href*="ThemeHooker"]) {
+        order: -6948;
+    }
     .replugged-addon-card:has([href*="Magnificent"]):before {
-        content: "🔧 Flashcord Compatibility: ⚠️ REQUIRED PLUGIN: Enhances the Imagivid Module\A\A";
+        content: "🔧 Flashcord Compatibility: 💥 REQUIRED PLUGIN: Enhances the Imagivid Module\A\A";
     }
     .replugged-addon-card:has([href*="Magnificent"]) {
-        order: -6948;
+        order: -6900;
     }
     .replugged-addon-card:has([href*="dev.albertp.RoleDividers"]):before {
-        content: "🔧 Flashcord Compatibility: ⚠️ REQUIRED PLUGIN: Enhances the UPFG Module\A\A";
+        content: "🔧 Flashcord Compatibility: ⚠️ Recommended PLUGIN: Enhances the UPFG Module\A\A";
     }
     .replugged-addon-card:has([href*="dev.albertp.RoleDividers"]) {
-        order: -6948;
+        order: -6900;
     }
     .replugged-addon-card:has([href*="/store/dev.alyxia.greentext"]):before {
-        content: "🔧 Flashcord Compatibility: ⚠️ REQUIRED PLUGIN: Enhances the 4Chan Chat Effect\A\A";
+        content: "🔧 Flashcord Compatibility: ⚠️ Recommended Plugin: Enhances the 4Chan Chat Effect\A\A";
     }
     .replugged-addon-card:has([href*="/store/dev.alyxia.greentext"]) {
-        order: -6948;
+        order: -6000;
     }
+
+    /* Tharki-God Approve Store Plugins */
+    .replugged-addon-card:has([href*="Tharki-God/AlwaysTyping"], [href*="Tharki-God/DiscordBypasses"], [href*="Tharki-God/AtSomeone"], [href*="Tharki-God/FakeDeafen"]) .error-3GXRR- {
+        background: rgba(255,255,0,0.1);
+        border: 1px solid rgba(255,255,0,0.5);
+    }
+    .replugged-addon-card:has([href*="Tharki-God/AlwaysTyping"], [href*="Tharki-God/DiscordBypasses"], [href*="Tharki-God/AtSomeone"], [href*="Tharki-God/FakeDeafen"]) .iconDiv-3ISDKO {
+        display: none;
+    }
+    .replugged-addon-card:has([href*="Tharki-God/AlwaysTyping"], [href*="Tharki-God/DiscordBypasses"], [href*="Tharki-God/AtSomeone"], [href*="Tharki-God/FakeDeafen"]):before {
+        content: "✅ Flashcord Store Approved Plugin \A\A";
+    }
+    .replugged-addon-card:has([href*="Tharki-God/AlwaysTyping"], [href*="Tharki-God/DiscordBypasses"], [href*="Tharki-God/AtSomeone"], [href*="Tharki-God/FakeDeafen"]) {
+        order: -5120;
+    }
+    .replugged-addon-card:has([href*="Tharki-God/AlwaysTyping"], [href*="Tharki-God/DiscordBypasses"], [href*="Tharki-God/AtSomeone"], [href*="Tharki-God/FakeDeafen"]) .error-3GXRR-:after { /* [!] FC-Wildcard_PerfNuker */
+        content: "This plugin was approved for the Flashcord Store, but wasn't by Replugged, use at your own risk. \A\A";
+        margin: 1px;
+        font-weight: normal;
+        font-size: small;
+    }
+    .replugged-addon-card:has([href*="Tharki-God/AlwaysTyping"], [href*="Tharki-God/DiscordBypasses"], [href*="Tharki-God/AtSomeone"], [href*="Tharki-God/FakeDeafen"], [href*="SiriusBYT/ThemeHooker"]) .error-3GXRR- .text-sm-medium-2-Xzsi {
+        display: none;
+    }
+
+    /* EastArctica Approved Store Plugins */
+    .replugged-addon-card:has([href*="NoMoreForg"]):before {
+        content: "✅ Flashcord Store Approved Plugin \A\A";
+    }
+    .replugged-addon-card:has([href*="NoMoreForg"]) {
+        order: -5120;
+    }
+    /* For some reason, this plugin doesn't have the unapproved message. Probably due to a bug.
+    .replugged-addon-card:has([href*="NoMoreForg"]) .error-3GXRR-:after {
+        content: "This plugin was approved for the Flashcord Store, but wasn't by Replugged, use at your own risk. \A\A";
+        margin: 1px;
+        font-weight: normal;
+        font-size: small;
+    }
+    .replugged-addon-card:has(NoMoreForg) .error-3GXRR- .text-sm-medium-2-Xzsi {
+        display: none;
+    } */
 
     .replugged-addon-card:has([href*="dev.kingfish.InvisibleTyping"], [href*="dev.albertp.ChannelTyping"], [href*="dev.kingfish.BadgesEverywhere"], [href*="dev.tharki.ShowHiddenChannels"], [href*="com.cafeed28.NitroSpoof"], [href*="dev.tharki.LegalDiscordBypasses"], [href*="net.sammcheese.messageLogger"]):before {
         content: "🔧 Flashcord Compatibility: ❤️ Recommended\A\A";

@@ -24,24 +24,86 @@
         display: grid;
     }
 
+    .replugged-addon-card:has([href*="SiriusBYT/ThemeHooker"]):before {
+        content: "🔧 Flashcord Compatibility: 💥 REQUIRED PLUGIN: Enables new Advanced Themes\A\A";
+    }
+    .replugged-addon-card:has([href*="SiriusBYT/ThemeHooker"]) .error-3GXRR-:after { /* [!] FC-Wildcard_PerfNuker */
+        content: "This plugin was approved for the Flashcord Store, but wasn't by Replugged, use at your own risk. Yes Replugged didn't approve this too. \A\A";
+        margin: 1px;
+        font-weight: normal;
+        font-size: small;
+    }
+    .replugged-addon-card:has([href*="SiriusBYT/ThemeHooker"]) .error-3GXRR- {
+        background: rgba(255,255,0,0.1);
+        border: 1px solid rgba(255,255,0,0.5);
+    }
+    .replugged-addon-card:has([href*="SiriusBYT/ThemeHooker"]) .iconDiv-3ISDKO {
+        display: none;
+    }
+
+    .replugged-addon-card:has([href*="ThemeHooker"]) {
+        order: -6948;
+    }
     .replugged-addon-card:has([href*="Magnificent"]):before {
-        content: "🔧 Flashcord Compatibility: ⚠️ REQUIRED PLUGIN: Enhances the Imagivid Module\A\A";
+        content: "🔧 Flashcord Compatibility: 💥 REQUIRED PLUGIN: Enhances the Imagivid Module\A\A";
     }
     .replugged-addon-card:has([href*="Magnificent"]) {
-        order: -6948;
+        order: -6900;
     }
     .replugged-addon-card:has([href*="dev.albertp.RoleDividers"]):before {
-        content: "🔧 Flashcord Compatibility: ⚠️ REQUIRED PLUGIN: Enhances the UPFG Module\A\A";
+        content: "🔧 Flashcord Compatibility: ⚠️ Recommended PLUGIN: Enhances the UPFG Module\A\A";
     }
     .replugged-addon-card:has([href*="dev.albertp.RoleDividers"]) {
-        order: -6948;
+        order: -6900;
     }
     .replugged-addon-card:has([href*="/store/dev.alyxia.greentext"]):before {
-        content: "🔧 Flashcord Compatibility: ⚠️ REQUIRED PLUGIN: Enhances the 4Chan Chat Effect\A\A";
+        content: "🔧 Flashcord Compatibility: ⚠️ Recommended Plugin: Enhances the 4Chan Chat Effect\A\A";
     }
     .replugged-addon-card:has([href*="/store/dev.alyxia.greentext"]) {
-        order: -6948;
+        order: -6000;
     }
+
+    /* Tharki-God Approve Store Plugins */
+    .replugged-addon-card:has([href*="Tharki-God/AlwaysTyping"], [href*="Tharki-God/DiscordBypasses"], [href*="Tharki-God/AtSomeone"], [href*="Tharki-God/FakeDeafen"]) .error-3GXRR- {
+        background: rgba(255,255,0,0.1);
+        border: 1px solid rgba(255,255,0,0.5);
+    }
+    .replugged-addon-card:has([href*="Tharki-God/AlwaysTyping"], [href*="Tharki-God/DiscordBypasses"], [href*="Tharki-God/AtSomeone"], [href*="Tharki-God/FakeDeafen"]) .iconDiv-3ISDKO {
+        display: none;
+    }
+    .replugged-addon-card:has([href*="Tharki-God/AlwaysTyping"], [href*="Tharki-God/DiscordBypasses"], [href*="Tharki-God/AtSomeone"], [href*="Tharki-God/FakeDeafen"]):before {
+        content: "✅ Flashcord Store Approved Plugin \A\A";
+    }
+    .replugged-addon-card:has([href*="Tharki-God/AlwaysTyping"], [href*="Tharki-God/DiscordBypasses"], [href*="Tharki-God/AtSomeone"], [href*="Tharki-God/FakeDeafen"]) {
+        order: -5120;
+    }
+    .replugged-addon-card:has([href*="Tharki-God/AlwaysTyping"], [href*="Tharki-God/DiscordBypasses"], [href*="Tharki-God/AtSomeone"], [href*="Tharki-God/FakeDeafen"]) .error-3GXRR-:after { /* [!] FC-Wildcard_PerfNuker */
+        content: "This plugin was approved for the Flashcord Store, but wasn't by Replugged, use at your own risk. \A\A";
+        margin: 1px;
+        font-weight: normal;
+        font-size: small;
+    }
+    .replugged-addon-card:has([href*="Tharki-God/AlwaysTyping"], [href*="Tharki-God/DiscordBypasses"], [href*="Tharki-God/AtSomeone"], [href*="Tharki-God/FakeDeafen"], [href*="SiriusBYT/ThemeHooker"]) .error-3GXRR- .text-sm-medium-2-Xzsi {
+        display: none;
+    }
+
+    /* EastArctica Approved Store Plugins */
+    .replugged-addon-card:has([href*="NoMoreForg"]):before {
+        content: "✅ Flashcord Store Approved Plugin \A\A";
+    }
+    .replugged-addon-card:has([href*="NoMoreForg"]) {
+        order: -5120;
+    }
+    /* For some reason, this plugin doesn't have the unapproved message. Probably due to a bug.
+    .replugged-addon-card:has([href*="NoMoreForg"]) .error-3GXRR-:after {
+        content: "This plugin was approved for the Flashcord Store, but wasn't by Replugged, use at your own risk. \A\A";
+        margin: 1px;
+        font-weight: normal;
+        font-size: small;
+    }
+    .replugged-addon-card:has(NoMoreForg) .error-3GXRR- .text-sm-medium-2-Xzsi {
+        display: none;
+    } */
 
     .replugged-addon-card:has([href*="dev.kingfish.InvisibleTyping"], [href*="dev.albertp.ChannelTyping"], [href*="dev.kingfish.BadgesEverywhere"], [href*="dev.tharki.ShowHiddenChannels"], [href*="com.cafeed28.NitroSpoof"], [href*="dev.tharki.LegalDiscordBypasses"], [href*="net.sammcheese.messageLogger"]):before {
         content: "🔧 Flashcord Compatibility: ❤️ Recommended\A\A";

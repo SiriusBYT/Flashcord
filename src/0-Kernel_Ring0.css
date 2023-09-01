@@ -13,7 +13,7 @@
     color: white;
     text-align: center;
     white-space: pre;
-    animation: FlashCore-FadeIn_Bottom calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) ));
+    animation: FlashCore-FadeIn_Bottom var(--Flashcord-AnimMult-XSlow, 1s);
   }
   [class^="content-"]:before {
     content: "Flashcord";
@@ -25,7 +25,7 @@
     background-size: 32vw;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: FlashCore-BackXMTL calc(4s * var(--Enable-Animations, 1)) linear infinite !important;
+    animation: FlashCore-BackXMTL var(--Flashcord-AnimMult-XTXSlow, 4s) linear infinite !important;
   }
   [class^="content-"] {
     background: transparent;
@@ -34,7 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: FlashCore-FadeIn calc(1s * ( var(--Flashcord-AnimMult-XSlow, 1) * var(--Flashcord-Animations, 1) )) !important;
+    animation: FlashCore-FadeIn var(--Flashcord-AnimMult-XSlow, 1s) !important;
     background: rgba(0,0,0,0.9);
     backdrop-filter: blur(var(--Flashcord-Blur-Heavy, 16px));
   }
