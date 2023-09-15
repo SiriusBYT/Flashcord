@@ -1,0 +1,142 @@
+
+/* [START] = Flashcord Beta == Major General Modifications [00] ChatIn CSS = */
+
+/* Imagivid Zoom Core */
+[class^="layer-"]:has([class^="focusLock-"] [class*="downloadLink-"]) {
+    container-name: var(--FlashCore-ImagividZoom, FC-ImagividZoom);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-ImagividZoom (min-width: 0px) {
+    [class^="focusLock-"] [class^="imageWrapper-"]:hover { 
+        width: 90vw !important;
+        /*will-change: width, height;*/
+    }
+    [class^="focusLock-"] [class^="imageWrapper-"] { 
+        height: auto !important;
+        transition-property: width, height;
+        transition-duration: var(--Flashcord-TransMult-Slow, 500ms) !important;
+    }
+    [class^="focusLock-"] [class^="imageWrapper-"] [class^="wrapper-"] { 
+        width: auto !important;
+        height: auto !important;
+    }
+    [class^="focusLock-"] > div { 
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: scroll;
+        flex-direction: row;
+    }
+    [class^="carouselModal-"] {
+        justify-content: flex-start !important;
+    }
+    [class^="focusLock-"] img, [class^="focusLock-"] video, [class^="imageWrapper-"] [class^="wrapper"] {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        object-fit: contain;
+        overflow: scroll;
+    }
+    [class^="anchor-"] {
+        display: none;
+    }
+    [class*="modalCarouselWrapper-"] {
+        -webkit-box-align: unset !important;
+        align-items: unset !important;
+        margin: auto;
+        position: static;
+    }
+    [class*="modalCarouselWrapper-"] button {
+        margin: 0;
+    }
+}
+
+/* Chatype Bar
+[class^="chatContent-"] {
+    container-name: var(--Flashcord-Chatype, FC-Chatype-L1);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-Chatype-L1 (min-width: 0px) {
+    [class^="form-"] {
+        padding: 0 0px 0 8px;
+    }
+    [class^="channelTextArea-"] {
+        margin-bottom: 4px;
+    }
+    [class^="scrollableContainer-"] {
+        border-radius: var(--Flashcord-Border_Radius, 25px);
+        container-name: var(--Flashcord-Chatype, FC-Chatype-L2);
+        container-type: inline-size;
+    }
+    [class^="typing-"] {
+        top: -24px;
+        z-index: -1;
+        animation: FlashCore-FadeIn_Bottom var(--Flashcord-AnimMult-Normal, 250ms) !important;
+    }
+    [class^="cooldownWrapper-"] {
+        margin: auto !important;
+    }
+    @container FC-Chatype-L2 (min-width: 0px) {
+        [class^="inner-"] {
+            padding: 0 8px 0 8px;
+            display: flex;
+            align-items: center;
+        }
+        [class^="attachWrapper-"] {
+            translate: 4px;
+            margin: auto;
+            width: min-content;
+            height: min-content;
+        }
+        [class^="attachButton-"] {
+            width: min-content;
+            height: min-content;
+        }
+        [class^="placeholder-"] {
+            display: none;
+        }
+        [class^="sprite-"], svg {
+            opacity: 0.5;
+            transition-property: opacity, scale;
+            transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
+        }
+        [class^="sprite-"]:hover, svg:hover {
+            opacity: 0.8;
+            scale: 1.1;
+        }
+        [class^="sprite-"]:active, svg:active {
+            scale: 0.9;
+        }
+    }
+} 
+
+[class^="messagesWrapper-"] {
+    container-name: var(--Flashcord-JumpBars, FC-JumpBars);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-JumpBars (min-width: 0px) {
+    [class^="jumpToPresentBar-"] {
+        width: fit-content;
+        left: auto;
+        right: 16px;
+        animation: FlashCore-FadeIn_Bottom var(--Flashcord-AnimMult-Normal, 250ms) !important;
+    }
+    [class^="newMessagesBar-"] {
+        width: fit-content;
+        left: auto;
+        right: 16px;
+        animation: FlashCore-FadeIn_Top var(--Flashcord-AnimMult-Normal, 250ms) !important;
+    }
+    [class^="jumpToPresentBar-"] [class^="barButtonMain-"] {
+        display: none;
+    }
+} */
+
+/* [END] = Flashcord Beta == Major General Modifications [00] ChatIn CSS = */

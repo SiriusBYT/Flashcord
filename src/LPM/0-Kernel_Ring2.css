@@ -1,0 +1,97 @@
+
+/* [START] = Flashcord Beta == Kernel [02] CSS = */
+
+@keyframes FlashCore-FadeIn {
+    0% { opacity: 0; }
+    100% { opacity: inherit; }
+}
+@keyframes FlashCore-FadeOut {
+    0% { opacity: inherit; }
+    100% { opacity: 0; }
+}
+@keyframes FlashCore-FadeIn_Top {
+    0% { opacity: 0; translate: 0px -5vh; }
+    100% { opacity: inherit; translate: 0px 0vh; }
+}
+@keyframes FlashCore-FadeIn_Bottom {
+    0% { opacity: 0; translate: 0px 5vh; }
+    100% { opacity: inherit; translate: 0px 0vh; }
+}
+@keyframes FlashCore-Splash {
+    0% { scale: 0.8; }
+    100% { scale: 1.0; }
+} 
+
+
+@keyframes Flashcord-Welcome_Win11 {
+    0% { scale: 0.95; opacity: 0;}
+    90% { scale: 0.98; opacity: 1;}
+    100% { scale: 1.0; }
+} 
+
+@keyframes Flashcord-MSG_Upload {
+    0% { opacity: 0; }
+    100% { opacity: 0.5; }
+}
+@keyframes Flashcord-MSG_Uploaded {
+    0% { opacity: 0.5; transform: translateX(10vw); }
+    100% { opacity: 1; transform: translateX(0vw); }
+}
+
+@keyframes Flashcord-SearchSlide {
+    0% { translate: 50vw; }
+    100% { translate: 0vw;}
+}
+
+@keyframes Flashcord-GuildPulse {
+    0% {  filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px) rgb(255,0,0));}
+    15% {  filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px) rgb(255,127,0));}
+    30% {  filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px)  rgb(255,255,0));}
+    45% {  filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px) rgb(0,255,0));}
+    60% {  filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px) rgb(0,0,255));}
+    75% {  filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px) rgb(170,0,170));}
+    90% {  filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px) rgb(255,170,255));}
+    100% {  filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px) rgb(255,0,0));}
+}
+
+@keyframes Flashcord-DNAO_Ripple {
+    0% { scale: 0; opacity: 0; }
+    20% { opacity: 1;}
+    100% { scale: 2; opacity: 0; }
+}
+
+@keyframes Flashcord-Rainbow_BGR {
+    0% { background: rgba(255,0,0,0.25); }
+    20% { background: rgba(255,255,0,0.25); }
+    40% { background: rgba(0,255,0,0.25); }
+    60% { background: rgba(0,255,255,0.25); }
+    80% { background: rgba(0,0,255,0.25); }
+    99% { background: rgba(255,0,255,0.25); }
+    100% { background: rgba(255,0,0,0.25); }
+}
+
+@keyframes FlashCore-BackXMTL {
+    0% { background-position-x: 0%;}
+    100% { background-position-x: 100vw;}
+}
+
+@keyframes FlashCore-Shake {
+    0% {translate: 1px 1px;}
+    25% {translate: -1px -1px;}
+    50% {translate: 1px -1px;}
+    75% {translate: -1px 1px;}
+    100% {translate: 0px 1px;}
+}
+
+@keyframes Flashcord-PopUp_In {
+    0% {
+        scale: 0.9;
+        opacity: 0;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+
+/* [END] = Flashcord Beta == Kernel [02] CSS = */

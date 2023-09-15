@@ -1,0 +1,10 @@
+
+/* [Start] = Flashcord Beta == Small Modifications - BaseLayer CSS = */
+
+/* @ Before Usernames */
+[class^="userTagUsernameBase-"]:before, [class^="usernameInnerRow-"]:before {
+    content: "@"
+}
+
+
+/* [End] = Flashcord Beta == Small Modifications - BaseLayer CSS = */

@@ -1,0 +1,14 @@
+
+/* [Start] = Flashcord Beta == Small Modifications - Popup CSS = */
+
+[class^="submenuPaddingContainer-"] {
+    padding: 0;
+    margin: 4px;
+}
+
+[class^="tooltip-"] {
+    border-radius: var(--Flashcord-Border_Radius, 25px);
+}
+[class^="tooltipPointer-"] { display: none; }
+
+/* [End] = Flashcord Beta == Small Modifications - Popup CSS = */

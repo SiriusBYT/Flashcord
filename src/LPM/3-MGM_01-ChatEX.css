@@ -1,0 +1,78 @@
+
+/* [START] = Flashcord Beta == Major General Modifications [00] ChatEx CSS = */
+
+/* Channel Slide Core */
+[class^="base-"] > [class^="content-"]:first-of-type {
+    container-name: var(--FlashCore-ChatSlide, FC-ChatSlide_SNDL);
+    container-type: inline-size;
+    contain: paint;
+}
+[class^="content-"]:has([class*="threadSidebarOpen-"]) {
+    container-name: FC-VOID;
+}
+
+@container FC-ChatSlide_SNDL (min-width: 0px) {
+    [class^="sidebar-"] {
+        z-index: 0;
+    }
+    [class^="chat-"]:not(:has([role="complementary"], [class^="submitContainer-"])) {
+        margin-right: -200px;
+        translate: -198px;
+        transition-property: translate;
+        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
+    }
+    :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .chat-2ZfjoI { /* [!] FC-Wildcard_PerfNuker */
+        translate: 0px;
+        /*will-change: translate;*/
+    }
+    [class^="chat-"]:has([class^="pageBody-"]) {
+      margin-right: 0;
+      translate: 0;
+    }
+}
+
+/* Member Slide Core */
+[class^="chat-"] {
+    container-name: var(--FlashCore-MemberSlide, FC-MemberSlide);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-MemberSlide (min-width: 0px) {
+    [class^="membersWrap-"] {
+        position: relative;
+        margin-left: -190px;
+        translate: 190px;
+        height: 100%;
+        z-index: 1;
+
+        transition-property: translate, filter;
+        transition-duration: var(--Flashcord-TransMult-Normal, 250ms);
+    }
+    [class^="membersWrap-"]:hover { translate: 0px; filter: drop-shadow(0px 0px 16px var(--channeltextarea-background));  }
+    [class^="member-"] { margin-left: 0px; }
+    [class^="member-"] > div {
+        padding-top: 0px;
+        padding-bottom: 0px;
+        border-radius: var(--Flashcord-Border_Radius, 25px) !important;
+        transition-property: scale, translate;
+        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
+    }
+    [class^="member-"]:hover > div {
+        scale: 1.05;
+        translate: 6px;
+        /*will-change: scale, translate;*/
+    }
+    [class^="membersGroup-"] {  
+        text-align: right;
+        padding: 8px 8px 0 64px;
+        height: auto;
+        opacity: 0.25;
+
+        transition-property: opacity;
+        transition-duration: var(--Flashcord-TransMult-Slow, 500ms);
+    }
+    [class^="membersGroup-"]:hover { opacity: 1; }
+}
+
+/* [END] = Flashcord Beta == Major General Modifications [00] ChatEx CSS = */
