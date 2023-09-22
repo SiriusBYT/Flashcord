@@ -1,7 +1,7 @@
 {
-  "name": "Flashcord Beta (SID)",
-  "version": "bSID-230826",
-  "description": "[!] Make sure to read the Flashcord Wiki! [!] The world's most advanced, complex and feature rich Discord Theme to ever exist. A complete visual overhaul for Discord.",
+  "name": "Flashcord for Low-End Systems (LPM)",
+  "version": "aLPM-1.0",
+  "description": "[⚠️] Make sure to read the Flashcord Wiki! [⚠️] The world's most advanced, complex and feature rich Discord Theme to ever exist. A complete visual overhaul for Discord.",
   "engines": {
     "node": ">=18.0.0",
     "pnpm": ">=8.0.0"

@@ -197,6 +197,7 @@
 @container FC-Chatype-L1 (min-width: 0px) {
     [class^="form-"] {
         padding: 0 0px 0 8px;
+        z-index: 1;
     }
     [class^="channelTextArea-"] {
         margin-bottom: 4px;
@@ -208,7 +209,6 @@
     }
     [class^="typing-"] {
         top: -24px;
-        z-index: -1;
         animation: FlashCore-FadeIn_Bottom var(--Flashcord-AnimMult-Normal, 250ms) !important;
     }
     [class^="cooldownWrapper-"] {
@@ -281,13 +281,19 @@ ol[class^="scrollerInner-"] {
 
     /* Better Embeds */
     [id^="message-accessories-"]:has(article) {
-        display: table;
+        display: table-row;
+        max-width: unset !important;
+        max-height: fit-content !important;
     }
-    [id^="message-accessories-"]:has(article) article {
+    [id^="message-accessories-"]:has([class^="embedVideo-"]) {
+        display: block !important;
+    }
+    [id^="message-accessories-"] article:not(:has([class^="embedVideo-"])) {
         max-width: unset !important;
         display: table-cell;
     }
-    [id^="message-accessories-"]:has([href^="https://sirio-network.com/flashcord/store"]) article::after {
+    
+    article:has([href^="https://sirio-network.com/flashcord/store"])::after { /* May cause performance issues in the long run?*/
         content: "✅ Flashcord Store Link";
         display: block;
         white-space: pre-warp;
@@ -306,12 +312,37 @@ ol[class^="scrollerInner-"] {
     [id^="message-accessories-"] article [class^="clickableWrapper-"] img,
     [id^="message-accessories-"] article [class^="imageContent-"],
     [id^="message-accessories-"] article [class^="imageContainer-"],
-    [id^="message-accessories-"] article [class^="imageWrapper-"],
-    [id^="message-accessories-"] article [class^="embedVideo-"] {
+    [id^="message-accessories-"] article [class^="imageWrapper-"], 
+    /*[id^="message-accessories-"] article [class^="embedMedia-"],*/
+    [id^="message-accessories-"] article .video-stream {
         max-width: unset !important;
         max-height: unset !important;
+        width: 100% !important;
+        /*height: 100% !important;*/
         border-radius: var(--Flashcord-Border_Radius, 25px );
     }
+    [class^="reactions-"] {
+        max-width: 123px;
+    }
+    [class^="reactions-"] > div {
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+    [id^="message-accessories-"] article iframe {
+        border-radius: var(--Flashcord-Border_Radius, 25px );
+    }
+    
+    /*
+    [class^="reactions-"] {
+        display: table-row;
+    }
+    [class^="reactions-"] > div:has([class^="reaction-"]),
+    [class^="reaction-"] {
+        display: table-cell;
+    }
+    [class^="reactions-"] > div:first-of-type {
+        display: none;
+    }*/
 
 }
 

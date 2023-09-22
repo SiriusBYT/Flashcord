@@ -42,12 +42,15 @@
       /*will-change: width;*/
     }
     [class^="newChannel-"] { display: none; }
-    nav[class^="container-"] div[class^="name-"], nav[class^="container-"] [class^="spine-"], nav[class^="container-"] [class^="spineBorder-"] {
+    nav[class^="container-"] div[class^="name-"],
+    nav[class^="container-"] [class^="spine-"],
+    nav[class^="container-"] [class^="spineBorder-"],
+    [class^="voiceChannelsButton-"] {
       opacity: 0;
       transition-property: opacity;
       transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
-    [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover, nav:hover) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1), /* [!] FC-Wildcard_PerfNuker */
+    [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover, nav:hover) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1, .voiceChannelsButton-SRmgo8), /* [!] FC-Wildcard_PerfNuker */
     [class^="notAppAsidePanel-"]:has([id*="guild-"]) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1) { /* [!] FC-Wildcard_PerfNuker */
       opacity: 1 !important;
     }

@@ -34,10 +34,10 @@ This license requires that reusers give credit to the creator. It allows reusers
   
   --Flashcord-Branch: "Flashcord Beta";
   --Flashcord-Channel: "bSID";
-  --Flashcord-Version: "230901";
+  --Flashcord-Version: "230922";
 
-  --Flashcord-Splash: "help my k100 air dissapeared \A out of thin air today";
-  --Flashcord-SplashSca: 0.9;
+  --Flashcord-Splash: "HOLY SHIT DUDE \A FLASHCORD UPDATE OUT";
+  --Flashcord-SplashSca: 1;
   --Flashcord-SplashTrX: 0px;
   --Flashcord-SplashTrY: 0px;
   --Flashcord-SplashMAR: 40px;
@@ -1391,12 +1391,15 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
       /*will-change: width;*/
     }
     [class^="newChannel-"] { display: none; }
-    nav[class^="container-"] div[class^="name-"], nav[class^="container-"] [class^="spine-"], nav[class^="container-"] [class^="spineBorder-"] {
+    nav[class^="container-"] div[class^="name-"],
+    nav[class^="container-"] [class^="spine-"],
+    nav[class^="container-"] [class^="spineBorder-"],
+    [class^="voiceChannelsButton-"] {
       opacity: 0;
       transition-property: opacity;
       transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
-    [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover, nav:hover) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1), /* [!] FC-Wildcard_PerfNuker */
+    [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover, nav:hover) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1, .voiceChannelsButton-SRmgo8), /* [!] FC-Wildcard_PerfNuker */
     [class^="notAppAsidePanel-"]:has([id*="guild-"]) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1) { /* [!] FC-Wildcard_PerfNuker */
       opacity: 1 !important;
     }
@@ -1853,6 +1856,7 @@ nav[class^="wrapper-"] > ul {
 @container FC-Chatype-L1 (min-width: 0px) {
     [class^="form-"] {
         padding: 0 0px 0 8px;
+        z-index: 1;
     }
     [class^="channelTextArea-"] {
         margin-bottom: 4px;
@@ -1864,7 +1868,6 @@ nav[class^="wrapper-"] > ul {
     }
     [class^="typing-"] {
         top: -24px;
-        z-index: -1;
         animation: FlashCore-FadeIn_Bottom var(--Flashcord-AnimMult-Normal, 250ms) !important;
     }
     [class^="cooldownWrapper-"] {
@@ -1937,13 +1940,19 @@ ol[class^="scrollerInner-"] {
 
     /* Better Embeds */
     [id^="message-accessories-"]:has(article) {
-        display: table;
+        display: table-row;
+        max-width: unset !important;
+        max-height: fit-content !important;
     }
-    [id^="message-accessories-"]:has(article) article {
+    [id^="message-accessories-"]:has([class^="embedVideo-"]) {
+        display: block !important;
+    }
+    [id^="message-accessories-"] article:not(:has([class^="embedVideo-"])) {
         max-width: unset !important;
         display: table-cell;
     }
-    [id^="message-accessories-"]:has([href^="https://sirio-network.com/flashcord/store"]) article::after {
+    
+    article:has([href^="https://sirio-network.com/flashcord/store"])::after { /* May cause performance issues in the long run?*/
         content: "✅ Flashcord Store Link";
         display: block;
         white-space: pre-warp;
@@ -1962,12 +1971,37 @@ ol[class^="scrollerInner-"] {
     [id^="message-accessories-"] article [class^="clickableWrapper-"] img,
     [id^="message-accessories-"] article [class^="imageContent-"],
     [id^="message-accessories-"] article [class^="imageContainer-"],
-    [id^="message-accessories-"] article [class^="imageWrapper-"],
-    [id^="message-accessories-"] article [class^="embedVideo-"] {
+    [id^="message-accessories-"] article [class^="imageWrapper-"], 
+    /*[id^="message-accessories-"] article [class^="embedMedia-"],*/
+    [id^="message-accessories-"] article .video-stream {
         max-width: unset !important;
         max-height: unset !important;
+        width: 100% !important;
+        /*height: 100% !important;*/
         border-radius: var(--Flashcord-Border_Radius, 25px );
     }
+    [class^="reactions-"] {
+        max-width: 123px;
+    }
+    [class^="reactions-"] > div {
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+    [id^="message-accessories-"] article iframe {
+        border-radius: var(--Flashcord-Border_Radius, 25px );
+    }
+    
+    /*
+    [class^="reactions-"] {
+        display: table-row;
+    }
+    [class^="reactions-"] > div:has([class^="reaction-"]),
+    [class^="reaction-"] {
+        display: table-cell;
+    }
+    [class^="reactions-"] > div:first-of-type {
+        display: none;
+    }*/
 
 }
 
