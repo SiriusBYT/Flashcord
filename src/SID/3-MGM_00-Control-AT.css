@@ -37,8 +37,8 @@
     line-height: normal;
     text-align: left !important;
   }
-  [class^=marginTop8-] [class^="header-"] { display: block; }
-  [class^=marginTop8-] [class^="header-"]:before {
+  section > [class^="header-"] { display: block; }
+  section > [class^="header-"]::before {
     content: "📸 Flashcord Advanced Themes";
     color: var(--text-normal);
     white-space: pre-line;
@@ -47,7 +47,7 @@
     text-transform: none;
     line-height: normal;
   }
-  [class^=marginTop8-] [class^="header-"] > :before {
+  section > [class^="header-"] > :before {
     content: "⚠️ Advanced Themes require LegalDiscordBypasses or Discord Nitro to enable them. \A ⛔ ThemeHooker is missing. Certain themes have been removed.";
     color: var(--text-normal);
     white-space: pre-line;

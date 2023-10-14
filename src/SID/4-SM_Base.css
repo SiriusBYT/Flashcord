@@ -1,11 +1,13 @@
 
 /* [Start] = Flashcord Beta == Small Modifications - BaseLayer CSS = */
 
+/* update your fucking client nerd, and then cry cause replugged unplugged itself cuz discord bad >:( */
 [class^="updateIconForeground-"] {
     fill: red !important;
     animation: FlashCore-Shake calc(100ms * var(--Flashcord-Animations, 1)) infinite;
 }
 
+/* Real men don't need help. */
 [href="https://support.discord.com"] {
     display: none;
 }
@@ -15,6 +17,7 @@
     content: "@"
 }
 
+/* Icon Hover Response */
 [class^="icon-"] {
     transition-property: scale;
     transition-duration: var(--Flashcord-TransMult-Fast, 125ms) !important;

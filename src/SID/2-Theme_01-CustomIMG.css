@@ -50,9 +50,15 @@ html[theme-hooker="theme-mint-apple"] {
 }
 [theme-hooker="theme-sunset"] {
     --FlashCore-Brightness: 2;
+    --background-floating: rgba(6,6,6,0.5);
+    --background-modifier-selected: rgba(16,16,16,0.5);
+    --background-modifier-hover: rgba(22,22,22,0.5);
 }
 [theme-hooker="theme-mint-apple"] {
     --FlashCore-Brightness: 1;
+    --background-floating: rgba(155,155,155,0.5);
+    --background-modifier-selected: rgba(200,200,200,0.5);
+    --background-modifier-hover: rgba(255,255,255,0.5);
 }
 
 @container FC-Theme_Hooker (min-width: 0px) {

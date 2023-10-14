@@ -34,10 +34,11 @@ This license requires that reusers give credit to the creator. It allows reusers
   
   --Flashcord-Branch: "Flashcord Beta";
   --Flashcord-Channel: "bSID";
-  --Flashcord-Version: "230922";
+  --Flashcord-Version: "231014";
+  --Flashcord-DebugMode: "SHOW_MODULES";
 
-  --Flashcord-Splash: "HOLY SHIT DUDE \A FLASHCORD UPDATE OUT";
-  --Flashcord-SplashSca: 1;
+  --Flashcord-Splash: "have you heard the \A big chungus in pd3?";
+  --Flashcord-SplashSca: 1.1;
   --Flashcord-SplashTrX: 0px;
   --Flashcord-SplashTrY: 0px;
   --Flashcord-SplashMAR: 40px;
@@ -89,10 +90,7 @@ body {
   --bg-overlay-4: transparent;
   --bg-overlay-5: transparent;
   --bg-overlay-6: transparent;
-
-  --background-floating: rgba(6,6,6,0.5);
-  --background-modifier-selected: rgba(16,16,16,0.5);
-  --background-modifier-hover: rgba(22,22,22,0.5);
+  
   --FlashCore-ChatSlide: FC-ChatSlide_Legacy;
   --FlashCore-Brightness: 0.5;
 }
@@ -403,10 +401,10 @@ body:before {
         white-space: pre;
         opacity: 0.8;
         background-image: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,127,0,1) 15%, rgba(255,255,0,1) 30%, rgba(0,255,0,1) 45%, rgba(0,0,255,1) 60%, rgba(170,0,170,1) 75%, rgba(255,170,255,1) 90%, rgba(255,0,0,1) 100%);
-        background-size: 64vw;
+        background-size: 100vw;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: FlashCore-BackXMTL calc(8s * var(--Flashcord-Animations, 1)) linear infinite !important;
+        animation: FlashCore-BackXMTL calc(4s * var(--Flashcord-Animations, 1)) linear infinite !important;
         margin-bottom: var(--Flashcord-SplashMAR, 20px);
     }
     
@@ -476,67 +474,149 @@ body:before {
 
 /* [Start] = Flashcord Beta == Kernel - Serial CSS = */
 
-html:has(link[href*="replugged"]) {
-    --FlashCore-Client: "🔌 Replugged";
-}
-html:has(#vencord-margins) {
-    --FlashCore-Client: "✨ Vencord";
-}
-html:has(body[class*="bd"]) {
-    --FlashCore-Client: "🩹 BetterDiscord";
+[class^="notAppAsidePanel-"] {
+    container-name: var(--Flashcord-DebugMode, FC-VOID);
+    container-type: inline-size;
 }
 
-html.platform-win {
-    --FlashCore-OS: "🪟 Windows"
-}
-html.platform-osx {
-    --FlashCore-OS: "🍎 MacOS"
-}
-html.platform-linux {
-    --FlashCore-OS: "🐧 GNU/Linux"
+@container SHOW_MODULES (min-width: 0px) {
+
 }
 
-html.theme-light {
-    --FlashCore-Theme: "☀️ Light Mode";
-}
-html.theme-dark {
-    --FlashCore-Theme: "🌙 Dark Mode";
-}
-html.theme-dark.custom-theme-background {
-    --FlashCore-Theme: "🖼️ Custom Background Mode" !important;
-}
-html.theme-light.custom-theme-background {
-    --FlashCore-Theme: "👻 Transparent Mode" !important;
-}
 
-html:has([content*="canary"]) {
-    --FlashCore-Discord_Branch: "Canary";
-}
-html:has([content*="ptb"]) {
-    --FlashCore-Discord_Branch: "Public Beta Test";
-}
 
-html:has(link[href*="com.sirio-network.flashcord.asar"]) {
-    --FlashCore-Import_Method: "🔥 Addon Method";
-}
+/* General Information */
+html.platform-win { --FlashCore-OS: "🪟 Windows" }
+html.platform-osx { --FlashCore-OS: "🍎 MacOS" }
+html.platform-linux { --FlashCore-OS: "🐧 GNU/Linux" }
+html:has(link[href*="replugged"]) { --FlashCore-Client: "🔌 Replugged"; }
+html:has(#vencord-margins) { --FlashCore-Client: "✨ Vencord"; }
+html:has(body[class*="bd"]) { --FlashCore-Client: "🩹 BetterDiscord [UNSUPPORTED]"; }
+html:has([content*="canary"]) { --FlashCore-Discord_Branch: "Canary"; }
+html:has([content*="ptb"]) { --FlashCore-Discord_Branch: "Public Beta Test"; }
 
-[id^="message-content-"]:has(a[href="http://flashcord/debug"]):after {
+/* Theming Related Shenanigans */
+html.theme-light { --FlashCore-Theme: "☀️ Light Mode"; }
+html.theme-dark { --FlashCore-Theme: "🌙 Dark Mode"; }
+[theme-hooker*="-"] { --FlashCore-ThemeHooker_Present: "✅ True"; }
+[theme-hooker="theme-mint-apple"] { --FlashCore-Theme: "🖼️ Custom Background Mode (Light) // Mint Apple" !important; }
+[theme-hooker="theme-citrus-sherbert"] { --FlashCore-Theme: "💥 Iridescent Mode (Light) // Citrus Sherbert" !important; }
+[theme-hooker="theme-retro-raincloud"] { --FlashCore-Theme: "🌌 Unknown // Retro Raincloud" !important; }
+[theme-hooker="theme-hanami"] { --FlashCore-Theme: "🌌 Unknown // Hanami" !important; }
+[theme-hooker="theme-sunrise"] { --FlashCore-Theme: "🌌 Unknown // Sunrise" !important; }
+[theme-hooker="theme-cotton-candy"] { --FlashCore-Theme: "🌌 Unknown // Candyfloss" !important; }
+[theme-hooker="theme-lofi-vibes"] { --FlashCore-Theme: "🌌 Unknown // Lofi-Vibes" !important; }
+[theme-hooker="theme-desert-khaki"] { --FlashCore-Theme: "🌌 Unknown // Desert Khaki" !important; }
+[theme-hooker="theme-sunset"] { --FlashCore-Theme: "🖼️ Custom Background Mode (Dark) // Sunset" !important; }
+[theme-hooker="theme-chroma-glow"] { --FlashCore-Theme: "💥 Iridescent Mode (Dark) // Chroma Glow" !important; }
+[theme-hooker="theme-forest"] { --FlashCore-Theme: "🌌 Unknown // Forest" !important; }
+[theme-hooker="theme-crimson-moon"] { --FlashCore-Theme: "🌌 Unknown // Crimson Moon" !important; }
+[theme-hooker="theme-midnight-burple"] { --FlashCore-Theme: "🌌 Unknown // Midnight Burple" !important; }
+[theme-hooker="theme-mars"] { --FlashCore-Theme: "🌌 Unknown // Mars" !important; }
+[theme-hooker="theme-dusk"] { --FlashCore-Theme: "🌌 Unknown // Dusk" !important; }
+[theme-hooker="theme-under-the-sea"] { --FlashCore-Theme: "🌌 Unknown // Under the Sea" !important; }
+[theme-hooker="theme-retro-storm"] { --FlashCore-Theme: "🌌 Unknown // Retro Storm" !important; }
+[theme-hooker="theme-neon-lights"] { --FlashCore-Theme: "🌌 Unknown // Neon Lights" !important; }
+[theme-hooker="theme-strawberry-lemonade"] { --FlashCore-Theme: "🌌 Unknown // Strawberry Lemonade" !important; }
+[theme-hooker="theme-aurora"] { --FlashCore-Theme: "🌌 Unknown // Aurora" !important; }
+[theme-hooker="theme-sepia"] { --FlashCore-Theme: "👻 Transparent Mode // Sepia" !important; }
+[theme-hooker="theme-easter-egg"] { --FlashCore-Theme: "🌌 Unknown // Memory Lane" !important; }
+
+
+
+
+[id^="message-content-"]:has(a[href="http://flashcord/debug"], a[href="http://flashcord/debug/modules"], a[href="http://flashcord/debug/variables"], a[href="http://flashcord/debug/store"] ) {
+    line-height: 15px !important;
+    border-radius: 25px;
+    padding: 8px;
+    background-image: url("https://sirio-network.com/flashcord/ressources/backgrounds/BasicGrid-Dark_Fast.gif");
+    background-size: cover;
+}
+[id^="message-content-"]:has(a[href="http://flashcord/debug"])::after {
+    color: white;
+    font-size: smaller;
     white-space: pre-wrap;
+    width: 100%;
     content: 
-"\A\A💿 FLASHCORD DEBUG INFORMATION - This information is only visible to you, please screenshot it and send it to @SiriusBYT for debug purposes if needed. \A\A \
+"\A\A🚧 FLASHCORD DEBUG INFORMATION 🚧\A \
+This information is only visible to you, please screenshot it and send it to @SiriusBYT for debug purposes if needed. \A\A \
 📸 -- Flashcord Information \A
-    🔄️ Flashcord Branch: " var(--Flashcord-Branch) "\A \
-    🔗 Flashcord Channel: " var(--Flashcord-Channel) "\A \
-    💡 Flashcord Version: " var(--Flashcord-Version) "\A \
-    ⬇️ Flashcord Import Method: " var(--FlashCore-Import_Method, "🌐 @Import Method") " \A\A \
-💬 -- Discord Client Information \A\A \
-    🌳 Detected Discord Branch: " var(--FlashCore-Discord_Branch, 'Stable') " \A \
-    💻 Detected Operating System: " var(--FlashCore-OS, '⛔ CRITICAL ERROR: NO OS WAS DETECTED') "\A \
-    🎯 Detected Client: " var(--FlashCore-Client, '⛔ CRITICAL ERROR: NO CLIENT WAS DETECTED') "\A \
-    🌈 Detected Theme: " var(--FlashCore-Theme, '⛔ CRITICAL ERROR: NO THEME WAS DETECTED') "\A\A \
-🛠️ -- FlashCore Modules \A\A \
-    TBD \A\A \
+    🔄️ Branch: " var(--Flashcord-Branch) "\A \
+    🔗 Channel: " var(--Flashcord-Channel) "\A \
+    💡 Version: " var(--Flashcord-Version) "\A \
+💬 -- Discord Client Information \A \
+    🌳 Discord Branch: " var(--FlashCore-Discord_Branch, 'Stable') " \A \
+    💻 Operating System: " var(--FlashCore-OS, '🚧 404 🚧') "\A \
+    🎯 Client Modification: " var(--FlashCore-Client, '🚧 404 🚧') "\A \
+    🔧 ThemeHooker Present: " var(--FlashCore-ThemeHooker_Present, '❌ False') "\A \
+    🌈 Detected Basic Theme: " var(--FlashCore-Theme, '🚧 404 🚧') "\A\A \
 ⚠️ Please also send the contents of your QuickCSS if you modified any Flashcord Variables. \A\A \
+== End of Flashcord's Debug Information. == \A\A";
+}
+
+[id^="message-content-"]:has(a[href="http://flashcord/debug/modules"])::after {
+    color: white;
+    font-size: smaller;
+    white-space: pre-wrap;
+    width: 100%;
+    content: 
+"\A\A🚧 FLASHCORD INTERNAL MODULES DEBUG INFORMATION 🚧\A \
+This information is only visible to you, please screenshot it and send it to @SiriusBYT for debug purposes if needed. \A\A \
+🛠️ -- FlashCore Modules \A\A \
+📁 LOCATION: 0-BIOS.css \A \
+    --FlashCore-Idle_Optimizations: " var(--FlashCore-Idle_Optimizations, 'FC-Idle_OptiMin')"\A\A \
+📁 LOCATION: 0-Kernel_Ring0.css \A \
+    --Flashcord-Blackout: " var(--Flashcord-Blackout, 'FC-Boot_Blackout-Android')"\A\A \
+📁 LOCATION: 3-MGM_00-Control-XXX.css \A \
+    --FlashCore-MGM-Control: " var(--FlashCore-MGM-Control, 'FC-ControlPanel_PopUp')"\A\A \
+    --FlashCore-SPGO_MAT: " var(--FlashCore-SPGO_MAT, 'FC-SPGO_MAT')"\A \
+    --FlashCore-SPGO_AT: " var(--FlashCore-SPGO_AT, 'FC-SPGO_AT')"\A\A \
+📁 LOCATION: 3-MGM_01-ChatEX.css \A \
+    --FlashCore-ChatSlide: [🤬 Cannot Check due to a Bug!] \A \
+    --FlashCore-MemberSlide: " var(--FlashCore-MemberSlide, 'FC-MemberSlide')"\A \
+    --FlashCore-GuildNav_Notification: " var(--FlashCore-GuildNav_Notification, 'FC-GuildNav_Animated')"\A \
+    --FlashCore-GuildNav_Compact: " var(--FlashCore-GuildNav_Compact, 'FC-GuildNav_Compact')"\A \
+    --FlashCore-ChannelNav_Compact: " var(--FlashCore-ChannelNav_Compact, 'FC-ChannelNav_Compact')"\A \
+    --FlashCore-ChannelNav_Notification: [🤬 Cannot Check due to a Bug!] \A\A \
+    --FlashCore-MessageSlide: " var(--FlashCore-MessageSlide, 'FC-MessageSlide')"\A \
+    --Flashcord-Jumbomojis: " var(--Flashcord-Jumbomojis, 'FC-Jumbomojis')"\A \
+    --FC-Shadowmage: " var(--FC-Shadowmage, '1px')"\A \
+    --FlashCore-ImagividZoom: " var(--FlashCore-ImagividZoom, 'FC-ImagividZoom')"\A \
+    --FlashCore-Menthrepin: " var(--FlashCore-Menthrepin, 'FC-Menthrepin')"\A \
+    --FlashCore-Xearch: " var(--FlashCore-Xearch, 'FC-Xearch')"\A \
+    --Flashcord-Stimogi: " var(--Flashcord-Stimogi, 'FC-Stimogi')"\A \
+    --Flashcord-Focus: " var(--Flashcord-Focus, 'FC-Focus')"\A \
+    --Flashcord-Chatype: " var(--Flashcord-Chatype, 'FC-Chatype-L1')"\A \
+    --Flashcord-JumpBars: " var(--Flashcord-JumpBars, 'FC-JumpBars')"\A \
+    --FlashCore-ChatEdits: " var(--FlashCore-ChatEdits, 'FC-ChatEdits')"\A\A \
+📁 LOCATION: 3-MGM_02-OTUI_Base \A \
+    --FlashCore-Friends: " var(---FlashCore-Friends, 'FC-FlexGrid')"\A \
+    --FlashCore-Replugged_Addons: " var(--FlashCore-Replugged_Addons, 'FC-FlexGrid')"\A \
+    --FlashCore-UPFG: " var(--FlashCore-UPFG, 'FC-FlexGrid')"\A \
+    --FlashCore-Call: " var(--FlashCore-Call, 'FC-Call')"\A\A \
+📁 LOCATION: 3-MGM_02-OTUI_Pop.css \A \
+    --FlashCore-UPMO: " var(--FlashCore-UPMO, 'FC-UPMO')"\A \
+    --FlashCore-UPRAL: " var(--FlashCore-UPRAL, 'FC-UPRAL')"\A \
+    --Flashcord-PopMenu: " var(--Flashcord-PopMenu, 'FC-PM')"\A\A \
+📁 LOCATION: 4-SM_UnNitrofy.css \A \
+    --FlashCore-DeNitrofy: " var(--FlashCore-DeNitrofy, 'FC-DeNitrofy')"\A\A \
+📁 LOCATION: 5-ChatEffects_CD.css \A \
+    --Flashcord-Chat_Effects: " var(--Flashcord-Chat_Effects, 'FC-ChatEffects_Animated')"\A\A \
+== End of Flashcord's Debug Information. == \A\A";
+}
+
+[id^="message-content-"]:has(a[href="http://flashcord/debug/store"])::after {
+    color: white;
+    font-size: smaller;
+    white-space: pre-wrap;
+    width: 100%;
+    content: 
+"\A\A🚧 FLASHCORD EXTERNAL MODULES DEBUG INFORMATION 🚧\A \
+This information is only visible to you, please screenshot it and send it to @SiriusBYT for debug purposes if needed. \A\A \
+🏪 -- Flashcord Store Modules \A\A \
+🚧 WIP 🚧 \A\A \
+🏪 -- Flashcord Store Plugins \A\A \
+🚧 WIP 🚧 \A\A \
 == End of Flashcord's Debug Information. == \A\A";
 }
 
@@ -544,20 +624,6 @@ html:has(link[href*="com.sirio-network.flashcord.asar"]) {
 
 
 /* [Start] = Flashcord Beta == France = */
-
-[class^="message-"]:hover [class^="buttons-"] {
-    opacity: 0.5 !important;
-    animation: FlashCore-FadeIn 1s;
-    transition-duration: var(--Flashcord-TransMult-Fast, 125ms) !important;
-}
-[class^="message-"] [class^="buttons-"]:hover {
-    opacity: 1 !important;
-}
-
-[class^="message-"] {
-    transition-property: background-color;
-    transition-duration: var(--Flashcord-TransMult-Normal, 250ms) !important;
-}
 
 /* [End] = Flashcord Beta == France = */
 
@@ -582,7 +648,7 @@ html:has(link[href*="com.sirio-network.flashcord.asar"]) {
 
 @container FC-Theme_Hooker (min-width: 0px) {
     @container FC-SPGO_AT (min-width: 0px) {
-        [class^=marginTop8-] [class^="header-"] > :before {
+        section > [class^="header-"] > :before {
             content: "⚠️ Advanced Themes require LegalDiscordBypasses or Discord Nitro to enable them. \A ✅ ThemeHooker is present and has enabled new themes." !important;
           }
 
@@ -598,7 +664,7 @@ html:has(link[href*="com.sirio-network.flashcord.asar"]) {
         
         /* Advanced Theme: Irdescent */
         [class^="themeSelection-"][style*="--bg-gradient-citrus-sherbert"] {
-            background-image: url("https://sirio-network.com/flashcord/ressources/backgrounds/PSWave.png") !important;
+            background-image: url("https://sirio-network.com/sbin/PSWave-Light.png") !important;
             background-position-y: center !important;
             background-size: 100vw !important;
             border-radius: 25px;
@@ -608,7 +674,7 @@ html:has(link[href*="com.sirio-network.flashcord.asar"]) {
             content: "Iridescent Mode (Light Mode)";
         }
         [class^="themeSelection-"][style*="--bg-gradient-chroma-glow"] {
-            background-image: url("https://sirio-network.com/flashcord/ressources/backgrounds/PSWave-Inverted.png") !important;
+            background-image: url("https://sirio-network.com/sbin/PSWave-Dark.png") !important;
             background-position-y: center !important;
             background-size: 100vw !important;
             border-radius: 25px;
@@ -627,22 +693,18 @@ html:has(link[href*="com.sirio-network.flashcord.asar"]) {
 
     [theme-hooker="theme-citrus-sherbert"],
     [theme-hooker="theme-chroma-glow"] {
-        background-repeat: repeat !important;
+        background-repeat: repeat-x !important;
         background-size: 100vw !important;
     }
     [theme-hooker="theme-citrus-sherbert"] {
-        background-image: var(--Flashcord-Iridescent_Light-Image, url("https://sirio-network.com/flashcord/ressources/backgrounds/PSWave.png") ) !important;
+        background-image: var(--Flashcord-Iridescent_Light-Image, url("https://sirio-network.com/sbin/PSWave-Light.png") ) !important;
+        background-color: #FFFFFF;
         animation: FlashCore-BackXMTL var(--Flashcord-AnimMult-XTSlow, 2s) linear infinite !important;
     }
     [theme-hooker="theme-chroma-glow"] {
         background-image: var(--Flashcord-Iridescent_Dark-Image, url("https://sirio-network.com/flashcord/ressources/backgrounds/PSWave-Inverted.png") ) !important;
+        background-color: #000000;
         animation: FlashCore-BackXMTL var(--Flashcord-AnimMult-XTSlow, 2s) linear infinite !important;
-    }
-    [theme-hooker="theme-citrus-sherbert"] #app-mount {
-        backdrop-filter: var(--Flashcord-Iridescent_Light-Filter, blur(4px) brightness(1));
-    }
-    [theme-hooker="theme-chroma-glow"] #app-mount {
-        backdrop-filter: var(--Flashcord-Iridescent_Light-Filter, blur(4px) brightness(0.5));
     }
     [theme-hooker="theme-citrus-sherbert"] [class^="chat-"] [class^="title-"] [class^="children-"]:after,
     [theme-hooker="theme-chroma-glow"]  [class^="chat-"] [class^="title-"] [class^="children-"]:after {
@@ -659,16 +721,52 @@ html:has(link[href*="com.sirio-network.flashcord.asar"]) {
     @container FC-ControlPanel_PopUp (min-width: 0px) {
         [theme-hooker="theme-citrus-sherbert"] [class^="layer-"]:nth-child(2) {
             border: 1px solid var(--Flashcolord-Light_Accent);
-            background: rgba(255,255,255,0.5);
+            background-image: url("https://sirio-network.com/flashcord/ressources/backgrounds/BasicGrid-White_Fast.gif");
+            background-size: cover;
         }
 
         [theme-hooker="theme-chroma-glow"] [class^="layer-"]:nth-child(2) {
             border: 1px solid var(--Flashcolord-Dark_Accent);
-            background: rgba(0,0,0,0.5);
+            background-image: url("https://sirio-network.com/flashcord/ressources/backgrounds/BasicGrid-Dark_Fast.gif");
+            background-size: cover;
         }
     }
 
     @container FC-Theme_Iridescent (min-width: 0px) {
+        @container FC-MemberSlide (min-width: 0px) {
+            [class^="membersWrap-"]::before { /* May be a performance issue? Blame chrome, I fucking hate chrome's fucking bullshit backdrop-filter bug so much I'm going to fucking piss on the moon right this fucking instant */
+              content: '';
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              z-index: -1;
+      
+              transition-property: backdrop-filter;
+              transition-duration: var(--Flashcord-TransMult-Normal, 250ms);
+            }
+            [class^="membersWrap-"]:hover::before { /* Firefox instead of Electron When? */
+                backdrop-filter: blur(16px);
+            }
+          }
+
+        [class^="appAsidePanelWrapper-"]::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+        [theme-hooker="theme-citrus-sherbert"] [class^="appAsidePanelWrapper-"]::before {
+            backdrop-filter: var(--Flashcord-Iridescent_Light-Filter, blur(4px) brightness(1));
+        }
+        [theme-hooker="theme-chroma-glow"] [class^="appAsidePanelWrapper-"]::before {
+            backdrop-filter: var(--Flashcord-Iridescent_Dark-Filter, blur(4px) brightness(0.5));
+        }
+
         @container FC-ChatSlide_Legacy (min-width: 0px) {
             [class^="chat-"] > section, [class^="chat-"] > div, [class^="chat-"] {
                 background: transparent !important;
@@ -678,11 +776,30 @@ html:has(link[href*="com.sirio-network.flashcord.asar"]) {
             [class*="menu"] {
                 transition: outline-width 250ms;
             }
-            [theme-hooker="theme-citrus-sherbert"] [class*="menu"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
-            [theme-hooker="theme-chroma-glow"] [class*="menu"] { outline: 1px solid var(--Flashcolord-Dark_Accent); }
+            [theme-hooker="theme-citrus-sherbert"] [class*="menu"] { 
+                outline: 1px solid var(--Flashcolord-Light_Accent); 
+                background: rgba(255,255,255,0.5);
+            }
+            [theme-hooker="theme-chroma-glow"] [class*="menu"] { 
+                outline: 1px solid var(--Flashcolord-Dark_Accent); 
+                background: rgba(0,0,0,0.5);
+            }
             [class*="menu"]:hover {
                 outline-width: 2px;
             }
+
+            [class^="scroller-"]::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                backdrop-filter: var(--Flashcord-Iridescent_Light-Filter, blur(4px) brightness(1));
+                z-index: -1;
+                border-radius: var(--Flashcord-Border_Radius, 25px);
+            }
+
         }
     }
 }
@@ -742,9 +859,15 @@ html[theme-hooker="theme-mint-apple"] {
 }
 [theme-hooker="theme-sunset"] {
     --FlashCore-Brightness: 2;
+    --background-floating: rgba(6,6,6,0.5);
+    --background-modifier-selected: rgba(16,16,16,0.5);
+    --background-modifier-hover: rgba(22,22,22,0.5);
 }
 [theme-hooker="theme-mint-apple"] {
     --FlashCore-Brightness: 1;
+    --background-floating: rgba(155,155,155,0.5);
+    --background-modifier-selected: rgba(200,200,200,0.5);
+    --background-modifier-hover: rgba(255,255,255,0.5);
 }
 
 @container FC-Theme_Hooker (min-width: 0px) {
@@ -1216,8 +1339,8 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
     line-height: normal;
     text-align: left !important;
   }
-  [class^=marginTop8-] [class^="header-"] { display: block; }
-  [class^=marginTop8-] [class^="header-"]:before {
+  section > [class^="header-"] { display: block; }
+  section > [class^="header-"]::before {
     content: "📸 Flashcord Advanced Themes";
     color: var(--text-normal);
     white-space: pre-line;
@@ -1226,7 +1349,7 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
     text-transform: none;
     line-height: normal;
   }
-  [class^=marginTop8-] [class^="header-"] > :before {
+  section > [class^="header-"] > :before {
     content: "⚠️ Advanced Themes require LegalDiscordBypasses or Discord Nitro to enable them. \A ⛔ ThemeHooker is missing. Certain themes have been removed.";
     color: var(--text-normal);
     white-space: pre-line;
@@ -1394,12 +1517,14 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
     nav[class^="container-"] div[class^="name-"],
     nav[class^="container-"] [class^="spine-"],
     nav[class^="container-"] [class^="spineBorder-"],
-    [class^="voiceChannelsButton-"] {
+    [class^="voiceChannelsButton-"],
+    [class^="wrapper-"]:has([d="M30.6666 24.9644L35.1111 20.5199V31C35.1111 32.1046 34.2156 33 33.1111 33H32.6666C31.562 33 30.6666 32.1046 30.6666 31V24.9644Z"]),
+    [class^="sidebar-"] :is(h1, h2, h3, h4, h5, h6, p, span, button) {
       opacity: 0;
       transition-property: opacity;
       transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
-    [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover, nav:hover) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1, .voiceChannelsButton-SRmgo8), /* [!] FC-Wildcard_PerfNuker */
+    [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover, nav:hover) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1, .voiceChannelsButton-SRmgo8, .wrapper-3Hk9OB, .sidebar-1tnWFu :is(h1, h2, h3, h4, h5, h6, p, span, button)), /* [!] FC-Wildcard_PerfNuker */
     [class^="notAppAsidePanel-"]:has([id*="guild-"]) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1) { /* [!] FC-Wildcard_PerfNuker */
       opacity: 1 !important;
     }
@@ -1413,17 +1538,17 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
 }
 
 @container FC-MemberSlide (min-width: 0px) {
-    [class^="membersWrap-"] {
+    [class^="membersWrap-"] { height: 100%; }
+    [class^="container-"]:has([class^="membersWrap-"]) {
         position: relative;
         margin-left: -190px;
         translate: 190px;
-        height: 100%;
         z-index: 1;
 
-        transition-property: translate, filter;
+        transition-property: translate;
         transition-duration: var(--Flashcord-TransMult-Normal, 250ms);
     }
-    [class^="membersWrap-"]:hover { translate: 0px; filter: drop-shadow(0px 0px 16px var(--channeltextarea-background));  }
+    [class^="container-"]:has([class^="membersWrap-"]:hover) { translate: 0px; }
     [class^="member-"] { margin-left: 0px; }
     [class^="member-"] > div {
         padding-top: 0px;
@@ -1839,7 +1964,7 @@ nav[class^="wrapper-"] > ul {
     [class^="app-"] {
         transition-property: filter;
         transition-duration: var(--Flashcord-TransMult-Slow, 500ms);
-        filter: blur(0px) brightness(0.8);
+        filter: blur(0px);
     }
     [class^="backdrop-"] {
         opacity: 0 !important;
@@ -1868,6 +1993,9 @@ nav[class^="wrapper-"] > ul {
     }
     [class^="typing-"] {
         top: -24px;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
         animation: FlashCore-FadeIn_Bottom var(--Flashcord-AnimMult-Normal, 250ms) !important;
     }
     [class^="cooldownWrapper-"] {
@@ -1918,6 +2046,7 @@ nav[class^="wrapper-"] > ul {
         width: fit-content;
         left: auto;
         right: 16px;
+        padding-bottom: 0;
         animation: FlashCore-FadeIn_Bottom var(--Flashcord-AnimMult-Normal, 250ms) !important;
     }
     [class^="newMessagesBar-"] {
@@ -1937,22 +2066,45 @@ ol[class^="scrollerInner-"] {
     container-type: inline-size;
 }
 @container FC-ChatEdits (min-width: 0px) {
+    /* Smooth Message Button Hover */
+    [class^="message-"]:hover [class^="buttons-"] {
+        opacity: 0.5 !important;
+        animation: FlashCore-FadeIn 1s;
+        transition-duration: var(--Flashcord-TransMult-Fast, 125ms) !important;
+    }
+    [class^="message-"] [class^="buttons-"]:hover {
+        opacity: 1 !important;
+    }
 
-    /* Better Embeds */
+    /* Smooth MSG Hover */
+    [class^="message-"] {
+        transition-property: background-color;
+        transition-duration: var(--Flashcord-TransMult-Normal, 250ms) !important;
+    }
+
+    /* Better Link Embeds */
     [id^="message-accessories-"]:has(article) {
-        display: table-row;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    [id^="message-accessories-"] article {
+        overflow: scroll;
+        border-radius: var(--Flashcord-Border_Radius, 25px);
+        align-self: unset;
         max-width: unset !important;
-        max-height: fit-content !important;
+        flex: 1 1 25%;
+        display: block;
+        min-width: 256px;
+        margin: 8px;
     }
-    [id^="message-accessories-"]:has([class^="embedVideo-"]) {
-        display: block !important;
+    [class^="mediaAttachmentsContainer-"] {
+        width: auto;
+        height: auto;
+        justify-content: center;
+        margin-top: auto;
+        margin-bottom: auto;
     }
-    [id^="message-accessories-"] article:not(:has([class^="embedVideo-"])) {
-        max-width: unset !important;
-        display: table-cell;
-    }
-    
-    article:has([href^="https://sirio-network.com/flashcord/store"])::after { /* May cause performance issues in the long run?*/
+    article:has([href^="https://sirio-network.com/flashcord/store"])::after { /* May cause Perf issues (?)*/
         content: "✅ Flashcord Store Link";
         display: block;
         white-space: pre-warp;
@@ -1961,48 +2113,31 @@ ol[class^="scrollerInner-"] {
         border: 1px solid rgba(0,155,255,1);
         border-radius: var(--Flashcord-Border_Radius, 25px );
         padding: 1px;
-        margin-top: 4px;
-        margin-bottom: 4px;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 8px;
+        margin-right: 8px;
         text-align: center;
+        /*
+        position: absolute;
+        bottom: 1rem;*/
     }
-
-    [id^="message-accessories-"] article [class^="clickableWrapper-"] img,
-    [id^="message-accessories-"] article [class^="imageContent-"],
-    [id^="message-accessories-"] article [class^="imageContainer-"],
-    [id^="message-accessories-"] article [class^="imageWrapper-"], 
-    /*[id^="message-accessories-"] article [class^="embedMedia-"],*/
-    [id^="message-accessories-"] article .video-stream {
+    [id^="message-accessories-"]:has(article):has([class^="reactions-"]) {
+        margin-bottom: 2rem;
+    }
+    [class^="reactions-"] {
+        position: absolute;
+        translate: 0 1.75rem;
+        bottom: 0;
+    }
+    [class^="gridContainer-"] {
+        max-width: unset;
+    }
+    /*
+    [class^="imageWrapper-"], [id^="message-accessories-"]:has(article) img {
+        margin: auto;
+        border-radius: var(--Flashcord-Border_Radius, 25px );
         max-width: unset !important;
         max-height: unset !important;
-        width: 100% !important;
-        /*height: 100% !important;*/
-        border-radius: var(--Flashcord-Border_Radius, 25px );
-    }
-    [class^="reactions-"] {
-        max-width: 123px;
-    }
-    [class^="reactions-"] > div {
-        flex-grow: 1;
-        flex-shrink: 1;
-    }
-    [id^="message-accessories-"] article iframe {
-        border-radius: var(--Flashcord-Border_Radius, 25px );
-    }
-    
-    /*
-    [class^="reactions-"] {
-        display: table-row;
-    }
-    [class^="reactions-"] > div:has([class^="reaction-"]),
-    [class^="reaction-"] {
-        display: table-cell;
-    }
-    [class^="reactions-"] > div:first-of-type {
-        display: none;
     }*/
-
 }
 
 /* [END] = Flashcord Beta == Major General Modifications [00] ChatIn CSS = */
@@ -2273,6 +2408,7 @@ ol[class^="scrollerInner-"] {
     }
     [class^="bannerSVGWrapper"] {
         min-width: 70vw !important;
+        min-height: 100% !important;
     }
 }
 
@@ -2316,11 +2452,13 @@ ol[class^="scrollerInner-"] {
 
 /* [Start] = Flashcord Beta == Small Modifications - BaseLayer CSS = */
 
+/* update your fucking client nerd, and then cry cause replugged unplugged itself cuz discord bad >:( */
 [class^="updateIconForeground-"] {
     fill: red !important;
     animation: FlashCore-Shake calc(100ms * var(--Flashcord-Animations, 1)) infinite;
 }
 
+/* Real men don't need help. */
 [href="https://support.discord.com"] {
     display: none;
 }
@@ -2330,6 +2468,7 @@ ol[class^="scrollerInner-"] {
     content: "@"
 }
 
+/* Icon Hover Response */
 [class^="icon-"] {
     transition-property: scale;
     transition-duration: var(--Flashcord-TransMult-Fast, 125ms) !important;
@@ -2346,11 +2485,13 @@ ol[class^="scrollerInner-"] {
 
 /* [Start] = Flashcord Beta == Small Modifications - Popup CSS = */
 
+/* This does something.*/
 [class^="submenuPaddingContainer-"] {
     padding: 0;
     margin: 4px;
 }
 
+/* Better Tooltips */
 [class^="tooltip-"] {
     border-radius: var(--Flashcord-Border_Radius, 25px);
 }
@@ -2402,7 +2543,43 @@ ol[class^="scrollerInner-"] {
     
     [class^="premiumIconWrapper-"] { display: none; }
     [href="/store"] { display: none; }
+
+    /* Remove the fucking shitty ass nitro decoration prompt when viewing a user profile. */
+    [class^="userPopoutInner-"] [class^="animation-"] { display: none; }
+
+    /* No Discord Store, flashcord store bettr lulé rloflolol heazhehbe */
+    li:has(a[href="/store"]) { display: none; }
 }
+
+/* Nukes everything Nitro. No exceptions.
+VERY WIP and Replugged is fucking up bad time right now and CSS is almost never reloading */
+@container FC-HYPER_DeNitrofy (min-width: 0px) {
+    button:has(path[d="M16.886 7.999H20C21.104 7.999 22 8.896 22 9.999V11.999H2V9.999C2 8.896 2.897 7.999 4 7.999H7.114C6.663 7.764 6.236 7.477 5.879 7.121C4.709 5.951 4.709 4.048 5.879 2.879C7.012 1.746 8.986 1.746 10.121 2.877C11.758 4.514 11.979 7.595 11.998 7.941C11.9991 7.9525 11.9966 7.96279 11.9941 7.97304C11.992 7.98151 11.99 7.98995 11.99 7.999H12.01C12.01 7.98986 12.0079 7.98134 12.0058 7.97287C12.0034 7.96282 12.0009 7.95286 12.002 7.942C12.022 7.596 12.242 4.515 13.879 2.878C15.014 1.745 16.986 1.746 18.121 2.877C19.29 4.049 19.29 5.952 18.121 7.121C17.764 7.477 17.337 7.764 16.886 7.999ZM7.293 5.707C6.903 5.316 6.903 4.682 7.293 4.292C7.481 4.103 7.732 4 8 4C8.268 4 8.519 4.103 8.707 4.292C9.297 4.882 9.641 5.94 9.825 6.822C8.945 6.639 7.879 6.293 7.293 5.707ZM14.174 6.824C14.359 5.941 14.702 4.883 15.293 4.293C15.481 4.103 15.732 4 16 4C16.268 4 16.519 4.103 16.706 4.291C17.096 4.682 17.097 5.316 16.707 5.707C16.116 6.298 15.057 6.642 14.174 6.824ZM3 13.999V19.999C3 21.102 3.897 21.999 5 21.999H11V13.999H3ZM13 13.999V21.999H19C20.104 21.999 21 21.102 21 19.999V13.999H13Z"]) { display: none; }
+    [class^="premiumTab-"],
+    [aria-controls^="nitro-server-boost-tab"],
+    [class^="serverBoostTabItem-"],
+    [class^="banner-"]:has([src="/assets/8948e5fc1217a7d616f408c647bd6978.svg"]),
+    [href="https://discord.com/settings/premium"],
+    [class*="premium"] { display: none; }
+    #nitro-server-boost-tab,
+    #guild-header-popout-premium-subscribe { display: none; !important}
+
+    /* Zero money spending */
+    [class^="focusLock-"]:has([class^="paymentModalContent"]) {
+        display: none !important;
+    }
+    [class^="layer-"]:has(.paymentModalContent)::before {
+        content: "This functionality isn't available.";
+        font-weight: 900;
+        white-space: pre-line;
+        color: orange;
+    }
+
+    [class*="premiumFeatureBannerBackground-"],
+    [class^="avatarDecoration-"] { display: none !important; }
+    [class^="upsellOverlayContainer-"] { display: none !important;}
+}
+
 
 /* [End] = Flashcord Beta == Small Modifications - UnNitrofy CSS = */
 

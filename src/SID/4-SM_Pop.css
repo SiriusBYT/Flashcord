@@ -1,11 +1,13 @@
 
 /* [Start] = Flashcord Beta == Small Modifications - Popup CSS = */
 
+/* This does something.*/
 [class^="submenuPaddingContainer-"] {
     padding: 0;
     margin: 4px;
 }
 
+/* Better Tooltips */
 [class^="tooltip-"] {
     border-radius: var(--Flashcord-Border_Radius, 25px);
 }

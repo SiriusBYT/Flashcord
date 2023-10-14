@@ -1,18 +1,4 @@
 
 /* [Start] = Flashcord Beta == France = */
 
-[class^="message-"]:hover [class^="buttons-"] {
-    opacity: 0.5 !important;
-    animation: FlashCore-FadeIn 1s;
-    transition-duration: var(--Flashcord-TransMult-Fast, 125ms) !important;
-}
-[class^="message-"] [class^="buttons-"]:hover {
-    opacity: 1 !important;
-}
-
-[class^="message-"] {
-    transition-property: background-color;
-    transition-duration: var(--Flashcord-TransMult-Normal, 250ms) !important;
-}
-
 /* [End] = Flashcord Beta == France = */

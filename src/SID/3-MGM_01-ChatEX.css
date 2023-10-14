@@ -45,12 +45,14 @@
     nav[class^="container-"] div[class^="name-"],
     nav[class^="container-"] [class^="spine-"],
     nav[class^="container-"] [class^="spineBorder-"],
-    [class^="voiceChannelsButton-"] {
+    [class^="voiceChannelsButton-"],
+    [class^="wrapper-"]:has([d="M30.6666 24.9644L35.1111 20.5199V31C35.1111 32.1046 34.2156 33 33.1111 33H32.6666C31.562 33 30.6666 32.1046 30.6666 31V24.9644Z"]),
+    [class^="sidebar-"] :is(h1, h2, h3, h4, h5, h6, p, span, button) {
       opacity: 0;
       transition-property: opacity;
       transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
-    [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover, nav:hover) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1, .voiceChannelsButton-SRmgo8), /* [!] FC-Wildcard_PerfNuker */
+    [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover, nav:hover) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1, .voiceChannelsButton-SRmgo8, .wrapper-3Hk9OB, .sidebar-1tnWFu :is(h1, h2, h3, h4, h5, h6, p, span, button)), /* [!] FC-Wildcard_PerfNuker */
     [class^="notAppAsidePanel-"]:has([id*="guild-"]) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1) { /* [!] FC-Wildcard_PerfNuker */
       opacity: 1 !important;
     }
@@ -64,17 +66,17 @@
 }
 
 @container FC-MemberSlide (min-width: 0px) {
-    [class^="membersWrap-"] {
+    [class^="membersWrap-"] { height: 100%; }
+    [class^="container-"]:has([class^="membersWrap-"]) {
         position: relative;
         margin-left: -190px;
         translate: 190px;
-        height: 100%;
         z-index: 1;
 
-        transition-property: translate, filter;
+        transition-property: translate;
         transition-duration: var(--Flashcord-TransMult-Normal, 250ms);
     }
-    [class^="membersWrap-"]:hover { translate: 0px; filter: drop-shadow(0px 0px 16px var(--channeltextarea-background));  }
+    [class^="container-"]:has([class^="membersWrap-"]:hover) { translate: 0px; }
     [class^="member-"] { margin-left: 0px; }
     [class^="member-"] > div {
         padding-top: 0px;

@@ -180,7 +180,7 @@
     [class^="app-"] {
         transition-property: filter;
         transition-duration: var(--Flashcord-TransMult-Slow, 500ms);
-        filter: blur(0px) brightness(0.8);
+        filter: blur(0px);
     }
     [class^="backdrop-"] {
         opacity: 0 !important;
@@ -209,6 +209,9 @@
     }
     [class^="typing-"] {
         top: -24px;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
         animation: FlashCore-FadeIn_Bottom var(--Flashcord-AnimMult-Normal, 250ms) !important;
     }
     [class^="cooldownWrapper-"] {
@@ -259,6 +262,7 @@
         width: fit-content;
         left: auto;
         right: 16px;
+        padding-bottom: 0;
         animation: FlashCore-FadeIn_Bottom var(--Flashcord-AnimMult-Normal, 250ms) !important;
     }
     [class^="newMessagesBar-"] {
@@ -278,22 +282,45 @@ ol[class^="scrollerInner-"] {
     container-type: inline-size;
 }
 @container FC-ChatEdits (min-width: 0px) {
+    /* Smooth Message Button Hover */
+    [class^="message-"]:hover [class^="buttons-"] {
+        opacity: 0.5 !important;
+        animation: FlashCore-FadeIn 1s;
+        transition-duration: var(--Flashcord-TransMult-Fast, 125ms) !important;
+    }
+    [class^="message-"] [class^="buttons-"]:hover {
+        opacity: 1 !important;
+    }
 
-    /* Better Embeds */
+    /* Smooth MSG Hover */
+    [class^="message-"] {
+        transition-property: background-color;
+        transition-duration: var(--Flashcord-TransMult-Normal, 250ms) !important;
+    }
+
+    /* Better Link Embeds */
     [id^="message-accessories-"]:has(article) {
-        display: table-row;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    [id^="message-accessories-"] article {
+        overflow: scroll;
+        border-radius: var(--Flashcord-Border_Radius, 25px);
+        align-self: unset;
         max-width: unset !important;
-        max-height: fit-content !important;
+        flex: 1 1 25%;
+        display: block;
+        min-width: 256px;
+        margin: 8px;
     }
-    [id^="message-accessories-"]:has([class^="embedVideo-"]) {
-        display: block !important;
+    [class^="mediaAttachmentsContainer-"] {
+        width: auto;
+        height: auto;
+        justify-content: center;
+        margin-top: auto;
+        margin-bottom: auto;
     }
-    [id^="message-accessories-"] article:not(:has([class^="embedVideo-"])) {
-        max-width: unset !important;
-        display: table-cell;
-    }
-    
-    article:has([href^="https://sirio-network.com/flashcord/store"])::after { /* May cause performance issues in the long run?*/
+    article:has([href^="https://sirio-network.com/flashcord/store"])::after { /* May cause Perf issues (?)*/
         content: "✅ Flashcord Store Link";
         display: block;
         white-space: pre-warp;
@@ -302,48 +329,31 @@ ol[class^="scrollerInner-"] {
         border: 1px solid rgba(0,155,255,1);
         border-radius: var(--Flashcord-Border_Radius, 25px );
         padding: 1px;
-        margin-top: 4px;
-        margin-bottom: 4px;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 8px;
+        margin-right: 8px;
         text-align: center;
+        /*
+        position: absolute;
+        bottom: 1rem;*/
     }
-
-    [id^="message-accessories-"] article [class^="clickableWrapper-"] img,
-    [id^="message-accessories-"] article [class^="imageContent-"],
-    [id^="message-accessories-"] article [class^="imageContainer-"],
-    [id^="message-accessories-"] article [class^="imageWrapper-"], 
-    /*[id^="message-accessories-"] article [class^="embedMedia-"],*/
-    [id^="message-accessories-"] article .video-stream {
+    [id^="message-accessories-"]:has(article):has([class^="reactions-"]) {
+        margin-bottom: 2rem;
+    }
+    [class^="reactions-"] {
+        position: absolute;
+        translate: 0 1.75rem;
+        bottom: 0;
+    }
+    [class^="gridContainer-"] {
+        max-width: unset;
+    }
+    /*
+    [class^="imageWrapper-"], [id^="message-accessories-"]:has(article) img {
+        margin: auto;
+        border-radius: var(--Flashcord-Border_Radius, 25px );
         max-width: unset !important;
         max-height: unset !important;
-        width: 100% !important;
-        /*height: 100% !important;*/
-        border-radius: var(--Flashcord-Border_Radius, 25px );
-    }
-    [class^="reactions-"] {
-        max-width: 123px;
-    }
-    [class^="reactions-"] > div {
-        flex-grow: 1;
-        flex-shrink: 1;
-    }
-    [id^="message-accessories-"] article iframe {
-        border-radius: var(--Flashcord-Border_Radius, 25px );
-    }
-    
-    /*
-    [class^="reactions-"] {
-        display: table-row;
-    }
-    [class^="reactions-"] > div:has([class^="reaction-"]),
-    [class^="reaction-"] {
-        display: table-cell;
-    }
-    [class^="reactions-"] > div:first-of-type {
-        display: none;
     }*/
-
 }
 
 /* [END] = Flashcord Beta == Major General Modifications [00] ChatIn CSS = */

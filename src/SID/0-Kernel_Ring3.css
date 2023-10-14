@@ -74,10 +74,10 @@ body:before {
         white-space: pre;
         opacity: 0.8;
         background-image: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,127,0,1) 15%, rgba(255,255,0,1) 30%, rgba(0,255,0,1) 45%, rgba(0,0,255,1) 60%, rgba(170,0,170,1) 75%, rgba(255,170,255,1) 90%, rgba(255,0,0,1) 100%);
-        background-size: 64vw;
+        background-size: 100vw;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: FlashCore-BackXMTL calc(8s * var(--Flashcord-Animations, 1)) linear infinite !important;
+        animation: FlashCore-BackXMTL calc(4s * var(--Flashcord-Animations, 1)) linear infinite !important;
         margin-bottom: var(--Flashcord-SplashMAR, 20px);
     }
     
