@@ -1,0 +1,657 @@
+/* REMINDER: Please read LICENSE.md before modifying Flashcord.
+If you can't be bothered doing that, just know that:
+
+This license requires that reusers give credit to the creator. It allows reusers to copy and distribute the material in any medium or format in unadapted form and for noncommercial purposes only. 
+
+[Flashcord] © 2023 by [SiriusBYT] is licensed under [CC BY-NC-ND 4.0].
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* [START] = Flashcord Beta == BIOS [00] CSS = */
+
+/* NOTICE: Everytime there is a " [!] FC-Wildcard_PerfNuker " this means that using a wildcard will absolutely nuke performance so bad it would make Flashcord impossible to use */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root, body {
+  --font-primary: "Roboto";
+  --font-display: "Roboto";
+  --font-headline: "Roboto";
+  
+  --Flashcord-Branch: "Flashcord for Low-End Systems";
+  --Flashcord-Channel: "aLPM";
+  --Flashcord-Version: "231015 [🫚 bSID-231014-HF1]";
+  
+  background: #000000;
+}
+
+::-webkit-scrollbar { display: none; }
+[class*="wordmark-"] { display: none; }
+
+body {
+  background: unset;
+  background-position: center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+}
+
+/* Legacy Theming */
+.theme-dark.custom-theme-background,
+.theme-light.custom-theme-background {
+  container-name: var(--FlashCore-Global_Theme, FC-AdvancedTheme-LEGACY_Custom-Background-Mode);
+  container-type: inline-size;
+
+  --custom-theme-background: transparent;
+
+  --bg-overlay-color: transparent;
+  --background-primary: transparent;
+  --background-secondary: transparent;
+  --background-secondary-alt: transparent;
+  --background-tertiary: transparent;
+  --bg-overlay-1: transparent;
+  --bg-overlay-2: transparent;
+  --bg-overlay-3: transparent;
+  --bg-overlay-4: transparent;
+  --bg-overlay-5: transparent;
+  --bg-overlay-6: transparent;
+  
+  --FlashCore-ChatSlide: FC-ChatSlide_Legacy;
+  --FlashCore-Brightness: 0.5;
+}
+
+html:not(html:hover) #app-mount {
+  container-name: var(--FlashCore-Idle_Optimizations, FC-Idle_OptiMax) !important;
+  container-type: inline-size;
+
+}
+
+@container FC-Idle_OptiMax (min-width: 0px) {
+  [class^="appAsidePanelWrapper-"] {
+    --Flashcord-AnimMult-XFast: 0;
+    --Flashcord-AnimMult-Fast: 0;
+    --Flashcord-AnimMult-Normal: 0;
+    --Flashcord-AnimMult-Slow: 0;
+    --Flashcord-AnimMult-XSlow: 0;
+    --Flashcord-AnimMult-XTSlow: 0;
+    --Flashcord-AnimMult-XTXSlow: 0;
+    --Flashcord-TransMult-XFast: 0;
+    --Flashcord-TransMult-Fast: 0;
+    --Flashcord-TransMult-Normal: 0;
+    --Flashcord-TransMult-Slow: 0;
+    --Flashcord-TransMult-XSlow: 0;
+    --Flashcord-Blur-Heavy: 0;
+    --Flashcord-Blur-Medium: 0;
+    --Flashcord-Blur-Light: 0;
+  }
+}
+
+/* [END] = Flashcord Beta == BIOS [00] CSS = */
+
+
+/* [START] = Flashcord Beta == Kernel [01] CSS = */
+
+:root {
+    --Flashcolord-Light_Accent: rgba(0,155,255,0.5);
+    --Flashcolord-Dark_Accent: rgba(255,55,0,0.5);
+    --Flashcolord-CBM_Light-Floating: rgba(255,255,255,0.5);
+    --Flashcolord-CBM_Dark-Floating: rgba(0,0,0,0.5);
+}
+
+.theme-light {
+    --background-primary: #FFFFFF;
+    --background-secondary: #FFFFFF;
+    --background-secondary-alt: #FFFFFF;
+    --background-tertiary: #FFFFFF;
+    --background-accent: #FF99FF;
+    --background-floating: #FFFfFF;
+    --channeltextarea-background: #f0f0f0;
+    --background-modifier-selected: #eaeaea;
+    --background-modifier-hover: #f0f0f0;
+    --home-background: #ffffff;
+}
+
+.theme-dark {
+    --background-primary: #000000;
+    --background-secondary: #000000;
+    --background-secondary-alt: #000000;
+    --background-tertiary: #000000;
+    --background-accent: #660066;
+    --background-floating: #060606;
+    --channeltextarea-background: #060606;
+    --background-modifier-selected: #0F0F0F;
+    --background-modifier-hover: #161616;
+    --FlashCore-Brightness: 2;
+}
+
+/* [END] = Flashcord Beta == Kernel [01] CSS = */
+
+
+/* [START] = Flashcord Beta == Kernel [03] CSS = */
+
+body > :before,
+body:before {
+    color: var(--text-normal);
+    font-size: 12px;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    font-weight: 900;
+    opacity: 0.5;
+    width: 100vw;
+    backdrop-filter: brightness(2);
+}
+
+.platform-win body > :before {
+    content: "🪟 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version)" | Report bugs in #🐞sgn-issues-reports on the SGN Discord Server.";
+}
+
+.platform-linux body > :before {
+    content: "🐧 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version)" | Report bugs in #🐞sgn-issues-reports on the SGN Discord Server.";
+}
+.platform-linux #app-mount {
+    margin-top: 24px;
+    height: calc(100vh - 24px);
+}
+
+.platform-osx body:before {
+    content: "Report bugs in #🐞sgn-issues-reports on the SGN Discord Server. | 🍎 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version) " " ;
+    color: #ffffff;
+    text-align: right; 
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 32px;
+    margin-left: -12px;
+}
+.platform-osx #app-mount {
+    margin-top: 32px;
+    height: calc(100vh - 32px);
+}
+[class^="macDragRegion-"] {
+    width: 100vw;
+}
+
+
+[class^="chat-"] [class^="children-"]:after {
+    color: red;
+    width: max-content;
+    margin: auto ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255,255,255);
+    border-radius: var(--Flashcord-Border_Radius, 25px);
+    white-space: pre;
+}
+.theme-dark [class^="chat-"] [class^="title-"] [class^="children-"]:after {
+    content: var(--Flashcord-Warnings,"  ⚠️ Flashcord LPM is in Alpha. 🌙 Dark Mode is unfinished.  ");
+}
+  
+.theme-light [class^="chat-"] [class^="title-"] [class^="children-"]:after {
+    content: var(--Flashcord-Warnings,"  ⚠️ Flashcord LPM is in Alpha.  ");
+}
+
+
+/* [END] = Flashcord Beta == Kernel [03] CSS = */
+
+
+/* [Start] = Flashcord Beta == Kernel - Serial CSS = */
+
+/* General Information */
+html.platform-win { --FlashCore-OS: "🪟 Windows" }
+html.platform-osx { --FlashCore-OS: "🍎 MacOS" }
+html.platform-linux { --FlashCore-OS: "🐧 GNU/Linux" }
+html.replugged { --FlashCore-Client: "🔌 Replugged"; }
+html:has(#vencord-margins) { --FlashCore-Client: "✨ Vencord"; }
+html:has(body[class*="bd"]) { --FlashCore-Client: "🩹 BetterDiscord [UNSUPPORTED]"; }
+html:has([content*="canary"]) { --FlashCore-Discord_Branch: "Canary"; }
+html:has([content*="ptb"]) { --FlashCore-Discord_Branch: "Public Beta Test"; }
+
+/* Theming Related Shenanigans */
+html.theme-light { --FlashCore-Theme: "☀️ Light Mode"; }
+html.theme-dark { --FlashCore-Theme: "🌙 Dark Mode"; }
+html.theme-light.custom-theme-background { --FlashCore-Theme: "🎨 CBM-L Light Mode"; }
+html.theme-dark.custom-theme-background { --FlashCore-Theme: "🎨 CBM-L Dark Mode"; }
+
+
+[id^="message-content-"]:has(a[href="http://flashcord/debug"]) {
+    line-height: 15px !important;
+    border-radius: 25px;
+    padding: 8px;
+}
+[id^="message-content-"]:has(a[href="http://flashcord/debug"])::after {
+    color: white;
+    font-size: smaller;
+    white-space: pre-wrap;
+    width: 100%;
+    content: 
+"\A\A🚧 FLASHCORD DEBUG INFORMATION 🚧\A \
+This information is only visible to you, please screenshot it and send it to @SiriusBYT for debug purposes if needed. \A\A \
+📸 -- Flashcord Information \A
+    🔄️ Branch: " var(--Flashcord-Branch) "\A \
+    🔗 Channel: " var(--Flashcord-Channel) "\A \
+    💡 Version: " var(--Flashcord-Version) "\A \
+💬 -- Discord Client Information \A \
+    🌳 Discord Branch: " var(--FlashCore-Discord_Branch, 'Stable') " \A \
+    💻 Operating System: " var(--FlashCore-OS, '🚧 404 🚧') "\A \
+    🎯 Client Modification: " var(--FlashCore-Client, '🚧 404 🚧 (Replugged?) ') "\A \
+    🌈 Detected Theme: " var(--FlashCore-Theme, '🚧 404 🚧') "\A\A \
+⚠️ Please also send the contents of your QuickCSS if you modified any Flashcord Variables. \A\A \
+== End of Flashcord's Debug Information. == \A\A";
+}
+
+/* [End] = Flashcord Beta == Kernel - Serial CSS = */
+
+
+/* [Start] = Flashcord Beta == Custom Theme: CBM CSS = */
+
+@container FC-AdvancedTheme-LEGACY_Custom-Background-Mode (min-width: 0px) {
+    .theme-light body {
+        background-image: var(--Flashcord-CBM_Light-Image, url("https://sirio-network.com/flashcord/ressources/backgrounds/bgr-test.jpg") ) !important;
+    }
+    .theme-dark body {
+        background-image: var(--Flashcord-CBM_Light-Image, url("https://sirio-network.com/flashcord/ressources/backgrounds/hypernner.jpg") ) !important;
+    }
+    [class^="layer-"]:nth-child(2) {
+        border: 1px solid white;
+    }
+    .custom-theme-background [class^="chat-"] [class^="title-"] [class^="children-"]:after {
+        content: var(--Flashcord-Warnings,"  ⚠️ Flashcord LPM's CBM is unsupported.") !important;
+    }
+
+    @container FC-ChatSlide_Legacy (min-width: 0px) {
+        [class^="chat-"] > section, [class^="chat-"] > div, [class^="chat-"] {
+            background: transparent !important;
+        }
+    }
+    .custom-theme-background.theme-light #app-mount {
+        backdrop-filter: var(--Flashcord-CBM_Light-Filter, blur(8px) brightness(1));
+    }
+    .custom-theme-background.theme-dark #app-mount {
+        backdrop-filter: var(--Flashcord-CBM_Dark-Filter, blur(16px) brightness(0.5));
+    }
+}
+
+/* [End] = Flashcord Beta == Custom Theme: CBM CSS = */
+
+
+/* [START] = Flashcord Beta == Major General Modifications [00] Control CSS = */
+
+/* Control Core */
+[class^="layers-"]:has([class^="layer-"]:nth-child(2)) {
+    container-name: var(--FlashCore-MGM-Control,FC-ControlPanel_Full);
+    container-type: inline-size;
+}
+
+@container FC-ControlPanel_Full (min-width: 0px) {
+    [class^="layer-"]:nth-child(2) {
+        width: 100vw;
+        height: 100vh;
+        margin: auto;
+        padding: 0;
+        border-radius: 0;
+    }    
+    [class^="sidebarRegion-"] {
+        max-width: 220px;
+        max-height: 100vh;
+    }
+    [class^="contentRegion-"] {
+        height: 100vh;
+    }
+    [class^="layer-"]:nth-child(2) [class^="sidebar"] {
+        max-width: 200px;
+        padding: 0;
+    }
+    [class^="standardSidebarView-"] {
+        position: static !important;
+        height: 100%;
+    }
+    [class^="contentColumn-"] {
+        max-width: calc(100% - 16px);
+        margin: auto;
+        padding: 0;
+    }
+
+    /* Control Fluff */
+    [class^="sidebar-"] [class^="item-"] {
+        max-width: 180px;
+        border-radius: var(--Flashcord-Border_Radius, 25px) !important;
+        translate: 5px;
+    }
+}
+
+
+/* [END] = Flashcord Beta == Major General Modifications [00] Control CSS = */
+
+
+/* [START] = Flashcord Beta == Major General Modifications [00] ChatEx CSS = */
+
+/* Channel Slide Core */
+[class^="base-"] > [class^="content-"]:first-of-type {
+    container-name: var(--FlashCore-ChatSlide, FC-ChatSlide_SNDL);
+    container-type: inline-size;
+}
+[class^="content-"]:has([class*="threadSidebarOpen-"]) {
+    container-name: FC-VOID;
+}
+
+@container FC-ChatSlide_SNDL (min-width: 0px) {
+    [class^="sidebar-"] {
+        z-index: 0;
+    }
+    [class^="chat-"]:not(:has([role="complementary"], [class^="submitContainer-"])) {
+        margin-right: -200px;
+        translate: -198px;
+        transition-property: translate;
+        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
+    }
+    :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .chat-2ZfjoI { /* [!] FC-Wildcard_PerfNuker */
+        translate: 0px;
+        /*will-change: translate;*/
+    }
+    [class^="chat-"]:has([class^="pageBody-"]) {
+      margin-right: 0;
+      translate: 0;
+    }
+}
+
+@container FC-ChatSlide_Legacy (min-width: 0px) {
+    [class^="sidebar-"] {
+      width: 48px;
+    }
+    :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .sidebar-1tnWFu {  /* [!] FC-Wildcard_PerfNuker */
+      width: 240px;
+      /*will-change: width;*/
+    }
+}
+
+/* Member Slide Core */
+[class^="chat-"] {
+    container-name: var(--FlashCore-MemberSlide, FC-MemberSlide);
+    container-type: inline-size;
+}
+
+@container FC-MemberSlide (min-width: 0px) {
+    [class^="membersWrap-"] { height: 100%; }
+    [class^="container-"]:has([class^="membersWrap-"]) {
+        position: relative;
+        margin-left: -190px;
+        translate: 190px;
+        z-index: 1;
+
+        transition-property: translate;
+        transition-duration: var(--Flashcord-TransMult-Normal, 250ms);
+    }
+    [class^="container-"]:has([class^="membersWrap-"]:hover) { translate: 0px; }
+    [class^="member-"] { margin-left: 0px; }
+    [class^="member-"] > div {
+        border-radius: var(--Flashcord-Border_Radius, 25px) !important;
+    }
+}
+
+/* GuildNav_Glow Core */
+
+nav[class^="wrapper-"] > ul {
+    container-name: var(--FlashCore-GuildNav_Notification, FC-GuildNav_Static);
+    container-type: inline-size;
+}
+
+@container FC-GuildNav_Static (min-width: 0px) {
+  [class^="listItem-"] {
+      transition-property: scale, filter !important;
+      transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
+  }
+  [class^="listItem-"]:has([style*="height: 8px"], [class^="lowerBadge-"]), [class^="listItem-"]:hover {
+      scale: 0.975;
+      filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px) var(--Flashcord-GuildShadow_Unread, #0000FF));
+      /*will-change: scale, filter;*/
+  }
+  [class^="pill-"] {  
+      display: none;
+  }
+}
+
+/* GuildNav_Compact Core */
+
+[class^="container-"]:has(nav[class^="wrapper-"]) {
+  container-name: var(--FlashCore-GuildNav_Compact, FC-GuildNav_Compact);
+  container-type: inline-size;
+}
+
+@container FC-GuildNav_Compact (min-width: 0px) {
+  nav[class^="wrapper-"] { width: 60px; }
+  ul[data-list-id="guildsnav"] > [class^="scroller-"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  [class^="listItem-"] {
+    margin: 0;
+  }
+  foreignObject { border-radius: var(--Flashcord-Border_Radius, 25px); }
+  [id^="folder-items-"] { height: auto !important; }
+  [class^="listItem-"] { scale: 0.9; }
+  [class^="guildSeparator-"] { display: none; }
+}
+
+@container FC-GuildNav_Compact-Horizontal (min-width: 0px) {
+  [class^="base-"] { margin-top: 60px; }
+  nav[class^="wrapper-"] { 
+    left: -58px;
+    width: 60px;
+    position: absolute;
+    z-index: 1;
+    rotate: -90deg;
+    transform-origin: right top;
+  }
+  ul[data-list-id="guildsnav"] > [class^="scroller-"] {
+    padding: 0 !important;
+    height: 100vw;
+  }
+  [class^="listItem-"] {
+    rotate: 90deg;
+    margin: 0;
+  }
+  foreignObject { border-radius: var(--Flashcord-Border_Radius, 25px); }
+  [class^="listItem-"] { scale: 0.9; }
+  [id^="folder-items-"] { height: auto !important; }
+  [class^="listItem-"]:has([class^="guildSeparator-"]) { display: none; }
+}
+
+/* ChannelNav_Compact Core */
+[class^="content-"] > [class^="sidebar-"] {
+  container-name: var(--FlashCore-ChannelNav_Compact, FC-ChannelNav_Compact);
+  container-type: inline-size;
+}
+
+@container FC-ChannelNav_Compact (min-width: 0px) {
+  li > div > div > a,
+  [class^="emojiColorFill-"],
+  li,
+  [class^="container-"] [class^="link-"],
+  [class^="channel-"] {
+    scale: 0.95;
+    translate: -4px;
+    margin: -1px 0px -1px 0px;
+    border-radius: var(--Flashcord-Border_Radius, 25px);
+    transition-property: scale, background-color !important;
+    transition-duration: var(--Flashcord-TransMult-Fast, 125ms) !important;
+  }
+  [class^="container-"] [class^="link-"]:hover {
+    background: unset !important;
+  }
+
+  li:has([class^="channelEmoji-"]) .name-28HaxV { /* [!] FC-Wildcard_PerfNuker */
+    text-align: left !important;
+    /*text-transform: capitalize;*/
+  }
+
+  [class^="emojiColorFill-"] { width: 240px; }
+  [class^="name-"] { text-align: center !important; }
+  li:has(h3) { margin: 4px; }
+  [class^="container-"] [class^="name-"] { text-align: left; }
+  [class^="arrow-"], [class^="addButtonIcon-"], [class^="children-"] [class^="iconItem-"] { display: none !important; }
+  [class^="iconContainer-"] {
+    position: absolute !important;
+    translate: 126px;
+    scale: 0.8;
+  }
+  li[role="button"] [class^="iconContainer-"],
+  li[role="listitem"] [class^="iconContainer-"] {
+    translate: 0 !important;
+  }
+}
+
+/* ChannelNav_Glow Core */
+#channels {
+  container-name: var(--FlashCore-ChannelNav_Notification, FC-ChannelNav_Static);
+  container-type: inline-size;
+}
+
+@container FC-ChannelNav_Static (min-width: 0px) {
+  [class^="containerDefault-"]:has([class^="mentionsBadge-"]) {
+   background: var(--Flashcord-ChannelNav_Color-Mention, rgba(255,0,0,0.5));
+  }
+  [class^="channelInfo-"] { 
+    translate: -106px;
+    display: block !important;
+  }
+  [class^="children-"] { position: absolute;}
+  [class^="unread-"] { 
+    border-radius: var(--Flashcord-Border_Radius, 25px);
+    translate: 13px 4px;
+    width: 24px;
+    height: 24px;
+    top: 0;
+    margin: 0;
+    background: var(--Flashcord-ChannelNav_Color-Unread, rgba(0,0,255,0.5));
+  }
+}
+
+/* [END] = Flashcord Beta == Major General Modifications [00] ChatEx CSS = */
+
+/* [START] = Flashcord Beta == Major General Modifications [00] ChatIn CSS = */
+
+/* Imagivid Zoom Core */
+[class^="layer-"]:has([class^="focusLock-"] [class*="downloadLink-"]) {
+    container-name: var(--FlashCore-ImagividZoom, FC-ImagividZoom);
+    container-type: inline-size;
+}
+
+@container FC-ImagividZoom (min-width: 0px) {
+    [class^="focusLock-"] [class^="imageWrapper-"]:hover { 
+        width: 90vw !important;
+        /*will-change: width, height;*/
+    }
+    [class^="focusLock-"] [class^="imageWrapper-"] { 
+        height: auto !important;
+    }
+    [class^="focusLock-"] [class^="imageWrapper-"] [class^="wrapper-"] { 
+        width: auto !important;
+        height: auto !important;
+    }
+    [class^="focusLock-"] > div { 
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        overflow: scroll;
+        flex-direction: row;
+    }
+    [class^="carouselModal-"] {
+        justify-content: flex-start !important;
+    }
+    [class^="focusLock-"] img, [class^="focusLock-"] video, [class^="imageWrapper-"] [class^="wrapper"] {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+        max-height: 100% !important;
+        object-fit: contain;
+        overflow: scroll;
+    }
+    [class^="anchor-"] {
+        display: none;
+    }
+    [class*="modalCarouselWrapper-"] {
+        -webkit-box-align: unset !important;
+        align-items: unset !important;
+        margin: auto;
+        position: static;
+    }
+    [class*="modalCarouselWrapper-"] button {
+        margin: 0;
+    }
+}
+
+ol[class^="scrollerInner-"] {
+    container-name: var(--FlashCore-ChatEdits, FC-ChatEdits);
+    container-type: inline-size;
+}
+@container FC-ChatEdits (min-width: 0px) {
+    /* Better Link Embeds */
+    [id^="message-accessories-"]:has(article) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    [id^="message-accessories-"] article {
+        overflow: scroll;
+        border-radius: var(--Flashcord-Border_Radius, 25px);
+        align-self: unset;
+        max-width: unset !important;
+        flex: 1 1 25%;
+        display: block;
+        min-width: 256px;
+        margin: 8px;
+    }
+    [class^="mediaAttachmentsContainer-"] {
+        width: auto;
+        height: auto;
+        justify-content: center;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    article:has([href^="https://sirio-network.com/flashcord/store"]) .grid-1aWVsE { /* [!] FC-Wildcard_PerfNuker */
+        margin-bottom: 2rem;
+    }
+    [id^="message-accessories-"]:has(article):has([class^="reactions-"]) {
+        margin-bottom: 2rem;
+    }
+    [id^="message-accessories-"]:has(article) .reactions-3ryImn { /* [!] FC-Wildcard_PerfNuker */
+        position: absolute;
+        translate: 0 1.75rem;
+        bottom: 0;
+    }
+    [class^="gridContainer-"] {
+        max-width: unset;
+    }
+}
+
+/* [END] = Flashcord Beta == Major General Modifications [00] ChatIn CSS = */
+
+/* [Start] = Flashcord Beta == Small Modifications - Popup CSS = */
+
+/* Fixes Pop up menu fuckery */
+[class^="submenuPaddingContainer-"] {
+    padding: 0;
+    margin: -4px;
+}
+
+/* [End] = Flashcord Beta == Small Modifications - Popup CSS = */
+
