@@ -42,6 +42,17 @@
       /*will-change: width;*/
     }
     [class^="newChannel-"] { display: none; }
+    nav :is([class^="name-"], [class^="spineBorder-"]) {
+      opacity: 0;
+      transition-property: opacity;
+      transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
+    }
+    nav:hover :is([class^="name-"], [class^="spineBorder-"]),
+    [class*="baseLayer"]:has([class*="guilds-"]:hover) :is(.overflow-1wOqNV, .name-28HaxV, .spineBorder-1-F4s1) {
+      opacity: 1 !important;
+      display: unset;
+    }
+    /* performance hell down below
     nav[class^="container-"] div[class^="name-"],
     nav[class^="container-"] [class^="spine-"],
     nav[class^="container-"] [class^="spineBorder-"],
@@ -52,10 +63,10 @@
       transition-property: opacity;
       transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
-    [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover, nav:hover) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1, .voiceChannelsButton-SRmgo8, .wrapper-3Hk9OB, .sidebar-1tnWFu :is(h1, h2, h3, h4, h5, h6, p, span, button)), /* [!] FC-Wildcard_PerfNuker */
-    [class^="notAppAsidePanel-"]:has([id*="guild-"]) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1) { /* [!] FC-Wildcard_PerfNuker */
+    [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover, nav:hover) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1, .voiceChannelsButton-SRmgo8, .wrapper-3Hk9OB, .sidebar-1tnWFu :is(h1, h2, h3, h4, h5, h6, p, span, button)),
+    [class^="notAppAsidePanel-"]:has([id*="guild-"]) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1) {
       opacity: 1 !important;
-    }
+    }*/
 }
 
 /* Member Slide Core */

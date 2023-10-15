@@ -1,7 +1,7 @@
 
 /* [Start] = Flashcord Beta == Small Modifications - Popup CSS = */
 
-/* This does something.*/
+/* Fixes an annoying bug regarding pop up menus*/
 [class^="submenuPaddingContainer-"] {
     padding: 0;
     margin: 4px;

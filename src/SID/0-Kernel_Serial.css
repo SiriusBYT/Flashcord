@@ -6,12 +6,6 @@
     container-type: inline-size;
 }
 
-@container SHOW_MODULES (min-width: 0px) {
-
-}
-
-
-
 /* General Information */
 html.platform-win { --FlashCore-OS: "🪟 Windows" }
 html.platform-osx { --FlashCore-OS: "🍎 MacOS" }

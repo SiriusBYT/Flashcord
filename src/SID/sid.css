@@ -34,8 +34,7 @@ This license requires that reusers give credit to the creator. It allows reusers
   
   --Flashcord-Branch: "Flashcord Beta";
   --Flashcord-Channel: "bSID";
-  --Flashcord-Version: "231014-HF1";
-  --Flashcord-DebugMode: "SHOW_MODULES";
+  --Flashcord-Version: "231014-HF2";
 
   --Flashcord-Splash: "have you heard the \A big chungus in pd3?";
   --Flashcord-SplashSca: 1.1;
@@ -478,12 +477,6 @@ body:before {
     container-name: var(--Flashcord-DebugMode, FC-VOID);
     container-type: inline-size;
 }
-
-@container SHOW_MODULES (min-width: 0px) {
-
-}
-
-
 
 /* General Information */
 html.platform-win { --FlashCore-OS: "🪟 Windows" }
@@ -1514,6 +1507,17 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
       /*will-change: width;*/
     }
     [class^="newChannel-"] { display: none; }
+    nav :is([class^="name-"], [class^="spineBorder-"]) {
+      opacity: 0;
+      transition-property: opacity;
+      transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
+    }
+    nav:hover :is([class^="name-"], [class^="spineBorder-"]),
+    [class*="baseLayer"]:has([class*="guilds-"]:hover) :is(.overflow-1wOqNV, .name-28HaxV, .spineBorder-1-F4s1) {
+      opacity: 1 !important;
+      display: unset;
+    }
+    /* performance hell down below
     nav[class^="container-"] div[class^="name-"],
     nav[class^="container-"] [class^="spine-"],
     nav[class^="container-"] [class^="spineBorder-"],
@@ -1524,10 +1528,10 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
       transition-property: opacity;
       transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
-    [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover, nav:hover) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1, .voiceChannelsButton-SRmgo8, .wrapper-3Hk9OB, .sidebar-1tnWFu :is(h1, h2, h3, h4, h5, h6, p, span, button)), /* [!] FC-Wildcard_PerfNuker */
-    [class^="notAppAsidePanel-"]:has([id*="guild-"]) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1) { /* [!] FC-Wildcard_PerfNuker */
+    [class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover, nav:hover) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1, .voiceChannelsButton-SRmgo8, .wrapper-3Hk9OB, .sidebar-1tnWFu :is(h1, h2, h3, h4, h5, h6, p, span, button)),
+    [class^="notAppAsidePanel-"]:has([id*="guild-"]) :is(.name-28HaxV, .spine-29OFwR, .spineBorder-1-F4s1) {
       opacity: 1 !important;
-    }
+    }*/
 }
 
 /* Member Slide Core */
@@ -2491,7 +2495,7 @@ ol[class^="scrollerInner-"] {
 
 /* [Start] = Flashcord Beta == Small Modifications - Popup CSS = */
 
-/* This does something.*/
+/* Fixes an annoying bug regarding pop up menus*/
 [class^="submenuPaddingContainer-"] {
     padding: 0;
     margin: 4px;
