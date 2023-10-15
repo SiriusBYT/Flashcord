@@ -47,6 +47,7 @@ body:before {
     width: 100vw;
 }
 
+
 [class^="chat-"] [class^="children-"]:after {
     color: red;
     width: max-content;
@@ -59,11 +60,11 @@ body:before {
     white-space: pre;
 }
 .theme-dark [class^="chat-"] [class^="title-"] [class^="children-"]:after {
-    content: var(--Flashcord-Warnings,"  ⚠️ Flashcord is unfinished.  ");
+    content: var(--Flashcord-Warnings,"  ⚠️ Flashcord LPM is in Alpha. 🌙 Dark Mode is unfinished.  ");
 }
   
 .theme-light [class^="chat-"] [class^="title-"] [class^="children-"]:after {
-    content: var(--Flashcord-Warnings,"  ⚠️ Flashcord is unfinished.  ");
+    content: var(--Flashcord-Warnings,"  ⚠️ Flashcord LPM is in Alpha.  ");
 }
 
 

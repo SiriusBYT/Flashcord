@@ -34,21 +34,13 @@ This license requires that reusers give credit to the creator. It allows reusers
   
   --Flashcord-Branch: "Flashcord for Low-End Systems";
   --Flashcord-Channel: "aLPM";
-  --Flashcord-Version: "1.0";
-
-  --custom-theme-background: unset;
+  --Flashcord-Version: "231015 [🫚 bSID-231014-HF1]";
   
   background: #000000;
 }
 
 ::-webkit-scrollbar { display: none; }
 [class*="wordmark-"] { display: none; }
-
-.stop-animation * {
-  animation: inherit !important;
-  transform: inherit !important;
-  transition: inherit !important;
-}
 
 body {
   background: unset;
@@ -77,10 +69,7 @@ body {
   --bg-overlay-4: transparent;
   --bg-overlay-5: transparent;
   --bg-overlay-6: transparent;
-
-  --background-floating: rgba(6,6,6,0.5);
-  --background-modifier-selected: rgba(16,16,16,0.5);
-  --background-modifier-hover: rgba(22,22,22,0.5);
+  
   --FlashCore-ChatSlide: FC-ChatSlide_Legacy;
   --FlashCore-Brightness: 0.5;
 }
@@ -108,11 +97,6 @@ html:not(html:hover) #app-mount {
     --Flashcord-Blur-Heavy: 0;
     --Flashcord-Blur-Medium: 0;
     --Flashcord-Blur-Light: 0;
-  
-    --FlashCore-GuildNav_Notification: FC-GuildNav_Static;
-    --FlashCore-ChannelNav_Notification: FC-ChannelNav_Static;
-  
-    --Flashcord-Badges: FC-VOID;
   }
 }
 

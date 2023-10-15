@@ -5,7 +5,6 @@
 [class^="base-"] > [class^="content-"]:first-of-type {
     container-name: var(--FlashCore-ChatSlide, FC-ChatSlide_SNDL);
     container-type: inline-size;
-    contain: paint;
 }
 [class^="content-"]:has([class*="threadSidebarOpen-"]) {
     container-name: FC-VOID;
@@ -31,48 +30,177 @@
     }
 }
 
+@container FC-ChatSlide_Legacy (min-width: 0px) {
+    [class^="sidebar-"] {
+      width: 48px;
+    }
+    :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .sidebar-1tnWFu {  /* [!] FC-Wildcard_PerfNuker */
+      width: 240px;
+      /*will-change: width;*/
+    }
+}
+
 /* Member Slide Core */
 [class^="chat-"] {
     container-name: var(--FlashCore-MemberSlide, FC-MemberSlide);
     container-type: inline-size;
-    contain: paint;
 }
 
 @container FC-MemberSlide (min-width: 0px) {
-    [class^="membersWrap-"] {
+    [class^="membersWrap-"] { height: 100%; }
+    [class^="container-"]:has([class^="membersWrap-"]) {
         position: relative;
         margin-left: -190px;
         translate: 190px;
-        height: 100%;
         z-index: 1;
 
-        transition-property: translate, filter;
+        transition-property: translate;
         transition-duration: var(--Flashcord-TransMult-Normal, 250ms);
     }
-    [class^="membersWrap-"]:hover { translate: 0px; filter: drop-shadow(0px 0px 16px var(--channeltextarea-background));  }
+    [class^="container-"]:has([class^="membersWrap-"]:hover) { translate: 0px; }
     [class^="member-"] { margin-left: 0px; }
     [class^="member-"] > div {
-        padding-top: 0px;
-        padding-bottom: 0px;
         border-radius: var(--Flashcord-Border_Radius, 25px) !important;
-        transition-property: scale, translate;
-        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
-    [class^="member-"]:hover > div {
-        scale: 1.05;
-        translate: 6px;
-        /*will-change: scale, translate;*/
-    }
-    [class^="membersGroup-"] {  
-        text-align: right;
-        padding: 8px 8px 0 64px;
-        height: auto;
-        opacity: 0.25;
+}
 
-        transition-property: opacity;
-        transition-duration: var(--Flashcord-TransMult-Slow, 500ms);
-    }
-    [class^="membersGroup-"]:hover { opacity: 1; }
+/* GuildNav_Glow Core */
+
+nav[class^="wrapper-"] > ul {
+    container-name: var(--FlashCore-GuildNav_Notification, FC-GuildNav_Static);
+    container-type: inline-size;
+}
+
+@container FC-GuildNav_Static (min-width: 0px) {
+  [class^="listItem-"] {
+      transition-property: scale, filter !important;
+      transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
+  }
+  [class^="listItem-"]:has([style*="height: 8px"], [class^="lowerBadge-"]), [class^="listItem-"]:hover {
+      scale: 0.975;
+      filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px) var(--Flashcord-GuildShadow_Unread, #0000FF));
+      /*will-change: scale, filter;*/
+  }
+  [class^="pill-"] {  
+      display: none;
+  }
+}
+
+/* GuildNav_Compact Core */
+
+[class^="container-"]:has(nav[class^="wrapper-"]) {
+  container-name: var(--FlashCore-GuildNav_Compact, FC-GuildNav_Compact);
+  container-type: inline-size;
+}
+
+@container FC-GuildNav_Compact (min-width: 0px) {
+  nav[class^="wrapper-"] { width: 60px; }
+  ul[data-list-id="guildsnav"] > [class^="scroller-"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  [class^="listItem-"] {
+    margin: 0;
+  }
+  foreignObject { border-radius: var(--Flashcord-Border_Radius, 25px); }
+  [id^="folder-items-"] { height: auto !important; }
+  [class^="listItem-"] { scale: 0.9; }
+  [class^="guildSeparator-"] { display: none; }
+}
+
+@container FC-GuildNav_Compact-Horizontal (min-width: 0px) {
+  [class^="base-"] { margin-top: 60px; }
+  nav[class^="wrapper-"] { 
+    left: -58px;
+    width: 60px;
+    position: absolute;
+    z-index: 1;
+    rotate: -90deg;
+    transform-origin: right top;
+  }
+  ul[data-list-id="guildsnav"] > [class^="scroller-"] {
+    padding: 0 !important;
+    height: 100vw;
+  }
+  [class^="listItem-"] {
+    rotate: 90deg;
+    margin: 0;
+  }
+  foreignObject { border-radius: var(--Flashcord-Border_Radius, 25px); }
+  [class^="listItem-"] { scale: 0.9; }
+  [id^="folder-items-"] { height: auto !important; }
+  [class^="listItem-"]:has([class^="guildSeparator-"]) { display: none; }
+}
+
+/* ChannelNav_Compact Core */
+[class^="content-"] > [class^="sidebar-"] {
+  container-name: var(--FlashCore-ChannelNav_Compact, FC-ChannelNav_Compact);
+  container-type: inline-size;
+}
+
+@container FC-ChannelNav_Compact (min-width: 0px) {
+  li > div > div > a,
+  [class^="emojiColorFill-"],
+  li,
+  [class^="container-"] [class^="link-"],
+  [class^="channel-"] {
+    scale: 0.95;
+    translate: -4px;
+    margin: -1px 0px -1px 0px;
+    border-radius: var(--Flashcord-Border_Radius, 25px);
+    transition-property: scale, background-color !important;
+    transition-duration: var(--Flashcord-TransMult-Fast, 125ms) !important;
+  }
+  [class^="container-"] [class^="link-"]:hover {
+    background: unset !important;
+  }
+
+  li:has([class^="channelEmoji-"]) .name-28HaxV { /* [!] FC-Wildcard_PerfNuker */
+    text-align: left !important;
+    /*text-transform: capitalize;*/
+  }
+
+  [class^="emojiColorFill-"] { width: 240px; }
+  [class^="name-"] { text-align: center !important; }
+  li:has(h3) { margin: 4px; }
+  [class^="container-"] [class^="name-"] { text-align: left; }
+  [class^="arrow-"], [class^="addButtonIcon-"], [class^="children-"] [class^="iconItem-"] { display: none !important; }
+  [class^="iconContainer-"] {
+    position: absolute !important;
+    translate: 126px;
+    scale: 0.8;
+  }
+  li[role="button"] [class^="iconContainer-"],
+  li[role="listitem"] [class^="iconContainer-"] {
+    translate: 0 !important;
+  }
+}
+
+/* ChannelNav_Glow Core */
+#channels {
+  container-name: var(--FlashCore-ChannelNav_Notification, FC-ChannelNav_Static);
+  container-type: inline-size;
+}
+
+@container FC-ChannelNav_Static (min-width: 0px) {
+  [class^="containerDefault-"]:has([class^="mentionsBadge-"]) {
+   background: var(--Flashcord-ChannelNav_Color-Mention, rgba(255,0,0,0.5));
+  }
+  [class^="channelInfo-"] { 
+    translate: -106px;
+    display: block !important;
+  }
+  [class^="children-"] { position: absolute;}
+  [class^="unread-"] { 
+    border-radius: var(--Flashcord-Border_Radius, 25px);
+    translate: 13px 4px;
+    width: 24px;
+    height: 24px;
+    top: 0;
+    margin: 0;
+    background: var(--Flashcord-ChannelNav_Color-Unread, rgba(0,0,255,0.5));
+  }
 }
 
 /* [END] = Flashcord Beta == Major General Modifications [00] ChatEx CSS = */

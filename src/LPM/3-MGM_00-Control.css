@@ -5,7 +5,6 @@
 [class^="layers-"]:has([class^="layer-"]:nth-child(2)) {
     container-name: var(--FlashCore-MGM-Control,FC-ControlPanel_Full);
     container-type: inline-size;
-    contain: paint;
 }
 
 @container FC-ControlPanel_Full (min-width: 0px) {
@@ -15,7 +14,6 @@
         margin: auto;
         padding: 0;
         border-radius: 0;
-        animation: FlashCore-FadeIn var(--Flashcord-AnimMult-XSlow, 1s) !important;
     }    
     [class^="sidebarRegion-"] {
         max-width: 220px;
@@ -43,23 +41,6 @@
         max-width: 180px;
         border-radius: var(--Flashcord-Border_Radius, 25px) !important;
         translate: 5px;
-        transition-property: translate, scale;
-        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
-    }
-    [class^="sidebar-"] [class^="item-"]:hover {
-        translate: 15px;
-        scale: 1.05;
-        /*will-change: translate, scale;*/
-    }
-    [class^="sidebar-"] [class^="item-"]:active {
-        translate: 15px;
-        scale: 1;
-        /*will-change: translate, scale;*/
-    }
-    [class^="sidebar-"] [class*="selected-"] {
-        translate: 15px;
-        scale: 1.025;
-        /*will-change: translate, scale;*/
     }
 }
 

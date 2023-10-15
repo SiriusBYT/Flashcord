@@ -1,13 +1,13 @@
 {
 	"id": "com.sirio-network.Flashcord-LPM",
 	"name": "Flashcord for Low-End Systems (LPM)",
-	"description": "Flashcord for the haters. Insanely nerfed version, missing a ton of features ranging from really nice QOL changes to utterly useless unusued things such as Chat Effects.",
+	"description": "Flashcord for the haters. Insanely nerfed version, missing a ton of features ranging from certain QOL changes to utterly useless unused things such as Chat Effects.",
 	"author": {
 		"name": "SiriusBYT",
 		"discordID": "311057290562371586",
 		"github": "SiriusBYT"
 	},
-	"version": "aLPM-1.0",
+	"version": "aLPM-231015",
 	"updater": {
             "type": "github",
             "id": "SiriusBYT/Flashcord"

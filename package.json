@@ -1,7 +1,7 @@
 {
   "name": "Flashcord for Low-End Systems (LPM)",
-  "version": "aLPM-1.0",
-  "description": "[⚠️] Make sure to read the Flashcord Wiki! [⚠️] The world's most advanced, complex and feature rich Discord Theme to ever exist. A complete visual overhaul for Discord.",
+  "version": "aLPM-231015",
+  "description": "[⚠️] Make sure to read the Flashcord Wiki! [⚠️] A nerfed version of the world's most advanced, complex and feature rich Discord Theme to ever exist.",
   "engines": {
     "node": ">=18.0.0",
     "pnpm": ">=8.0.0"
