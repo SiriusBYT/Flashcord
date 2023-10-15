@@ -14,7 +14,7 @@
 	},
 	"license": "CC BY-NC-ND 4.0",
 	"type": "replugged-theme",
-	"main": "src/LPM/LPM.css",
+	"main": "src/LPM/lpm.css",
 	"image": [
 		"https://sirio-network.com/flashcord/ressources/store/LPM-Main.gif",
 		"https://sirio-network.com/flashcord/ressources/store/LPM-Dark.png",
