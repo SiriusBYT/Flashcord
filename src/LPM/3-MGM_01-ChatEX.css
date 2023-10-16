@@ -22,7 +22,6 @@
     }
     :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .chat-2ZfjoI { /* [!] FC-Wildcard_PerfNuker */
         translate: 0px;
-        /*will-change: translate;*/
     }
     [class^="chat-"]:has([class^="pageBody-"]) {
       margin-right: 0;
@@ -72,14 +71,9 @@ nav[class^="wrapper-"] > ul {
 }
 
 @container FC-GuildNav_Static (min-width: 0px) {
-  [class^="listItem-"] {
-      transition-property: scale, filter !important;
-      transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
-  }
   [class^="listItem-"]:has([style*="height: 8px"], [class^="lowerBadge-"]), [class^="listItem-"]:hover {
       scale: 0.975;
       filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px) var(--Flashcord-GuildShadow_Unread, #0000FF));
-      /*will-change: scale, filter;*/
   }
   [class^="pill-"] {  
       display: none;
