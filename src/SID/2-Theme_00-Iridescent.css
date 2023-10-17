@@ -105,6 +105,11 @@
     }
 
     @container FC-Theme_Iridescent (min-width: 0px) {
+        @container FC-JumpBars (min-width: 0px) {
+            [class^="jumpToPresentBar-"] {
+                padding-bottom: 0;
+            }
+        }
         @container FC-MemberSlide (min-width: 0px) {
             [class^="membersWrap-"]::before { /* May be a performance issue? Blame chrome, I fucking hate chrome's fucking bullshit backdrop-filter bug so much I'm going to fucking piss on the moon right this fucking instant */
               content: '';

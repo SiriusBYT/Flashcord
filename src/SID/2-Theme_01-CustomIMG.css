@@ -116,11 +116,21 @@ html[theme-hooker="theme-mint-apple"] {
                 background: var(--Flashcolord-CBM_Light-Floating);
             }
         }
+        @container FC-JumpBars (min-width: 0px) {
+            [class^="jumpToPresentBar-"] {
+                padding-bottom: 0;
+            }
+        }
     }
     @container FC-Theme_CBM-Dark (min-width: 0px) {
         @container FC-PM (min-width: 0px) {
             [role="menu"] {
                 background: var(--Flashcolord-CBM_Dark-Floating);
+            }
+        }
+        @container FC-JumpBars (min-width: 0px) {
+            [class^="jumpToPresentBar-"] {
+                padding-bottom: 0;
             }
         }
     }

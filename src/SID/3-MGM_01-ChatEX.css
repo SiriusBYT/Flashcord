@@ -21,7 +21,7 @@
         transition-property: translate;
         transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
-    :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .chat-2ZfjoI { /* [!] FC-Wildcard_PerfNuker */
+    :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .chat-9g_3Xj { /* [!] FC-Wildcard_PerfNuker */
         translate: 0px;
         /*will-change: translate;*/
     }

@@ -34,7 +34,7 @@ This license requires that reusers give credit to the creator. It allows reusers
   
   --Flashcord-Branch: "Flashcord Beta";
   --Flashcord-Channel: "bSID";
-  --Flashcord-Version: "231014-HF2";
+  --Flashcord-Version: "231014-HF3";
 
   --Flashcord-Splash: "have you heard the \A big chungus in pd3?";
   --Flashcord-SplashSca: 1.1;
@@ -726,6 +726,11 @@ This information is only visible to you, please screenshot it and send it to @Si
     }
 
     @container FC-Theme_Iridescent (min-width: 0px) {
+        @container FC-JumpBars (min-width: 0px) {
+            [class^="jumpToPresentBar-"] {
+                padding-bottom: 0;
+            }
+        }
         @container FC-MemberSlide (min-width: 0px) {
             [class^="membersWrap-"]::before { /* May be a performance issue? Blame chrome, I fucking hate chrome's fucking bullshit backdrop-filter bug so much I'm going to fucking piss on the moon right this fucking instant */
               content: '';
@@ -918,11 +923,21 @@ html[theme-hooker="theme-mint-apple"] {
                 background: var(--Flashcolord-CBM_Light-Floating);
             }
         }
+        @container FC-JumpBars (min-width: 0px) {
+            [class^="jumpToPresentBar-"] {
+                padding-bottom: 0;
+            }
+        }
     }
     @container FC-Theme_CBM-Dark (min-width: 0px) {
         @container FC-PM (min-width: 0px) {
             [role="menu"] {
                 background: var(--Flashcolord-CBM_Dark-Floating);
+            }
+        }
+        @container FC-JumpBars (min-width: 0px) {
+            [class^="jumpToPresentBar-"] {
+                padding-bottom: 0;
             }
         }
     }
@@ -1486,7 +1501,7 @@ Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A
         transition-property: translate;
         transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
-    :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .chat-2ZfjoI { /* [!] FC-Wildcard_PerfNuker */
+    :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .chat-9g_3Xj { /* [!] FC-Wildcard_PerfNuker */
         translate: 0px;
         /*will-change: translate;*/
     }
@@ -2054,7 +2069,6 @@ nav[class^="wrapper-"] > ul {
         width: fit-content;
         left: auto;
         right: 16px;
-        padding-bottom: 0;
         animation: FlashCore-FadeIn_Bottom var(--Flashcord-AnimMult-Normal, 250ms) !important;
     }
     [class^="newMessagesBar-"] {

@@ -1,5 +1,5 @@
 def merge_files():
-    input_files = ["0-BIOS.css", "0-Kernel_Ring0.css", "0-Kernel_Ring1.css", "0-Kernel_Ring2.css", "0-Kernel_Ring3.css", "0-Kernel_Serial.css", "1-Anarchy_SID.css", "2-Theme_00-Iridescent.css", "2-Theme_01-CustomIMG.css", "2-Theme_03-Transparent.css", "3-MGM_00-Control.css", "3-MGM_00-Control-MAT.css", "3-MGM_00-Control-AT.css", "3-MGM_01-ChatEx.css", "3-MGM_01-ChatIn.css", "3-MGM_02-OTUI_Base.css", "3-MGM_02-OTUI_Pop.css", "4-SM_Base.css", "4-SM_Pop.css", "4-SM_UnNitrofy.css", "5-ChatEffects_CD.css", "6-CFIX_RPLUGIN.css", "6-CFIX_RTHEME.css", "6-CLIST_RPLUGIN.css", "6-CLIST_RTHEME.css"]
+    input_files = ["0-BIOS.css", "0-Kernel_Ring0.css", "0-Kernel_Ring1.css", "0-Kernel_Ring2.css", "0-Kernel_Ring3.css", "0-Kernel_Serial.css", "1-Anarchy_SID.css", "2-Theme_00-Iridescent.css", "2-Theme_01-CustomIMG.css", "2-Theme_03-Transparent.css", "3-MGM_00-Control.css", "3-MGM_00-Control-MAT.css", "3-MGM_00-Control-AT.css", "3-MGM_01-ChatEx.css", "3-MGM_01-ChatIn.css", "3-MGM_02-OTUI_Base.css", "3-MGM_02-OTUI_Pop.css", "4-SM_Base.css", "4-SM_Pop.css", "4-SM_UnNitrofy.css", "5-ChatEffects_CD.css", "6-CFIX_RPLUGIN.css", "6-CFIX_RTHEME.css", "6-CLIST_RPLUGIN.css", "6-CLIST_RTHEME.css", "7-Lang.css"]
     output_file = "sid.css"  # Specify the output file path here
 
     try:

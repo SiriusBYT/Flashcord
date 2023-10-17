@@ -266,7 +266,6 @@
         width: fit-content;
         left: auto;
         right: 16px;
-        padding-bottom: 0;
         animation: FlashCore-FadeIn_Bottom var(--Flashcord-AnimMult-Normal, 250ms) !important;
     }
     [class^="newMessagesBar-"] {
