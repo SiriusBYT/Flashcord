@@ -1,0 +1,45 @@
+
+/* [START] = Flashcord Beta == Kernel [03] CSS = */
+
+body > :before,
+body:before {
+    color: var(--text-normal);
+    font-size: 12px;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    font-weight: 900;
+    opacity: 0.5;
+    width: 100vw;
+    backdrop-filter: brightness(2);
+}
+
+.platform-win body > :before { content: "🪟 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version); }
+.platform-linux body > :before { content: "🐧 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version); }
+.platform-linux #app-mount {
+    margin-top: 24px;
+    height: calc(100vh - 24px);
+}
+
+.platform-osx body:before {
+    content: "🍎 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version);
+    color: #ffffff;
+    text-align: right; 
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 32px;
+    margin-left: -12px;
+}
+.platform-osx #app-mount {
+    margin-top: 32px;
+    height: calc(100vh - 32px);
+}
+[class^="macDragRegion-"] {
+    width: 100vw;
+}
+
+/* [END] = Flashcord Beta == Kernel [03] CSS = */

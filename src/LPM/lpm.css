@@ -34,7 +34,7 @@ This license requires that reusers give credit to the creator. It allows reusers
   
   --Flashcord-Branch: "Flashcord for Low-End Systems";
   --Flashcord-Channel: "aLPM";
-  --Flashcord-Version: "231016 [🫚 bSID-231014-HF1]";
+  --Flashcord-Version: "231018";
   
   background: #000000;
 }
@@ -141,6 +141,52 @@ html:not(html:hover) #app-mount {
 /* [END] = Flashcord Beta == Kernel [01] CSS = */
 
 
+/* [START] = Flashcord Beta == Kernel [03] CSS = */
+
+body > :before,
+body:before {
+    color: var(--text-normal);
+    font-size: 12px;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    font-weight: 900;
+    opacity: 0.5;
+    width: 100vw;
+    backdrop-filter: brightness(2);
+}
+
+.platform-win body > :before { content: "🪟 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version); }
+.platform-linux body > :before { content: "🐧 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version); }
+.platform-linux #app-mount {
+    margin-top: 24px;
+    height: calc(100vh - 24px);
+}
+
+.platform-osx body:before {
+    content: "🍎 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version);
+    color: #ffffff;
+    text-align: right; 
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 32px;
+    margin-left: -12px;
+}
+.platform-osx #app-mount {
+    margin-top: 32px;
+    height: calc(100vh - 32px);
+}
+[class^="macDragRegion-"] {
+    width: 100vw;
+}
+
+/* [END] = Flashcord Beta == Kernel [03] CSS = */
+
+
 /* [Start] = Flashcord Beta == Kernel - Serial CSS = */
 
 /* General Information */
@@ -243,10 +289,11 @@ This information is only visible to you, please screenshot it and send it to @Si
     }
     [class^="contentRegion-"] {
         height: 100vh;
+        padding: 2rem 0 1rem 0;
     }
     [class^="layer-"]:nth-child(2) [class^="sidebar"] {
         max-width: 200px;
-        padding: 0;
+        padding: 0.5rem 0 1rem 0;
     }
     [class^="standardSidebarView-"] {
         position: static !important;
@@ -291,7 +338,7 @@ This information is only visible to you, please screenshot it and send it to @Si
         transition-property: translate;
         transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
-    :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .chat-2ZfjoI { /* [!] FC-Wildcard_PerfNuker */
+    :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .chat-9g_3Xj { /* [!] FC-Wildcard_PerfNuker */
         translate: 0px;
     }
     [class^="chat-"]:has([class^="pageBody-"]) {
@@ -306,7 +353,6 @@ This information is only visible to you, please screenshot it and send it to @Si
     }
     :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .sidebar-1tnWFu {  /* [!] FC-Wildcard_PerfNuker */
       width: 240px;
-      /*will-change: width;*/
     }
 }
 

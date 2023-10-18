@@ -21,10 +21,11 @@
     }
     [class^="contentRegion-"] {
         height: 100vh;
+        padding: 2rem 0 1rem 0;
     }
     [class^="layer-"]:nth-child(2) [class^="sidebar"] {
         max-width: 200px;
-        padding: 0;
+        padding: 0.5rem 0 1rem 0;
     }
     [class^="standardSidebarView-"] {
         position: static !important;
