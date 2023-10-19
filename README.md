@@ -1,5 +1,3 @@
-NOTICE: Discord classes are being slowly rerolled, shit is breaking a lot lately for everyone. More info in the announcements channel of the SGN Discord Sever.
-
 # 📸 This. This is Flashcord Beta.
 ## The world's most complex Discord Theme.
 ## It's all about the chat space.
