@@ -1,5 +1,5 @@
 <h1 align="center">⚠️</h1>
-<h2 align="center">Flashcord is currently completely broken due to the recent client mods being entirely broken. No, OpenASAR will not work with Flashcord right now as classes have been rerolled too and the naming of most if not every classes have changed, requiring a heafty rewrite of certain parts of the code. Flashcord will be back up as soon as Replugged starts working again. Until now, development is on hold.</h2>
+<h2 align="center">Flashcord is currently completely broken due to the recent class rolls and naming changes. Due to Discord also recently forcing their clients to crash the moment DevTools are opened, progress to fix Flashcord is insanely slow. Please understand that it will take a while before everything goes back to normal.</h2>
 
 # 📸 This. This is Flashcord Beta.
 ## The world's most complex Discord Theme.
