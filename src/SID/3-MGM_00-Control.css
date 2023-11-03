@@ -2,14 +2,14 @@
 /* [START] = Flashcord Beta == Major General Modifications [00] Control CSS = */
 
 /* Control Core */
-[class^="layers-"]:has([class^="layer-"]:nth-child(2)) {
+[class^="layers__"]:has([class^="layer__"]:nth-child(2)) {
     container-name: var(--FlashCore-MGM-Control,FC-ControlPanel_PopUp);
     container-type: inline-size;
     contain: paint;
 }
 
 @container FC-ControlPanel_PopUp (min-width: 0px) {
-    [class^="layer-"]:nth-child(2) {
+    [class^="layer__"]:nth-child(2) {
         width: 90vw;
         height: 85vh;
         margin: auto;
@@ -19,27 +19,27 @@
         transform: none !important;
         animation: FlashCore-FadeIn var(--Flashcord-AnimMult-XSlow, 1) !important;
     }    
-    [class^="sidebarRegion-"] {
+    [class^="sidebarRegion__"] {
         max-width: 220px;
         max-height: 85vh;
     }
-    [class^="contentRegion-"] {
+    [class^="contentRegion__"] {
         height: 85vh;
     }
-    [class^="layer-"]:nth-child(2) [class^="sidebar"] {
+    [class^="layer__"]:nth-child(2) [class^="sidebar"] {
         max-width: 200px;
         padding: 0;
     }
-    [class^="standardSidebarView-"] {
+    [class^="standardSidebarView__"] {
         position: static !important;
         height: 100%;
     }
-    [class^="contentColumn-"] {
+    [class^="contentColumn_"] {
         max-width: calc(100% - 16px);
         margin: auto;
         padding: 0;
     }
-    [class^="closeButton-"] {
+    [class^="closeButton__"] {
         width: 100vw;
         height: 100vh;
         position: fixed;
@@ -53,15 +53,15 @@
         transition-property: opacity;
         transition-duration: var(--Flashcord-TransMult-Normal, 250ms);
     }
-    [class^="closeButton-"] svg { display: none; }
-    [class^="toolsContainer-"] {
+    [class^="closeButton__"] svg { display: none; }
+    [class^="toolsContainer_"] {
         position: absolute;
         z-index: -1;
     }
-    [class^="keybind-"] { display: none; }
+    [class^="keybind__"] { display: none; }
 
     /* Control Fluff */
-    [class*="baseLayer"] {
+    [class*="baseLayer__"] {
         opacity: 1 !important;
         z-index: 1;
         transform: none !important;
@@ -69,38 +69,38 @@
         transition-property: filter, scale;
         transition-duration: var(--Flashcord-TransMult-Normal, 250ms);
     }
-    [class^="layers-"]:has([class^="standardSidebarView-"]:hover) .baseLayer-W6S8cY { /* [!] FC-Wildcard_PerfNuker */
+    [class^="layers__"]:has([class^="standardSidebarView__"]:hover) .baseLayer__8fda3 { /* [!] FC-Wildcard_PerfNuker */
         filter: blur(var(--Flashcord-Blur-Medium, 8px)) brightness(var(--FlashCore-Brightness,0.9));
         scale: 0.98;
     }
-    [class^="layers-"]:has([class^="closeButton-"]:hover) .baseLayer-W6S8cY { /* [!] FC-Wildcard_PerfNuker */
+    [class^="layers__"]:has([class^="closeButton__"]:hover) .baseLayer__8fda3 { /* [!] FC-Wildcard_PerfNuker */
         filter: blur(var(--Flashcord-Blur-Light, 2px)) brightness(0.98);
         scale: 1;
     }
-    [class^="closeButton-"]:hover {
+    [class^="closeButton__"]:hover {
         background: transparent;
         opacity: 0;
         /*will-change: opacity;*/
     }
 
-    [class^="sidebar-"] [class^="item-"] {
+    [class^="sidebar__"] [class^="item__"] {
         max-width: 180px;
         border-radius: var(--Flashcord-Border_Radius, 25px) !important;
         translate: 5px;
         transition-property: translate, scale;
         transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
-    [class^="sidebar-"] [class^="item-"]:hover {
+    [class^="sidebar__"] [class^="item__"]:hover {
         translate: 15px;
         scale: 1.05;
         /*will-change: translate, scale;*/
     }
-    [class^="sidebar-"] [class^="item-"]:active {
+    [class^="sidebar__"] [class^="item__"]:active {
         translate: 15px;
         scale: 1;
         /*will-change: translate, scale;*/
     }
-    [class^="sidebar-"] [class*="selected-"] {
+    [class^="sidebar__"] [class*="selected__"] {
         translate: 15px;
         scale: 1.025;
         /*will-change: translate, scale;*/
@@ -108,7 +108,7 @@
 }
 
 @container FC-ControlPanel_Full (min-width: 0px) {
-    [class^="layer-"]:nth-child(2) {
+    [class^="layer__"]:nth-child(2) {
         width: 100vw;
         height: 100vh;
         margin: auto;
@@ -116,46 +116,46 @@
         border-radius: 0;
         animation: FlashCore-FadeIn var(--Flashcord-AnimMult-XSlow, 1s) !important;
     }    
-    [class^="sidebarRegion-"] {
+    [class^="sidebarRegion__"] {
         max-width: 220px;
         max-height: 100vh;
     }
-    [class^="contentRegion-"] {
+    [class^="contentRegion__"] {
         height: 100vh;
     }
-    [class^="layer-"]:nth-child(2) [class^="sidebar"] {
+    [class^="layer__"]:nth-child(2) [class^="sidebar"] {
         max-width: 200px;
         padding: 0;
     }
-    [class^="standardSidebarView-"] {
+    [class^="standardSidebarView__"] {
         position: static !important;
         height: 100%;
     }
-    [class^="contentColumn-"] {
+    [class^="contentColumn_"] {
         max-width: calc(100% - 16px);
         margin: auto;
         padding: 0;
     }
 
     /* Control Fluff */
-    [class^="sidebar-"] [class^="item-"] {
+    [class^="sidebar__"] [class^="item__"] {
         max-width: 180px;
         border-radius: var(--Flashcord-Border_Radius, 25px) !important;
         translate: 5px;
         transition-property: translate, scale;
         transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
-    [class^="sidebar-"] [class^="item-"]:hover {
+    [class^="sidebar__"] [class^="item__"]:hover {
         translate: 15px;
         scale: 1.05;
         /*will-change: translate, scale;*/
     }
-    [class^="sidebar-"] [class^="item-"]:active {
+    [class^="sidebar__"] [class^="item__"]:active {
         translate: 15px;
         scale: 1;
         /*will-change: translate, scale;*/
     }
-    [class^="sidebar-"] [class*="selected-"] {
+    [class^="sidebar__"] [class*="selected__"] {
         translate: 15px;
         scale: 1.025;
         /*will-change: translate, scale;*/

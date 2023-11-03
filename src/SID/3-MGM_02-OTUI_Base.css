@@ -1,26 +1,26 @@
 
 /* [Start] = Flashcord Beta == Major General Modifications [00] OTUI_Base CSS = */
 
-[class^="peopleList-"] {
+[class^="peopleList_"] {
     container-name: var(--FlashCore-Friends, FC-FlexGrid);
     container-type: inline-size;
     contain: paint;
 }
-[id="rp-plugins-tab"], [id="rp-themes-tab"] {
+#rp-plugins-tab, #rp-themes-tab {
     container-name: var(--FlashCore-Replugged_Addons, FC-FlexGrid);
     container-type: inline-size;
     contain: paint;
 }
-[class^="userPopoutOverlayBackground-"]:has([class^="role-"]) {
+[class^="userPopoutOverlayBackground-"]:has([class^="role_"]) {
     container-name: var(--FlashCore-UPFG, FC-FlexGrid);
     container-type: inline-size;
     contain: paint;
 }
 
 @container FC-FlexGrid (min-width: 0px) {
-    [class^="peopleList-"] > div,
+    [class^="peopleList_"] > div,
     [class="replugged-addon-cards"],
-    [class^="section-"]:nth-child(4) {
+    [class^="section_"]:nth-child(4) {
         display: flex;
         flex-wrap: wrap;
         align-content: center;
@@ -30,8 +30,8 @@
         width: 95%;
         margin: auto;
     }
-    [class^="role-"],
-    [class^="peopleListItem-"],
+    [class^="role_"],
+    [class^="peopleListItem_"],
     [class="replugged-addon-card"] {
         margin: 0;
         min-width: 386px;
@@ -43,8 +43,8 @@
         border-radius: var(--Flashcord-Border_Radius, 25px );
         scale: 0.95;
       }
-    [class^="role-"]:hover,
-    [class^="peopleListItem-"]:hover,
+    [class^="role_"]:hover,
+    [class^="peopleListItem_"]:hover,
     [class="replugged-addon-card"]:hover {
         margin: 0 !important;
         padding: 8px !important;
@@ -52,7 +52,7 @@
         transition: var(--Flashcord-AnimMult-Normal, 250ms);
         border-radius: var(--Flashcord-Border_Radius, 25px );
     }
-    [class^="role-"] {
+    [class^="role_"] {
         min-width: fit-content !important;
         min-height: 24px !important;
         border-radius: 0px !important;

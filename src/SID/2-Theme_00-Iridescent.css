@@ -20,12 +20,12 @@
 
 @container FC-Theme_Hooker (min-width: 0px) {
     @container FC-SPGO_AT (min-width: 0px) {
-        section > [class^="header-"] > :before {
+        section > [class^="header_"] > :before {
             content: "⚠️ Advanced Themes require LegalDiscordBypasses or Discord Nitro to enable them. \A ✅ ThemeHooker is present and has enabled new themes." !important;
           }
 
-        [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-citrus-sherbert"]), /* IRIDESCENT LIGHT */
-        [class^="themeSelectionContainer-"]:has([class^="themeSelection-"][style*="--bg-gradient-chroma-glow"]) {
+        [class^="themeSelectionContainer_"]:has([class^="themeSelection_"][style*="--bg-gradient-citrus-sherbert"]), /* IRIDESCENT LIGHT */
+        [class^="themeSelectionContainer_"]:has([class^="themeSelection_"][style*="--bg-gradient-chroma-glow"]) {
           display: block !important;
           border-radius: 25px;
           width: 100%;
@@ -35,30 +35,30 @@
         }
         
         /* Advanced Theme: Irdescent */
-        [class^="themeSelection-"][style*="--bg-gradient-citrus-sherbert"] {
+        [class^="themeSelection_"][style*="--bg-gradient-citrus-sherbert"] {
             background-image: url("https://sirio-network.com/sbin/PSWave-Light.png") !important;
             background-position-y: center !important;
             background-size: 100vw !important;
             border-radius: 25px;
             animation: FlashCore-BackXMTL var(--Flashcord-AnimMult-XTSlow, 2s) linear infinite !important;
         }
-        [class^="themeSelection-"][style*="--bg-gradient-citrus-sherbert"]:before {
+        [class^="themeSelection_"][style*="--bg-gradient-citrus-sherbert"]:before {
             content: "Iridescent Mode (Light Mode)";
         }
-        [class^="themeSelection-"][style*="--bg-gradient-chroma-glow"] {
+        [class^="themeSelection_"][style*="--bg-gradient-chroma-glow"] {
             background-image: url("https://sirio-network.com/sbin/PSWave-Dark.png") !important;
             background-position-y: center !important;
             background-size: 100vw !important;
             border-radius: 25px;
             animation: FlashCore-BackXMTL var(--Flashcord-AnimMult-XTSlow, 2s) linear infinite !important;
         }
-        [class^="themeSelection-"][style*="--bg-gradient-chroma-glow"]:before {
+        [class^="themeSelection_"][style*="--bg-gradient-chroma-glow"]:before {
             content: "Iridescent Mode (Dark Mode)";
         }
-        [class^="themeSelectionContainer-"]:has([style*="--bg-gradient-citrus-sherbert"]) {
+        [class^="themeSelectionContainer_"]:has([style*="--bg-gradient-citrus-sherbert"]) {
             order: -23;
         }
-        [class^="themeSelectionContainer-"]:has([style*="--bg-gradient-chroma-glow"]) {
+        [class^="themeSelectionContainer_"]:has([style*="--bg-gradient-chroma-glow"]) {
             order: -22;
         }
     }
@@ -78,8 +78,8 @@
         background-color: #000000;
         animation: FlashCore-BackXMTL var(--Flashcord-AnimMult-XTSlow, 2s) linear infinite !important;
     }
-    [theme-hooker="theme-citrus-sherbert"] [class^="chat-"] [class^="title-"] [class^="children-"]:after,
-    [theme-hooker="theme-chroma-glow"]  [class^="chat-"] [class^="title-"] [class^="children-"]:after {
+    [theme-hooker="theme-citrus-sherbert"] [class^="chat_"] [class^="title_"] [class^="children_"]::after,
+    [theme-hooker="theme-chroma-glow"]  [class^="chat_"] [class^="title_"] [class^="children_"]::after {
         content: var(--Flashcord-Warnings,"  ⚠️ Flashcord is in Beta. 💥 Iridescent Mode is unfinished.  ") !important;
     }
     [theme-hooker="theme-citrus-sherbert"] [class^="tooltip-"] { outline: 1px solid var(--Flashcolord-Light_Accent); }
@@ -91,13 +91,13 @@
     }
 
     @container FC-ControlPanel_PopUp (min-width: 0px) {
-        [theme-hooker="theme-citrus-sherbert"] [class^="layer-"]:nth-child(2) {
+        [theme-hooker="theme-citrus-sherbert"] [class^="layer_"]:nth-child(2) {
             border: 1px solid var(--Flashcolord-Light_Accent);
             background-image: url("https://sirio-network.com/flashcord/ressources/backgrounds/BasicGrid-White_Fast.gif");
             background-size: cover;
         }
 
-        [theme-hooker="theme-chroma-glow"] [class^="layer-"]:nth-child(2) {
+        [theme-hooker="theme-chroma-glow"] [class^="layer_"]:nth-child(2) {
             border: 1px solid var(--Flashcolord-Dark_Accent);
             background-image: url("https://sirio-network.com/flashcord/ressources/backgrounds/BasicGrid-Dark_Fast.gif");
             background-size: cover;
@@ -106,12 +106,12 @@
 
     @container FC-Theme_Iridescent (min-width: 0px) {
         @container FC-JumpBars (min-width: 0px) {
-            [class^="jumpToPresentBar-"] {
+            [class^="jumpToPresentBar_"] {
                 padding-bottom: 0;
             }
         }
         @container FC-MemberSlide (min-width: 0px) {
-            [class^="membersWrap-"]::before { /* May be a performance issue? Blame chrome, I fucking hate chrome's fucking bullshit backdrop-filter bug so much I'm going to fucking piss on the moon right this fucking instant */
+            [class^="membersWrap_"]::before { /* May be a performance issue? Blame chrome, I fucking hate chrome's fucking bullshit backdrop-filter bug so much I'm going to fucking piss on the moon right this fucking instant */
               content: '';
               position: absolute;
               width: 100%;
@@ -123,12 +123,12 @@
               transition-property: backdrop-filter;
               transition-duration: var(--Flashcord-TransMult-Normal, 250ms);
             }
-            [class^="membersWrap-"]:hover::before { /* Firefox instead of Electron When? */
+            [class^="membersWrap_"]:hover::before { /* Firefox instead of Electron When? */
                 backdrop-filter: blur(16px);
             }
           }
 
-        [class^="appAsidePanelWrapper-"]::before {
+        [class^="appAsidePanelWrapper_"]::before {
             content: '';
             position: absolute;
             width: 100%;
@@ -137,15 +137,15 @@
             left: 0;
             z-index: -1;
         }
-        [theme-hooker="theme-citrus-sherbert"] [class^="appAsidePanelWrapper-"]::before {
+        [theme-hooker="theme-citrus-sherbert"] [class^="appAsidePanelWrapper_"]::before {
             backdrop-filter: var(--Flashcord-Iridescent_Light-Filter, blur(4px) brightness(1));
         }
-        [theme-hooker="theme-chroma-glow"] [class^="appAsidePanelWrapper-"]::before {
+        [theme-hooker="theme-chroma-glow"] [class^="appAsidePanelWrapper_"]::before {
             backdrop-filter: var(--Flashcord-Iridescent_Dark-Filter, blur(4px) brightness(0.5));
         }
 
         @container FC-ChatSlide_Legacy (min-width: 0px) {
-            [class^="chat-"] > section, [class^="chat-"] > div, [class^="chat-"] {
+            [class^="chat_"] > section, [class^="chat_"] > div, [class^="chat_"] {
                 background: transparent !important;
             }
         }
@@ -165,7 +165,7 @@
                 outline-width: 2px;
             }
 
-            [class^="scroller-"]::before {
+            [class^="scroller_"]::before {
                 content: '';
                 position: absolute;
                 width: 100%;

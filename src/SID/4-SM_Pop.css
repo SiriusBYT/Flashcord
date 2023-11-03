@@ -2,15 +2,15 @@
 /* [Start] = Flashcord Beta == Small Modifications - Popup CSS = */
 
 /* Fixes an annoying bug regarding pop up menus*/
-[class^="submenuPaddingContainer-"] {
+[class^="submenuPaddingContainer_"] {
     padding: 0;
     margin: 4px;
 }
 
 /* Better Tooltips */
-[class^="tooltip-"] {
+[class^="tooltip_"] {
     border-radius: var(--Flashcord-Border_Radius, 25px);
 }
-[class^="tooltipPointer-"] { display: none; }
+[class^="tooltipPointer_"] { display: none; }
 
 /* [End] = Flashcord Beta == Small Modifications - Popup CSS = */

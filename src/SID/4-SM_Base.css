@@ -2,7 +2,7 @@
 /* [Start] = Flashcord Beta == Small Modifications - BaseLayer CSS = */
 
 /* update your fucking client nerd, and then cry cause replugged unplugged itself cuz discord bad >:( */
-[class^="updateIconForeground-"] {
+[class^="updateIconForeground_"] {
     fill: red !important;
     animation: FlashCore-Shake calc(100ms * var(--Flashcord-Animations, 1)) infinite;
 }
@@ -13,19 +13,19 @@
 }
 
 /* @ Before Usernames */
-[class^="userTagUsernameBase-"]:before, [class^="usernameInnerRow-"]:before {
+[class^="userTagUsernameBase_"]:before, [class^="usernameInnerRow_"]:before {
     content: "@"
 }
 
 /* Icon Hover Response */
-[class^="icon-"] {
+[class^="icon_"] {
     transition-property: scale;
     transition-duration: var(--Flashcord-TransMult-Fast, 125ms) !important;
 }
-[class^="icon-"]:hover {
+[class^="icon_"]:hover {
     scale: 1.1;
 }
-[class^="icon-"]:active {
+[class^="icon_"]:active {
     scale: 0.9;
 }
 

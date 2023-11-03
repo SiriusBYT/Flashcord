@@ -1,21 +1,21 @@
 /* [START] = Flashcord Beta == Kernel [00] CSS = */
 
 /* NOTICE: Everytime there is a " [!] FC-Wildcard_PerfNuker " this means that using a wildcard will absolutely nuke performance so bad it would make Flashcord impossible to use */
-[class^="app-"]:has([class^="problems-"]) {
+[class^="app_"]:has([class^="problems_"]) {
   container-name: var(--Flashcord-Blackout, FC-Boot_Blackout-Android);
   container-type: inline-size;
 }
 
 @container FC-Boot_Blackout-Android (min-width: 0px) {
-  [class^="content-"] div, video, [class^="problems-"] div { display: none; }
-  [class^="problems-"]:before {
+  [class^="content_"] div, video, [class^="problems_"] div { display: none; }
+  [class^="problems_"]:before {
     content: "⚠️ You are having connection problems.";
     color: white;
     text-align: center;
     white-space: pre;
     animation: FlashCore-FadeIn_Bottom var(--Flashcord-AnimMult-XSlow, 1s);
   }
-  [class^="content-"]:before {
+  [class^="content_"]:before {
     content: "Flashcord";
     margin: auto;
     text-align: center;
@@ -27,7 +27,7 @@
     -webkit-text-fill-color: transparent;
     animation: FlashCore-BackXMTL var(--Flashcord-AnimMult-XTXSlow, 4s) linear infinite !important;
   }
-  [class^="content-"] {
+  [class^="content_"] {
     background: transparent;
     width: 100vw;
     height: 102vh;

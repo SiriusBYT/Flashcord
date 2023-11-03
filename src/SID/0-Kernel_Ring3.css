@@ -43,12 +43,12 @@ body:before {
     margin-top: 32px;
     height: calc(100vh - 32px);
 }
-[class^="macDragRegion-"] {
+[class^="macDragRegion_"] {
     width: 100vw;
 }
 
 
-[class^="chat-"] [class^="children-"]:after {
+[class^="chat_"] [class^="children_"]:after {
     color: red;
     width: max-content;
     margin: auto ;
@@ -59,16 +59,16 @@ body:before {
     border-radius: var(--Flashcord-Border_Radius, 25px);
     white-space: pre;
 }
-.theme-dark [class^="chat-"] [class^="title-"] [class^="children-"]:after {
+.theme-dark [class^="chat_"] [class^="title_"] [class^="children_"]:after {
     content: var(--Flashcord-Warnings,"  ⚠️ Flashcord is in Beta. 🌙 Dark Mode is unfinished.  ");
 }
   
-.theme-light [class^="chat-"] [class^="title-"] [class^="children-"]:after {
+.theme-light [class^="chat_"] [class^="title_"] [class^="children_"]:after {
     content: var(--Flashcord-Warnings,"  ⚠️ Flashcord is in Beta.  ");
 }
 
 @container FC-ControlPanel_PopUp (min-width: 0px) {
-    [class^="layer-"]:nth-child(2) [class^="sidebar-"] > :before {
+    [class^="layer_"]:nth-child(2) [class^="sidebar_"] > :before {
         content: var(--Flashcord-Branch) "\A Version "var(--Flashcord-Channel) "-" var(--Flashcord-Version);
         padding: 10px;
         white-space: pre;
@@ -81,7 +81,7 @@ body:before {
         margin-bottom: var(--Flashcord-SplashMAR, 20px);
     }
     
-    [class^="layer-"]:nth-child(2) [class^="sidebarRegionScroller-"]:after {
+    [class^="layer_"]:nth-child(2) [class^="sidebarRegionScroller_"]:after {
         position: absolute;
         content: var(--Flashcord-Splash);
         transform: rotate(-2deg) scale( var(--Flashcord-SplashSca) ) translateX( var(--Flashcord-SplashTrX) ) translateY( var(--Flashcord-SplashTrY) ) !important;

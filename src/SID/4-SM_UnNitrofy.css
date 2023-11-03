@@ -1,7 +1,10 @@
 
 /* [Start] = Flashcord Beta == Small Modifications - UnNitrofy CSS = */
 
-[class^="appAsidePanelWrapper-"] {
+/* AFTER CLAsS REROLL NOTICE: Won't fix until the November Update 
+because that module is going to get fully rewritten anyways. */
+
+[class^="appAsidePanelWrapper_"] {
     container-name: var(--FlashCore-DeNitrofy, FC-DeNitrofy);
     container-type: inline-size;
 }

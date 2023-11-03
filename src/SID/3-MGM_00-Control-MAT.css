@@ -1,13 +1,13 @@
 
 /* [START] = Flashcord Beta == Major General Modifications [00] Control MyAcc Overhaul CSS = */
-[class^="contentRegionScroller-"] [id="my-account-tab"] {
+[id="my-account-tab"] {
     container-name: var(--FlashCore-SPGO_MAT, FC-SPGO_MAT);
     container-type: inline-size;
     contain: paint;
 }
 
 @container FC-SPGO_MAT (min-width: 0px) {
-    [class^="userInfo-"] { 
+    [class^="userInfo_"] { 
         padding: 0;
         display: flex;
         flex-direction: row;
@@ -17,19 +17,17 @@
         align-items: center;
         margin-top: 10px;
     }
-    [class^="userInfo-"] > div {
+    [class^="userInfo_"] > div {
         display: block;
         position: relative;
         top: 1px;
         margin-right: 42px;
     }
-    [class^="userInfo-"] > button {
+    [class^="userInfo_"] > button {
         margin-left: auto;
         margin-right: 16px;
     } 
-
-
-    [class^="fieldList-"] {
+    [class^="fieldList_"] {
         display: flex;
         justify-content: space-between;
         flex-direction: row;
@@ -39,57 +37,54 @@
         align-content: center;
         align-items: center;
     }
-    [class^="field-"]:first-child { position: absolute; }
-    [class^="field-"]:first-child > div { display: none; }
-    [class^="field-"]:first-child > button {
+    [class^="field_"]:first-child { position: absolute; }
+    [class^="field_"]:first-child > div { display: none; }
+    [class^="field_"]:first-child > button {
         translate: 150px -108px;
         scale: 0.6;
         font-size: x-large;
         display: none;
     }
-    [class^="field-"]:nth-child(2) { 
+    [class^="field_"]:nth-child(2) { 
         position: absolute;
         translate: 90px -90px;
     }
-    [class^="field-"]:nth-child(2) h3 { display: none; }
-    [class^="field-"]:nth-child(2) > button {
+    [class^="field_"]:nth-child(2) h3 { display: none; }
+    [class^="field_"]:nth-child(2) > button {
         translate: -25px -7px;
         scale: 0.6;
         font-size: x-large;
     }
-
-    [class^="badgeList-"] {
-        translate: 0 13px;
-    }
-    [class^="overflowMenuButton-"] { display: none; }
+    [class^="badgeList_"] { translate: 0 13px; }
+    [class^="overflowMenuButton_"] { display: none; }
 
     mask { display: none; }
-    #my-account-tab > div > [class^="marginTop40-"]:last-child { display: none; }
+    [class^="marginTop40_"]:last-child { margin-top: 0.25rem; margin-bottom: 1rem; }
 
-    [class^="divider-"] {
-        margin-top: 16px;
+    [class^="divider_"] {
+        margin-top: 8px;
+        margin-bottom: 8px;
         padding: 0;
     }
-    [class^="accountProfileCard-"] {
+    [class^="accountProfileCard_"] {
         margin-bottom: -16px;
         border-radius: var(--Flashcord-Border_Radius, 0px);
     }
-    h2 { margin-top: 20px; text-align: center;}
+    h2 { margin-top: 0.5rem; margin-bottom: 0.5rem !important; text-align: center;}
+    h3:has([class^="lockIcon_"]) { text-align: center; margin-top: 0; margin-bottom: 0.5rem; }
 
-    [class^="changePasswordButton-"] {
+    [class^="changePasswordButton_"] {
         margin: auto;
     }
 
-    [class^="field-"]:nth-last-child(-n + 2) [class^="text-md-normal-"] {
+    [class^="field_"]:nth-last-child(-n + 2) [class^="text-md-normal_"] {
         filter: blur(8px);
         transition: filter 250ms;
     }
-    [class^="field-"]:nth-last-child(-n + 2) [class^="text-md-normal-"]:hover {
+    [class^="field_"]:nth-last-child(-n + 2) [class^="text-md-normal_"]:hover {
         filter: blur(0px);
         transition: filter 1s;
     }
-    [class^="userSettingsSecurity-"] { margin: 0; }
-    [class^="userSettingsSecurity-"] [class^="h1-"] { margin: 8px; }
     [class^="colorStandard-"]:has([class*="phoneRevealer-"]) { display: none; }
     #my-account-tab > :after {
         content: "\A About Flashcord";
@@ -116,7 +111,7 @@
       🗨️  "Ohren Steif Halten""\A \
                 - termedagain, 2023\A\A \
     Thanks to those who joined the SGN Discord Server for Flashcord 🗣️ ! \A \
-    Kinoisseur, __Chara__, Written, Darian465, Lasaga Man, Phantom, Fishy <3, pguap, Pixel, raffy309, Birb, Sundae.C, timebendingTrickster, Volk, Yukiko, Galaxy. \A\A \
+    Kinoisseur, _Chara_, Written, Darian465, Lasaga Man, Phantom, Fishy <3, pguap, Pixel, raffy309, Birb, Sundae.C, timebendingTrickster, Volk, Yukiko, Galaxy. \A\A \
     And finally, thanks for those who stared the Flashcord GitHub Repo ✨ ! \A \
     s3nkwr, WA1Jl, LuftVerbot, PixelHir, MacDingleNut, christiangrothaus, zeo-return-null, trebor048, kisakimeowr, haiku-balls, bxrlin, Lypuss, roushjosh, Zaannaah, littlepriceonu, mog77a, TheLastZombie, ItsGfue. \A\A \
     🌠 Special Thanks: \A \

@@ -1,7 +1,7 @@
 
 /* [Start] = Flashcord Beta == Kernel - Serial CSS = */
 
-[class^="notAppAsidePanel-"] {
+[class^="notAppAsidePanel_"] {
     container-name: var(--Flashcord-DebugMode, FC-VOID);
     container-type: inline-size;
 }
