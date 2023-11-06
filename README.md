@@ -22,6 +22,10 @@ Due to the complexity of Flashcord, yes, I am not kidding. This Discord Theme ha
 
 Flashcord is currently in Beta, expect lots of things to change and quickly! Next major version will be Flashcord Gamma, set to release in 2024 if everything goes according to plan.
 
+### Is ~~Crysis~~ Flashcord too much for your computer?
+Check out Flashcord's LPM Branch, aka [Flashcord for Low-End Systems](https://github.com/SiriusBYT/flashcord/wiki/Flashcord-LPM), an extremely debloated version that only keeps the essential features and primordial QoL changes.
+
+
 # 🛠️ Want to mod Flashcord?
 Check out the [Flashcord Store Template](https://github.com/SiriusBYT/Flashcord-Store-Template), if you want to install extensions of Flashcord then check out the [Flashcord Store](https://sirio-network.com/flashcord/store). You can submit your mods by making a post in #module-reviews on the SGN Discord Server.
 
