@@ -17,7 +17,7 @@
   "author": "SiriusBYT",
   "license": "CC BY-NC-ND 4.0",
   "devDependencies": {
-    "@types/node": "^18.15.11",
+    "@types/node": "^18.17.6",
     "prettier": "^3.0.3",
     "replugged": "^4.7.5"
   }
