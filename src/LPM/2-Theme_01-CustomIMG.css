@@ -2,6 +2,10 @@
 /* [Start] = Flashcord Beta == Custom Theme: CBM CSS = */
 
 @container FC-AdvancedTheme-LEGACY_Custom-Background-Mode (min-width: 0px) {
+    body {
+          --FlashCore-ChatSlide: FC-ChatSlide_Legacy;
+          --FlashCore-Brightness: 0.5;
+    }
     .theme-light body {
         background-image: var(--Flashcord-CBM_Light-Image, url("https://sirio-network.com/flashcord/ressources/backgrounds/bgr-test.jpg") ) !important;
     }
