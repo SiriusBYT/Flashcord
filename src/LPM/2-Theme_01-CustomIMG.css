@@ -8,15 +8,12 @@
     .theme-dark body {
         background-image: var(--Flashcord-CBM_Light-Image, url("https://sirio-network.com/flashcord/ressources/backgrounds/hypernner.jpg") ) !important;
     }
-    [class^="layer-"]:nth-child(2) {
+    [class^="layer_"]:nth-child(2) {
         border: 1px solid white;
-    }
-    .custom-theme-background [class^="chat-"] [class^="title-"] [class^="children-"]:after {
-        content: var(--Flashcord-Warnings,"  ⚠️ Flashcord LPM's CBM is unsupported.") !important;
     }
 
     @container FC-ChatSlide_Legacy (min-width: 0px) {
-        [class^="chat-"] > section, [class^="chat-"] > div, [class^="chat-"] {
+        [class^="chat_"] > section, [class^="chat_"] > div, [class^="chat_"] {
             background: transparent !important;
         }
     }

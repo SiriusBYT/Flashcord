@@ -32,15 +32,15 @@ This license requires that reusers give credit to the creator. It allows reusers
   --font-display: "Roboto";
   --font-headline: "Roboto";
   
-  --Flashcord-Branch: "Flashcord for Low-End Systems";
-  --Flashcord-Channel: "aLPM";
-  --Flashcord-Version: "231018";
+  --Flashcord-Branch: "Flashcord";
+  --Flashcord-Channel: "LPM";
+  --Flashcord-Version: "231106";
   
   background: #000000;
 }
 
 ::-webkit-scrollbar { display: none; }
-[class*="wordmark-"] { display: none; }
+[class*="wordmark_"] { display: none; }
 
 body {
   background: unset;
@@ -81,7 +81,7 @@ html:not(html:hover) #app-mount {
 }
 
 @container FC-Idle_OptiMax (min-width: 0px) {
-  [class^="appAsidePanelWrapper-"] {
+  [class^="appAsidePanelWrapper_"] {
     --Flashcord-AnimMult-XFast: 0;
     --Flashcord-AnimMult-Fast: 0;
     --Flashcord-AnimMult-Normal: 0;
@@ -180,7 +180,7 @@ body:before {
     margin-top: 32px;
     height: calc(100vh - 32px);
 }
-[class^="macDragRegion-"] {
+[class^="macDragRegion_"] {
     width: 100vw;
 }
 
@@ -244,15 +244,12 @@ This information is only visible to you, please screenshot it and send it to @Si
     .theme-dark body {
         background-image: var(--Flashcord-CBM_Light-Image, url("https://sirio-network.com/flashcord/ressources/backgrounds/hypernner.jpg") ) !important;
     }
-    [class^="layer-"]:nth-child(2) {
+    [class^="layer_"]:nth-child(2) {
         border: 1px solid white;
-    }
-    .custom-theme-background [class^="chat-"] [class^="title-"] [class^="children-"]:after {
-        content: var(--Flashcord-Warnings,"  ⚠️ Flashcord LPM's CBM is unsupported.") !important;
     }
 
     @container FC-ChatSlide_Legacy (min-width: 0px) {
-        [class^="chat-"] > section, [class^="chat-"] > div, [class^="chat-"] {
+        [class^="chat_"] > section, [class^="chat_"] > div, [class^="chat_"] {
             background: transparent !important;
         }
     }
@@ -270,43 +267,43 @@ This information is only visible to you, please screenshot it and send it to @Si
 /* [START] = Flashcord Beta == Major General Modifications [00] Control CSS = */
 
 /* Control Core */
-[class^="layers-"]:has([class^="layer-"]:nth-child(2)) {
+[class^="layers_"]:has([class^="layer_"]:nth-child(2)) {
     container-name: var(--FlashCore-MGM-Control,FC-ControlPanel_Full);
     container-type: inline-size;
 }
 
 @container FC-ControlPanel_Full (min-width: 0px) {
-    [class^="layer-"]:nth-child(2) {
+    [class^="layer_"]:nth-child(2) {
         width: 100vw;
         height: 100vh;
         margin: auto;
         padding: 0;
         border-radius: 0;
     }    
-    [class^="sidebarRegion-"] {
+    [class^="sidebarRegion_"] {
         max-width: 220px;
         max-height: 100vh;
     }
-    [class^="contentRegion-"] {
+    [class^="contentRegion_"] {
         height: 100vh;
         padding: 2rem 0 1rem 0;
     }
-    [class^="layer-"]:nth-child(2) [class^="sidebar"] {
+    [class^="layer_"]:nth-child(2) [class^="sidebar_"] {
         max-width: 200px;
         padding: 0.5rem 0 1rem 0;
     }
-    [class^="standardSidebarView-"] {
+    [class^="standardSidebarView_"] {
         position: static !important;
         height: 100%;
     }
-    [class^="contentColumn-"] {
+    [class^="contentColumn_"] {
         max-width: calc(100% - 16px);
         margin: auto;
         padding: 0;
     }
 
     /* Control Fluff */
-    [class^="sidebar-"] [class^="item-"] {
+    [class^="sidebar_"] [class^="item_"] {
         max-width: 180px;
         border-radius: var(--Flashcord-Border_Radius, 25px) !important;
         translate: 5px;
@@ -320,31 +317,32 @@ This information is only visible to you, please screenshot it and send it to @Si
 /* [START] = Flashcord Beta == Major General Modifications [00] ChatEx CSS = */
 
 /* Channel Slide Core */
-[class^="base-"] > [class^="content-"]:first-of-type {
-    container-name: var(--FlashCore-ChatSlide, FC-ChatSlide_SNDL);
-    container-type: inline-size;
+[class^="layers_"] > [class^="layer_"]:nth-child(1) {
+  container-name: var(--FlashCore-ChatSlide, FC-ChatSlide_SNDL);
+  container-type: inline-size;
 }
-[class^="content-"]:has([class*="threadSidebarOpen-"]) {
-    container-name: FC-VOID;
+[class^="layer_"]:nth-child(1):has([class*="threadSidebarOpen_"]) {
+  container-name: FC-VOID;
 }
 
 @container FC-ChatSlide_SNDL (min-width: 0px) {
-    [class^="sidebar-"] {
-        z-index: 0;
-    }
-    [class^="chat-"]:not(:has([role="complementary"], [class^="submitContainer-"])) {
-        margin-right: -200px;
-        translate: -198px;
-        transition-property: translate;
-        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
-    }
-    :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .chat-9g_3Xj { /* [!] FC-Wildcard_PerfNuker */
-        translate: 0px;
-    }
-    [class^="chat-"]:has([class^="pageBody-"]) {
-      margin-right: 0;
-      translate: 0;
-    }
+  [class*="sidebar_"] {
+      z-index: 0;
+  }
+  [class^="chat_"]:not(:has([class^="pageBody_"])) {
+      margin-right: -200px;
+      translate: -198px;
+      transition-property: translate;
+      transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
+  }
+  :is([class^="container_"]:has([class*="sidebar_"]:hover, [data-list-id="guildsnav"]:hover)) .chat__52833 { /* [!] FC-Wildcard_PerfNuker */
+      translate: 0px;
+      /*will-change: translate;*/
+  }
+  [class^="chat_"]:has([class^="pageBody-"]) {
+    margin-right: 0;
+    translate: 0;
+  }
 }
 
 @container FC-ChatSlide_Legacy (min-width: 0px) {
@@ -357,14 +355,14 @@ This information is only visible to you, please screenshot it and send it to @Si
 }
 
 /* Member Slide Core */
-[class^="chat-"] {
+[class^="chat_"] {
     container-name: var(--FlashCore-MemberSlide, FC-MemberSlide);
     container-type: inline-size;
 }
 
 @container FC-MemberSlide (min-width: 0px) {
-    [class^="membersWrap-"] { height: 100%; }
-    [class^="container-"]:has([class^="membersWrap-"]) {
+    [class^="membersWrap_"] { height: 100%; }
+    [class^="container_"]:has([class^="membersWrap_"]) {
         position: relative;
         margin-left: -190px;
         translate: 190px;
@@ -373,56 +371,54 @@ This information is only visible to you, please screenshot it and send it to @Si
         transition-property: translate;
         transition-duration: var(--Flashcord-TransMult-Normal, 250ms);
     }
-    [class^="container-"]:has([class^="membersWrap-"]:hover) { translate: 0px; }
-    [class^="member-"] { margin-left: 0px; }
-    [class^="member-"] > div {
+    [class^="container_"]:has([class^="membersWrap_"]:hover) { translate: 0px; }
+    [class^="member_"] { margin-left: 0px; }
+    [class^="member_"] > div {
         border-radius: var(--Flashcord-Border_Radius, 25px) !important;
     }
 }
 
 /* GuildNav_Glow Core */
 
-nav[class^="wrapper-"] > ul {
-    container-name: var(--FlashCore-GuildNav_Notification, FC-GuildNav_Static);
-    container-type: inline-size;
+[data-list-id="guildsnav"] {
+  container-name: var(--FlashCore-GuildNav_Notification, FC-GuildNav_Animated);
+  container-type: inline-size;
 }
 
 @container FC-GuildNav_Static (min-width: 0px) {
-  [class^="listItem-"]:has([style*="height: 8px"], [class^="lowerBadge-"]), [class^="listItem-"]:hover {
+  [class^="listItem_"]:has([style*="height: 8px"], [class^="lowerBadge_"]), [class^="listItem_"]:hover {
       scale: 0.975;
       filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px) var(--Flashcord-GuildShadow_Unread, #0000FF));
   }
-  [class^="pill-"] {  
+  [class^="pill_"] {  
       display: none;
   }
 }
 
 /* GuildNav_Compact Core */
 
-[class^="container-"]:has(nav[class^="wrapper-"]) {
+[class^="container_"]:has([data-list-id="guildsnav"]) {
   container-name: var(--FlashCore-GuildNav_Compact, FC-GuildNav_Compact);
   container-type: inline-size;
 }
 
 @container FC-GuildNav_Compact (min-width: 0px) {
-  nav[class^="wrapper-"] { width: 60px; }
-  ul[data-list-id="guildsnav"] > [class^="scroller-"] {
+  nav[class^="wrapper_"] { width: 60px; }
+  [data-list-id="guildsnav"] > [class^="scroller_"] {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  [class^="listItem-"] {
-    margin: 0;
-  }
+  [class^="listItem_"] { margin: 0; }
   foreignObject { border-radius: var(--Flashcord-Border_Radius, 25px); }
   [id^="folder-items-"] { height: auto !important; }
-  [class^="listItem-"] { scale: 0.9; }
-  [class^="guildSeparator-"] { display: none; }
+  [class^="listItem_"] { scale: 0.9; }
+  [class^="listItem_"]:has([class^="guildSeparator_"]) { display: none; }
 }
 
 @container FC-GuildNav_Compact-Horizontal (min-width: 0px) {
-  [class^="base-"] { margin-top: 60px; }
-  nav[class^="wrapper-"] { 
+  [class^="base_"] { margin-top: 60px; }
+  nav[class^="wrapper_"] { 
     left: -58px;
     width: 60px;
     position: absolute;
@@ -430,32 +426,32 @@ nav[class^="wrapper-"] > ul {
     rotate: -90deg;
     transform-origin: right top;
   }
-  ul[data-list-id="guildsnav"] > [class^="scroller-"] {
+  [data-list-id="guildsnav"] > [class^="scroller_"] {
     padding: 0 !important;
     height: 100vw;
   }
-  [class^="listItem-"] {
+  [class^="listItem_"] {
     rotate: 90deg;
     margin: 0;
   }
   foreignObject { border-radius: var(--Flashcord-Border_Radius, 25px); }
-  [class^="listItem-"] { scale: 0.9; }
+  [class^="listItem_"] { scale: 0.9; }
   [id^="folder-items-"] { height: auto !important; }
-  [class^="listItem-"]:has([class^="guildSeparator-"]) { display: none; }
+  [class^="listItem_"]:has([class^="guildSeparator_"]) { display: none; }
 }
 
 /* ChannelNav_Compact Core */
-[class^="content-"] > [class^="sidebar-"] {
+[class^="content_"] > [class^="sidebar_"] {
   container-name: var(--FlashCore-ChannelNav_Compact, FC-ChannelNav_Compact);
   container-type: inline-size;
 }
 
 @container FC-ChannelNav_Compact (min-width: 0px) {
   li > div > div > a,
-  [class^="emojiColorFill-"],
+  [class^="emojiColorFill_"],
   li,
-  [class^="container-"] [class^="link-"],
-  [class^="channel-"] {
+  [class^="container_"] [class^="link_"],
+  [class^="channel_"] {
     scale: 0.95;
     translate: -4px;
     margin: -1px 0px -1px 0px;
@@ -463,27 +459,27 @@ nav[class^="wrapper-"] > ul {
     transition-property: scale, background-color !important;
     transition-duration: var(--Flashcord-TransMult-Fast, 125ms) !important;
   }
-  [class^="container-"] [class^="link-"]:hover {
+  [class^="container_"] [class^="link_"]:hover {
     background: unset !important;
   }
 
-  li:has([class^="channelEmoji-"]) .name-28HaxV { /* [!] FC-Wildcard_PerfNuker */
+  li:has([class^="channelEmoji_"]) .name__8d1ec { /* [!] FC-Wildcard_PerfNuker */
     text-align: left !important;
     /*text-transform: capitalize;*/
   }
 
-  [class^="emojiColorFill-"] { width: 240px; }
-  [class^="name-"] { text-align: center !important; }
+  [class^="emojiColorFill_"] { width: 240px; }
+  [class^="name_"] { text-align: center !important; }
   li:has(h3) { margin: 4px; }
-  [class^="container-"] [class^="name-"] { text-align: left; }
-  [class^="arrow-"], [class^="addButtonIcon-"], [class^="children-"] [class^="iconItem-"] { display: none !important; }
-  [class^="iconContainer-"] {
+  [class^="container_"] [class^="name_"] { text-align: left; }
+  [class^="arrow_"], [class^="addButtonIcon_"], [class^="children_"] [class^="iconItem_"] { display: none !important; }
+  [class^="iconContainer_"] {
     position: absolute !important;
     translate: 126px;
     scale: 0.8;
   }
-  li[role="button"] [class^="iconContainer-"],
-  li[role="listitem"] [class^="iconContainer-"] {
+  li[role="button"] [class^="iconContainer_"],
+  li[role="listitem"] [class^="iconContainer_"] {
     translate: 0 !important;
   }
 }
@@ -495,15 +491,15 @@ nav[class^="wrapper-"] > ul {
 }
 
 @container FC-ChannelNav_Static (min-width: 0px) {
-  [class^="containerDefault-"]:has([class^="mentionsBadge-"]) {
+  [class^="containerDefault_"]:has([class^="mentionsBadge_"]) {
    background: var(--Flashcord-ChannelNav_Color-Mention, rgba(255,0,0,0.5));
   }
-  [class^="channelInfo-"] { 
+  [class^="channelInfo_"] { 
     translate: -106px;
     display: block !important;
   }
-  [class^="children-"] { position: absolute;}
-  [class^="unread-"] { 
+  [class^="children_"] { position: absolute;}
+  [class^="unread_"] { 
     border-radius: var(--Flashcord-Border_Radius, 25px);
     translate: 13px 4px;
     width: 24px;
@@ -519,34 +515,34 @@ nav[class^="wrapper-"] > ul {
 /* [START] = Flashcord Beta == Major General Modifications [00] ChatIn CSS = */
 
 /* Imagivid Zoom Core */
-[class^="layer-"]:has([class^="focusLock-"] [class*="downloadLink-"]) {
+[class^="layer_"]:has([class^="focusLock_"] [class*="downloadLink_"]) {
     container-name: var(--FlashCore-ImagividZoom, FC-ImagividZoom);
     container-type: inline-size;
 }
 
 @container FC-ImagividZoom (min-width: 0px) {
-    [class^="focusLock-"] [class^="imageWrapper-"]:hover { 
+    [class^="focusLock_"] [class^="imageWrapper_"]:hover { 
         width: 90vw !important;
         /*will-change: width, height;*/
     }
-    [class^="focusLock-"] [class^="imageWrapper-"] { 
+    [class^="focusLock_"] [class^="imageWrapper_"] { 
         height: auto !important;
     }
-    [class^="focusLock-"] [class^="imageWrapper-"] [class^="wrapper-"] { 
+    [class^="focusLock_"] [class^="imageWrapper_"] [class^="wrapper-"] { 
         width: auto !important;
         height: auto !important;
     }
-    [class^="focusLock-"] > div { 
+    [class^="focusLock_"] > div { 
         display: flex;
         justify-content: center;
         align-items: flex-start;
         overflow: scroll;
         flex-direction: row;
     }
-    [class^="carouselModal-"] {
+    [class^="carouselModal_"] {
         justify-content: flex-start !important;
     }
-    [class^="focusLock-"] img, [class^="focusLock-"] video, [class^="imageWrapper-"] [class^="wrapper"] {
+    [class^="focusLock_"] img, [class^="focusLock_"] video, [class^="imageWrapper_"] [class^="wrapper_"] {
         width: 100% !important;
         height: 100% !important;
         max-width: 100% !important;
@@ -554,21 +550,21 @@ nav[class^="wrapper-"] > ul {
         object-fit: contain;
         overflow: scroll;
     }
-    [class^="anchor-"] {
+    [class^="anchor_"] {
         display: none;
     }
-    [class*="modalCarouselWrapper-"] {
+    [class*="modalCarouselWrapper_"] {
         -webkit-box-align: unset !important;
         align-items: unset !important;
         margin: auto;
         position: static;
     }
-    [class*="modalCarouselWrapper-"] button {
+    [class*="modalCarouselWrapper_"] button {
         margin: 0;
     }
 }
 
-ol[class^="scrollerInner-"] {
+ol[class^="scrollerInner_"] {
     container-name: var(--FlashCore-ChatEdits, FC-ChatEdits);
     container-type: inline-size;
 }
@@ -588,7 +584,7 @@ ol[class^="scrollerInner-"] {
         min-width: 256px;
         margin: 8px;
     }
-    [class^="mediaAttachmentsContainer-"] {
+    [class^="mediaAttachmentsContainer_"] {
         width: auto;
         height: auto;
         justify-content: center;
@@ -598,7 +594,7 @@ ol[class^="scrollerInner-"] {
     article:has([href^="https://sirio-network.com/flashcord/store"]) .grid-1aWVsE { /* [!] FC-Wildcard_PerfNuker */
         margin-bottom: 2rem;
     }
-    [id^="message-accessories-"]:has(article):has([class^="reactions-"]) {
+    [id^="message-accessories-"]:has(article):has([class^="reactions_"]) {
         margin-bottom: 2rem;
     }
     [id^="message-accessories-"]:has(article) .reactions-3ryImn { /* [!] FC-Wildcard_PerfNuker */
@@ -606,7 +602,7 @@ ol[class^="scrollerInner-"] {
         translate: 0 1.75rem;
         bottom: 0;
     }
-    [class^="gridContainer-"] {
+    [class^="gridContainer_"] {
         max-width: unset;
     }
 }
@@ -616,7 +612,7 @@ ol[class^="scrollerInner-"] {
 /* [Start] = Flashcord Beta == Small Modifications - Popup CSS = */
 
 /* Fixes Pop up menu fuckery */
-[class^="submenuPaddingContainer-"] {
+[class^="submenuPaddingContainer_"] {
     padding: 0;
     margin: -4px;
 }

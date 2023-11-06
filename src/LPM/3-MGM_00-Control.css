@@ -2,43 +2,43 @@
 /* [START] = Flashcord Beta == Major General Modifications [00] Control CSS = */
 
 /* Control Core */
-[class^="layers-"]:has([class^="layer-"]:nth-child(2)) {
+[class^="layers_"]:has([class^="layer_"]:nth-child(2)) {
     container-name: var(--FlashCore-MGM-Control,FC-ControlPanel_Full);
     container-type: inline-size;
 }
 
 @container FC-ControlPanel_Full (min-width: 0px) {
-    [class^="layer-"]:nth-child(2) {
+    [class^="layer_"]:nth-child(2) {
         width: 100vw;
         height: 100vh;
         margin: auto;
         padding: 0;
         border-radius: 0;
     }    
-    [class^="sidebarRegion-"] {
+    [class^="sidebarRegion_"] {
         max-width: 220px;
         max-height: 100vh;
     }
-    [class^="contentRegion-"] {
+    [class^="contentRegion_"] {
         height: 100vh;
         padding: 2rem 0 1rem 0;
     }
-    [class^="layer-"]:nth-child(2) [class^="sidebar"] {
+    [class^="layer_"]:nth-child(2) [class^="sidebar_"] {
         max-width: 200px;
         padding: 0.5rem 0 1rem 0;
     }
-    [class^="standardSidebarView-"] {
+    [class^="standardSidebarView_"] {
         position: static !important;
         height: 100%;
     }
-    [class^="contentColumn-"] {
+    [class^="contentColumn_"] {
         max-width: calc(100% - 16px);
         margin: auto;
         padding: 0;
     }
 
     /* Control Fluff */
-    [class^="sidebar-"] [class^="item-"] {
+    [class^="sidebar_"] [class^="item_"] {
         max-width: 180px;
         border-radius: var(--Flashcord-Border_Radius, 25px) !important;
         translate: 5px;

@@ -2,34 +2,34 @@
 /* [START] = Flashcord Beta == Major General Modifications [00] ChatIn CSS = */
 
 /* Imagivid Zoom Core */
-[class^="layer-"]:has([class^="focusLock-"] [class*="downloadLink-"]) {
+[class^="layer_"]:has([class^="focusLock_"] [class*="downloadLink_"]) {
     container-name: var(--FlashCore-ImagividZoom, FC-ImagividZoom);
     container-type: inline-size;
 }
 
 @container FC-ImagividZoom (min-width: 0px) {
-    [class^="focusLock-"] [class^="imageWrapper-"]:hover { 
+    [class^="focusLock_"] [class^="imageWrapper_"]:hover { 
         width: 90vw !important;
         /*will-change: width, height;*/
     }
-    [class^="focusLock-"] [class^="imageWrapper-"] { 
+    [class^="focusLock_"] [class^="imageWrapper_"] { 
         height: auto !important;
     }
-    [class^="focusLock-"] [class^="imageWrapper-"] [class^="wrapper-"] { 
+    [class^="focusLock_"] [class^="imageWrapper_"] [class^="wrapper-"] { 
         width: auto !important;
         height: auto !important;
     }
-    [class^="focusLock-"] > div { 
+    [class^="focusLock_"] > div { 
         display: flex;
         justify-content: center;
         align-items: flex-start;
         overflow: scroll;
         flex-direction: row;
     }
-    [class^="carouselModal-"] {
+    [class^="carouselModal_"] {
         justify-content: flex-start !important;
     }
-    [class^="focusLock-"] img, [class^="focusLock-"] video, [class^="imageWrapper-"] [class^="wrapper"] {
+    [class^="focusLock_"] img, [class^="focusLock_"] video, [class^="imageWrapper_"] [class^="wrapper_"] {
         width: 100% !important;
         height: 100% !important;
         max-width: 100% !important;
@@ -37,21 +37,21 @@
         object-fit: contain;
         overflow: scroll;
     }
-    [class^="anchor-"] {
+    [class^="anchor_"] {
         display: none;
     }
-    [class*="modalCarouselWrapper-"] {
+    [class*="modalCarouselWrapper_"] {
         -webkit-box-align: unset !important;
         align-items: unset !important;
         margin: auto;
         position: static;
     }
-    [class*="modalCarouselWrapper-"] button {
+    [class*="modalCarouselWrapper_"] button {
         margin: 0;
     }
 }
 
-ol[class^="scrollerInner-"] {
+ol[class^="scrollerInner_"] {
     container-name: var(--FlashCore-ChatEdits, FC-ChatEdits);
     container-type: inline-size;
 }
@@ -71,7 +71,7 @@ ol[class^="scrollerInner-"] {
         min-width: 256px;
         margin: 8px;
     }
-    [class^="mediaAttachmentsContainer-"] {
+    [class^="mediaAttachmentsContainer_"] {
         width: auto;
         height: auto;
         justify-content: center;
@@ -81,7 +81,7 @@ ol[class^="scrollerInner-"] {
     article:has([href^="https://sirio-network.com/flashcord/store"]) .grid-1aWVsE { /* [!] FC-Wildcard_PerfNuker */
         margin-bottom: 2rem;
     }
-    [id^="message-accessories-"]:has(article):has([class^="reactions-"]) {
+    [id^="message-accessories-"]:has(article):has([class^="reactions_"]) {
         margin-bottom: 2rem;
     }
     [id^="message-accessories-"]:has(article) .reactions-3ryImn { /* [!] FC-Wildcard_PerfNuker */
@@ -89,7 +89,7 @@ ol[class^="scrollerInner-"] {
         translate: 0 1.75rem;
         bottom: 0;
     }
-    [class^="gridContainer-"] {
+    [class^="gridContainer_"] {
         max-width: unset;
     }
 }

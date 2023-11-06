@@ -38,7 +38,7 @@ body:before {
     margin-top: 32px;
     height: calc(100vh - 32px);
 }
-[class^="macDragRegion-"] {
+[class^="macDragRegion_"] {
     width: 100vw;
 }
 
