@@ -1,13 +1,13 @@
 {
 	"id": "com.sirio-network.Flashcord-LPM",
 	"name": "Flashcord for Low-End Systems (LPM)",
-	"description": "Flashcord for the haters. Insanely nerfed version, missing a ton of features ranging from certain QOL changes to utterly useless unused things such as Chat Effects. This version is so debloated that even Windows debloaters are crying.",
+	"description": "[ℹ️] Read the Flashcord Wiki for more information. A nerfed/debloated version of the world's most advanced, complex and feature rich Discord Theme to ever exist. This version is so debloated that even Windows debloaters are crying.",
 	"author": {
 		"name": "SiriusBYT",
 		"discordID": "311057290562371586",
 		"github": "SiriusBYT"
 	},
-	"version": "LPM-231106",
+	"version": "LPM-231106-HF1",
 	"updater": {
             "type": "github",
             "id": "SiriusBYT/Flashcord"
