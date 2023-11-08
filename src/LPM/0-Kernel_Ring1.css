@@ -1,8 +1,7 @@
 
 /* [START] = Flashcord Beta == Kernel [01] CSS = */
 
-:root {
-    --Flashcolord-Light_Accent: rgba(0,155,255,0.5);
+body    --Flashcolord-Light_Accent: rgba(0,155,255,0.5);
     --Flashcolord-Dark_Accent: rgba(255,55,0,0.5);
     --Flashcolord-CBM_Light-Floating: rgba(255,255,255,0.5);
     --Flashcolord-CBM_Dark-Floating: rgba(0,0,0,0.5);
