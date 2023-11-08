@@ -9,17 +9,17 @@
 	},
 	"version": "LPM-231106-HF1",
 	"updater": {
-            "type": "github",
-            "id": "SiriusBYT/Flashcord"
+		"type": "github",
+		"id": "SiriusBYT/Flashcord"
 	},
 	"license": "CC BY-NC-ND 4.0",
 	"type": "replugged-theme",
 	"main": "src/LPM/lpm.css",
+	"source": "https://github.com/SiriusBYT/flashcord",
 	"image": [
 		"https://sirio-network.com/flashcord/ressources/store/LPM-Main.gif",
 		"https://sirio-network.com/flashcord/ressources/store/LPM-Dark.png",
 		"https://sirio-network.com/flashcord/ressources/store/LPM-CBM_Light.png",
 		"https://sirio-network.com/flashcord/ressources/store/LPM-CBM_Dark.png"
-	],
-	"source": "https://github.com/SiriusBYT/flashcord"
+	]
 }

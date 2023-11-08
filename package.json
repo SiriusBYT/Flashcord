@@ -10,12 +10,13 @@
     "build": "replugged build theme",
     "watch": "replugged build theme --watch",
     "bundle": "replugged bundle theme",
+    "release": "replugged release",
     "lint": "prettier ./src --check",
     "lint:fix": "prettier ./src --write"
   },
   "keywords": [],
-  "author": "SiriusBYT",
-  "license": "CC BY-NC-ND 4.0",
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.17.6",
     "prettier": "^3.0.3",
