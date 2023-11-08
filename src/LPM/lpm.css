@@ -216,7 +216,7 @@ html.theme-dark.custom-theme-background { --FlashCore-Theme: "🎨 CBM-L Dark Mo
     content: 
 "\A\A🚧 FLASHCORD DEBUG INFORMATION 🚧\A \
 This information is only visible to you, please screenshot it and send it to @SiriusBYT for debug purposes if needed. \A\A \
-📸 -- Flashcord Information \A
+📸 -- Flashcord Information \A \
     🔄️ Branch: " var(--Flashcord-Branch) "\A \
     🔗 Channel: " var(--Flashcord-Channel) "\A \
     💡 Version: " var(--Flashcord-Version) "\A \
