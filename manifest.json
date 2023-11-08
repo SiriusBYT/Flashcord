@@ -7,7 +7,7 @@
 		"discordID": "311057290562371586",
 		"github": "SiriusBYT"
 	},
-	"version": "LPM-231108",
+	"version": "LPM-231108_HF1",
 	"updater": {
 		"type": "github",
 		"id": "SiriusBYT/Flashcord"
