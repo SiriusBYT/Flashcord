@@ -1,7 +1,7 @@
 
 /* [START] = Flashcord Beta == Major General Modifications [00] ChatIn CSS = */
 
-/* Imagivid Zoom Core */
+/* Imagivid Zoom Core: Note, animations nerfed (well removed) */
 [class^="layer_"]:has([class^="focusLock_"] [class*="downloadLink_"]) {
     container-name: var(--FlashCore-ImagividZoom, FC-ImagividZoom);
     container-type: inline-size;

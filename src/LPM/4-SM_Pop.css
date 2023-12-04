@@ -6,5 +6,9 @@
     padding: 0;
     margin: -4px;
 }
+[class^="scroller_"] { /* I had to add this too cause for some fucking reason it's fucked too. This MAY cause issues in the long term, hope people will send bug reports if it does cause nukes to be launched.*/
+    padding: 8px !important;
+    margin: -4px;
+}
 
 /* [End] = Flashcord Beta == Small Modifications - Popup CSS = */

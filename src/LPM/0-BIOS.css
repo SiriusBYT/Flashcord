@@ -34,7 +34,7 @@ This license requires that reusers give credit to the creator. It allows reusers
   
   --Flashcord-Branch: "Flashcord";
   --Flashcord-Channel: "LPM";
-  --Flashcord-Version: "231108_HF2";
+  --Flashcord-Version: "231204";
   
   background: #000000;
 }
@@ -71,10 +71,13 @@ body {
   --bg-overlay-6: transparent;
 }
 
-html:not(html:hover) #app-mount {
-  container-name: var(--FlashCore-Idle_Optimizations, FC-Idle_OptiMax) !important;
+/* Slightly more performant by avoiding the html:not(html:hover), at least I think it's better????*/
+html:hover #app-mount {
+  container-name: FC-VOID !important;
+}
+#app-mount {
+  container-name: var(--FlashCore-Idle_Optimizations, FC-Idle_OptiMax);
   container-type: inline-size;
-
 }
 
 @container FC-Idle_OptiMax (min-width: 0px) {
