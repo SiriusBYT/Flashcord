@@ -1,6 +1,4 @@
-Notice:
-
-Flashcord's next major update is finally coming after being... What it's been 2 months already? Well it's gonna come out later this week... For real this time.
+### Notice: Next major update tomorrow!
 
 # 📸 This. This is Flashcord Beta.
 ## The world's most complex Discord Theme.
