@@ -5,7 +5,6 @@
 [class^="messagesWrapper_"] [class^="scrollerContent_"] {
     container-name: var(--FlashCore-MessageSlide, FC-MessageSlide);
     container-type: inline-size;
-    contain: paint;
 }
 
 @container FC-MessageSlide (min-width: 0px) {
@@ -23,7 +22,6 @@
 [class^="contents_"] > [id^="message_content_"]:has([class^="emojiContainer_"]) {
     container-name: var(--Flashcord-Jumbomojis, FC-Jumbomojis);
     container-type: inline-size;
-    contain: paint;
 }
 
 @container FC-Jumbomojis (min-width: 0) {
@@ -47,7 +45,6 @@
 [class^="layer_"]:has([class^="focusLock_"] [class*="downloadLink_"]) {
     container-name: var(--FlashCore-ImagividZoom, FC-ImagividZoom);
     container-type: inline-size;
-    contain: paint;
 }
 
 @container FC-ImagividZoom (min-width: 0px) {
@@ -71,7 +68,7 @@
         overflow: scroll;
         flex-direction: row;
     }
-    [class^="carouselModal-"] {
+    [class^="carouselModal_"] {
         justify-content: flex-start !important;
     }
     [class^="focusLock_"] img, [class^="focusLock_"] video, [class^="imageWrapper_"] [class^="wrapper"] {
@@ -100,7 +97,6 @@
 [class^="layerContainer_"]:has([class^="messagesPopoutWrap_"], [class^="threadIcon_"], [class*="recentMentionsPopout_"]) {
     container-name: var(--FlashCore-Menthrepin, FC-Menthrepin);
     container-type: inline-size;
-    contain: paint;
 }
 
 @container FC-Menthrepin (min-width: 0px) {
@@ -116,10 +112,10 @@
 
         transition-property: backdrop_filter;
         transition-duration: var(--Flashcord-TransMult-Slow, 500ms);
-        backdrop_filter: blur(0px);
+        backdrop-filter: blur(0px);
     }
     [id^="popout_"]:has( > div > div:hover) {
-        backdrop_filter: blur(var(--Flashcord-Blur-Light, 4px));
+        backdrop-filter: blur(var(--Flashcord-Blur-Light, 4px));
         /*will-change: backdrop_filter;*/
     }
     [id^="popout_"] > div > div {
@@ -143,7 +139,6 @@
 [class^="content_"]:has([class^="searchResultsWrap_"]) {
     container-name: var(--FlashCore-Xearch, FC-Xearch);
     container-type: inline-size;
-    contain: paint;
 }
 
 @container FC-Xearch (min-width: 0px) {
@@ -170,7 +165,6 @@
 [class^="appAsidePanelWrapper_"]:has([class^="backdrop_"]) {
     container-name: var(--Flashcord-Focus, FC-Focus);
     container-type: inline-size;
-    contain: paint;
 }
 @container FC-Focus (min-width: 0px) {
     [class^="notAppAsidePanel_"]:has([class^="focusLock_"]:hover) .app_b1f720 { /* [!] FC-Wildcard_PerfNuker */
@@ -191,7 +185,6 @@
 [class^="chatContent_"] {
     container-name: var(--Flashcord-Chatype, FC-Chatype-L1);
     container-type: inline-size;
-    contain: paint;
 }
 
 @container FC-Chatype-L1 (min-width: 0px) {
@@ -256,7 +249,6 @@
 [class^="messagesWrapper_"] {
     container-name: var(--Flashcord-JumpBars, FC-JumpBars);
     container-type: inline-size;
-    contain: paint;
 }
 
 @container FC-JumpBars (min-width: 0px) {
@@ -300,9 +292,14 @@ ol[class^="scrollerInner_"] {
     }
 
     /* Better Link Embeds */
-    [id^="message-accessories-"]:has(article) {
+    [id^="message-accessories-"]:has(article),
+    [id^="message-accessories-"]:has([class^="inlineMediaEmbed_"]) {
         display: flex;
         flex-wrap: wrap;
+    }
+    [id^="message-accessories-"] [class^="inlineMediaEmbed_"] {
+        flex: 1 1 0vw;
+        align-self: center;
     }
     [id^="message-accessories-"] article {
         overflow: scroll;
@@ -322,7 +319,7 @@ ol[class^="scrollerInner_"] {
         margin-bottom: auto;
     }
     article:has([href^="https://sirio-network.com/flashcord/store"])::after { /* May cause Perf issues (?)*/
-        content: "✅ Flashcord Store Link";
+        content: var(--FlashLang-ChatEdits_StoreLink, "✅ Flashcord Store Link");
         display: block;
         white-space: pre-warp;
         width: 90%;

@@ -28,15 +28,75 @@
     animation: FlashCore-BackXMTL var(--Flashcord-AnimMult-XTXSlow, 4s) linear infinite !important;
   }
   [class^="content_"] {
-    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100vw;
-    height: 102vh;
+    height: 100vh;
+
+    background: transparent;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     animation: FlashCore-FadeIn var(--Flashcord-AnimMult-XSlow, 1s) !important;
     background: rgba(0,0,0,0.9);
     backdrop-filter: blur(var(--Flashcord-Blur-Heavy, 16px));
+  }
+}
+
+@container FC-Boot_Blackout-Terminal (min-width: 0px) {
+  [class^="container_"] { background-color: black; }
+  [class^="content_"] div, video, [class^="problems_"] { display: none; }
+  [class^="content_"] {
+    font-family: monospace;
+    font-size: large;
+    background: transparent;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    animation: FlashCore-FadeIn var(--Flashcord-AnimMult-XSlow, 1s) !important;
+    background: black;
+    backdrop-filter: blur(var(--Flashcord-Blur-Heavy, 16px));
+  }
+  [class^="content_"]::after {
+    margin-left: 0.5rem;
+    content: "_";
+    color: white;
+    text-align: left;
+    white-space: pre;
+    animation: Flashcord-DotBlink var(--Flashcord-AnimMult-XSlow, 1s) linear infinite;
+    position: absolute;
+    top: 21rem;
+    left: 11rem;
+  }
+  [class^="content_"]::before {
+    content: "Linux AuraCloud-E2A 6.4.0-3-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.4.11-1 (2023-08-17) x86_64 \A \
+=== Sirio Network OCI: AuraCloud-E2A \A \
+Private Key accepted, connection successful. \A \A \
+------------------------------------------------------------------------- \A\A \
+The programs included with the Debian GNU/Linux system are free software; \A \
+the exact distribution terms for each program are described in the \A \
+individual files in /usr/share/doc/*/copyright. \A\A \
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent \A \
+permitted by applicable law. \A\A \
+------------------------------------------------------------------------- \A \
+Last login: "var(--Flashcord-Version)" from "var(--Flashcord-Branch)" \A \
+root@AuraCloud-E2A:~# ./Flashcord.sh \A \
+AuraCloud-E2A systemd[1]: Starting nginx.service \A \
+AuraCloud-E2A systemd[1]: Started nginx.service \A \
+GET "var(--FlashLang-DoubleQuote)"/flashcord/sid.css HTTP/1.1"var(--FlashLang-DoubleQuote)" from "var(--FlashLang-DoubleQuote)"discord/1.0.92 Electron/22.3.26"var(--FlashLang-DoubleQuote)" \A \
+Starting Flashcord \A";
+    margin-top: 2rem;
+    margin-left: 0.5rem;
+    text-align: left;
+    color: white;
+    white-space: pre-wrap;
   }
 }
 /* [END] = Flashcord Beta == Kernel [00] CSS = */

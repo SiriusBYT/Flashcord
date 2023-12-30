@@ -1,0 +1,101 @@
+
+/* [Start] = Flashcord Beta == Custom Theme: Terminal Mode CSS = */
+
+[theme-hooker="theme-aurora"] {
+    --font-primary: monospace;
+    --font-display: monospace;
+    --font-headline: monospace;
+    --custom-theme-background: black;
+    --bg-overlay-color: black;
+    --background-primary: black;
+    --background-secondary: black;
+    --background-secondary-alt: black;
+    --background-tertiary: black;
+    --bg-overlay-1: black;
+    --bg-overlay-2: black;
+    --bg-overlay-3: black;
+    --bg-overlay-4: black;
+    --bg-overlay-5: black;
+    --bg-overlay-6: black;
+    --bg-overlay-hover: black;
+    --bg-overlay-active: black;
+    --bg-overlay-selected: black;
+    --bg-overlay-chat: black;
+    --bg-overlay-home: black;
+    --bg-overlay-home-card: black;
+    --bg-overlay-app-frame: black;
+}
+
+@container FC-Theme_Hooker (min-width: 0px) {
+    [theme-hooker="theme-aurora"] {
+        --Flashcord-Border_Radius: 0;
+        --Flashcord-Blackout: FC-Boot_Blackout-Terminal;
+        --Flashcord-Welcome_Animation: Flashcord-Welcome_CRT;
+        --Flashcord-Welcome_Speed: 500ms;
+        --FlashCore-MGM-Control: FC-ControlPanel_Full;
+        --FlashCore-ChannelNav_Notification: FC-ChannelNav_Static;
+        --FlashCore-GuildNav_Notification: FC-GuildNav_Static;
+        --Flashcord-GuildShadow_Size: 8px;
+        --FlashCore-GuildNav_Compact: FC-GuildNav_Compact-Horizontal;
+        --FlashCore-ChatSlide: FC-VOID;
+
+        --Flashcord-AnimMult-XFast: 10ms;
+        --Flashcord-AnimMult-Fast: 25ms;
+        --Flashcord-AnimMult-Normal: 50ms;
+        --Flashcord-AnimMult-Slow: 100ms;
+        --Flashcord-AnimMult-XSlow: 150ms;
+        --Flashcord-AnimMult-XTSlow: 200ms;
+        --Flashcord-AnimMult-XTXSlow: 250ms;
+
+        --Flashcord-TransMult-XFast: 10ms;
+        --Flashcord-TransMult-Fast: 25ms;
+        --Flashcord-TransMult-Normal: 50ms;
+        --Flashcord-TransMult-Slow: 100ms;
+        --Flashcord-TransMult-XSlow: 150ms;
+    }
+    [theme-hooker="theme-aurora"] [class^="chat_"] [class^="title_"] [class^="children_"]::after {
+        content: var(--Flashcord-Warnings, var(--FlashLang-Warning_Terminal,"  [!] Flashcord is in Beta  ")) !important;
+    }
+    [theme-hooker="theme-aurora"] {
+        container-name: FC-Theme_Terminal !important;
+        container-type: inline-size;
+    }
+    @container FC-Theme_Terminal (min-width: 0px) {
+        .platform-win body > ::before,
+        .platform-linux body > ::before,
+        .platform-osx body:before  { 
+            content: var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version);
+            color: white;
+            opacity: 1;
+        }
+        @container FC-ChannelNav_Compact (min-width: 0px) {
+            [class^="channelEmoji_"] .emoji {
+                filter: grayscale(1) brightness(1.5);
+            }
+        }
+        @container FC-GuildNav_Static (min-width: 0px) {
+            [class^="listItem_"] {
+                scale: 0.9 !important;
+            }
+        }
+        @container FC-ChannelNav_Compact (min-width: 0px) {
+            li {
+                scale: 0.95 !important;
+            }
+        }
+        @container FC-MemberSlide (min-width: 0px) {
+            [class^="member_"]:hover > div {
+                scale: 1 !important;
+                translate: 0px !important;
+            }
+        }
+        @container FC-ControlPanel_Full (min-width: 0px) {
+            [class^="sidebar_"] [class^="item_"] {
+                translate: 5px !important;
+                scale: 1 !important;
+            }
+        }
+    }
+
+}
+/* [End] = Flashcord Beta == Custom Theme: Terminal Mode CSS = */

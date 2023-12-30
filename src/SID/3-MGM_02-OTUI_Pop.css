@@ -12,6 +12,7 @@
 There's an insanely rare bug that I can't seem to reproduce when I want to fix it when you look at your own
 profile popup modal. I can't be fucked fixing it right now though.
 I'M DYING. I. NEED. A MEDIC BAG! */
+/* I think I fixed all the bugs now? // SiriusBYT 231221 */
 @container FC-UPMO (min-width: 0px) {
     [class^="focusLock_"] { border-radius: var(--Flashcord-Border_Radius, 25px) }
     [class^="userProfileModalOuter_"] {
@@ -27,6 +28,7 @@ I'M DYING. I. NEED. A MEDIC BAG! */
         max-width: 70vw;
         max-height: 16vh;
         margin: 0 auto;
+        overflow: hidden;
     }
     [class^="header_"] {
         top: 50%;
@@ -37,7 +39,7 @@ I'M DYING. I. NEED. A MEDIC BAG! */
         height: 55vh;
     }
     header {
-        max-width: fit-content;
+        max-width: 100%;
         max-height: 16vh;
         width: fit-content;
         height: 16vh;

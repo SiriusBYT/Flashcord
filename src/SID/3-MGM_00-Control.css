@@ -1,15 +1,19 @@
 
 /* [START] = Flashcord Beta == Major General Modifications [00] Control CSS = */
 
+/* DEV BUILD 09/12/2023 NOTES: Holy shit this really needs optimization, this is build fucking horrendously,
+too much copy pasting! The splash text being a separate module being called was the right call.
+I might want to do that too here because jesus christ this is uglier than the color of my walls. */
+
+
 /* Control Core */
-[class^="layers__"]:has([class^="layer__"]:nth-child(2)) {
+[class^="layers_"]:has([class^="layer_"]:nth-child(2)) {
     container-name: var(--FlashCore-MGM-Control,FC-ControlPanel_PopUp);
     container-type: inline-size;
-    contain: paint;
 }
 
 @container FC-ControlPanel_PopUp (min-width: 0px) {
-    [class^="layer__"]:nth-child(2) {
+    [class^="layer_"]:nth-child(2) {
         width: 90vw;
         height: 85vh;
         margin: auto;
@@ -19,18 +23,18 @@
         transform: none !important;
         animation: FlashCore-FadeIn var(--Flashcord-AnimMult-XSlow, 1) !important;
     }    
-    [class^="sidebarRegion__"] {
+    [class^="sidebarRegion_"] {
         max-width: 220px;
         max-height: 85vh;
     }
-    [class^="contentRegion__"] {
+    [class^="contentRegion_"] {
         height: 85vh;
     }
-    [class^="layer__"]:nth-child(2) [class^="sidebar"] {
+    [class^="layer_"]:nth-child(2) [class^="sidebar"] {
         max-width: 200px;
         padding: 0;
     }
-    [class^="standardSidebarView__"] {
+    [class^="standardSidebarView_"] {
         position: static !important;
         height: 100%;
     }
@@ -39,7 +43,7 @@
         margin: auto;
         padding: 0;
     }
-    [class^="closeButton__"] {
+    [class^="closeButton_"] {
         width: 100vw;
         height: 100vh;
         position: fixed;
@@ -53,62 +57,78 @@
         transition-property: opacity;
         transition-duration: var(--Flashcord-TransMult-Normal, 250ms);
     }
-    [class^="closeButton__"] svg { display: none; }
+    [class^="closeButton_"] svg { display: none; }
     [class^="toolsContainer_"] {
         position: absolute;
         z-index: -1;
     }
-    [class^="keybind__"] { display: none; }
+    [class^="keybind_"] { display: none; }
+
 
     /* Control Fluff */
-    [class*="baseLayer__"] {
+    [class*="baseLayer_"] {
         opacity: 1 !important;
         z-index: 1;
         transform: none !important;
-        /*will-change: filter, scale !important;*/
         transition-property: filter, scale;
         transition-duration: var(--Flashcord-TransMult-Normal, 250ms);
     }
-    [class^="layers__"]:has([class^="standardSidebarView__"]:hover) .baseLayer__8fda3 { /* [!] FC-Wildcard_PerfNuker */
+    [class^="layers_"]:has([class^="standardSidebarView_"]:hover) .baseLayer__8fda3 { /* [!] FC-Wildcard_PerfNuker */
         filter: blur(var(--Flashcord-Blur-Medium, 8px)) brightness(var(--FlashCore-Brightness,0.9));
         scale: 0.98;
     }
-    [class^="layers__"]:has([class^="closeButton__"]:hover) .baseLayer__8fda3 { /* [!] FC-Wildcard_PerfNuker */
+    [class^="layers_"]:has([class^="closeButton_"]:hover) .baseLayer__8fda3 { /* [!] FC-Wildcard_PerfNuker */
         filter: blur(var(--Flashcord-Blur-Light, 2px)) brightness(0.98);
         scale: 1;
     }
-    [class^="closeButton__"]:hover {
+    [class^="closeButton_"]:hover {
         background: transparent;
         opacity: 0;
-        /*will-change: opacity;*/
     }
 
-    [class^="sidebar__"] [class^="item__"] {
-        max-width: 180px;
+    [class^="sidebarRegion_"] {
+        container-name: var(--FlashCore-ControlPanel_SidebarTweaks,FC-ControlPanel_SidebarTweaks);
+        container-type: inline-size;
+    }
+
+    /* Unfucking certain tabs having no margin or too much margin (fixing consistancy) */
+    [class^="layer_"]:nth-child(2) [class^="container_"]:has([class^="bannedUser_"]) { padding: 0; width: unset; margin-top: 1rem;} /* Fix Banned Users Tab */
+    [class^="layer_"]:nth-child(2) [class^="content_"]:has([class^="member_"], [class*="inviteSettingsInviteRow_"]) { margin: 0; max-width: 95%;} /* Fix Server Members List and Invites List */
+
+    [class^="layer_"]:nth-child(2) [class^="content_"]:has(> div:empty) { margin-top: 1rem; }
+    [class^="layer_"]:nth-child(2) [class^="content_"] > div[style="height: 60px;"]:empty {display: none; }
+    [class^="layer_"]:nth-child(2) [class^="contentColumn_"][role="tabpanel"] { margin-top: 1rem; padding: 0; }
+    [class^="layer_"]:nth-child(2) [class^="content_"] > [class^="customHeader_"] { padding: 0;}
+
+}
+@container FC-ControlPanel_SidebarTweaks (min-width: 0px) {
+    [class^="sidebar_"] [class^="item_"], [class^="premiumTab_"] {
+        max-width: 160px;
         border-radius: var(--Flashcord-Border_Radius, 25px) !important;
         translate: 5px;
         transition-property: translate, scale;
         transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
-    [class^="sidebar__"] [class^="item__"]:hover {
+    [class^="sidebar_"] [class^="item_"]:hover, [class^="premiumTab_"]:hover {
         translate: 15px;
         scale: 1.05;
-        /*will-change: translate, scale;*/
     }
-    [class^="sidebar__"] [class^="item__"]:active {
+    [class^="sidebar_"] [class^="item_"]:active, [class^="premiumTab_"]:active {
         translate: 15px;
         scale: 1;
-        /*will-change: translate, scale;*/
     }
-    [class^="sidebar__"] [class*="selected__"] {
+    [class^="sidebar_"] [class*="selected_"] {
         translate: 15px;
         scale: 1.025;
-        /*will-change: translate, scale;*/
+    }
+    [class^="premiumTab_"] [class^="background_"] { display: none; }
+    [class^="premiumLabel_"] {
+        translate: 0 !important;
+        color: var(--interactive-active);
     }
 }
-
 @container FC-ControlPanel_Full (min-width: 0px) {
-    [class^="layer__"]:nth-child(2) {
+    [class^="layer_"]:nth-child(2) {
         width: 100vw;
         height: 100vh;
         margin: auto;
@@ -116,18 +136,18 @@
         border-radius: 0;
         animation: FlashCore-FadeIn var(--Flashcord-AnimMult-XSlow, 1s) !important;
     }    
-    [class^="sidebarRegion__"] {
+    [class^="sidebarRegion_"] {
         max-width: 220px;
         max-height: 100vh;
     }
-    [class^="contentRegion__"] {
+    [class^="contentRegion_"] {
         height: 100vh;
     }
-    [class^="layer__"]:nth-child(2) [class^="sidebar"] {
+    [class^="layer_"]:nth-child(2) [class^="sidebar"] {
         max-width: 200px;
         padding: 0;
     }
-    [class^="standardSidebarView__"] {
+    [class^="standardSidebarView_"] {
         position: static !important;
         height: 100%;
     }
@@ -137,29 +157,40 @@
         padding: 0;
     }
 
-    /* Control Fluff */
-    [class^="sidebar__"] [class^="item__"] {
+    /* Control Fluff (OLD)
+    [class^="sidebar_"] [class^="item_"] {
         max-width: 180px;
         border-radius: var(--Flashcord-Border_Radius, 25px) !important;
         translate: 5px;
         transition-property: translate, scale;
         transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
     }
-    [class^="sidebar__"] [class^="item__"]:hover {
+    [class^="sidebar_"] [class^="item_"]:hover {
         translate: 15px;
         scale: 1.05;
-        /*will-change: translate, scale;*/
     }
-    [class^="sidebar__"] [class^="item__"]:active {
+    [class^="sidebar_"] [class^="item_"]:active {
         translate: 15px;
         scale: 1;
-        /*will-change: translate, scale;*/
     }
-    [class^="sidebar__"] [class*="selected__"] {
+    [class^="sidebar_"] [class*="selected_"] {
         translate: 15px;
         scale: 1.025;
-        /*will-change: translate, scale;*/
+    }*/
+
+    [class^="sidebarRegion_"] {
+        container-name: var(--FlashCore-ControlPanel_SidebarTweaks,FC-ControlPanel_SidebarTweaks);
+        container-type: inline-size;
     }
+
+    /* Unfucking certain tabs having no margin or too much margin (fixing consistancy) */
+    [class^="layer_"]:nth-child(2) [class^="container_"]:has([class^="bannedUser_"]) { padding: 0; width: unset; margin-top: 1rem;} /* Fix Banned Users Tab */
+    [class^="layer_"]:nth-child(2) [class^="content_"]:has([class^="member_"], [class*="inviteSettingsInviteRow_"]) { margin: 0; max-width: 95%;} /* Fix Server Members List and Invites List */
+
+    [class^="layer_"]:nth-child(2) [class^="content_"]:has(> div:empty) { margin-top: 1rem; }
+    [class^="layer_"]:nth-child(2) [class^="content_"] > div[style="height: 60px;"]:empty {display: none; }
+    [class^="layer_"]:nth-child(2) [class^="contentColumn_"][role="tabpanel"] { margin-top: 1rem; padding: 0; }
+    [class^="layer_"]:nth-child(2) [class^="content_"] > [class^="customHeader_"] { padding: 0;}
 }
 
 

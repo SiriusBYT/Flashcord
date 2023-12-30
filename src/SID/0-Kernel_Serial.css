@@ -1,11 +1,6 @@
 
 /* [Start] = Flashcord Beta == Kernel - Serial CSS = */
 
-[class^="notAppAsidePanel_"] {
-    container-name: var(--Flashcord-DebugMode, FC-VOID);
-    container-type: inline-size;
-}
-
 /* General Information */
 html.platform-win { --FlashCore-OS: "🪟 Windows" }
 html.platform-osx { --FlashCore-OS: "🍎 MacOS" }
@@ -19,6 +14,7 @@ html:has([content*="ptb"]) { --FlashCore-Discord_Branch: "Public Beta Test"; }
 /* Theming Related Shenanigans */
 html.theme-light { --FlashCore-Theme: "☀️ Light Mode"; }
 html.theme-dark { --FlashCore-Theme: "🌙 Dark Mode"; }
+.custom-theme-background { --FlashCore-CustomTheme: "✅ True"}
 [theme-hooker*="-"] { --FlashCore-ThemeHooker_Present: "✅ True"; }
 [theme-hooker="theme-mint-apple"] { --FlashCore-Theme: "🖼️ Custom Background Mode (Light) // Mint Apple" !important; }
 [theme-hooker="theme-citrus-sherbert"] { --FlashCore-Theme: "💥 Iridescent Mode (Light) // Citrus Sherbert" !important; }
@@ -32,16 +28,16 @@ html.theme-dark { --FlashCore-Theme: "🌙 Dark Mode"; }
 [theme-hooker="theme-chroma-glow"] { --FlashCore-Theme: "💥 Iridescent Mode (Dark) // Chroma Glow" !important; }
 [theme-hooker="theme-forest"] { --FlashCore-Theme: "🌌 Unknown // Forest" !important; }
 [theme-hooker="theme-crimson-moon"] { --FlashCore-Theme: "🌌 Unknown // Crimson Moon" !important; }
-[theme-hooker="theme-midnight-burple"] { --FlashCore-Theme: "🌌 Unknown // Midnight Burple" !important; }
+[theme-hooker="theme-midnight-blurple"] { --FlashCore-Theme: "🌌 Unknown // Midnight Burple" !important; }
 [theme-hooker="theme-mars"] { --FlashCore-Theme: "🌌 Unknown // Mars" !important; }
 [theme-hooker="theme-dusk"] { --FlashCore-Theme: "🌌 Unknown // Dusk" !important; }
 [theme-hooker="theme-under-the-sea"] { --FlashCore-Theme: "🌌 Unknown // Under the Sea" !important; }
 [theme-hooker="theme-retro-storm"] { --FlashCore-Theme: "🌌 Unknown // Retro Storm" !important; }
-[theme-hooker="theme-neon-lights"] { --FlashCore-Theme: "🌌 Unknown // Neon Lights" !important; }
+[theme-hooker="theme-neon-nights"] { --FlashCore-Theme: "🌌 Unknown // Neon Nights" !important; }
 [theme-hooker="theme-strawberry-lemonade"] { --FlashCore-Theme: "🌌 Unknown // Strawberry Lemonade" !important; }
-[theme-hooker="theme-aurora"] { --FlashCore-Theme: "🌌 Unknown // Aurora" !important; }
+[theme-hooker="theme-aurora"] { --FlashCore-Theme: "⌨️ Terminal Mode // Aurora" !important; }
 [theme-hooker="theme-sepia"] { --FlashCore-Theme: "👻 Transparent Mode // Sepia" !important; }
-[theme-hooker="theme-easter-egg"] { --FlashCore-Theme: "🌌 Unknown // Memory Lane" !important; }
+[theme-hooker="theme-easter-egg"] { --FlashCore-Theme: "🔥 Flashcord Legacy // Memory Lane" !important; }
 
 
 
@@ -70,7 +66,8 @@ This information is only visible to you, please screenshot it and send it to @Si
     💻 Operating System: " var(--FlashCore-OS, '🚧 404 🚧') "\A \
     🎯 Client Modification: " var(--FlashCore-Client, '🚧 404 🚧') "\A \
     🔧 ThemeHooker Present: " var(--FlashCore-ThemeHooker_Present, '❌ False') "\A \
-    🌈 Detected Basic Theme: " var(--FlashCore-Theme, '🚧 404 🚧') "\A\A \
+    🌈 Detected Theme: " var(--FlashCore-Theme, '🚧 404 🚧') "\A \
+    🖌️ Is using a Custom Theme: " var(--FlashCore-CustomTheme, '❌ False') "\A\A \
 ⚠️ Please also send the contents of your QuickCSS if you modified any Flashcord Variables. \A\A \
 == End of Flashcord's Debug Information. == \A\A";
 }
@@ -111,7 +108,7 @@ This information is only visible to you, please screenshot it and send it to @Si
     --Flashcord-JumpBars: " var(--Flashcord-JumpBars, 'FC-JumpBars')"\A \
     --FlashCore-ChatEdits: " var(--FlashCore-ChatEdits, 'FC-ChatEdits')"\A\A \
 📁 LOCATION: 3-MGM_02-OTUI_Base \A \
-    --FlashCore-Friends: " var(---FlashCore-Friends, 'FC-FlexGrid')"\A \
+    --FlashCore-Friends: " var(--FlashCore-Friends, 'FC-FlexGrid')"\A \
     --FlashCore-Replugged_Addons: " var(--FlashCore-Replugged_Addons, 'FC-FlexGrid')"\A \
     --FlashCore-UPFG: " var(--FlashCore-UPFG, 'FC-FlexGrid')"\A \
     --FlashCore-Call: " var(--FlashCore-Call, 'FC-Call')"\A\A \

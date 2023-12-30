@@ -1,0 +1,602 @@
+
+/* [Start] = Flashcord Beta == Language Override CSS = */
+
+[lang="en-GB"] body, [lang="en-US"] body { --FlashCore-Language: English; }
+[lang="fr"] body { --FlashCore-Language: French; }
+[lang="es-ES"] body { --FlashCore-Language: Spanish; }
+[lang="ro"] body { --FlashCore-Language: Romanian; }
+[lang="de"] body { --FlashCore-Language: German; }
+
+#app-mount {
+    container-name: var(--FlashCore-Language, English);
+    container-type: inline-size;
+}
+
+/* Translator's Guide:
+The container name must be your translated language in English (eg: Français -> French)
+"Iridescent" must be in quotes as it doesn't really mean anything at all compared to the definition of it and Iridescent mode.
+^NOTE: Change the " " into ' ' (the ones at the start and end, and don't use ' ' inside them of course as it will cause problems
+Anything about modules must stay the same but quotes aren't required.
+
+the \A characters are basically \n, they skip a line. leave them alone and try to not have any letters right after \A (eg: \Ahello is bad)
+Avoid using " " if the whole string is enveloped in them, change them to ' ' if you need to. If you don't, a bunch of problems on my end will occur.
+I will most likely fix those myself though. So don't worry about it too much.
+It's best that you just directly translate what's in the variables without caring for them.
+
+The --FlashLang-xBar are not working but I'll find a way to make them work in the far future.
+
+- SiriusBYT */
+/* DEV BUILD (231221) NOTICE: 
+The text above is outdated as fuck and I can't be fucked updating it yet.*/
+
+
+/* Base Language */
+@container English (min-width: 0px) {
+    [class^="app_"] {
+        --FlashLang-WinBar: "🪟 "var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version)" | Report bugs in #🐞sgn-issues-reports on the SGN Discord Server.";
+        --FlashLang-MacBar: "Report bugs in #🐞sgn-issues-reports on the SGN Discord Server. | 🍎 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version) " ";
+        --FlashLang-LinuxBar: "🐧 "var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version)" | Report bugs in #🐞sgn-issues-reports on the SGN Discord Server.";
+    
+        --FlashLang-Boot_Android: "⚠️ You are having connection problems.";
+
+        --FlashLang-Warning_LightTheme: "  ⚠️ Flashcord is in Beta.  ";
+        --FlashLang-Warning_DarkTheme: "  ⚠️ Flashcord is in Beta. 🌙 Dark Mode is unfinished.  ";
+        --FlashLang-Warning_Iridescent: "  ⚠️ Flashcord is in Beta. 💥 Iridescent Mode is unfinished.  ";
+        --FlashLang-Warning_LightCBM: "  ⚠️ Flashcord is in Beta. 🖼️ Light Custom Background Mode is unfinished.  ";
+        --FlashLang-Warning_DarkCBM: "  ⚠️ Flashcord is in Beta. 🖼️ Dark Custom Background Mode is unfinished.  ";
+        --FlashLang-Warning_Transparent: "  ⚠️ Flashcord is in Beta. 👻 Transparent Mode is unfinished.  ";
+        --FlashLang-Warning_DeprecratedCBM: "  ⚠️ Custom Mode without ThemeHooker is no longer supported.  ";
+    
+        --FlashLang-C_AT-BasicThemes: "📷 Flashcord Basic Themes";
+        --FlashLang-C_AT-AdvancedThemes: "📸 Flashcord Advanced Themes";
+        --FlashLang-C_AT-ModificationNotice: "📖 Certain modifications such as the horizontal server list is available only after modifying a variable, refer to the Flashcord Wiki for more information.";
+        --FlashLang-C_AT-ThemeHooker: "⚠️ Advanced Themes require " var(--FlashLang-DoubleQuote) "LegalDiscordBypasses" var(--FlashLang-DoubleQuote) " or Discord Nitro to enable them. \A ✅ " var(--FlashLang-DoubleQuote) "ThemeHooker" var(--FlashLang-DoubleQuote) " is present and has enabled new themes.";
+        --FlashLang-C_AT-NoThemeHooker: "⚠️ Advanced Themes require " var(--FlashLang-DoubleQuote) "LegalDiscordBypasses" var(--FlashLang-DoubleQuote) " or Discord Nitro to enable them. \A ⛔ " var(--FlashLang-DoubleQuote) "ThemeHooker" var(--FlashLang-DoubleQuote) " is missing. Certain themes have been removed.";
+        --FlashLang-C_AT-Light: "Light Mode";
+        --FlashLang-C_AT-Dark: "Dark Mode";
+        --FlashLang-C_AT-Sync: "Sync Mode";
+        --FlashLang-C_AT-LightCBM: "Custom Background Mode (Light Mode)";
+        --FlashLang-C_AT-DarkCBM: "Custom Background Mode (Dark Mode)";
+        --FlashLang-C_AT-IridescentLight: "Iridescent Mode (Light Mode)";
+        --FlashLang-C_AT-IridescentDark: "Iridescent Mode (Dark Mode)";
+        --FlashLang-C_AT-Terminal: "Terminal Mode";
+        --FlashLang-C_AT-Transparent: "Transparent Mode";
+
+        --FlashLang-C_ATDesc-LightCBM: "Custom Background Mode (alias " var(--FlashLang-DoubleQuote) "CBM" var(--FlashLang-DoubleQuote) ") is a Transparent looking Theme where you can fully personalize your background to your liking. \A The variable to change the background is " var(--FlashLang-DoubleQuote) "--Flashcord-CBM_Light-Image" var(--FlashLang-DoubleQuote) ". More info on the Flashcord Wiki. \A ⚠️ Due to the nature of this theme. Performance of the " var(--FlashLang-DoubleQuote) "ChatSlide" var(--FlashLang-DoubleQuote) " module is poor.";
+        --FlashLang-C_ATDesc-DarkCBM: "Custom Background Mode, but with a more dark theme! This is the most ideal version of CBM mode to use. \A The variable to change the background is " var(--FlashLang-DoubleQuote) "--Flashcord-CBM_Dark-Image" var(--FlashLang-DoubleQuote) ". More info on the Flashcord Wiki. \A ⚠️ Due to the nature of this theme. Performance of the " var(--FlashLang-DoubleQuote) "ChatSlide" var(--FlashLang-DoubleQuote) " module is poor.";
+        --FlashLang-C_ATDesc-IridescentLight: "Iridescent Mode (alias Bloat Mode or " var(--FlashLang-DoubleQuote) "But can it run Flashcord?" var(--FlashLang-DoubleQuote) " Mode) is the most Advanced Theme of Flashcord. It holds back zero punches and will absolutely lag the crap out of Discord. This theme is ideal for those who truly want a fully eye-candy experience. Blurry elements are everywhere, expect your GPU and CPU to absolutely suffer. Iridescent Mode in Light Mode is the recommended version. \A ⛔ PLEASE USE ON HIGH-END SYSTEMS ONLY.";
+        --FlashLang-C_ATDesc-IridescentDark: "Iridescent Mode but in dark mode. Some elements may be hard to see as the white variant handles contrast and depth with blur far better. \A ⛔ PLEASE USE ON HIGH-END SYSTEMS ONLY.";
+        --FlashLang-C_ATDesc-Terminal: "Terminal Mode is a Theme that tries to mimic the style of a Linux Terminal. \A This theme enables a new blackout animation (shown in the GIF) and uses the CRT boot animation.";
+        --FlashLang-C_ATDesc-Transparent: "Transparent Mode does not currently work at this time but is a planned theme. It will work in future versions of Replugged and Flashcord.";
+
+        --FlashLang-ChatEdits_StoreLink: "✅ Flashcord Store Link";
+
+        --FlashLang-EffectText_Small: "\A 🎉 Flashcord Effect: Small";
+        --FlashLang-EffectText_Shaking:"\A 🎉 Flashcord Effect: Shaking";
+        --FlashLang-EffectText_Dramatic:"\A 🎉 Flashcord Effect: Dramatic";
+        --FlashLang-EffectText_FadeBottom:"\A 🎉 Flashcord Effect: Fading from the Bottom";
+        --FlashLang-EffectText_4Chan:"\A 🎉 Flashcord Effect: 4Chan";
+
+        --FlashLang-Addon_Welcome: "\A\A📸 Welcome to " var(--Flashcord-Branch) " ! You are using the " var(--Flashcord-Channel) " Channel of Flashcord.\A\A";
+        --FlashLang-Warning_PluginsCompatibility: "\A\A⚠️ As of right now, approved plugins may actually have minor issues with Flashcord.\A\A";
+        --FlashLang-PluginC_Flashcord-Store: "This plugin was approved for the Flashcord Store, but wasn't by Replugged, use at your own risk.\A\A";
+        --FlashLang-Addon_Recommended: "🔧 Flashcord Compatibility: ❤️ Recommended\A\A";
+        --FlashLang-Addon_Compatible: "🔧 Flashcord Compatibility: ✅ Compatible\A\A";
+        --FlashLang-Addon_MinorIssues: "🔧 Flashcord Compatibility: ⚠️ Minor Issues\A\A";
+        --FlashLang-Addon_Incompatible: "🔧 Flashcord Compatibility: ⛔ Incompatible, disable Flashcord\A\A";
+        --FlashLang-Addon_Unknown: "🔧 Flashcord Compatibility: ❓ Unknown\A\A";
+        --FlashLang-PluginC_ThemeHooker: "🔧 Flashcord Compatibility: 💥 REQUIRED PLUGIN: Enables new Advanced Themes\A\A";
+        --FlashLang-PluginC_Magnificient: "🔧 Flashcord Compatibility: 💥 REQUIRED PLUGIN: Prevents images to be blurry when hovering on them. (" var(--FlashLang-DoubleQuote) "Imagivid" var(--FlashLang-DoubleQuote) " Module)\A\A";
+        --FlashLang-PluginC_RoleDiviers: "🔧 Flashcord Compatibility: ⚠️ Recommended PLUGIN: Enhances the UPFG Module\A\A";
+        --FlashLang-PluginC_GreenText: "🔧 Flashcord Compatibility: ⚠️ Recommended Plugin: Enhances the 4Chan Chat Effect\A\A";
+        --FlashLang-PluginC_FlashcordApproved: "✅ Flashcord Store Approved Plugin \A\A";
+
+        --FlashLang-C_MAT-AboutFC: "\A About Flashcord";
+
+        --FlashLang-AFC_SNDL: "Flashcord is a personal project maintained with love by SiriusBYT, it takes the design language of " var(--FlashLang-DoubleQuote) "SNWE/SNDL" var(--FlashLang-DoubleQuote) " and applies it to Discord. SNDL is my own design language where it has a minimalistic look that does not compromise on looks at all, using blurs for style and animations on hover where it makes sense for the user to offer a way more compact experience while still being easy to use and while having every information you need at a quick glance. \A";
+        --FlashLang-AFC_Support: "Support is held on The Sirio Network Discord Server (https://sirio-network.com/redirect/discord). \A\A";
+        --FlashLang-AFC_ClosedAlpha: "Please give a thanks to these amazing people who helped with the Closed Alpha of Flashcord 💖 \A";
+        --FlashLang-AFC_PaidSupport: "Of course, thanks to you, Flashcord Supporters 💸! \A";
+        --FlashLang-AFC_Translators: "🌐 Flashcord can be used anywhere around the world thanks to these people: \A";
+        --FlashLang-AFC_SGN: "Thanks to those who joined the SGN Discord Server for Flashcord 🗣️ ! \A";
+        --FlashLang-AFC_GitHub: "And finally, thanks for those who stared the Flashcord GitHub Repo ✨ ! \A";
+        --FlashLang-AFC_SpecialThanks: "🌠 Special Thanks: \A";
+        --FlashLang-AFC_Evelyn: "- Evelyn: Created " var(--FlashLang-DoubleQuote) "Magnificent" var(--FlashLang-DoubleQuote) " and was ok being bullied by me to fix specific bugs that were found when using Flashcord \A";
+        --FlashLang-AFC_Tharki: "- Tharki-God: Person to have given me the idea (accidentally) to create the Plugins section of the Flashcord Store \A";
+        --FlashLang-AFC_EastArctica: "- East_Arctica: Posted a plugin to the Flashcord Store, also is just in general a super cool person \A\A";
+        --FlashLang-AFC_Copyright: "Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A\A\A\A";
+
+        /* Insert your quote here in the format:
+        --FlashLang-AFC_Translator-Quote: "      🗨️ [Translator Quote] NameHere: " var(--FlashLang-DoubleQuote) "Actual Quote here" var(--FlashLang-DoubleQuote)" \A\A ";
+        */
+        --FlashLang-AFC_Translator-Quote: "";
+    }
+}
+
+/* Alright you sussy wankers */
+@container GangChat (min-width: 0px) {
+    [class^="app_"] {
+        --FlashLang-WinBar: "🪟 "var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version)" | Report Sirius's stupidity in #🐞sgn-issues-reports on the SGN Discord Server.";
+        --FlashLang-MacBar: "Report Sirius's stupidity in #🐞sgn-issues-reports on the SGN Discord Server. | 🍎 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version) " ";
+        --FlashLang-LinuxBar: "🐧 "var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version)" | Report Sirius's stupidity in #🐞sgn-issues-reports on the SGN Discord Server.";
+    
+        --FlashLang-Boot_Android: "⚠️ use ethernet you fuf";
+
+        --FlashLang-Warning_LightTheme: "  ☀️Light mode is love. Light mode is life.  ";
+        --FlashLang-Warning_DarkTheme: "  🌙 Dark Mode is for the weak.  ";
+        --FlashLang-Warning_Iridescent: "  💥 my main goal is to blow up  ";
+        --FlashLang-Warning_LightCBM: "  🖼️ nice weeb background bud.  ";
+        --FlashLang-Warning_DarkCBM: "  🖼️ cbm but unweeb edition.  ";
+        --FlashLang-Warning_Transparent: "  👻 This theme doesn't work tf you doing here?  ";
+        --FlashLang-Warning_DeprecratedCBM: "  ⚠️ USE THEMEHOOKER YOU VENCORD (gud) /BD (ew) NERD  ";
+    
+        --FlashLang-C_AT-BasicThemes: "📷 Flashcord's Unbloated Themes";
+        --FlashLang-C_AT-AdvancedThemes: "📸 Flashcord's Bloatfest Themes";
+        --FlashLang-C_AT-ModificationNotice: "📖 read the fucking manual";
+        --FlashLang-C_AT-ThemeHooker: "⚠️ pay for nitro or use sussy plugin \A ✅ you are a certified sussy wanker";
+        --FlashLang-C_AT-NoThemeHooker: "⚠️ pay for nitro or use sussy plugin \A ⛔ you are not a certified sussy wanker";
+        --FlashLang-C_AT-Light: "Flashbang Mode";
+        --FlashLang-C_AT-Dark: "Not Racist Mode";
+        --FlashLang-C_AT-Sync: "We're all the same in the inside Mode";
+        --FlashLang-C_AT-LightCBM: "weeb mode (Flashbang Mode)";
+        --FlashLang-C_AT-DarkCBM: "not weeb by default but could be weeb mode (Not Racist Mode)";
+        --FlashLang-C_AT-IridescentLight: "Replugged Unapproved Mode (Flashbang Mode)";
+        --FlashLang-C_AT-IridescentDark: "Replugged Unapproved Mode (Not Racist Mode)";
+        --FlashLang-C_AT-Transparent: "Mode that doesn't fucking exist right now \A because Transparency in Replugged isn't done yet";
+        --FlashLang-C_AT-Terminal: "Nerd Mode";
+        --FlashLang-C_AT-Transparent: " Mode";
+        
+        --FlashLang-C_ATDesc-LightCBM: "i can't fucking believe they put yeah miku as the first flashcord custom background background";
+        --FlashLang-C_ATDesc-DarkCBM: "hey look, sirius' cringe channel banner.";
+        --FlashLang-C_ATDesc-IridescentLight: "BUT CAN IT RUN FLASHCORD'S IRIDESCENT MODE? (flashbang edition)";
+        --FlashLang-C_ATDesc-IridescentDark: "BUT CAN IT RUN FLASHCORD'S IRIDESCENT MODE? (boring edition)";
+        --FlashLang-C_ATDesc-Terminal: "debian sid > arch linux :trolley:";
+        --FlashLang-C_ATDesc-Transparent: "You're so pretty that you fit so well in nature, you're now transparent.";
+
+        --FlashLang-ChatEdits_StoreLink: "✅ Cringe Store Link";
+
+        --FlashLang-EffectText_Small: "\A 🎉 something nobody uses: your dong's size";
+        --FlashLang-EffectText_Shaking:"\A 🎉 something nobody uses: your mom walking to your room";
+        --FlashLang-EffectText_Dramatic:"\A 🎉 something nobody uses: tetrio banner thingy";
+        --FlashLang-EffectText_FadeBottom:"\A 🎉 something nobody uses: reverse loop it and it does a funny";
+        --FlashLang-EffectText_4Chan:"\A 🎉 something nobody uses: gangchat but worse";
+
+        --FlashLang-Addon_Welcome: "\A\A📸 u using " var(--Flashcord-Branch) " on the " var(--Flashcord-Channel) " branch of cringecord.\A\A";
+        --FlashLang-Warning_PluginsCompatibility: "\A\A⚠️ plugins will destroy ohio.\A\A";
+        --FlashLang-PluginC_Flashcord-Store: "Approved by Sirius, meaning approved by fr*nch, use at your own risk. \A\A";
+        --FlashLang-Addon_Recommended: "❤️ use this useless thing\A\A";
+        --FlashLang-Addon_Compatible: "✅ this thing doesn't break flashcord\A\A";
+        --FlashLang-Addon_MinorIssues: "⚠️ this breaks flashcord \A\A";
+        --FlashLang-Addon_Incompatible: "⛔ this will cause ww3\A\A";
+        --FlashLang-Addon_Unknown: "who?\A\A";
+        --FlashLang-PluginC_ThemeHooker: "SOMEONE TOUCHA MY [bloat mode]\A\A";
+        --FlashLang-PluginC_Magnificient: "zoom without blur haha\A\A";
+        --FlashLang-PluginC_RoleDiviers: "wow something minor!!!\A\A";
+        --FlashLang-PluginC_GreenText: "gangchat is literally discount 4chan cuz of flashcord\A\A";
+        --FlashLang-PluginC_FlashcordApproved: "✅ Cringe Store Approved Plugin \A\A";
+
+        --FlashLang-C_MAT-AboutFC: "\A Flashcord Lore";
+
+        --FlashLang-AFC_SNDL: "Flashcord comes from the inner depths of hell. \A";
+        --FlashLang-AFC_Support: "Support is held on Sirius's half baked Discord Server. \A\A";
+        --FlashLang-AFC_ClosedAlpha: "these nerds got access to flashcord early ⤵️\A";
+        --FlashLang-AFC_PaidSupport: "smh these people wasted their 💸 \A";
+        --FlashLang-AFC_Translators: "🌐 these people participated in the additional 50kb in size of flashcord ⤵️ \A";
+        --FlashLang-AFC_SGN: "These poor souls keep getting pinged for no reason ⤵️\A";
+        --FlashLang-AFC_GitHub: "they stared a broken ass theme ⤵️\A";
+        --FlashLang-AFC_SpecialThanks: "🌠 Special " var(--FlashLang-DoubleQuote) "Go Screw Yourself" var(--FlashLang-DoubleQuote) ": \A";
+        --FlashLang-AFC_Evelyn: "- Evelyn: Created " var(--FlashLang-DoubleQuote) "Magnificent" var(--FlashLang-DoubleQuote) " and broke every time. \A";
+        --FlashLang-AFC_Tharki: "- Tharki-God: This nerd make an objectively better version of ThemeHooker and i'm mad >:( \A";
+        --FlashLang-AFC_EastArctica: "- East_Arctica: Another nerd >:( Wanted to write the back-end of my website to help me when all I wanted was suffering \A\A";
+        --FlashLang-AFC_Copyright: "Flashcord © 2023 by SiriusBYT is licensed under your mom called CC BY-NC-ND 4.0. \A\A\A\A\A\A\A\A\A\A";
+
+        --FlashLang-AFC_Translator-Quote: "      🗨️ [Translator Quote] SiriusBYT: " var(--FlashLang-DoubleQuote) "GangChat will rule over the world." var(--FlashLang-DoubleQuote)" \A\A ";
+    }
+}
+
+/* Debug Mode */
+@container Debug (min-width: 0px) {
+    [class^="app_"] {
+        --FlashLang-WinBar: "--FlashLang-WinBar";
+        --FlashLang-MacBar: "--FlashLang-MacBar";
+        --FlashLang-LinuxBar: "--FlashLang-LinuxBar";
+    
+        --FlashLang-Boot_Android: "--FlashLang-Boot_Android";
+
+        --FlashLang-Warning_LightTheme: "--FlashLang-Warning_LightTheme";
+        --FlashLang-Warning_DarkTheme: "--FlashLang-Warning_DarkTheme";
+        --FlashLang-Warning_Iridescent: "--FlashLang-Warning_Iridescent";
+        --FlashLang-Warning_LightCBM: "--FlashLang-Warning_LightCBM:";
+        --FlashLang-Warning_DarkCBM: "--FlashLang-Warning_DarkCBM";
+        --FlashLang-Warning_Transparent: "--FlashLang-Warning_Transparent";
+        --FlashLang-Warning_DeprecratedCBM: "--FlashLang-Warning_DeprecratedCBM";
+    
+        --FlashLang-C_AT-BasicThemes: "--FlashLang-C_AT-BasicThemes";
+        --FlashLang-C_AT-AdvancedThemes: "--FlashLang-C_AT-AdvancedThemes";
+        --FlashLang-C_AT-ModificationNotice: "--FlashLang-C_AT-ModificationNotice";
+        --FlashLang-C_AT-ThemeHooker: "--FlashLang-C_AT-ThemeHooker";
+        --FlashLang-C_AT-NoThemeHooker: "--FlashLang-C_AT-NoThemeHooker";
+        --FlashLang-C_AT-Light: "--FlashLang-C_AT-Light";
+        --FlashLang-C_AT-Dark: "--FlashLang-C_AT-Dark";
+        --FlashLang-C_AT-Sync: "--FlashLang-C_AT-Sync";
+        --FlashLang-C_AT-LightCBM: "--FlashLang-C_AT-LightCBM";
+        --FlashLang-C_AT-DarkCBM: "--FlashLang-C_AT-DarkCBM";
+        --FlashLang-C_AT-IridescentLight: "--FlashLang-C_AT-IridescentLight";
+        --FlashLang-C_AT-IridescentDark: "--FlashLang-C_AT-IridescentDark";
+        --FlashLang-C_AT-Terminal: "--FlashLang-C_AT-Terminal";
+        --FlashLang-C_AT-Transparent: "--FlashLang-C_AT-Transparent";
+
+        --FlashLang-C_ATDesc-LightCBM: "--FlashLang-C_ATDesc-LightCBM";
+        --FlashLang-C_ATDesc-DarkCBM: "--FlashLang-C_ATDesc-DarkCBM";
+        --FlashLang-C_ATDesc-IridescentLight: "--FlashLang-C_ATDesc-IridescentLight";
+        --FlashLang-C_ATDesc-IridescentDark: "--FlashLang-C_ATDesc-IridescentDark";
+        --FlashLang-C_ATDesc-Terminal: "--FlashLang-C_ATDesc-Terminal";
+        --FlashLang-C_ATDesc-Transparent: "--FlashLang-C_ATDesc-Transparent";
+
+        --FlashLang-ChatEdits_StoreLink: "--FlashLang-ChatEdits_StoreLink";
+
+        --FlashLang-EffectText_Small: "\A --FlashLang-EffectText_Small";
+        --FlashLang-EffectText_Shaking:"\A --FlashLang-EffectText_Shaking";
+        --FlashLang-EffectText_Dramatic:"\A --FlashLang-EffectText_Dramatic";
+        --FlashLang-EffectText_FadeBottom:"\A --FlashLang-EffectText_FadeBottom";
+        --FlashLang-EffectText_4Chan:"\A --FlashLang-EffectText_4Chan";
+
+        --FlashLang-Addon_Welcome: "\A\A --FlashLang-Addon_Welcome \A\A";
+        --FlashLang-Warning_PluginsCompatibility: "\A\A--FlashLang-Warning_PluginsCompatibility\A\A";
+        --FlashLang-PluginC_Flashcord-Store: "--FlashLang-PluginC_Flashcord-Store\A\A";
+        --FlashLang-Addon_Recommended: "--FlashLang-Addon_Recommended\A\A";
+        --FlashLang-Addon_Compatible: "--FlashLang-Addon_Compatible\A\A";
+        --FlashLang-Addon_MinorIssues: "--FlashLang-Addon_MinorIssues\A\A";
+        --FlashLang-Addon_Incompatible: "--FlashLang-Addon_Incompatible\A\A";
+        --FlashLang-Addon_Unknown: "--FlashLang-Addon_Unknown\A\A";
+        --FlashLang-PluginC_ThemeHooker: "--FlashLang-PluginC_ThemeHooker\A\A";
+        --FlashLang-PluginC_Magnificient: "--FlashLang-PluginC_Magnificient\A\A";
+        --FlashLang-PluginC_RoleDiviers: "--FlashLang-PluginC_RoleDiviers\A\A";
+        --FlashLang-PluginC_GreenText: "--FlashLang-PluginC_GreenText\A\A";
+        --FlashLang-PluginC_FlashcordApproved: "--FlashLang-PluginC_FlashcordApproved\A\A";
+
+        --FlashLang-C_MAT-AboutFC: "\A --FlashLang-C_MAT-AboutFC";
+
+        --FlashLang-AFC_SNDL: "--FlashLang-AFC_SNDL \A";
+        --FlashLang-AFC_Support: "--FlashLang-AFC_Support \A\A";
+        --FlashLang-AFC_ClosedAlpha: "--FlashLang-AFC_ClosedAlpha \A";
+        --FlashLang-AFC_PaidSupport: "--FlashLang-AFC_PaidSupport \A";
+        --FlashLang-AFC_Translators: "--FlashLang-AFC_Translators \A";
+        --FlashLang-AFC_SGN: "--FlashLang-AFC_SGN \A";
+        --FlashLang-AFC_GitHub: "--FlashLang-AFC_GitHub \A";
+        --FlashLang-AFC_SpecialThanks: "--FlashLang-AFC_SpecialThanks \A";
+        --FlashLang-AFC_Evelyn: "--FlashLang-AFC_Evelyn \A";
+        --FlashLang-AFC_Tharki: "--FlashLang-AFC_Tharki \A";
+        --FlashLang-AFC_EastArctica: "--FlashLang-AFC_EastArctica \A\A";
+        --FlashLang-AFC_Copyright: "--FlashLang-AFC_Copyright \A\A\A\A\A\A\A\A\A\A";
+
+        --FlashLang-AFC_Translator-Quote: "--FlashLang-AFC_Translator-Quote \A\A";
+    }
+}
+
+/* Official Translation by SiriusBYT */
+@container French (min-width: 0px) {
+    [class^="app_"] {
+        --FlashLang-WinBar: "🪟 "var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version)" | Signalez les bugs dans le salon #🐞sgn-issues-reports sur le Serveur Discord d'SGN.";
+        --FlashLang-MacBar: "Signalez les bugs dans le salon #🐞sgn-issues-reports sur le Serveur Discord d'SGN.| 🍎 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version) " ";
+        --FlashLang-LinuxBar: "🐧 "var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version)" | Signalez les bugs dans le salon #🐞sgn-issues-reports sur le Serveur Discord d'SGN.";
+    
+        --FlashLang-Boot_Android: "⚠️ Vous avez des problèmes de connexion.";
+
+        --FlashLang-Warning_LightTheme: "  ⚠️ Flashcord est en Beta.  ";
+        --FlashLang-Warning_DarkTheme: "  ⚠️ Flashcord est en Beta. 🌙 Le Mode Sombre n'est pas terminé.  ";
+        --FlashLang-Warning_Iridescent: "  ⚠️ Flashcord est en Beta. 💥 Le Mode " var(--FlashLang-DoubleQuote) "Iridescent" var(--FlashLang-DoubleQuote) " n'est pas terminé.  ";
+        --FlashLang-Warning_LightCBM: "  ⚠️ Flashcord est en Beta. 🖼️ Le Mode Customisé Clair n'est pas terminé.  ";
+        --FlashLang-Warning_DarkCBM: "  ⚠️ Flashcord est en Beta. 🖼️ Le Mode Customisé Sombre n'est pas terminé.  ";
+        --FlashLang-Warning_Transparent: "  ⚠️ Flashcord est en Beta. 👻 Le Mode Transparent n'est pas terminé.  ";
+        --FlashLang-Warning_DeprecratedCBM: "  ⚠️ Le Mode Customisé sans " var(--FlashLang-DoubleQuote) "ThemeHooker" var(--FlashLang-DoubleQuote) " n'est plus supporté. ";
+    
+        --FlashLang-C_AT-BasicThemes: "📷 Thèmes Basiques Flashcord";
+        --FlashLang-C_AT-AdvancedThemes: "📸 Thèmes Avancés Flashcord";
+        --FlashLang-C_AT-ModificationNotice: "📖 Certaines modifications comme la barre de serveurs horizontale est disponible seulement après la modification d'une variable, referez vous au Wiki de Flashcord pour plus d'information.";
+        --FlashLang-C_AT-ThemeHooker: "⚠️ Les Thèmes Avancés requis " var(--FlashLang-DoubleQuote) "LegalDiscordBypasses" var(--FlashLang-DoubleQuote) " ou Discord Nitro pour les activer. \A ✅ " var(--FlashLang-DoubleQuote) "ThemeHooker" var(--FlashLang-DoubleQuote) "⚠️ Les Thèmes Avancés requis " var(--FlashLang-DoubleQuote) "LegalDiscordBypasses" var(--FlashLang-DoubleQuote) " ou Discord Nitro pour les activer. \A ⛔ " var(--FlashLang-DoubleQuote) "ThemeHooker" var(--FlashLang-DoubleQuote) " est manquant, certains thèmes ont été retirés.";
+        --FlashLang-C_AT-Light: "Mode Clair";
+        --FlashLang-C_AT-Dark: "Mode Sombre";
+        --FlashLang-C_AT-Sync: "Mode Synchronisé";
+        --FlashLang-C_AT-LightCBM: "Mode Customisé Clair";
+        --FlashLang-C_AT-DarkCBM: "Mode Customisé Sombre";
+        --FlashLang-C_AT-IridescentLight: "Mode " var(--FlashLang-DoubleQuote) "Iridescent" var(--FlashLang-DoubleQuote) " Clair";
+        --FlashLang-C_AT-IridescentDark: "Mode " var(--FlashLang-DoubleQuote) "Iridescent" var(--FlashLang-DoubleQuote) " Sombre";
+        --FlashLang-C_AT-Terminal: "Mode Terminale";
+        --FlashLang-C_AT-Transparent: "Mode Transparent";
+
+        --FlashLang-C_ATDesc-LightCBM: "Le Mode Customisé Clair (alias " var(--FlashLang-DoubleQuote) "CBM" var(--FlashLang-DoubleQuote) ") est un Thème Translucide où vous pouvez customiser complètement votre arrière plan à votre plaisir. \A La variable pour changer l'arrière-plan est " var(--FlashLang-DoubleQuote) "--Flashcord-CBM_Light-Image" var(--FlashLang-DoubleQuote) ". Plus d'info sur le Wiki de Flashcord. \A ⚠️ Suite à la nature de ce thème, la performance du module interne " var(--FlashLang-DoubleQuote) "ChatSlide" var(--FlashLang-DoubleQuote) " est mauvais.";
+        --FlashLang-C_ATDesc-DarkCBM: "Le Mode Customisé, mais avec un thème plus sombre! Ceci est la version la plus idéale de CBMà utiliser. \A La variable pour changer l'arrière-plan est " var(--FlashLang-DoubleQuote) "--Flashcord-CBM_Dark-Image" var(--FlashLang-DoubleQuote) ". Plus d'info sur le Wiki de Flashcord. \A ⚠️ Suite à la nature de ce thème, la performance du module interne " var(--FlashLang-DoubleQuote) "ChatSlide" var(--FlashLang-DoubleQuote) " est mauvais.";
+        --FlashLang-C_ATDesc-IridescentLight: "Le Mode " var(--FlashLang-DoubleQuote) "Iridescent" var(--FlashLang-DoubleQuote) " (alias Le Mode Hyper-Mal Optimisé™️ ou " var(--FlashLang-DoubleQuote) "Mais es-ce qu'il peut tourner Flashcord?" var(--FlashLang-DoubleQuote) " Mode) est le Thème le plus Avancé de Flashcord. Il ne loupe pas votre Discord et va bien faire descendre jusqu'en enfer dans un énorme tas de lag. Ce Thème est idéale pour ceux qui veulent vraiment une expérience visuelle parfaite. Il y a des éléments floues partout, prévoyez que votre GPU et CPU de souffrir au maximum. Le Mode " var(--FlashLang-DoubleQuote) "Iridescent" var(--FlashLang-DoubleQuote) " en Thème Clair est la version recommandé. \A ⛔ MERCI D'UTILISER SEULEMENT AVEC DES SYSTÈMES A HAUTE PERFORMANCE.";
+        --FlashLang-C_ATDesc-IridescentDark: "Le Mode " var(--FlashLang-DoubleQuote) "Iridescent" var(--FlashLang-DoubleQuote) " mais Sombre. Certains éléments risque d'être difficile à voir suite aux effets de floutage étant plus visible en Thème Clair. \A ⛔ MERCI D'UTILISER SEULEMENT AVEC DES SYSTÈMES A HAUTE PERFORMANCE.";
+        --FlashLang-C_ATDesc-Terminal: "Le Mode Terminal est un Thème qui essaye de copier l'aspect d'un Terminal Linux.\A Ce Thème active une nouvelle animation de connexion (visible dans le GIF) et utilise l'animation CRT (Cathodique) au démarage..";
+        --FlashLang-C_ATDesc-Transparent: "Le Mode Transparent ne fonctionne actuellement pas mais est un Thème Planifié. Il fonctionnera dans les versions future de Replugged et de Flashcord.";
+
+        --FlashLang-ChatEdits_StoreLink: "✅ Lien Flashcord Store";
+
+        --FlashLang-EffectText_Small: "\A 🎉 Effect Flashcord: Petit";
+        --FlashLang-EffectText_Shaking:"\A 🎉 Effect Flashcord: Secoué";
+        --FlashLang-EffectText_Dramatic:"\A 🎉 Effect Flashcord: Dramatique";
+        --FlashLang-EffectText_FadeBottom:"\A 🎉 Effect Flashcord: Fondu par le bas";
+        --FlashLang-EffectText_4Chan:"\A 🎉 Effect Flashcord: 4Chan";
+
+        --FlashLang-Addon_Welcome: "\A\A📸 Bienvenue sur " var(--Flashcord-Branch) " ! Vous utilisez la version " var(--Flashcord-Channel) " de Flashcord.\A\A";
+        --FlashLang-Warning_PluginsCompatibility: "\A\A⚠️ Pour l'instant, les Plugins approuvés peuvent avoir des problèmes avec Flashcord. \A\A";
+        --FlashLang-PluginC_Flashcord-Store: "This plugin was approved for the Flashcord Store, but wasn't by Replugged, use at your own risk.\A\A";
+        --FlashLang-Addon_Recommended: "🔧Compatibilité Flashcord: ❤️ Recommandé\A\A";
+        --FlashLang-Addon_Compatible: "🔧 Compatibilité Flashcord: ✅ Compatible\A\A";
+        --FlashLang-Addon_MinorIssues: "🔧 Compatibilité Flashcord: ⚠️ Problèmes Mineur\A\A";
+        --FlashLang-Addon_Incompatible: "🔧 Compatibilité Flashcord: ⛔ Incompatible, désactivez Flashcord\A\A";
+        --FlashLang-Addon_Unknown: "🔧 Compatibilité Flashcord: ❓ Inconnu\A\A";
+        --FlashLang-PluginC_ThemeHooker: "🔧 Compatibilité Flashcord: 💥 PLUGIN REQUIS: Active de nouveaux Thèmes\A\A";
+        --FlashLang-PluginC_Magnificient: "🔧 Compatibilité Flashcord: 💥 PLUGIN REQUIS: Prevents images to be blurry when hovering on them. (" var(--FlashLang-DoubleQuote) "Imagivid" var(--FlashLang-DoubleQuote) " Module)\A\A";
+        --FlashLang-PluginC_RoleDiviers: "🔧 Compatibilité Flashcord: ⚠️ Recommended PLUGIN: Enhances the UPFG Module\A\A";
+        --FlashLang-PluginC_GreenText: "🔧 Compatibilité Flashcord: ⚠️ Recommended Plugin: Enhances the 4Chan Chat Effect\A\A";
+        --FlashLang-PluginC_FlashcordApproved: "✅ Plugin Flashcord Store Approuvé \A\A";
+
+        --FlashLang-C_MAT-AboutFC: "\A A Propos de Flashcord";
+
+        --FlashLang-AFC_SNDL: "Flashcord est un projet personnel crée du fond du coeur par SiriusBYT, il applique le style visuel de " var(--FlashLang-DoubleQuote) "SNWE/SNDL" var(--FlashLang-DoubleQuote) " et l'applique à Discord. SNDL mon propre style visuel qui est fondé sur le look minimalisme mais qui ne compromise pas sur le visuel, en utilisant le floutage pour la profondeur et des animations au survol où ça a du sens pour l'utilisateur pour pouvoir offrir une expérience plus compacte tout en étant toujours facile à utiliser et en ayant toutes les informations que vous avez besoin. \A";
+        --FlashLang-AFC_Support: "Le Support est maintenue sur le Serveur Discord du Sirio Network (https://sirio-network.com/redirect/discord). \A\A";
+        --FlashLang-AFC_ClosedAlpha: "Veuillez dire merci à ces gens géniaux qui ont aidé avec la Alpha Fermé de Flashcord 💖 \A";
+        --FlashLang-AFC_PaidSupport: "Évidement, merci à vous, supporters de Flashcord 💸! \A";
+        --FlashLang-AFC_Translators: "🌐 Flashcord peut être utilisé partout dans le monde grâce à ces gens: \A";
+        --FlashLang-AFC_SGN: "Merci à tous ceux qui ont rejoint le Serveur Discord d'SGN pour Flashcord 🗣️ ! \A";
+        --FlashLang-AFC_GitHub: "Et finalement, merci à tous à ceux qui ont étoilé le GitHub de Flashcord ✨ ! \A";
+        --FlashLang-AFC_SpecialThanks: "🌠 Merci Spéciale: \A";
+        --FlashLang-AFC_Evelyn: "- Evelyn: A crée " var(--FlashLang-DoubleQuote) "Magnificent" var(--FlashLang-DoubleQuote) " et était ok d'être harcelé par moi pour fixer des bugs qui ont été trouvé en utilisant Flashcord. \A";
+        --FlashLang-AFC_Tharki: "- Tharki-God: La personne qui m'a donné l'idée (accidentellement) de crée la section des Plugins dans le Flashcord Store. \A";
+        --FlashLang-AFC_EastArctica: "- East_Arctica: A posté un Plugin dans le Flashcord Store, et est en générale juste une personne super cool. \A\A";
+        --FlashLang-AFC_Copyright: "Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. (Flashcord est Licenciée sous CC BY-NC-ND 4.0) \A\A\A\A\A\A\A\A\A\A";
+
+        --FlashLang-AFC_Translator-Quote: "      🗨️ [Citation du Traducteur] SiriusBYT: " var(--FlashLang-DoubleQuote) "Mais bon sang que je déteste le Français... keske gé fou ici?!" var(--FlashLang-DoubleQuote)" \A\A ";
+    }
+}
+
+/* Official Translation by Sky */
+@container Spanish (min-width: 0px) {
+    [class^="app_"] {
+        --FlashLang-WinBar: "🪟 "var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version)" | Informa sobre errores en #🐞sgn-issues-reports en el Servidor de Discord SGN.";
+        --FlashLang-MacBar: "Informa sobre errores en #🐞sgn-issues-reports en el Servidor de Discord SGN. | 🍎 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version) " ";
+        --FlashLang-LinuxBar: "🐧 "var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version)" | Informa sobre errores en #🐞sgn-issues-reports en el Servidor de Discord SGN.";
+    
+        --FlashLang-Boot_Android: "⚠️ Estás teniendo problemas de conexión.";
+
+        --FlashLang-Warning_LightTheme: "  ⚠️ Flashcord está en versión Beta.  ";
+        --FlashLang-Warning_DarkTheme: "  ⚠️ Flashcord está en versión Beta. 🌙 El Modo Oscuro no está terminado.  ";
+        --FlashLang-Warning_Iridescent: "  ⚠️ Flashcord está en versión Beta. 💥 El Modo Iridiscent no está terminado. ";
+        --FlashLang-Warning_LightCBM: "  ⚠️ Flashcord está en versión Beta. 🖼️ El Modo Fondo Personalizable Claro no está terminado.  ";
+        --FlashLang-Warning_DarkCBM: "  ⚠️ Flashcord está en versión Beta. 🖼️ El Modo Fondo Personalizable Oscuro no está terminado.  ";
+        --FlashLang-Warning_Transparent: "  ⚠️ Flashcord está en versión Beta. 👻 El Modo Transparente no está terminado.  ";
+        --FlashLang-Warning_DeprecratedCBM: "  ⚠️ El Modo Personalizable sin ThemeHooker ya no es compatible.  ";
+    
+        --FlashLang-C_AT-BasicThemes: "📷 Temas Base de Flashcord";
+        --FlashLang-C_AT-AdvancedThemes: "📸 Temas Avanzados de Flashcord";
+        --FlashLang-C_AT-ModificationNotice: "📖 Algunas modificaciones tales como la lista horizontal de servidores solo está disponible tras la modificación de una variable, consulta Flashcord Wiki para más información.";
+        --FlashLang-C_AT-ThemeHooker: "⚠️ Los Temas Avanzados requieren de LegalDiscordBypasses o Discord Nitro para activarlos. \A ✅ ThemeHooker está presente y ha habilitado nuevos temas.";
+        --FlashLang-C_AT-NoThemeHooker: "⚠️ Los Temas Avanzados requieren de LegalDiscordBypasses o Discord Nitro para activarlos. \A ⛔ Falta ThemeHooker. Ciertos temas han sido eliminados.";
+        --FlashLang-C_AT-Light: "Tema Claro";
+        --FlashLang-C_AT-Dark: "Tema Oscuro";
+        --FlashLang-C_AT-Sync: "Modo Sincronización";
+        --FlashLang-C_AT-LightCBM: "Fondo Personalizable (Modo Claro)";
+        --FlashLang-C_AT-DarkCBM: "Fondo Personalizable (Modo Oscuro)";
+        --FlashLang-C_AT-IridescentLight: "Modo Iridescent (Modo Claro)";
+        --FlashLang-C_AT-IridescentDark: "Modo Iridescent (Modo Oscuro)";
+        --FlashLang-C_AT-Transparent: "Modo Transparente";
+        --FlashLang-C_AT-Terminal: "Modo Terminal";
+        --FlashLang-C_AT-Transparent: "Modo Transparente";
+
+        --FlashLang-C_ATDesc-LightCBM: "El Modo Fondo Personalizable (alias " var(--FlashLang-DoubleQuote) "CBM" var(--FlashLang-DoubleQuote) ") es un tema de estilo Transparente donde puedes personalizar el fondo completamente a tu gusto. \A La variable para cambiar el fondo es " var(--FlashLang-DoubleQuote) "--Flashcord-CBM_Light-Image" var(--FlashLang-DoubleQuote) ". Más información en la Wiki de Flashcord. \A ⚠️ Debido a la naturaleza de este tema. El rendimiento del módulo " var(--FlashLang-DoubleQuote) "ChatSlide" var(--FlashLang-DoubleQuote) " es deficiente.";
+        --FlashLang-C_ATDesc-DarkCBM: "El Modo Fondo Personalizable, ¡pero con un tema más oscuro! Esta es la versión ideal para usar el modo CBM. \A La variable para cambiar el fondo es " var(--FlashLang-DoubleQuote) "--Flashcord-CBM_Dark-Image" var(--FlashLang-DoubleQuote) ". Más información en la Wiki de Flashcord. \A ⚠️ Debido a la naturaleza de este tema. El rendimiento del módulo " var(--FlashLang-DoubleQuote) "ChatSlide" var(--FlashLang-DoubleQuote) " es deficiente.";
+        --FlashLang-C_ATDesc-IridescentLight: "El Modo Iridiscent (alias El Modo Hiper-Mega-Mal optimizado o " var(--FlashLang-DoubleQuote) "Pero, ¿¿puede funcionar con Flashcord??" var(--FlashLang-DoubleQuote) " Mode) es el tema más avanzado de Flashcord. Di adiós a la fluidez y bienvenido al infierno del lag en Discord. Este tema es ideal para aquellos que verdaderamente quieren una experiencia visual atractiva. Hay elementos de desenfoque por todas partes, que tu GPU y CPU descansen en paz porque sufrirán. El Modo Iridescent en versión clara es el más recomendado. \A ⛔ UTILIZAR SÓLO EN SISTEMAS DE GAMA ALTA, POR FAVOR.";
+        --FlashLang-C_ATDesc-IridescentDark: "El Modo Iridiscent pero en versión oscura. Algunos elementos pueden verse peor ya que la versión clara maneja mucho mejor el contraste y profundidad de desenfoque. \A ⛔ UTILIZAR SÓLO EN SISTEMAS DE GAMA ALTA, POR FAVOR.";
+        --FlashLang-C_ATDesc-Terminal: "El Modo Terminal es un tema que intenta imitar el estilo de una terminal de Linux. \A Este tema activa una animación nueva de inicio (mostrado en el GIF) y usa la animación de arranque de un CRT.";
+        --FlashLang-C_ATDesc-Transparent: "El Modo Transparente no funciona en estos momentos pero es un tema el cual está en desarrollo. Funcionará en futuras versiones de Replugged y Flashcord.";
+        
+        --FlashLang-ChatEdits_StoreLink: "✅ Enlace a la tienda de Flashcord";
+
+        --FlashLang-EffectText_Small: "\A 🎉 Efecto Flashcord: Pequeño";
+        --FlashLang-EffectText_Shaking:"\A 🎉 Efecto Flashcord: Agitado";
+        --FlashLang-EffectText_Dramatic:"\A 🎉 Efecto Flashcord: Dramático";
+        --FlashLang-EffectText_FadeBottom:"\A 🎉 Efecto Flashcord: Desvaneciéndose desde abajo";
+        --FlashLang-EffectText_4Chan:"\A 🎉 Efecto Flashcord: 4Chan";
+
+        --FlashLang-Addon_Welcome: "\A\A📸 ¡Bienvenido a " var(--Flashcord-Branch) " ! Estás usando " var(--Flashcord-Channel) " canal de Flashcord.\A\A";
+        --FlashLang-Warning_PluginsCompatibility: "\A\A⚠️ En este momento, los complementos aprobados pueden tener problemas menores con Flashcord.\A\A";
+        --FlashLang-PluginC_Flashcord-Store: "Este complemento está aprobado por la tienda de Flashcord, pero no por Replugged, utilízalo bajo responsabilidad propia.\A\A";
+        --FlashLang-Addon_Recommended: "🔧 Compatibilidad con Flashcord: ❤️ Recomendad\A\A";
+        --FlashLang-Addon_Compatible: "🔧 Compatibilidad con Flashcord: ✅ Compatible\A\A";
+        --FlashLang-Addon_MinorIssues: "🔧 Compatibilidad con Flashcord: ⚠️ Problemas menores\A\A";
+        --FlashLang-Addon_Incompatible: "🔧 Compatibilidad con Flashcord: ⛔ Incompatible, desactiva Flashcord\A\A";
+        --FlashLang-Addon_Unknown: "🔧 Compatibilidad con Flashcord: ❓ Desconocido\A\A";
+        --FlashLang-PluginC_ThemeHooker: "🔧 Compatibilidad con Flashcord: 💥 COMPLEMENTO NECESARIO: abilita nuevos Temas Avanzados\A\A";
+        --FlashLang-PluginC_Magnificient: "🔧 Compatibilidad con Flashcord: 💥 COMPLEMENTO NECESARIO: mejora el módulo Imagivid\A\A";
+        --FlashLang-PluginC_RoleDiviers: "🔧 Compatibilidad con Flashcord: ⚠️ Complemento recomendado: mejora el Módulo UPFG\A\A";
+        --FlashLang-PluginC_GreenText: "🔧 Compatibilidad con Flashcord: ⚠️ Complemento recomendado: mejora el Efecto de Chat 4Chan\A\A";
+        --FlashLang-PluginC_FlashcordApproved: "✅ Complemento aprobado por la tienda de Flashcord\A\A";
+
+        --FlashLang-C_MAT-AboutFC: "\A Sobre Flashcord";
+
+        --FlashLang-AFC_SNDL: "Flashcord es un proyecto personal que se mantiene con amor gracias a SiriusBYT, toma el lenguaje de diseño de SNWE/SNDL y lo aplica a Discord. SNDL es mi propio lenguaje que se basa en un aspecto minimalista pero sin comprometerse con ello, utilizando desenfoques para estilo y animaciones al pasar el cursor donde tiene sentido para el usuario para ofrecerle una experiencia mucho más compacta sin dejar de ser fácil de utilizar y teniendo toda la información que necesites en un vistazo rápido. \A";
+        --FlashLang-AFC_Support: "El Soporte se encuentra en el Servidor de Discord The Sirio Network (https://sirio-network.com/redirect/discord). \A\A";
+        --FlashLang-AFC_ClosedAlpha: "Por favor da las gracias a estas maravillosas personas que han ayudado con la versión Alfa cerrada de Flashcord💖 \A";
+        --FlashLang-AFC_PaidSupport: "Por supuesto, ¡gracias a vosotros, socios de Flashcord💸! \A";
+        --FlashLang-AFC_Translators: "🌐 Flashcord puede ser utilizado alrededor del mundo gracias a estas personas: \A";
+        --FlashLang-AFC_SGN: "¡Gracias a aquellos que se han unido al Servidor de Discord SGN para Flashcord🗣️ ! \A";
+        --FlashLang-AFC_SpecialThanks: "🌠 Agradecimientos especiales: \A";
+        --FlashLang-AFC_Evelyn: '- Evelyn: Creó "Magnificent" y aguantó mi acoso para arreglar errores específicos que se encontraron en Flashcord\A';
+        --FlashLang-AFC_Tharki: "- Tharki-God: aquel que me dio la idea (accidentalmente) de crear la sección de Complementos de la tienda de Flashcord\A";
+        --FlashLang-AFC_EastArctica: "- East_Arctica: publicó un complemento a la tienda de Flashcord, también es una persona muy cool\A\A";
+        --FlashLang-AFC_Copyright: "Flashcord © 2023 por SiriusBYT está licenciado bajo CC BY-NC-ND 4.0. \A\A\A\A\A\A\A\A\A\A";
+
+        --FlashLang-AFC_Translator-Quote: "      🗨️ [Presupuesto Traductor] sky: " var(--FlashLang-DoubleQuote) "suavemente" var(--FlashLang-DoubleQuote)" \A\A ";
+
+    }
+}
+
+/* Attempted translation by Atacantul 
+SiriusBYT: That's what she said */
+@container Romanian (min-width: 0px) {
+    [class^="app_"] {
+        --FlashLang-WinBar: "🪟 "var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version)" | Raportați probleme în #🐞sgn-issues-reports pe Serverul de Discord SGN.";
+        --FlashLang-MacBar: "Raportați probleme în #🐞sgn-issues-reports pe Serverul de Discord SGN. | 🍎 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version) " ";
+        --FlashLang-LinuxBar: "🐧 "var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version)" | Raportați probleme în #🐞sgn-issues-reports pe Serverul de Discord SGN.";
+    
+        --FlashLang-Boot_Android: "⚠️ Aveți probleme cu conexiunea.";
+
+        --FlashLang-Warning_LightTheme: "  ⚠️ Flashcord este în Beta.  ";
+        --FlashLang-Warning_DarkTheme: "  ⚠️ Flashcord este în Beta. 🌙 Modul Întunecat este nefinalizat.  ";
+        --FlashLang-Warning_Iridescent: "  ⚠️ Flashcord este în Beta. 💥 Modul 'Iridescent' este nefinalizat.  ";
+        --FlashLang-Warning_LightCBM: "  ⚠️ Flashcord este în Beta. 🖼️ Modul Luminos cu Fundal Personalizat este nefinalizat.  ";
+        --FlashLang-Warning_DarkCBM: "  ⚠️ Flashcord este în Beta. 🖼️ Modul Întunecat cu Fundal Personalizat este nefinalizat.  ";
+        --FlashLang-Warning_Transparent: "  ⚠️ Flashcord este în Beta. 👻 Modul Transparent este nefinalizat.  ";
+        --FlashLang-Warning_DeprecratedCBM: "  ⚠️ Modul Personalizat fără ThemeHooker nu mai este suportat.  ";
+    
+        --FlashLang-C_AT-BasicThemes: "📷 Teme Flashcord Simple";
+        --FlashLang-C_AT-AdvancedThemes: "📸 Teme Flashcord Avansate";
+        --FlashLang-C_AT-ModificationNotice: "📖 Modificări anume cum ar fi lista de servere orizontală sunt valabile doar după modificarea unei variabile, verificați Flashcord Wiki pentru mai multe informații. ";
+        --FlashLang-C_AT-ThemeHooker: "⚠️ Temele Avansate necesită " var(--FlashLang-DoubleQuote) "LegalDiscordBypasses" var(--FlashLang-DoubleQuote) " sau Discord Nitro pentru a le activa. \A ✅ " var(--FlashLang-DoubleQuote) "ThemeHooker" var(--FlashLang-DoubleQuote) " este prezent și a activat teme noi.";
+        --FlashLang-C_AT-NoThemeHooker: "⚠️ Temele Avansate necesită " var(--FlashLang-DoubleQuote) "LegalDiscordBypasses" var(--FlashLang-DoubleQuote) " sau Discord Nitro pentru a le activa. \A ⛔ " var(--FlashLang-DoubleQuote) "ThemeHooker" var(--FlashLang-DoubleQuote) " lipsește. Niște teme au fost dezactivate.";
+        --FlashLang-C_AT-Light: "Modul Luminos";
+        --FlashLang-C_AT-Dark: "Modul Întunecat";
+        --FlashLang-C_AT-Sync: "Modul Sincronizare";
+        --FlashLang-C_AT-LightCBM: "Modul cu Fundal Personalizat (Modul Luminos)";
+        --FlashLang-C_AT-DarkCBM: "Modul cu Fundal Personalizat (Modul Întunecat)";
+        --FlashLang-C_AT-IridescentLight: "Modul Iridescent (Modul Luminos)";
+        --FlashLang-C_AT-IridescentDark: "Modul Iridescent (Modul Întunecat)";
+        --FlashLang-C_AT-Terminal: "Modul Consolă";
+        --FlashLang-C_AT-Transparent: "Modul Transparent";
+
+        --FlashLang-C_ATDesc-LightCBM: "Modul cu Fundal Personalizat (mai numit și " var(--FlashLang-DoubleQuote) "CBM" var(--FlashLang-DoubleQuote) ") este o Temă puțin Transparentă unde poți personaliza complet fundalul cum doriți. \A Variabila pentru a schimba fundalul este " var(--FlashLang-DoubleQuote) "--Flashcord-CBM_Light-Image" var(--FlashLang-DoubleQuote) ". Mai multe informații pe Flashcord Wiki. \A ⚠️ Din cauza naturii acestei teme. Performanța modulului " var(--FlashLang-DoubleQuote) "ChatSlide" var(--FlashLang-DoubleQuote) " este slabă.";
+        --FlashLang-C_ATDesc-DarkCBM: "Modul cu Fundal Personalizat, dar cu o temă mai întunecată! Aceasta este cea mai ideală versiune de mod CBM pentru folosire. \A Variabila  pentru a schimba fundalul este " var(--FlashLang-DoubleQuote) "--Flashcord-CBM_Dark-Image" var(--FlashLang-DoubleQuote) ". Mai multe informații pe Flashcord Wiki. \A ⚠️ Din cauza naturii acestei teme. Performanța modulului " var(--FlashLang-DoubleQuote) "ChatSlide" var(--FlashLang-DoubleQuote) " este slabă.";
+        --FlashLang-C_ATDesc-IridescentLight: "Modul Iridescent (mai numit și Modul Bloat sau Modul " var(--FlashLang-DoubleQuote) "Dar poate rula Flashcord?" var(--FlashLang-DoubleQuote) " ) este cea mai Avansată Temă din Flashcord. El nu se abține deloc și va lăgui complet Discord. Această temă este perfectă pentru cei care chiar doresc o experiență foarte colorată. Elemente blurate sunt peste tot, așteptați-vă ca GPU-ul și CPU-ul vostru să sufere. Modul Iridescent în Modul Luminos este versiunea recomandată. \A ⛔ FOLOSIȚI NUMAI PE CALCULATOARE FOARTE PUTERNICE.";
+        --FlashLang-C_ATDesc-IridescentDark: "Modul Iridescent dar în modul întunecat. Niște elemente pot fi greu de văzut fiindcă varianta luminoasă utilizează contrastul și adâncimea cu blurare mult mai bine. \A ⛔ FOLOSIȚI NUMAI PE CALCULATOARE FOARTE PUTERNICE.";
+        --FlashLang-C_ATDesc-Terminal: "Modul Consolă este o Temă care încearcă să mimice stilul unei Console Linux. \A Această temă activează o nouă animație pentru lansare (afișat în GIF-ul din spate) și folosește animația de lansare a unui CRT. ";
+        --FlashLang-C_ATDesc-Transparent: "Modul Transparent nu funcționează momentan dar este o temă planuită. Va funcționa în versiuni Replugged și Flashcord ulterioare. ";
+
+        --FlashLang-ChatEdits_StoreLink: "✅ Link pentru Magazinul Flashcord";
+
+        --FlashLang-EffectText_Small: "\A 🎉 Efect de text Flashcord: Mic";
+        --FlashLang-EffectText_Shaking:"\A 🎉 Efect de text Flashcord: Zgâlțâit";
+        --FlashLang-EffectText_Dramatic:"\A 🎉 Efect de text Flashcord: Dramatic";
+        --FlashLang-EffectText_FadeBottom:"\A 🎉 Efect de text Flashcord: Apărând de Jos";
+        --FlashLang-EffectText_4Chan:"\A 🎉 Efect de text Flashcord: 4Chan";
+
+        --FlashLang-Addon_Welcome: "\A\A📸 Bun venit pe " var(--Flashcord-Branch) " ! Folosiți Canalul " var(--Flashcord-Channel) " pentru Flashcord.\A\A";
+        --FlashLang-Warning_PluginsCompatibility: "\A\A⚠️ Momentan, pluginurile aprobate pot avea probleme minore cu Flashcord. \A\A";
+        --FlashLang-PluginC_Flashcord-Store: "Acest plugin a fost aprobat pentru Magazinul Flashcord, dar nu a fost de Replugged, folosiți pe riscul vostru. \A\A";
+        --FlashLang-Addon_Recommended: "🔧 Compatibilitate cu Flashcord: ❤️ Recomandat\A\A";
+        --FlashLang-Addon_Compatible: "🔧 Compatibilitate cu Flashcord: ✅ Compatibil\A\A";
+        --FlashLang-Addon_MinorIssues: "🔧 Compatibilitate cu Flashcord: ⚠️ Probleme Minore\A\A";
+        --FlashLang-Addon_Incompatible: "🔧 Compatibilitate cu Flashcord: ⛔ Incompatibil, dezactivați Flashcord\A\A";
+        --FlashLang-Addon_Unknown: "🔧 Compatibilitate cu Flashcord: ❓ Neștiut\A\A";
+        --FlashLang-PluginC_ThemeHooker: "🔧 Compatibilitate cu Flashcord: 💥 PLUGIN NECESAR: Activează Teme Avansate noi\A\A";
+        --FlashLang-PluginC_Magnificient: "🔧 Compatibilitate cu Flashcord: 💥 PLUGIN NECESAR: Previne blurarea imaginilor la mutarea mouse-ului peste ele. (Modulul " var(--FlashLang-DoubleQuote) "Imagivid" var(--FlashLang-DoubleQuote) " )\A\A";
+        --FlashLang-PluginC_RoleDiviers: "🔧 Compatibilitate cu Flashcord: ⚠️ PLUGIN Recomandat: Îmbunătățește Modulul UPFG\A\A";
+        --FlashLang-PluginC_GreenText: "🔧 Compatibilitate cu Flashcord: ⚠️ PLUGIN Recomandat: Îmbunătățește Efectul de Chat 4Chan \A\A";
+        --FlashLang-PluginC_FlashcordApproved: "✅ Plugin Aprobat de Magazinul Flashcord \A\A";
+
+        --FlashLang-C_MAT-AboutFC: "\A Despre Flashcord";
+
+        --FlashLang-AFC_SNDL: "Flashcord este un proiect personal întreținut cu iubire de SiriusBYT, acesta ia stilul vizual " var(--FlashLang-DoubleQuote) "SNWE/SNDL" var(--FlashLang-DoubleQuote) "-ului și-l aplică Discordului. SNDL este propriul meu stil vizual care are un aspect minimalist care nu compromite aspectul deloc, folosind blururi pentru stil și animații la mutarea mouse-ului în locuri unde are sens pentru utilizator pentru a oferi o experiență mult mai compactă în timp ce încă este ușor de folosit și tot având toate informațiile de care ai nevoie în fața ta. \A";
+        --FlashLang-AFC_Support: "Suport este menținut pe Serverul de Discord SGN (https://sirio-network.com/redirect/discord). \A\A";
+        --FlashLang-AFC_ClosedAlpha: "Mulțumește aceaste persoane incredibile care au ajutat cu Flashcordul Closed Alpha 💖 \A";
+        --FlashLang-AFC_PaidSupport: "Desigur, mulțumită vouă, Susținători Flashcord 💸! \A";
+        --FlashLang-AFC_Translators: "🌐 Flashcord poate fi folosit oriunde în lume mulțumită acestor persoane: \A";
+        --FlashLang-AFC_SGN: "Mulțumesc celor care s-au alăturat Serverului de Discord SGN pentru Flashcord 🗣️ ! \A";
+        --FlashLang-AFC_GitHub: "Și în sfârșit, mulțumesc celor care au dat o stea pe Flashcord GitHub Repo ✨ ! \A";
+        --FlashLang-AFC_SpecialThanks: "🌠 Mulțumiri Speciale: \A";
+        --FlashLang-AFC_Evelyn: "- Evelyn: A creat " var(--FlashLang-DoubleQuote) "Magnificent" var(--FlashLang-DoubleQuote) " și era ok să primească bullying de la mine să repare buguri specifice care au fost găsite la utilizarea Flashcordului \A";
+        --FlashLang-AFC_Tharki: "- Tharki-God: Persoană care mi-a dat ideea (din greșeală) să creez secțiunea de Pluginuri din Magazinul Flashcord \A";
+        --FlashLang-AFC_EastArctica: "- East_Arctica: A postat un plugin pe Magazinul Flashcord, și este în general o persoană foarte de treabă \A\A";
+        --FlashLang-AFC_Copyright: "Flashcord © 2023 de SiriusBYT este licențiat sub CC BY-NC-ND 4.0. \A\A\A\A\A\A\A\A\A\A";
+        
+        --FlashLang-AFC_Translator-Quote: "      🗨️ [Citatul Traducătorului] Atacantul: " var(--FlashLang-DoubleQuote) "fii rasist pentru mine" var(--FlashLang-DoubleQuote)" \A\A ";
+    }
+}
+
+/* Official Translation by Lööps 
+Update: Translation Cancelled rn, this is the broken remains of the German Version*/
+@container German (min-width: 0px) {
+    [class^="app_"] {
+        --FlashLang-WinBar: "🪟 "var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version)" | Melde Bugs in #🐞sgn-issues-reports auf dem SGN Discord Server.";
+        --FlashLang-MacBar: "Melde Bugs in #🐞sgn-issues-reports auf dem SGN Discord Server. | 🍎 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version) " ";
+        --FlashLang-LinuxBar: "🐧 "var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version)" | Melde Bugs in #🐞sgn-issues-reports auf dem SGN Discord Server.";
+    
+        --FlashLang-Boot_Android: "⚠️ You are having connection problems.";
+
+        --FlashLang-Warning_LightTheme: "  ⚠️ Flashcord ist Beta-Software.  ";
+        --FlashLang-Warning_DarkTheme: "  ⚠️ Flashcord ist Beta-Software. 🌙 Dunkler Modus ist unfertig.  ";
+        --FlashLang-Warning_Iridescent: "  ⚠️ Flashcord ist Beta-Software. 💥 Irisierender Modus ist unfertig.  ";
+        --FlashLang-Warning_LightCBM: "  ⚠️ Flashcord ist Beta-Software. 🖼️ Heller benutzerdefinierter Hintergrund Modus ist unfertig.  ";
+        --FlashLang-Warning_DarkCBM: "  ⚠️ Flashcord ist Beta-Software. 🖼️ Dunkler benutzerdefinierter Hintergrund Modus ist unfertig.  ";
+        --FlashLang-Warning_Transparent: "  ⚠️ Flashcord ist Beta-Software. 👻 Transparenter Modus ist unfertig.  ";
+        --FlashLang-Warning_DeprecratedCBM: "  ⚠️ Der benutzerdefinierte Modus ohne ThemeHooker wird nicht mehr unterstützt.  ";
+    
+        --FlashLang-C_AT-BasicThemes: "📷 Flashcord Einfache Themen";
+        --FlashLang-C_AT-AdvancedThemes: "📸 Flashcord Erweiterte Themen";
+        --FlashLang-C_AT-ModificationNotice: "📖 Gewisse Optionen, wie z.B. die horizontale Serverliste, sind erst nach dem Ändern einer Variable verfügbar. Weitere Infos findest du im Flashcord Wiki.";
+        --FlashLang-C_AT-ThemeHooker: "⚠️ Erweiterte Themen erfordern LegalDiscordBypasses oder Discord Nitro, um sie zu aktivieren. \A ✅ ThemeHooker ist vorhanden und hat neue Themen aktiviert.";
+        --FlashLang-C_AT-NoThemeHooker: "⚠️ Erweiterte Themen erfordern LegalDiscordBypasses oder Discord Nitro, um sie zu aktivieren. \A ⛔ ThemeHooker fehlt. Bestimmte Themen wurden entfernt.";
+        --FlashLang-C_AT-Light: "Light Mode";
+        --FlashLang-C_AT-Dark: "Dunkler Modus";
+        --FlashLang-C_AT-Sync: "Sync Modus";
+        --FlashLang-C_AT-LightCBM: "Custom Background Mode (Light Mode)";
+        --FlashLang-C_AT-DarkCBM: "Custom Background Mode (Dark Mode)";
+        --FlashLang-C_AT-IridescentLight: "Iridescent Modus (Light Mode)";
+        --FlashLang-C_AT-IridescentDark: "Iridescent Modus (Dunkler Modus)";
+        --FlashLang-C_AT-Transparent: "Transparenter Modus";
+        --FlashLang-C_AT-Terminal: "Terminal Mode";
+        --FlashLang-C_AT-Transparent: "Transparent Mode";
+
+        --FlashLang-C_ATDesc-LightCBM: "Custom Background Mode (alias " var(--FlashLang-DoubleQuote) "CBM" var(--FlashLang-DoubleQuote) ") is a Transparent looking Theme where you can fully personalize your background to your liking. \A The variable to change the background is " var(--FlashLang-DoubleQuote) "--Flashcord-CBM_Light-Image" var(--FlashLang-DoubleQuote) ". More info on the Flashcord Wiki. \A ⚠️ Due to the nature of this theme. Performance of the " var(--FlashLang-DoubleQuote) "ChatSlide" var(--FlashLang-DoubleQuote) " module is poor.";
+        --FlashLang-C_ATDesc-DarkCBM: "Custom Background Mode, but with a more dark theme! This is the most ideal version of CBM mode to use. \A The variable to change the background is " var(--FlashLang-DoubleQuote) "--Flashcord-CBM_Dark-Image" var(--FlashLang-DoubleQuote) ". More info on the Flashcord Wiki. \A ⚠️ Due to the nature of this theme. Performance of the " var(--FlashLang-DoubleQuote) "ChatSlide" var(--FlashLang-DoubleQuote) " module is poor.";
+        --FlashLang-C_ATDesc-IridescentLight: "Iridescent Mode (alias Bloat Mode or " var(--FlashLang-DoubleQuote) "But can it run Flashcord?" var(--FlashLang-DoubleQuote) " Mode) is the most Advanced Theme of Flashcord. It holds back zero punches and will absolutely lag the crap out of Discord. This theme is ideal for those who truly want a fully eye-candy experience. Blurry elements are everywhere, expect your GPU and CPU to absolutely suffer. Iridescent Mode in Light Mode is the recommended version. \A ⛔ PLEASE USE ON HIGH-END SYSTEMS ONLY.";
+        --FlashLang-C_ATDesc-IridescentDark: "Iridescent Mode but in dark mode. Some elements may be hard to see as the white variant handles contrast and depth with blur far better. \A ⛔ PLEASE USE ON HIGH-END SYSTEMS ONLY.";
+        --FlashLang-C_ATDesc-Terminal: "Terminal Mode is a Theme that tries to mimic the style of a Linux Terminal. \A This theme enables a new blackout animation (shown in the GIF) and uses the CRT boot animation.";
+        --FlashLang-C_ATDesc-Transparent: "Transparent Mode does not currently work at this time but is a planned theme. It will work in future versions of Replugged and Flashcord.";
+
+        --FlashLang-ChatEdits_StoreLink: "✅ Flashcord Store Link";
+        
+        --FlashLang-EffectText_Small: "\A 🎉 Flashcord Effect: Small";
+        --FlashLang-EffectText_Shaking:"\A 🎉 Flashcord Effect: Shaking";
+        --FlashLang-EffectText_Dramatic:"\A 🎉 Flashcord Effect: Dramatic";
+        --FlashLang-EffectText_FadeBottom:"\A 🎉 Flashcord Effect: Fading from the Bottom";
+        --FlashLang-EffectText_4Chan:"\A 🎉 Flashcord Effect: 4Chan";
+
+        --FlashLang-Addon_Welcome: "\A\A📸 Welcome to " var(--Flashcord-Branch) " ! You are using the " var(--Flashcord-Channel) " Channel of Flashcord.\A\A";
+        --FlashLang-Warning_PluginsCompatibility: "\A\A⚠️ As of right now, approved plugins may actually have minor issues with Flashcord.\A\A";
+        --FlashLang-PluginC_Flashcord-Store: "This plugin was approved for the Flashcord Store, but wasn't by Replugged, use at your own risk.\A\A";
+        --FlashLang-Addon_Recommended: "🔧 Flashcord Compatibility: ❤️ Recommended\A\A";
+        --FlashLang-Addon_Compatible: "🔧 Flashcord Compatibility: ✅ Compatible\A\A";
+        --FlashLang-Addon_MinorIssues: "🔧 Flashcord Compatibility: ⚠️ Minor Issues\A\A";
+        --FlashLang-Addon_Incompatible: "🔧 Flashcord Compatibility: ⛔ Incompatible, disable Flashcord\A\A";
+        --FlashLang-Addon_Unknown: "🔧 Flashcord Compatibility: ❓ Unknown\A\A";
+        --FlashLang-PluginC_ThemeHooker: "🔧 Flashcord Compatibility: 💥 REQUIRED PLUGIN: Enables new Advanced Themes\A\A";
+        --FlashLang-PluginC_Magnificient: "🔧 Flashcord Compatibility: 💥 REQUIRED PLUGIN: Prevents images to be blurry when hovering on them. (" var(--FlashLang-DoubleQuote) "Imagivid" var(--FlashLang-DoubleQuote) " Module)\A\A";
+        --FlashLang-PluginC_RoleDiviers: "🔧 Flashcord Compatibility: ⚠️ Recommended PLUGIN: Enhances the UPFG Module\A\A";
+        --FlashLang-PluginC_GreenText: "🔧 Flashcord Compatibility: ⚠️ Recommended Plugin: Enhances the 4Chan Chat Effect\A\A";
+        --FlashLang-PluginC_FlashcordApproved: "✅ Flashcord Store Approved Plugin \A\A";
+
+        --FlashLang-C_MAT-AboutFC: "\A Über Flashcord";
+        --FlashLang-AFC_SNDL: "Flashcord is a personal project maintained with love by SiriusBYT, it takes the design language of " var(--FlashLang-DoubleQuote) "SNWE/SNDL" var(--FlashLang-DoubleQuote) " and applies it to Discord. SNDL is my own design language where it has a minimalistic look that does not compromise on looks at all, using blurs for style and animations on hover where it makes sense for the user to offer a way more compact experience while still being easy to use and while having every information you need at a quick glance. \A";
+        --FlashLang-AFC_Support: "Support is held on The Sirio Network Discord Server (https://sirio-network.com/redirect/discord). \A\A";
+        --FlashLang-AFC_ClosedAlpha: "Please give a thanks to these amazing people who helped with the Closed Alpha of Flashcord 💖 \A";
+        --FlashLang-AFC_PaidSupport: "Of course, thanks to you, Flashcord Supporters 💸! \A";
+        --FlashLang-AFC_Translators: "🌐 Flashcord can be used anywhere around the world thanks to these people: \A";
+        --FlashLang-AFC_SGN: "Thanks to those who joined the SGN Discord Server for Flashcord 🗣️ ! \A";
+        --FlashLang-AFC_GitHub: "And finally, thanks for those who stared the Flashcord GitHub Repo ✨ ! \A";
+        --FlashLang-AFC_SpecialThanks: "🌠 Special Thanks: \A";
+        --FlashLang-AFC_Evelyn: "- Evelyn: Created " var(--FlashLang-DoubleQuote) "Magnificent" var(--FlashLang-DoubleQuote) " and was ok being bullied by me to fix specific bugs that were found when using Flashcord \A";
+        --FlashLang-AFC_Tharki: "- Tharki-God: Person to have given me the idea (accidentally) to create the Plugins section of the Flashcord Store \A";
+        --FlashLang-AFC_EastArctica: "- East_Arctica: Posted a plugin to the Flashcord Store, also is just in general a super cool person \A\A";
+        --FlashLang-AFC_Copyright: "Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A\A\A\A";
+
+        /* Insert your quote here in the format:
+        --FlashLang-AFC_Translator-Quote: "      🗨️ [Translator Quote] NameHere: " var(--FlashLang-DoubleQuote) "Actual Quote here" var(--FlashLang-DoubleQuote)" \A\A ";
+        */
+        --FlashLang-AFC_Translator-Quote: "";
+    }
+}
+
+/* [End] = Flashcord Beta == Language Override CSS = */

@@ -37,10 +37,13 @@
         container-name: FC-ChatEffects_4Chan-L1 !important;
         container-type: inline-size !important;
     }
-    @container FC-ChatEffects_4Chan-L1 (min-width: 0px) {
+    @container FC-ChatEffects_4Chan-L1 (min-width: 0px) { /* This is entirely fucked with replies, needs fixing */
         [class^="contents_"] {
             margin-left: 16px !important;
             order: 1;
+        }
+        [class^="contents_"] [id^="message-content-"] {
+            margin-top: 1.2rem;
         }
         [class^="username_"] {
             color: #117743 !important;
@@ -48,7 +51,8 @@
         span {
             color: #d00;
         }
-        [class^="avatar_"] { /* WTF Does this do? */
+        [class^="avatar_"], /* WTF Does this do? // Brother can't read - Sirius 03/12/23 */
+        [class^="replyAvatar_"] { 
             display: none;
         }
         [class^="timestamp_"] {
@@ -57,22 +61,21 @@
         .replugged-greentext > span {
             color: #789922 !important;
         }
-        [id^="message_reply-context-"] {
+        [id^="message-reply-context-"] {
             container-name: FC-ChatEffects_4Chan-L2 !important;
             container-type: inline-size !important;
             display: -webkit-box !important;
             font-size: 1rem;
-            position: absolute;
-            top: 1.5rem;
+            top: 1.3rem;
         }
-        [id^="message_reply-context-"]:before { display: none; }
+        [id^="message-reply-context-"]::before { display: none !important; }
         [class^="contents_"] [class^="header-"] {
             margin-bottom: 1rem;
         }
         .stafftag, .platform-indicators { display: none; }
         @container FC-ChatEffects_4Chan-L2 (min-width: 0px) {
             img, svg, span:has(.stafftag) { display: none; }
-            [class^="username_"]:before {
+            [class^="username_"]::before {
                 content: ">>";
                 color: #d00 !important;
                 margin-left: 1rem;

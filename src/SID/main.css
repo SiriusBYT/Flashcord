@@ -10,6 +10,8 @@
 @import url("2-Theme_00-Iridescent.css");
 @import url("2-Theme_01-CustomIMG.css");
 @import url("2-Theme_03-Transparent.css");
+@import url("2-Theme_04-Terminal.css");
+@import url("2-Theme_05-Legacy.css");
 
 @import url("3-MGM_00-Control.css");
 @import url("3-MGM_00-Control-MAT.css");
@@ -34,3 +36,22 @@
 
 @import url("6-CLIST_RPLUGIN.css");
 @import url("6-CLIST_RTHEME.css");
+
+@import url("7-Lang.css");
+
+@import url("X-Splash.css");
+
+[class^="messageListItem_"]:has([href^="http://flashcord/"], [class="replugged-greentext"]) {
+    container-name: var(--Flashcord-Chat_Effects, FC-ChatEffects_Animated);
+    container-type: inline-size;
+}
+
+
+:root {
+    --Flashcord-Iridescent_Dark-Image: url("bgr/iridescent-low.webp");
+    --Flashcord-Iridescent_Dark-Image_Size: cover;
+    --Flashcord-Iridescent_Dark-Animation: FC-VOID;
+    --Flashcord-Iridescent_Dark-Rainbow: FC-VOID;
+    --Flashcord-Iridescent_Dark-Filter: blur(8px) brightness(0.9);
+}
+

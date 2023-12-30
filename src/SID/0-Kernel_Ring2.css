@@ -1,6 +1,21 @@
 
 /* [START] = Flashcord Beta == Kernel [02] CSS = */
 
+@keyframes Flashcord-Blink {
+    0% { opacity: 0; }
+    49% { opacity: 0; }
+    50% { opacity: 1}
+    99% { opacity: 1;}
+    100% { opacity: 0; }
+}
+
+@keyframes Flashcord-DotBlink {
+    0% { content: " " }
+    33% { content: "."}
+    66% { content: ".."}
+    100% { content: "..." }
+}
+
 @keyframes FlashCore-FadeIn {
     0% { opacity: 0; }
     100% { opacity: inherit; }
@@ -28,6 +43,12 @@
     90% { scale: 0.98; opacity: 1;}
     100% { scale: 1.0; }
 } 
+@keyframes Flashcord-Welcome_CRT {
+    0% { scale: 0.98 0;}
+    90% { scale: 1 1.1;}
+    100% { scale: 1 1;}
+}
+
 
 @keyframes Flashcord-MSG_Upload {
     0% { opacity: 0; }
@@ -93,5 +114,55 @@
     }
 }
 
+@keyframes Flashcord-Iridescent_Light {
+    0% { backdrop-filter: hue-rotate(0deg) var(--Flashcord-Iridescent_Light-Filter, blur(4px) brightness(1)); }
+    100% { backdrop-filter: hue-rotate(360deg) var(--Flashcord-Iridescent_Light-Filter, blur(4px) brightness(1)); }
+}
+
+@keyframes Flashcord-Iridescent_Dark {
+    0% { backdrop-filter: hue-rotate(0deg) var(--Flashcord-Iridescent_Dark-Filter, blur(4px) brightness(0.5)); }
+    100% { backdrop-filter: hue-rotate(-360deg) var(--Flashcord-Iridescent_Dark-Filter, blur(4px) brightness(0.5)); }
+}
+
+@keyframes Flashcord-Iridescent_Preview {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+/* SNDL-App_Keyframes.css */
+@keyframes SNDL-Background_MvX {
+    0% { background-position-x: 0vw; }
+    100% { background-position-x: 100vw; }
+}
+
+@keyframes SNDL-Translate_Top {
+    0% { translate: 0 var(--Magnetude, -10vh); opacity: 0;}
+    100% { translate: 0 0;}
+}
+
+@keyframes SNDL-Translate_Bottom {
+    0% { translate: 0 var(--Magnetude, 10vh); opacity: 0;}
+    100% { translate: 0 0;}
+}
+
+@keyframes SNDL-Translate_Left {
+    0% { translate: var(--Magnetude, -10vw) 0; opacity: 0;}
+    100% { translate: 0 0;}
+}
+
+@keyframes SNDL-Translate_Right {
+    0% { translate: var(--Magnetude, 10vw) 0; opacity: 0;}
+    100% { translate: 0 0;}
+}
+
+@keyframes SNDL-Translate_Custom {
+    0% { translate: var(--Initial, 0rem); opacity: 0;}
+    100% { translate: var(--Final, 0rem);}
+}
+
+@keyframes SNDL-RainbowBackground {
+    0% { backdrop-filter: hue-rotate(0deg); }
+    100% { backdrop-filter: hue-rotate(360deg); }
+}
 
 /* [END] = Flashcord Beta == Kernel [02] CSS = */

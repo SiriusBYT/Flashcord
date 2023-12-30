@@ -1,0 +1,200 @@
+
+/* [Start] = Flashcord Beta == Custom Theme: Flashcord Legacy CSS = */
+
+[theme-hooker="theme-easter-egg"] {
+    --Flashcord-Border_Radius: 5px;
+    --Flashcord-Splash: 0;
+    --Flashcord-SplashSca: 0;
+    --Flashcord-SplashTrX: 0;
+    --Flashcord-SplashTrY: 0;
+    --Flashcord-SplashMAR: 0;
+
+    --bg-overlay-app-frame: #FFFFFF;
+
+
+    /* This is REALLY how Flashcord (Legacy) used to look like (hell, it wasn't named Flashcord until I finished it,
+    it was called Flashbang, pretty accurate lol. This is the imported code here! No jokes! 
+    Flashcord was never supposed to be what it became today! It was supposed to stay private !*/
+      --home-background: #FFFFFF;
+      
+      --header-primary: #FF42FF;
+      --header-secondary: #FFAAFF;
+      --text-normal: #FF69FF;
+      --text-muted: #FFBBFF;
+      --text-link: #FF69FF;
+      --text-link-low-saturation: #00FFFF; /* Unknown Location */
+      --text-positive: #00FF00;
+      --text-warning: #FF0000; /* Unknown Location */
+      --text-danger: #FFFF00; /* Unknown Location */
+      --text-brand: #AA00FF;
+      
+      --interactive-normal: #FF88FF;
+      --interactive-hover: #FF00FF;
+      --interactive-active: #DD00DD;
+      --interactive-muted: #FF0042;
+      
+      --mention-foreground: #ff69ff;
+      --mention-background: #ffeeFF;
+      
+      --background-primary: #FFFFFF;
+      --background-secondary: #FFFFFF;
+      --background-secondary-alt: #FFFFFF;
+      --background-tertiary: #FFFFFF;
+      --background-accent: #FF99FF;
+      --background-floating: #FFF9FF;
+      --background-nested-floating: ##FF0000; /* Unknown Location */
+      
+      --chat-background: #00FF00; /* Unknown Location */
+      --chat-border: #00FF00; /* Unknown Location */
+      --chat-input-container-background: #00FF00; /* Unknown Location */
+      
+      --background-modifier-hover: #FFF0FF;
+      --background-modifier-active: #FFE0FF;
+      --background-modifier-selected: #FFE9FF;
+      --background-modifier-accent: #EE99EE;
+      
+      --info-positive-background: hsl(var(--status-green-630-hsl)/0.05);
+      --info-positive-foreground: var(--status-green-630);
+      --info-positive-text: var(--black-500);
+      --info-warning-background: hsl(var(--status-yellow-600-hsl)/0.1);
+      --info-warning-foreground: var(--status-yellow-600);
+      --info-warning-text: var(--black-500);
+      --info-danger-background: #00FF00; /* Unknown Location */
+      --info-danger-foreground: var(--status-red-530);
+      --info-danger-text: var(--black-500);
+      --info-help-background: #FFF0FF;
+      --info-help-foreground: #00AAff;
+      --info-help-text: var(--black-500);
+        
+      --status-positive-background: var(--status-green-660);
+      --status-positive-text: var(--white-500);
+      --status-warning-background: var(--status-yellow-600);
+      --status-warning-text: var(--white-500);
+      --status-danger-background: var(--status-red-530);
+      --status-danger-text: var(--white-500);
+      --status-danger: var(--status-red-530);
+      --status-positive: var(--status-green-630);
+      --status-warning: var(--status-yellow-600);
+      
+      --button-danger-background: #FF0000;
+      --button-danger-background-hover: #EE0000;
+      --button-danger-background-active: #AA0000;
+      --button-danger-background-disabled: #00FF00; /* Unknown Location */
+      
+      --button-positive-background: var(--status-green-660);
+      --button-positive-background-hover: var(--status-green-730);
+      --button-positive-background-active: var(--status-green-760);
+      --button-positive-background-disabled: var(--status-green-660);
+      
+      --button-secondary-background: #FFAAFF;
+      --button-secondary-background-hover: #FF99FF;
+      --button-secondary-background-active: #FF69FF;;
+      --button-secondary-background-disabled: #00FFFF;
+      
+      --button-outline-danger-text: #000000;
+      --button-outline-danger-border: #FF0000;
+      --button-outline-danger-background: #690000;
+      --button-outline-danger-background-hover: #000000;
+      --button-outline-danger-text-hover: #FFFFFF;
+      --button-outline-danger-border-hover: #FF0000;
+      --button-outline-danger-background-active: #690000;
+      --button-outline-danger-text-active: #FFFFFF;
+      --button-outline-danger-border-active: #FF0000;
+      
+      --button-outline-positive-text: var(--black-500);
+      --button-outline-positive-border: var(--status-green-630);
+      --button-outline-positive-background: hsl(var(--white-500-hsl)/0);
+      --button-outline-positive-background-hover: var(--status-green-660);
+      --button-outline-positive-text-hover: var(--white-500);
+      --button-outline-positive-border-hover: var(--status-green-660);
+      --button-outline-positive-background-active: var(--status-green-730);
+      --button-outline-positive-text-active: var(--white-500);
+      --button-outline-positive-border-active: var(--status-green-730);
+      
+      --button-outline-brand-text: #000000; /* Unknown Location */
+      --button-outline-brand-border: #00AAff; /* Unknown Location */
+      --button-outline-brand-background: #00AAff; /* Unknown Location */
+      --button-outline-brand-background-hover: #00CCff; /* Unknown Location */
+      --button-outline-brand-text-hover: #FFFFFF; /* Unknown Location */
+      --button-outline-brand-border-hover: #00CCff; /* Unknown Location */
+      --button-outline-brand-background-active: #00DDff; /* Unknown Location */
+      --button-outline-brand-text-active: #FFFFFF; /* Unknown Location */
+      --button-outline-brand-border-active: #00DDff; /* Unknown Location */
+    
+      
+      --button-outline-primary-text: #FFAAFF;
+      --button-outline-primary-border: #FFEEFF;
+      --button-outline-primary-background: #FFEEFF;
+      --button-outline-primary-background-hover: #FFF9FF;
+      --button-outline-primary-text-hover: #FFAAFF;
+      --button-outline-primary-border-hover: #FFF9FF;
+      --button-outline-primary-background-active: #FF69FF;
+      --button-outline-primary-text-active: #FFFFFF;
+      --button-outline-primary-border-active: #FF69FF;
+      
+      --modal-background: #FFFFFF;
+      --modal-footer-background: #FFFFFF;
+      
+      --scrollbar-thin-thumb: #FFAAFF;
+      --scrollbar-thin-track: #FFFFFF;
+      --scrollbar-auto-thumb: #FFAAFF;
+      --scrollbar-auto-track: #FFFFFF;
+      --scrollbar-auto-scrollbar-color-thumb: #00FF00; /* Unknown Location */
+      --scrollbar-auto-scrollbar-color-track: #00FF00; /* Unknown Location */
+      
+      --input-background: #FFF9FF;
+      --input-placeholder-text: #FF69FF;
+    
+      --logo-primary: #00FF00; /* Unknown Location */
+      
+      --focus-primary: #FFAAFF;
+      
+      --control-brand-foreground: #00FF00; /* Unknown Location */
+      --control-brand-foreground-new: #00FF00; /* Unknown Location */
+      
+      --background-mentioned: #ffF0ff;
+      --background-mentioned-hover: #ffE9ff;
+      --background-message-hover: #ffF9ff;
+      --background-message-automod: #F90000; /* Untested Location */
+      --background-message-automod-hover: #FF0000; /* Untested Location */
+      --background-message-highlight: #FFE9FF;
+      --background-message-highlight-hover: #00FF00; /* Unknown Location */
+      
+      --channels-default: #ff69ff;
+      --channel-icon: #FF69FF;
+      --channel-text-area-placeholder: #FFDDFF;
+      --channeltextarea-background: #FFFAFF;
+      
+      --activity-card-background: #FFF0FF; /* Unknown Location */
+      
+      --textbox-markdown-syntax: #AA00FF;
+      
+      --spoiler-revealed-background: #00FF00; /* Unknown Location */
+      --spoiler-hidden-background: #00FF00; /* Unknown Location */
+}
+[theme-hooker="theme-easter-egg"] body > ::before,
+[theme-hooker="theme-easter-egg"] body:before,
+[theme-hooker="theme-easter-egg"] [class^="layer_"]:nth-child(2) [class^="sidebar_"] > ::before { display: none; }
+[theme-hooker="theme-easter-egg"] [class^="chat_"] [class^="title_"] [class^="children_"]::after { display: none; }
+
+[theme-hooker="theme-easter-egg"] body {
+    --FlashCore-Language: English;
+    --FlashCore-Idle_Optimizations: FC-VOID;
+    --FlashCore-SPGO_MAT: FC-VOID;
+    --FlashCore-SPGO_AT: FC-VOID;
+    --FlashCore-GuildNav_Notification: FC-VOID;
+    --FlashCore-GuildNav_Compact: FC-VOID;
+    --FlashCore-ChannelNav_Notification: FC-VOID;
+    --FlashCore-ImagividZoom: FC-VOID;
+    --FlashCore-Menthrepin: FC-VOID;
+    --FlashCore-Xearch: FC-VOID;
+    --FlashCore-Friends: FC-VOID;
+    --FlashCore-UPMO: FC-VOID;
+    --FlashCore-UPRAL: FC-VOID;
+    --FlashCore-UPFG: FC-VOID;
+    --Flashcord-Blackout: FC-VOID;
+    --Flashcord-Jumbomojis: FC-VOID;
+    --FlashCore-DeNitrofy: FC-VOID;
+}
+
+/* [End] = Flashcord Beta == Custom Theme: Flashcord Legacy CSS = */

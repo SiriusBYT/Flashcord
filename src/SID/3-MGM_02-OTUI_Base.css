@@ -4,17 +4,14 @@
 [class^="peopleList_"] {
     container-name: var(--FlashCore-Friends, FC-FlexGrid);
     container-type: inline-size;
-    contain: paint;
 }
 #rp-plugins-tab, #rp-themes-tab {
     container-name: var(--FlashCore-Replugged_Addons, FC-FlexGrid);
     container-type: inline-size;
-    contain: paint;
 }
 [class^="userPopoutOverlayBackground-"]:has([class^="role_"]) {
     container-name: var(--FlashCore-UPFG, FC-FlexGrid);
     container-type: inline-size;
-    contain: paint;
 }
 
 @container FC-FlexGrid (min-width: 0px) {
@@ -65,7 +62,6 @@
 [class^="wrapper-"]:has([class^="callContainer-"]) {
     container-name: var(--FlashCore-Call, FC-Call);
     container-type: inline-size;
-    contain: paint;
 }
 
 @container FC-Call (min-width: 0px) {

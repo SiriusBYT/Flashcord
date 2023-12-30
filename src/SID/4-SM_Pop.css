@@ -13,4 +13,20 @@
 }
 [class^="tooltipPointer_"] { display: none; }
 
+
+/* Control Panel: Fixes emojis not being able to get removed */
+[class^="emojiRow_"]::before {
+    border-radius: var(--Flashcord-Border_Radius, 25px);
+    width: 90%;
+    background: black;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+[class^="emojiRow_"] > [class^="button_"] {
+    right: 16px;
+    top: 16px;
+}
+[class^="emojiColumn_"] { margin-left: 16px; }
+
 /* [End] = Flashcord Beta == Small Modifications - Popup CSS = */
