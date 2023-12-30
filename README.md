@@ -1,5 +1,3 @@
-### Notice: Next major update tomorrow!
-
 # 📸 This. This is Flashcord Beta.
 ## The world's most complex Discord Theme.
 ## It's all about the chat space.
