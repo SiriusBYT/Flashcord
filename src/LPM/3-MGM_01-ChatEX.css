@@ -30,15 +30,6 @@
   }
 }
 
-@container FC-ChatSlide_Legacy (min-width: 0px) {
-    [class^="sidebar-"] {
-      width: 48px;
-    }
-    :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar-"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .sidebar-1tnWFu {  /* [!] FC-Wildcard_PerfNuker */
-      width: 240px;
-    }
-}
-
 /* Member Slide Core */
 [class^="chat_"] {
     container-name: var(--FlashCore-MemberSlide, FC-MemberSlide);
@@ -63,23 +54,6 @@
     }
 }
 
-/* GuildNav_Glow Core */
-
-[data-list-id="guildsnav"] {
-  container-name: var(--FlashCore-GuildNav_Notification, FC-GuildNav_Animated);
-  container-type: inline-size;
-}
-
-@container FC-GuildNav_Static (min-width: 0px) {
-  [class^="listItem_"]:has([style*="height: 8px"], [class^="lowerBadge_"]), [class^="listItem_"]:hover {
-      scale: 0.975;
-      filter: drop-shadow(0 0 var(--Flashcord-GuildShadow_Size, 4px) var(--Flashcord-GuildShadow_Unread, #0000FF));
-  }
-  [class^="pill_"] {  
-      display: none;
-  }
-}
-
 /* GuildNav_Compact Core */
 
 [class^="container_"]:has([data-list-id="guildsnav"]) {
@@ -99,6 +73,7 @@
   [id^="folder-items-"] { height: auto !important; }
   [class^="listItem_"] { scale: 0.9; }
   [class^="listItem_"]:has([class^="guildSeparator_"]) { display: none; }
+  [class^="pill_"] { left: 4px !important; } /* Pill Bugfix */
 }
 
 @container FC-GuildNav_Compact-Horizontal (min-width: 0px) {

@@ -21,6 +21,8 @@ body:before {
     height: calc(100vh - 24px);
 }
 
+/* NOTICE: I need someone with a macbook to help me debug this, I think somebody said this was broken again on MacOS?
+In other words, "plis help ecta i ned to connekt to ur hakintoch again" */
 .platform-osx body:before {
     content: "🍎 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version);
     color: #ffffff;

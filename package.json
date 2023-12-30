@@ -1,7 +1,7 @@
 {
   "name": "Flashcord for Low-End Systems (LPM)",
-  "version": "LPM-231108_HF2",
-  "description": "[i] Read the Flashcord Wiki for more information. A nerfed/debloated version of the world's most advanced, complex and feature rich Discord Theme to ever exist. This version is so debloated that even Windows debloaters are crying.",
+  "version": "LPM-231204",
+  "description": "[i] Read the Flashcord Wiki for more information. A nerfed/debloated version of Flashcord. This version is so debloated that even Windows debloaters are crying.",
   "engines": {
     "node": ">=18.0.0",
     "pnpm": ">=8.0.0"

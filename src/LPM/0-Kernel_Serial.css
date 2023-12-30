@@ -5,8 +5,9 @@
 html.platform-win { --FlashCore-OS: "🪟 Windows" }
 html.platform-osx { --FlashCore-OS: "🍎 MacOS" }
 html.platform-linux { --FlashCore-OS: "🐧 GNU/Linux" }
-html.replugged { --FlashCore-Client: "🔌 Replugged"; }
+html.replugged { --FlashCore-Client: "🔌 Replugged"; } /* Still not working yet if I recall, supposed to be inside a future update*/
 html:has(#vencord-margins) { --FlashCore-Client: "✨ Vencord"; }
+/* These look ugly and probably need optimizations */
 html:has(body[class*="bd"]) { --FlashCore-Client: "🩹 BetterDiscord [UNSUPPORTED]"; }
 html:has([content*="canary"]) { --FlashCore-Discord_Branch: "Canary"; }
 html:has([content*="ptb"]) { --FlashCore-Discord_Branch: "Public Beta Test"; }
