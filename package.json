@@ -1,6 +1,6 @@
 {
   "name": "Flashcord for Low-End Systems (LPM)",
-  "version": "LPM-231204",
+  "version": "LPM-240114",
   "description": "[i] Read the Flashcord Wiki for more information. A nerfed/debloated version of Flashcord. This version is so debloated that even Windows debloaters are crying.",
   "engines": {
     "node": ">=18.0.0",
