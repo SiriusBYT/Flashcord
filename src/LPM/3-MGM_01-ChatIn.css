@@ -78,9 +78,6 @@ ol[class^="scrollerInner_"] {
         margin-top: auto;
         margin-bottom: auto;
     }
-    article:has([href^="https://sirio-network.com/flashcord/store"]) .grid-1aWVsE { /* [!] FC-Wildcard_PerfNuker */
-        margin-bottom: 2rem;
-    }
     [id^="message-accessories-"]:has(article):has([class^="reactions_"]) {
         margin-bottom: 2rem;
     }

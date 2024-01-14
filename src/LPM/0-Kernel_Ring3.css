@@ -14,6 +14,8 @@ body:before {
     backdrop-filter: brightness(2);
 }
 
+/* I swear to god if this file causes problems again I'm going to explode
+- @230114 */
 .platform-win body > :before { content: "🪟 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version); }
 .platform-linux body > :before { content: "🐧 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version); }
 .platform-linux #app-mount {
@@ -22,7 +24,13 @@ body:before {
 }
 
 /* NOTICE: I need someone with a macbook to help me debug this, I think somebody said this was broken again on MacOS?
-In other words, "plis help ecta i ned to connekt to ur hakintoch again" */
+In other words, "plis help ecta i ned to connekt to ur hakintoch again"
+
+===
+DEV-240114: Can't be fucked figuring this shit out right now, I guess I'm gonna be forced to make a QEMU VM for this...
+Since this is LPM, removing this while I figure out VM hell. SID still has this code but might be broken. I have no god damn clue.
+===
+
 .platform-osx body:before {
     content: "🍎 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version);
     color: #ffffff;
@@ -43,5 +51,5 @@ In other words, "plis help ecta i ned to connekt to ur hakintoch again" */
 [class^="macDragRegion_"] {
     width: 100vw;
 }
-
+*/
 /* [END] = Flashcord Beta == Kernel [03] CSS = */

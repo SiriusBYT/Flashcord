@@ -3,7 +3,6 @@ def merge_files():
         "0-BIOS.css", 
         "0-Kernel_Ring1.css",
         "0-Kernel_Ring3.css",
-        "0-Kernel_Serial.css",
         "2-Theme_01-CustomIMG.css",
         "3-MGM_00-Control.css",
         "3-MGM_01-ChatEx.css",

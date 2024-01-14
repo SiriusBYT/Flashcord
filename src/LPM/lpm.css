@@ -34,7 +34,7 @@ This license requires that reusers give credit to the creator. It allows reusers
   
   --Flashcord-Branch: "Flashcord";
   --Flashcord-Channel: "LPM";
-  --Flashcord-Version: "231204";
+  --Flashcord-Version: "240114";
   
   background: #000000;
 }
@@ -51,8 +51,7 @@ body {
 }
 
 /* Legacy Theming */
-.theme-dark.custom-theme-background,
-.theme-light.custom-theme-background {
+.theme-dark.custom-theme-background {
   container-name: var(--FlashCore-Global_Theme, FC-AdvancedTheme-LEGACY_Custom-Background-Mode);
   container-type: inline-size;
 
@@ -71,15 +70,11 @@ body {
   --bg-overlay-6: transparent;
 }
 
-/* Slightly more performant by avoiding the html:not(html:hover), at least I think it's better????*/
-html:hover #app-mount {
-  container-name: FC-VOID !important;
-}
-#app-mount {
-  container-name: var(--FlashCore-Idle_Optimizations, FC-Idle_OptiMax);
+[class^="notAppAsidePanel_"] > [class^="app_"] {
+  container-name: var(--FlashCore-Idle_Optimizations, FC-Idle_OptiMax) !important;
   container-type: inline-size;
 }
-
+.app-focused { --FlashCore-Idle_Optimizations: FC-VOID !important; }
 @container FC-Idle_OptiMax (min-width: 0px) {
   [class^="appAsidePanelWrapper_"] {
     --Flashcord-AnimMult-XFast: 0;
@@ -149,6 +144,8 @@ body:before {
     backdrop-filter: brightness(2);
 }
 
+/* I swear to god if this file causes problems again I'm going to explode
+- @230114 */
 .platform-win body > :before { content: "🪟 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version); }
 .platform-linux body > :before { content: "🐧 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version); }
 .platform-linux #app-mount {
@@ -157,7 +154,13 @@ body:before {
 }
 
 /* NOTICE: I need someone with a macbook to help me debug this, I think somebody said this was broken again on MacOS?
-In other words, "plis help ecta i ned to connekt to ur hakintoch again" */
+In other words, "plis help ecta i ned to connekt to ur hakintoch again"
+
+===
+DEV-240114: Can't be fucked figuring this shit out right now, I guess I'm gonna be forced to make a QEMU VM for this...
+Since this is LPM, removing this while I figure out VM hell. SID still has this code but might be broken. I have no god damn clue.
+===
+
 .platform-osx body:before {
     content: "🍎 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version);
     color: #ffffff;
@@ -178,57 +181,8 @@ In other words, "plis help ecta i ned to connekt to ur hakintoch again" */
 [class^="macDragRegion_"] {
     width: 100vw;
 }
-
+*/
 /* [END] = Flashcord Beta == Kernel [03] CSS = */
-
-
-/* [Start] = Flashcord Beta == Kernel - Serial CSS = */
-
-/* General Information */
-html.platform-win { --FlashCore-OS: "🪟 Windows" }
-html.platform-osx { --FlashCore-OS: "🍎 MacOS" }
-html.platform-linux { --FlashCore-OS: "🐧 GNU/Linux" }
-html.replugged { --FlashCore-Client: "🔌 Replugged"; } /* Still not working yet if I recall, supposed to be inside a future update*/
-html:has(#vencord-margins) { --FlashCore-Client: "✨ Vencord"; }
-/* These look ugly and probably need optimizations */
-html:has(body[class*="bd"]) { --FlashCore-Client: "🩹 BetterDiscord [UNSUPPORTED]"; }
-html:has([content*="canary"]) { --FlashCore-Discord_Branch: "Canary"; }
-html:has([content*="ptb"]) { --FlashCore-Discord_Branch: "Public Beta Test"; }
-
-/* Theming Related Shenanigans */
-html.theme-light { --FlashCore-Theme: "☀️ Light Mode"; }
-html.theme-dark { --FlashCore-Theme: "🌙 Dark Mode"; }
-html.theme-light.custom-theme-background { --FlashCore-Theme: "🎨 CBM-L Light Mode"; }
-html.theme-dark.custom-theme-background { --FlashCore-Theme: "🎨 CBM-L Dark Mode"; }
-
-
-[id^="message-content-"]:has(a[href="http://flashcord/debug"]) {
-    line-height: 15px !important;
-    border-radius: 25px;
-    padding: 8px;
-}
-[id^="message-content-"]:has(a[href="http://flashcord/debug"])::after {
-    color: white;
-    font-size: smaller;
-    white-space: pre-wrap;
-    width: 100%;
-    content: 
-"\A\A🚧 FLASHCORD DEBUG INFORMATION 🚧\A \
-This information is only visible to you, please screenshot it and send it to @SiriusBYT for debug purposes if needed. \A\A \
-📸 -- Flashcord Information \A \
-    🔄️ Branch: " var(--Flashcord-Branch) "\A \
-    🔗 Channel: " var(--Flashcord-Channel) "\A \
-    💡 Version: " var(--Flashcord-Version) "\A \
-💬 -- Discord Client Information \A \
-    🌳 Discord Branch: " var(--FlashCore-Discord_Branch, 'Stable') " \A \
-    💻 Operating System: " var(--FlashCore-OS, '🚧 404 🚧') "\A \
-    🎯 Client Modification: " var(--FlashCore-Client, '🚧 404 🚧 (Replugged?) ') "\A \
-    🌈 Detected Theme: " var(--FlashCore-Theme, '🚧 404 🚧') "\A\A \
-⚠️ Please also send the contents of your QuickCSS if you modified any Flashcord Variables. \A\A \
-== End of Flashcord's Debug Information. == \A\A";
-}
-
-/* [End] = Flashcord Beta == Kernel - Serial CSS = */
 
 
 /* [Start] = Flashcord Beta == Custom Theme: CBM CSS = */
@@ -243,8 +197,8 @@ This information is only visible to you, please screenshot it and send it to @Si
 
     [class^="layer_"]:nth-child(2) { border: 1px solid white; }
     
-    .custom-theme-background.theme-light #app-mount { backdrop-filter: var(--Flashcord-CBM_Light-Filter, blur(8px) brightness(1)); }
-    .custom-theme-background.theme-dark #app-mount { backdrop-filter: var(--Flashcord-CBM_Dark-Filter, blur(16px) brightness(0.5)); }
+    .theme-light #app-mount { backdrop-filter: var(--Flashcord-CBM_Light-Filter, blur(8px) brightness(1)); }
+    .theme-dark #app-mount { backdrop-filter: var(--Flashcord-CBM_Dark-Filter, blur(16px) brightness(0.5)); }
 }
 
 /* [End] = Flashcord Beta == Custom Theme: CBM CSS = */
@@ -551,9 +505,6 @@ ol[class^="scrollerInner_"] {
         justify-content: center;
         margin-top: auto;
         margin-bottom: auto;
-    }
-    article:has([href^="https://sirio-network.com/flashcord/store"]) .grid-1aWVsE { /* [!] FC-Wildcard_PerfNuker */
-        margin-bottom: 2rem;
     }
     [id^="message-accessories-"]:has(article):has([class^="reactions_"]) {
         margin-bottom: 2rem;
