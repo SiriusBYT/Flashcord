@@ -8,6 +8,9 @@ devDependencies:
   '@types/node':
     specifier: ^18.17.6
     version: 18.17.6
+  prettier:
+    specifier: ^3.0.3
+    version: 3.0.3
   replugged:
     specifier: ^4.7.5
     version: 4.7.5(@codemirror/view@6.16.0)(@lezer/common@1.1.0)
