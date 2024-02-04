@@ -17,11 +17,13 @@ body:before {
 /* I swear to god if this file causes problems again I'm going to explode
 - @230114 */
 .platform-win body > :before { content: "🪟 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version); }
+
+/* @240204: Flashcord SID has a problem with Linux titlebars, so removing it entirely while I unfuck it.
 .platform-linux body > :before { content: "🐧 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version); }
 .platform-linux #app-mount {
     margin-top: 24px;
     height: calc(100vh - 24px);
-}
+}*/
 
 /* NOTICE: I need someone with a macbook to help me debug this, I think somebody said this was broken again on MacOS?
 In other words, "plis help ecta i ned to connekt to ur hakintoch again"
