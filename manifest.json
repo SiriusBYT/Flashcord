@@ -7,19 +7,19 @@
 		"discordID": "311057290562371586",
 		"github": "SiriusBYT"
 	},
-	"version": "LPM-240114",
+	"version": "LPM-240204",
 	"updater": {
-		"type": "github",
-		"id": "SiriusBYT/Flashcord"
+		"type": "store",
+		"id": "com.sirio-network.Flashcord-LPM"
 	},
 	"license": "CC BY-NC-ND 4.0",
 	"type": "replugged-theme",
 	"main": "src/LPM/lpm.css",
 	"source": "https://github.com/SiriusBYT/Flashcord",
 	"image": [
-		"https://sirio-network.com/flashcord/ressources/store/LPM-Main.gif",
-		"https://sirio-network.com/flashcord/ressources/store/LPM-Dark.png",
-		"https://sirio-network.com/flashcord/ressources/store/LPM-CBM_Light.png",
-		"https://sirio-network.com/flashcord/ressources/store/LPM-CBM_Dark.png"
+		"https://cdn.discordapp.com/attachments/842111435399888927/1203661583402795008/LPM-LightFinal.gif",
+		"https://cdn.discordapp.com/attachments/842111435399888927/1203661583767830608/LPM-DarkFinal.gif",
+		"https://cdn.discordapp.com/attachments/842111435399888927/1203661584195391498/LPM-CBM_LightFinal.png",
+		"https://cdn.discordapp.com/attachments/842111435399888927/1203661584639991889/LPM-CBM_DarkFinal.png"
 	]
 }
