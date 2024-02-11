@@ -1,3 +1,6 @@
+### NOTICE
+The Channel Emojis Discord Experiment that Flashcord semi-depends on has been recently sent to the shadow realm, a fix for this absolutely chaotic change will be found. Eventually.
+
 # 📸 This. This is Flashcord Beta.
 ## The world's most complex Discord Theme.
 ## It's all about the chat space.
