@@ -52,7 +52,9 @@
             color: #d00;
         }
         [class^="avatar_"], /* WTF Does this do? // Brother can't read - Sirius 03/12/23 */
-        [class^="replyAvatar_"] { 
+        [class^="replyAvatar_"],
+        [class^="avatarDecoration_"],
+        span[role="button"]:has(svg) { 
             display: none;
         }
         [class^="timestamp_"] {
@@ -72,6 +74,7 @@
         [class^="contents_"] [class^="header-"] {
             margin-bottom: 1rem;
         }
+        [class^="mediaAttachmentsContainer"] { width: 100% !important;}
         .stafftag, .platform-indicators { display: none; }
         @container FC-ChatEffects_4Chan-L2 (min-width: 0px) {
             img, svg, span:has(.stafftag) { display: none; }

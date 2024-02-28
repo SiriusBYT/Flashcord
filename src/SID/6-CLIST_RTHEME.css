@@ -1,6 +1,8 @@
 
 /* [Start] = Flashcord Beta == Replugged Theme Compatibility List CSS = */
 
+/* NOTE: THIS MAY BE DEPRECRATED AND MAY BE NEXT POWERED BY THE FLASHCORD API!!! */
+
 #rp-themes-tab::before,
 #rp-quickcss-tab::before {
     content: var(--FlashLang-Addon_Welcome, "\A\A📸 Welcome to " var(--Flashcord-Branch) " ! You are using the " var(--Flashcord-Channel) " Channel of Flashcord.\A\A");
@@ -11,6 +13,9 @@
 
 @container FC-RPCL (min-width: 0px) {
     /* flashcord is basically banned lul so that won't happen
+    
+    Except now Flashcord LPM is on the Replugged store... Eh whatever
+
     .replugged-addon-card:has([href*="com.sirio-network.flashcord"])::before {
         content: "💖 Thank you for using Flashcord!\A\A";
     }

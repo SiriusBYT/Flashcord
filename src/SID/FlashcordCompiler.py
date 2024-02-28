@@ -12,7 +12,7 @@ Please open https://github.com/SiriusBYT/Flashcord/tree/main/src/ and clone the 
 Please remind yourself also to read https://github.com/SiriusBYT/Flashcord/blob/main/LICENSE.md before modifying Flashcord.
 If you can't be bothered doing that, just know that:
 This license requires that re-users give credit to the creator. It allows re-users to copy and distribute the material in any medium or format in unadapted form and for noncommercial purposes only. 
-[Flashcord] © 2023 by [SiriusBYT] is licensed under [CC BY-NC-ND 4.0]. (Exceptions to the license's restrictions may and will apply.) */
+[Flashcord] © 2023-2024 by [SiriusBYT] is licensed under [CC BY-NC-ND 4.0]. (Exceptions to the license's restrictions may and will apply.) */
 '''
 
 def merge_files():
@@ -24,6 +24,7 @@ def merge_files():
     "0-Kernel_Ring3.css",
     "0-Kernel_Serial.css",
     "1-Anarchy_SID.css",
+    "2-ThemeHooker.css",
     "2-Theme_00-Iridescent.css",
     "2-Theme_01-CustomIMG.css",
     "2-Theme_03-Transparent.css",
@@ -39,6 +40,7 @@ def merge_files():
     "4-SM_Pop.css",
     "4-SM_UnNitrofy.css",
     "5-ChatEffects_CD.css",
+    "5-ChatEffects_KF.css",
     "6-CFIX_RPLUGIN.css",
     "6-CFIX_RTHEME.css",
     "6-CLIST_RPLUGIN.css",
@@ -51,7 +53,7 @@ def merge_files():
             for input_file in input_files:
                 try:
                     with open(input_file, 'r', encoding='utf-8') as in_file:
-                        out_file.write((in_file.read().replace("\n", ""))) # The .replace() frees like 20kb btw LMFAO
+                        out_file.write((in_file.read()))
                 except FileNotFoundError:
                     print(f"Warning: File '{input_file}' not found. Skipping...")
         print("Files merged successfully!")

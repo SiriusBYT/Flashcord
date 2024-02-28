@@ -58,9 +58,9 @@ html.theme-dark { --FlashCore-Theme: "🌙 Dark Mode"; }
 "\A\A🚧 FLASHCORD DEBUG INFORMATION 🚧\A \
 This information is only visible to you, please screenshot it and send it to @SiriusBYT for debug purposes if needed. \A\A \
 📸 -- Flashcord Information \A
-    🔄️ Branch: " var(--Flashcord-Branch) "\A \
-    🔗 Channel: " var(--Flashcord-Channel) "\A \
-    💡 Version: " var(--Flashcord-Version) "\A \
+    🔄️ Branch: " var(--Flashcord-Branch, 'Ayo you sussy baka') "\A \
+    🔗 Channel: " var(--Flashcord-Channel, 'What kind of fucking theme is this?!') "\A \
+    💡 Version: " var(--Flashcord-Version, 'This is not Flashcord, where is my god damn house?!?!') "\A \
 💬 -- Discord Client Information \A \
     🌳 Discord Branch: " var(--FlashCore-Discord_Branch, 'Stable') " \A \
     💻 Operating System: " var(--FlashCore-OS, '🚧 404 🚧') "\A \

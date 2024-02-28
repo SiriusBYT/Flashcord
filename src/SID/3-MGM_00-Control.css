@@ -100,6 +100,9 @@ I might want to do that too here because jesus christ this is uglier than the co
     [class^="layer_"]:nth-child(2) [class^="contentColumn_"][role="tabpanel"] { margin-top: 1rem; padding: 0; }
     [class^="layer_"]:nth-child(2) [class^="content_"] > [class^="customHeader_"] { padding: 0;}
 
+    @container FC-ChatSlide_SNDL (min-width: 0px) { [class^="chat_"] { translate: 0px !important; } }
+    @container FC-ChatSlide_Legacy (min-width: 0px) { [class^="sidebar_"] { width: 240px !important; } }
+
 }
 @container FC-ControlPanel_SidebarTweaks (min-width: 0px) {
     [class^="sidebar_"] [class^="item_"], [class^="premiumTab_"] {

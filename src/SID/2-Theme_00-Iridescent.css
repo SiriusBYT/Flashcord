@@ -27,36 +27,6 @@
 }
 
 @container FC-Theme_Hooker (min-width: 0px) {
-    body::after {
-        /* Allows for background blur */
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: -1;
-    }
-
-    @container FC-SPGO_AT (min-width: 0px) {
-        section>[class^="header_"]> :before {
-            content: var(--FlashLang-C_AT-ThemeHooker, "⚠️ Advanced Themes require LegalDiscordBypasses or Discord Nitro to enable them. \A ✅ ThemeHooker is present and has enabled new themes.") !important;
-        }
-
-        [class^="themeSelection_"][style*="--bg-gradient-citrus-sherbert"],
-        /* IRIDESCENT LIGHT */
-        [class^="themeSelection_"][style*="--bg-gradient-chroma-glow"],
-        /* IRIDESCENT DARK */
-        [class^="themeSelection_"][style*="--bg-gradient-sepia"],
-        /* TRANSPARENT */
-        [class^="themeSelection_"][style*="--bg-gradient-aurora"]
-
-        /* TERMINAL MODE */
-            {
-            filter: unset !important;
-            cursor: pointer !important;
-        }
-    }
     [theme-hooker="theme-citrus-sherbert"] {
         background-repeat: repeat-x !important;
         background-size: var(--Flashcord-Iridescent_Light-Image_Size, 100vw) !important;

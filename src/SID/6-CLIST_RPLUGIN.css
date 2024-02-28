@@ -1,5 +1,8 @@
 
 /* [Start] = Flashcord Beta == Replugged Plugin Compatibility List CSS = */
+
+/* NOTE: THIS MAY BE DEPRECRATED AND MAY BE NEXT POWERED BY THE FLASHCORD API!!! */
+
 .replugged-addon-cards {
     container-name: var(--FlashCore-RPCL, FC-RPCL);
     container-type: inline-size;

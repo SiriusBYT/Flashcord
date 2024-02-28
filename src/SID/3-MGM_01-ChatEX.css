@@ -2,17 +2,15 @@
 /* [START] = Flashcord Beta == Major General Modifications [00] ChatEx CSS = */
 
 /* Channel Slide Core */
-[class^="layers_"] > [class^="layer_"]:nth-child(1) {
+[class^="layers_"] > [class^="layer_"]:first-child {
   container-name: var(--FlashCore-ChatSlide, FC-ChatSlide_SNDL);
   container-type: inline-size;
 }
-[class^="layer_"]:nth-child(1):has([class*="threadSidebarOpen_"], [class^="callContainer_"]) { container-name: FC-VOID; }
+[class^="layer_"]:first-child:has([class*="threadSidebarOpen_"], [class^="callContainer_"]) { container-name: FC-VOID; }
 
 
 @container FC-ChatSlide_SNDL (min-width: 0px) {
-  [class*="sidebar_"] {
-      z-index: 0;
-  }
+  [class*="sidebar_"] { z-index: 0; }
   [class^="chat_"]:not(:has([class^="pageBody_"])) {
       margin-right: -200px;
       translate: -198px;
@@ -125,7 +123,7 @@
 }
 
 /* GuildNav_Compact Core */
-[class^="layers_"]:has([data-list-id="guildsnav"]) {
+[class^="container_"]:has([data-list-id="guildsnav"]) {
   container-name: var(--FlashCore-GuildNav_Compact, FC-GuildNav_Compact);
   container-type: inline-size;
 }
@@ -150,7 +148,7 @@
 }
 
 @container FC-GuildNav_Compact-Horizontal (min-width: 0px) {
-  [class^="base_"] { margin-top: 48px; z-index: 1; }
+  [class^="container_"] > [class^="base_"] { margin-top: 48px; z-index: 1; }
   nav[class^="wrapper_"] { 
     left: -58px;
     width: 60px;
@@ -178,11 +176,12 @@
 
 
 /* ChannelNav_Compact Core */
-[class^="content_"] > [class^="sidebar_"] {
+[class^="content_"] > [class^="sidebar_"] { /* DEV-bSID-240228: They nuked the Channel Emojis experiment. I am now crying. */
   container-name: var(--FlashCore-ChannelNav_Compact, FC-ChannelNav_Compact);
   container-type: inline-size;
 }
 
+/* Just kidding I'm more like: FUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU- */
 @container FC-ChannelNav_Compact (min-width: 0px) {
   li > div > div > a,
   [class^="emojiColorFill_"],

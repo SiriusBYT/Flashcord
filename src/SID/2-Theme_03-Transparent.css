@@ -2,6 +2,8 @@
 /* [Start] = Flashcord Beta == Custom Theme: Transparent Mode CSS = */
 
 [theme-hooker="theme-sepia"] {
+    --window-win-blur: "unified-acrylic"; 
+
     --bg-overlay-color: transparent;
     --background-primary: transparent;
     --background-secondary: transparent;

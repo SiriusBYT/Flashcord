@@ -1,4 +1,5 @@
 @import url("0-BIOS.css");
+
 @import url("0-Kernel_Ring0.css");
 @import url("0-Kernel_Ring1.css");
 @import url("0-Kernel_Ring2.css");
@@ -7,6 +8,7 @@
 
 @import url("1-Anarchy_SID.css");
 
+@import url("2-ThemeHooker.css");
 @import url("2-Theme_00-Iridescent.css");
 @import url("2-Theme_01-CustomIMG.css");
 @import url("2-Theme_03-Transparent.css");
@@ -41,12 +43,19 @@
 
 @import url("X-Splash.css");
 
-[class^="messageListItem_"]:has([href^="http://flashcord/"], [class="replugged-greentext"]) {
-    container-name: var(--Flashcord-Chat_Effects, FC-ChatEffects_Animated);
-    container-type: inline-size;
-}
+
+/*
+@import url("LPM/main.css");
+*/
+
+/*
+@import url("sid.css");
+*/
 
 
+@import url("https://sirio-network.com/flashcord/store/modules/siriusbyt/infinite_chat_effects-files/main.css");
+
+/*
 :root {
     --Flashcord-Iridescent_Dark-Image: url("bgr/iridescent-low.webp");
     --Flashcord-Iridescent_Dark-Image_Size: cover;
@@ -54,4 +63,3 @@
     --Flashcord-Iridescent_Dark-Rainbow: FC-VOID;
     --Flashcord-Iridescent_Dark-Filter: blur(8px) brightness(0.9);
 }
-

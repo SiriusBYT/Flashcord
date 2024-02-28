@@ -48,7 +48,10 @@
     90% { scale: 1 1.1;}
     100% { scale: 1 1;}
 }
-
+@keyframes Flashcord-Welcome_Genshin-Style { /* This is meant to emulate the pretty cool transition from the party screen in Genshin */
+    0% { scale: 0.9; filter: brightness(8) blur(32px);}
+    100% { scale: 1.0; filter: brightness(1) blur(0px);}
+}
 
 @keyframes Flashcord-MSG_Upload {
     0% { opacity: 0; }
