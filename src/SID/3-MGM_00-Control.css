@@ -73,11 +73,11 @@ I might want to do that too here because jesus christ this is uglier than the co
         transition-property: filter, scale;
         transition-duration: var(--Flashcord-TransMult-Normal, 250ms);
     }
-    [class^="layers_"]:has([class^="standardSidebarView_"]:hover) .baseLayer__8fda3 { /* [!] FC-Wildcard_PerfNuker */
+    [class^="layers_"]:has([class^="standardSidebarView_"]:hover) .baseLayer__2b890 { /* [!] FC-Wildcard_PerfNuker */
         filter: blur(var(--Flashcord-Blur-Medium, 8px)) brightness(var(--FlashCore-Brightness,0.9));
         scale: 0.98;
     }
-    [class^="layers_"]:has([class^="closeButton_"]:hover) .baseLayer__8fda3 { /* [!] FC-Wildcard_PerfNuker */
+    [class^="layers_"]:has([class^="closeButton_"]:hover) .baseLayer__2b890 { /* [!] FC-Wildcard_PerfNuker */
         filter: blur(var(--Flashcord-Blur-Light, 2px)) brightness(0.98);
         scale: 1;
     }
