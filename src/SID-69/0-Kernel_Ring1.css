@@ -1,0 +1,89 @@
+
+/* [START] = Flashcord Beta == Kernel [01] CSS = */
+
+body {
+    --Flashcolord-Light_Accent: rgba(0,155,255,0.5);
+    --Flashcolord-Dark_Accent: rgba(255,55,0,0.5);
+    --Flashcolord-CBM_Light-Floating: rgba(255,255,255,0.5);
+    --Flashcolord-CBM_Dark-Floating: rgba(0,0,0,0.5);
+    --Flashcolord-CBM_HeavyLight-Floating: rgba(255,255,255,0.8);
+    --Flashcolord-CBM_HeavyDark-Floating: rgba(0,0,0,0.8);
+
+    --SNDL-C_LightBC: rgba(255,255,255,0.1);
+    --SNDL-C_GreyBC: rgba(55,55,55,0.1);
+    --SNDL-C_DarkBC: rgba(0,0,0,0.1);
+
+    --SNDL-C_HeavyLightBC: rgba(255,255,255,0.5);
+    --SNDL-C_HeavyGreyBC: rgba(55,55,55,0.5);
+    --SNDL-C_HeavyDarkBC: rgba(0,0,0,0.5);
+}
+
+html.theme-light { background: #ffffff; }
+.theme-light {
+    --background-primary: #FFFFFF;
+    --background-secondary: #FFFFFF;
+    --background-secondary-alt: #FFFFFF;
+    --background-tertiary: #FFFFFF;
+    --background-accent: #FF99FF;
+    --background-floating: #FFFfFF;
+    --channeltextarea-background: #f0f0f0;
+    --background-modifier-selected: #eaeaea;
+    --background-modifier-hover: #f0f0f0;
+    --home-background: #ffffff;
+}
+html.theme-dark { background: #000000; }
+.theme-dark {
+    --background-primary: #000000;
+    --background-secondary: #000000;
+    --background-secondary-alt: #000000;
+    --background-tertiary: #000000;
+    --background-accent: #660066;
+    --background-floating: #060606;
+    --channeltextarea-background: #060606;
+    --background-modifier-selected: #0F0F0F;
+    --background-modifier-hover: #161616;
+    --FlashCore-Brightness: 2;
+}
+
+/* SNDL Colors will be used in a future version, SNDL colors are yet to be done in the first place. */
+.SNDL-Light,
+.SNDL-Dark {
+    --SNDL-C_WarningBC: rgba(255,55,55,0.8);
+    --SNDL-C_DisclaimerBC: rgba(255,200,55,0.8);
+    --SNDL-C_InfoBC: rgba(55,55,255,0.8);
+    --SNDL-C_SuccessBC: rgba(55,255,55,0.8);
+    --SNDL-C_WarningSemiLightBC: rgba(255,55,55,0.6);
+    --SNDL-C_DisclaimerSemiLightBC: rgba(255,200,55,0.6);
+    --SNDL-C_SuccessSemiLightBC: rgba(55,255,55,0.6);
+    --SNDL-C_InfoSemiLightBC: rgba(55,55,255,0.6);
+    --SNDL-C_WarningLightBC: rgba(255,55,55,0.15);
+    --SNDL-C_DisclaimerLightBC: rgba(255,200,55,0.15);
+    --SNDL-C_SuccessLightBC: rgba(55,255,55,0.15);
+    --SNDL-C_InfoLightBC: rgba(55,55,255,0.15);
+
+    --SNDL-C_LightBC: rgba(255,255,255,0.1);
+    --SNDL-C_GreyBC: rgba(55,55,55,0.1);
+    --SNDL-C_DarkBC: rgba(0,0,0,0.1);
+
+    --SNDL-C_HeavyLightBC: rgba(255,255,255,0.5);
+    --SNDL-C_HeavyGreyBC: rgba(55,55,55,0.5);
+    --SNDL-C_HeavyDarkBC: rgba(0,0,0,0.5);
+}
+
+.SNDL-Light {
+    --SNDL-C_Text: rgba(0,0,0,0.95);
+    --SNDL-C_TextInvert: rgba(255,255,255,0.95);
+    --SNDL-C_Link: rgba(55,105,255,0.95);
+    --SNDL-C_LinkH: rgba(55,205,255,0.95);
+    --SNDL-C_HLink: rgba(25,25,55,0.95);
+}
+
+.SNDL-Dark {
+    --SNDL-C_Text: rgba(255,255,255,0.95);
+    --SNDL-C_TextInvert: rgba(0,0,0,0.95);
+    --SNDL-C_Link: rgba(55,205,255,0.95);
+    --SNDL-C_LinkH: rgba(55,105,255,0.95);
+    --SNDL-C_HLink: rgba(230,255,255,0.95);
+}
+
+/* [END] = Flashcord Beta == Kernel [01] CSS = */

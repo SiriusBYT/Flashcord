@@ -1,0 +1,113 @@
+
+/* [START] = Flashcord Beta == Kernel [03] CSS = */
+
+body > :before,
+body:before {
+    color: var(--text-normal);
+    font-size: 12px;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    font-weight: 900;
+    opacity: 0.5;
+    width: auto;
+}
+
+.platform-win body > :before { content: var(--FlashLang-WinBar, "🪟 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version)" | Report bugs in #🐞sgn-issues-reports on the SGN Discord Server."); }
+.platform-linux body > :before { content: var(--FlashLang-LinuxBar , "🐧 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version)" | Report bugs in #🐞sgn-issues-reports on the SGN Discord Server."); }
+.platform-linux #app-mount {
+    margin-top: 24px;
+    height: calc(100vh - 24px);
+}
+
+.platform-osx body:before {
+    content: var(--FlashLang-MacBar, "Report bugs in #🐞sgn-issues-reports on the SGN Discord Server. | 🍎 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version) " ") ;
+    color: #ffffff;
+    text-align: right; 
+    width: 100vw;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 32px;
+    margin-left: -12px;
+}
+.platform-osx #app-mount {
+    margin-top: 32px;
+    height: calc(100vh - 32px);
+}
+[class^="macDragRegion_"] {
+    width: 100vw;
+}
+
+
+[class^="chat_"] [class^="children_"]:after {
+    color: red;
+    width: max-content;
+    margin: auto ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255,255,255);
+    border-radius: var(--Flashcord-Border_Radius, 25px);
+    white-space: pre;
+}
+.theme-light [class^="chat_"] [class^="title_"] [class^="children_"]:after { content: var(--Flashcord-Warnings,var(--FlashLang-Warning_LightTheme, "  ⚠️ Flashcord is in Beta.  ")); }
+.theme-dark [class^="chat_"] [class^="title_"] [class^="children_"]:after { content: var(--Flashcord-Warnings, var(--FlashLang-Warning_DarkTheme, "  ⚠️ Flashcord is in Beta. 🌙 Dark Mode is unfinished.  ")); }
+  
+
+
+/* Real Code Optimization right here. Actually using containers for what they're fucking used for.
+Also copy pasting the whole splash code twice just for ControlPanel_Full to work too is stupid. */
+/*@container FC-ControlPanel_PopUp (min-width: 0px) {
+    [class^="layer_"]:nth-child(2) [class^="sidebarRegion_"] {
+        container-name: var(--Flashcord-SplashText, FC-ControlPanel_Splash);
+        container-type: inline-size;
+    }
+}
+@container FC-ControlPanel_Full (min-width: 0px) {
+    [class^="layer_"]:nth-child(2) [class^="sidebarRegion_"] {
+        container-name: var(--Flashcord-SplashText, FC-ControlPanel_Splash);
+        container-type: inline-size;
+    }
+}*/
+
+/* DEV BUILD NOTICE (231221): This is really not ideal but for now it'll do.
+my god is this version rushed as hell, i blame 
+actually idk what to blame */
+
+@container FC-ControlPanel_SidebarTweaks (min-width: 0px) {
+    /*@container FC-ControlPanel_Splash (min-width: 0px) {*/
+        [class^="sidebar_"] > :before {
+            content: var(--Flashcord-Branch) "\A Version "var(--Flashcord-Channel) "-" var(--Flashcord-Version);
+            padding: 10px;
+            white-space: pre;
+            opacity: 0.8;
+            background-image: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(255,127,0,1) 15%, rgba(255,255,0,1) 30%, rgba(0,255,0,1) 45%, rgba(0,0,255,1) 60%, rgba(170,0,170,1) 75%, rgba(255,170,255,1) 90%, rgba(255,0,0,1) 100%);
+            background-size: 100vw;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: FlashCore-BackXMTL calc(4s * var(--Flashcord-Animations, 1)) linear infinite !important;
+            margin-bottom: var(--Flashcord-SplashMAR, 20px);
+        }
+        [class^="sidebarRegionScroller_"]::after {
+            position: absolute;
+            content: var(--Flashcord-Splash);
+            transform: rotate(-2deg) scale( var(--Flashcord-SplashSca) ) translateX( var(--Flashcord-SplashTrX) ) translateY( var(--Flashcord-SplashTrY) ) !important;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            padding: 0px;
+            white-space: pre;
+            color: #CCCC00;
+            margin: 0px;
+            width: 1px;
+            left: 105px;
+            top: 48px;
+            animation: FlashCore-Splash var(--Flashcord-AnimMult-Slow, 500ms) ease-in-out infinite;
+            animation-direction: alternate;
+        }
+    /*}*/
+}
+/* [END] = Flashcord Beta == Kernel [03] CSS = */

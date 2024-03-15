@@ -1,0 +1,168 @@
+/* [Start] = Flashcord Beta == Custom Theme: Iridescent Mode CSS = */
+
+[theme-hooker="theme-citrus-sherbert"],
+[theme-hooker="theme-chroma-glow"] {
+    --bg-overlay-color: transparent;
+    --background-primary: transparent;
+    --background-secondary: transparent;
+    --background-secondary-alt: transparent;
+    --background-tertiary: transparent;
+    --bg-overlay-1: transparent;
+    --bg-overlay-2: transparent;
+    --bg-overlay-3: transparent;
+    --bg-overlay-4: transparent;
+    --bg-overlay-5: transparent;
+    --bg-overlay-6: transparent;
+    --bg-overlay-hover: transparent;
+    --bg-overlay-active: transparent;
+    --bg-overlay-selected: transparent;
+    --bg-overlay-chat: transparent;
+    --bg-overlay-home: transparent;
+    --bg-overlay-home-card: transparent;
+    --bg-overlay-app-frame: transparent;
+    --FlashCore-Brightness: 0.5;
+
+    --FlashCore-ChatSlide: FC-ChatSlide_Legacy;
+    --FlashCore-Idle_Optimizations: FC-VOID !important;
+}
+
+@container FC-Theme_Hooker (min-width: 0px) {
+    [theme-hooker="theme-citrus-sherbert"] {
+        background-repeat: repeat-x !important;
+        background-size: var(--Flashcord-Iridescent_Light-Image_Size, 100vw) !important;
+    }
+    [theme-hooker="theme-chroma-glow"] {
+        background-repeat: repeat-x !important;
+        background-size: var(--Flashcord-Iridescent_Dark-Image_Size, 100vw) !important;
+    }
+
+
+    [theme-hooker="theme-citrus-sherbert"] {
+        background-image: var(--Flashcord-Iridescent_Light-Image, url("https://sirio-network.com/sbin/PSWave-Iridescent_Light.png")) !important;
+        background-color: #FFFFFF;
+        animation: var(--Flashcord-Iridescent_Light-Animation, SNDL-Background_MvX) var(--Flashcord-AnimMult-XTSlow, 2s) linear infinite !important;
+    }
+
+    [theme-hooker="theme-chroma-glow"] {
+        background-image: var(--Flashcord-Iridescent_Dark-Image, url("https://sirio-network.com/sbin/PSWave-Iridescent_Dark.png")) !important;
+        background-color: #000000;
+        animation: var(--Flashcord-Iridescent_Dark-Animation, SNDL-Background_MvX) var(--Flashcord-AnimMult-XTSlow, 2s) linear infinite !important;
+    }
+
+    [theme-hooker="theme-citrus-sherbert"] [class^="chat_"] [class^="title_"] [class^="children_"]::after,
+    [theme-hooker="theme-chroma-glow"] [class^="chat_"] [class^="title_"] [class^="children_"]::after {
+        content: var(--Flashcord-Warnings, var(--FlashLang-Warning_Iridescent, "  ⚠️ Flashcord is in Beta. 💥 Iridescent Mode is unfinished.  ")) !important;
+    }
+
+    [theme-hooker="theme-citrus-sherbert"] [class^="tooltip_"] {
+        outline: 1px solid var(--Flashcolord-Light_Accent);
+    }
+
+    [theme-hooker="theme-chroma-glow"] [class^="tooltip_"] {
+        outline: 1px solid var(--Flashcolord-Dark_Accent);
+    }
+
+    [theme-hooker="theme-citrus-sherbert"],
+    [theme-hooker="theme-chroma-glow"] {
+        container-name: FC-Theme_Iridescent !important;
+        container-type: inline-size;
+    }
+
+    @container FC-ControlPanel_PopUp (min-width: 0px) {
+        [theme-hooker="theme-citrus-sherbert"] [class^="layer_"]:nth-child(2) {
+            border: 1px solid var(--Flashcolord-Light_Accent);
+            background-image: url("https://sirio-network.com/flashcord/ressources/backgrounds/BasicGrid-White_Fast.gif");
+            background-size: cover;
+        }
+
+        [theme-hooker="theme-chroma-glow"] [class^="layer_"]:nth-child(2) {
+            border: 1px solid var(--Flashcolord-Dark_Accent);
+            background-image: url("https://sirio-network.com/flashcord/ressources/backgrounds/BasicGrid-Dark_Fast.gif");
+            background-size: cover;
+        }
+    }
+
+    @container FC-Theme_Iridescent (min-width: 0px) {
+        @container FC-JumpBars (min-width: 0px) {
+            [class^="jumpToPresentBar_"] {
+                padding-bottom: 0;
+            }
+        }
+
+        @container FC-MemberSlide (min-width: 0px) {
+            [class^="membersWrap_"]::before {
+                /* May be a performance issue? Blame chrome, I fucking hate chrome's fucking bullshit backdrop-filter bug so much I'm going to fucking piss on the moon right this fucking instant */
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: -1;
+
+                transition-property: backdrop-filter;
+                transition-duration: var(--Flashcord-TransMult-Normal, 250ms);
+            }
+
+            [class^="membersWrap_"]:hover::before {
+                /* Firefox instead of Electron When? */
+                backdrop-filter: blur(16px);
+            }
+        }
+
+        [theme-hooker="theme-citrus-sherbert"]::after {
+            backdrop-filter: var(--Flashcord-Iridescent_Light-Filter, blur(4px) brightness(1));
+            animation: var(--Flashcord-Iridescent_Light-Rainbow, Flashcord-Iridescent_Light) var(--Flashcord-AnimMult-XSlow, 1s) linear infinite !important;
+        }
+
+        [theme-hooker="theme-chroma-glow"]::after {
+            backdrop-filter: var(--Flashcord-Iridescent_Dark-Filter, blur(4px) brightness(0.5));
+            animation: var(--Flashcord-Iridescent_Dark-Rainbow, Flashcord-Iridescent_Dark) var(--Flashcord-AnimMult-XSlow, 1s) linear reverse infinite !important;
+        }
+
+        @container FC-ChatSlide_Legacy (min-width: 0px) {
+
+            [class^="chat_"]>section,
+            [class^="chat_"]>div,
+            [class^="chat_"] {
+                background: transparent !important;
+            }
+        }
+
+        @container FC-PM (min-width: 0px) {
+            [class*="menu"] {
+                transition: outline-width 250ms;
+            }
+
+            [theme-hooker="theme-citrus-sherbert"] [class*="menu"] {
+                outline: 1px solid var(--Flashcolord-Light_Accent);
+                background: rgba(255, 255, 255, 0.5);
+            }
+
+            [theme-hooker="theme-chroma-glow"] [class*="menu"] {
+                outline: 1px solid var(--Flashcolord-Dark_Accent);
+                background: rgba(0, 0, 0, 0.5);
+            }
+
+            [class*="menu"]:hover {
+                outline-width: 2px;
+            }
+
+            [class^="scroller_"]::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                backdrop-filter: var(--Flashcord-Iridescent_Light-Filter, blur(4px) brightness(1));
+                z-index: -1;
+                border-radius: var(--Flashcord-Border_Radius, 25px);
+            }
+
+        }
+    }
+}
+
+
+/* [Start] = Flashcord Beta == Custom Theme: Iridescent Mode CSS = */

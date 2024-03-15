@@ -1,0 +1,105 @@
+
+/* [Start] = Flashcord Beta == Major General Modifications [00] OTUI_Pop CSS = */
+
+/* UPMO Core | What's UPMO? Go fit those nuts UMPO ass bud. */
+[class^="layer_"]:has([class^="userProfileModalOuter_"]) {
+    container-name: var(--FlashCore-UPMO, FC-UPMO);
+    container-type: inline-size;
+    contain: paint;
+}
+
+/* The container below is a bitch. Fuck you. Hours of my life wasted just for something to look slightly nicer.
+There's an insanely rare bug that I can't seem to reproduce when I want to fix it when you look at your own
+profile popup modal. I can't be fucked fixing it right now though.
+I'M DYING. I. NEED. A MEDIC BAG! */
+/* I think I fixed all the bugs now? // SiriusBYT 231221 */
+@container FC-UPMO (min-width: 0px) {
+    [class^="focusLock_"] { border-radius: var(--Flashcord-Border_Radius, 25px) }
+    [class^="userProfileModalOuter_"] {
+        width: 70vw;
+        height: 70vh;
+    }
+    mask { display: none; }
+    [class^="topSection_"] {
+        min-width: 70vw !important;
+        min-height: 16vh !important;
+        height: 16vh;
+        width: 70vw;
+        max-width: 70vw;
+        max-height: 16vh;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    [class^="header_"] {
+        top: 50%;
+        position: fixed;
+    }
+    [class^="userProfileModalOverlayBackground_"] {
+        margin: 16px;
+        height: 55vh;
+    }
+    header {
+        max-width: 100%;
+        max-height: 16vh;
+        width: fit-content;
+        height: 16vh;
+        contain: paint;
+    }
+    [class^="body_"] {
+        margin-top: 2vw;
+        min-height: 51vh;
+    }
+    [class^="headerTop_"] {
+        position: absolute;
+        left: 160px;
+        top: 20px;
+        display: flex;
+        justify-content: flex-start;
+        width: max-content;
+      }
+    [class^="bannerSVGWrapper_"]:has([class^="premiumIconWrapper_"]) {
+        min-height: 130% !important;
+    }
+    [class^="bannerSVGWrapper_"] {
+        min-width: 70vw !important;
+        min-height: 100% !important;
+    }
+}
+
+/* UPFGL Core | User Popup Role Addition List */
+[id^="popout_"]:nth-child(2):has([class^="roleCircle_"]) {
+    container-name: var(--FlashCore-UPRAL, FC-UPRAL);
+    container-type: inline-size;
+}
+
+@container FC-UPRAL (min-width: 0px) {
+    [role="dialog"], [role="list"] {
+        width: 20vw;
+        height: 70vh !important;
+        max-height: unset !important;
+    }
+}
+
+[class^="layerContainer_"]:has([class^="menu_"]) {
+    container-name: var(--Flashcord-PopMenu, FC-PM);
+    container-type: inline-size;
+    contain: paint;
+    
+}
+
+@container FC-PM (min-width: 0px) {
+    [class^="scroller_"] {
+        padding: 4px !important;
+    }
+    [class*="menu"] {
+        border-radius: var(--Flashcord-Border_Radius, 25px);
+        min-width: 0px;
+    }
+    [class^="item_"] {
+        border-radius: var(--Flashcord-Border_Radius, 25px);
+        transition-property: background-color;
+        transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
+    }
+}
+
+/* [END] = Flashcord Beta == Major General Modifications [00] OTUI_Pop CSS = */

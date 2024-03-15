@@ -1,0 +1,62 @@
+
+/* [Start] = Flashcord Beta == Replugged Theme Compatibility List CSS = */
+
+/* NOTE: THIS MAY BE DEPRECRATED AND MAY BE NEXT POWERED BY THE FLASHCORD API!!! */
+
+#rp-themes-tab::before,
+#rp-quickcss-tab::before {
+    content: var(--FlashLang-Addon_Welcome, "\A\A📸 Welcome to " var(--Flashcord-Branch) " ! You are using the " var(--Flashcord-Channel) " Channel of Flashcord.\A\A");
+    white-space: pre;
+    font-weight: 900;
+    color: var(--text-normal);
+}
+
+@container FC-RPCL (min-width: 0px) {
+    /* flashcord is basically banned lul so that won't happen
+    
+    Except now Flashcord LPM is on the Replugged store... Eh whatever
+
+    .replugged-addon-card:has([href*="com.sirio-network.flashcord"])::before {
+        content: "💖 Thank you for using Flashcord!\A\A";
+    }
+    .replugged-addon-card:has([href*="flashcord-legacy"])::before {
+        content: "Don't. Don't do it.\A\A";
+        font-weight: 900;
+    }
+    .replugged-addon-card:has([href*="com.sirio-network.flashcord"]) {
+        order: -6948;
+    }
+    .replugged-addon-card:has([href*="flashcord-legacy"]) {
+        order: 6948;
+    } */
+    .replugged-addon-card:has([href*="dev.LuckFire.BubbleBar"], [href*="net.saltssaumure.Squared"])::before {
+        content: var(--FlashLang-Addon_Recommended, "🔧 Flashcord Compatibility: ❤️ Recommended\A\A");
+    }
+    .replugged-addon-card:has([href*="dev.replugged.RevertRebrand"], [href*="net.saltssaumure.CRT"], [href*="dev.oirnoir.onekoanimation"], [href*="nyria.discolored"])::before {
+        content: var(--FlashLang-Addon_Compatible, "🔧 Flashcord Compatibility: ✅ Compatible\A\A");
+    }
+    .replugged-addon-card:has([href*="net.saltssaumure.piOS"])::before {
+        content: var(--FlashLang-Addon_MinorIssues, "🔧 Flashcord Compatibility: ⚠️ Minor Issues\A\A");
+    }
+    .replugged-addon-card:has([href*="net.saltssaumure.Exponent"], [href*="net.saltssaumure.NineX"], [href*="dev.albertp.CompactDiscord"])::before {
+        content: var(--FlashLang-Addon_Incompatible, "🔧 Flashcord Compatibility: ⛔ Incompatible, disable Flashcord\A\A");
+    }
+
+    .replugged-addon-card:has([href*="dev.LuckFire.BubbleBar"], [href*="net.saltssaumure.Squared"]) {
+        order: -512;
+    }
+    .replugged-addon-card:has([href*="dev.replugged.RevertRebrand"], [href*="net.saltssaumure.CRT"], [href*="dev.oirnoir.onekoanimation"], [href*="nyria.discolored"]) {
+        order: -386;
+    }
+    /* Flashcord Modules through Replugged Themes are deprecrated
+    .replugged-addon-card:has([href*="FCM"]) { order: -6942; }*/
+    .replugged-addon-card:has([href*="net.saltssaumure.piOS"]) {
+        order: -256;
+    }
+    .replugged-addon-card:has([href*="net.saltssaumure.Exponent"], [href*="net.saltssaumure.NineX"], [href*="dev.albertp.CompactDiscord"]) {
+        order: -128;
+    }
+
+}
+
+/* [End] = Flashcord Beta == Replugged Theme Compatibility List CSS = */

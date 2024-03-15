@@ -1,0 +1,171 @@
+
+/* [Start] = Flashcord Beta == Custom Theme: CBM CSS = */
+
+@container FC-AdvancedTheme-LEGACY_Custom-Background-Mode (min-width: 0px) {
+    body {
+        --FlashCore-ChatSlide: FC-ChatSlide_Legacy;
+        --FlashCore-Brightness: 0.5;
+        --custom-theme-background: transparent;
+        --bg-overlay-color: transparent;
+        --background-primary: transparent;
+        --background-secondary: transparent;
+        --background-secondary-alt: transparent;
+        --background-tertiary: transparent;
+        --bg-overlay-1: transparent;
+        --bg-overlay-2: transparent;
+        --bg-overlay-3: transparent;
+        --bg-overlay-4: transparent;
+        --bg-overlay-5: transparent;
+        --bg-overlay-6: transparent;
+        --bg-overlay-hover: transparent;
+        --bg-overlay-active: transparent;
+        --bg-overlay-selected: transparent;
+        --bg-overlay-chat: transparent;
+        --bg-overlay-home: transparent;
+        --bg-overlay-home-card: transparent;
+        --bg-overlay-app-frame: transparent;
+    }
+    .theme-light body {
+        background-image: var(--Flashcord-CBM_Light-Image, url("https://sirio-network.com/flashcord/ressources/backgrounds/bgr-test.jpg") ) !important;
+    }
+    .theme-dark body {
+        background-image: var(--Flashcord-CBM_Dark-Image, url("https://sirio-network.com/flashcord/ressources/backgrounds/hypernner.jpg") ) !important;
+    }
+    [class^="layer_"]:nth-child(2) {
+        border: 1px solid white;
+    }
+    .custom-theme-background [class^="chat_"] [class^="title_"] [class^="children_"]::after {
+        content: var(--Flashcord-Warnings,var(--FlashLang-Warning_DeprecratedCBM, "  ⚠️ Custom Mode without ThemeHooker is no longer supported.  ")) !important;
+    }
+
+    @container FC-ChatSlide_Legacy (min-width: 0px) {
+        [class^="chat_"] > section, [class^="chat_"] > div, [class^="chat_"] {
+            background: transparent !important;
+        }
+    }
+    .custom-theme-background.theme-light #app-mount {
+        backdrop-filter: var(--Flashcord-CBM_Light-Filter, blur(8px) brightness(1));
+    }
+    .custom-theme-background.theme-dark #app-mount {
+        backdrop-filter: var(--Flashcord-CBM_Dark-Filter, blur(16px) brightness(0.5));
+    }
+}
+
+html[theme-hooker="theme-sunset"],
+html[theme-hooker="theme-mint-apple"] {
+    --bg-overlay-color: transparent;
+    --background-primary: transparent;
+    --background-secondary: transparent;
+    --background-secondary-alt: transparent;
+    --background-tertiary: transparent;
+    --bg-overlay-1: transparent;
+    --bg-overlay-2: transparent;
+    --bg-overlay-3: transparent;
+    --bg-overlay-4: transparent;
+    --bg-overlay-5: transparent;
+    --bg-overlay-6: transparent;
+    --bg-overlay-hover: transparent;
+    --bg-overlay-active: transparent;
+    --bg-overlay-selected: transparent;
+    --bg-overlay-chat: transparent;
+    --bg-overlay-home: transparent;
+    --bg-overlay-home-card: transparent;
+    --bg-overlay-app-frame: transparent;
+}
+[theme-hooker="theme-sunset"] {
+    --text-normal: #ffffff;
+    --interactive-muted: #A0A0A0;
+    --interactive-hover: #ffffff;
+    --channels-default: #EEEEEE;
+    
+    --FlashCore-Brightness: 2;
+    --background-floating: rgba(6,6,6,0.5);
+    --background-modifier-selected: rgba(16,16,16,0.5);
+    --background-modifier-hover: rgba(22,22,22,0.5);
+}
+[theme-hooker="theme-mint-apple"] {
+    --text-normal: #000000;
+    --interactive-muted: #5f5f5f;
+    --primary-330: #5f5f5f;
+    --interactive-hover: #000000;
+    --channels-default: #111111;
+    --FlashCore-Brightness: 1;
+    --background-floating: rgba(155,155,155,0.5);
+    --background-modifier-selected: rgba(200,200,200,0.5);
+    --background-modifier-hover: rgba(255,255,255,0.5);
+}
+
+@container FC-Theme_Hooker (min-width: 0px) {
+    [theme-hooker="theme-sunset"],
+    [theme-hooker="theme-mint-apple"] { background-repeat: no-repeat; }
+
+    [theme-hooker="theme-mint-apple"] { background-image: var(--Flashcord-CBM_Light-Image, url("https://sirio-network.com/flashcord/bgr-test.jpg") ) !important; }
+    [theme-hooker="theme-sunset"] { background-image: var(--Flashcord-CBM_Dark-Image, url("https://sirio-network.com/flashcord/hypernner.jpg") ) !important; }
+    
+    [theme-hooker="theme-mint-apple"] [class^="chat_"] [class^="title_"] [class^="children_"]::after {
+        content: var(--Flashcord-Warnings, var(--FlashLang-Warning_LightCBM,"  ⚠️ Flashcord is in Beta. 🖼️ Light Custom Background Mode is unfinished.  ")) !important;
+    }
+    [theme-hooker="theme-sunset"] [class^="chat_"] [class^="title_"] [class^="children_"]::after {
+        content: var(--Flashcord-Warnings,var(--FlashLang-Warning_DarkCBM, "  ⚠️ Flashcord is in Beta. 🖼️ Dark Custom Background Mode is unfinished.  ")) !important;
+    }
+
+    @container FC-ControlPanel_PopUp (min-width: 0px) {
+        [theme-hooker="theme-mint-apple"] [class^="layer_"]:nth-child(2) {
+            border: 1px solid var(--Flashcolord-Light_Accent);
+            background: rgba(255,255,255,0.5);
+        }
+        [theme-hooker="theme-sunset"] [class^="layer_"]:nth-child(2) {
+            border: 1px solid var(--Flashcolord-Dark_Accent);
+            background: rgba(0,0,0,0.5);
+        }
+    }
+    
+    @container FC-ChatSlide_Legacy (min-width: 0px) {
+        [theme-hooker="theme-mint-apple"] [class^="chat_"] > section, [class^="chat_"] > div, [class^="chat_"],
+        [theme-hooker="theme-sunset"] [class^="chat_"] > section, [class^="chat_"] > div, [class^="chat_"] {
+            background: transparent !important;
+        }
+    }
+    [theme-hooker="theme-mint-apple"] #app-mount {
+        backdrop-filter: var(--Flashcord-CBM_Light-Filter, blur(8px) brightness(1));
+    }
+    [theme-hooker="theme-sunset"] #app-mount {
+        backdrop-filter: var(--Flashcord-CBM_Dark-Filter, blur(16px) brightness(0.5));
+    }
+
+    [theme-hooker="theme-mint-apple"] {
+        container-name: var(--FlashCore-Global_Theme, FC-Theme_CBM-Light) !important;
+        container-type: inline-size;
+    }
+    [theme-hooker="theme-sunset"] {
+        container-name: var(--FlashCore-Global_Theme, FC-Theme_CBM-Dark) !important;
+        container-type: inline-size;
+    }
+
+    @container FC-Theme_CBM-Light (min-width: 0px) {
+        @container FC-PM (min-width: 0px) {
+            [role="menu"] { background: var(--Flashcolord-CBM_Light-Floating); }
+        }
+        @container FC-JumpBars (min-width: 0px) {
+            [class^="jumpToPresentBar_"] { padding-bottom: 0; }
+        }
+        [class^="autocomplete_"],
+        [class^="autocomplete_"] [class*="categoryHeader_"] {
+            background: var(--Flashcolord-CBM_HeavyLight-Floating) !important;
+        }
+    }
+    @container FC-Theme_CBM-Dark (min-width: 0px) {
+        @container FC-PM (min-width: 0px) {
+            [role="menu"] { background: var(--Flashcolord-CBM_Dark-Floating); }
+        }
+        @container FC-JumpBars (min-width: 0px) {
+            [class^="jumpToPresentBar_"] { padding-bottom: 0; }
+        }
+        [class^="autocomplete_"],
+        [class^="autocomplete_"] [class*="categoryHeader_"] {
+            background: var(--Flashcolord-CBM_HeavyDark-Floating) !important;
+        }
+    }
+}
+
+/* [End] = Flashcord Beta == Custom Theme: CBM CSS = */

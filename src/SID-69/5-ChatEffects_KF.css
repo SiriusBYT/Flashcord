@@ -1,0 +1,26 @@
+
+/* [Start] = Flashcord Beta == ChatEffects Keyframes CSS = */
+
+@keyframes FCME-Small {
+    0% { scale: 1;}
+    100% { scale: 0.8;}
+}
+
+@keyframes FCME-Dramatic {
+    0% { scale: 0; opacity: 0;}
+    25% { opacity: 1;}
+    100% { scale: 1; opacity: 1;}
+}
+
+@keyframes FCME-Old_BottomFade {
+    0% {
+        opacity: 0;
+        transform: translateY(10vh);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0vw);
+    }
+}
+
+/* [END] = Flashcord Beta == ChatEffects Keyframes CSS = */

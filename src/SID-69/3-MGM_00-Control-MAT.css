@@ -1,0 +1,131 @@
+
+/* [START] = Flashcord Beta == Major General Modifications [00] Control MyAcc Overhaul CSS = */
+#my-account-tab {
+    container-name: var(--FlashCore-SPGO_MAT, FC-SPGO_MAT);
+    container-type: inline-size;
+    contain: paint;
+}
+
+@container FC-SPGO_MAT (min-width: 0px) {
+    [class^="userInfo_"] { 
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 10px;
+    }
+    [class^="userInfo_"] > div {
+        display: block;
+        position: relative;
+        top: 1px;
+        margin-right: 42px;
+    }
+    [class^="userInfo_"] > button {
+        margin-left: auto;
+        margin-right: 16px;
+    } 
+    [class^="fieldList_"] {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        height: auto;
+        align-content: center;
+        align-items: center;
+    }
+    [class^="field_"]:first-child { position: absolute; }
+    [class^="field_"]:first-child > div { display: none; }
+    [class^="field_"]:first-child > button {
+        translate: 150px -108px;
+        scale: 0.6;
+        font-size: x-large;
+        display: none;
+    }
+    [class^="field_"]:nth-child(2) { 
+        position: absolute;
+        translate: 90px -90px;
+    }
+    [class^="field_"]:nth-child(2) h3 { display: none; }
+    [class^="field_"]:nth-child(2) > button {
+        translate: -25px -7px;
+        scale: 0.6;
+        font-size: x-large;
+    }
+    [class^="badgeList_"] { translate: 0 13px; }
+    [class^="overflowMenuButton_"] { display: none; }
+
+    mask { display: none; }
+    [class^="marginTop40_"]:last-child { margin-top: 0.25rem; margin-bottom: 1rem; }
+
+    [class^="divider_"] {
+        margin-top: 8px;
+        margin-bottom: 8px;
+        padding: 0;
+    }
+    [class^="accountProfileCard_"] {
+        margin-bottom: -16px;
+        border-radius: var(--Flashcord-Border_Radius, 0px);
+    }
+    h2 { margin-top: 0.5rem; margin-bottom: 0.5rem !important; text-align: center;}
+    h3:has([class^="lockIcon_"]) { text-align: center; margin-top: 0; margin-bottom: 0.5rem; }
+
+    [class^="changePasswordButton_"] {
+        margin: auto;
+    }
+
+    [class^="field_"]:nth-last-child(-n + 2) [class^="text-md-normal_"] {
+        filter: blur(8px);
+        transition: filter 250ms;
+    }
+    [class^="field_"]:nth-last-child(-n + 2) [class^="text-md-normal_"]:hover {
+        filter: blur(0px);
+        transition: filter 1s;
+    }
+    [class^="userSettingsSecurity-"] { margin: 0; }
+    [class^="userSettingsSecurity-"] [class^="h1-"] { margin: 8px; }
+    [class^="colorStandard-"]:has([class*="phoneRevealer-"]) { display: none; }
+    #my-account-tab > :after {
+        content: var(--FlashLang-C_MAT-AboutFC, "\A About Flashcord");
+        font-weight: 900;
+        white-space: pre;
+        color: var(--text-normal);
+    }
+    
+    #my-account-tab:after {
+        white-space: pre-line;
+        color: var(--text-normal);
+        content: var(--FlashLang-AFC_SNDL, 'Flashcord is a personal project maintained with love by SiriusBYT, it takes the design language of "SNWE/SNDL" and applies it to Discord. SNDL is my own design language where it has a minimalistic look that does not compromise on looks at all, using blurs for style and animations on hover where it makes sense for the user to offer a way more compact experience while still being easy to use and while having every information you need at aa quick glance. \A') ' \
+      'var(--FlashLang-AFC_Support, 'Support is held on The Sirio Network Discord Server (https://sirio-network.com/redirect/discord). \A\A')'  \
+      'var(--FlashLang-AFC_ClosedAlpha, 'Please give a thanks to these amazing people who helped with the Closed Alpha of Flashcord 💖 \A')' \
+      🗨️  "be racist for me"\A \
+                - Atacantul, 2022\A\A \
+      🗨️  "https://www.pixiv.net/en/artworks/107406646"\A \
+                - trueirony, 2023\A\A \
+      🗨️  "do linux, be crime"\A \
+                - Lööps, 2023 \A\A \
+      🗨️  "Come play with me on Club Pinguin"\A \
+                - Ectalite, August 2023 \A\A\A \
+    'var(--FlashLang-AFC_PaidSupport, 'Of course, thanks to you, Flashcord Supporters 💸! \A')' \
+      🗨️  "Ohren Steif Halten" \A \
+                - termedagain, 2023\A\A \
+    'var(--FlashLang-AFC_Translators, '🌐 Flashcord can be used anywhere around the world thanks to these people: \A')' \
+        🇪🇸 Sky \A \
+        🇷🇴 Atacantul \A\A \
+    'var(--FlashLang-AFC_SGN, 'Thanks to those who joined the SGN Discord Server for Flashcord 🗣️ ! \A')' \
+    Atacantul, Lööps, D0kA, termedagain, Vol, timebendingTrickster, Phantom, raffy309, Pixette, kinoisseur, Lasagna Man, Darian465, Sundae.C, Written, __Chara__, Fishy <3, Galaxy, itsnotY, katzklaw/artysus, kiqxm, toefeaster, Chimatek, kassiopeia, Flash, Doggo, Casanova, MCry, Schleepy, DannyAkiva, cheese lol, plant, alexander, Spice Weasel, etebong, Kuromi, NinjaMask, Tot Ende, jay jakesnek, Absolute Disaster. \A\A \
+    'var(--FlashLang-AFC_GitHub, 'And finally, thanks for those who stared the Flashcord GitHub Repo ✨ ! \A')' \
+    s3nkwr, WA1Jl, PixelHir, MacDingleNut, zeo-return-null, trebor048, kisakimeowr, haiku-balls, bxrlin, Lypuss, roushjosh, Zaannaah, littlepriceonu, mog77a, TheLastZombie, ItsGfue, noblereign, Marliun, Battlesquid, koushiroue, brokenbyte, cjghost2000, qyurila, PressShyft, sdrakulich, merbrls, Bluesandbox, jwaxy, chlorophyllcumshot, DarkModeMemer, Caelanj, ktpttd, Suburbanno, ifezcool, EinfxchFinn, Starheyan, alexchiu100014, JoshDoesStuff, Nolezor, Uproaring, ShockAwer, wuangg. \A\A \
+    'var(--FlashLang-AFC_SpecialThanks, '🌠 Special Thanks: \A')' \
+    'var(--FlashLang-AFC_Evelyn, '- Evelyn: Created "Magnificent" and was ok being bullied by me to fix specific bugs that were found with Flashcord \A')' \
+    'var(--FlashLang-AFC_Tharki, '- Tharki-God: Person to have given me the idea (accidentally) to create the Plugins section of the Flashcord Store \A')' \
+    'var(--FlashLang-AFC_EastArctica, '- East_Arctica: Posted a plugin to the Flashcord Store, also is a super cool person \A\A')' \
+    'var(--FlashLang-AFC_Translator-Quote, '')' \
+'var(--FlashLang-AFC_Copyright, 'Flashcord © 2023 by SiriusBYT is licensed under CC BY-NC-ND 4.0. \A\A\A\A\A\A\A\A\A\A');
+    }
+}
+
+/* [End] = Flashcord Beta == Major General Modifications [00] Control MyAcc Overhaul CSS = */

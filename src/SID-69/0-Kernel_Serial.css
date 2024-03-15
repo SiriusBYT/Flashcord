@@ -1,0 +1,141 @@
+
+/* [Start] = Flashcord Beta == Kernel - Serial CSS = */
+
+/* General Information */
+html.platform-win { --FlashCore-OS: "🪟 Windows" }
+html.platform-osx { --FlashCore-OS: "🍎 MacOS" }
+html.platform-linux { --FlashCore-OS: "🐧 GNU/Linux" }
+html:has(link[href*="replugged"]) { --FlashCore-Client: "🔌 Replugged"; }
+html:has(#vencord-margins) { --FlashCore-Client: "✨ Vencord"; }
+html:has(body[class*="bd"]) { --FlashCore-Client: "🩹 BetterDiscord [UNSUPPORTED]"; }
+html:has([content*="canary"]) { --FlashCore-Discord_Branch: "Canary"; }
+html:has([content*="ptb"]) { --FlashCore-Discord_Branch: "Public Beta Test"; }
+
+/* Theming Related Shenanigans */
+html.theme-light { --FlashCore-Theme: "☀️ Light Mode"; }
+html.theme-dark { --FlashCore-Theme: "🌙 Dark Mode"; }
+.custom-theme-background { --FlashCore-CustomTheme: "✅ True"}
+[theme-hooker*="-"] { --FlashCore-ThemeHooker_Present: "✅ True"; }
+[theme-hooker="theme-mint-apple"] { --FlashCore-Theme: "🖼️ Custom Background Mode (Light) // Mint Apple" !important; }
+[theme-hooker="theme-citrus-sherbert"] { --FlashCore-Theme: "💥 Iridescent Mode (Light) // Citrus Sherbert" !important; }
+[theme-hooker="theme-retro-raincloud"] { --FlashCore-Theme: "🌌 Unknown // Retro Raincloud" !important; }
+[theme-hooker="theme-hanami"] { --FlashCore-Theme: "🌌 Unknown // Hanami" !important; }
+[theme-hooker="theme-sunrise"] { --FlashCore-Theme: "🌌 Unknown // Sunrise" !important; }
+[theme-hooker="theme-cotton-candy"] { --FlashCore-Theme: "🌌 Unknown // Candyfloss" !important; }
+[theme-hooker="theme-lofi-vibes"] { --FlashCore-Theme: "🌌 Unknown // Lofi-Vibes" !important; }
+[theme-hooker="theme-desert-khaki"] { --FlashCore-Theme: "🌌 Unknown // Desert Khaki" !important; }
+[theme-hooker="theme-sunset"] { --FlashCore-Theme: "🖼️ Custom Background Mode (Dark) // Sunset" !important; }
+[theme-hooker="theme-chroma-glow"] { --FlashCore-Theme: "💥 Iridescent Mode (Dark) // Chroma Glow" !important; }
+[theme-hooker="theme-forest"] { --FlashCore-Theme: "🌌 Unknown // Forest" !important; }
+[theme-hooker="theme-crimson-moon"] { --FlashCore-Theme: "🌌 Unknown // Crimson Moon" !important; }
+[theme-hooker="theme-midnight-blurple"] { --FlashCore-Theme: "🌌 Unknown // Midnight Burple" !important; }
+[theme-hooker="theme-mars"] { --FlashCore-Theme: "🌌 Unknown // Mars" !important; }
+[theme-hooker="theme-dusk"] { --FlashCore-Theme: "🌌 Unknown // Dusk" !important; }
+[theme-hooker="theme-under-the-sea"] { --FlashCore-Theme: "🌌 Unknown // Under the Sea" !important; }
+[theme-hooker="theme-retro-storm"] { --FlashCore-Theme: "🌌 Unknown // Retro Storm" !important; }
+[theme-hooker="theme-neon-nights"] { --FlashCore-Theme: "🌌 Unknown // Neon Nights" !important; }
+[theme-hooker="theme-strawberry-lemonade"] { --FlashCore-Theme: "🌌 Unknown // Strawberry Lemonade" !important; }
+[theme-hooker="theme-aurora"] { --FlashCore-Theme: "⌨️ Terminal Mode // Aurora" !important; }
+[theme-hooker="theme-sepia"] { --FlashCore-Theme: "👻 Transparent Mode // Sepia" !important; }
+[theme-hooker="theme-easter-egg"] { --FlashCore-Theme: "🔥 Flashcord Legacy // Memory Lane" !important; }
+
+
+
+
+[id^="message-content-"]:has(a[href="http://flashcord/debug"], a[href="http://flashcord/debug/modules"], a[href="http://flashcord/debug/variables"], a[href="http://flashcord/debug/store"] ) {
+    line-height: 15px !important;
+    border-radius: 25px;
+    padding: 8px;
+    background-image: url("https://sirio-network.com/flashcord/ressources/backgrounds/BasicGrid-Dark_Fast.gif");
+    background-size: cover;
+}
+[id^="message-content-"]:has(a[href="http://flashcord/debug"])::after {
+    color: white;
+    font-size: smaller;
+    white-space: pre-wrap;
+    width: 100%;
+    content: 
+"\A\A🚧 FLASHCORD DEBUG INFORMATION 🚧\A \
+This information is only visible to you, please screenshot it and send it to @SiriusBYT for debug purposes if needed. \A\A \
+📸 -- Flashcord Information \A
+    🔄️ Branch: " var(--Flashcord-Branch, 'Ayo you sussy baka') "\A \
+    🔗 Channel: " var(--Flashcord-Channel, 'What kind of fucking theme is this?!') "\A \
+    💡 Version: " var(--Flashcord-Version, 'This is not Flashcord, where is my god damn house?!?!') "\A \
+💬 -- Discord Client Information \A \
+    🌳 Discord Branch: " var(--FlashCore-Discord_Branch, 'Stable') " \A \
+    💻 Operating System: " var(--FlashCore-OS, '🚧 404 🚧') "\A \
+    🎯 Client Modification: " var(--FlashCore-Client, '🚧 404 🚧') "\A \
+    🔧 ThemeHooker Present: " var(--FlashCore-ThemeHooker_Present, '❌ False') "\A \
+    🌈 Detected Theme: " var(--FlashCore-Theme, '🚧 404 🚧') "\A \
+    🖌️ Is using a Custom Theme: " var(--FlashCore-CustomTheme, '❌ False') "\A\A \
+⚠️ Please also send the contents of your QuickCSS if you modified any Flashcord Variables. \A\A \
+== End of Flashcord's Debug Information. == \A\A";
+}
+
+[id^="message-content-"]:has(a[href="http://flashcord/debug/modules"])::after {
+    color: white;
+    font-size: smaller;
+    white-space: pre-wrap;
+    width: 100%;
+    content: 
+"\A\A🚧 FLASHCORD INTERNAL MODULES DEBUG INFORMATION 🚧\A \
+This information is only visible to you, please screenshot it and send it to @SiriusBYT for debug purposes if needed. \A\A \
+🛠️ -- FlashCore Modules \A\A \
+📁 LOCATION: 0-BIOS.css \A \
+    --FlashCore-Idle_Optimizations: " var(--FlashCore-Idle_Optimizations, 'FC-Idle_OptiMin')"\A\A \
+📁 LOCATION: 0-Kernel_Ring0.css \A \
+    --Flashcord-Blackout: " var(--Flashcord-Blackout, 'FC-Boot_Blackout-Android')"\A\A \
+📁 LOCATION: 3-MGM_00-Control-XXX.css \A \
+    --FlashCore-MGM-Control: " var(--FlashCore-MGM-Control, 'FC-ControlPanel_PopUp')"\A\A \
+    --FlashCore-SPGO_MAT: " var(--FlashCore-SPGO_MAT, 'FC-SPGO_MAT')"\A \
+    --FlashCore-SPGO_AT: " var(--FlashCore-SPGO_AT, 'FC-SPGO_AT')"\A\A \
+📁 LOCATION: 3-MGM_01-ChatEX.css \A \
+    --FlashCore-ChatSlide: [🤬 Cannot Check due to a Bug!] \A \
+    --FlashCore-MemberSlide: " var(--FlashCore-MemberSlide, 'FC-MemberSlide')"\A \
+    --FlashCore-GuildNav_Notification: " var(--FlashCore-GuildNav_Notification, 'FC-GuildNav_Animated')"\A \
+    --FlashCore-GuildNav_Compact: " var(--FlashCore-GuildNav_Compact, 'FC-GuildNav_Compact')"\A \
+    --FlashCore-ChannelNav_Compact: " var(--FlashCore-ChannelNav_Compact, 'FC-ChannelNav_Compact')"\A \
+    --FlashCore-ChannelNav_Notification: [🤬 Cannot Check due to a Bug!] \A\A \
+    --FlashCore-MessageSlide: " var(--FlashCore-MessageSlide, 'FC-MessageSlide')"\A \
+    --Flashcord-Jumbomojis: " var(--Flashcord-Jumbomojis, 'FC-Jumbomojis')"\A \
+    --FC-Shadowmage: " var(--FC-Shadowmage, '1px')"\A \
+    --FlashCore-ImagividZoom: " var(--FlashCore-ImagividZoom, 'FC-ImagividZoom')"\A \
+    --FlashCore-Menthrepin: " var(--FlashCore-Menthrepin, 'FC-Menthrepin')"\A \
+    --FlashCore-Xearch: " var(--FlashCore-Xearch, 'FC-Xearch')"\A \
+    --Flashcord-Stimogi: " var(--Flashcord-Stimogi, 'FC-Stimogi')"\A \
+    --Flashcord-Focus: " var(--Flashcord-Focus, 'FC-Focus')"\A \
+    --Flashcord-Chatype: " var(--Flashcord-Chatype, 'FC-Chatype-L1')"\A \
+    --Flashcord-JumpBars: " var(--Flashcord-JumpBars, 'FC-JumpBars')"\A \
+    --FlashCore-ChatEdits: " var(--FlashCore-ChatEdits, 'FC-ChatEdits')"\A\A \
+📁 LOCATION: 3-MGM_02-OTUI_Base \A \
+    --FlashCore-Friends: " var(--FlashCore-Friends, 'FC-FlexGrid')"\A \
+    --FlashCore-Replugged_Addons: " var(--FlashCore-Replugged_Addons, 'FC-FlexGrid')"\A \
+    --FlashCore-UPFG: " var(--FlashCore-UPFG, 'FC-FlexGrid')"\A \
+    --FlashCore-Call: " var(--FlashCore-Call, 'FC-Call')"\A\A \
+📁 LOCATION: 3-MGM_02-OTUI_Pop.css \A \
+    --FlashCore-UPMO: " var(--FlashCore-UPMO, 'FC-UPMO')"\A \
+    --FlashCore-UPRAL: " var(--FlashCore-UPRAL, 'FC-UPRAL')"\A \
+    --Flashcord-PopMenu: " var(--Flashcord-PopMenu, 'FC-PM')"\A\A \
+📁 LOCATION: 4-SM_UnNitrofy.css \A \
+    --FlashCore-DeNitrofy: " var(--FlashCore-DeNitrofy, 'FC-DeNitrofy')"\A\A \
+📁 LOCATION: 5-ChatEffects_CD.css \A \
+    --Flashcord-Chat_Effects: " var(--Flashcord-Chat_Effects, 'FC-ChatEffects_Animated')"\A\A \
+== End of Flashcord's Debug Information. == \A\A";
+}
+
+[id^="message-content-"]:has(a[href="http://flashcord/debug/store"])::after {
+    color: white;
+    font-size: smaller;
+    white-space: pre-wrap;
+    width: 100%;
+    content: 
+"\A\A🚧 FLASHCORD EXTERNAL MODULES DEBUG INFORMATION 🚧\A \
+This information is only visible to you, please screenshot it and send it to @SiriusBYT for debug purposes if needed. \A\A \
+🏪 -- Flashcord Store Modules \A\A \
+🚧 WIP 🚧 \A\A \
+🏪 -- Flashcord Store Plugins \A\A \
+🚧 WIP 🚧 \A\A \
+== End of Flashcord's Debug Information. == \A\A";
+}
+
+/* [End] = Flashcord Beta == Kernel - Serial CSS = */

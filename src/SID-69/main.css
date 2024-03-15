@@ -1,0 +1,69 @@
+@import url("0-BIOS.css");
+
+@import url("0-Kernel_Ring0.css");
+@import url("0-Kernel_Ring1.css");
+@import url("0-Kernel_Ring2.css");
+@import url("0-Kernel_Ring3.css");
+@import url("0-Kernel_Serial.css");
+
+@import url("1-Anarchy_SID.css");
+
+@import url("2-ThemeHooker.css");
+@import url("2-Theme_00-Iridescent.css");
+@import url("2-Theme_01-CustomIMG.css");
+@import url("2-Theme_03-Transparent.css");
+@import url("2-Theme_04-Terminal.css");
+@import url("2-Theme_05-Legacy.css");
+
+@import url("3-MGM_00-Control.css");
+@import url("3-MGM_00-Control-MAT.css");
+@import url("3-MGM_00-Control-AT.css");
+
+@import url("3-MGM_01-ChatEX.css");
+@import url("3-MGM_01-ChatIn.css");
+
+@import url("3-MGM_02-OTUI_Base.css");
+@import url("3-MGM_02-OTUI_Pop.css");
+
+@import url("4-SM_Base.css");
+@import url("4-SM_Pop.css");
+@import url("4-SM_UnNitrofy.css");
+
+@import url("5-ChatEffects_CD.css");
+@import url("5-ChatEffects_KF.css");
+
+@import url("6-CFIX_RPLUGIN.css");
+@import url("6-CFIX_RTHEME.css");
+
+
+@import url("6-CLIST_RPLUGIN.css");
+@import url("6-CLIST_RTHEME.css");
+
+@import url("7-Lang.css");
+
+@import url("X-Splash.css");
+*/
+
+/*
+@import url("LPM/main.css");
+*/
+
+/*
+@import url("sid.css");
+*/
+
+/*
+@import url("https://sirio-network.com/flashcord/sid.css");
+*/
+
+/*
+@import url("https://sirio-network.com/flashcord/store/modules/siriusbyt/infinite_chat_effects-files/main.css");
+*/
+/*
+:root {
+    --Flashcord-Iridescent_Dark-Image: url("bgr/iridescent-low.webp");
+    --Flashcord-Iridescent_Dark-Image_Size: cover;
+    --Flashcord-Iridescent_Dark-Animation: FC-VOID;
+    --Flashcord-Iridescent_Dark-Rainbow: FC-VOID;
+    --Flashcord-Iridescent_Dark-Filter: blur(8px) brightness(0.9);
+}
