@@ -27,14 +27,14 @@ This license requires that reusers give credit to the creator. It allows reusers
 /* NOTICE: Everytime there is a " [!] FC-Wildcard_PerfNuker " this means that using a wildcard will absolutely nuke performance so bad it would make Flashcord impossible to use */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-:root, body {
+:root, body { /* This code is old and ass >:( // will be fixing LPM after next SID major update is released, because my god it is taking me a while. */
   --font-primary: "Roboto";
   --font-display: "Roboto";
   --font-headline: "Roboto";
   
   --Flashcord-Branch: "Flashcord";
   --Flashcord-Channel: "LPM";
-  --Flashcord-Version: "240114";
+  --Flashcord-Version: "240317";
   
   background: #000000;
 }
@@ -77,9 +77,9 @@ body {
 .app-focused { --FlashCore-Idle_Optimizations: FC-VOID !important; }
 @container FC-Idle_OptiMax (min-width: 0px) {
   [class^="appAsidePanelWrapper_"] {
-    --Flashcord-AnimMult-XFast: 0;
-    --Flashcord-AnimMult-Fast: 0;
-    --Flashcord-AnimMult-Normal: 0;
+    --Flashcord-Animation-XFast: 0;
+    --Flashcord-Animation-Fast: 0;
+    --Flashcord-Animation_Normal: 0;
     --Flashcord-AnimMult-Slow: 0;
     --Flashcord-AnimMult-XSlow: 0;
     --Flashcord-AnimMult-XTSlow: 0;
@@ -147,13 +147,11 @@ body:before {
 /* I swear to god if this file causes problems again I'm going to explode
 - @230114 */
 .platform-win body > :before { content: "🪟 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version); }
-
-/* @240204: Flashcord SID has a problem with Linux titlebars, so removing it entirely while I unfuck it.
 .platform-linux body > :before { content: "🐧 " var(--Flashcord-Branch) " " var(--Flashcord-Channel) "-" var(--Flashcord-Version); }
 .platform-linux #app-mount {
     margin-top: 24px;
     height: calc(100vh - 24px);
-}*/
+}
 
 /* NOTICE: I need someone with a macbook to help me debug this, I think somebody said this was broken again on MacOS?
 In other words, "plis help ecta i ned to connekt to ur hakintoch again"
@@ -187,7 +185,11 @@ Since this is LPM, removing this while I figure out VM hell. SID still has this 
 /* [END] = Flashcord Beta == Kernel [03] CSS = */
 
 
-/* [Start] = Flashcord Beta == Custom Theme: CBM CSS = */
+/* [Start] = Flashcord Beta == Custom Theme: CBM CSS =
+
+I might wanna update this, poor LPM people getting an outdated as fuck version of CBM
+LPM doesn't have the bloat concerns of SID/STB where there has to be 2 bloody different versions of the same code so
+there's no reason to not backport themehooker's CBM to lpm. Will do that later, SID pisses me off right now */
 
 @container FC-AdvancedTheme-LEGACY_Custom-Background-Mode (min-width: 0px) {
     body {
@@ -440,7 +442,6 @@ Since this is LPM, removing this while I figure out VM hell. SID still has this 
 @container FC-ImagividZoom (min-width: 0px) {
     [class^="focusLock_"] [class^="imageWrapper_"]:hover { 
         width: 90vw !important;
-        /*will-change: width, height;*/
     }
     [class^="focusLock_"] [class^="imageWrapper_"] { 
         height: auto !important;
@@ -511,7 +512,7 @@ ol[class^="scrollerInner_"] {
     [id^="message-accessories-"]:has(article):has([class^="reactions_"]) {
         margin-bottom: 2rem;
     }
-    [id^="message-accessories-"]:has(article) .reactions-3ryImn { /* [!] FC-Wildcard_PerfNuker */
+    [id^="message-accessories-"]:has(article) .reactions_b8dc93 { /* [!] FC-Wildcard_PerfNuker */
         position: absolute;
         translate: 0 1.75rem;
         bottom: 0;

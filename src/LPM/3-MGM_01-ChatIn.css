@@ -10,7 +10,6 @@
 @container FC-ImagividZoom (min-width: 0px) {
     [class^="focusLock_"] [class^="imageWrapper_"]:hover { 
         width: 90vw !important;
-        /*will-change: width, height;*/
     }
     [class^="focusLock_"] [class^="imageWrapper_"] { 
         height: auto !important;
@@ -81,7 +80,7 @@ ol[class^="scrollerInner_"] {
     [id^="message-accessories-"]:has(article):has([class^="reactions_"]) {
         margin-bottom: 2rem;
     }
-    [id^="message-accessories-"]:has(article) .reactions-3ryImn { /* [!] FC-Wildcard_PerfNuker */
+    [id^="message-accessories-"]:has(article) .reactions_b8dc93 { /* [!] FC-Wildcard_PerfNuker */
         position: absolute;
         translate: 0 1.75rem;
         bottom: 0;

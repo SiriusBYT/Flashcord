@@ -1,5 +1,9 @@
 
-/* [Start] = Flashcord Beta == Custom Theme: CBM CSS = */
+/* [Start] = Flashcord Beta == Custom Theme: CBM CSS =
+
+I might wanna update this, poor LPM people getting an outdated as fuck version of CBM
+LPM doesn't have the bloat concerns of SID/STB where there has to be 2 bloody different versions of the same code so
+there's no reason to not backport themehooker's CBM to lpm. Will do that later, SID pisses me off right now */
 
 @container FC-AdvancedTheme-LEGACY_Custom-Background-Mode (min-width: 0px) {
     body {
