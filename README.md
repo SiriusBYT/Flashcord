@@ -21,7 +21,7 @@ The Channel Emojis Discord Experiment that Flashcord semi-depends on has been re
 ### That's right this theme has a bloody arch wiki manual page knock-off. Get ready to RTFM.
 Due to the complexity of Flashcord, yes, I am not kidding. This Discord Theme has a wiki page. **And trust me, you seriously need it.**
 
-[Instructions about anything and everything on Flashcord is available here.](https://github.com/SiriusBYT/flashcord/wiki)
+## [Instructions about anything and everything on Flashcord is available here (including install instructions depending on your client mod).](https://github.com/SiriusBYT/flashcord/wiki)
 
 Flashcord is currently in Beta, expect lots of things to change and quickly! Next major version will be Flashcord Gamma, set to release in 2024 if everything goes according to plan. By 2025, Flashcord should hopefully be done.
 
