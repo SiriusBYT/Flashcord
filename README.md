@@ -1,3 +1,7 @@
+# ⚠️ OUTAGE
+The Sirio Network is under attack, Flashcord and all other relevent services may be down.
+## Flashcord SID may thus not work until the hack is neutralized.
+
 ### NOTICE
 The Channel Emojis Discord Experiment that Flashcord semi-depends on has been recently sent to the shadow realm, a fix for this absolutely chaotic change will be implemented in the next major update this April.
 
