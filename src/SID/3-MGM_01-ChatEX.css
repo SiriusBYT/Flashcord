@@ -33,7 +33,7 @@
     transition-property: width;
     transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
   }
-  :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar_"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .sidebar_ded4b5 {  /* [!] FC-Wildcard_PerfNuker */
+  :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar_"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .sidebar_e031be {  /* [!] FC-Wildcard_PerfNuker */
     width: 240px;
     /*will-change: width;*/
   }

@@ -34,7 +34,7 @@ This license requires that reusers give credit to the creator. It allows reusers
   
   --Flashcord-Branch: "Flashcord Beta";
   --Flashcord-Channel: "bSID"; /* Notice: This version will be renamed to bSTB after the Creator's Anniversary Update is released. */
-  --Flashcord-Version: "240228_HF2";
+  --Flashcord-Version: "240228_HF3";
 
   --Flashcord-Splash: "Get ready on 23/04. \A Biggest update coming.";
   --Flashcord-SplashSca: 1.1;
@@ -1926,7 +1926,7 @@ I might want to do that too here because jesus christ this is uglier than the co
     transition-property: width;
     transition-duration: var(--Flashcord-TransMult-Fast, 125ms);
   }
-  :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar_"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .sidebar_ded4b5 {  /* [!] FC-Wildcard_PerfNuker */
+  :is([class*="baseLayer"]:has([class*="guilds-"]:hover, [class^="sidebar_"]:hover), [class^="notAppAsidePanel-"]:has([id*="guild-"])) .sidebar_e031be {  /* [!] FC-Wildcard_PerfNuker */
     width: 240px;
     /*will-change: width;*/
   }
