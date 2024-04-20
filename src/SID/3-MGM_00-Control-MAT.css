@@ -58,7 +58,7 @@
     [class^="badgeList_"] { translate: 0 13px; }
     [class^="overflowMenuButton_"] { display: none; }
 
-    mask { display: none; }
+    mask > circle { display: none; }
     [class^="marginTop40_"]:last-child { margin-top: 0.25rem; margin-bottom: 1rem; }
 
     [class^="divider_"] {
