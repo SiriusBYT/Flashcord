@@ -1,6 +1,3 @@
-# Preparing to update Flashcord, major changes incoming! (4PM UTC-Paris Time)
-## Switch to STB if you don't want your stuff to break, because it WILL.
-
 # 📸 This. This is Flashcord Beta.
 ## The world's most complex Discord Theme.
 ## It's all about the chat space.
