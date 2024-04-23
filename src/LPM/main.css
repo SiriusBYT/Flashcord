@@ -1,13 +1,13 @@
-@import url("0-BIOS.css");
-@import url("0-Kernel_Ring1.css");
-@import url("0-Kernel_Ring3.css");
-@import url("0-Kernel_Serial.css");
+@import url("0-Kernel/BIOS.css");
+@import url("0-Kernel/Ring0.css");
 
-@import url("2-Theme_01-CustomIMG.css");
-@import url("3-MGM_00-Control.css");
-@import url("3-MGM_00-Control-MAT.css");
+@import url("1-Theme/01-CustomIMG.css");
 
-@import url("3-MGM_01-ChatEX.css");
-@import url("3-MGM_01-ChatIn.css");
+@import url("2-Control/00-Panel.css");
 
-@import url("4-SM_Pop.css");
+@import url("3-Major/0-Chat_External.css");
+@import url("3-Major/0-Chat_Internal.css");
+@import url("3-Major/1-Other_Popup.css");
+
+@import url("4-Minor/0-Base.css");
+@import url("4-Minor/1-Pop.css");

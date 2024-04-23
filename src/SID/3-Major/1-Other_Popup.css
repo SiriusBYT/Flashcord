@@ -1,0 +1,49 @@
+/* Major/Other_Base contains all other major modifications that NOT are located under Discord's BaseLayer (pop-ups) */
+
+/* The container below is a bitch. Fuck you. Hours of my life wasted just for something to look slightly nicer.
+There's an insanely rare bug that I can't seem to reproduce when I want to fix it when you look at your own
+profile popup modal. I can't be fucked fixing it right now though.
+I'M DYING. I. NEED. A MEDIC BAG!
+- I think I fixed all the bugs now? // SiriusBYT 231221 */
+[class^="layer_"]:has([class^="userProfileModalOuter_"]) {
+    container-name: var(--Flashcord-Module_User-Profile, FCM-User-Profile);
+    container-type: inline-size; contain: paint; /* <- TF this do??? -bSID-DEV_240422 */
+} @container FCM-User-Profile (min-width: 0) {
+    [class^="focusLock_"] { border-radius: var(--Flashcord-UI_Border-Radius) }
+    [class^="userProfileModalOuter_"] { width: 70vw; height: 70vh; }
+    mask { display: none; }
+    [class^="topSection_"] {
+        width: 70vw; height: 16vh; max-width: 70vw; max-height: 16vh; min-width: 70vw !important; min-height: 16vh !important;
+        margin: 0 auto; overflow: hidden;
+    } [class^="header_"] { position: fixed; top: 50%; }
+    [class^="userProfileModalOverlayBackground_"] { height: 55vh; margin: 16px; }
+    header {
+        max-width: 100%; max-height: 16vh;
+        width: fit-content; height: 16vh;
+        contain: paint;
+    } [class^="body_"] { min-height: 51vh; margin-top: 2vw; }
+    [class^="headerTop_"] {
+        position: absolute; left: 160px; top: 20px;
+        display: flex; justify-content: flex-start;
+        width: max-content;
+    } [class^="bannerSVGWrapper_"]:has([class^="premiumIconWrapper_"]) { min-height: 130% !important; }
+    [class^="bannerSVGWrapper_"] { min-width: 70vw !important; min-height: 100% !important; }
+}
+
+[id^="popout_"]:nth-child(2):has([class^="roleCircle_"]) {
+    container-name: var(--Flashcord-Module_User-Role-List, FCM-User-Role-List);
+    container-type: inline-size;
+} @container FCM-User-Role-List (min-width: 0) {
+    [role="dialog"], [role="list"] { width: 20vw; height: 70vh !important; max-height: unset !important; }
+}
+
+[class^="layerContainer_"]:has([class^="menu_"]) {
+    container-name: var(--Flashcord-Module_Popup-Menu, FCM-Popup-Menu);
+    container-type: inline-size;
+    contain: paint;
+} @container FCM-Popup-Menu (min-width: 0) {
+    .theme-light, .theme-dark { animation: SNDL-Fade_In var(--Flashcord-Animation_Fast) ease-in-out;}
+    [class^="scroller_"] { padding: 4px !important; }
+    [class*="menu"] { border-radius: var(--Flashcord-UI_Border-Radius); min-width: 0;}
+    [class^="item_"] {border-radius: var(--Flashcord-UI_Border-Radius); transition-property: background-color; transition-duration: var(--Flashcord-Transition_Fast); }
+}

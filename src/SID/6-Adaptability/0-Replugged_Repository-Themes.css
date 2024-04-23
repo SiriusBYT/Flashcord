@@ -1,0 +1,10 @@
+/* Adaptability/Replugged_Repository-Themes modifies the Replugged Themes Addon List to provide information about their compatibility with Flashcord */
+
+/* NOTE: THE COMPATIBILITY LIST INSIDE THE FLASHCORD CLIENT IS NOW **DEPRECATED**!! IT WILL BE REPLACED WITH THE FLASHCORD STORE */
+#rp-themes-tab::before,
+#rp-quickcss-tab::before {
+    content: var(--FCL-Addon_Welcome);
+    white-space: pre;
+    font-weight: 900;
+    color: var(--Flashcord-Text);
+}

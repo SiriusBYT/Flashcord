@@ -1,0 +1,8 @@
+/* Minor/Base contains minor modifications which are located in Discord's BaseLayer */
+
+/* Real men don't need help. */
+[href="https://support.discord.com"] { display: none; }
+[class^="recentsIcon_"] { width: 38px; } /* This is required to fix alignment issues due to removing the help button */
+
+/* @ Before Usernames */
+[class^="userTagUsernameBase_"]:before, [class^="usernameInnerRow_"]:before { content: "@" }

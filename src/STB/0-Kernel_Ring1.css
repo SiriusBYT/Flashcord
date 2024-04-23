@@ -1,0 +1,48 @@
+
+/* [START] = Flashcord Beta == Kernel [01] CSS = */
+
+body {
+    --Flashcolord-Light_Accent: rgba(0,155,255,0.5);
+    --Flashcolord-Dark_Accent: rgba(255,55,0,0.5);
+    --Flashcolord-CBM_Light-Floating: rgba(255,255,255,0.5);
+    --Flashcolord-CBM_Dark-Floating: rgba(0,0,0,0.5);
+    --Flashcolord-CBM_HeavyLight-Floating: rgba(255,255,255,0.8);
+    --Flashcolord-CBM_HeavyDark-Floating: rgba(0,0,0,0.8);
+
+    --SNDL-C_LightBC: rgba(255,255,255,0.1);
+    --SNDL-C_GreyBC: rgba(55,55,55,0.1);
+    --SNDL-C_DarkBC: rgba(0,0,0,0.1);
+
+    --SNDL-C_HeavyLightBC: rgba(255,255,255,0.5);
+    --SNDL-C_HeavyGreyBC: rgba(55,55,55,0.5);
+    --SNDL-C_HeavyDarkBC: rgba(0,0,0,0.5);
+}
+
+html.theme-light { background: #ffffff; }
+.theme-light {
+    --background-primary: #FFFFFF;
+    --background-secondary: #FFFFFF;
+    --background-secondary-alt: #FFFFFF;
+    --background-tertiary: #FFFFFF;
+    --background-accent: #FF99FF;
+    --background-floating: #FFFfFF;
+    --channeltextarea-background: #f0f0f0;
+    --background-modifier-selected: #eaeaea;
+    --background-modifier-hover: #f0f0f0;
+    --home-background: #ffffff;
+}
+html.theme-dark { background: #000000; }
+.theme-dark {
+    --background-primary: #000000;
+    --background-secondary: #000000;
+    --background-secondary-alt: #000000;
+    --background-tertiary: #000000;
+    --background-accent: #660066;
+    --background-floating: #060606;
+    --channeltextarea-background: #060606;
+    --background-modifier-selected: #0F0F0F;
+    --background-modifier-hover: #161616;
+    --FlashCore-Brightness: 2;
+}
+
+/* [END] = Flashcord Beta == Kernel [01] CSS = */

@@ -1,0 +1,8 @@
+/* Theme/CustomIMG is responsable for adding the CBM Advanced Theme. */
+
+@container FCM-Theme_LegacyCBM (min-width: 0) {
+    body { --Flashcord-Module_Chat-Slide: FCM-Chat-Slide_Legacy; --Flashcord-UI_Brightness: 0.5; background-image: var(--Flashcord-Image_CBM); }
+    .custom-theme-background #app-mount { backdrop-filter: var(--Flashcord-Filter_CBM); }
+    [class^="layer_"]:nth-child(2) { border: 1px solid white; }
+    .custom-theme-background [class^="chat_"] [class^="title_"] [class^="children_"]::after { content: var(--FCL-Warning_Deprecated) !important; }
+}

@@ -1,0 +1,175 @@
+/* Major/Chat_Internal contains all major modules of Flashcord that modifies the chat window */
+
+/* Message Slide Core */
+[class^="messageListItem_"]:last-of-type {
+    container-name: var(--Flashcord-Module_Message-Slide, FCM-Message_Slide);
+    container-type: inline-size;
+} @container FCM-Message_Slide (min-width: 0) {
+    [class^="message_"] { animation: var(--Flashcord-Animation_XSlow) Flashcord-Message_Uploaded; }
+    [class^="message_"]:has([class*="isSending_"]) {
+        opacity: 0.5; translate: 10vw; --Initial: 0; --Final: 0.5;
+        animation: var(--Flashcord-Animation_Normal) SNDL-Fade_Custom; 
+    }
+}
+
+[class^="contents_"] > [id^="message_content_"]:has([class^="emojiContainer_"]) {
+    container-name: var(--Flashcord-Module_Emojis, FCM-Emojis);
+    container-type: inline-size;
+} @container FCM-Emojis (min-width: 0) {
+    [class^="emojiContainer_"] .jumboable { width: 8rem !important; height: 8rem !important; }
+    [class^="emojiContainer_"] .emoji { width: 1.5rem; height: 1.5rem; }
+}
+
+
+[class^="layer_"]:has([class^="focusLock_"] [class*="downloadLink_"]) {
+    container-name: var(--Flashcord-Module_Image-Zoom, FCM-Image_Zoom);
+    container-type: inline-size;
+} @container FCM-Image_Zoom (min-width: 0) {
+    [class^="focusLock_"] [class^="imageWrapper_"]:hover {  width: 90vw !important; }
+    [class^="focusLock_"] [class^="imageWrapper_"] { 
+        transition-property: width, height; transition-duration: var(--Flashcord-Transition_Slow) !important;
+        height: auto !important;
+    } [class^="focusLock_"] [class^="imageWrapper_"] [class^="wrapper-"] {  width: auto !important; height: auto !important; }
+    [class^="focusLock_"] > div { 
+        display: flex; flex-direction: row; justify-content: center; align-items: flex-start;
+        overflow: scroll;
+    } [class^="carouselModal_"] { justify-content: flex-start !important; }
+    [class^="focusLock_"] img, [class^="focusLock_"] video, [class^="imageWrapper_"] [class^="wrapper"] {
+        width: 100% !important; height: 100% !important; max-width: 100% !important; max-height: 100% !important;
+        overflow: scroll; object-fit: contain;
+    } [class^="anchor_"] { display: none; }
+    [class*="modalCarouselWrapper_"] {
+        position: static; margin: auto;
+        -webkit-box-align: unset !important; align-items: unset !important;
+    } [class*="modalCarouselWrapper_"] button { margin: 0; }
+}
+
+[class^="layerContainer_"]:has([class^="messagesPopoutWrap_"], [class^="threadIcon_"], [class*="recentMentionsPopout_"]) {
+    container-name: var(--Flashcord-Module_Menthrepin, FCM-Menthrepin);
+    container-type: inline-size;
+} @container FCM-Menthrepin (min-width: 0) {
+    [id^="popout_"] {
+        top: 0 !important; left: 0 !important; right: 0;
+        width: 100vw; height: 100vh;
+        display: flex; align-items: center; justify-content: center;
+        transition-property: backdrop-filter; transition-duration: var(--Flashcord-Transition_Slow);
+        backdrop-filter: blur(0px);
+    } [id^="popout_"]:has( > div > div:hover) { backdrop-filter: blur(var(--Flashcord-Blur_Light)); }
+    [id^="popout_"] > div > div {
+        width: 90vw; height: 80vh; max-width: unset !important; min-width: unset !important;
+        border-radius: var(--Flashcord-UI_Border-Radius); padding: 0;
+        transition-property: opacity; transition-duration: var(--Flashcord-Transition_Fast);
+        --Initial: 0 -5vh; animation: SNDL-Translate_Custom var(--Flashcord-Animation_XSlow) !important;
+    } [id^="popout_"]:active > div > div { opacity: 0; }
+}
+
+[class^="content_"]:has([class^="searchResultsWrap_"]) {
+    container-name: var(--Flashcord-Module_Search-Message, FCM-Search_Message);
+    container-type: inline-size;
+} @container FCM-Search_Message (min-width: 0) {
+    [class^="searchResultsWrap_"] {
+        width: 50vw; --Initial: 50vw;
+        animation: SNDL-Translate_Custom var(--Flashcord-Animation_XSlow);
+    }
+}
+
+[class^="positionLayer_"] {
+    container-name: var(--Flashcord-Search_Embed, FCM-Search_Embed);
+    container-type: inline-size;
+} @container FCM-Search_Embed (min-width: 0) {
+    [class^="drawerSizingWrapper_"]  {
+        width: 69vw !important;
+        animation: SNDL-Fade_In var(--Flashcord-Animation_Normal) !important;
+    }
+}
+
+[class^="appAsidePanelWrapper_"]:has([class^="backdrop_"]) {
+    container-name: var(--Flashcord-Focus, FCM-Focus);
+    container-type: inline-size;
+} @container FCM-Focus (min-width: 0) {
+    [class^="notAppAsidePanel_"]:has([class^="focusLock_"]:hover) .app_b1f720 { /* [!] */
+        filter: blur(var(--Flashcord-Blur_Normal)) brightness(var(--Flashcord-UI_Brightness));
+    } [class^="backdrop_"] { opacity: 0 !important; }
+    [class^="notAppAsidePanel_"] > [class^="app_"] {
+        transition-property: filter;
+        transition-duration: var(--Flashcord-Transition_Slow);
+        filter: blur(0px);
+    }    
+}
+
+[class^="chatContent_"] {
+    container-name: var(--Flashcord-Chatbox, FCM-Chatbox);
+    container-type: inline-size;
+} @container FCM-Chatbox (min-width: 0) {
+    [class^="scrollableContainer_"] {
+        container-name: var(--Flashcord-Chatbox, FCM-Chatbox_L1); container-type: inline-size;
+        border-radius: var(--Flashcord-UI_Border-Radius);
+    }
+    [class^="typing_"] {
+        top: -24px; width: fit-content;
+        margin-left: auto; margin-right: auto;
+        --Initial: 0 5vh; animation: SNDL-Translate_Custom var(--Flashcord-Animation_Normal) !important;
+    }
+    [class^="typing_"]:has([class^="typingDots_"]) { margin-left: 0; margin-right: 0; }
+    [class^="cooldownWrapper_"] { margin: auto !important; }
+    [class^="form_"] { padding: 0 0px 0 8px; z-index: 1; }
+    [class^="channelTextArea_"] { margin-bottom: 4px; }
+
+    @container FCM-Chatbox_L1 (min-width: 0) {
+        [class^="inner_"] {
+            display: flex; align-items: center;
+            padding: 0 8px 0 8px;
+        } [class^="placeholder_"] { display: none; }
+        [class^="attachWrapper_"] {
+            width: min-content; height: min-content;
+            margin: auto; translate: 4px;
+        } [class^="attachButton_"] { width: min-content; height: min-content; }
+        [class^="sprite_"], svg {
+            transition-property: opacity, scale; transition-duration: var(--Flashcord-Transition_Fast);
+            opacity: 0.5;
+        } [class^="sprite_"]:hover, svg:hover { opacity: 0.8; scale: 1.1; } [class^="sprite_"]:active, svg:active { scale: 0.9; }
+    }
+}
+
+[class^="messagesWrapper_"] {
+    container-name: var(--Flashcord-Jump-Bars, FCM-Jump-Bars);
+    container-type: inline-size;
+} @container FCM-Jump-Bars (min-width: 0) {
+    [class^="jumpToPresentBar_"], [class^="newMessagesBar_"] { left: auto; right: 16px; width: fit-content; }
+    [class^="jumpToPresentBar_"] { --Initial: 0 5vh; animation: SNDL-Translate_Custom var(--Flashcord-Animation_Normal) !important; }
+    [class^="newMessagesBar_"] { --Initial: 0 -5vh; animation: SNDL-Translate_Custom var(--Flashcord-Animation_Normal) !important; }
+    [class^="jumpToPresentBar_"] [class^="barButtonMain_"] { display: none; }
+}
+
+ol[class^="scrollerInner_"] {
+    container-name: var(--Flashcord-Module_Chat-Enhancements, FCM-Chat_Enhancements);
+    container-type: inline-size;
+} @container FCM-Chat_Enhancements (min-width: 0) {
+    /* Smooth Message Button Hover */
+    [class^="message_"]:hover [class^="buttons_"] {
+        animation: SNDL-Fade_In 1s; transition-duration: var(--Flashcord-Transition_Fast) !important;
+        opacity: 0.5 !important;
+    } [class^="message_"] [class^="buttons_"]:hover { opacity: 1 !important; }
+
+    /* Smooth MSG Hover */
+    [class^="message_"] { transition-property: background-color; transition-duration: var(--Flashcord-Transition_Normal) !important;}
+
+    /* Grid Layout for Embeds */
+    [id^="message-accessories-"]:has(article),
+    [id^="message-accessories-"]:has([class^="inlineMediaEmbed_"]) {
+        display: flex; flex-wrap: wrap;
+    } [id^="message-accessories-"] [class^="inlineMediaEmbed_"] { flex: 1 1 0vw; align-self: center; }
+    [id^="message-accessories-"] article {
+        display: block; flex: 1 1 25%; align-self: unset; overflow: scroll;
+        min-width: 256px; max-width: unset !important; margin: 8px;
+        border-radius: var(--Flashcord-UI_Border-Radius);
+    }
+    [class^="mediaAttachmentsContainer_"] {
+        width: auto; height: auto; justify-content: center;
+        margin-top: auto; margin-bottom: auto;
+    }
+    [class^="gridContainer_"] { max-width: unset; }
+    [id^="message-accessories-"]:has(article, [class^="inlineMediaEmbed_"]) .reactions_da5b2a { /* [!] */
+        position: absolute; bottom: 0; translate: 0 1.75rem;
+    } [id^="message-accessories-"]:has(article, [class^="inlineMediaEmbed_"]):has([class^="reactions_"]) { margin-bottom: 2rem; }
+}

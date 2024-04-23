@@ -1,13 +1,13 @@
 {
 	"id": "com.sirio-network.Flashcord-LPM",
 	"name": "Flashcord for Low-End Systems (LPM)",
-	"description": "[i] Read the Flashcord Wiki for more information. A nerfed/debloated version of Flashcord. This version is so debloated that even Windows debloaters are crying.",
+	"description": "Flashcord but nerfed, debloated. A stripped down version for those who want a no non-sense experience. [i] Read the Flashcord Wiki for more information [i]",
 	"author": {
 		"name": "SiriusBYT",
 		"discordID": "311057290562371586",
 		"github": "SiriusBYT"
 	},
-	"version": "LPM-240430",
+	"version": "LPM-240423",
 	"updater": {
 		"type": "store",
 		"id": "com.sirio-network.Flashcord-LPM"

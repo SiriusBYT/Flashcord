@@ -1,0 +1,14 @@
+/* Minor/Pop contains minor modifications which are NOT located in Discord's BaseLayer */
+
+/* Fixes an annoying bug regarding pop up menus*/
+[class^="submenuPaddingContainer_"] { margin: 4px; padding: 0; }
+
+/* Better Tooltips */
+[class^="tooltip_"] { border-radius: var(--Flashcord-UI_Border-Radius); }
+[class^="tooltipPointer_"] { display: none; }
+
+/* Control Panel: Fixes emojis not being able to get removed // bSID-DEV_240422: Shouldn't this be in the Control Panel Module? */
+[class^="emojiRow_"]::before {
+    left: 0; right: 0; bottom: 0;width: 90%;
+    background: black; border-radius: var(--Flashcord-UI_Border-Radius);
+} [class^="emojiRow_"] > [class^="button_"] { top: 16px; right: 16px; } [class^="emojiColumn_"] { margin-left: 16px; }

@@ -1,0 +1,98 @@
+/* Kernel/Ring2 handles "Blackout" animations and the Crash Page Code. */
+
+#app-mount > [class^="wrapper_"] { container-name: var(--Flashcord-Module_Crash, FCM-Crash); container-type: inline-size; }
+@container FCM-Crash (min-width: 0) {
+  [class^="flex_"] {
+    position: absolute; top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background-color: black;
+    animation: Flashcord-Welcome_CRT var(--Flashcord-Animation_Fast) ease-in, SNDL-Fade_Custom var(--Flashcord-Animation_XFast) linear infinite;
+    --Initial: 1; --Final: 0.975;
+  }
+  [class^="note_"] div::before,
+  [class^="note_"]::before {
+    color: white; white-space: pre-wrap;
+    font-family: var(--Flashcord-Font_Monospace);
+    filter: drop-shadow(0 0 2rem white);
+  }
+  [class^="note_"]::before {
+    content: var(--FCL-Crash_Header);
+    font-weight: 900; font-size: x-large;
+  } [class^="note_"] div::before { content: var(--FCL-Crash_Paragraph); }
+  /* Button Customisation */
+  [class^="button_"] {
+    background: var(--Flashcord-Accent_Dark-Heavy) !important;
+    border-radius: var(--Flashcord-UI_Border-Radius);
+    transition-property: scale; transition-duration: var(--Flashcord-Transition_Normal);
+    filter: drop-shadow(0 0 1rem red);
+  } [class^="button_"]:hover { scale: 1.1; } [class^="button_"]:active { scale: 1.0; }
+  [class^="contents_"] { font-family: var(--Flashcord-Font_Monospace); }
+  /* Gets rid of useless previous text */
+  [class^="image_"], h2, p { display: none; }
+  [class^="text_"] { width: unset; }
+}
+
+
+[class^="app_"]:has([class^="problems_"]) { container-name: var(--Flashcord-Module_Blackout, FCM-Blackout_Android); container-type: inline-size; }
+@container FCM-Blackout_Android (min-width: 0) {
+  [class^="content_"] { /* bSID-DEV_240313: This bit of code had *TWO* background proprieties. AM I FUCKING DRUNK OR SOMETHING?! */
+    position: absolute; top: 0; left: 0; width: 100vw; height: 100vh;
+    display: flex; justify-content: center; align-items: center;
+    background: rgba(0,0,0,0.9);
+    backdrop-filter: blur(var(--Flashcord-Blur_Heavy));
+    animation: SNDL-Fade_In var(--Flashcord-Animation_XSlow) !important;
+  }
+  [class^="content_"]::before {
+    content: "Flashcord";
+    text-align: center; font-weight: 900; margin: auto; scale: 5;
+    background-image: linear-gradient(90deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.05) 30%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.05) 80%, rgba(255,255,255,0.05) 100%);
+    background-size: 32vw; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    animation: SNDL-Background_MvX var(--Flashcord-Animation_XTXSlow) linear infinite !important;
+  }
+  [class^="problems_"]::before { /* bSID-DEV_240313: It's funny I assume it's never a Discord issue because Discord does fuck up bad sometimes lol. */
+    content: var(--FCL-Blackout_Android);
+    color: white; text-align: center; white-space: pre;
+    --Initial: 0 5vh; animation: SNDL-Translate_Custom var(--Flashcord-Animation_XSlow);
+  } [class^="content_"] div, video, [class^="problems_"] div { display: none; }
+}
+
+@container FCM-Blackout_Terminal (min-width: 0) {
+  [class^="container_"] { background-color: black; }
+  [class^="content_"] { /* bSID-DEV_240313: ???? THIS BIT OF CODE ALSO HAD THE DOUBLE BACKGROUND PROPRIETY- HOLY SHIT HOW IS FLASHCORD EVEN WORKING WHEN MY CODE IS THIS SHIT */
+    position: absolute; top: 0;left: 0;
+    display: flex; flex-direction: row;
+    width: fit-content; height: fit-content;
+    font-family: var(--Flashcord-Font_Monospace); font-size: large;
+    background: black; backdrop-filter: blur(var(--Flashcord-Blur_Heavy));
+    animation: SNDL-Fade_In var(--Flashcord-Animation_XSlow) !important;
+  } [class^="content_"] div, video, [class^="problems_"] { display: none; }
+  [class^="content_"]::after {
+    position: absolute; top: 21rem; left: 11rem;
+    content: "_"; margin-left: 0.5rem;
+    color: white; text-align: left; white-space: pre;
+    animation: Flashcord-DotBlink var(--Flashcord-Animation_XSlow) linear infinite;
+  }
+  [class^="content_"]::before { /* Looking back, this is hilariously bad and not very Linux-y... Too Bad! */
+    content: "Linux AuraCloud-E2A 6.4.0-3-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.4.11-1 (2023-08-17) x86_64 \A \
+=== Sirio Network OCI: AuraCloud-E2A \A \
+Private Key accepted, connection successful. \A \A \
+------------------------------------------------------------------------- \A\A \
+The programs included with the Debian GNU/Linux system are free software; \A \
+the exact distribution terms for each program are described in the \A \
+individual files in /usr/share/doc/*/copyright. \A\A \
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent \A \
+permitted by applicable law. \A\A \
+------------------------------------------------------------------------- \A \
+Last login: "var(--FlashCore-Version)" from "var(--FlashCore-Branch)" \A \
+root@AuraCloud-E2A:~# ./Flashcord.sh \A \
+AuraCloud-E2A systemd[1]: Starting nginx.service \A \
+AuraCloud-E2A systemd[1]: Started nginx.service \A \
+GET "var(--Q)"/flashcord/sid.css HTTP/1.1"var(--Q)" from "var(--Q)"discord/1.0.92 Electron/22.3.26"var(--Q)" \A \
+Starting Flashcord \A";
+    margin-top: 2rem;
+    margin-left: 0.5rem;
+    text-align: left;
+    color: white;
+    white-space: pre-wrap;
+  }
+}

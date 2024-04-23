@@ -1,0 +1,110 @@
+/* Kernel/Ring1 is a repository of Keyframes.
+
+SNDL Specific Keyframes */
+@keyframes SNDL-Fade_In { 0% { opacity: 0;} }
+@keyframes SNDL-Fade_Out { 100% { opacity: 0;} }
+@keyframes SNDL-Fade_Loop { 0% { opacity: 0;} 50% { opacity: unset;} 100% {opacity: 0;} }
+@keyframes SNDL-Fade_Custom { 0% { opacity: var(--Initial);} 100% { opacity: var(--Final);} }
+@keyframes SNDL-Translate_Custom {
+    0% { translate: var(--Initial, 0rem); opacity: 0;}
+    100% { translate: var(--Final, 0rem);}
+}
+@keyframes SNDL-Shake {
+    0% {translate: calc(1px * var(--Amplitude-X, 1)) calc(1px * var(--Amplitude-Y, 1)); rotate: calc(1.2deg * var(--Amplitude-R, 0));}
+    25% {translate: calc(-1px * var(--Amplitude-X, 1)) calc(-1px * var(--Amplitude-Y, 1)); rotate: calc(-1.4deg * var(--Amplitude-R, 0))}
+    50% {translate: calc(1px * var(--Amplitude-X, 1)) calc(-1px * var(--Amplitude-Y, 1)); rotate: calc(2.1deg * var(--Amplitude-R, 0))}
+    75% {translate: calc(-1px * var(--Amplitude-X, 1)) calc(1px * var(--Amplitude-Y, 1)); rotate: calc(-4.1deg * var(--Amplitude-R, 0))}
+    100% {translate: calc(1px * var(--Amplitude-X, 1)) calc(1px * var(--Amplitude-Y, 1)); rotate: calc(1deg * var(--Amplitude-R, 0))}
+}
+@keyframes SNDL-Background_MvX {
+    0% { background-position-x: 0vw; }
+    100% { background-position-x: 100vw; }
+}
+
+@keyframes SNDL-Rainbow_Filter {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+@keyframes SNDL-Rainbow_Backdrop-Filter {
+    0% { backdrop-filter: hue-rotate(0deg); }
+    100% { backdrop-filter: hue-rotate(360deg); }
+}
+
+/* Welcome Animations */
+@keyframes Flashcord-Welcome_Win11 {
+    0% { scale: 0.95; opacity: 0;}
+    90% { scale: 0.98; opacity: 1;}
+    100% { scale: 1.0; }
+} /* Emulates the effect Windows 11 uses when plugging in a monitor */
+@keyframes Flashcord-Welcome_CRT {
+    0% { scale: 0.98 0; filter: brightness(0);}
+    90% { scale: 1 1.1; filter: brightness(10);}
+    100% { scale: 1 1; filter: brightness(1);}
+} /* I own a CRT and it's actually a very slow fade, whatever though, everyone thinks CRTs start this way so whatever LMFAO */
+@keyframes Flashcord-Welcome_Genshin-Style { 
+    0% { scale: 0.9; filter: brightness(8) blur(32px);}
+    100% { scale: 1.0; filter: brightness(1) blur(0px);}
+} /* This is meant to emulate the pretty cool transition from the party screen in Genshin */
+
+/* Iridescent Mode Previews */
+@keyframes Flashcord-Iridescent_Light {
+    0% { backdrop-filter: hue-rotate(0deg) var(--Flashcord-Filter_Iridescent-Light) }
+    100% { backdrop-filter: hue-rotate(360deg) var(--Flashcord-Filter_Iridescent-Light); }
+}
+@keyframes Flashcord-Iridescent_Dark {
+    0% { backdrop-filter: hue-rotate(-360deg) var(--Flashcord-Filter_Iridescent-Dark); }
+    100% { backdrop-filter: hue-rotate(0deg) var(--Flashcord-Filter_Iridescent-Dark); }
+}
+
+/* To be optimized in the future, ranked from silly to OH MY FUCKING GOD- */
+@keyframes FlashCore-Splash {
+    0% { scale: 0.8; }
+    100% { scale: 1.0; }
+} 
+@keyframes Flashcord-Message_Uploaded {
+    0% { opacity: 0.5; translate: 10vw; }
+    100% { opacity: 1; translate: 0; }
+}
+@keyframes Flashcord-DotBlink {
+    0% { content: " " }
+    33% { content: "."}
+    66% { content: ".."}
+    100% { content: "..." }
+}
+@keyframes Flashcord-Typing { /* bSID-DEV-240307: This looks horrendous but I don't wanna touch DOM after the animation is finished */
+    0% { width: 0; display: block; white-space: nowrap; overflow: hidden;}
+    100% { width: 100%; display: block; white-space: nowrap; overflow: hidden;}
+}
+@keyframes Flashcord-GuildPulse {
+    0% {  filter: drop-shadow(0 0 var(--Flashcord-Guild_Notification-Size) rgb(255,0,0));}
+    14.3% {  filter: drop-shadow(0 0 var(--Flashcord-Guild_Notification-Size) rgb(255,127,0));}
+    28.6% {  filter: drop-shadow(0 0 var(--Flashcord-Guild_Notification-Size)  rgb(255,255,0));}
+    42.9% {  filter: drop-shadow(0 0 var(--Flashcord-Guild_Notification-Size) rgb(0,255,0));}
+    57.1% {  filter: drop-shadow(0 0 var(--Flashcord-Guild_Notification-Size) rgb(0,0,255));}
+    71.4% {  filter: drop-shadow(0 0 var(--Flashcord-Guild_Notification-Size) rgb(170,0,170));}
+    85.7% {  filter: drop-shadow(0 0 var(--Flashcord-Guild_Notification-Size) rgb(255,170,255));}
+    100% {  filter: drop-shadow(0 0 var(--Flashcord-Guild_Notification-Size) rgb(255,0,0));}
+} /* bSID-DEV_240420: My eyes hurt looking at this. */
+@keyframes Flashcord-Warning {
+    0% { opacity: 1; display: flex;}
+    5% { background-color: rgba(255,0,0,0.25);}
+    10% { background-color: white;}
+    15% { background-color: rgba(255,0,0,0.25);}
+    20% { background-color: white;}
+    25% { background-color: rgba(255,0,0,0.25);}
+    30% { background-color: white;}
+    35% { background-color: rgba(255,0,0,0.25);}
+    40% { background-color: white;}
+    45% { background-color: rgba(255,0,0,0.25);}
+    50% { background-color: white; opacity: 1;}
+    55% { background-color: rgba(255,0,0,0.25);}
+    60% { background-color: white;}
+    65% { background-color: rgba(255,0,0,0.25);}
+    70% { background-color: white;}
+    75% { background-color: rgba(255,0,0,0.25);}
+    80% { background-color: white;}
+    85% { background-color: rgba(255,0,0,0.25);}
+    90% { background-color: white;}
+    95% { background-color: rgba(255,0,0,0.25);}
+    100% { background-color: white; opacity: 0;}
+} /* bSID-DEV-240301: This is fucking horrendous */

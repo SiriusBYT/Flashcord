@@ -1,0 +1,52 @@
+/* Theme/CustomIMG is responsable for adding the CBM Advanced Theme. */
+
+[theme-hooker="theme-sunset"], [theme-hooker="theme-mint-apple"] { --FlashCore-Theme_Color: transparent; }
+[theme-hooker="theme-sunset"] {
+    --interactive-muted: #A0A0A0;
+    --interactive-hover: white;
+    --channels-default: #EEEEEE;
+    
+    --Flashcord-UI_Brightness: 2;
+    --background-floating: rgba(6,6,6,0.5);
+    --background-modifier-selected: rgba(16,16,16,0.5);
+    --background-modifier-hover: rgba(22,22,22,0.5);
+}
+[theme-hooker="theme-mint-apple"] {
+    --interactive-muted: #5f5f5f;
+    --primary-330: #5f5f5f;
+    --interactive-hover: black;
+    --channels-default: #111111;
+    --Flashcord-UI_Brightness: 1;
+    --background-floating: rgba(155,155,155,0.5);
+    --background-modifier-selected: rgba(200,200,200,0.5);
+    --background-modifier-hover: rgba(255,255,255,0.5);
+}
+
+@container FCM-Theme_Hooker (min-width: 0) {
+    [theme-hooker="theme-sunset"], [theme-hooker="theme-mint-apple"] { background-repeat: no-repeat; background-image: var(--Flashcord-Image_CBM); }
+
+    [theme-hooker="theme-mint-apple"] [class^="chat_"] [class^="children_"]::after { content: var(--FCL-Warning_CBM-Light) !important; }
+    [theme-hooker="theme-sunset"] [class^="chat_"] [class^="children_"]::after { content: var(--FCL-Warning_CBM-Dark) !important; }
+
+
+    [theme-hooker="theme-mint-apple"],
+    [theme-hooker="theme-sunset"] { container-name: var(--FlashCore-Theme, FCM-Theme_CBM) !important; container-type: inline-size; }
+    @container FCM-Theme_CBM (min-width: 0) {
+        body::after { backdrop-filter: var(--Flashcord-Filter_CBM); }
+        @container FCM-Member-Slide (min-width: 0) {
+            [class^="membersWrap_"] { transition-property: background-color; transition-duration: var(--Flashcord-Transition_Normal); }
+            [class^="membersWrap_"]:hover { background-color: var(--Flashcord-Floating); }
+        } [class^="autocomplete_"], [class^="autocomplete_"] [class*="categoryHeader_"] { background: var(--Flashcord-Heavy-Floating) !important; }
+        @container FCM-PM (min-width: 0) { [role="menu"] { background: var(--Flashcord-Floating); } }
+        @container FCM-Control-Panel_Float (min-width: 0) { [class^="layer_"]:nth-child(2) { border: 1px solid var(--Flashcord-Accent); background: var(--Flashcord-Floating); } }
+        @container FCM-Jump-Bars (min-width: 0) { [class^="jumpToPresentBar_"] { padding-bottom: 0; } }
+    } 
+}
+
+@container FCM-Theme_LegacyCBM (min-width: 0) {
+    body { --Flashcord-Module_Chat-Slide: FCM-Chat-Slide_Legacy; --Flashcord-UI_Brightness: 0.5; background-image: var(--Flashcord-Image_CBM); }
+    .custom-theme-background #app-mount { backdrop-filter: var(--Flashcord-Filter_CBM); }
+    [class^="layer_"]:nth-child(2) { border: 1px solid white; }
+    .custom-theme-background [class^="chat_"] [class^="title_"] [class^="children_"]::after { content: var(--FCL-Warning_Deprecated) !important; }
+    @container FCM-Control-Panel_Float (min-width: 0) { [class^="layer_"]:nth-child(2) { border: 1px solid var(--Flashcord-Accent); background: var(--Flashcord-Floating); } }
+}
