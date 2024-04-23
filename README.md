@@ -1,6 +1,5 @@
-### NOTICE
-The Channel Emojis Discord Experiment that Flashcord semi-depends on has been recently sent to the shadow realm, a fix for this absolutely chaotic change will be implemented in the next major update this April.
-**UPDATE: The next major update will release on the 23rd of April. Expect things to break as this update is ABSOLUTELY MASSIVE.**
+# Preparing to update Flashcord, major changes incoming! (4PM UTC-Paris Time)
+## Switch to STB if you don't want your stuff to break, because it WILL.
 
 # 📸 This. This is Flashcord Beta.
 ## The world's most complex Discord Theme.
