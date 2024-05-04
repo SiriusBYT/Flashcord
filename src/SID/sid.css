@@ -20,9 +20,9 @@ Kernel/BIOS Handles fonts, variables and idle optimizations.*/
     
   --FlashCore-Branch: "Flashcord Beta";
   --FlashCore-Channel: "bSID";
-  --FlashCore-Version: "240423";
+  --FlashCore-Version: "240423_HF1";
   
-  --FlashCore-Splash_Text: "Happy 17th Birthday! \A ...To myself. yay.";
+  --FlashCore-Splash_Text: "Soon starred by an \A impressive 100 people!";
   --FlashCore-Splash_Scale: 1.0;
   --FlashCore-Splash_X: 0px;
   --FlashCore-Splash_Y: 0px;
@@ -265,10 +265,10 @@ SNDL Specific Keyframes */
 }
 @keyframes SNDL-Shake {
     0% {translate: calc(1px * var(--Amplitude-X, 1)) calc(1px * var(--Amplitude-Y, 1)); rotate: calc(1.2deg * var(--Amplitude-R, 0));}
-    25% {translate: calc(-1px * var(--Amplitude-X, 1)) calc(-1px * var(--Amplitude-Y, 1)); rotate: calc(-1.4deg * var(--Amplitude-R, 0))}
-    50% {translate: calc(1px * var(--Amplitude-X, 1)) calc(-1px * var(--Amplitude-Y, 1)); rotate: calc(2.1deg * var(--Amplitude-R, 0))}
-    75% {translate: calc(-1px * var(--Amplitude-X, 1)) calc(1px * var(--Amplitude-Y, 1)); rotate: calc(-4.1deg * var(--Amplitude-R, 0))}
-    100% {translate: calc(1px * var(--Amplitude-X, 1)) calc(1px * var(--Amplitude-Y, 1)); rotate: calc(1deg * var(--Amplitude-R, 0))}
+    25% {translate: calc(-1px * var(--Amplitude-X, 1)) calc(-1px * var(--Amplitude-Y, 1)); rotate: calc(-1.4deg * var(--Amplitude-R, 0));}
+    50% {translate: calc(1px * var(--Amplitude-X, 1)) calc(-1px * var(--Amplitude-Y, 1)); rotate: calc(2.1deg * var(--Amplitude-R, 0));}
+    75% {translate: calc(-1px * var(--Amplitude-X, 1)) calc(1px * var(--Amplitude-Y, 1)); rotate: calc(-4.1deg * var(--Amplitude-R, 0));}
+    100% {translate: calc(1px * var(--Amplitude-X, 1)) calc(1px * var(--Amplitude-Y, 1)); rotate: calc(1deg * var(--Amplitude-R, 0));}
 }
 @keyframes SNDL-Background_MvX {
     0% { background-position-x: 0vw; }
@@ -645,7 +645,7 @@ This information is only visible to you, please screenshot it and send it to @Si
             [class^="membersWrap_"] { transition-property: background-color; transition-duration: var(--Flashcord-Transition_Normal); }
             [class^="membersWrap_"]:hover { background-color: var(--Flashcord-Floating); }
         } [class^="autocomplete_"], [class^="autocomplete_"] [class*="categoryHeader_"] { background: var(--Flashcord-Heavy-Floating) !important; }
-        @container FCM-PM (min-width: 0) { [role="menu"] { background: var(--Flashcord-Floating); } }
+        @container FCM-Popup-Menu (min-width: 0) { [role="menu"] { background: var(--Flashcord-Floating); } }
         @container FCM-Control-Panel_Float (min-width: 0) { [class^="layer_"]:nth-child(2) { border: 1px solid var(--Flashcord-Accent); background: var(--Flashcord-Floating); } }
         @container FCM-Jump-Bars (min-width: 0) { [class^="jumpToPresentBar_"] { padding-bottom: 0; } }
     } 
@@ -695,8 +695,8 @@ This information is only visible to you, please screenshot it and send it to @Si
                 background-image: var(--Flashcord-Image-Control_Iridescent); background-size: cover;
             }
         }
-        @container FCM-PM (min-width: 0) {
-            [class*="menu"] { outline: 1px solid var(--Flashcord-Accent); background: var(--Flashcord-Floating) }
+        @container FCM-Popup-Menu (min-width: 0) {
+            [class*="menu"] { outline: 1px solid var(--Flashcord-Accent); background: var(--Flashcord-Floating); }
             [class^="scroller_"]::before {
                 position: absolute; top: 0; left: 0; z-index: -1;
                 content: ''; width: 100%; height: 100%;
@@ -1046,32 +1046,16 @@ bSID-DEV_240411 Update: lol can't do more shit about it for now; cry about it */
 }
 @container FCM-Control-Panel_Full (min-width: 0) {
     [class^="layer_"]:nth-child(2) {
-        width: 100vw;
-        height: 100vh;
-        margin: auto;
-        padding: 0;
-        border-radius: 0;
-        animation: SNDL-Fade_In var(--Flashcord-Animation_XSlow) !important;
-    }    
-    [class^="sidebarRegion_"] {
-        max-width: 220px;
-        max-height: 100vh;
-    }
-    [class^="contentRegion_"] {
-        height: 100vh;
-    }
-    [class^="layer_"]:nth-child(2) [class^="sidebar"] {
-        max-width: 200px;
-        padding: 0;
-    }
-    [class^="standardSidebarView_"] {
-        position: static !important;
-        height: 100%;
-    }
+        width: 100vw; height: 100vh;
+        margin: auto; padding: 0;
+        border-radius: 0; animation: SNDL-Fade_In var(--Flashcord-Animation_XSlow) !important;
+    } [class^="sidebarRegion_"] { max-width: 220px; max-height: 100vh; }
+    [class^="contentRegion_"] { height: 100vh; }
+    [class^="layer_"]:nth-child(2) [class^="sidebar"] { max-width: 200px; padding: 0; }
+    [class^="standardSidebarView_"] { position: static !important; height: 100%; }
     [class^="contentColumn_"] {
         max-width: calc(100% - 16px);
-        margin: auto;
-        padding: 0;
+        margin: auto; padding: 0;
     }
 
     [class^="sidebarRegion_"] {
@@ -1382,7 +1366,7 @@ bSID-DEV_240411 Update: lol can't do more shit about it for now; cry about it */
   } [class^="scroller_"] { translate: -2px;}
   :is([class*="baseLayer_"]:has([class*="guilds_"]:hover, [class^="sidebar_"]:hover)) .sidebar_e031be {  /* [!] */
     width: 240px; will-change: width; /* <- no idea  if this helps lmfao - bSID-DEV_240421*/
-  } nav, section { overflow-x: hidden; width: 240px;}
+  } [class^="sidebar_"] :is(nav, section) { overflow-x: hidden; width: 240px;}
 }
 
 
@@ -1518,8 +1502,9 @@ bSID-DEV_240411 Update: lol can't do more shit about it for now; cry about it */
   [class^="children_"] svg:has([d="M12 22a10 10 0 1 0-8.45-4.64c.13.19.11.44-.04.61l-2.06 2.37A1 1 0 0 0 2.2 22H12Z"]) { display: block; animation: SNDL-Fade_In var(--Flashcord-Animation_Slow);}
   [class^="children_"] svg { display: none; }
 
-  [class^="positionedContainer_"] > [class^="container_"] { justify-content: flex-start; left: 13px; }
-  [class^="positionedContainer_"] svg { margin-right: 8px;}
+  /* Unread/Mention Pill aligned to left for Chat-SLide to be less painful to use */
+  [class*="top_"], [class*="bottom_"] { justify-content: flex-start; left: 13px; }
+  [class*="top_"] svg, [class*="bottom_"] svg { margin-right: 8px;}
 }
 
 #channels {
@@ -1718,7 +1703,7 @@ ol[class^="scrollerInner_"] {
     [class^="mediaAttachmentsContainer_"] {
         width: auto; height: auto; justify-content: center;
         margin-top: auto; margin-bottom: auto;
-    }
+    } [class^="visualMediaItemContainer_"] { align-self: center; }
     [class^="gridContainer_"] { max-width: unset; }
     [id^="message-accessories-"]:has(article, [class^="inlineMediaEmbed_"]) .reactions_da5b2a { /* [!] */
         position: absolute; bottom: 0; translate: 0 1.75rem;
@@ -2164,4 +2149,4 @@ Last Base Language Update: bSID-DEV_240423*/
         --FCL-Credits_Translator-Quote: "      🗨️ [Sussy Wanker Quote] SiriusBYT: " var(--Q) "GangChat will rule over the world." var(--Q)" \A\A ";
     }
 }/* Overlay/Overlay handles code to modify the Discord Overlay *//* Splash/Splash handles customizing the Discord Updater/Splash */
-:root { --FlashCore-Build_Date: "14:04:51 - 23/04/2024"; }
+:root { --FlashCore-Build_Date: "13:14:34 - 04/05/2024"; }

@@ -36,8 +36,8 @@
                 background-image: var(--Flashcord-Image-Control_Iridescent); background-size: cover;
             }
         }
-        @container FCM-PM (min-width: 0) {
-            [class*="menu"] { outline: 1px solid var(--Flashcord-Accent); background: var(--Flashcord-Floating) }
+        @container FCM-Popup-Menu (min-width: 0) {
+            [class*="menu"] { outline: 1px solid var(--Flashcord-Accent); background: var(--Flashcord-Floating); }
             [class^="scroller_"]::before {
                 position: absolute; top: 0; left: 0; z-index: -1;
                 content: ''; width: 100%; height: 100%;

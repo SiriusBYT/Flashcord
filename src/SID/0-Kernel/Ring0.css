@@ -11,10 +11,10 @@ SNDL Specific Keyframes */
 }
 @keyframes SNDL-Shake {
     0% {translate: calc(1px * var(--Amplitude-X, 1)) calc(1px * var(--Amplitude-Y, 1)); rotate: calc(1.2deg * var(--Amplitude-R, 0));}
-    25% {translate: calc(-1px * var(--Amplitude-X, 1)) calc(-1px * var(--Amplitude-Y, 1)); rotate: calc(-1.4deg * var(--Amplitude-R, 0))}
-    50% {translate: calc(1px * var(--Amplitude-X, 1)) calc(-1px * var(--Amplitude-Y, 1)); rotate: calc(2.1deg * var(--Amplitude-R, 0))}
-    75% {translate: calc(-1px * var(--Amplitude-X, 1)) calc(1px * var(--Amplitude-Y, 1)); rotate: calc(-4.1deg * var(--Amplitude-R, 0))}
-    100% {translate: calc(1px * var(--Amplitude-X, 1)) calc(1px * var(--Amplitude-Y, 1)); rotate: calc(1deg * var(--Amplitude-R, 0))}
+    25% {translate: calc(-1px * var(--Amplitude-X, 1)) calc(-1px * var(--Amplitude-Y, 1)); rotate: calc(-1.4deg * var(--Amplitude-R, 0));}
+    50% {translate: calc(1px * var(--Amplitude-X, 1)) calc(-1px * var(--Amplitude-Y, 1)); rotate: calc(2.1deg * var(--Amplitude-R, 0));}
+    75% {translate: calc(-1px * var(--Amplitude-X, 1)) calc(1px * var(--Amplitude-Y, 1)); rotate: calc(-4.1deg * var(--Amplitude-R, 0));}
+    100% {translate: calc(1px * var(--Amplitude-X, 1)) calc(1px * var(--Amplitude-Y, 1)); rotate: calc(1deg * var(--Amplitude-R, 0));}
 }
 @keyframes SNDL-Background_MvX {
     0% { background-position-x: 0vw; }

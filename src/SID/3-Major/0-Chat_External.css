@@ -19,7 +19,7 @@
   } [class^="scroller_"] { translate: -2px;}
   :is([class*="baseLayer_"]:has([class*="guilds_"]:hover, [class^="sidebar_"]:hover)) .sidebar_e031be {  /* [!] */
     width: 240px; will-change: width; /* <- no idea  if this helps lmfao - bSID-DEV_240421*/
-  } nav, section { overflow-x: hidden; width: 240px;}
+  } [class^="sidebar_"] :is(nav, section) { overflow-x: hidden; width: 240px;}
 }
 
 
@@ -155,8 +155,9 @@
   [class^="children_"] svg:has([d="M12 22a10 10 0 1 0-8.45-4.64c.13.19.11.44-.04.61l-2.06 2.37A1 1 0 0 0 2.2 22H12Z"]) { display: block; animation: SNDL-Fade_In var(--Flashcord-Animation_Slow);}
   [class^="children_"] svg { display: none; }
 
-  [class^="positionedContainer_"] > [class^="container_"] { justify-content: flex-start; left: 13px; }
-  [class^="positionedContainer_"] svg { margin-right: 8px;}
+  /* Unread/Mention Pill aligned to left for Chat-SLide to be less painful to use */
+  [class*="top_"], [class*="bottom_"] { justify-content: flex-start; left: 13px; }
+  [class*="top_"] svg, [class*="bottom_"] svg { margin-right: 8px;}
 }
 
 #channels {

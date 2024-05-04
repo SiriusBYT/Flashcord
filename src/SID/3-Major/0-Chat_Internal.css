@@ -167,7 +167,7 @@ ol[class^="scrollerInner_"] {
     [class^="mediaAttachmentsContainer_"] {
         width: auto; height: auto; justify-content: center;
         margin-top: auto; margin-bottom: auto;
-    }
+    } [class^="visualMediaItemContainer_"] { align-self: center; }
     [class^="gridContainer_"] { max-width: unset; }
     [id^="message-accessories-"]:has(article, [class^="inlineMediaEmbed_"]) .reactions_da5b2a { /* [!] */
         position: absolute; bottom: 0; translate: 0 1.75rem;

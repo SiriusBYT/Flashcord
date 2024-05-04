@@ -43,4 +43,13 @@
 /* Developer's Configuration */
 html {
     --Flashcord-Animation_Welcome: void;
+    --Flashcord-Image_CBM-Light: url("https://sirio-network.com/flashcord/ressources/backgrounds/104012603_p0.png");
+    --Flashcord-Image_CBM-Dark: url("https://sirio-network.com/flashcord/ressources/backgrounds/109063668_p0%20==%20Cropped.jpg");
+}
+
+:root {
+    --Flashcord-Configurator: "Build 240423";
+    --Flashcord-Image-Size_Iridescent-Light: cover;
+    --Flashcord-Rainbow-Animation_Iridescent-Light: void;
+    --Flashcord-Background-Animation_Iridescent-Light: void;
 }

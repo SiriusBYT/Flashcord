@@ -37,7 +37,7 @@
             [class^="membersWrap_"] { transition-property: background-color; transition-duration: var(--Flashcord-Transition_Normal); }
             [class^="membersWrap_"]:hover { background-color: var(--Flashcord-Floating); }
         } [class^="autocomplete_"], [class^="autocomplete_"] [class*="categoryHeader_"] { background: var(--Flashcord-Heavy-Floating) !important; }
-        @container FCM-PM (min-width: 0) { [role="menu"] { background: var(--Flashcord-Floating); } }
+        @container FCM-Popup-Menu (min-width: 0) { [role="menu"] { background: var(--Flashcord-Floating); } }
         @container FCM-Control-Panel_Float (min-width: 0) { [class^="layer_"]:nth-child(2) { border: 1px solid var(--Flashcord-Accent); background: var(--Flashcord-Floating); } }
         @container FCM-Jump-Bars (min-width: 0) { [class^="jumpToPresentBar_"] { padding-bottom: 0; } }
     } 
