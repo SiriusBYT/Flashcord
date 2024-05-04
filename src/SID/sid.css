@@ -20,7 +20,7 @@ Kernel/BIOS Handles fonts, variables and idle optimizations.*/
     
   --FlashCore-Branch: "Flashcord Beta";
   --FlashCore-Channel: "bSID";
-  --FlashCore-Version: "240423_HF1";
+  --FlashCore-Version: "240423_HF2";
   
   --FlashCore-Splash_Text: "Soon starred by an \A impressive 100 people!";
   --FlashCore-Splash_Scale: 1.0;
@@ -1059,7 +1059,7 @@ bSID-DEV_240411 Update: lol can't do more shit about it for now; cry about it */
     }
 
     [class^="sidebarRegion_"] {
-        container-name: var(--Flashcord-Module_ControlPanel_SidebarTweaks,FCM-Control-Panel_Tweaks);
+        container-name: var(--Flashcord-Module_Control-Panel_Side-Tweaks, FCM-Control-Panel_Side-Tweaks);
         container-type: inline-size;
     }
 
@@ -2149,4 +2149,4 @@ Last Base Language Update: bSID-DEV_240423*/
         --FCL-Credits_Translator-Quote: "      🗨️ [Sussy Wanker Quote] SiriusBYT: " var(--Q) "GangChat will rule over the world." var(--Q)" \A\A ";
     }
 }/* Overlay/Overlay handles code to modify the Discord Overlay *//* Splash/Splash handles customizing the Discord Updater/Splash */
-:root { --FlashCore-Build_Date: "13:14:34 - 04/05/2024"; }
+:root { --FlashCore-Build_Date: "15:22:38 - 04/05/2024"; }
