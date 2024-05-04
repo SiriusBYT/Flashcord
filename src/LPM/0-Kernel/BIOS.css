@@ -12,7 +12,7 @@ Kernel/BIOS Handles fonts, variables and idle optimizations.*/
     
   --FlashCore-Branch: "Flashcord";
   --FlashCore-Channel: "LPM";
-  --FlashCore-Version: "240423";
+  --FlashCore-Version: "240504";
 }
 
 /* Idle Optimizations // Iridescent Mode disables those automatically.
@@ -29,9 +29,6 @@ Maybe it will work on LPM because there's less shit though? */
     --Flashcord-Animation_Multiplier: 0;
     --Flashcord-Transition_Multiplier: 0;
     --Flashcord-Blur_Multiplier: 0;
-  
-    --Flashcord-Module_Guild-Notification: FCM-Guild_Notification_Static;
-    --Flashcord-Module_Channel-Notification: FCM-Channel_Notification-Static;  
   }
 }
 
@@ -43,7 +40,6 @@ body { /* Theming // Setting stuff for Background Images */
   background-repeat: no-repeat;
   object-fit: cover;
   background-size: cover;
-  container-name: var(--FlashCore-Theme, FCM-Theme_LegacyCBM);
 } 
 
 html.custom-theme-background { /* Permits Transparent Backgrounds (This will get rid of Nitro Themes!) */
@@ -66,6 +62,7 @@ html.custom-theme-background { /* Permits Transparent Backgrounds (This will get
   --bg-overlay-home: var(--FlashCore-Theme_Color);
   --bg-overlay-home-card: var(--FlashCore-Theme_Color);
   --bg-overlay-app-frame: var(--FlashCore-Theme_Color);
+  container-name: var(--FlashCore-Theme, FCM-Theme_HookerlessCBM);
 }
 
 html { /* bSID-DEV_240314: This file is ugly. Too bad! // bSID-DEV_240315: Unfucking in progress. // bSID-DEV_240420: Now merged in BIOS File! */

@@ -31,11 +31,6 @@
         container-name: var(--Flashcord-Chatbox, FCM-Chatbox_L1); container-type: inline-size;
         border-radius: var(--Flashcord-UI_Border-Radius);
     }
-    [class^="typing_"] {
-        top: -24px; width: fit-content;
-        margin-left: auto; margin-right: auto;
-        --Initial: 0 5vh; animation: SNDL-Translate_Custom var(--Flashcord-Animation_Normal) !important;
-    }
     [class^="typing_"]:has([class^="typingDots_"]) { margin-left: 0; margin-right: 0; }
     [class^="cooldownWrapper_"] { margin: auto !important; }
     [class^="form_"] { padding: 0 0px 0 8px; z-index: 1; }
@@ -45,14 +40,6 @@
         [class^="inner_"] {
             display: flex; align-items: center;
             padding: 0 8px 0 8px;
-        } [class^="placeholder_"] { display: none; }
-        [class^="attachWrapper_"] {
-            width: min-content; height: min-content;
-            margin: auto; translate: 4px;
-        } [class^="attachButton_"] { width: min-content; height: min-content; }
-        [class^="sprite_"], svg {
-            transition-property: opacity, scale; transition-duration: var(--Flashcord-Transition_Fast);
-            opacity: 0.5;
-        } [class^="sprite_"]:hover, svg:hover { opacity: 0.8; scale: 1.1; } [class^="sprite_"]:active, svg:active { scale: 0.9; }
+        } [class^="sprite_"], svg { opacity: 0.5; }
     }
 }

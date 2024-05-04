@@ -1,5 +1,6 @@
 @import url("0-Kernel/BIOS.css");
 @import url("0-Kernel/Ring0.css");
+@import url("0-Kernel/Ring2.css");
 
 @import url("1-Theme/01-CustomIMG.css");
 

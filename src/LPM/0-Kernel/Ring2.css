@@ -1,0 +1,8 @@
+/* Kernel/Ring3 handles branding. */
+
+[class^="notAppAsidePanel_"]::before {
+    color: var(--Flashcord-Text); font-size: 12px; font-weight: 900;
+    position: absolute; top: 8px; left: 6px; width: 100vw; opacity: 0.5; z-index: 1;
+    user-select: none; pointer-events: none;
+    content: "🪟 " var(--FlashCore-Branch) " " var(--FlashCore-Channel) "-" var(--FlashCore-Version);
+} /* bSID-DEV_240422 RC3: This is only used for Windows now. */

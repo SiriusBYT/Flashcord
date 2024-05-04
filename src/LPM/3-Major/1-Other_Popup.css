@@ -5,7 +5,6 @@
     container-type: inline-size;
     contain: paint;
 } @container FCM-Popup-Menu (min-width: 0) {
-    .theme-light, .theme-dark { animation: SNDL-Fade_In var(--Flashcord-Animation_Fast) ease-in-out;}
     [class^="scroller_"] { padding: 4px !important; }
     [class*="menu"] { border-radius: var(--Flashcord-UI_Border-Radius); min-width: 0;}
     [class^="item_"] {border-radius: var(--Flashcord-UI_Border-Radius); transition-property: background-color; transition-duration: var(--Flashcord-Transition_Fast); }

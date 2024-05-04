@@ -38,7 +38,7 @@ bSID-DEV_240411 Update: lol can't do more shit about it for now; cry about it */
     }
 
     [class^="sidebarRegion_"] {
-        container-name: var(--Flashcord-Module_ControlPanel_SidebarTweaks,FCM-Control-Panel_Tweaks);
+        container-name: var(--Flashcord-Module_ControlPanel_SidebarTweaks, FCM-Control-Panel_Side-Tweaks);
         container-type: inline-size;
     }
 
