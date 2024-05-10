@@ -1,6 +1,3 @@
-# ⚠️ The entire Sirio Network is down and Flashcord is currently innaccessible. Please download the Flashcord CSS files instead until the issue is resolved.
-## UPDATE: The issue has been found but is a server-side issue on Oracle's end, it cannot be resolved until a good amount of time.
-
 # 📸 This. This is Flashcord Beta.
 ## The world's most complex Discord Theme.
 ## It's all about the chat space.
