@@ -1,3 +1,11 @@
+## Currently collecting data about your experience with Flashchord (and other projects I'm working on)
+If you have a bunch of time, feel free to answer the poll available below. It is quite a long poll so strap in.
+### The results of this poll will have major consequences on the future of Flashcord. Please answer seriously.
+
+https://forms.gle/cWBU9jeBCNzNsPga8
+
+<br>
+
 # 📸 This. This is Flashcord Beta.
 ## The world's most complex Discord Theme.
 ## It's all about the chat space.
