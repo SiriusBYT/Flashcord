@@ -7,7 +7,7 @@
 		"discordID": "311057290562371586",
 		"github": "SiriusBYT"
 	},
-	"version": "LPM-240504",
+	"version": "LPM-240619",
 	"updater": {
 		"type": "store",
 		"id": "com.sirio-network.Flashcord-LPM"
@@ -23,6 +23,6 @@
 		"https://sirio-network.com/flashcord/ressources/store/LPM-CBM_DarkFinal.png"
 	],
 	"flashcord": {
-		"ignore-please-this-is-a-test": "to see if random bullshit like this appears in the replugged api, i could have asked myself directly but i'm too lazy to do that"
+		"show_on_flashcord_store": "false"
 	}
 }

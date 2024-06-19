@@ -1,4 +1,5 @@
 ## Flashcord development (major updates) are currently on hold until summer holidays.
+Development will restart early July.
 <br>
 
 # 📸 This. This is Flashcord Beta.

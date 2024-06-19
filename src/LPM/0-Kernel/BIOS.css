@@ -12,7 +12,7 @@ Kernel/BIOS Handles fonts, variables and idle optimizations.*/
     
   --FlashCore-Branch: "Flashcord";
   --FlashCore-Channel: "LPM";
-  --FlashCore-Version: "240504";
+  --FlashCore-Version: "240619";
 }
 
 /* Idle Optimizations // Iridescent Mode disables those automatically.

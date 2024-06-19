@@ -10,14 +10,14 @@
       margin-right: -200px; translate: -198px;
       transition-property: translate; transition-duration: var(--Flashcord-Transition_Fast);
   } [class*="sidebar_"] { z-index: 0; }
-  :is([class^="container_"]:has([class*="sidebar_"]:hover, [data-list-id="guildsnav"]:hover)) .chat__52833 { /* [!] */
+  :is([class^="container_"]:has([class*="sidebar_"]:hover, [data-list-id="guildsnav"]:hover)) .chat_a7d72e { /* [!] */
       translate: 0px;
   } [class^="chat_"]:has([class^="pageBody-"]) { margin-right: 0; translate: 0; }
 } @container FCM-Chat-Slide_Legacy (min-width: 0) {
   [class^="sidebar_"] {
     width: 40px; transition-property: width; transition-duration: var(--Flashcord-Transition_Normal);
   } [class^="scroller_"] { translate: -2px;}
-  :is([class*="baseLayer_"]:has([class*="guilds_"]:hover, [class^="sidebar_"]:hover)) .sidebar_e031be {  /* [!] */
+  :is([class*="baseLayer_"]:has([class*="guilds_"]:hover, [class^="sidebar_"]:hover)) .sidebar_a4d4d9 {  /* [!] */
     width: 240px; will-change: width; /* <- no idea  if this helps lmfao - bSID-DEV_240421*/
   } [class^="sidebar_"] :is(nav, section) { overflow-x: hidden; width: 240px;}
 }

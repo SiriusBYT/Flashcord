@@ -12,7 +12,7 @@ Kernel/BIOS Handles fonts, variables and idle optimizations.*/
     
   --FlashCore-Branch: "Flashcord";
   --FlashCore-Channel: "LPM";
-  --FlashCore-Version: "240504";
+  --FlashCore-Version: "240619";
 }
 
 /* Idle Optimizations // Iridescent Mode disables those automatically.
@@ -295,11 +295,10 @@ bSID-DEV_240411 Update: lol can't do more shit about it for now; cry about it */
       margin-right: -200px; translate: -198px;
       transition-property: translate; transition-duration: var(--Flashcord-Transition_Fast);
   } [class*="sidebar_"] { z-index: 0; }
-  :is([class^="container_"]:has([class*="sidebar_"]:hover, [data-list-id="guildsnav"]:hover)) .chat__52833 { /* [!] */
+  :is([class^="container_"]:has([class*="sidebar_"]:hover, [data-list-id="guildsnav"]:hover)) .chat_a7d72e { /* [!] */
       translate: 0px;
   } [class^="chat_"]:has([class^="pageBody-"]) { margin-right: 0; translate: 0; }
 }
-
 
 [class^="chat_"] {
   container-name: var(--Flashcord-Module_Member-Slide, FCM-Member-Slide);
@@ -509,4 +508,4 @@ bSID-DEV_240411 Update: lol can't do more shit about it for now; cry about it */
     background: black; border-radius: var(--Flashcord-UI_Border-Radius);
 } [class^="emojiRow_"] > [class^="button_"] { top: 16px; right: 16px; } [class^="emojiColumn_"] { margin-left: 16px; }
 
-:root { --FlashCore-Build_Date: "15:01:17 - 04/05/2024"; }
+:root { --FlashCore-Build_Date: "15:30:52 - 19/06/2024"; }
