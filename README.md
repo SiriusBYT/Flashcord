@@ -1,5 +1,5 @@
-## Flashcord development (major updates) are currently on hold until summer holidays.
-Development will restart early July.
+## Flashcord's Development is currently slow.
+Flashcord is honestly very usable right now and some of my other projects (notably my channel and SNWE/SNDL) desperately need attention. I apologize for the extremely long waits between update. Sometimes I really do wish I was a robot...
 <br>
 
 # 📸 This. This is Flashcord Beta.
