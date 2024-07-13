@@ -1,5 +1,6 @@
 ## Flashcord's Development is currently slow.
-Flashcord is honestly very usable right now and some of my other projects (notably my channel and SNWE/SNDL) desperately need attention. I apologize for the extremely long waits between update. Sometimes I really do wish I was a robot...
+Flashcord is honestly very usable right now and some of my other projects (notably my channel and SNWE/SNDL) desperately need attention. I apologize for the extremely long waits between update. Flashcord's development as a result is going way slower than expected as I am focusing on other stuff and trying to get rid of the gigantic burn out I got from working on this theme for now almost a year.
+Sometimes I really do wish I was a robot...
 <br>
 
 # 📸 This. This is Flashcord Beta.
