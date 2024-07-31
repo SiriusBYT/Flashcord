@@ -1,5 +1,6 @@
-## Flashcord development (major updates) are currently on hold until summer holidays.
-Development will restart early July.
+## Flashcord's Development is currently slow.
+Flashcord is honestly very usable right now and some of my other projects (notably my channel and SNWE/SNDL) desperately need attention. I apologize for the extremely long waits between update. Flashcord's development as a result is going way slower than expected as I am focusing on other stuff and trying to get rid of the gigantic burn out I got from working on this theme for now almost a year.
+Sometimes I really do wish I was a robot...
 <br>
 
 # 📸 This. This is Flashcord Beta.
@@ -29,4 +30,7 @@ Flashcord is currently in Beta, expect lots of things to change and quickly! Nex
 # 🛠️ Want to mod Flashcord?
 Check out the [Flashcord Store Template](https://github.com/SiriusBYT/Flashcord-Store-Template), if you want to install extensions of Flashcord, patches for non-Replugged client mods or want to download someone's Flashcord configuration, then check out the [Flashcord Store](https://sirio-network.com/flashcord/store). You can submit your mods/patches/configurations by making a post in #module-reviews on the SGN Discord Server. If you want to quickly configure Flashcord, check out the [Online Configuration Tool](https://sirio-network.com/flashcord/configurator) !
 
+<br>
+
+#### By using Flashcord and its derivative services, you agree to its Terms of Service provided at [https://dev.sirio-network.com/flashcord/terms-of-service](https://dev.sirio-network.com/flashcord/terms-of-service).
 ##### [Flashcord](https://github.com/SiriusBYT/flashcord) © 2023-2024 by [SiriusBYT](https://sirio-network.com) is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
