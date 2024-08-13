@@ -1,0 +1,6 @@
+/* Adaptability/Replugged_Patches-Themes handles modifying Flashcord to better look with some Replugged Themes */
+
+html:has([href*="net.saltssaumure.Squared.asar"]),
+html:has([href*="net.saltssaumure.piOS.asar"]) {
+    --Flashcord-UI_Border-Radius: 0px;
+}

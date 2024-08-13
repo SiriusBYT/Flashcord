@@ -1,0 +1,7 @@
+/* Adaptability/Replugged_Patches-Plugins handles modifying Flashcord to better look with some Replugged Plugins */
+
+/* dev.albertp.RoleDividers.asar */
+.role-divider-collapse {
+    min-height: 16px !important;
+    padding: 0;
+}

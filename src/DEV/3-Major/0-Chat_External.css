@@ -1,0 +1,193 @@
+/* Major/Chat_External contains all major modules of Flashcord that does not concern the chat window */
+
+/* Channel Slide Core */
+[class^="layers_"] > [class^="layer_"]:first-child {
+  container-name: var(--Flashcord-Module_Chat-Slide, FCM-Chat-Slide_SNDL);
+  container-type: inline-size;
+} [class^="layer_"]:first-child:has([class*="threadSidebarOpen_"], [class^="callContainer_"]) { container-name: void }
+@container FCM-Chat-Slide_SNDL (min-width: 0) {
+  [class^="chat_"]:not(:has([class^="pageBody_"])) {
+      margin-right: -200px; translate: -198px;
+      transition-property: translate; transition-duration: var(--Flashcord-Transition_Fast);
+  } [class*="sidebar_"] { z-index: 0; }
+  :is([class^="container_"]:has([class*="sidebar_"]:hover, [data-list-id="guildsnav"]:hover)) .chat_a7d72e { /* [!] */
+      translate: 0px;
+  } [class^="chat_"]:has([class^="pageBody-"]) { margin-right: 0; translate: 0; }
+} @container FCM-Chat-Slide_Legacy (min-width: 0) {
+  [class^="sidebar_"] {
+    width: 40px; transition-property: width; transition-duration: var(--Flashcord-Transition_Normal);
+  } [class^="scroller_"] { translate: -2px;}
+  :is([class*="baseLayer_"]:has([class*="guilds_"]:hover, [class^="sidebar_"]:hover)) .sidebar_a4d4d9 {  /* [!] */
+    width: 240px; will-change: width; /* <- no idea  if this helps lmfao - bSID-DEV_240421*/
+  } [class^="sidebar_"] :is(nav, section) { overflow-x: hidden; width: 240px;}
+}
+
+
+[class^="chat_"] {
+  container-name: var(--Flashcord-Module_Member-Slide, FCM-Member-Slide);
+  container-type: inline-size;
+} @container FCM-Member-Slide (min-width: 0) {
+  [class^="membersWrap_"] { height: 100%; }
+  [class^="container_"]:has([class^="membersWrap_"]) {
+      position: relative; z-index: 1;
+      margin-left: -190px; translate: 190px;
+
+      --Initial: 250px; --Final: 190px;
+      animation: SNDL-Translate_Custom var(--Flashcord-Animation_XSlow);
+      transition-property: translate; transition-duration: var(--Flashcord-Transition_Normal);
+  }
+  [class^="container_"]:has([class^="membersWrap_"]:hover) { translate: 0px; }
+  [class^="member_"] { margin-left: 0px; }
+  [class^="member_"] > div {
+      padding-top: 0px; padding-bottom: 0px;
+      border-radius: var(--Flashcord-UI_Border-Radius) !important;
+      transition-property: scale, translate; transition-duration: var(--Flashcord-Transition_Fast);
+  } [class^="member_"]:hover > div { scale: 1.05; translate: 6px; }
+  [class^="membersGroup_"] {  
+      text-align: right; height: auto;
+      padding: 8px 8px 0 64px; opacity: 0.25;
+      transition-property: opacity; transition-duration: var(--Flashcord-Transition_Slow);
+  } [class^="membersGroup_"]:hover { opacity: 1; }
+}
+
+[data-list-id="guildsnav"] {
+  container-name: var(--Flashcord-Module_Guild-Notification, FCM-Guild_Notification-Animated);
+  container-type: inline-size;
+} @container FCM-Guild_Notification-Animated (min-width: 0) {
+  [class^="listItem_"] {
+      transition-property: scale, filter !important;
+      transition-duration: var(--Flashcord-Transition_Fast);
+  }
+  [class^="listItem_"]:has([style*="height: 8px"], [class^="lowerBadge-"]), [class^="listItem_"]:hover {
+      scale: 0.975; animation: Flashcord-GuildPulse var(--Flashcord-Animation_XSlow) linear reverse infinite;
+  } [class^="pill_"] { display: none; }
+} @container FCM-Guild_Notification-Static (min-width: 0) {
+  [class^="listItem_"] {
+      transition-property: scale, filter !important;
+      transition-duration: var(--Flashcord-Transition_Fast);
+  }
+  [class^="listItem_"]:has([style*="height: 8px"], [class^="lowerBadge-"]), [class^="listItem_"]:hover {
+      scale: 0.975; filter: drop-shadow(0 0 var(--Flashcord-Guild_Notification-Size) var(--Flashcord-Guild_Notification-Color));
+  } [class^="pill_"] { display: none; }
+}
+
+[class^="container_"]:has([data-list-id="guildsnav"]) {
+  container-name: var(--Flashcord-Module_Guild, FCM-Guild_Compact);
+  container-type: inline-size;
+} @container FCM-Guild_Compact (min-width: 0) {
+  [data-list-id="guildsnav"] > [class^="scroller_"] {
+    display: flex; flex-direction: column; align-items: center;
+  } nav[class^="wrapper_"] { width: 60px; }
+  [class^="listItem_"] {
+    margin: 0; transition-property: scale; transition-duration: var(--Flashcord-Transition_Fast);
+  } foreignObject { border-radius: var(--Flashcord-UI_Border-Radius); }
+  [id^="folder-items-"] { height: auto !important; }
+  [class^="listItem_"] { scale: 0.9; }
+  [class^="listItem_"]:has([class*="selected_"]) { scale: 0.95; }
+  [class^="listItem_"]:has([class^="guildSeparator_"]) { display: none; }
+} @container FCM-Guild_Compact-Horizontal (min-width: 0) {
+  [class^="container_"] > [class^="base_"] { margin-top: 48px; z-index: 1; }
+  nav[class^="wrapper_"] { 
+    position: absolute; left: -58px; z-index: 1;
+    width: 60px; rotate: -90deg; 
+    transform-origin: right top;
+  } [data-list-id="guildsnav"] > [class^="scroller_"] { height: 100vw; padding: 0 !important; }
+  [class^="listItem_"] {
+    margin: 0; rotate: 90deg;
+    transition-property: scale; transition-duration: var(--Flashcord-Transition_Fast);
+  } foreignObject { border-radius: var(--Flashcord-UI_Border-Radius); }
+  [class^="listItem_"] { scale: 0.9; }
+  [class^="listItem_"]:has([class*="selected_"]) { scale: 0.95; }
+  [id^="folder-items-"] { height: auto !important; }
+  [class^="listItem_"]:has([class^="guildSeparator_"]) { display: none; }
+}
+
+[class^="content_"] > [class^="sidebar_"] { /* DEV-bSID-240228: They nuked the Channel Emojis experiment. I am now crying. */
+  container-name: var(--Flashcord-Module_Channel-Compact, FCM-Channel_Compact);
+  container-type: inline-size;
+} @container FCM-Channel_Compact (min-width: 0) {
+  li > div > div > a, li,
+  [class^="container_"] [class^="link_"],
+  [class^="channel_"] {
+    margin: -1px 0px -1px 0px;
+    scale: 0.95; translate: -4px;
+    border-radius: var(--Flashcord-UI_Border-Radius);
+    transition-property: scale, background-color !important; transition-duration: var(--Flashcord-Transition_Fast) !important;
+  } li:hover { scale: 1; } li:active { scale: 0.90; }
+
+  [class^="name_"] { text-align: left; }
+  h3[class^="name_"] { text-align: right !important; }
+  [class^="mainContent_"] svg,
+  [class^="addButtonIcon_"] { display: none; }
+
+  [class^="icon_"] {
+    opacity: 0.3;
+    transition-property: opacity !important;
+    transition-duration: var(--Flashcord-Transition_Fast) !important;
+  } li:hover [class^="icon_"] { opacity: 0.5; }
+
+  /* Makes who's in a voice channel visible with Chat Slide */
+  [class^="containerDefault_"] [class^="list_"] { padding-left: 8px; }
+
+  /* Special Channel Names (for spaces and centered header channels ) */
+  [data-dnd-name^="————————————"],
+  [data-dnd-name*="᲼"]  { 
+    display: flex; justify-content: center; margin: 0 !important;
+    scale: 1 !important; translate: 0px !important;
+  }
+  [data-dnd-name^="————————————"] > div{
+    margin: 0.5rem 0 0.5rem 0; padding: 0;
+    width: 80%; height: 2px;
+    opacity: 0.2; border-radius: var(--Flashcord-UI_Border-Radius);
+    background: var(--Flashcord-Text);
+  }
+  [data-dnd-name^="————————————"] > div > div { display: none; }
+  [data-dnd-name*="᲼"] a { pointer-events: none;}
+  [data-dnd-name*="᲼"] [class^="iconContainer_"] { display: none; }
+  [data-dnd-name*="᲼"] [class^="name_"] { font-weight: 900; }
+
+  [data-dnd-name^="————————————"] [class^="children_"],
+  [data-dnd-name*="᲼"] [class^="children_"] { display: none;}
+
+  [class^="children_"] [class^="iconItem_"],
+  [class^="newChannel_"] { display: none; }
+  
+  [class^="children_"] { position: absolute; right: 0; }
+
+  /* Minimize the Channel Icons */
+  [class^="children_"] svg:has([d="M12 22a10 10 0 1 0-8.45-4.64c.13.19.11.44-.04.61l-2.06 2.37A1 1 0 0 0 2.2 22H12Z"]) { display: block; animation: SNDL-Fade_In var(--Flashcord-Animation_Slow);}
+  [class^="children_"] svg { display: none; }
+
+  /* Unread/Mention Pill aligned to left for Chat-SLide to be less painful to use */
+  [class*="top_"], [class*="bottom_"] { justify-content: flex-start; left: 13px; }
+  [class*="top_"] svg, [class*="bottom_"] svg { margin-right: 8px;}
+}
+
+#channels {
+  container-name: var(--Flashcord-Module_Channel-Notification, FCM-Channel_Notification-Animated);
+  container-type: inline-size;
+} @container FCM-Channel_Notification-Animated (min-width: 0) {
+  [class*="modeUnreadImportant_"] [class^="icon_"] {
+    /* This looks INSANELY weird but this is because animating "color" is EXTREMELY CPU INTENSIVE */
+    animation: SNDL-Rainbow_Filter var(--Flashcord-Animation_XTXSlow, 4s) linear infinite;
+    transition-property: filter; transition-duration: var(--Flashcord-Animation_XTXSlow, 4s); color: red;
+    opacity: 0.5
+  }
+  [class^="linkTop_"]:has([class^="mentionsBadge_"]) .icon_eff5d4 { /* [!] */
+    opacity: 1; scale: 1;
+  }
+  [class^="mentionsBadge_"] {
+    margin: 0; translate: -220px; scale: 0.9;
+    animation: SNDL-Fade_Loop var(--Flashcord-Animation_XTXSlow, 4s) linear infinite;
+  } [class^="unread_"] { display: none;}
+} @container FCM-Channel_Notification-Static (min-width: 0) {
+  [class^="containerDefault_"]:has([class^="mentionsBadge_"]) { background: var(--Flashcord-Channel_Notification-Mention_Color); }
+  [class^="channelInfo_"] {  display: block !important; translate: -106px; }
+  [class^="children_"] { position: absolute;}
+  [class^="unread_"] { 
+    top: 0; width: 24px; height: 24px;
+    margin: 0; translate: 13px 4px;
+    background: var(--Flashcord-Channel_Notification-Unread_Color);
+    border-radius: var(--Flashcord-UI_Border-Radius);
+  }
+}

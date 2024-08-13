@@ -1,0 +1,48 @@
+/* Theme/Iridescent is responsable for adding the Iridescent Advanced Theme. */
+
+[theme-hooker="theme-citrus-sherbert"],
+[theme-hooker="theme-chroma-glow"] {
+    --FlashCore-Theme_Color: transparent; 
+    --Flashcord-UI_Brightness: 0.5;
+
+    --Flashcord-Module_Chat-Slide: FCM-Chat-Slide_Legacy;
+    --Flashcord-Module_Idle-Optimizations: void;
+}
+
+@container FCM-Theme_Hooker (min-width: 0) {
+    [theme-hooker="theme-citrus-sherbert"], [theme-hooker="theme-chroma-glow"] {
+        animation: var(--Flashcord-Background-Animation_Iridescent) var(--Flashcord-Background-Animation-Duration_Iridescent) linear infinite;
+        background-image: var(--Flashcord-Image_Iridescent); background-size: var(--Flashcord-Image-Size_Iridescent);
+    }
+    [theme-hooker="theme-citrus-sherbert"] [class^="tooltip_"],
+    [theme-hooker="theme-chroma-glow"] [class^="tooltip_"] { outline: 1px solid var(--Flashcord-Accent); }
+    
+    [theme-hooker="theme-citrus-sherbert"], [theme-hooker="theme-chroma-glow"] { background-repeat: repeat-x; container-name: FCM-Theme_Iridescent; container-type: inline-size; }
+    @container FCM-Theme_Iridescent (min-width: 0) {
+        body::after { backdrop-filter: var(--Flashcord-Filter_Iridescent); animation: var(--Flashcord-Rainbow-Animation_Iridescent) var(--Flashcord-Rainbow-Animation-Duration_Iridescent) linear infinite; }
+        [class^="chat_"] [class^="children_"]::after { content: var(--FCL-Warning_Iridescent) !important; }
+
+        @container FCM-Member-Slide (min-width: 0) {
+            [class^="membersWrap_"]::before { /* May be a performance issue? Blame chrome, I fucking hate chrome's fucking bullshit backdrop-filter bug so much I'm going to fucking piss on the moon right this fucking instant */
+                position: absolute; top: 0; left: 0; z-index: -1;
+                width: 100%; height: 100%; content: '';
+                transition-property: backdrop-filter; transition-duration: var(--Flashcord-Transition_Normal);
+            } [class^="membersWrap_"]:hover::before { /* Firefox instead of Electron When? */ backdrop-filter: blur(var(--Flashcord-Blur_Heavy)); }
+        } @container FCM-Jump-Bars (min-width: 0) { [class^="jumpToPresentBar_"] { padding-bottom: 0; } }
+
+        @container FCM-Control-Panel_Float (min-width: 0) {
+            [class^="layer_"]:nth-child(2) {
+                border: 1px solid var(--Flashcord-Accent);
+                background-image: var(--Flashcord-Image-Control_Iridescent); background-size: cover;
+            }
+        }
+        @container FCM-Popup-Menu (min-width: 0) {
+            [class*="menu"] { outline: 1px solid var(--Flashcord-Accent); background: var(--Flashcord-Floating); }
+            [class^="scroller_"]::before {
+                position: absolute; top: 0; left: 0; z-index: -1;
+                content: ''; width: 100%; height: 100%;
+                border-radius: var(--Flashcord-UI_Border-Radius); backdrop-filter: var(--Flashcord-Filter_Iridescent);
+            }
+        }
+    }
+}

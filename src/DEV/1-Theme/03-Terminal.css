@@ -1,0 +1,43 @@
+/* Theme/Terminal is responsable for adding the Terminal Advanced Theme. */
+
+[theme-hooker="theme-aurora"] {
+    font-size: 105% !important;
+    --Flashcord-Font: var(--Flashcord-Font_Monospace);
+    --FlashCore-Theme_Color: black; 
+    --bg-overlay-app-frame: transparent;
+
+    --Flashcord-Animation_Welcome: Flashcord-Welcome_CRT;
+    --Flashcord-Animation_Welcome-Speed: 500ms;
+    --Flashcord-Module_Blackout: FCM-Blackout_Terminal;
+    --Flashcord-Module_Control-Panel: FCM-Control-Panel_Full;
+    --Flashcord-Module_Channel-Notification: FCM-Channel_Notification-Static;
+    --Flashcord-Module_Guild-Notification: FCM-Guild_Notification_Static;
+    --Flashcord-Module_Guild: FCM-Guild_Compact-Horizontal;
+    --Flashcord-Module_Chat-Slide: void;
+    --Flashcord-Module_Message-Slide: void;
+
+    --Flashcord-Animation_Multiplier: 0.125;
+    --Flashcord-Transition_Multiplier: 0.125;
+    --Flashcord-Blur_Multiplier: 0.5;
+    --Flashcord-UI_Brightness: 0.25;
+    --Flashcord-UI_Border-Radius: 0;
+
+    --Flashcord-Guild_Notification-Size: 8px;
+}
+
+@container FCM-Theme_Hooker (min-width: 0) {
+    [theme-hooker="theme-aurora"] {
+        container-name: FCM-Theme_Terminal !important;
+        container-type: inline-size;
+    }
+    @container FCM-Theme_Terminal (min-width: 0) {
+        .platform-win [class^="notAppAsidePanel_"]::before {
+            content: var(--FlashCore-Branch) " // " var(--FlashCore-Channel) "-" var(--FlashCore-Version) !important;
+            color: white; opacity: 1; text-transform: lowercase;
+        }
+        @container FCM-Guild_Notification_Static (min-width: 0) { [class^="listItem_"] { scale: 0.9 !important; } }
+        @container FCM-Channel_Compact (min-width: 0) { li { scale: 0.95 !important; } }
+        @container FCM-Member-Slide (min-width: 0) { [class^="member_"]:hover > div { scale: 1 !important; translate: 0px !important; } }
+        @container FCM-Control-Panel_Full (min-width: 0) { [class^="sidebar_"] [class^="item_"] { translate: 5px !important; scale: 1 !important; } }
+    }
+}

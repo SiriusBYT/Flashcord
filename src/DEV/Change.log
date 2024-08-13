@@ -1,0 +1,4 @@
+- Added Flashcord Telemetry System (SID ONLY FOR NOW)
+- Fixed not being able to see who's in a voice chat while the chat slide is active.
+- Moved the pop menu padding fix to the pop menu module
+- Fixed bug where clicking on Menthrepin would always fade the whole pop up out, causing user irritation when attempting to select something.

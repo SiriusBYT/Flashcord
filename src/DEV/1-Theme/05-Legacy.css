@@ -1,0 +1,172 @@
+/* Theme/Legacy is responsable for adding the Flashcord Legacy Advanced Theme. */
+
+[theme-hooker="theme-easter-egg"] {
+    --bg-overlay-app-frame: white;
+    --Flashcord-Animation_Welcome: void
+    
+    /* This is REALLY how Flashcord (Legacy) used to look like (hell, it wasn't named Flashcord until I finished it, it was called Flashbang, pretty accurate lol.)
+    This is the imported colors here! No jokes!  Flashcord was never supposed to be what it became today!
+    Some colors may not be accurate due to overriding issues (they default back to Discord or Flashcord's default)
+    Also, for your sanity, this easter egg theme does not use the legacy Chat Slide (nor the abandoned legacy members slide).
+    Flashcord used to be an even bigger performance nightmare. Yes I said that. It used to be so much worse.
+    U.L. = Unknown Location; Ut.L = Untested Location */
+
+      --home-background: white;
+      
+      --header-primary: #FF42FF;
+      --header-secondary: #FFAAFF;
+      --Flashcord-Text: var(--Flashcord-Text_Legacy);
+      --text-muted: #FFBBFF;
+      --text-link: #FF69FF;
+      --text-link-low-saturation: #00FFFF; /* U.L. */
+      --text-positive: #00FF00;
+      --text-warning: #FF0000; /* U.L. */
+      --text-danger: #FFFF00; /* U.L. */
+      --text-brand: #AA00FF;
+      
+      --interactive-normal: #FF88FF;
+      --interactive-hover: #FF00FF;
+      --interactive-active: #DD00DD;
+      --interactive-muted: #FF0042;
+      
+      --mention-foreground: #ff69ff;
+      --mention-background: #ffeeFF;
+      
+      --background-primary: white;
+      --background-secondary: white;
+      --background-secondary-alt: white;
+      --background-tertiary: white;
+      --background-accent: #FF99FF;
+      --background-floating: #FFF9FF;
+      --background-nested-floating: #FF0000; /* U.L. */
+      
+      --chat-background: #00FF00; /* U.L. */
+      --chat-border: #00FF00; /* U.L. */
+      --chat-input-container-background: #00FF00; /* U.L. */
+      
+      --background-modifier-hover: #FFF0FF;
+      --background-modifier-active: #FFE0FF;
+      --background-modifier-selected: #FFE9FF;
+      --background-modifier-accent: #EE99EE;
+      
+      --info-danger-background: #00FF00; /* U.L. */
+      --info-help-background: #FFF0FF;
+      --info-help-foreground: #00AAff;
+      
+      --button-danger-background: #FF0000;
+      --button-danger-background-hover: #EE0000;
+      --button-danger-background-active: #AA0000;
+      --button-danger-background-disabled: #00FF00; /* U.L. */
+      
+      --button-secondary-background: #FFAAFF;
+      --button-secondary-background-hover: #FF99FF;
+      --button-secondary-background-active: #FF69FF;;
+      --button-secondary-background-disabled: #00FFFF;
+      
+      --button-outline-danger-text: black;
+      --button-outline-danger-border: #FF0000;
+      --button-outline-danger-background: #690000;
+      --button-outline-danger-background-hover: black;
+      --button-outline-danger-text-hover: white;
+      --button-outline-danger-border-hover: #FF0000;
+      --button-outline-danger-background-active: #690000;
+      --button-outline-danger-text-active: white;
+      --button-outline-danger-border-active: #FF0000;
+      
+      --button-outline-brand-text: black; /* U.L. */
+      --button-outline-brand-border: #00AAff; /* U.L. */
+      --button-outline-brand-background: #00AAff; /* U.L. */
+      --button-outline-brand-background-hover: #00CCff; /* U.L. */
+      --button-outline-brand-text-hover: white; /* U.L. */
+      --button-outline-brand-border-hover: #00CCff; /* U.L. */
+      --button-outline-brand-background-active: #00DDff; /* U.L. */
+      --button-outline-brand-text-active: white; /* U.L. */
+      --button-outline-brand-border-active: #00DDff; /* U.L. */
+    
+      
+      --button-outline-primary-text: #FFAAFF;
+      --button-outline-primary-border: #FFEEFF;
+      --button-outline-primary-background: #FFEEFF;
+      --button-outline-primary-background-hover: #FFF9FF;
+      --button-outline-primary-text-hover: #FFAAFF;
+      --button-outline-primary-border-hover: #FFF9FF;
+      --button-outline-primary-background-active: #FF69FF;
+      --button-outline-primary-text-active: white;
+      --button-outline-primary-border-active: #FF69FF;
+      
+      --modal-background: white;
+      --modal-footer-background: white;
+      
+      --scrollbar-thin-thumb: #FFAAFF;
+      --scrollbar-thin-track: white;
+      --scrollbar-auto-thumb: #FFAAFF;
+      --scrollbar-auto-track: white;
+      --scrollbar-auto-scrollbar-color-thumb: #00FF00; /* U.L. */
+      --scrollbar-auto-scrollbar-color-track: #00FF00; /* U.L. */
+      
+      --input-background: #FFF9FF;
+      --input-placeholder-text: #FF69FF;
+    
+      --logo-primary: #00FF00; /* U.L. */
+      
+      --focus-primary: #FFAAFF;
+      
+      --control-brand-foreground: #00FF00; /* U.L. */
+      --control-brand-foreground-new: #00FF00; /* U.L. */
+      
+      --background-mentioned: #ffF0ff;
+      --background-mentioned-hover: #ffE9ff;
+      --background-message-hover: #ffF9ff;
+      --background-message-automod: #F90000; /* Ut.L.*/
+      --background-message-automod-hover: #FF0000; /* Ut.L.*/
+      --background-message-highlight: #FFE9FF;
+      --background-message-highlight-hover: #00FF00; /* U.L. */
+      
+      --channels-default: #ff69ff;
+      --channel-icon: #FF69FF;
+      --channel-text-area-placeholder: #FFDDFF;
+      --channeltextarea-background: #FFFAFF;
+      
+      --activity-card-background: #FFF0FF; /* U.L. */
+      
+      --textbox-markdown-syntax: #AA00FF;
+      
+      --spoiler-revealed-background: #00FF00; /* U.L. */
+      --spoiler-hidden-background: #00FF00; /* U.L. */
+}
+[theme-hooker="theme-easter-egg"] body > ::before,
+[theme-hooker="theme-easter-egg"] body:before,
+[theme-hooker="theme-easter-egg"] [class^="layer_"]:nth-child(2) [class^="sidebar_"] > ::before,
+[theme-hooker="theme-easter-egg"] [class^="chat_"] [class^="title_"] [class^="children_"]::after { display: none; }
+[theme-hooker="theme-easter-egg"] [class^="icon_"] { scale: unset !important; }
+[theme-hooker="theme-easter-egg"] body {
+    --Flashcord-UI_Border-Radius: 5px;
+    --Flashcord-Language: void;
+    --Flashcord-Module_Splash-Text: void;
+    --Flashcord-Module_Idle-Optimizations: void;
+    --Flashcord-Module_Settings-Account: void;
+    --Flashcord-Module_Settings-Appearance: void;
+    --Flashcord-Module_Guild-Notification: void;
+    --Flashcord-Module_Guild: void;
+    --Flashcord-Module_Channel-Notification: void;
+    --Flashcord-Module_Image-Zoom: void;
+    --Flashcord-Module_Menthrepin: void;
+    --Flashcord-Module_Search-Message: void;
+    --Flashcord-Module_Friends: void;
+    --Flashcord-Module_User-Profile: void;
+    --Flashcord-Module_User-Role-List: void;
+    --Flashcord-Module_Role-Grid: void;
+    --Flashcord-Module_Blackout: void;
+    --Flashcord-Module_Emojis: void;
+    --Flashcord-Module_DeNitrofy: void;
+    --Flashcord-Module_Effects: void;
+    --Flashcord-Module_Image-Zoom: void;
+    --Flashcord-Focus: void;
+    --Flashcord-Chatbox: void;
+    --Flashcord-Jump-Bars: void;
+    --Flashcord-Module_Channel-Compact: void;
+}
+
+@container FCM-Theme_Hooker (min-width: 0) { [theme-hooker="theme-easter-egg"] { container-name: var(--FlashCore-Theme, FCM-Theme_Legacy) !important; container-type: inline-size; }
+    @container FCM-Theme_Legacy (min-width: 0) { @container FCM-Member-Slide (min-width: 0) { [class^="container_"]:has([class^="membersWrap_"]) { animation: unset !important; } } }
+} /* bSID-DEV_240313: Yes this looks like hell. */

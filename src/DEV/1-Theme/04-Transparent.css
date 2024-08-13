@@ -1,0 +1,18 @@
+/* Theme/Transparent is responsable for adding the Transparent Advanced Theme. */
+
+[theme-hooker="theme-sepia"] {
+    --window-win-blur: "unified-acrylic"; 
+    --FlashCore-Theme_Color: transparent; 
+    --Flashcord-UI_Brightness: 0.5;
+
+    background: transparent !important;
+    --Flashcord-Module_Chat-Slide: FCM-Chat-Slide_Legacy;
+}
+
+
+@container FCM-Theme_Hooker (min-width: 0) {
+    [theme-hooker="theme-sepia"] #app-mount { backdrop-filter: var(--Flashcord-Transparent_Filter, blur(16px) brightness(0.5)); }
+    [theme-hooker="theme-sepia"] [class^="chat_"] [class^="children_"]:after { content: var(--FCL-Warning_Transparent) !important; }
+
+    /*[theme-hooker="theme-sepia"] { container-name: FCM-Theme_Transparent !important; container-type: inline-size; } // Currently has no use - bSID-DEV_240313 */
+}
