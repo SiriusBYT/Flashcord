@@ -1,5 +1,7 @@
 ## Flashcord's Development has temporarily ceased.
 Read more about the situation here: https://x.com/siriusbyt/status/1823257445113717040?s=46
+
+(UPDATE: no matter what happens and how I feel, because of how much I love Flashcord and can't live without it, development will immediatly start again once Discord rolls out their new redesigned desktop UI.)
 <br>
 
 # 📸 This. This is Flashcord Beta.
