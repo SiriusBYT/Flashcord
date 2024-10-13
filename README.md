@@ -1,11 +1,9 @@
 # UPDATE: Flashcord 2 is basically coming. Stay tuned.
 
-The new Discord UI is so comically bad in my opinion I can't just sit around and do nothing and then have to rewrite everything while the theme is fucked for multiple days when it gets out for everyone. Stay tunned for Flashcord Gamma's rewrite. (It's time to say goodbye to beta... Unfortunately. Yes the new UI entirely breaks Flashcord.)
+The new Discord UI is so comically bad in my opinion I can't just sit around and do nothing and then have to rewrite everything while the theme is fucked for multiple days when it gets out for everyone. Stay tunned for Flashcord's rewrite. (It's time to say goodbye to beta... Unfortunately. Yes the new UI entirely breaks Flashcord.)
 
-## Flashcord's Development has temporarily ceased.
-Read more about the situation here: https://x.com/siriusbyt/status/1823257445113717040?s=46
+Bug reports are no longer accepted for Flashcord until Ceres' release. For those who are on the edge, you may follow the annoncements in the SGN Discord server for updates about the current status of the rewrite. Who knows, you might even have early access to an inferior version of Flashcord as well.
 
-(UPDATE: no matter what happens and how I feel, because of how much I love Flashcord and can't live without it, development will immediatly start again once Discord rolls out their new redesigned desktop UI.)
 <br>
 
 # 📸 This. This is Flashcord Beta.
