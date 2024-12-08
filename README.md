@@ -1,8 +1,7 @@
-# UPDATE: Flashcord 2 is basically coming. Stay tuned.
+# Flashcord is currently in the process of being rewritten.
+As I do not want Flashcord to be entirely broken when Discord releases their new Desktop UI update, Flashcord is currently being rewritten entirely to have a much better code structure, better performance and even sleeker animations and style.
 
-The new Discord UI is so comically bad in my opinion I can't just sit around and do nothing and then have to rewrite everything while the theme is fucked for multiple days when it gets out for everyone. Stay tunned for Flashcord's rewrite. (It's time to say goodbye to beta... Unfortunately. Yes the new UI entirely breaks Flashcord.)
-
-Bug reports are no longer accepted for Flashcord until Ceres' release. For those who are on the edge, you may follow the annoncements in the SGN Discord server for updates about the current status of the rewrite. Who knows, you might even have early access to an inferior version of Flashcord as well.
+You may follow Flashcord Ceres' development on the TSN Discord server and get early builds there, note that as of right now, Ceres is infinitely inferior to even the LPM branch of Flashcord. I'm currently working on a lot of other stuff in the background so updates may be slow sorry :/
 
 <br>
 
