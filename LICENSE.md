@@ -22,4 +22,6 @@ Do not make ANY kind of money using my project. This includes redirection links 
 You can only redistribute this project according to the rules stated above. Exceptions may apply only to projects stated in the "Specific License Exclusions" tab. Contact SiriusBYT at pro.siriusb@gmail.com for exclusions.
 
 ### SPECIFIC LICENSE EXCLUSIONS:
-There are no License Exclusions currently.
+- https://github.com/PhoenixAceVFX/ALP-Flashcord
+ 
+  Authorised Derivative and Commercial Use of the __Flashcord **Beta**__ code.
