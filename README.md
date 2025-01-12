@@ -3,6 +3,8 @@ As I do not want Flashcord to be entirely broken when Discord releases their new
 
 You may follow Flashcord Ceres' development on the TSN Discord server and get early builds there, note that as of right now, Ceres is infinitely inferior to even the LPM branch of Flashcord. I'm currently working on a lot of other stuff in the background so updates may be slow sorry :/
 
+## Update since Flashcord Ceres' development is very slow
+If you are considering using Flashcord Beta, please use [Phoenix's Flashcord fork](https://github.com/PhoenixAceVFX/ALP-Flashcord) until Flashcord Ceres is ready to replace Beta.
 <br>
 
 # 📸 This. This is Flashcord Beta.
