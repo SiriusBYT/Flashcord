@@ -1,10 +1,12 @@
-# Flashcord is currently in the process of being rewritten.
-As I do not want Flashcord to be entirely broken when Discord releases their new Desktop UI update, Flashcord is currently being rewritten entirely to have a much better code structure, better performance and even sleeker animations and style.
+# everybody panic discord started rolling out the desktop visual refresh
+Flashcord Ceres (the complete rewrite of Flashcord Beta for DVR), is currently ***REALLY not ready*** for everyone yet. It will be released publicly soon but please note **__A LOT of features from Beta will be missing!!__**.
 
-You may follow Flashcord Ceres' development on the TSN Discord server and get early builds there, note that as of right now, Ceres is infinitely inferior to even the LPM branch of Flashcord. I'm currently working on a lot of other stuff in the background so updates may be slow sorry :/
 
-## Update since Flashcord Ceres' development is very slow
-If you are considering using Flashcord Beta, please use [Phoenix's Flashcord fork](https://github.com/PhoenixAceVFX/ALP-Flashcord) until Flashcord Ceres is ready to replace Beta.
+I have no idea if Phoenix will fix Flashcord Beta temporarily until Ceres is out but you can check [his Flashcord fork](https://github.com/PhoenixAceVFX/ALP-Flashcord) until Flashcord Ceres is ready to replace Beta.
+
+### If you aren't aware what DVR is, it basically is the nuclear bomb for every single discord theme
+Discord is releasing soon a overhaul to the Discord client which breaks most if not all Discord themes. we're all gonna die :(
+
 <br>
 
 # 📸 This. This is Flashcord Beta.
