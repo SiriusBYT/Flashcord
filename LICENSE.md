@@ -3,7 +3,7 @@ The license below this code block applies to "Flashcord Ceres", alias the curren
 
 The following licenses are for previous versions of Flashcord:
 Flashcord (Beta Builds) © 2023-2025 by Ascellayn (alias SiriusBYT) is licensed under TSN License 1.0 - Base
-Flashcord (Alpha Builds) © 2023-2025 by Ascellayn (alias SiriusBYT) are in the public domain.
+Flashcord (Alpha Builds) © 2023-2025 by Ascellayn (alias SiriusBYT) is in the public domain.
 ```
 # Flashcord © 2023-2025 by Ascellayn (alias SiriusBYT) is licensed under TSN License 1.0 - [D_API, C_Closed]
 The Sirio Network License 1.0 - Derivable via provided interfaces, Non-Commercial.
