@@ -1,0 +1,188 @@
+/* Control/Appearance redesigns the Theme Switching page, aiding in selecting Advanced Themes. */
+
+#appearance-tab { container-name: var(--Flashcord-Module_Settings-Appearance, FCM-Settings_Appearance);container-type: inline-size; }
+@container FCM-Settings_Appearance (min-width: 0) { /* bSID-DEV_240313: WHY IS THIS CODE SO SHIT AND FUCKING UGLY?! WHAT THE FUCK IS EVEN GOING ON HERE??? FUCK THIS IM NOT FIXING IT TODAY */
+  /* bSID-DEV_240411: I've unfucked most of the code but guess what? It's still fucked. Man when the hell will I be done with this shit... */
+  [class^="themeTitle_"] button { 
+    height: unset;
+    width: unset;
+    min-width: unset;
+    min-height: unset;
+    background: transparent !important;
+    margin: 0;
+    padding: 0; 
+  } [class^="themeTitle_"] { display: block; }
+
+  [class^="themeTitle_"]::before {
+    content: var(--FCL-AT_Basic);
+    color: var(--Flashcord-Text);
+    white-space: pre-line;
+    font-weight: 900;
+    font-size: x-large;
+    text-transform: none;
+    line-height: normal;
+  } [class^="themeTitle_"] [class^="contents_"] { display: none !important; }
+  [class^="themeTitle_"] > ::before {
+    content: var(--FCL-AT_Notice);
+    color: var(--Flashcord-Text);
+    white-space: pre-line;
+    font-weight: 500;
+    font-size: large;
+    text-transform: none;
+    line-height: normal;
+    text-align: left !important;
+  }
+  section > [class^="header_"] { display: block; }
+  section > [class^="header_"]::before {
+    content: var(--FCL-AT_Advanced);
+    color: var(--Flashcord-Text);
+    white-space: pre-line;
+    font-weight: 900;
+    font-size: x-large;
+    text-transform: none;
+    line-height: normal;
+  } [class^="tryItOutButtons_"] { display: none; }
+  section > [class^="header_"] > ::before {
+    content: var(--FCL-AT_No-ThemeHooker);
+    color: var(--Flashcord-Text);
+    white-space: pre-line;
+    font-weight: 500;
+    font-size: large;
+    text-transform: none;
+    line-height: normal;
+  }
+  [class^="themeTitle_"] div { display: none; }
+  [class^="themeTitle_"] button > div { display: block !important; }
+  [class^="children_"] { flex-direction: column-reverse; }
+  div[tabindex="-1"] { order: 1; margin: 0; }
+  div[tabindex="-1"] > div { width: 100%; margin: 0; }
+  [class^="divider_"]:last-of-type, [class^="defaultColor_"]:last-of-type { display: none; }
+
+  /* General Theme Display */
+  [class^="themeSelection_"] {
+    background-position-y: center !important;
+    background-size: cover !important;
+    border-radius: var(--Flashcord-UI_Border-Radius);
+  } [class^="themeSelection_"] svg { display: none; }
+  [class*="basicThemeSelectors_"] [class^="themeSelection_"],
+  [class^="themeSelection_"][style*="--bg-gradient-mint-apple"],
+  [class^="themeSelection_"][style*="--bg-gradient-sunset"],
+  [class^="themeSelection_"][style*="--bg-gradient-aurora"],
+  [class^="themeSelection_"][style*="--bg-gradient-sepia"] {
+    background-position-x: center !important;
+  } /* bSID-DEV_240421: This is ugly but... MUST... NOT.. BREAK. THE MAGNIFICIENT IRIDESCENT MODE PREVIEW. */
+
+  /* Light Mode */
+  [class*="basicThemeSelectors_"] > [class^="themeSelectionContainer_"]:first-child > [class^="themeSelection_"] { background-image: url("https://sirio-network.com/flashcord/ressources/theme-previews/theme-light.png") !important; }
+  [class*="basicThemeSelectors_"] > [class^="themeSelectionContainer_"]:first-child > [class^="themeSelection_"]::before { content: var(--FCL-Theme_Light); }
+
+  /* Dark Mode */
+  [class*="basicThemeSelectors_"] > [class^="themeSelectionContainer_"]:nth-child(2) > [class^="themeSelection_"] { background-image: url("https://sirio-network.com/flashcord/ressources/theme-previews/theme-dark.png") !important; }
+  [class*="basicThemeSelectors_"] > [class^="themeSelectionContainer_"]:nth-child(2) > [class^="themeSelection_"]::before { content: var(--FCL-Theme_Dark); }
+
+  /* Sync Mode */
+  [class*="basicThemeSelectors_"] > [class^="themeSelectionContainer_"]:last-of-type > [class^="themeSelection_"] { background-image: var(--Flashcord-Image_Sync) !important; }
+  [class*="basicThemeSelectors_"] > [class^="themeSelectionContainer_"]:last-of-type > [class^="themeSelection_"]::before { content: var(--FCL-Theme_Sync); }
+
+  /* Advanced Theme: CBM */
+  [class^="themeSelection_"][style*="--bg-gradient-mint-apple"] { background-image: var(--Flashcord-Image_CBM-Light) !important; }
+  [class^="themeSelection_"][style*="--bg-gradient-mint-apple"]::before { content: var(--FCL-Theme_CBM-Light); }
+  [class^="themeSelection_"][style*="--bg-gradient-mint-apple"]::after { content: var(--FCL-AT_CBM-Light); }
+  [class^="themeSelectionContainer_"]:has([style*="--bg-gradient-mint-apple"]) { order: -25; }
+
+  [class^="themeSelection_"][style*="--bg-gradient-sunset"] { background-image: var(--Flashcord-Image_CBM-Dark) !important; }
+  [class^="themeSelection_"][style*="--bg-gradient-sunset"]::before { content: var(--FCL-Theme_CBM-Dark); }
+  [class^="themeSelection_"][style*="--bg-gradient-sunset"]::after { content: var(--FCL-AT_CBM-Dark); }
+  [class^="themeSelectionContainer_"]:has([style*="--bg-gradient-sunset"]) { order: -24; }
+
+  /* Advanced Theme: Irdescent */
+  [class^="themeSelection_"][style*="--bg-gradient-citrus-sherbert"] {
+    background-image: var(--Flashcord-Image_Iridescent-Light) !important; background-size: var(--Flashcord-Image-Size_Iridescent-Light) !important;
+    animation: var(--Flashcord-Background-Animation_Iridescent-Light) var(--Flashcord-Background-Animation-Duration_Iridescent-Light) linear infinite !important;
+  } [class^="themeSelectionContainer_"]:has([style*="--bg-gradient-citrus-sherbert"]) { animation: SNDL-Rainbow_Filter var(--Flashcord-Background-Animation-Duration_Iridescent-Light) linear infinite !important; }
+  [class^="themeSelection_"][style*="--bg-gradient-citrus-sherbert"]::before { content: var(--FCL-Theme_Iridescent); }
+  [class^="themeSelection_"][style*="--bg-gradient-citrus-sherbert"]::after { content: var(--FCL-AT_Iridescent-Light); }
+  [class^="themeSelectionContainer_"]:has([style*="--bg-gradient-citrus-sherbert"]) { order: -23; }
+
+  [class^="themeSelection_"][style*="--bg-gradient-chroma-glow"] {
+      background-image: var(--Flashcord-Image_Iridescent-Dark) !important; background-size: var(--Flashcord-Image-Size_Iridescent-Dark) !important;
+      animation: var(--Flashcord-Background-Animation_Iridescent-Dark) var(--Flashcord-Background-Animation-Duration_Iridescent-Dark) linear infinite !important;
+  } [class^="themeSelectionContainer_"]:has([style*="--bg-gradient-chroma-glow"]) { animation: SNDL-Rainbow_Filter var(--Flashcord-Background-Animation-Duration_Iridescent-Dark) linear infinite reverse !important; }
+  [class^="themeSelection_"][style*="--bg-gradient-chroma-glow"]::before { content: var(--FCL-Theme_Iridescent); }
+  [class^="themeSelection_"][style*="--bg-gradient-chroma-glow"]::after { content: var(--FCL-AT_Iridescent-Dark); }
+  [class^="themeSelectionContainer_"]:has([style*="--bg-gradient-chroma-glow"]) { order: -22; }
+
+  /* Advanced Theme: Terminal */
+  [class^="themeSelection_"][style*="--bg-gradient-aurora"] { background-image: url("https://sirio-network.com/flashcord/ressources/theme-previews/theme-terminal.gif") !important; }
+  [class^="themeSelection_"][style*="--bg-gradient-aurora"]::before { content: var(--FCL-Theme_Terminal); }
+  [class^="themeSelection_"][style*="--bg-gradient-aurora"]::after { content: var(--FCL-AT_Terminal); }
+  [class^="themeSelectionContainer_"]:has([style*="--bg-gradient-aurora"]) { order: -21; }
+  
+  /* Advanced Theme: Transparent */
+  [class^="themeSelection_"][style*="--bg-gradient-sepia"] {
+      background-image: var(--Flashcord-Image_Transparent) !important;
+      filter: brightness(0.25);
+  }
+  [class^="themeSelection_"][style*="--bg-gradient-sepia"]::before { content: var(--FCL-Theme_Transparent); }
+  [class^="themeSelection_"][style*="--bg-gradient-sepia"]::after { content: var(--FCL-AT_Transparent); }
+  [class^="themeSelectionContainer_"]:has([style*="--bg-gradient-sepia"]) { order: 0; }
+
+  [class^="themeSelection_"][style*="--bg-gradient-citrus-sherbert"], /* IRIDESCENT LIGHT */
+  [class^="themeSelection_"][style*="--bg-gradient-chroma-glow"], /* IRIDESCENT DARK */
+  [class^="themeSelection_"][style*="--bg-gradient-sepia"], /* TRANSPARENT */
+  [class^="themeSelection_"][style*="--bg-gradient-aurora"] /* TERMINAL MODE */
+  { /* bSID-DEV_240411: Now with more ugly brackets internally! */
+      filter: brightness(0.25);
+      cursor: not-allowed;
+  }
+
+  [class^="themeSelection_"]::after {
+    display: block;
+    text-align: center;
+    white-space: pre-wrap;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: white;
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    border-radius: var(--Flashcord-UI_Border-Radius);
+    background-color: rgba(0,0,0,0.8);
+    scale: 0.9;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: var(--Flashcord-Transition_Normal);
+  }
+  [class^="themeSelectionContainer_"]:hover [class^="themeSelection_"]::after { opacity: 1; }
+
+  [class*="basicThemeSelectors_"] > div,
+  [class^="themeSelectionContainer_"] [class^="selectionCircle_"],
+  [class^="themeSelectionContainer_"]:has([class^="themeSelection_"][style*="--bg-gradient-mint-apple"]), /* CBM LIGHT */
+  [class^="themeSelectionContainer_"]:has([class^="themeSelection_"][style*="--bg-gradient-sunset"]), /* CBM DARK */ 
+  [class^="themeSelectionContainer_"]:has([class^="themeSelection_"][style*="--bg-gradient-citrus-sherbert"]), /* IRIDESCENT LIGHT */
+  [class^="themeSelectionContainer_"]:has([class^="themeSelection_"][style*="--bg-gradient-chroma-glow"]), /* IRIDESCENT DARK */
+  [class^="themeSelectionContainer_"]:has([class^="themeSelection_"][style*="--bg-gradient-sepia"]), /* TRANSPARENT */
+  [class^="themeSelectionContainer_"]:has([class^="themeSelection_"][style*="--bg-gradient-aurora"]) /* TERMINAL MODE */
+  { /* Nevermind, have to put these brackets here too. Ok no for real this is the last time */
+    display: block !important;
+    border-radius: var(--Flashcord-UI_Border-Radius);
+    width: 100%;
+    height: 24vh;
+    margin: auto;
+    translate: 2px 2px;
+  }
+  [class^="themeSelection_"]::before {
+    color: white;
+    filter: drop-shadow(0 0 4px black);
+    white-space: pre-wrap; font-weight: 900; font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 0;
+  }
+  [class^="themeSelectionContainer_"],
+  [class^="header_"] [class^="title_"] { display: none; }
+}

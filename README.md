@@ -1,13 +1,11 @@
 # everybody panic discord started rolling out the desktop visual refresh
 Flashcord Ceres (the complete rewrite of Flashcord Beta for DVR), is currently ***REALLY not ready*** for everyone yet. It will be released publicly soon but please note **__A LOT of features from Beta will be missing!!__**.
 
-
-I have no idea if Phoenix will fix Flashcord Beta temporarily until Ceres is out but you can check [his Flashcord fork](https://github.com/PhoenixAceVFX/ALP-Flashcord) until Flashcord Ceres is ready to replace Beta.
-
 ### If you aren't aware what DVR is, it basically is the nuclear bomb for every single discord theme
 Discord is releasing soon a overhaul to the Discord client which breaks most if not all Discord themes. we're all gonna die :(
 
 <br>
+⚠️ The following images of Flashcord are outdated (as they are from Flashcord Beta), new images of Flashcord Ceres will be shown soon.
 
 # 📸 This. This is Flashcord Beta.
 ## The world's most complex Discord Theme.
@@ -39,4 +37,4 @@ Check out the [Flashcord Store Template](https://github.com/SiriusBYT/Flashcord-
 <br>
 
 #### By using Flashcord and its derivative services, you agree to its Terms of Service provided at [https://dev.sirio-network.com/flashcord/terms-of-service](https://dev.sirio-network.com/flashcord/terms-of-service).
-##### [Flashcord](https://github.com/SiriusBYT/flashcord) © 2023-2024 by [SiriusBYT](https://sirio-network.com) is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/).
+#### [Flashcord © 2023-2025 by Ascellayn (alias SiriusBYT) is licensed under TSN License 1.0 - [D_API, C_Closed]](https://dev.sirio-network.com/license/1.0)

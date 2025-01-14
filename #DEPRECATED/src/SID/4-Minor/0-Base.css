@@ -1,0 +1,21 @@
+/* Minor/Base contains minor modifications which are located in Discord's BaseLayer */
+
+/* update your fucking client nerd, and then cry cause replugged unplugged itself cuz discord bad >:( */
+[class^="updateIconForeground_"] { fill: red !important; animation: SNDL-Shake calc(100ms * var(--Flashcord-Animations, 1)) infinite; }
+
+/* Real men don't need help. */
+[href="https://support.discord.com"] { display: none; }
+[class^="recentsIcon_"] { width: 38px; } /* This is required to fix alignment issues due to removing the help button */
+
+/* @ Before Usernames */
+[class^="userTagUsernameBase_"]:before, [class^="usernameInnerRow_"]:before { content: "@" }
+
+/* Icon Hover Response */
+[class^="icon_"] { transition-property: scale; transition-duration: var(--Flashcord-Transition_Fast) !important; }
+[class^="icon_"]:hover { scale: 1.1; }
+[class^="icon_"]:active { scale: 0.9; }
+
+/* Shadowed Images Core [Container-less] */
+[class^="mediaAttachmentsContainer_"], [class^="clickableSticker_"], [class^="inlineMediaEmbed_"], [class^="emojiContainer_"] .emoji {
+    filter: drop-shadow(0px 0px var(--Flashcord-Shadow_Size) var(--Flashcord-Text));  
+}
