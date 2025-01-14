@@ -1,5 +1,20 @@
 {
-    "Folder": "Flashcord-cSID",
-    "Config_CSS": "Flashcord-cSID/Config.css",
-    "License_File": "LICENSE.md"
+    "License_File": "License.md",
+    "Watchdog": {
+        "Flashcord-cSID": {
+            "Config_CSS": "Config.css",
+            "Dev_CSS": "main.css",
+            "Prod_CSS": "Ceres_SID.css"
+        },
+        "Flashcord-cSTB": {
+            "Config_CSS": "Config.css",
+            "Dev_CSS": "main.css",
+            "Prod_CSS": "Ceres_STB.css"
+        },
+        "Flashcord-cLPM": {
+            "Config_CSS": "Config.css",
+            "Dev_CSS": "main.css",
+            "Prod_CSS": "Ceres_LPM.css"
+        }
+    }
 }
