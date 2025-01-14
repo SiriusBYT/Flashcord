@@ -38,3 +38,4 @@ Check out the [Flashcord Store Template](https://github.com/SiriusBYT/Flashcord-
 
 #### By using Flashcord and its derivative services, you agree to its Terms of Service provided at [https://dev.sirio-network.com/flashcord/terms-of-service](https://dev.sirio-network.com/flashcord/terms-of-service).
 #### [Flashcord © 2023-2025 by Ascellayn (alias SiriusBYT) is licensed under TSN License 1.0 - [D_API, C_Closed]](https://dev.sirio-network.com/license/1.0)
+##### Older versions of Flashcord (such as Beta and Alpha) have different licenses, please read LICENSE.md for more information.
