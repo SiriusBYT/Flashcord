@@ -1,13 +1,14 @@
-update: holy shit they're actually doing it, I'm busy but later today I should be able to get a Ceres build out
-
 # everybody panic discord started rolling out the desktop visual refresh
-Flashcord Ceres (the complete rewrite of Flashcord Beta for DVR), is currently ***REALLY not ready*** for everyone yet. It will be released publicly soon but please note **__A LOT of features from Beta will be missing!!__**.
-
 ### If you aren't aware what DVR is, it basically is the nuclear bomb for every single discord theme
-Discord is releasing soon a overhaul to the Discord client which breaks most if not all Discord themes. we're all gonna die :(
+Discord is releasing currently a overhaul to the Discord client which breaks most if not all Discord themes. we're all gonna die :(  
+Flashcord Ceres (the complete rewrite of Flashcord Beta for DVR), is currently ***REALLY not ready*** for everyone yet. Please note **__A LOT of features from Beta are missing!!__**.  
+#### If DVR has been rolled out to you, import "Ceres_SID.css" from this repository in your client mod.
+Flashcord Ceres is still in EXTREMELY HEAVY development, a lot of stuff will change and break often! It is though currently the only supported version of Flashcord.
+
+## If you remain unaffected, you may still use Flashcord Beta, although it is no longer actively maintained.
 
 <br>
-⚠️ The following images of Flashcord are outdated (as they are from Flashcord Beta), new images of Flashcord Ceres will be shown soon.
+⚠️ The following images of Flashcord are outdated (as they are from Flashcord Beta), new images of Flashcord Ceres will be displayed soon.
 
 # 📸 This. This is Flashcord Beta.
 ## The world's most complex Discord Theme.
