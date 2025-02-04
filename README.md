@@ -1,3 +1,5 @@
+update: holy shit they're actually doing it, I'm busy but later today I should be able to get a Ceres build out
+
 # everybody panic discord started rolling out the desktop visual refresh
 Flashcord Ceres (the complete rewrite of Flashcord Beta for DVR), is currently ***REALLY not ready*** for everyone yet. It will be released publicly soon but please note **__A LOT of features from Beta will be missing!!__**.
 
