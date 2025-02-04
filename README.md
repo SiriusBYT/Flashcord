@@ -4,6 +4,7 @@ Discord is releasing currently a overhaul to the Discord client which breaks mos
 Flashcord Ceres (the complete rewrite of Flashcord Beta for DVR), is currently ***REALLY not ready*** for everyone yet. Please note **__A LOT of features from Beta are missing!!__**.  
 #### If DVR has been rolled out to you, import "Ceres_SID.css" from this repository in your client mod.
 Flashcord Ceres is still in EXTREMELY HEAVY development, a lot of stuff will change and break often! It is though currently the only supported version of Flashcord.
+##### [The source for the default background for the "CBM" mode in Ceres is available here.](https://www.pixiv.net/en/artworks/115204201)
 
 ## If you remain unaffected, you may still use Flashcord Beta, although it is no longer actively maintained.
 
