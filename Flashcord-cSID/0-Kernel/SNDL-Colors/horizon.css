@@ -1,0 +1,8 @@
+html {
+    /* Cyan */
+    --Horizon-Darker: 6, 147, 183;
+    --Horizon-Dark: 18, 156, 199;
+    --Horizon-Normal: 36, 166, 215;
+    --Horizon-Accent: 50, 176, 231;
+    --Horizon-Light: 72, 185, 247;
+}

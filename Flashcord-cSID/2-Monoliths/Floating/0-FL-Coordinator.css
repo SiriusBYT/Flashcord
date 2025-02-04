@@ -1,0 +1,3 @@
+[class^="notAppAsidePanel_"] {
+    container: var(--FCM-Monolith_FL, FCM-Monolith_FL) / size;
+}

@@ -1,0 +1,161 @@
+[class^="sidebar_"] [class^="sidebarList_"] {
+    container: var(--FCM-List_Channels, FCM-List_Channels) / size !important;
+}
+
+@container FCM-List_Channels (width>0) {
+    /* General Appearance */
+    #channels > ul {
+        padding-bottom: 0;
+    }
+    #channels {
+        animation: SNDL-Translate_Custom var(--SNDL-Animation_Slow);
+        --Initial: -1rem;
+        
+        > ul {
+            container: SNDL-ListItem / inline-size;
+            --Enable-Selected_Modifications: 0;
+
+            li {
+                padding: 1px 0 1px 0;
+                /* General Channel Styling */
+                a {
+                    height: 32px; padding: var(--SNDL-UI_Padding) !important;
+                    border-radius: var(--SNDL-UI_Border-Radius) !important;
+                    justify-content: center;
+
+                    /* Hide settings, invite button */
+                    [class^="children_"] {
+                        [role="button"] { 
+                            display: none !important;
+                            opacity: 0.5;
+                            transition: opacity var(--SNDL-Transition_Slow);
+                        } [role="button"]:hover { opacity: 1 !important; }
+
+                        /* ... But don't hide the chat button for voice channels */
+                        [role="button"]:has([d="M12 22a10 10 0 1 0-8.45-4.64c.13.19.11.44-.04.61l-2.06 2.37A1 1 0 0 0 2.2 22H12Z"]) {
+                            display: block !important;
+                            position: absolute; right: 2px;
+                            opacity: 0; 
+                        }
+                    }
+
+                    /* I doubt anyone really like those "new" text on the channels. I hate it, better off gone. */
+                    [class^="channelInfo_"] [data-text-variant="text-xs/semibold"] { display: none; } 
+                }
+                a:has([class^="linkBottom_"] > div > div) {
+                    height: 40px;
+                }
+
+
+                /* Voice Member Fix */
+                [role="group"] {
+                    translate: none !important;
+                    width: 100%;
+                    > [class^="draggable_"] {
+                        height: 24px;
+                        margin-left: 8px !important;
+                        [class^="voiceUser_"] {
+                            height: 24px;
+                            > div { padding: 0; }
+                            [class^="userAvatar_"] { width: 20px; height: 20px; }
+                        }
+                    }
+                }
+
+                /* Slide_Chat fix, not Module dependent because this looks better imo */
+                [class^="iconVisibility_"]:has(svg), [role="group"] {
+                    padding: 0 !important;
+                    margin: 0 !important;
+                }
+
+                [class^="name_"] { margin-left: 1px; }
+
+                /* More contrast-y icons */
+                svg { color: var(--SNDL-Text) !important; }
+
+                /* Category */
+                [class^="iconVisibility_"]:has(> [data-list-item-id^="channels_"]) { translate: 0 !important; }
+                > [class*="clickable_"] {
+                    width: calc(100% - var(--SNDL-UI_Margin)); /* Yes this is cursed, blame !important bullshit */
+                    [data-list-item-id^="channels_"] {
+                        justify-content: flex-end;
+                    }
+                }
+                [class^="addButton_"] { display: none !important; }
+
+                /* Guild Master Channels Fix */
+                > div[class^="containerDefault_"] {
+                    height: 32px; margin: 0;
+                    [class^="link_"] {
+                        padding: 0;
+                        justify-content: center;
+                        [class^="iconContainer_"] {
+                            margin-left: 8px;
+                        }
+                    }
+                }
+            }
+            [class*="modeMuted_"] svg { color: var(--SNDL-Text_Faded) !important; }
+
+            /* Suggested Channels Slide Item Fix */
+            > li > [class*="wrapperCommon_"] {
+                translate: none !important;
+                width: 100%;
+
+                > div {
+                    justify-content: space-evenly;
+                }
+            }
+            
+            /* I HATE SPINES *breaks all your bones* */
+            [class^="spineBorder_"] {
+                left: 16px;
+                bottom: 16px !important;
+            }
+            [class^="spine_"] { display: none; }
+            
+            /* Threads styling fix */
+            li[class^="container_"] {
+                margin-right: 16px;
+                [role="listitem"] [class^="iconVisibility_"] {
+                    margin-left: 32px !important;
+                    > [class^="link_"] {
+                        border-radius: var(--SNDL-UI_Border-Radius) !important;
+                        padding: calc(var(--SNDL-UI_Padding) / 2);
+                    }
+                }
+            }
+        }
+    }
+    
+
+    /* Compacting the Guild Dropdown */
+    nav > div:first-of-type {
+        min-height: 32px;
+
+        > header {
+            width: 100%; height: 32px !important;
+            padding: 0 8px 0 10px !important;
+            display: flex; align-items: center;
+            > div {
+                [class^="guildIconV2Container_"] {
+                    margin-right: 16px;
+                }
+                width: 100%;
+            }
+        }
+        > div {
+            translate: 0 -24px;
+        }
+
+    }
+
+    /* Position Bars */
+    [class*="top_"], [class*="bottom_"] {
+        justify-content: flex-start;
+        left: 2px;
+        [class*="barText_"] {
+            margin-left: 6px;
+        }
+    }
+}

@@ -1,0 +1,67 @@
+[class^="membersWrap_"] {
+    container: var(--FCM-List_Members, FCM-List_Members) / inline-size;
+}
+
+@container FCM-List_Members (width>0) {
+    [role="list"], [class^="content_"] > [class^="membersWrap_"] > [class^="members_"],
+    aside[class^="membersWrap_"] > [class^="members_"][dir="ltr"] {
+        container: SNDL-ListItem / size;
+        translate: -0.4rem;
+        
+        /* Titles / Roles */
+        [class^="defaultColor_"] {
+            opacity: 0.5; transition: opacity var(--SNDL-Transition_Normal);
+            text-align: right;
+            [class^="headerContainer_"] { justify-content: flex-end; }
+            span [class^="toggleExpandIcon_"] { display: none; }
+        }
+        [class^="defaultColor_"]:hover { opacity: 1; }
+
+        /* Members */
+        [role="listitem"] {
+            animation: SNDL-Translate_Custom var(--SNDL-Animation_Slow);
+            --Initial: 16rem;
+            
+        }
+        [class^="member_"] { margin-left: 6px; }
+
+        /* Activites */
+        > div:not([class]) {
+            [class^="container_"] {
+                background-color: transparent;
+                padding: 0 0 0 6px;
+                margin-top: 0;
+                height: 44px;
+            }
+            [class^="container_"]:hover {
+                background-color: var(--background-modifier-hover);
+            }
+
+            [style^="max"] { order: -1; width: 32px; height: 32px !important; }
+            [class^="infoSection_"] {
+                [class^="userSection_"] {
+                    position: absolute;
+                    bottom: 0px;
+                    left: 28px;
+
+                    [class^="facePile_"] {
+                        margin: 0;
+                    }
+                }
+                [class^="userName_"] { display: none; }
+            }
+            /* I should poll this // 241027: WTF does this do? I already regret not commenting my code enough
+            [class^="infoSection_"]:has([style="color: var(--text-positive);"]) .userSection_c64476 {
+                opacity: 1;
+                outline: 2px solid var(--SNDL-Green);
+                border-radius: var(--SNDL-UI_Border-Radius_Circle);
+            }
+            */
+
+            /* If the user is no longer playing the game, make the whole thing black and white */
+            [role="listitem"] { transition: filter var(--SNDL-Animation_Fast); }
+            [role="listitem"]:not(:has([style="color: var(--text-positive);"])) { filter: grayscale(1); }
+            [role="listitem"]:hover { filter: grayscale(0); }
+        }
+    }
+}

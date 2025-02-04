@@ -1,0 +1,17 @@
+[data-list-id="chat-messages"] {
+    container: var(--FCM-Message_Incoming, FCM-Message_Incoming) / inline-size;
+}
+
+@container FCM-Message_Incoming (width>0) {
+    [class^="messageListItem_"] {
+        animation: SNDL-Fade_In var(--SNDL-Animation_Slow);
+    }
+    [class^="messageListItem_"]:last-of-type [class^="message_"] {
+        animation: SNDL-Translate_Custom var(--SNDL-Animation_XSlow);
+        --Initial: 8rem;
+    }
+    [class^="messageListItem_"]:last-of-type [class^="message_"]:has([class*="isSending_"]) {
+        animation: SNDL-Fade_Loop var(--SNDL-Animation_XTSlow) infinite !important;
+        translate: 8rem; --Peak: 0; --Lowest: 0.5;
+    }
+}

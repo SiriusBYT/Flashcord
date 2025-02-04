@@ -1,0 +1,106 @@
+/* Emergency Updates that disable certain features that are entirely broken */
+@import url("https://sirio-network.com/flashcord/rapid-response.css");
+
+/* The Flashcord Telemetry System (now called Seminar) is a very complex system aiming at improving the Flashcord Experience,
+read more at https://dev.sirio-network.com/flashcord/telemetry
+This currently fucking does nothing because I'm way too busy to work on it. */
+@import url("https://dev.sirio-network.com/flashcord/telemetry/genuine.css?branch=cSID&version=DEV_250204");
+@import url("https://dev.sirio-network.com/flashcord/telemetry/data.css");
+@import url("https://dev.sirio-network.com/seminar/flashcord/sync.css?token=anonymous");
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@font-face { font-family: 'Fixedsys Excelsior'; font-weight: normal; font-style: normal; font-display: swap;
+    src: url('https://sirio-network.com/sbin/Fonts/FixedsysExcelsiorIIIb.woff2') format('woff2')
+} /* The FixedSys Excelsior Font is used for Terminal mode, it is a retro monospace font. */
+
+
+/* Build Information */
+:root {
+    --Flashcord-Release: "Ceres";
+    --Flashcord-Branch: "cSID";
+    --Flashcord-Version: "DEV_250204";
+}
+
+body {
+    --font-primary: var(--SNDL-Font_Primary); 
+    --font-display: var(--SNDL-Font_Primary);
+    --font-headline: var(--SNDL-Font_Primary);
+
+    /* General UI */
+    --SNDL-Font_Primary: "Roboto";
+    --SNDL-Font_Monospace: "Fixedsys Excelsior";
+    
+    --SNDL-UI_Border-Size: 4px;
+    --SNDL-UI_Border-Radius: 25px;
+    --SNDL-UI_Border-Radius_Alt: 12.5px;
+    --SNDL-UI_Border-Radius_Circle: 6948px;
+    --SNDL-UI_Border-Radius_Square: 2px;
+    --SNDL-UI_Margin: 8px;
+    --SNDL-UI_Padding: 8px;
+
+    /* Common colors */
+    --SNDL-Banner_Text: rgba(255,255,255,0.95);
+    --SNDL-UI_Banner-Shadow: rgb(0,0,0);
+
+    --SNDL-C_Light-Feather: rgba(255,255,255,0.1);
+    --SNDL-C_Grey-Feather: rgba(100,100,100,0.1);
+    --SNDL-C_Dark-Feather: rgba(0,0,0,0.1);
+
+    --SNDL-C_Light: rgba(255,255,255,0.5);
+    --SNDL-C_Grey: rgba(100,100,100,0.5);
+    --SNDL-C_Dark: rgba(0,0,0,0.5);
+
+    --SNDL-C_Light-Heavy: rgba(255,255,255,0.8);
+    --SNDL-C_Grey-Heavy: rgba(100,100,100,0.8);
+    --SNDL-C_Dark-Heavy: rgba(0,0,0,0.8);
+
+    --SNDL-C_Light-Solid: rgb(255,255,255);
+    --SNDL-C_Grey-Solid: rgb(100,100,100);
+    --SNDL-C_Dark-Solid: rgb(0,0,0);
+
+    /* "-Themed" variables */ 
+    --SNDL-BF_Dark: blur(8px) brightness(0.5);
+    --SNDL-BF_Light: blur(8px) brightness(1.5);
+    --SNDL-BF-BL_Dark: blur(8px);
+    --SNDL-BF-BL_Light: blur(8px);
+
+    /* Always identical variables */
+    --SNDL-C_Secondary: var(--SNDL-C_Grey);
+    --SNDL-C_Secondary-Inverted: var(--SNDL-C_Grey);
+    --SNDL-C_Secondary-Heavy: var(--SNDL-C_Grey-Heavy);
+    --SNDL-C_Secondary-Heavy_Inverted: var(--SNDL-C_Grey-Heavy);
+    --SNDL-C_Secondary-Solid: var(--SNDL-C_Grey-Solid);
+    --SNDL-C_Secondary-Solid_Inverted: var(--SNDL-C_Grey-Solid);
+    --SNDL-C_Secondary-Feather: var(--SNDL-C_Grey-Feather);
+    --SNDL-C_Secondary-Feather_Inverted: var(--SNDL-C_Grey-Feather);
+
+    /* Variables with Modifiers */
+    --SNDL-Animation_XFast: calc(var(--SNDL-Animation_Multiplier, 1) * 62.5ms);
+    --SNDL-Animation_Fast: calc(var(--SNDL-Animation_Multiplier, 1) * 125ms);
+    --SNDL-Animation_Normal: calc(var(--SNDL-Animation_Multiplier, 1) * 250ms);
+    --SNDL-Animation_Slow: calc(var(--SNDL-Animation_Multiplier, 1) * 500ms);
+    --SNDL-Animation_XSlow: calc(var(--SNDL-Animation_Multiplier, 1) * 1s);
+    --SNDL-Animation_XTSlow: calc(var(--SNDL-Animation_Multiplier, 1) * 2s);
+    --SNDL-Animation_XTXSlow: calc(var(--SNDL-Animation_Multiplier, 1) * 4s);
+    --SNDL-Animation_HySlow: calc(var(--SNDL-Animation_Multiplier, 1) * 8s);
+
+    --SNDL-Transition_XFast: calc(var(--SNDL-Transition_Multiplier, 1) * 62.5ms);
+    --SNDL-Transition_Fast: calc(var(--SNDL-Transition_Multiplier, 1) * 125ms);
+    --SNDL-Transition_Normal: calc(var(--SNDL-Transition_Multiplier, 1) * 250ms);
+    --SNDL-Transition_Slow: calc(var(--SNDL-Transition_Multiplier, 1) * 500ms);
+    --SNDL-Transition_XSlow: calc(var(--SNDL-Transition_Multiplier, 1) * 1s);
+    --SNDL-Transition_XTSlow: calc(var(--SNDL-Transition_Multiplier, 1) * 2s);
+    --SNDL-Transition_XTXSlow: calc(var(--SNDL-Transition_Multiplier, 1) * 4s);
+    --SNDL-Transition_HyXSlow: calc(var(--SNDL-Transition_Multiplier, 1) * 8s);
+
+    --SNDL-Blur_Heavy: calc(var(--SNDL-Blur_Multiplier, 1) * 16px);
+    --SNDL-Blur_Normal: calc(var(--SNDL-Blur_Multiplier, 1) * 8px);
+    --SNDL-Blur_Light: calc(var(--SNDL-Blur_Multiplier, 1) * 4px);
+    --SNDL-Blur_Feather: calc(var(--SNDL-Blur_Multiplier, 1) * 2px);
+
+    --SNDL-UI_Hover-Intensity: 1;
+}
+
+/* Scroll Bars? WHAT ARE THOOOOOOSE?? I should still do something about it though. */
+::-webkit-scrollbar { display: none !important; }

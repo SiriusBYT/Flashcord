@@ -1,0 +1,56 @@
+[class^="sidebar_"] [class^="sidebarList_"] > nav > [class^="scroller_"] {
+    container: var(--FCM-Notification_Channels, FCM-Notification_Channels) / size !important;
+}
+
+@container FCM-Notification_Channels (width>0) {
+    /* Unread Circle */
+    [class^="unread_"], [class^="numberBadge_"] {
+        position: absolute;
+        top: 8px; left: 5px;
+        width: 24px !important; height: 24px;
+
+        border-radius: var(--SNDL-UI_Border-Radius);
+        background: var(--SNDL-Blue);
+
+        animation: SNDL-Fade_In var(--SNDL-Animation_Fast);
+    }
+    [class*="modeUnreadImportant_"] [class^="icon_"] { color: var(--SNDL-Text_Inverted) !important; }
+
+    /* Mentions */
+    [class^="mentionsBadge_"] {
+        position: absolute;
+        left: -8px; top: -8px; margin: 0;
+
+        animation: SNDL-Fade_In var(--SNDL-Animation_XSlow);
+
+        pointer-events: none;
+        [class^="numberBadge_"] {
+            height: 24px !important; width: 24px !important;
+            border-radius: var(--SNDL-UI_Border-Radius_Circle);
+            scale: 0.8;
+        }
+    }
+    /* Keep showing the mentions badge even if it is hovered */
+    [class^="channelInfo_"]:has([class^="mentionsBadge_"]) { display: block !important; }
+
+    /* Fixes for Threads */
+    [role="group"] {
+        [class^="unread_"] {
+            left: -27.5px; top: 9px;
+            scale: 0.8;
+        }
+        [class^="mentionsBadge_"] {
+            left: -35px; top: -1px;
+            scale: 0.75;
+        }
+    }
+
+    /* Guild Master Channels Fix */
+    li > div[class^="containerDefault_"] {
+        [class^="unread_"] { display: none; }
+        [class^="numberBadge_"] {
+            top: 4px; z-index: -1;
+            color: transparent;
+        }
+    }
+}

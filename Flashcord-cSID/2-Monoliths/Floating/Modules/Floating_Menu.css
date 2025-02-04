@@ -1,0 +1,13 @@
+@container FCM-Monolith_FL (width>0) {
+    [role="menu"] {
+        border-radius: var(--SNDL-UI_Border-Radius);
+        [dir="ltr"] {
+            padding: var(--SNDL-UI_Padding) !important;
+            [role="group"] {
+                > div {
+                    border-radius: var(--SNDL-UI_Border-Radius);
+                }
+            }
+        }
+    }
+}

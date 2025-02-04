@@ -1,0 +1,12 @@
+html.theme-dark.theme-darker {
+    container: var(--Flashcord-Theme, FCT_CBM) / size;
+}
+html.theme-dark.theme-midnight {
+    container: var(--Flashcord-Theme, FCT_OLED) / size;
+}
+html.theme-light {
+    container: var(--Flashcord-Theme, FCT_Light) / size;
+}
+html.theme-dark {
+    container: var(--Flashcord-Theme, FCT_Dark) / size;
+}

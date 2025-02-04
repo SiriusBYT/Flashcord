@@ -1,0 +1,10 @@
+/* This is for the Threads being on the side */
+[class^="page_"]:has(> [class^="chatLayerWrapper_"]) {
+    container: var(--FCM-Thread, FCM-Thread) / size;
+}
+
+@container FCM-Thread (width>0) {
+    [class^="chatLayerWrapper_"] {
+        animation: SNDL-Fade_In var(--SNDL-Animation_Normal);
+    }
+}

@@ -1,0 +1,82 @@
+@container FCT_CBM (width>0) {
+    [class^="bg_"] {
+        background: var(--Flashcord-Theme_CBM-Image, url("https://dev.sirio-network.com/flashcord/ressources/ceres/cbmtest1.jpg")) !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+    [class^="bg_"]::before {
+        content: ""; display: block;
+        position: fixed; top: 0;
+        width: 100vw; height: 100vh;
+        backdrop-filter: blur(var(--Flashcord-Theme_CBM-Blur, 8px)) brightness(var(--Flashcord-Theme_CBM-Brightness, 0.5));
+    }
+    body {
+        /* Add transparency to most stuff */
+        
+        --bg-overlay-2: transparent;
+        --bg-overlay-4: transparent;
+        --bg-overlay-chat: transparent;
+        --background-base-lowest: transparent; /* Guild Name */
+        --background-base-lower: transparent; /* Weird ass bar above the message box */
+
+        --background-primary: rgba(var(--Black-Ascellyan), 0.75);
+        --background-secondary: rgba(var(--Black-Ascellyan), 0.25);
+        --bg-base-tertiary: transparent;
+    }
+
+    /* This lets us disable Slide_Chat with a variable, setting the var in body fucks it*/
+    [class^="container_"]:has(> [class^="base_"]) {
+        container: var(--FCM-Slide_Chat, FCM-Slide_Chat-Legacy) / inline-size !important;
+    }
+
+    /* Module Styling */
+    @container FCM-Slide_Members (width>0) {
+        aside > [class^="members"]::before {
+            content: "";
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%;
+            transition: backdrop-filter var(--SNDL-Transition_Normal);
+        }
+        aside > [class^="members"]:hover::before {
+            backdrop-filter: blur(var(--SNDL-Blur_Heavy));
+        }
+    }
+    @container FCM-Slide_Chat-Legacy (width>0) {
+        [class^="sidebar_"]::before {
+            content: "";
+            position: absolute;
+            width: 100%; height: 100%;
+            transition: backdrop-filter var(--SNDL-Transition_Normal), background var(--SNDL-Transition_Normal);
+        }
+        [class^="sidebar_"]:hover::before {
+            background: rgba(var(--Black-Ascellyan), 0.8);
+            backdrop-filter: blur(var(--SNDL-Blur_Normal));
+        }
+
+        /* Visible Username while slided fix */
+        @container FCM-List_Channels (width>0) {
+            #channels [role="group"] > [class^="draggable_"] [class^="voiceUser_"] > div > [class^="container_"] {
+                margin-left: 1px;
+            }
+        }
+    }
+    @container FCM-Monolith_FL (width>0) {
+        [role="menu"] {
+            background: transparent;
+        }
+        [role="menu"]::before {
+            content: ""; position: absolute;
+            border-radius: var(--SNDL-UI_Border-Radius);
+            width: 100%; height: 100%;
+            background: rgba(var(--Black-Ascellyan), 0.5);
+            backdrop-filter: blur(var(--SNDL-Blur_Normal));
+        }
+    }
+    /*
+    @container FCM-TitleBar (width>0) {
+        [class^="base_"] > [class^="bar_"] {
+            background: rgba(var(--Black-Ascellyan), 0.5);
+        }
+    }*/
+
+}
