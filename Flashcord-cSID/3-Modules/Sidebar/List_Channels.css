@@ -131,6 +131,36 @@
 
     /* Compacting the Guild Dropdown */
     nav > div:first-of-type {
+        header {
+            display: flex; justify-content: center; align-items: center;
+            height: 0 !important; z-index: 100 !important;
+            padding: 0 !important;
+
+            > div > :is(div, h2) { display: none; }
+            [class^="headerChildren_"] {
+                position: fixed; top: 0.5rem; right: 1rem; 
+                display: block;
+                svg {
+                    top: unset; left: unset;
+                    padding: calc(var(--SNDL-UI_Padding) /2); margin: 0;
+                    transform: translate3d(0,3px,0); /* This is real discord css I had to copy. I'm not into SVGs I don't even know WTF this really does other than fix the weird thingy when you click */
+
+                    background-color: var(--SNDL-C_Primary-Inverted) !important;
+                    color: var(--SNDL-Text_Inverted) !important;
+                    border-radius: var(--SNDL-UI_Border-Radius_Circle);
+                }
+            }
+        }
+        > [class^="animatedContainer_"] { /* Channel Banner */
+            top: 0;
+            [class^="bannerIm"] {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    /* Useless, they readded fucking back the shit at the top, it's better but come on make up your damn mind discord
+    nav > div:first-of-type {
         min-height: 32px;
 
         > header {
@@ -148,7 +178,7 @@
             translate: 0 -24px;
         }
 
-    }
+    }*/
 
     /* Position Bars */
     [class*="top_"], [class*="bottom_"] {

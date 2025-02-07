@@ -6,7 +6,7 @@
     /* Unread Circle */
     [class^="unread_"], [class^="numberBadge_"] {
         position: absolute;
-        top: 8px; left: 5px;
+        top: 8px; left: 6px;
         width: 24px !important; height: 24px;
 
         border-radius: var(--SNDL-UI_Border-Radius);

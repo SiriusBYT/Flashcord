@@ -4,7 +4,7 @@
 /* The Flashcord Telemetry System (now called Seminar) is a very complex system aiming at improving the Flashcord Experience,
 read more at https://dev.sirio-network.com/flashcord/telemetry
 This currently fucking does nothing because I'm way too busy to work on it. */
-@import url("https://dev.sirio-network.com/flashcord/telemetry/genuine.css?branch=cSID&version=DEV_250204");
+@import url("https://dev.sirio-network.com/flashcord/telemetry/genuine.css?branch=cSID&version=DEV_250207");
 @import url("https://dev.sirio-network.com/flashcord/telemetry/data.css");
 @import url("https://dev.sirio-network.com/seminar/flashcord/sync.css?token=anonymous");
 
@@ -19,13 +19,16 @@ This currently fucking does nothing because I'm way too busy to work on it. */
 :root {
     --Flashcord-Release: "Ceres";
     --Flashcord-Branch: "cSID";
-    --Flashcord-Version: "DEV_250204";
+    --Flashcord-Version: "DEV_250207";
 }
 
 body {
     --font-primary: var(--SNDL-Font_Primary); 
     --font-display: var(--SNDL-Font_Primary);
     --font-headline: var(--SNDL-Font_Primary);
+
+    /* Stupid */
+    --Discord-TitleBar_Size: 36px;
 
     /* General UI */
     --SNDL-Font_Primary: "Roboto";

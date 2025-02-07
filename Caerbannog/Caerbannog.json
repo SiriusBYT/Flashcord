@@ -5,11 +5,6 @@
             "Config_CSS": "Config.css",
             "Dev_CSS": "main.css",
             "Prod_CSS": "Ceres_SID.css"
-        },
-        "Flashcord-cLPM": {
-            "Config_CSS": "Config.css",
-            "Dev_CSS": "main.css",
-            "Prod_CSS": "Ceres_LPM.css"
         }
     }
 }

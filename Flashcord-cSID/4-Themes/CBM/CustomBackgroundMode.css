@@ -48,7 +48,8 @@
             width: 100%; height: 100%;
             transition: backdrop-filter var(--SNDL-Transition_Normal), background var(--SNDL-Transition_Normal);
         }
-        [class^="sidebar_"]:hover::before {
+        [class^="sidebar_"]:hover::before,
+        [class^="sidebar_"]:has([style^=""]):not([style*="0px;"])::before {
             background: rgba(var(--Black-Ascellyan), 0.8);
             backdrop-filter: blur(var(--SNDL-Blur_Normal));
         }

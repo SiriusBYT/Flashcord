@@ -41,8 +41,8 @@
             [class^="infoSection_"] {
                 [class^="userSection_"] {
                     position: absolute;
-                    bottom: 0px;
-                    left: 28px;
+                    bottom: 0;
+                    left: 22px;
 
                     [class^="facePile_"] {
                         margin: 0;

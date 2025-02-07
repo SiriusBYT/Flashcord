@@ -48,7 +48,7 @@
             }
             [class^="toolsContainer_"] [class^="tools_"] { z-index: -1; }
             [class^="closeButton_"] {
-                position: fixed; top: 0; left: 0;
+                position: fixed; top: var(--Discord-TitleBar_Size); left: 0;
                 width: 100vw; height: 100vh;
                 border-radius: 0; border: unset;
                 background: transparent;

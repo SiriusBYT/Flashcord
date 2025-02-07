@@ -30,7 +30,6 @@
         width: calc(var(--custom-guild-list-width) + 38px) !important;
         height: 100%; z-index: 10;
         transition: width var(--SNDL-Transition_Normal);
-        border-radius: 0 var(--SNDL-UI_Border-Radius_Alt) var(--SNDL-UI_Border-Radius_Alt) 0 !important;
 
         display: flex !important;
         flex-direction: row;
@@ -39,8 +38,10 @@
             height: 100%;
         }
     }
-    [class^="sidebar_"]:hover {
+    [class^="sidebar_"]:hover,
+    [class^="sidebar_"]:has([style^=""]):not([style*="0px;"]) {
         width: var(--custom-guild-sidebar-width) !important;
+        border-radius: 0 var(--SNDL-UI_Border-Radius_Alt) var(--SNDL-UI_Border-Radius_Alt) 0 !important;
     }
     [class^="page_"], [class^="base_"] > [class^="notice_"] {
         z-index: 1;
