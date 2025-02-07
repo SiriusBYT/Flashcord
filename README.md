@@ -1,9 +1,18 @@
 # everybody panic discord started rolling out the desktop visual refresh
 ### If you aren't aware what DVR is, it basically is the nuclear bomb for every single discord theme
 Discord is releasing currently a overhaul to the Discord client which breaks most if not all Discord themes. we're all gonna die :(  
-Flashcord Ceres (the complete rewrite of Flashcord Beta for DVR), is currently ***REALLY not ready*** for everyone yet. Please note **__A LOT of features from Beta are missing!!__**.  
-#### If DVR has been rolled out to you, import "Ceres_SID.css" from this repository in your client mod.
-Flashcord Ceres is still in EXTREMELY HEAVY development, a lot of stuff will change and break often! It is though currently the only supported version of Flashcord.
+Flashcord Ceres (the complete rewrite of Flashcord Beta for DVR), is currently ***REALLY not ready*** for everyone yet. Please note **__A LOT of features from Beta are missing!!__**. Flashcord Ceres is still in EXTREMELY HEAVY development, a lot of stuff 
+will change and break often! It is though currently the only supported 
+version of Flashcord.
+#### If DVR has been rolled out to you, use "Ceres_SID.css" from this repository in your client mod.
+Make ***SURE*** you remove all other themes to prevent the destruction of the world. To enable custom background mode, switch your theme color in Discord (from the appearance tab) to "Darker". You can use the following variable to change the background:
+```css
+body {
+   --Flashcord-Theme_CBM-Image: url("YOUR_IMAGE_URL_HERE");
+}
+```
+
+##### [The source for the default background for the "CBM" mode in Ceres is available here.](https://www.pixiv.net/en/artworks/115204201)
 
 ## If you remain unaffected, you may still use Flashcord Beta, although it is no longer actively maintained.
 
