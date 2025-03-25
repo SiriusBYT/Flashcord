@@ -1,3 +1,5 @@
+Update: Flashcord development has temporarily (and in reality most likely permanantally stopped  
+
 # everybody panic discord started rolling out the desktop visual refresh
 ### If you aren't aware what DVR is, it basically is the nuclear bomb for every single discord theme
 Discord is releasing currently a overhaul to the Discord client which breaks most if not all Discord themes. we're all gonna die :(  
