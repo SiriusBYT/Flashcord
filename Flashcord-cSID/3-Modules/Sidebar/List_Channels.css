@@ -1,8 +1,14 @@
-[class^="sidebar_"] [class^="sidebarList_"] {
-    container: var(--FCM-List_Channels, FCM-List_Channels) / size !important;
+@property --FCM-List_Channels {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
 }
 
-@container FCM-List_Channels (width>0) {
+[class^="sidebar_"] [class^="sidebarList_"] {
+    container: FCM-List_Channels / normal !important;
+}
+
+@container FCM-List_Channels style(--FCM-List_Channels: on) {
     /* General Appearance */
     #channels > ul {
         padding-bottom: 0;

@@ -1,5 +1,5 @@
 /* Message Right CLick Menu */
-@container FCM-Monolith_FL (width>0) {
+@container FCM-Monolith_FL style(--FCM-Monolith_FL: on) {
     /* Hide redundant buttons */
     #message-actions-reply,
     #message-tts {

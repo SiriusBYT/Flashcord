@@ -1,4 +1,4 @@
-@container FCM-Monolith_FL (width>0) {
+@container FCM-Monolith_FL style(--FCM-Monolith_FL: on) {
     [role="menu"] {
         border-radius: var(--SNDL-UI_Border-Radius);
         [dir="ltr"] {

@@ -1,8 +1,14 @@
-[class^="membersWrap_"] {
-    container: var(--FCM-List_Members, FCM-List_Members) / inline-size;
+@property --FCM-List_Members {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
 }
 
-@container FCM-List_Members (width>0) {
+[class^="membersWrap_"] {
+    container: FCM-List_Members / normal;
+}
+
+@container FCM-List_Members style(--FCM-List_Members: on) {
     [role="list"], [class^="content_"] > [class^="membersWrap_"] > [class^="members_"],
     aside[class^="membersWrap_"] > [class^="members_"][dir="ltr"] {
         container: SNDL-ListItem / size;

@@ -1,8 +1,14 @@
-[class^="base_"]:has(> [class^="bar_"]) {
-    container: var(--FCM-TitleBar, FCM-TitleBar) / size;
+@property --FCM-TitleBar {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
 }
 
-@container FCM-TitleBar (width>0) {
+[class^="base_"]:has(> [class^="bar_"]) {
+    container: FCM-TitleBar / normal;
+}
+
+@container FCM-TitleBar style(--FCM-TitleBar: on) {
     .replugged-notice {
         border-radius: 0;
     }

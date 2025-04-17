@@ -1,8 +1,14 @@
-[class^="layers_"] {
-    container: var(--FCM-Settings_Window, FCM-Settings_Window) / size;
+@property --FCM-Settings_Window {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
 }
 
-@container FCM-Settings_Window (width>0) {
+[class^="layers_"] {
+    container: FCM-Settings_Window / normal;
+}
+
+@container FCM-Settings_Window style(--FCM-Settings_Window: on) {
     .stop-animations {
         opacity: 1 !important;
         z-index: 0; /* Switch back to -1 if false alarm */

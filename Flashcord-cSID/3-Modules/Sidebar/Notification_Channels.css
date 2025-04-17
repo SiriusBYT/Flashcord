@@ -1,8 +1,14 @@
-[class^="sidebar_"] [class^="sidebarList_"] > nav > [class^="scroller_"] {
-    container: var(--FCM-Notification_Channels, FCM-Notification_Channels) / size !important;
+@property --FCM-Notification_Channels {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
 }
 
-@container FCM-Notification_Channels (width>0) {
+[class^="sidebar_"] [class^="sidebarList_"] > nav > [class^="scroller_"] {
+    container: FCM-Notification_Channels / normal !important;
+}
+
+@container FCM-Notification_Channels style(--FCM-Notification_Channels: on) {
     /* Unread Circle */
     [class^="unread_"], [class^="numberBadge_"] {
         position: absolute;
