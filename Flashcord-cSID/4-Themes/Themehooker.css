@@ -1,3 +1,4 @@
+/* These containers haven't been updated yet, so they cause the dreaded blank screen bug -ADCLeo */
 /*
 html.theme-dark.theme-darker {
     container: var(--Flashcord-Theme, FCT_CBM) / size;
@@ -10,4 +11,5 @@ html.theme-light {
 }
 html.theme-dark {
     container: var(--Flashcord-Theme, FCT_Dark) / size;
-}*/
+}
+*/
