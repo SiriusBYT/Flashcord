@@ -1,3 +1,4 @@
 *.env
 Caerbannog/Caerbannog.py
 Caerbannog/CEBN_Dependencies.py
+**/logs/
