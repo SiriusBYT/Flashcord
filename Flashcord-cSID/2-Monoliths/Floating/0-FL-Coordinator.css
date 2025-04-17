@@ -5,5 +5,5 @@
 }
 
 [class^="notAppAsidePanel_"] {
-    container: FCM-Monolith_FL / size;
+    container: FCM-Monolith_FL / normal;
 }

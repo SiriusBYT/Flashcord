@@ -5,7 +5,7 @@
 }
 
 [class^="notAppAsidePanel_"] > [class^="layerContainer_"] [id^="popout_"]:has([role="dialog"] > div [class^="inboxIcon_"]) {
-    container: FCM-Inbox / size;
+    container: FCM-Inbox / normal;
 }
 
 @container FCM-Inbox style(--FCM-Inbox: on) {
