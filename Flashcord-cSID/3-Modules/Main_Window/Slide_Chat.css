@@ -1,8 +1,14 @@
-[class^="container_"]:has(> [class^="base_"]) {
-    container: var(--FCM-Slide_Chat, FCM-Slide_Chat-SNDL) / size;
+@property --FCM-Slide_Chat {
+    syntax: 'sndl | legacy | off';
+    inherits: true;
+    initial-value: sndl;
 }
 
-@container FCM-Slide_Chat-SNDL (width>0) {
+[class^="container_"]:has(> [class^="base_"]) {
+    container: FCM-Slide_Chat / normal;
+}
+
+@container FCM-Slide_Chat style(--FCM-Slide_Chat: sndl) {
     [class^="content_"] > [class^="page_"] {
         translate: calc(-1 * var(--custom-guild-sidebar-width) + var(--custom-guild-list-width) + 36px);
         width: calc(100% + var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) - 38px);
@@ -19,12 +25,12 @@
         translate: 0;
     }
 
-    @container FCM-List_Channels (width>0) {
+    @container FCM-List_Channels style(--FCM-List_Channels: on) {
         [class*="selected_"] { translate: 0; }
     }
 }
 
-@container FCM-Slide_Chat-Legacy (width>0) {
+@container FCM-Slide_Chat style(--FCM-Slide_Chat: legacy) {
     [class^="sidebar_"] {
         position: fixed !important; left: 0;
         width: calc(var(--custom-guild-list-width) + 38px) !important;

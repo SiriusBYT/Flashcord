@@ -1,8 +1,14 @@
-[class^="chat_"] > [class^="content_"]:has(> main):has([class^="members_"]) {
-    container: var(--FCM-Slide_Members, FCM-Slide_Members) / size;
+@property --FCM-Slide_Members {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
 }
 
-@container FCM-Slide_Members (width>0) {
+[class^="chat_"] > [class^="content_"]:has(> main):has([class^="members_"]) {
+    container: FCM-Slide_Members / normal;
+}
+
+@container FCM-Slide_Members style(--FCM-Slide_Members: on) {
     [class^="chat_"] > [class^="content_"] {
         > main {
             width: calc(100% - 3rem);

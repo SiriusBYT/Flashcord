@@ -1,9 +1,15 @@
+@property --FCM-User_Panel {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
 section[class^="panels_"] {
-    container: var(--FCM-User_Panel, FCM-User_Panel) / inline-size;
+    container: FCM-User_Panel / normal;
     background: transparent !important; /* Band-aid fix for the nuking of ChatSlide-SNDL */
 }
 
-@container FCM-User_Panel (width>0) {
+@container FCM-User_Panel style(--FCM-User_Panel: on) {
     section[class^="panels_"] {
         background: transparent !important;
         

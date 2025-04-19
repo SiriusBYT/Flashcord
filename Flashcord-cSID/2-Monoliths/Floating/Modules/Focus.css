@@ -1,4 +1,4 @@
-@container FCM-Monolith_FL (width>0) {
+@container FCM-Monolith_FL style(--FCM-Monolith_FL: on) {
     /* This is amazing code but it's held with rubber bands because no wildcards, YAY FOR :HAS SELECTOR PERFORMANCE BUG!!!!
     Not using wildcards here because either way a single class reroll fucks this entire module */
     .baseLayer__960e4 .base_c48ade > .content_c48ade { transition: scale var(--SNDL-Transition_Slow) !important; }

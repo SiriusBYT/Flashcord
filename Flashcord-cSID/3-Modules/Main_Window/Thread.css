@@ -1,9 +1,16 @@
 /* This is for the Threads being on the side */
-[class^="page_"]:has(> [class^="chatLayerWrapper_"]) {
-    container: var(--FCM-Thread, FCM-Thread) / size;
+
+@property --FCM-Thread {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
 }
 
-@container FCM-Thread (width>0) {
+[class^="page_"]:has(> [class^="chatLayerWrapper_"]) {
+    container: FCM-Thread / normal;
+}
+
+@container FCM-Thread style(--FCM-Thread: on) {
     [class^="chatLayerWrapper_"] {
         animation: SNDL-Fade_In var(--SNDL-Animation_Normal);
     }

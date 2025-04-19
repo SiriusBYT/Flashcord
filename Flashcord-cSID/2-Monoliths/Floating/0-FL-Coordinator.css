@@ -1,3 +1,9 @@
+@property --FCM-Monolith_FL {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
 [class^="notAppAsidePanel_"] {
-    container: var(--FCM-Monolith_FL, FCM-Monolith_FL) / size;
+    container: FCM-Monolith_FL / normal;
 }

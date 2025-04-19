@@ -1,8 +1,14 @@
-[data-list-id="chat-messages"] {
-    container: var(--FCM-Message_Incoming, FCM-Message_Incoming) / inline-size;
+@property --FCM-Message_Incoming {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
 }
 
-@container FCM-Message_Incoming (width>0) {
+[data-list-id="chat-messages"] {
+    container: FCM-Message_Incoming / normal;
+}
+
+@container FCM-Message_Incoming style(--FCM-Message_Incoming: on) {
     [class^="messageListItem_"] {
         animation: SNDL-Fade_In var(--SNDL-Animation_Slow);
     }
