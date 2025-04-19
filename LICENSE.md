@@ -5,8 +5,8 @@ The following licenses are for previous versions of Flashcord:
 Flashcord (Beta Builds) © 2023-2025 by Ascellayn (alias SiriusBYT) is licensed under TSN License 1.0 - Base
 Flashcord (Alpha Builds) © 2023-2025 by Ascellayn (alias SiriusBYT) is in the public domain.
 ```
-# Flashcord © 2023-2025 by Ascellayn (alias SiriusBYT) is licensed under TSN License 1.0 - [D_API, C_Closed]
-The Sirio Network License 1.0 - Derivable via provided interfaces, Non-Commercial.
+# Flashcord © 2023-2025 by Ascellayn (alias SiriusBYT) is licensed under TSN License 1.0 - [D_Free, C_Closed]
+The Sirio Network License 1.0 - Freely Derivable, Non-Commercial.  
 *Origin: https://dev.sirio-network.com/license/1.0*  
 
 Last TSN License Revision: 14/01/2025 at 16:41:44
