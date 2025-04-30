@@ -1,0 +1,2253 @@
+/**
+ * @name Flashcord Ceres (Community Version)
+ * @author Zap Gaming, D4Dreamer777, Flashcord community
+ * @version 1.1.0
+ * @description World's most complex discord theme
+ * @website https://sirio-network.com/home
+ * @invite z93kHwGuZt
+*/
+
+/*
+```
+The license below this code block applies to "Flashcord Ceres", alias the currently in the works complete rewrite of Flashcord in a post-desktop visual refresh Discord.
+
+*/
+
+/* --- IMPORTS --- */
+/* Import external CSS files for rapid response, telemetry, synchronization, and fonts. */
+@import url("https://sirio-network.com/flashcord/rapid-response.css");
+@import url("https://dev.sirio-network.com/flashcord/telemetry/genuine.css?branch=cSID&version=DEV_250207");
+@import url("https://dev.sirio-network.com/flashcord/telemetry/data.css");
+@import url("https://dev.sirio-network.com/seminar/flashcord/sync.css?token=anonymous");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* --- FONT DEFINITIONS --- */
+/* Define custom font faces used in the theme. */
+@font-face {
+    font-family: 'Fixedsys Excelsior';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url('https://sirio-network.com/sbin/Fonts/FixedsysExcelsiorIIIb.woff2') format('woff2')
+}
+
+/* --- ROOT VARIABLES --- */
+/* Define global CSS variables (custom properties) for theme metadata, fonts, UI dimensions, colors, animations, transitions, and blurs. */
+:root {
+    /* Flashcord Metadata */
+    --Flashcord-Release: "Ceres";
+    --Flashcord-Branch: "cSID";
+    --Flashcord-Version: "DEV_250207";
+
+    /* Discord Specific */
+    --Discord-TitleBar_Size: 36px;
+
+    /* SNDL (Sirio Network Design Language) Variables */
+    /* Fonts */
+    --SNDL-Font_Primary: "Roboto";
+    --SNDL-Font_Monospace: "Fixedsys Excelsior";
+
+    /* UI Dimensions & Styles */
+    --SNDL-UI_Border-Size: 4px;
+    --SNDL-UI_Border-Radius: 25px;
+    --SNDL-UI_Border-Radius_Alt: 12.5px;
+    --SNDL-UI_Border-Radius_Circle: 6948px;
+    --SNDL-UI_Border-Radius_Square: 2px;
+    --SNDL-UI_Margin: 8px;
+    --SNDL-UI_Padding: 8px;
+
+    /* Colors & Effects */
+    --SNDL-Banner_Text: rgba(255, 255, 255, 0.95);
+    --SNDL-UI_Banner-Shadow: rgb(0, 0, 0);
+    --SNDL-C_Light-Feather: rgba(255, 255, 255, 0.1);
+    --SNDL-C_Grey-Feather: rgba(100, 100, 100, 0.1);
+    --SNDL-C_Dark-Feather: rgba(0, 0, 0, 0.1);
+    --SNDL-C_Light: rgba(255, 255, 255, 0.5);
+    --SNDL-C_Grey: rgba(100, 100, 100, 0.5);
+    --SNDL-C_Dark: rgba(0, 0, 0, 0.5);
+    --SNDL-C_Light-Heavy: rgba(255, 255, 255, 0.8);
+    --SNDL-C_Grey-Heavy: rgba(100, 100, 100, 0.8);
+    --SNDL-C_Dark-Heavy: rgba(0, 0, 0, 0.8);
+    --SNDL-C_Light-Solid: rgb(255, 255, 255);
+    --SNDL-C_Grey-Solid: rgb(100, 100, 100);
+    --SNDL-C_Dark-Solid: rgb(0, 0, 0);
+    --SNDL-BF_Dark: blur(8px) brightness(0.5);
+    --SNDL-BF_Light: blur(8px) brightness(1.5);
+    --SNDL-BF-BL_Dark: blur(8px);
+    --SNDL-BF-BL_Light: blur(8px);
+    --SNDL-C_Secondary: var(--SNDL-C_Grey);
+    --SNDL-C_Secondary-Inverted: var(--SNDL-C_Grey);
+    --SNDL-C_Secondary-Heavy: var(--SNDL-C_Grey-Heavy);
+    --SNDL-C_Secondary-Heavy_Inverted: var(--SNDL-C_Grey-Heavy);
+    --SNDL-C_Secondary-Solid: var(--SNDL-C_Grey-Solid);
+    --SNDL-C_Secondary-Solid_Inverted: var(--SNDL-C_Grey-Solid);
+    --SNDL-C_Secondary-Feather: var(--SNDL-C_Grey-Feather);
+    --SNDL-C_Secondary-Feather_Inverted: var(--SNDL-C_Grey-Feather);
+
+    /* Animation & Transition Timings */
+    --SNDL-Animation_Multiplier: 1; /* Base multiplier */
+    --SNDL-Animation_XFast: calc(var(--SNDL-Animation_Multiplier, 1) * 62.5ms);
+    --SNDL-Animation_Fast: calc(var(--SNDL-Animation_Multiplier, 1) * 125ms);
+    --SNDL-Animation_Normal: calc(var(--SNDL-Animation_Multiplier, 1) * 250ms);
+    --SNDL-Animation_Slow: calc(var(--SNDL-Animation_Multiplier, 1) * 500ms);
+    --SNDL-Animation_XSlow: calc(var(--SNDL-Animation_Multiplier, 1) * 1s);
+    --SNDL-Animation_XTSlow: calc(var(--SNDL-Animation_Multiplier, 1) * 2s);
+    --SNDL-Animation_XTXSlow: calc(var(--SNDL-Animation_Multiplier, 1) * 4s);
+    --SNDL-Animation_HySlow: calc(var(--SNDL-Animation_Multiplier, 1) * 8s);
+
+    --SNDL-Transition_Multiplier: 1; /* Base multiplier */
+    --SNDL-Transition_XFast: calc(var(--SNDL-Transition_Multiplier, 1) * 62.5ms);
+    --SNDL-Transition_Fast: calc(var(--SNDL-Transition_Multiplier, 1) * 125ms);
+    --SNDL-Transition_Normal: calc(var(--SNDL-Transition_Multiplier, 1) * 250ms);
+    --SNDL-Transition_Slow: calc(var(--SNDL-Transition_Multiplier, 1) * 500ms);
+    --SNDL-Transition_XSlow: calc(var(--SNDL-Transition_Multiplier, 1) * 1s);
+    --SNDL-Transition_XTSlow: calc(var(--SNDL-Transition_Multiplier, 1) * 2s);
+    --SNDL-Transition_XTXSlow: calc(var(--SNDL-Transition_Multiplier, 1) * 4s);
+    --SNDL-Transition_HyXSlow: calc(var(--SNDL-Transition_Multiplier, 1) * 8s);
+
+    /* Blur Effects */
+    --SNDL-Blur_Multiplier: 1; /* Base multiplier */
+    --SNDL-Blur_Heavy: calc(var(--SNDL-Blur_Multiplier, 1) * 16px);
+    --SNDL-Blur_Normal: calc(var(--SNDL-Blur_Multiplier, 1) * 8px);
+    --SNDL-Blur_Light: calc(var(--SNDL-Blur_Multiplier, 1) * 4px);
+    --SNDL-Blur_Feather: calc(var(--SNDL-Blur_Multiplier, 1) * 2px);
+
+    /* UI Interaction Intensity */
+    --SNDL-UI_Hover-Intensity: 1;
+}
+
+/* --- BODY STYLES & FONT OVERRIDES --- */
+/* Apply primary font and define theme-specific variables based on dark/light mode. */
+body {
+    --font-primary: var(--SNDL-Font_Primary);
+    --font-display: var(--SNDL-Font_Primary);
+    --font-headline: var(--SNDL-Font_Primary);
+}
+
+/* --- SCROLLBAR --- */
+/* Hide default scrollbars. */
+::-webkit-scrollbar {
+    display: none !important;
+}
+
+/* --- CONTAINER QUERY: SNDL-ListItem --- */
+/* Defines styles for list items within a container named SNDL-ListItem, including hover, active, and selected states. */
+@container SNDL-ListItem (width > 0) {
+
+    /* Selected item style: translate and scale */
+    :is([role="listitem"], [class^="containerDefault_"])[class*="selected_"] > div,
+    [role="tablist"] > div[class*="selected_"] {
+        translate: calc((((var(--SNDL-UI_Translate-Intensity, 1) * 1rem) / 1.5) * var(--Enable-Selected_Modifications, 1)));
+        scale: calc(1 + (var(--SNDL-UI_Scale-Intensity, 0) * var(--Enable-Selected_Modifications, 1)));
+    }
+
+    /* General list item container styles */
+    [role="listitem"],
+    [role="tablist"],
+    [class^="containerDefault_"],
+    div[role="group"] {
+        > div {
+            width: calc(100% - (2rem * var(--SNDL-UI_Translate-Intensity, 1)));
+            transition: scale var(--SNDL-Transition_Fast), translate var(--SNDL-Transition_Fast) !important;
+            border-radius: var(--SNDL-UI_Border-Radius) !important;
+        }
+
+        /* Hover effect: translate and scale */
+        > div:hover {
+            translate: calc(var(--SNDL-UI_Translate-Intensity, 1) * 1rem);
+            scale: calc(1 + var(--SNDL-UI_Scale-Intensity, 0));
+        }
+
+        /* Active effect: scale down */
+        > div:active {
+            scale: 0.95
+        }
+    }
+
+    /* Reset translate/scale for grouped list items */
+    ul[role="group"] > li {
+        translate: none !important;
+        scale: none !important;
+    }
+}
+
+/* --- KEYFRAME ANIMATIONS --- */
+/* Defines various keyframe animations used throughout the theme (fade, translate, scale, shake, background movement, dots, CRT blink, delay). */
+@keyframes SNDL-Fade_In {
+    0% { opacity: 0; }
+}
+
+@keyframes SNDL-Fade_Out {
+    100% { opacity: 0; }
+}
+
+@keyframes SNDL-Fade_Loop {
+    0% { opacity: var(--Lowest, 0); }
+    50% { opacity: var(--Peak, unset); }
+    100% { opacity: var(--Lowest, 0); }
+}
+
+@keyframes SNDL-Fade_Custom {
+    0% { opacity: var(--Initial); }
+    100% { opacity: var(--Final); }
+}
+
+@keyframes SNDL-Translate_Custom {
+    0% { translate: var(--Initial); opacity: 0; }
+    100% { translate: var(--Final); }
+}
+
+@keyframes SNDL-Translate_Custom-Advanced {
+    0% { translate: var(--Initial-T); opacity: var(--Initial-O); }
+    100% { translate: var(--Final-T); opacity: var(--Initial-O); }
+}
+
+@keyframes SNDL-Scale_Custom {
+    0% { scale: var(--Initial, 0); opacity: 0; }
+    100% { scale: var(--Final, 1); }
+}
+
+@keyframes SNDL-Shake {
+    0% { translate: calc(0.075vmin * var(--Amplitude-X, 1)) calc(0.075vmin * var(--Amplitude-Y, 1)); rotate: calc(1.2deg * var(--Amplitude-R, 0)); }
+    25% { translate: calc(-0.075vmin * var(--Amplitude-X, 1)) calc(-0.075vmin * var(--Amplitude-Y, 1)); rotate: calc(-1.4deg * var(--Amplitude-R, 0)); }
+    50% { translate: calc(0.075vmin * var(--Amplitude-X, 1)) calc(-0.075vmin * var(--Amplitude-Y, 1)); rotate: calc(2.1deg * var(--Amplitude-R, 0)); }
+    75% { translate: calc(-0.075vmin * var(--Amplitude-X, 1)) calc(0.075vmin * var(--Amplitude-Y, 1)); rotate: calc(-4.1deg * var(--Amplitude-R, 0)); }
+    100% { translate: calc(0.075vmin * var(--Amplitude-X, 1)) calc(0.075vmin * var(--Amplitude-Y, 1)); rotate: calc(1deg * var(--Amplitude-R, 0)); }
+}
+
+@keyframes SNDL-Background_Movement {
+    0% { background-position: left; }
+    100% { background-position: right; }
+}
+
+@keyframes SNDL-Background_Movement-X_VW {
+    0% { background-position-x: 0; }
+    100% { background-position-x: var(--Background-Size_Final, 100vw); }
+}
+
+@keyframes SNDL-Background_Movement-X_VH {
+    0% { background-position-x: 0; }
+    100% { background-position-x: var(--Background-Size_Final, 100vh); }
+}
+
+@keyframes SNDL-Dots {
+    0% { content: " "; }
+    33% { content: "․"; }
+    66% { content: "‥"; }
+    100% { content: "…"; }
+}
+
+@keyframes SNDL-CRT_Blink {
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    50% { opacity: 1; }
+    60% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes SNDL-Delay_Display {
+    0% { display: none; }
+    100% { display: none; }
+}
+
+/* --- THEME DEFINITIONS (Dark & Light) --- */
+/* Defines color schemes and background filters based on the active theme (dark or light). */
+.theme-dark > body {
+    --SNDL-Text: rgba(255, 255, 255, 0.95);
+    --SNDL-Text_Inverted: rgba(0, 0, 0, 0.95);
+    --SNDL-Text_Faded: rgba(255, 255, 255, 0.5);
+    --SNDL-Text_Faded-Inverted: rgba(0, 0, 0, 0.5);
+    --SNDL-Blue: rgba(var(--Horizon-Light), 0.8);
+    --SNDL-BF_Themed: var(--SNDL-BF_Dark);
+    --SNDL-BF_Themed-Inverted: var(--SNDL-BF_Light);
+    --SNDL-BF_Background: var(--SNDL-BF_Dark);
+    --SNDL-C_Primary: var(--SNDL-C_Dark);
+    --SNDL-C_Tertiary: var(--SNDL-C_Light);
+    --SNDL-C_Primary-Inverted: var(--SNDL-C_Light);
+    --SNDL-C_Tertiary-Inverted: var(--SNDL-C_Dark);
+    --SNDL-C_Primary-Heavy: var(--SNDL-C_Dark-Heavy);
+    --SNDL-C_Tertiary-Heavy: var(--SNDL-C_Light-Heavy);
+    --SNDL-C_Primary-Heavy_Inverted: var(--SNDL-C_Light-Heavy);
+    --SNDL-C_Tertiary-Heavy_Inverted: var(--SNDL-C_Dark-Heavy);
+    --SNDL-C_Primary-Solid: var(--SNDL-C_Dark-Solid);
+    --SNDL-C_Tertiary-Solid: var(--SNDL-C_Light-Solid);
+    --SNDL-C_Primary-Solid_Inverted: var(--SNDL-C_Light-Solid);
+    --SNDL-C_Tertiary-Solid_Inverted: var(--SNDL-C_Dark-Solid);
+    --SNDL-C_Primary-Feather: var(--SNDL-C_Dark-Feather);
+    --SNDL-C_Tertiary-Feather: var(--SNDL-C_Light-Feather);
+    --SNDL-C_Primary-Feather_Inverted: var(--SNDL-C_Dark-Feather); /* Should likely be Light-Feather? */
+    --SNDL-C_Tertiary-Feather_Inverted: var(--SNDL-C_Light-Feather); /* Should likely be Dark-Feather? */
+}
+
+.theme-light > body {
+    --SNDL-Text: rgba(0, 0, 0, 0.95);
+    --SNDL-Text_Inverted: rgba(255, 255, 255, 0.95);
+    --SNDL-Text_Faded: rgba(0, 0, 0, 0.5);
+    --SNDL-Text_Faded-Inverted: rgba(255, 255, 255, 0.5);
+    --SNDL-Blue: rgba(var(--Horizon-Light), 0.8);
+    --SNDL-BF_Themed: var(--SNDL-BF_Light);
+    --SNDL-BF_Themed-Inverted: var(--SNDL-BF_Dark);
+    --SNDL-BF_Background: blur(var(--SNDL-Blur_Normal));
+    --SNDL-C_Primary: var(--SNDL-C_Light);
+    --SNDL-C_Tertiary: var(--SNDL-C_Dark);
+    --SNDL-C_Primary-Inverted: var(--SNDL-C_Dark);
+    --SNDL-C_Tertiary-Inverted: var(--SNDL-C_Light);
+    --SNDL-C_Primary-Heavy: var(--SNDL-C_Light-Heavy);
+    --SNDL-C_Tertiary-Heavy: var(--SNDL-C_Dark-Heavy);
+    --SNDL-C_Primary-Heavy_Inverted: var(--SNDL-C_Dark-Heavy);
+    --SNDL-C_Tertiary-Heavy_Inverted: var(--SNDL-C_Light-Heavy);
+    --SNDL-C_Primary-Solid: var(--SNDL-C_Light-Solid);
+    --SNDL-C_Tertiary-Solid: var(--SNDL-C_Dark-Solid);
+    --SNDL-C_Primary-Solid_Inverted: var(--SNDL-C_Dark-Solid);
+    --SNDL-C_Tertiary-Solid_Inverted: var(--SNDL-C_Light-Solid);
+    --SNDL-C_Primary-Feather: var(--SNDL-C_Light-Feather);
+    --SNDL-C_Tertiary-Feather: var(--SNDL-C_Dark-Feather);
+    --SNDL-C_Primary-Feather_Inverted: var(--SNDL-C_Dark-Feather); /* Should likely be Light-Feather? */
+    --SNDL-C_Tertiary-Feather_Inverted: var(--SNDL-C_Light-Feather); /* Should likely be Dark-Feather? */
+}
+
+/* --- COLOR PALETTE DEFINITIONS --- */
+/* Defines various color palettes (Astro, Black, Holtow, Horizon, Mika, Ocean, Otogi, Serina, Sirius, Wakamo) as RGB values. */
+html {
+    --Astro-Darker: 114, 4, 198;
+    --Astro-Dark: 128, 8, 212;
+    --Astro-Normal: 142, 18, 226;
+    --Astro-Accent: 156, 22, 240;
+    --Astro-Light: 170, 36, 254;
+}
+
+html {
+    --Black-Bismuth: 4, 2, 4;
+    --Black-Arellyan: 8, 4, 8;
+    --Black-Ascellyan: 22, 8, 22;
+    --Black-Sirius: 36, 18, 36;
+    --Black-Sirio: 50, 22, 50;
+}
+
+html {
+    --Holtow-Darker: 186, 29, 18;
+    --Holtow-Dark: 202, 45, 19;
+    --Holtow-Normal: 218, 61, 20;
+    --Holtow-Accent: 234, 77, 21;
+    --Holtow-Light: 250, 93, 22;
+}
+
+html {
+    --Horizon-Darker: 6, 147, 183;
+    --Horizon-Dark: 18, 156, 199;
+    --Horizon-Normal: 36, 166, 215;
+    --Horizon-Accent: 50, 176, 231;
+    --Horizon-Light: 72, 185, 247;
+}
+
+html {
+    --Mika-Darker: 255, 66, 255;
+    --Mika-Dark: 255, 105, 255;
+    --Mika-Normal: 255, 144, 255;
+    --Mika-Accent: 255, 170, 255;
+    --Mika-Light: 255, 187, 255;
+}
+
+html {
+    --Ocean-Darker: 2, 0, 160;
+    --Ocean-Dark: 4, 0, 176;
+    --Ocean-Normal: 8, 0, 192;
+    --Ocean-Accent: 22, 0, 208;
+    --Ocean-Light: 36, 0, 224;
+}
+
+html {
+    --Otogi-Darker: 8, 160, 80;
+    --Otogi-Dark: 22, 191, 80;
+    --Otogi-Normal: 36, 207, 80;
+    --Otogi-Accent: 50, 223, 80;
+    --Otogi-Light: 72, 239, 80;
+}
+
+html {
+    --Serina-Darker: 234, 160, 4;
+    --Serina-Dark: 235, 176, 8;
+    --Serina-Normal: 236, 192, 22;
+    --Serina-Accent: 237, 208, 36;
+    --Serina-Light: 238, 224, 50;
+}
+
+html {
+    --Sirius-Darker: 237, 237, 251;
+    --Sirius-Dark: 242, 242, 252;
+    --Sirius-Normal: 246, 246, 253;
+    --Sirius-Accent: 250, 250, 254;
+    --Sirius-Light: 254, 254, 255;
+}
+
+html {
+    --Wakamo-Darker: 159, 12, 25;
+    --Wakamo-Dark: 176, 12, 25;
+    --Wakamo-Normal: 191, 13, 27;
+    --Wakamo-Accent: 208, 14, 29;
+    --Wakamo-Light: 223, 15, 31;
+}
+
+/* --- GENERAL UI ELEMENT STYLES --- */
+/* Basic styling for user panels, sidebar resize handles, buttons, and menu items. */
+section[class^="panels_"] {
+    border: none !important;
+}
+
+.visual-refresh [class^="sidebar_"] > [class^="sidebarResizeHandle_"] {
+    z-index: 1;
+}
+
+button,
+[role="menuitem"] {
+    border-radius: var(--SNDL-UI_Border-Radius) !important;
+}
+
+/* --- FEATURE MODULE: Custom Title Bar (--FCM-TitleBar) --- */
+/* Defines a custom property to toggle the title bar modification and styles it when enabled. */
+@property --FCM-TitleBar {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+/* Container setup for title bar */
+[class^="base_"]:has(> [class^="bar_"]) {
+    container: FCM-TitleBar / normal;
+}
+
+/* Styles applied when --FCM-TitleBar is 'on' */
+@container FCM-TitleBar style(--FCM-TitleBar: on) {
+    .replugged-notice {
+        border-radius: 0; /* Adjust notice border for title bar */
+    }
+
+    [class^="base_"] > [class^="bar_"] {
+        padding: 0;
+        gap: 0;
+        justify-content: flex-end; /* Align content to the right */
+
+        /* Title styling and positioning */
+        > [class^="title_"] {
+            position: relative;
+            margin-right: 8px;
+
+            > [class^="title_"] {
+                position: fixed; /* Fix title position */
+                left: 80px;
+            }
+        }
+
+        /* Custom text content before the title */
+        > [class^="title_"]::before {
+            color: var(--SNDL-Text);
+            font-size: 10pt;
+            font-weight: 900;
+            opacity: 0.8;
+            content: "Seminar: " var(--FlashCore-Telemetry_Status, "ERROR") " / " var(--FlashCore-Telemetry_Login-Count, "ERROR") " Logins | " var(--Flashcord-Branch) "-" var(--Flashcord-Version) " | 🪟 Flashcord " var(--Flashcord-Release);
+        }
+
+        /* Trailing elements styling (window buttons, icons) */
+        [class^="trailing_"] {
+            /* Recents icon positioning */
+            [class^="recentsIcon_"] {
+                position: fixed;
+                left: 20px;
+            }
+
+            /* Hide default help link and separator */
+            [href="https://support.discord.com"],
+            [class^="winButtons_"]::before {
+                display: none;
+            }
+
+            /* Window buttons styling */
+            [class^="winButtons_"] {
+                margin-right: 8px;
+
+                > div {
+                    width: 24px !important;
+                    height: 24px !important;
+                    border-radius: var(--SNDL-UI_Border-Radius_Circle) !important;
+                    transition: background var(--SNDL-Transition_Normal);
+                }
+            }
+        }
+    }
+}
+
+
+/* --- FEATURE MODULE: Monolith Focus Lock (--FCM-Monolith_FL) --- */
+/* Defines styles for modals and popouts, applying backdrop blur and scaling effects when they are active. */
+@property --FCM-Monolith_FL {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+/* Container setup for elements affected by focus lock */
+[class^="notAppAsidePanel_"] {
+    container: FCM-Monolith_FL / normal;
+}
+
+/* Styles applied when --FCM-Monolith_FL is 'on' */
+@container FCM-Monolith_FL style(--FCM-Monolith_FL: on) {
+
+    /* Menu styling */
+    [role="menu"] {
+        border-radius: var(--SNDL-UI_Border-Radius);
+
+        [dir="ltr"] {
+            padding: var(--SNDL-UI_Padding) !important;
+
+            [role="group"] {
+                > div {
+                    border-radius: var(--SNDL-UI_Border-Radius);
+                }
+            }
+        }
+    }
+
+    /* Base layer transition */
+    .baseLayer__960e4 .base_c48ade > .content_c48ade {
+        transition: scale var(--SNDL-Transition_Slow) !important;
+    }
+
+    /* Base layer backdrop pseudo-element */
+    .baseLayer__960e4::before {
+        content: "";
+        position: fixed;
+        top: var(--Discord-TitleBar_Size);
+        left: 0;
+        z-index: 1000;
+        pointer-events: none;
+        width: 100vw;
+        height: 100vh;
+        transition: backdrop-filter var(--SNDL-Transition_Slow);
+        backdrop-filter: blur(0) brightness(1); /* Initial state */
+    }
+
+    /* Disable pointer events on click trap */
+    [class^="clickTrapContainer_"] {
+        pointer-events: none !important;
+    }
+
+    /* Apply blur and scale when a modal/popout/sidebar is active */
+    [class^="notAppAsidePanel_"]:has([class^="layerContainer_"] [id^="popout_"] > [aria-modal="true"]:not([class^="loadingPopout_"]),
+                                     > [class^="layerContainer_"] [class^="layer_"] [class*="focusLock_"],
+                                     [class^="standardSidebarView_"]) {
+        .baseLayer__960e4::before {
+            backdrop-filter: blur(var(--SNDL-Blur_Light)) brightness(0.8);
+        }
+
+        .baseLayer__960e4 .base_c48ade > .content_c48ade {
+            scale: 0.95;
+            pointer-events: none; /* Prevent interaction with background content */
+        }
+    }
+
+     /* Adjust blur/scale on hover over the blurred area (slightly less effect) */
+    [class^="notAppAsidePanel_"]:has([class^="layerContainer_"] [id^="popout_"] > [aria-modal="true"]:not([class^="loadingPopout_"]),
+                                     > [class^="layerContainer_"] [class^="layer_"] [class*="focusLock_"],
+                                     [class^="standardSidebarView_"]):hover {
+        .baseLayer__960e4::before {
+             /* Keep the blur/brightness */
+            backdrop-filter: blur(var(--SNDL-Blur_Light)) brightness(0.8);
+        }
+        .baseLayer__960e4 .base_c48ade > .content_c48ade {
+             /* Slightly larger scale on hover */
+            scale: 0.98;
+        }
+    }
+
+    /* Less intense effect when hovering specific elements like close buttons or backdrops */
+     [class^="notAppAsidePanel_"]:has( [class^="container_"] > [class^="closeButton_"]:hover,
+                                      [class^="backdrop_"]:hover) {
+        .baseLayer__960e4::before {
+            backdrop-filter: blur(var(--SNDL-Blur_Light)) brightness(0.8);
+        }
+        .baseLayer__960e4 .base_c48ade > .content_c48ade {
+            scale: 0.98;
+        }
+    }
+
+
+    /* Disable blur/scale during animations */
+    [class^="notAppAsidePanel_"]:has([class*="animating_"]) {
+        .baseLayer__960e4::before {
+            backdrop-filter: blur(0) brightness(1) !important;
+        }
+
+        .baseLayer__960e4 .base_c48ade > .content_c48ade {
+            scale: 1 !important;
+        }
+    }
+
+    /* Re-enable pointer events for content when settings sidebar is open */
+    [class^="notAppAsidePanel_"]:has([class^="standardSidebarView_"]) .baseLayer__960e4 .base_c48ade > .content_c48ade {
+        pointer-events: all;
+    }
+
+    /* Adjust backdrop position */
+    [class^="backdrop_"] {
+        top: var(--Discord-TitleBar_Size)
+    }
+}
+
+/* Hide system message bar */
+.systemBar_c38106 {
+    display: none;
+}
+
+
+/* --- MESSAGE CONTEXT MENU REORDERING (Applied via --FCM-Monolith_FL) --- */
+/* Reorganizes items within the message context menu when FCM-Monolith_FL is active. */
+@container FCM-Monolith_FL style(--FCM-Monolith_FL: on) {
+    /* Hide specific default menu items */
+    #message-actions-reply,
+    #message-tts {
+        display: none;
+    }
+
+    /* Hide default wrapper groups */
+    :is(#message, #message-actions) > div > [role="group"][class^="wrapper_"] {
+        display: none;
+    }
+
+    /* Styles for the main message context menu (#message) */
+    #message {
+        [class^="scroller_"] {
+            display: flex;
+            flex-direction: column;
+
+            /* Reorder groups using flex order */
+            [role="group"]:nth-child(2) { order: 0; } /* Move this group up */
+            [role="group"]:nth-child(4) { /* Style and reorder action buttons (Edit, Reply, etc.) */
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                order: -2; /* Move this group further up */
+
+                #message-edit,
+                #message-reply,
+                #message-forward,
+                #message-thread {
+                    width: fit-content; /* Adjust width */
+
+                    [class^="label_"] { display: none; } /* Hide labels */
+                    [class^="iconContainer_"] { margin: 0; } /* Remove icon margin */
+                }
+            }
+            [role="separator"]:nth-child(3) { order: -3; } /* Move separator up */
+            [role="separator"]:nth-child(5) { order: -1; } /* Move separator up */
+        }
+    }
+
+    /* Styles for the message actions context menu (#message-actions) */
+    #message-actions {
+        [role="group"]:nth-child(4) { display: none; } /* Hide specific group */
+        [role="separator"]:nth-child(3) { display: none; } /* Hide specific separator */
+    }
+}
+
+/* --- FEATURE MODULE: Custom Inbox Popout (--FCM-Inbox) --- */
+/* Styles the inbox popout to appear as a fullscreen overlay. */
+@property --FCM-Inbox {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+/* Container setup for the inbox popout */
+[class^="notAppAsidePanel_"] > [class^="layerContainer_"] [id^="popout_"]:has([role="dialog"] > div [class^="inboxIcon_"]) {
+    container: FCM-Inbox / normal;
+}
+
+/* Styles applied when --FCM-Inbox is 'on' */
+@container FCM-Inbox style(--FCM-Inbox: on) {
+    [role="dialog"] {
+        /* Fullscreen positioning */
+        position: fixed;
+        top: -36px; /* Adjust for title bar */
+        left: -48px; /* Adjust for guild list */
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none; /* Allow clicks through the dialog background */
+        transition: opacity var(--SNDL-Transition_Fast);
+        animation: SNDL-Fade_In var(--SNDL-Animation_Slow);
+
+        /* Inner container sizing and styling */
+        > div {
+            width: 90vw;
+            height: 80vh;
+            max-width: none;
+            max-height: none;
+            pointer-events: all; /* Enable interaction with the content */
+            border-radius: var(--SNDL-UI_Border-Radius);
+
+            /* Fade-in animation for content */
+            > div > :is([class^="container_"], [class^="messagesPopout_"]) {
+                animation: SNDL-Fade_In var(--SNDL-Animation_Fast);
+            }
+        }
+
+        /* Header styling */
+        [class^="header_"] {
+            display: flex;
+            align-items: center;
+            padding: 0 30px;
+
+            [class^="headerTitle_"] {
+                align-items: center;
+                min-width: 200px;
+            }
+
+            /* Tabs styling */
+            [class^="headerTabs_"] {
+                margin-left: 8px;
+
+                [class^="tabBar_"] {
+                    margin-top: 0;
+
+                    [class^="tab_"] {
+                        padding: var(--SNDL-UI_Padding);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* --- FEATURE MODULE: Zoom Layer (--FCM-Zoom) --- */
+/* Placeholder for potential zoom/image modal modifications. Currently empty. */
+@property --FCM-Zoom {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+/* Container setup for zoom layers */
+[class^="notAppAsidePanel_"] > [class^="layerContainer_"] > [class^="layer_"]:has([class^="focusLock_"]) {
+    container: FCM-Zoom / normal;
+}
+
+/* Styles applied when --FCM-Zoom is 'on' (currently none) */
+@container FCM-Zoom style(--FCM-Zoom: on) {
+    /* No styles defined */
+}
+
+
+/* --- FEATURE MODULE: Member List Styling (--FCM-List_Members) --- */
+/* Modifies the appearance and behavior of the server member list. */
+@property --FCM-List_Members {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+/* Container setup for the member list */
+[class^="membersWrap_"] {
+    container: FCM-List_Members / normal;
+}
+
+/* Styles applied when --FCM-List_Members is 'on' */
+@container FCM-List_Members style(--FCM-List_Members: on) {
+
+    /* Member list container and items */
+    [role="list"],
+    [class^="content_"] > [class^="membersWrap_"] > [class^="members_"],
+    aside[class^="membersWrap_"] > [class^="members_"][dir="ltr"] {
+        container: SNDL-ListItem / size; /* Apply list item container styles */
+        translate: -0.4rem; /* Slight initial offset */
+
+        /* Member group headers */
+        [class^="defaultColor_"] {
+            opacity: 0.5; /* Initially faded */
+            transition: opacity var(--SNDL-Transition_Normal);
+            text-align: right; /* Align header text right */
+
+            [class^="headerContainer_"] {
+                justify-content: flex-end; /* Align header content right */
+            }
+
+            span [class^="toggleExpandIcon_"] {
+                display: none; /* Hide default expand icon */
+            }
+        }
+
+        /* Header hover effect */
+        [class^="defaultColor_"]:hover {
+            opacity: 1; /* Fully visible on hover */
+        }
+
+        /* Member item entry animation */
+        [role="listitem"] {
+            animation: SNDL-Translate_Custom var(--SNDL-Animation_Slow);
+            --Initial: 16rem; /* Start translated off-screen */
+        }
+
+        /* Individual member item styling */
+        [class^="member_"] {
+            margin-left: 6px;
+        }
+
+        /* Additional wrapper div styling */
+        > div:not([class]) { /* Target wrapper div without a class */
+            [class^="container_"] {
+                background-color: transparent;
+                padding: 0 0 0 6px;
+                margin-top: 0;
+                height: 44px;
+            }
+
+            [class^="container_"]:hover {
+                background-color: var(--background-modifier-hover);
+            }
+        }
+
+        /* Avatar positioning */
+        [style^="max"] { /* Target avatar container by style attribute */
+            order: -1; /* Move avatar to the start */
+            width: 32px;
+            height: 32px !important;
+        }
+
+        /* Info section positioning and hiding username */
+        [class^="infoSection_"] {
+            [class^="userSection_"] {
+                position: absolute;
+                bottom: 0;
+                left: 22px; /* Position below avatar */
+
+                [class^="facePile_"] {
+                    margin: 0;
+                }
+            }
+
+            [class^="userName_"] {
+                display: none; /* Hide username */
+            }
+        }
+
+        /* Grayscale effect for offline members */
+        [role="listitem"] {
+            transition: filter var(--SNDL-Animation_Fast);
+        }
+
+        [role="listitem"]:not(:has([style="color: var(--text-positive);"])) { /* Target offline members (heuristically) */
+            filter: grayscale(1);
+        }
+
+        [role="listitem"]:hover {
+            filter: grayscale(0); /* Remove grayscale on hover */
+        }
+    }
+}
+
+/* --- FEATURE MODULE: Sliding Chat (--FCM-Slide_Chat) --- */
+/* Implements different styles for making the channel list slide out of view. */
+@property --FCM-Slide_Chat {
+    syntax: 'sndl | legacy | off'; /* Allows switching between styles */
+    inherits: true;
+    initial-value: sndl;
+}
+
+/* Container setup for the main chat view area */
+[class^="container_"]:has(> [class^="base_"]) {
+    container: FCM-Slide_Chat / normal;
+}
+
+/* 'sndl' Style: Chat content slides left */
+@container FCM-Slide_Chat style(--FCM-Slide_Chat: sndl) {
+    [class^="content_"] > [class^="page_"] {
+        /* Translate based on sidebar/guild list width */
+        translate: calc(-1 * var(--custom-guild-sidebar-width) + var(--custom-guild-list-width) + 36px);
+        width: calc(100% + var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) - 38px);
+        flex: none; /* Override flex sizing */
+        transition-property: translate;
+        transition-duration: var(--SNDL-Transition_Normal);
+        z-index: 10; /* Ensure chat is above sidebar */
+    }
+
+    /* Trigger slide back when hovering sidebar or dragging */
+    [class^="content_"]:has(> [class^="sidebar_"]:hover) .page_c48ade,
+    [class^="content_"]:not(:has(> [style*="--custom-overdrag: 0px;"])):has(> [style^=""]) .page_c48ade,
+    [class^="content_"]:has(> [class^="sidebar_"][style*="--custom-overdrag:"]):not(:has(> [class^="sidebar_"][style*="--custom-overdrag: 0px;"])) .page_c48ade {
+        translate: 0; /* Slide back to original position */
+    }
+
+    /* Ensure selected channel doesn't translate with the rest in 'sndl' mode */
+    @container FCM-List_Channels style(--FCM-List_Channels: on) {
+        [class*="selected_"] {
+            translate: 0;
+        }
+    }
+}
+
+/* 'legacy' Style: Sidebar itself expands/contracts */
+@container FCM-Slide_Chat style(--FCM-Slide_Chat: legacy) {
+    [class^="sidebar_"] {
+        position: fixed !important;
+        left: 0;
+        width: calc(var(--custom-guild-list-width) + 38px) !important; /* Collapsed width */
+        height: 100%;
+        z-index: 10;
+        transition: width var(--SNDL-Transition_Normal);
+        display: flex !important;
+        flex-direction: row;
+
+        > nav, > div {
+            height: 100%;
+        }
+    }
+
+    /* Expand sidebar on hover or drag */
+    [class^="sidebar_"]:hover,
+    [class^="sidebar_"]:has([style^=""]):not([style*="0px;"]) {
+        width: var(--custom-guild-sidebar-width) !important; /* Expanded width */
+        border-radius: 0 var(--SNDL-UI_Border-Radius_Alt) var(--SNDL-UI_Border-Radius_Alt) 0 !important;
+    }
+
+    /* Adjust chat/notice margin to account for sidebar width */
+    [class^="page_"],
+    [class^="base_"] > [class^="notice_"] {
+        z-index: 1; /* Ensure content is below sidebar */
+        width: calc(100% - var(--custom-guild-list-width) - 38px) !important;
+        margin-left: calc(var(--custom-guild-list-width) + 38px) !important;
+    }
+}
+
+
+/* --- FEATURE MODULE: Sliding Member List (--FCM-Slide_Members) --- */
+/* Implements a sliding effect for the member list. */
+@property --FCM-Slide_Members {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+/* Container setup for the chat content area when member list is present */
+[class^="chat_"] > [class^="content_"]:has(> main):has([class^="members_"]) {
+    container: FCM-Slide_Members / normal;
+}
+
+/* Styles applied when --FCM-Slide_Members is 'on' */
+@container FCM-Slide_Members style(--FCM-Slide_Members: on) {
+    [class^="chat_"] > [class^="content_"] {
+        > main {
+            width: calc(100% - 3rem); /* Adjust main chat width */
+            flex: none; /* Override flex sizing */
+        }
+
+        /* Apply transition to member list container */
+        > :is([class^="container_"], [class^="membersWrap_"]) {
+            transition-property: translate;
+            transition-duration: var(--SNDL-Transition_Normal);
+        }
+
+        /* Slide member list left on hover */
+        > :is([class^="container_"]:hover, [class^="membersWrap_"]:hover) {
+            translate: -14rem; /* Slide amount */
+        }
+    }
+
+    /* Adjust member list item opacity when sliding/hovering */
+    @container FCM-List_Members (width > 0) {
+        [class^="membersWrap_"]:hover [class^="defaultColor_"]:hover {
+            opacity: 1 !important; /* Ensure hovered header is visible */
+        }
+
+        [class^="membersWrap_"]:hover [class^="defaultColor_"] {
+            opacity: 0.5 !important; /* Keep non-hovered headers faded */
+        }
+
+        [class^="defaultColor_"] {
+            opacity: 0 !important; /* Hide headers when not sliding */
+        }
+    }
+}
+
+/* Hide member list container entirely if chat doesn't have a main content area (e.g., empty DM) */
+[class^="chat_"] > [class^="content_"]:not(:has(> main)) {
+    container: FCM-Slide_Members-ButNo / size;
+}
+
+@container FCM-Slide_Members-ButNo (width > 0) {
+    [class^="container_"]:has([class^="membersWrap_"]) {
+        display: none;
+    }
+}
+
+
+/* --- FEATURE MODULE: Thread View (--FCM-Thread) --- */
+/* Adds a fade-in animation to the thread view wrapper. */
+@property --FCM-Thread {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+/* Container setup for the page containing the thread layer */
+[class^="page_"]:has(> [class^="chatLayerWrapper_"]) {
+    container: FCM-Thread / normal;
+}
+
+/* Styles applied when --FCM-Thread is 'on' */
+@container FCM-Thread style(--FCM-Thread: on) {
+    [class^="chatLayerWrapper_"] {
+        animation: SNDL-Fade_In var(--SNDL-Animation_Normal);
+    }
+}
+
+
+/* --- FEATURE MODULE: Channel Bar Styling (--FCM-Channel_Bar) --- */
+/* Adjusts the height and padding of the channel header bar. */
+@property --FCM-Channel_Bar {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+/* Container setup for the channel header bar elements */
+[class^="chat_"] > [class^="subtitleContainer_"],
+[class^="chatLayerWrapper_"] > [class^="container_"] {
+    container: FCM-Channel_Bar / normal;
+}
+
+/* Styles applied when --FCM-Channel_Bar is 'on' */
+@container FCM-Channel_Bar style(--FCM-Channel_Bar: on) {
+    section { /* Assuming this targets the header section */
+        height: 32px !important; /* Reduce height */
+        min-height: 0 !important;
+        padding: 0 0 0 8px !important; /* Adjust padding */
+    }
+}
+
+
+/* --- FEATURE MODULE: Channel Onboarding (--FCM-Onboarding_Channel) --- */
+/* Styles the channel onboarding screen layout and elements. */
+@property --FCM-Onboarding_Channel {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+/* Container setup for the chat area during onboarding */
+[class^="chat_"]:has(> section):has(> div > [class^="tabBar_"]) {
+    container: FCM-Onboarding_Channel / normal;
+}
+
+/* Styles applied when --FCM-Onboarding_Channel is 'on' */
+@container FCM-Onboarding_Channel style(--FCM-Onboarding_Channel: on) {
+    [class^="content_"] [class^="scroller_"] {
+        [class^="pageBody_"] {
+            width: calc(100% - 320px); /* Adjust body width */
+
+            /* Option button styling */
+            [class^="optionButtonWrapper_"] {
+                max-width: 320px;
+                border-radius: var(--SNDL-UI_Border-Radius);
+                transition: scale var(--SNDL-Transition_Normal);
+            }
+
+            [class^="optionButtonWrapper_"]:hover { scale: 1.05; }
+            [class^="optionButtonWrapper_"]:active { scale: 0.95; }
+        }
+
+        /* Profile section width */
+        [class^="profile_"] {
+            width: 320px;
+        }
+    }
+}
+
+
+/* --- FEATURE MODULE: Incoming Message Animation (--FCM-Message_Incoming) --- */
+/* Adds animations to incoming messages. */
+@property --FCM-Message_Incoming {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+/* Container setup for the chat message list */
+[data-list-id="chat-messages"] {
+    container: FCM-Message_Incoming / normal;
+}
+
+/* Styles applied when --FCM-Message_Incoming is 'on' */
+@container FCM-Message_Incoming style(--FCM-Message_Incoming: on) {
+    /* Fade-in animation for all message list items */
+    [class^="messageListItem_"] {
+        animation: SNDL-Fade_In var(--SNDL-Animation_Slow);
+    }
+
+    /* Translate animation for the latest message */
+    [class^="messageListItem_"]:last-of-type [class^="message_"] {
+        animation: SNDL-Translate_Custom var(--SNDL-Animation_XSlow);
+        --Initial: 8rem; /* Start translated from below */
+    }
+
+    /* Special animation for messages currently being sent */
+    [class^="messageListItem_"]:last-of-type [class^="message_"]:has([class*="isSending_"]) {
+        animation: SNDL-Fade_Loop var(--SNDL-Animation_XTSlow) infinite !important; /* Pulsing fade */
+        translate: 8rem; /* Keep it translated while sending */
+        --Peak: 0; /* Fade out completely */
+        --Lowest: 0.5; /* Fade in to half opacity */
+    }
+}
+
+
+/* --- FEATURE MODULE: Settings Window (--FCM-Settings_Window) --- */
+/* Styles the settings modal window. */
+@property --FCM-Settings_Window {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+/* Container setup for the main layers element */
+[class^="layers_"] {
+    container: FCM-Settings_Window / normal;
+}
+
+/* Styles applied when --FCM-Settings_Window is 'on' */
+@container FCM-Settings_Window style(--FCM-Settings_Window: on) {
+    /* Ensure animations don't break layout */
+    .stop-animations {
+        opacity: 1 !important;
+        z-index: 0;
+    }
+
+    /* Disable default layer transforms */
+    [class^="layer_"],
+    [class*="animating_"] {
+        transform: none !important;
+    }
+
+    /* Style the main settings layer (second layer) */
+    [class^="layer_"]:nth-child(2) {
+        width: 90vw;
+        height: 80vh;
+        margin: auto; /* Center the window */
+        padding: 0;
+        border-radius: var(--SNDL-UI_Border-Radius) !important;
+
+        /* Adjustments within the settings view */
+        [class^="standardSidebarView_"] {
+            margin-top: -22px; /* Pull content up */
+
+            /* Settings sidebar navigation */
+            nav[class^="sidebar_"] {
+                [role="tablist"] {
+                    container: SNDL-ListItem / inline-size; /* Apply list item styles */
+                    --Enable-Selected_Modifications: 1;
+                    --SNDL-UI_Translate-Intensity: 1.5;
+                    --SNDL-UI_Scale-Intensity: 0.05;
+
+                    /* Search bar container */
+                    div:has(> [class^="searchBar_"]) {
+                        position: sticky; /* Make search bar sticky */
+                        top: 25px;
+                        translate: none; scale: none; /* Reset list item transforms */
+                        width: 100%;
+                        margin: 0 !important;
+                        z-index: 10;
+                    }
+
+                    /* Search bar styling */
+                    [class^="searchBar_"] {
+                        border-radius: var(--SNDL-UI_Border-Radius);
+                        background: var(--SNDL-C_Primary-Solid);
+                        margin: 0;
+                    }
+
+                    /* Sidebar tab buttons */
+                    > [role="button"] {
+                        width: 100%;
+                        translate: none; scale: none; /* Reset list item transforms */
+                        text-align: right; /* Align text right */
+                    }
+                }
+            }
+
+            /* Hide tools container elements behind content */
+            [class^="toolsContainer_"] [class^="tools_"] {
+                 z-index: -1;
+            }
+
+            /* Repurpose the close button as a full background click-off area */
+            [class^="closeButton_"] {
+                position: fixed;
+                top: var(--Discord-TitleBar_Size);
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                border-radius: 0;
+                border: unset;
+                background: transparent; /* Make it invisible */
+
+                svg { display: none; } /* Hide the actual 'X' icon */
+            }
+
+            /* Hide keybind display */
+            [class^="keybind_"] {
+                 display: none;
+            }
+        }
+    }
+}
+
+
+/* --- FEATURE MODULE: Guild List Styling (--FCM-Guild_List) --- */
+/* Minor adjustments to the guild list container. */
+@property --FCM-Guild_List {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+/* Container setup for the guild list navigation */
+nav[class*="guilds_"] {
+    container: FCM-Guild_List / normal;
+}
+
+/* Styles applied when --FCM-Guild_List is 'on' */
+@container FCM-Guild_List style(--FCM-Guild_List: on) {
+    /* Ensure guild items container takes full height */
+    [class^="itemsContainer_"] {
+        max-height: 100%;
+    }
+}
+
+
+/* --- FEATURE MODULE: Channel List Styling (--FCM-List_Channels) --- */
+/* Major restyling of the channel list appearance and layout. */
+@property --FCM-List_Channels {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+/* Container setup for the channel list itself */
+[class^="sidebar_"] [class^="sidebarList_"] {
+    container: FCM-List_Channels / normal !important; /* Ensure this container context applies */
+}
+
+/* Styles applied when --FCM-List_Channels is 'on' */
+@container FCM-List_Channels style(--FCM-List_Channels: on) {
+    /* Remove bottom padding */
+    #channels > ul {
+        padding-bottom: 0;
+    }
+
+    /* Channel list entry animation */
+    #channels {
+        animation: SNDL-Translate_Custom var(--SNDL-Animation_Slow);
+        --Initial: -1rem; /* Start slightly above */
+
+        > ul {
+            container: SNDL-ListItem / inline-size; /* Apply list item styles */
+            --Enable-Selected_Modifications: 0; /* Disable selected item translate/scale here */
+
+            /* Channel list item spacing */
+            li {
+                padding: 1px 0 1px 0;
+
+                /* Channel link (<a> tag) styling */
+                a {
+                    height: 32px;
+                    padding: var(--SNDL-UI_Padding) !important;
+                    border-radius: var(--SNDL-UI_Border-Radius) !important;
+                    justify-content: center; /* Center content */
+
+                    /* Children elements (e.g., thread indicators) */
+                    [class^="children_"] {
+                        [role="button"] { /* Hide most buttons within children */
+                             display: none !important;
+                             opacity: 0.5;
+                             transition: opacity var(--SNDL-Transition_Slow);
+                        }
+                        [role="button"]:hover { opacity: 1 !important; } /* Show on hover */
+
+                         /* Specifically show thread button, but hide initially */
+                        [role="button"]:has([d="M12 22a10 10 0 1 0-8.45-4.64c.13.19.11.44-.04.61l-2.06 2.37A1 1 0 0 0 2.2 22H12Z"]) {
+                            display: block !important;
+                            position: absolute;
+                            right: 2px;
+                            opacity: 0; /* Hide initially */
+                        }
+                    }
+
+                    /* Hide channel topic */
+                    [class^="channelInfo_"] [data-text-variant="text-xs/semibold"] {
+                        display: none;
+                    }
+                }
+
+                /* Adjust height for channels with activity indicators */
+                a:has([class^="linkBottom_"] > div > div) {
+                    height: 40px;
+                }
+
+                /* Voice channel user list styling */
+                [role="group"] { /* Targets the voice channel user list */
+                    translate: none !important; /* Reset list item transforms */
+                    width: 100%;
+
+                    > [class^="draggable_"] { /* User item */
+                        height: 24px;
+                        margin-left: 8px !important;
+
+                        [class^="voiceUser_"] {
+                            height: 24px;
+                            > div { padding: 0; } /* Remove padding */
+
+                            [class^="userAvatar_"] { /* Smaller avatar */
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+                    }
+                }
+
+                /* Icon container adjustments */
+                [class^="iconVisibility_"]:has(svg), /* Targets icon containers */
+                [role="group"] { /* Also target voice user group */
+                    padding: 0 !important;
+                    margin: 0 !important;
+                }
+
+                /* Channel name margin */
+                [class^="name_"] {
+                    margin-left: 1px;
+                }
+
+                /* Ensure icons use text color */
+                svg {
+                    color: var(--SNDL-Text) !important;
+                }
+
+                /* Reset translation for icon container */
+                [class^="iconVisibility_"]:has(> [data-list-item-id^="channels_"]) {
+                    translate: 0 !important;
+                }
+
+                /* Style category headers */
+                > [class*="clickable_"] { /* Targets category header */
+                    width: calc(100% - var(--SNDL-UI_Margin));
+
+                    [data-list-item-id^="channels_"] {
+                        justify-content: flex-end; /* Align category name right */
+                    }
+                }
+
+                /* Hide "Create Channel" button */
+                [class^="addButton_"] {
+                     display: none !important;
+                }
+
+                /* Style DM list items */
+                 > div[class^="containerDefault_"] {
+                    height: 32px;
+                    margin: 0;
+
+                    [class^="link_"] {
+                        padding: 0;
+                        justify-content: center; /* Center DM content */
+
+                        [class^="iconContainer_"] {
+                            margin-left: 8px;
+                        }
+                    }
+                }
+            }
+
+            /* Muted channel icon color */
+            [class*="modeMuted_"] svg {
+                 color: var(--SNDL-Text_Faded) !important;
+            }
+
+            /* Styling for wrapper around channel category headers */
+            > li > [class*="wrapperCommon_"] {
+                translate: none !important; /* Reset list item transforms */
+                width: 100%;
+
+                > div {
+                    justify-content: space-evenly; /* Adjust spacing */
+                }
+            }
+
+            /* Collapsed category indicator adjustments */
+            [class^="spineBorder_"] {
+                left: 16px;
+                bottom: 16px !important;
+            }
+
+            [class^="spine_"] {
+                display: none; /* Hide default spine */
+            }
+
+            /* Styling for voice channel items within categories */
+            li[class^="container_"] { /* Targets voice channel list item */
+                margin-right: 16px;
+
+                [role="listitem"] [class^="iconVisibility_"] {
+                    margin-left: 32px !important; /* Indent voice user */
+
+                    > [class^="link_"] {
+                        border-radius: var(--SNDL-UI_Border-Radius) !important;
+                        padding: calc(var(--SNDL-UI_Padding) / 2);
+                    }
+                }
+            }
+        }
+    }
+
+    /* Server Header Styling */
+    nav > div:first-of-type { /* Target container likely holding the header */
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 0 !important; /* Effectively hide the original header space */
+            z-index: 100 !important;
+            padding: 0 !important;
+
+            /* Hide default header elements */
+            > div > :is(div, h2) {
+                display: none;
+            }
+
+            /* Reposition header children (like server settings icon) */
+            [class^="headerChildren_"] {
+                position: fixed;
+                top: 0.5rem;
+                right: 1rem;
+                display: block; /* Ensure it's visible */
+
+                svg { /* Style the icon */
+                    top: unset;
+                    left: unset;
+                    padding: calc(var(--SNDL-UI_Padding) / 2);
+                    margin: 0;
+                    transform: translate3d(0, 3px, 0); /* Fine-tune position */
+                    background-color: var(--SNDL-C_Primary-Inverted) !important;
+                    color: var(--SNDL-Text_Inverted) !important;
+                    border-radius: var(--SNDL-UI_Border-Radius_Circle);
+                }
+            }
+        }
+
+        /* Server Banner Styling */
+        > [class^="animatedContainer_"] { /* Target banner container */
+            top: 0; /* Position at the top */
+
+            [class^="bannerIm"] { /* Ensure banner fills container */
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    /* Server Boost/Progress Bar Styling */
+    [class*="top_"], /* Target top bar elements */
+    [class*="bottom_"] { /* Target bottom bar elements */
+        justify-content: flex-start; /* Align left */
+        left: 2px;
+
+        [class*="barText_"] {
+            margin-left: 6px;
+        }
+    }
+}
+
+
+/* --- FEATURE MODULE: Channel Notification Badges (--FCM-Notification_Channels) --- */
+/* Styles the appearance and positioning of unread/mention badges on channels. */
+@property --FCM-Notification_Channels {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+/* Container setup for the channel list scroller */
+[class^="sidebar_"] [class^="sidebarList_"] > nav > [class^="scroller_"] {
+    container: FCM-Notification_Channels / normal !important; /* Ensure context */
+}
+
+/* Styles applied when --FCM-Notification_Channels is 'on' */
+@container FCM-Notification_Channels style(--FCM-Notification_Channels: on) {
+    /* Unread indicator (white bar) and number badge */
+    [class^="unread_"],
+    [class^="numberBadge_"] {
+        position: absolute;
+        top: 8px;
+        left: 6px;
+        width: 24px !important;
+        height: 24px;
+        border-radius: var(--SNDL-UI_Border-Radius);
+        background: var(--SNDL-Blue); /* Use theme blue */
+        animation: SNDL-Fade_In var(--SNDL-Animation_Fast);
+    }
+
+    /* Change icon color for important unreads */
+    [class*="modeUnreadImportant_"] [class^="icon_"] {
+        color: var(--SNDL-Text_Inverted) !important;
+    }
+
+    /* Mention badge positioning and styling */
+    [class^="mentionsBadge_"] {
+        position: absolute;
+        left: -8px; /* Overlap slightly */
+        top: -8px;  /* Overlap slightly */
+        margin: 0;
+        animation: SNDL-Fade_In var(--SNDL-Animation_XSlow);
+        pointer-events: none;
+
+        [class^="numberBadge_"] {
+            height: 24px !important;
+            width: 24px !important;
+            border-radius: var(--SNDL-UI_Border-Radius_Circle);
+            scale: 0.8; /* Make slightly smaller */
+        }
+    }
+
+    /* Ensure channel info is visible when mentions badge exists (might be hidden otherwise) */
+    [class^="channelInfo_"]:has([class^="mentionsBadge_"]) {
+        display: block !important;
+    }
+
+    /* Badge positioning within voice channel user list */
+    [role="group"] {
+        [class^="unread_"] {
+            left: -27.5px;
+            top: 9px;
+            scale: 0.8;
+        }
+
+        [class^="mentionsBadge_"] {
+            left: -35px;
+            top: -1px;
+            scale: 0.75;
+        }
+    }
+
+    /* Hide default badges in DM list */
+    li > div[class^="containerDefault_"] {
+        [class^="unread_"] { display: none; }
+        [class^="numberBadge_"] {
+            top: 4px;
+            z-index: -1; /* Place behind content */
+            color: transparent; /* Hide number text */
+        }
+    }
+}
+
+
+/* --- FEATURE MODULE: User Panel Styling (--FCM-User_Panel) --- */
+/* Styles the user panel area at the bottom of the channel list. */
+@property --FCM-User_Panel {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+/* Container setup for the user panel section */
+section[class^="panels_"] {
+    container: FCM-User_Panel / normal;
+    background: transparent !important; /* Make panel background transparent */
+}
+
+/* Styles applied when --FCM-User_Panel is 'on' */
+@container FCM-User_Panel style(--FCM-User_Panel: on) {
+    section[class^="panels_"] {
+        background: transparent !important;
+
+        /* Reposition the inner wrapper */
+        > [class^="wrapper_"] {
+            left: var(--custom-guild-list-width); /* Align with channel list */
+            width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) - 16px); /* Calculate width */
+            background: var(--SNDL-C_Primary-Solid);
+            border-radius: calc(var(--SNDL-UI_Border-Radius) / 4);
+
+            /* Container within the wrapper */
+            [class^="container_"] {
+                flex-direction: column-reverse; /* Reverse item order */
+
+                /* Button container */
+                [class^="flex_"] > [class^="flex_"] {
+                    > button:first-of-type {
+                        display: none; /* Hide first button (likely user settings) */
+                    }
+                }
+            }
+        }
+
+        /* Container holding the avatar and buttons */
+        > [class^="container_"] {
+            left: calc(var(--custom-guild-list-width) - 8px);
+            bottom: 0;
+            width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 10px);
+
+            /* Avatar wrapper styling */
+            > [class^="avatarWrapper_"] {
+                background: var(--SNDL-C_Primary-Solid);
+                border-radius: calc(var(--SNDL-UI_Border-Radius) / 4);
+                padding: var(--SNDL-UI_Padding);
+
+                /* Inner avatar wrapper/status */
+                > [class^="wrapper_"] {
+                    position: fixed;
+                    left: -63px; /* Position relative to parent */
+                    bottom: 0;
+                    width: 28px !important;
+                    height: 28px !important;
+
+                    svg { /* Ensure status icon fits */
+                        width: 28px !important;
+                        height: 28px !important;
+                    }
+                }
+            }
+
+            /* Mic/Deafen button positioning */
+            [class^="micButtonParent_"] { /* Likely targets mic button */
+                position: fixed;
+                left: -68px;
+                bottom: 32px;
+            }
+
+            /* Button container */
+            [class^="flex_"] {
+                > button { position: fixed; } /* Fix button positions */
+                > button:nth-child(2) { /* Likely Deafen button */
+                    left: -35px;
+                    bottom: 32px;
+                }
+                > button:nth-child(3) { /* Likely Settings button (if not hidden) */
+                    left: -35px;
+                    bottom: -4px;
+                }
+            }
+        }
+
+        /* Old panel structure (potentially hidden/repurposed) */
+        > [class^="panel_"] {
+            position: fixed;
+            left: 10px;
+            bottom: 80px;
+            padding: 4px;
+            border-radius: var(--SNDL-UI_Border-Radius_Square);
+
+            [class^="info_"] { display: none; } /* Hide default info */
+
+            /* Action button container repositioning */
+            [class^="actions_"] {
+                position: absolute;
+                left: 12px;
+                bottom: -12px;
+                scale: 0.8; /* Scale down */
+
+                button { /* Style buttons */
+                    background-color: var(--SNDL-C_Primary);
+                    border-radius: var(--SNDL-UI_Border-Radius);
+                }
+                button:hover {
+                    background-color: var(--SNDL-C_Secondary);
+                }
+            }
+        }
+    }
+}
+
+
+/* --- THEME FEATURE: Custom Background Mode (CBM) --- */
+/* Applies a custom background image and blur effect when the container FCT_CBM is active (likely toggled via theme settings). */
+@container FCT_CBM (width > 0) { /* Assumes FCT_CBM container is set elsewhere */
+
+    /* Apply background image */
+    [class^="bg_"] { /* Targets the main background element */
+        background: var(--Flashcord-Theme_CBM-Image, url("https://dev.sirio-network.com/flashcord/ressources/ceres/cbmtest1.jpg")) !important;
+        background-size: cover !important;
+        background-position: center !important;
+    }
+
+    /* Apply backdrop filter for blur/brightness */
+    [class^="bg_"]::before {
+        content: "";
+        display: block;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        backdrop-filter: blur(var(--Flashcord-Theme_CBM-Blur, 8px)) brightness(var(--Flashcord-Theme_CBM-Brightness, 0.5));
+    }
+
+    /* Make default Discord backgrounds transparent */
+    body {
+        --bg-overlay-2: transparent;
+        --bg-overlay-4: transparent;
+        --bg-overlay-chat: transparent;
+        --background-base-lowest: transparent;
+        --background-base-lower: transparent;
+        --background-primary: rgba(var(--Black-Ascellyan), 0.75); /* Semi-transparent primary */
+        --background-secondary: rgba(var(--Black-Ascellyan), 0.25); /* More transparent secondary */
+        --bg-base-tertiary: transparent;
+    }
+
+    /* Ensure correct container context for sliding chat when CBM is active */
+    [class^="container_"]:has(> [class^="base_"]) {
+        container: var(--FCM-Slide_Chat, FCM-Slide_Chat-Legacy) / inline-size !important;
+    }
+
+    /* Add backdrop blur to member list when slid out */
+    @container FCM-Slide_Members (width > 0) {
+        aside > [class^="members"]::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: backdrop-filter var(--SNDL-Transition_Normal);
+        }
+
+        aside > [class^="members"]:hover::before {
+            backdrop-filter: blur(var(--SNDL-Blur_Heavy)); /* Apply heavy blur on hover */
+        }
+    }
+
+    /* Add backdrop blur to channel list (legacy slide mode) */
+    @container FCM-Slide_Chat-Legacy (width > 0) {
+        [class^="sidebar_"]::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transition: backdrop-filter var(--SNDL-Transition_Normal), background var(--SNDL-Transition_Normal);
+        }
+
+        [class^="sidebar_"]:hover::before,
+        [class^="sidebar_"]:has([style^=""]):not([style*="0px;"])::before {
+            background: rgba(var(--Black-Ascellyan), 0.8); /* Darken background */
+            backdrop-filter: blur(var(--SNDL-Blur_Normal)); /* Apply blur */
+        }
+
+        /* Minor adjustment for voice user container margin */
+        @container FCM-List_Channels (width > 0) {
+            #channels [role="group"] > [class^="draggable_"] [class^="voiceUser_"] > div > [class^="container_"] {
+                margin-left: 1px;
+            }
+        }
+    }
+
+    /* Apply backdrop blur to menus */
+    @container FCM-Monolith_FL (width > 0) {
+        [role="menu"] {
+            background: transparent; /* Make menu background transparent */
+        }
+
+        [role="menu"]::before { /* Use pseudo-element for blur */
+            content: "";
+            position: absolute;
+            border-radius: var(--SNDL-UI_Border-Radius);
+            width: 100%;
+            height: 100%;
+            background: rgba(var(--Black-Ascellyan), 0.5); /* Semi-transparent background */
+            backdrop-filter: blur(var(--SNDL-Blur_Normal));
+        }
+    }
+}
+
+/* --- COMPILATION METADATA --- */
+/* Comments added by the compilation tool. */
+/* Compiled using Caerbannog Ceres MK.I Rev.3*/
+:root {
+    --Caerbannog-Version: "Ceres MK.I Rev.3";
+    --Caerbannog-Compile_Date: "('2025/04/17', '21:58:11')";
+}
+
+
+
+
+
+
+
+/* --- Iridescent Midnight (Onyx) Theme Addon --- */
+/* Updated selector to html.theme-midnight */
+
+@keyframes iridescent-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+html.theme-midnight { /* <<< UPDATED SELECTOR */
+
+    > body [class^="bg_"] {
+        background: linear-gradient(
+            120deg,
+            hsl(0, 80%, 70%), hsl(30, 80%, 70%), hsl(60, 80%, 70%),
+            hsl(120, 80%, 70%), hsl(180, 80%, 70%), hsl(240, 80%, 70%),
+            hsl(300, 80%, 70%), hsl(360, 80%, 70%)
+        ) !important;
+        background-size: 1000% 1000% !important;
+        animation: iridescent-shift 25s ease infinite !important;
+        &::before {
+            background: none;
+            backdrop-filter: brightness(0.6) saturate(1.2) !important;
+        }
+    }
+     --background-primary: rgba(0, 0, 0, 0.75) !important;
+     --background-secondary: rgba(0, 0, 0, 0.5) !important;
+     --background-base-lower: transparent !important;
+     --background-base-lowest: transparent !important;
+     --bg-overlay-chat: rgba(0, 0, 0, 0.6) !important;
+     --bg-overlay-app: rgba(0, 0, 0, 0.8) !important;
+     section[class^="panels_"] > [class^="wrapper_"] { background: rgba(0, 0, 0, 0.8) !important; }
+     section[class^="panels_"] > [class^="container_"] > [class^="avatarWrapper_"] { background: rgba(0, 0, 0, 0.8) !important; }
+     @container FCM-Monolith_FL style(--FCM-Monolith_FL: on) {
+        [role="menu"]::before { background: rgba(0, 0, 0, 0.7) !important; backdrop-filter: blur(var(--SNDL-Blur_Light)) brightness(0.8) !important; }
+     }
+     @container FCM-Slide_Chat style(--FCM-Slide_Chat: legacy) {
+        [class^="sidebar_"]:hover::before, [class^="sidebar_"]:has([style^=""]):not([style*="0px;"])::before { background: rgba(0, 0, 0, 0.7) !important; backdrop-filter: blur(var(--SNDL-Blur_Normal)) brightness(0.9) !important; }
+    }
+}
+
+/* --- Terminal Style Addon for Ash Theme --- */
+/* Using assumed selector html.theme-ash - Verify if still not working */
+
+html.theme-darker { /* <<< ASSUMED SELECTOR - VERIFY IF NEEDED */
+    --terminal-bg: #0A0F0D;
+    --terminal-bg-secondary: #101513;
+    --terminal-text: #39FF14;
+    --terminal-text-dim: rgba(57, 255, 20, 0.6);
+    --terminal-text-glow: rgba(57, 255, 20, 0.3);
+    --terminal-accent: #2FCC40;
+    --terminal-accent-hover: #4FFF50;
+    --terminal-border: rgba(57, 255, 20, 0.2);
+
+    /* Font Overrides */
+    --font-primary: var(--SNDL-Font_Monospace) !important;
+    --font-display: var(--SNDL-Font_Monospace) !important;
+    --font-headline: var(--SNDL-Font_Monospace) !important;
+    --font-code: var(--SNDL-Font_Monospace) !important;
+
+    /* Background Overrides */
+    --background-primary: var(--terminal-bg) !important;
+    --background-secondary: var(--terminal-bg-secondary) !important;
+    --background-secondary-alt: var(--terminal-bg-secondary) !important;
+    --background-tertiary: var(--terminal-bg) !important;
+    --background-accent: var(--terminal-accent) !important;
+    --background-floating: var(--terminal-bg-secondary) !important;
+    --background-modifier-hover: rgba(57, 255, 20, 0.1) !important;
+    --background-modifier-active: rgba(57, 255, 20, 0.15) !important;
+    --background-modifier-selected: rgba(57, 255, 20, 0.2) !important;
+    --background-modifier-accent: rgba(57, 255, 20, 0.1) !important;
+    --background-mentioned: rgba(57, 255, 20, 0.05) !important;
+    --background-mentioned-hover: rgba(57, 255, 20, 0.1) !important;
+    --bg-overlay-chat: rgba(16, 21, 19, 0.7) !important;
+    --bg-overlay-app: rgba(16, 21, 19, 0.8) !important;
+    --profile-body-background-color: var(--terminal-bg-secondary) !important;
+
+    /* SNDL Color Overrides */
+    --SNDL-C_Primary: rgba(10, 15, 13, 0.5) !important;
+    --SNDL-C_Primary-Heavy: rgba(10, 15, 13, 0.8) !important;
+    --SNDL-C_Primary-Solid: var(--terminal-bg) !important;
+    --SNDL-C_Secondary: rgba(57, 255, 20, 0.2) !important;
+    --SNDL-C_Secondary-Heavy: rgba(57, 255, 20, 0.4) !important;
+    --SNDL-C_Secondary-Solid: var(--terminal-accent) !important;
+    --SNDL-C_Tertiary: var(--SNDL-C_Light) !important;
+    --SNDL-Blue: var(--terminal-accent) !important;
+
+    /* Text Overrides */
+    --text-normal: var(--terminal-text) !important;
+    --text-muted: var(--terminal-text-dim) !important;
+    --text-link: var(--terminal-accent-hover) !important;
+    --text-positive: var(--terminal-text) !important;
+    --text-warning: #FFFF00 !important;
+    --text-danger: #FF5555 !important;
+    --interactive-normal: var(--terminal-text-dim) !important;
+    --interactive-hover: var(--terminal-text) !important;
+    --interactive-active: var(--terminal-accent-hover) !important;
+    --interactive-muted: rgba(57, 255, 20, 0.3) !important;
+    --header-primary: var(--terminal-text) !important;
+    --header-secondary: var(--terminal-text-dim) !important;
+    --channels-default: var(--terminal-text-dim) !important;
+    --control-brand-foreground: var(--terminal-accent) !important;
+    --info-warning-foreground: #FFFF00 !important;
+
+    /* Scrollbar Overrides */
+    --scrollbar-thin-thumb: rgba(57, 255, 20, 0.3) !important;
+    --scrollbar-thin-track: transparent !important;
+    --scrollbar-auto-thumb: rgba(57, 255, 20, 0.4) !important;
+    --scrollbar-auto-track: rgba(57, 255, 20, 0.1) !important;
+
+    /* Border Overrides */
+    --channeltextarea-background: var(--terminal-bg-secondary) !important;
+    --channeltextarea-border: var(--terminal-border) !important;
+    --SNDL-UI_Border-Size: 1px !important;
+    --SNDL-UI_Border-Radius: 0px !important;
+    --SNDL-UI_Border-Radius_Alt: 0px !important;
+    --SNDL-UI_Border-Radius_Square: 0px !important;
+
+    /* CBM Compatibility */
+    > body [class^="bg_"] { background: var(--terminal-bg) !important; &::before { backdrop-filter: none !important; background: none !important; } }
+
+    /* Text Glow */
+    body, [class*="text-"], [class^="name-"], [class*="header-"], [class*="messageContent-"] { text-shadow: 0 0 3px var(--terminal-text-glow); }
+    code, pre, code *, pre * { text-shadow: none !important; background-color: var(--terminal-bg-secondary) !important; border: 1px solid var(--terminal-border) !important; color: var(--terminal-text) !important; }
+
+    /* Flashcord Ceres Element Adjustments */
+     @container FCM-TitleBar style(--FCM-TitleBar: on) { [class^="base_"] > [class^="bar_"] > [class^="title_"]::before { color: var(--terminal-text) !important; text-shadow: 0 0 3px var(--terminal-text-glow); } }
+
+     /* Button Styling */
+     button, [class*="button-"] { border: 1px solid var(--terminal-border) !important; background-color: transparent !important; color: var(--terminal-text-dim) !important; border-radius: 0 !important; &:hover { border-color: var(--terminal-accent) !important; background-color: rgba(57, 255, 20, 0.1) !important; color: var(--terminal-text) !important; } &:active { background-color: rgba(57, 255, 20, 0.2) !important; } }
+     [class*="lookFilled-"][class*="colorBrand-"], [class*="lookFilled-"][class*="colorGreen-"] { background-color: var(--terminal-accent) !important; border: none !important; color: var(--terminal-bg) !important; &:hover { background-color: var(--terminal-accent-hover) !important; } }
+}
+
+
+
+
+
+
+/* --- Twilight Overhaul + Glass Effect for Burple Twilight Theme --- */
+/* Targets html.theme-dark; intended for when Burple Twilight is selected */
+
+html.theme-dark { /* Apply when any dark-based theme is active */
+
+    /* Define Twilight Palette (with RGB versions for rgba) */
+    --twilight-bg-dark: #0f0f1a;
+    --twilight-bg-dark-rgb: 15, 15, 26;
+    --twilight-bg-medium: #1a1a2e;
+    --twilight-bg-medium-rgb: 26, 26, 46;
+    --twilight-text-bright: #e0e0ff;
+    --twilight-text-bright-rgb: 224, 224, 255;
+    --twilight-text-dim: #a0a0cc;
+    --twilight-accent-pink: #ff80c0;
+    --twilight-accent-orange: #ffaf80;
+    --twilight-accent-purple: #c080ff;
+    --twilight-accent-purple-rgb: 192, 128, 255;
+    --twilight-glow: rgba(224, 224, 255, 0.2);
+    --twilight-border-color: rgba(var(--twilight-accent-purple-rgb), 0.15);
+    --twilight-glass-blur: 12px; /* Glass blur amount */
+    --twilight-glass-bg: rgba(var(--twilight-bg-medium-rgb), 0.6); /* Glass background color */
+    --twilight-glass-bg-hover: rgba(var(--twilight-accent-purple-rgb), 0.1); /* Glass hover tint */
+    --twilight-glass-bg-active: rgba(var(--twilight-accent-purple-rgb), 0.15); /* Glass active tint */
+
+    /* === Background Image (Remains the same) === */
+    > body [class^="bg_"] {
+        background: url("https://dev.sirio-network.com/flashcord/ressources/ceres/cbmtest1.jpg") !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-attachment: fixed !important;
+    }
+    > body [class^="bg_"]::before {
+        content: "" !important; display: block !important; position: fixed !important;
+        top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important;
+        backdrop-filter: brightness(0.6) saturate(1.1) blur(3px) !important; /* Mood filter */
+        background: none !important; z-index: -1 !important;
+    }
+
+    /* === Base Variable Overrides (Twilight Palette) === */
+    /* Using glass bg for primary/secondary where applicable */
+    --background-primary: transparent !important; /* Make base transparent */
+    --background-secondary: transparent !important;
+    --background-secondary-alt: transparent !important;
+    --background-tertiary: var(--twilight-glass-bg) !important; /* Floating elements get glass */
+    --background-accent: var(--twilight-accent-purple) !important;
+    --background-floating: var(--twilight-glass-bg) !important; /* Popouts/modals get glass */
+    --background-modifier-hover: var(--twilight-glass-bg-hover) !important;
+    --background-modifier-active: var(--twilight-glass-bg-active) !important;
+    --background-modifier-selected: var(--twilight-glass-bg-active) !important;
+    --background-modifier-accent: rgba(255, 128, 192, 0.1) !important;
+    --background-mentioned: rgba(255, 175, 128, 0.15) !important; /* Slightly stronger mention */
+    --background-mentioned-hover: rgba(255, 175, 128, 0.25) !important;
+    --profile-body-background-color: var(--twilight-glass-bg) !important;
+
+    /* Text (Remains mostly the same) */
+    --text-normal: var(--twilight-text-bright) !important;
+    --text-muted: var(--twilight-text-dim) !important;
+    --text-link: var(--twilight-accent-orange) !important;
+    /* ... (other text colors remain from previous version) ... */
+    --header-primary: var(--twilight-text-bright) !important;
+    --header-secondary: var(--twilight-text-dim) !important;
+    --channels-default: var(--twilight-text-dim) !important;
+
+    /* Interactive Colors */
+    --interactive-normal: var(--twilight-text-dim) !important;
+    --interactive-hover: var(--twilight-text-bright) !important;
+    --interactive-active: var(--twilight-accent-pink) !important;
+    --interactive-muted: rgba(160, 160, 204, 0.4) !important;
+
+    /* Borders */
+    --channeltextarea-background: rgba(var(--twilight-bg-dark-rgb), 0.7) !important; /* Darker text area */
+    --channeltextarea-border: var(--twilight-border-color) !important;
+    --focus-primary: var(--twilight-accent-purple) !important;
+    --guild-header-separator: var(--twilight-border-color) !important;
+
+    /* Text Glow */
+    body, [class*="text-"], [class^="name-"], [class*="header-"], [class*="messageContent-"] {
+        text-shadow: 0 0 5px var(--twilight-glow), 0 0 8px var(--twilight-glow);
+    }
+    code, pre, code *, pre * {
+       text-shadow: none !important;
+       background-color: rgba(var(--twilight-bg-dark-rgb), 0.6) !important; /* Darker semi-transparent code */
+       border: 1px solid var(--twilight-border-color) !important;
+       color: var(--twilight-text-bright) !important;
+       backdrop-filter: blur(2px); /* Optional subtle blur on code blocks */
+    }
+
+    /* === Glass Effect Application === */
+
+    /* Helper class for glass elements */
+    .apply-glass-effect {
+        background-color: var(--twilight-glass-bg) !important;
+        backdrop-filter: blur(var(--twilight-glass-blur)) !important;
+        border: 1px solid var(--twilight-border-color) !important;
+    }
+
+    /* Apply Glass to Sidebars */
+    .sidebar__05277, /* Main sidebar */
+    nav[class*="guilds_"], /* Guild list */
+    .container_cbd271, /* Private Channels list */
+    [class^="panels_"] /* User panel area */
+     {
+        background-color: var(--twilight-glass-bg) !important;
+        backdrop-filter: blur(var(--twilight-glass-blur)) !important;
+        /* Optional: Add border */
+        /* border-right: 1px solid var(--twilight-border-color) !important; */
+    }
+    /* Remove override from specific elements inside sidebar if needed */
+    nav[class*="guilds_"] > [class*="scroller_"] { background: transparent !important; backdrop-filter: none !important; }
+    [class^="panels_"] > * { background: transparent !important; backdrop-filter: none !important; } /* Make panel contents transparent */
+
+
+    /* Apply Glass to Main Chat Container Area (Behind Messages) */
+    .chat__5535d, /* Includes header and chat content */
+    .container_d5a15d /* Old class, might still be used */
+     {
+        background-color: rgba(var(--twilight-bg-dark-rgb), 0.4) !important; /* Slightly darker tint */
+        backdrop-filter: blur(var(--twilight-glass-blur)) !important;
+    }
+    /* Ensure chat content itself doesn't interfere */
+     .chatContent_f0862d {
+        background-color: transparent !important;
+     }
+     /* Make individual messages slightly tinted, NO BLUR for performance */
+    .messageListItem__6a863,
+    .containerCozy_d3a4a1, .containerCompact_d3a4a1 {
+        background-color: rgba(var(--twilight-bg-medium-rgb), 0.1) !important; /* Very subtle bg */
+        border: 1px solid transparent; /* Add transparent border to maintain layout */
+        margin: 2px 0; /* Add slight margin */
+    }
+    .messageListItem__6a863:hover .containerCozy_d3a4a1,
+    .messageListItem__6a863:hover .containerCompact_d3a4a1 {
+       background-color: var(--twilight-glass-bg-hover) !important; /* Use hover tint */
+    }
+
+
+    /* Apply Glass to Popouts/Modals */
+    .root_a28985, /* Modals */
+    .layer__2efaa[aria-label*="User Profile"], /* User Profile Modal */
+    .userPopoutOuter_a41cf8, /* User Popout */
+    .root_ba16f0, /* User Settings */
+    .menu__088f7 /* Context Menus */
+    {
+        background-color: var(--twilight-glass-bg) !important;
+        backdrop-filter: blur(var(--twilight-glass-blur)) !important;
+        border: 1px solid var(--twilight-border-color) !important;
+        box-shadow: 0 8px 32px 0 rgba(var(--twilight-bg-dark-rgb), 0.37) !important; /* Add shadow for depth */
+    }
+    /* Ensure modal backgrounds are transparent */
+     .backdrop_f8074f {
+       background-color: rgba(var(--twilight-bg-dark-rgb), 0.5) !important;
+       backdrop-filter: blur(3px) !important; /* Blur background behind modal */
+     }
+
+
+    /* Button Styling (Keep previous style) */
+    button, [class*="button-"] {
+         border: 1px solid var(--twilight-border-color) !important;
+         background-color: rgba(var(--twilight-bg-medium-rgb), 0.5) !important; /* Button glass */
+         color: var(--twilight-text-dim) !important;
+         transition: all 0.1s ease-in-out !important;
+         backdrop-filter: blur(2px); /* Subtle blur on buttons */
+         &:hover {
+             border-color: var(--twilight-accent-pink) !important;
+             background-color: rgba(255, 128, 192, 0.25) !important;
+             color: var(--twilight-accent-pink) !important;
+             transform: scale(1.02);
+             box-shadow: 0 0 8px rgba(255, 128, 192, 0.4);
+         }
+         &:active { transform: scale(0.98); background-color: rgba(255, 128, 192, 0.35) !important; }
+     }
+     [class*="lookFilled-"][class*="colorBrand-"] {
+         background-color: var(--twilight-accent-pink) !important; border: none !important;
+         color: var(--twilight-bg-dark) !important; text-shadow: none !important;
+         backdrop-filter: none !important; /* No blur on solid buttons */
+         &:hover { background-color: #ff99d1 !important; box-shadow: 0 0 10px var(--twilight-accent-pink); transform: scale(1.03); }
+         &:active { transform: scale(0.97); }
+     }
+}
+
+
+
+
+
+/* --- Twilight Overhaul for Light Theme (Transparent Containers) --- */
+
+html.theme-light { /* Apply this overhaul when Light theme is selected */
+
+    /* Define Twilight Palette (Copied from previous Dark version) */
+    --twilight-bg-dark: #0f0f1a;
+    --twilight-bg-dark-rgb: 15, 15, 26;
+    --twilight-bg-medium: #1a1a2e;
+    --twilight-bg-medium-rgb: 26, 26, 46;
+    --twilight-text-bright: #e0e0ff;
+    --twilight-text-bright-rgb: 224, 224, 255;
+    --twilight-text-dim: #a0a0cc;
+    --twilight-accent-pink: #ff80c0;
+    --twilight-accent-orange: #ffaf80;
+    --twilight-accent-purple: #c080ff;
+    --twilight-accent-purple-rgb: 192, 128, 255;
+    --twilight-glow: rgba(224, 224, 255, 0.2);
+    --twilight-border-color: rgba(var(--twilight-accent-purple-rgb), 0.2); /* Slightly more visible border */
+
+    /* === Background Image (Same as specified) === */
+    > body [class^="bg_"] {
+        background: url("https://dev.sirio-network.com/flashcord/ressources/ceres/cbmtest1.jpg") !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-attachment: fixed !important;
+    }
+    /* Apply mood filter to the background area */
+    > body [class^="bg_"]::before {
+        content: "" !important; display: block !important; position: fixed !important;
+        top: 0 !important; left: 0 !important; width: 100vw !important; height: 100vh !important;
+        backdrop-filter: brightness(0.65) saturate(1.1) blur(2px) !important; /* Darker mood filter */
+        background: none !important; z-index: -1 !important;
+    }
+
+    /* === Force Dark Text & Background Variables (Twilight Palette) === */
+    /* Override light theme defaults */
+    --background-primary: transparent !important;
+    --background-secondary: transparent !important;
+    --background-secondary-alt: transparent !important;
+    --background-tertiary: transparent !important;
+    --background-accent: var(--twilight-accent-purple) !important;
+    --background-floating: transparent !important; /* Make floating elements transparent too */
+    --background-modifier-hover: rgba(var(--twilight-accent-purple-rgb), 0.15) !important;
+    --background-modifier-active: rgba(var(--twilight-accent-purple-rgb), 0.25) !important;
+    --background-modifier-selected: rgba(var(--twilight-accent-purple-rgb), 0.2) !important;
+    --background-modifier-accent: rgba(255, 128, 192, 0.15) !important; /* Slightly stronger pink tint */
+    --profile-body-background-color: transparent !important;
+
+    /* Text Colors (Use bright twilight text) */
+    --text-normal: var(--twilight-text-bright) !important;
+    --text-muted: var(--twilight-text-dim) !important;
+    --text-link: var(--twilight-accent-orange) !important;
+    --header-primary: var(--twilight-text-bright) !important;
+    --header-secondary: var(--twilight-text-dim) !important;
+    --channels-default: var(--twilight-text-dim) !important;
+    --interactive-normal: var(--twilight-text-dim) !important;
+    --interactive-hover: var(--twilight-text-bright) !important;
+    --interactive-active: var(--twilight-accent-pink) !important;
+    --interactive-muted: rgba(160, 160, 204, 0.6) !important; /* More visible muted */
+
+    /* Borders */
+    --channeltextarea-border: var(--twilight-border-color) !important;
+    --focus-primary: var(--twilight-accent-purple) !important;
+    --guild-header-separator: var(--twilight-border-color) !important;
+
+    /* Override SNDL Light Theme Variables (from original theme) */
+    --SNDL-Text: var(--twilight-text-bright) !important;
+    --SNDL-Text_Inverted: #000000 !important; /* Inverted is now dark */
+    --SNDL-Text_Faded: var(--twilight-text-dim) !important;
+    --SNDL-BF_Themed: none !important; /* Disable base theme blur */
+    --SNDL-C_Primary: transparent !important;
+    --SNDL-C_Primary-Heavy: transparent !important;
+    --SNDL-C_Primary-Solid: transparent !important; /* Force transparency */
+    --SNDL-C_Secondary: var(--twilight-accent-purple) !important;
+    --SNDL-C_Secondary-Heavy: rgba(var(--twilight-accent-purple-rgb), 0.6) !important;
+    --SNDL-C_Secondary-Solid: var(--twilight-accent-purple) !important;
+    --SNDL-C_Tertiary: var(--twilight-text-bright) !important; /* Bright tertiary contrast */
+
+    /* Text Glow for Readability */
+    body, [class*="text-"], [class^="name-"], [class*="header-"], [class*="messageContent-"] {
+        text-shadow: 0 0 5px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.4); /* Dark shadow for contrast */
+    }
+    /* Code blocks get a very subtle background */
+    code, pre, code *, pre * {
+       text-shadow: none !important;
+       background-color: rgba(var(--twilight-bg-dark-rgb), 0.5) !important;
+       border: 1px solid var(--twilight-border-color) !important;
+       color: var(--twilight-text-bright) !important;
+    }
+
+    /* === Full Transparency for Containers === */
+    /* Apply transparent background to almost everything */
+    .container__037ed, .chat__5535d, .container_cbd271, .sidebar__05277, nav[class*="guilds_"],
+    [class^="panels_"], .container_d5a15d, .chatContent_f0862d, .container__10dc7,
+    .messagesPopoutWrap_ac9592, .root_a28985, .layer__2efaa[aria-label*="User Profile"],
+    .userPopoutOuter_a41cf8, .root_ba16f0, .menu__088f7, .container_d5a15d,
+    .channelTextArea_c2094d, .scrollableContainer_ff917f, .form_f766dd,
+    .messagesWrapper_add27b, .scroller_fea3ef, .container_d5a15d,
+    .messageListItem__6a863, .containerCozy_d3a4a1, .containerCompact_d3a4a1,
+    .embedFull__8dc21, .threadSidebar__02699, .container__85a79, .replyBar_ed6047,
+    .typing__667e1, .wrapper_a7e7a8, .searchBar_f0963d .searchBarComponent__22760,
+    .header_c4b0ae /* User Settings Header */
+    /* Add more selectors here if needed */
+    {
+        background-color: transparent !important;
+        border: none !important; /* Remove borders unless needed */
+        box-shadow: none !important; /* Remove shadows */
+        backdrop-filter: none !important; /* Ensure no blur */
+    }
+
+    /* Specific overrides where transparency might break things */
+    nav[class*="guilds_"] > [class*="scroller_"] { background: transparent !important; }
+    [class^="panels_"] > * { background: transparent !important; }
+    .header_c4b0ae { border-bottom: 1px solid var(--twilight-border-color) !important; } /* Keep settings header separator */
+    .searchBar_f0963d { border: 1px solid var(--twilight-border-color) !important; } /* Give search bar a border */
+
+    /* Hover/Active effects - use color tints */
+    .clickable__3076d:hover, .iconWrapper_af94b5:hover, /* Channel hover */
+    .messageListItem__6a863:hover .containerCozy_d3a4a1,
+    .messageListItem__6a863:hover .containerCompact_d3a4a1 {
+       background-color: var(--background-modifier-hover) !important; /* Use hover variable */
+    }
+    .modeSelected__487a3 .container_cbd271, /* Selected Private Channel */
+    .selected_a523ff .listItem__48528 /* Selected Guild Channel */
+     {
+        background-color: var(--background-modifier-selected) !important; /* Use selected variable */
+    }
+
+    /* Buttons - Make slightly transparent background */
+    button, [class*="button-"] {
+         border: 1px solid var(--twilight-border-color) !important;
+         background-color: rgba(var(--twilight-bg-medium-rgb), 0.4) !important; /* Semi-transparent button bg */
+         color: var(--twilight-text-dim) !important;
+         transition: all 0.1s ease-in-out !important;
+         &:hover {
+             border-color: var(--twilight-accent-pink) !important;
+             background-color: rgba(255, 128, 192, 0.25) !important;
+             color: var(--twilight-accent-pink) !important;
+             box-shadow: 0 0 8px rgba(255, 128, 192, 0.3);
+         }
+         &:active {
+             background-color: rgba(255, 128, 192, 0.35) !important;
+         }
+     }
+     /* Brand color buttons */
+     [class*="lookFilled-"][class*="colorBrand-"] {
+         background-color: var(--twilight-accent-pink) !important; border: none !important;
+         color: var(--twilight-bg-dark) !important; text-shadow: none !important;
+         &:hover { background-color: #ff99d1 !important; box-shadow: 0 0 10px var(--twilight-accent-pink); }
+     }
+}
