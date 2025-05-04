@@ -5,9 +5,9 @@ This project is now maintained by the community and newer versions are now based
 
 
 <br>
-## The following images are of Flashcord Ceres (Community Version)
+## The following images are of Flashcord Ceres with theme option expansion module
 
-# 📸 This. This is Flashcord Ceres (Community Version).
+# 📸 This. This is Flashcord Ceres with theme option expansion module.
 ## The world's most complex Discord Theme.
 ## It's all about the chat space.
 
