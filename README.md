@@ -13,12 +13,12 @@ This project is now maintained by the community and newer versions are now based
 
 
 light
-https://cdn.discordapp.com/attachments/1365212199534067712/1366699606359937045/image.png?ex=68128e72&is=68113cf2&hm=66167f5ffad7d65143c6153c4d2e0f492d095f84544c879dce90c6b0fb51ceee&
+Not Avalible
 
 
 
 midnight/onyx
-https://cdn.discordapp.com/attachments/1365212199534067712/1366698566793302107/image.png?ex=68128d7a&is=68113bfa&hm=7da2826b732e6268ca9c2bb69ffaf97a65ed4fe3be0e25ddc7a49feaeb831166&
+Not Avalible
 
 
 
