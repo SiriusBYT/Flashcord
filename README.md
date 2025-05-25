@@ -7,7 +7,7 @@ This project is now maintained by the community and newer versions are now based
 <br>
 ## The following images are of Flashcord leo
 
-# 📸 This. This is Flashcord Ceres with theme option expansion module.
+# 📸 This. This is Flashcord Leo.
 ## The world's most complex Discord Theme.
 ## It's all about the chat space.
 
