@@ -1,0 +1,41 @@
+/* Message Right CLick Menu */
+@container FCM-Monolith_FL style(--FCM-Monolith_FL: on) {
+    /* Hide redundant buttons */
+    #message-actions-reply,
+    #message-tts {
+        display: none;
+    }
+
+    :is(#message, #message-actions) > div {
+        /* Get rid of the useless reactions */
+        > [role="group"][class^="wrapper_"] { display: none; }
+    }
+    #message {
+        [class^="scroller_"] {
+            display: flex;
+            flex-direction: column;
+            
+            [role="group"]:nth-child(2) { order: 0; }
+            [role="group"]:nth-child(4) {
+                display: flex; flex-wrap: wrap;
+                justify-content: center;
+                order: -2;
+                /* Iconified Buttons */
+                #message-edit,
+                #message-reply,
+                #message-forward,
+                #message-thread {
+                    width: fit-content;
+                    [class^="label_"] { display: none; }
+                    [class^="iconContainer_"] { margin: 0; }
+                }
+            }
+            [role="separator"]:nth-child(3) { order: -3; }
+            [role="separator"]:nth-child(5) { order: -1; }
+        }
+    }
+    #message-actions {
+        [role="group"]:nth-child(4) { display: none; }
+        [role="separator"]:nth-child(3) { display: none; }
+    }
+}

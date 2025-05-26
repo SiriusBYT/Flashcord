@@ -1,0 +1,8 @@
+html {
+    /* Pink */
+    --Mika-Darker: 255, 66, 255;
+    --Mika-Dark: 255, 105, 255;
+    --Mika-Normal: 255, 144, 255;
+    --Mika-Accent: 255, 170, 255;
+    --Mika-Light: 255, 187, 255;
+}

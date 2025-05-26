@@ -1,0 +1,18 @@
+@property --FCM-Channel_Bar {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+[class^="chat_"] > [class^="subtitleContainer_"],
+[class^="chatLayerWrapper_"] > [class^="container_"] {
+    container: FCM-Channel_Bar / normal;
+}
+
+@container FCM-Channel_Bar style(--FCM-Channel_Bar: on) {
+    section {
+        height: 32px !important;
+        min-height: 0 !important;
+        padding: 0 0 0 8px !important;
+    }
+}

@@ -1,0 +1,45 @@
+@property --FCM-Slide_Members {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+[class^="chat_"] > [class^="content_"]:has(> main):has([class^="members_"]) {
+    container: FCM-Slide_Members / normal;
+}
+
+@container FCM-Slide_Members style(--FCM-Slide_Members: on) {
+    [class^="chat_"] > [class^="content_"] {
+        > main {
+            width: calc(100% - 3rem);
+            flex: none;
+        }
+        
+         > :is([class^="container_"], [class^="membersWrap_"]) {
+            transition-property: translate;
+            transition-duration: var(--SNDL-Transition_Normal);
+        }
+        > :is([class^="container_"]:hover, [class^="membersWrap_"]:hover) {
+            translate: -14rem;
+        }
+    }
+
+    @container FCM-List_Members (width>0) {
+        [class^="membersWrap_"]:hover [class^="defaultColor_"]:hover {
+            opacity: 1 !important;
+        }
+        [class^="membersWrap_"]:hover [class^="defaultColor_"] {
+            opacity: 0.5 !important;
+        }
+        [class^="defaultColor_"] {
+            opacity: 0 !important;
+        }
+    }
+}
+
+
+/* DO NOT INCLUDE THIS IN FINAL RELEASE!!! THIS WILL BE REMOVED ONCE I'M DONE WITH THE FORUM OVERHAUL */
+[class^="chat_"] > [class^="content_"]:not(:has(> main)) { container: FCM-Slide_Members-ButNo / size;}
+@container FCM-Slide_Members-ButNo (width>0) {
+    [class^="container_"]:has([class^="membersWrap_"]) { display: none; }
+}

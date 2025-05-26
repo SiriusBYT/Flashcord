@@ -1,0 +1,60 @@
+@keyframes SNDL-Fade_In { 0% { opacity: 0;} }
+@keyframes SNDL-Fade_Out { 100% { opacity: 0;} }
+@keyframes SNDL-Fade_Loop { 0% { opacity: var(--Lowest, 0);} 50% { opacity: var(--Peak, unset);} 100% {opacity: var(--Lowest, 0);} }
+@keyframes SNDL-Fade_Custom { 0% { opacity: var(--Initial);} 100% { opacity: var(--Final);} }
+
+@keyframes SNDL-Translate_Custom {
+    0% { translate: var(--Initial); opacity: 0;}
+    100% { translate: var(--Final);}
+}
+@keyframes SNDL-Translate_Custom-Advanced {
+    0% { translate: var(--Initial-T); opacity: var(--Initial-O);}
+    100% { translate: var(--Final-T); opacity: var(--Initial-O);}
+}
+
+@keyframes SNDL-Scale_Custom {
+    0% { scale: var(--Initial, 0); opacity: 0;}
+    100% { scale: var(--Final, 1);}
+}
+
+@keyframes SNDL-Shake {
+    0% {translate: calc(0.075vmin * var(--Amplitude-X, 1)) calc(0.075vmin * var(--Amplitude-Y, 1)); rotate: calc(1.2deg * var(--Amplitude-R, 0));}
+    25% {translate: calc(-0.075vmin * var(--Amplitude-X, 1)) calc(-0.075vmin * var(--Amplitude-Y, 1)); rotate: calc(-1.4deg * var(--Amplitude-R, 0));}
+    50% {translate: calc(0.075vmin * var(--Amplitude-X, 1)) calc(-0.075vmin * var(--Amplitude-Y, 1)); rotate: calc(2.1deg * var(--Amplitude-R, 0));}
+    75% {translate: calc(-0.075vmin * var(--Amplitude-X, 1)) calc(0.075vmin * var(--Amplitude-Y, 1)); rotate: calc(-4.1deg * var(--Amplitude-R, 0));}
+    100% {translate: calc(0.075vmin * var(--Amplitude-X, 1)) calc(0.075vmin * var(--Amplitude-Y, 1)); rotate: calc(1deg * var(--Amplitude-R, 0));}
+}
+
+@keyframes SNDL-Background_Movement {
+    0% { background-position: left; }
+    100% { background-position: right; }
+}
+@keyframes SNDL-Background_Movement-X_VW {
+    0% { background-position-x: 0; }
+    100% { background-position-x: var(--Background-Size_Final, 100vw); }
+}
+@keyframes SNDL-Background_Movement-X_VH {
+    0% { background-position-x: 0; }
+    100% { background-position-x: var(--Background-Size_Final, 100vh); }
+}
+
+
+@keyframes SNDL-Dots {
+    0% { content: " ";}
+    33% { content: "․";}
+    66% { content: "‥";}
+    100% { content: "…";}
+}
+
+@keyframes SNDL-CRT_Blink {
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    50% { opacity: 1; }
+    60% { opacity: 0;}
+    100% { opacity: 0;}
+}
+
+@keyframes SNDL-Delay_Display {
+    0% { display: none; }
+    100% { display: none;}
+}

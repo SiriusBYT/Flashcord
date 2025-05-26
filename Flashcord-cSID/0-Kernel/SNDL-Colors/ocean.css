@@ -1,0 +1,8 @@
+html {
+    /* Blue */
+    --Ocean-Darker: 2, 0, 160;
+    --Ocean-Dark: 4, 0, 176;
+    --Ocean-Normal: 8, 0, 192;
+    --Ocean-Accent: 22, 0, 208;
+    --Ocean-Light: 36, 0, 224;
+}

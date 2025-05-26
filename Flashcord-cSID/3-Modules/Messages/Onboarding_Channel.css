@@ -1,0 +1,27 @@
+@property --FCM-Onboarding_Channel {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+[class^="chat_"]:has(> section):has(> div > [class^="tabBar_"]) {
+    container: FCM-Onboarding_Channel / normal;
+}
+
+@container FCM-Onboarding_Channel style(--FCM-Onboarding_Channel: on) {
+    [class^="content_"] [class^="scroller_"] {
+        [class^="pageBody_"] {
+            width: calc(100% - 320px);
+            [class^="optionButtonWrapper_"] {
+                max-width: 320px;
+                border-radius: var(--SNDL-UI_Border-Radius);
+                transition: scale var(--SNDL-Transition_Normal);
+            }
+            [class^="optionButtonWrapper_"]:hover { scale: 1.05; }
+            [class^="optionButtonWrapper_"]:active { scale: 0.95; }
+        }
+        [class^="profile_"] {
+            width: 320px;
+        }
+    }
+}
