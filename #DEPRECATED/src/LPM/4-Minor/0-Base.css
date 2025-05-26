@@ -1,4 +1,0 @@
-/* Minor/Base contains minor modifications which are located in Discord's BaseLayer */
-
-/* @ Before Usernames */
-[class^="userTagUsernameBase_"]:before, [class^="usernameInnerRow_"]:before { content: "@" }
