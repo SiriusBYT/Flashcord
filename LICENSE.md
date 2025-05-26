@@ -1,5 +1,5 @@
 ```
-The license below this code block applies to "Flashcord Ceres", alias the currently in the works complete rewrite of Flashcord in a post-desktop visual refresh Discord.
+The license below this code block applies to "Flashcord Leo", alias the currently in the works complete rewrite of Flashcord in a post-desktop visual refresh Discord.
 
 The following licenses are for previous versions of Flashcord:
 Flashcord (Beta Builds) © 2023-2025 by Ascellayn (alias SiriusBYT) is licensed under TSN License 1.0 - Base
@@ -9,7 +9,7 @@ Flashcord (Alpha Builds) © 2023-2025 by Ascellayn (alias SiriusBYT) is in the p
 The Sirio Network License 1.0 - Freely Derivable, Non-Commercial.  
 *Origin: https://dev.sirio-network.com/license/1.0*  
 
-Last TSN License Revision: 14/01/2025 at 16:41:44
+Last TSN License Revision: 26/5/2025 4:10:47
 
 #### DEFINITIONS
 By referring to *"this work"* we are referring to whichever piece of software, image, text or whichever material this license is attempting to protect.  
@@ -70,6 +70,34 @@ Redistribution is defined as **reuploading in any capacity, shape or form** when
 
 # The Sirio Network License - Modifiers
 ## Freely Derivable (D_Free)
+This modifier imposes not a single regulation in the modification of this work. You are entirely free to derivate this work while respecting the other conditions and restrictions given by this license.  
+
+## Derivable via provided interfaces (D_API)
+This work allows you to derivate it thanks to the interfaces (ie: Modular System, APIs) it provides, you may modify the source code of this work within reason if the provided interfaces aren't enough to be able to derivate this work in a way you'd like.
+
+## Derivable for Contribution (D_Contrib)
+You are allowed to derivate this work to contribute to this work while respecting the other restrictions applied.
+
+## Non-Derivable (D_Closed)
+You are not authorized to modify this piece of work in any capacity. This piece of work is strictly source-available.
+
+
+## Authorized Commercially (C_Free)
+This modifier imposes not a single regulation in the use of this work commercially. You are entirely free to make profits with this work while respecting the other conditions and restrictions given by this license.  
+
+## Non-Commercial except Derivations (NC_ED)
+Derivations that are actually bringing new ideas to the table (thus modifying this work in great capacity) are authorized to create profit off their fork/derivate after notifying the Author. The Author has 7 days to respond whenever Your derivate is authorized commercially. If they do not respond by 7 days, your derivation is authorized for commercial use.
+
+## Non-Commercial (C_Closed)
+You are not authorized in any capacity to make profits off of this work, whenever it is by redistributing, modifying, advertising or linking this work in any capacity.  
+
+# The Sirio Network License - Modifier Aliases
+## TSN License - Base
+This modifier alias refers to "D_Free, C_Free", which is the most open license the TSN License can provide.
+
+## TSN License - Strict
+This modifier alias refers to "D_Closed, C_Closed", which is the most restricted license the TSN License can provide.
+
 This modifier imposes not a single regulation in the modification of this work. You are entirely free to derivate this work while respecting the other conditions and restrictions given by this license.  
 
 ## Derivable via provided interfaces (D_API)
