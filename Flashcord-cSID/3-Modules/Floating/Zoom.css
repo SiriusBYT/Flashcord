@@ -1,0 +1,14 @@
+@property --FCM-Zoom {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+[class^="notAppAsidePanel_"] > [class^="layerContainer_"] > [class^="layer_"]:has([class^="focusLock_"]) {
+    container: FCM-Zoom / normal;
+}
+
+
+@container FCM-Zoom style(--FCM-Zoom: on) {
+
+}

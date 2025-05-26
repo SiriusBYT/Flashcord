@@ -1,0 +1,67 @@
+@property --FCM-Settings_Window {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+[class^="layers_"] {
+    container: FCM-Settings_Window / normal;
+}
+
+@container FCM-Settings_Window style(--FCM-Settings_Window: on) {
+    .stop-animations {
+        opacity: 1 !important;
+        z-index: 0; /* Switch back to -1 if false alarm */
+    }
+    [class^="layer_"], [class*="animating_"] {
+        transform: none !important;
+    }
+    [class^="layer_"]:nth-child(2) {
+        width: 90vw; height: 80vh;
+        margin: auto; padding: 0;
+        border-radius: var(--SNDL-UI_Border-Radius) !important;
+        
+        [class^="standardSidebarView_"] {
+            margin-top: -22px;
+            nav[class^="sidebar_"] {
+                [role="tablist"] {
+                    container: SNDL-ListItem / inline-size;
+                    --Enable-Selected_Modifications: 1;
+                    --SNDL-UI_Translate-Intensity: 1.5;
+                    --SNDL-UI_Scale-Intensity: 0.05;
+        
+                    /* Search */
+                    div:has(> [class^="searchBar_"]) {
+                        position: sticky; top: 25px;
+                        translate: none; scale: none;
+                        width: 100%; margin: 0 !important;
+                        z-index: 10;
+                        
+                    }
+                    [class^="searchBar_"] {
+                        border-radius: var(--SNDL-UI_Border-Radius);
+                        background: var(--SNDL-C_Primary-Solid);
+                        margin: 0;
+                    }
+        
+                    /* Categories */
+                    > [role="button"] {
+                        width: 100%;
+                        translate: none; scale: none;
+                        text-align: right;
+                    }
+                }
+            }
+            [class^="toolsContainer_"] [class^="tools_"] { z-index: -1; }
+            [class^="closeButton_"] {
+                position: fixed; top: var(--Discord-TitleBar_Size); left: 0;
+                width: 100vw; height: 100vh;
+                border-radius: 0; border: unset;
+                background: transparent;
+                svg { display: none; }
+            }
+            [class^="keybind_"] { display: none; }
+
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@property --FCM-Monolith_FL {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+[class^="notAppAsidePanel_"] {
+    container: FCM-Monolith_FL / normal;
+}

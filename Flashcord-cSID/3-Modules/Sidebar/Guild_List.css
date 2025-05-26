@@ -1,0 +1,15 @@
+@property --FCM-Guild_List {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+nav[class*="guilds_"] {
+    container: FCM-Guild_List / normal;
+}
+
+@container FCM-Guild_List style(--FCM-Guild_List: on) {
+    [class^="itemsContainer_"] {  /* This is bad (assumes User_Panel is activated) but will do for now, fixes for the new user panel junk */
+        max-height: 100%; /* Temporarily removed to see if shits fine now? Probably won't be because of the screenshare thing */
+    }
+}

@@ -1,0 +1,125 @@
+@property --FCM-User_Panel {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+section[class^="panels_"] {
+    container: FCM-User_Panel / normal;
+    background: transparent !important; /* Band-aid fix for the nuking of ChatSlide-SNDL */
+}
+
+@container FCM-User_Panel style(--FCM-User_Panel: on) {
+    section[class^="panels_"] {
+        background: transparent !important;
+        
+        /* Voice Stuff */
+        > [class^="wrapper_"] {
+            left: var(--custom-guild-list-width);
+            width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) - 16px);
+
+            background: var(--SNDL-C_Primary-Solid);
+            border-radius: calc(var(--SNDL-UI_Border-Radius) / 4);
+            
+            [class^="container_"] {
+                flex-direction: column-reverse;
+
+                /* The council has decided to nuke Krisp. */
+                [class^="flex_"] > [class^="flex_"] {
+                    > button:first-of-type {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        /* User Stuff */
+        > [class^="container_"] {
+            left: calc(var(--custom-guild-list-width) - 8px); bottom: 0;
+            width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 10px);
+
+            > [class^="avatarWrapper_"] {
+                background: var(--SNDL-C_Primary-Solid);
+                border-radius: calc(var(--SNDL-UI_Border-Radius) / 4);
+                padding: var(--SNDL-UI_Padding);
+
+                > [class^="wrapper_"] {
+                    position: fixed; left: -63px; bottom: 0;
+                    width: 28px !important; height: 28px !important;
+                    svg {
+                        width: 28px !important; height: 28px !important;
+                    }
+                }
+            }
+
+            /* Mute, Deafen and Settings Icon */
+            [class^="micButtonParent_"] {
+                position: fixed;
+                left: -68px; bottom: 32px;
+            }
+            [class^="flex_"] {
+                > button { position: fixed; }
+                > button:nth-child(2) { /* Settings */ 
+                    left: -35px; bottom: 32px;
+                }
+                > button:nth-child(3) { /* Deafen */
+                    left: -35px;
+                    bottom: -4px;
+                }
+            }
+        }
+        /* If shit really hit the bed in canary
+                > [class^="container_"] {
+                    left: calc(var(--custom-guild-list-width) - 2px); bottom: 0;
+                    width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + 12px);
+        
+                    > [class^="avatarWrapper_"] {
+                        background: var(--SNDL-C_Primary-Solid);
+                        border-radius: calc(var(--SNDL-UI_Border-Radius) / 4);
+                        padding: var(--SNDL-UI_Padding);
+        
+                        > [class^="wrapper_"] {
+                            position: fixed; left: 9px; bottom: 4px;
+                            width: 28px !important; height: 28px !important;
+                            svg {
+                                width: 28px !important; height: 28px !important;
+                            }
+                        } 
+                    }
+                    [class^="flex_"] {
+                        > button { position: fixed; }
+                        > button:nth-child(1) {
+                            left: 4px; bottom: 36px;
+                        }
+                        > button:nth-child(2) {
+                            left: 37px; bottom: 36px;
+                        }
+                        > button:nth-child(3) {
+                            left: 37px; bottom: 4px;
+                        }
+                    }
+                }
+                */
+
+        /* Activity Stuff*/
+        > [class^="panel_"] {
+            position: fixed; left: 10px; bottom: 80px;
+            padding: 4px;
+            border-radius: var(--SNDL-UI_Border-Radius_Square);
+            
+            [class^="info_"] { display: none; }
+            [class^="actions_"] {
+                position: absolute; left: 12px; bottom: -12px;
+                scale: 0.8;
+                
+                button {
+                    background-color: var(--SNDL-C_Primary); /* I'm aware this is broken right now. */
+                    border-radius: var(--SNDL-UI_Border-Radius);
+                }
+                button:hover {
+                    background-color: var(--SNDL-C_Secondary);
+                }
+            }
+        }
+    }
+}

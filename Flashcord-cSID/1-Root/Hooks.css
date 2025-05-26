@@ -1,0 +1,3 @@
+button, [role="menuitem"] {
+    border-radius: var(--SNDL-UI_Border-Radius) !important;
+}

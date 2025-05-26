@@ -1,0 +1,56 @@
+@container FCM-Monolith_FL style(--FCM-Monolith_FL: on) {
+    /* This is amazing code but it's held with rubber bands because no wildcards, YAY FOR :HAS SELECTOR PERFORMANCE BUG!!!!
+    Not using wildcards here because either way a single class reroll fucks this entire module */
+    .baseLayer__960e4 .base_c48ade > .content_c48ade { transition: scale var(--SNDL-Transition_Slow) !important; }
+    .baseLayer__960e4::before {
+        content: "";
+        position: fixed; top: var(--Discord-TitleBar_Size); left: 0;
+        z-index: 1000; pointer-events: none;
+        width: 100vw; height: 100vh;
+        transition: backdrop-filter var(--SNDL-Transition_Slow);
+        backdrop-filter: blur(0) brightness(1);
+    }
+
+    [class^="clickTrapContainer_"] {
+        pointer-events: none !important;
+    } /* DEV-250112 Fix for dialogue focus hover issues */
+
+    [class^="notAppAsidePanel_"]:has(
+        [class^="layerContainer_"] [id^="popout_"] > [aria-modal="true"]:not([class^="loadingPopout_"]), /* Causes issues when loading profile */
+        > [class^="layerContainer_"] [class^="layer_"] [class*="focusLock_"], /* "Focused Modals" */
+        [class^="standardSidebarView_"] /* Settings Modal */
+    ) {
+        .baseLayer__960e4::before { backdrop-filter: blur(var(--SNDL-Blur_Light)) brightness(0.8); }
+        .baseLayer__960e4 .base_c48ade > .content_c48ade { scale: 0.95; pointer-events: none; }
+
+        .baseLayer__960e4:hover::before { backdrop-filter: blur(var(--SNDL-Blur_Light)) brightness(0.8); }
+        .baseLayer__960e4:hover .base_c48ade > .content_c48ade { scale: 0.98; }
+    }
+
+    [class^="notAppAsidePanel_"]:has( /* Zoom In */
+        /* Settings Modal */
+        [class^="container_"] > [class^="closeButton_"]:hover,
+        [class^="backdrop_"]:hover
+    ) {
+        .baseLayer__960e4::before { backdrop-filter: blur(var(--SNDL-Blur_Light)) brightness(0.8); }
+        .baseLayer__960e4 .base_c48ade > .content_c48ade { scale: 0.98; }
+    }
+
+    /* Settings Modal Exit Fix */
+    [class^="notAppAsidePanel_"]:has(
+        [class*="animating_"]
+    ) {
+        .baseLayer__960e4::before { backdrop-filter: blur(0) brightness(1) !important; }
+        .baseLayer__960e4 .base_c48ade > .content_c48ade { scale: 1 !important; }
+    }
+    /* Settings Modal Exit Hover Fix */
+    [class^="notAppAsidePanel_"]:has([class^="standardSidebarView_"]) .baseLayer__960e4 .base_c48ade > .content_c48ade {
+        pointer-events: all;
+    }
+
+    [class^="backdrop_"] { /* Prevent the title bar from being hidden when engaged in a focus*/
+        top: var(--Discord-TitleBar_Size)
+    }
+}
+
+.systemBar_c38106 { display: none; }

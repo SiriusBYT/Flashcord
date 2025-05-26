@@ -1,0 +1,23 @@
+@property --FCM-Message_Incoming {
+    syntax: 'on | off';
+    inherits: true;
+    initial-value: on;
+}
+
+[data-list-id="chat-messages"] {
+    container: FCM-Message_Incoming / normal;
+}
+
+@container FCM-Message_Incoming style(--FCM-Message_Incoming: on) {
+    [class^="messageListItem_"] {
+        animation: SNDL-Fade_In var(--SNDL-Animation_Slow);
+    }
+    [class^="messageListItem_"]:last-of-type [class^="message_"] {
+        animation: SNDL-Translate_Custom var(--SNDL-Animation_XSlow);
+        --Initial: 8rem;
+    }
+    [class^="messageListItem_"]:last-of-type [class^="message_"]:has([class*="isSending_"]) {
+        animation: SNDL-Fade_Loop var(--SNDL-Animation_XTSlow) infinite !important;
+        translate: 8rem; --Peak: 0; --Lowest: 0.5;
+    }
+}
