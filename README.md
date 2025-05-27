@@ -5,14 +5,14 @@ This project is now maintained by the community and newer versions are now based
 
 
 <br>
-## The following images are of Flashcord leo
+## The following images are of Flashcord ceres
 
-# 📸 This. This is Flashcord Leo.
+# 📸 This. This is Flashcord Ceres.
 ## The world's most complex Discord Theme.
 ## It's all about the chat space.
 
 
-##### [midnight/onyx image available here](https://ik.imagekit.io/zapgaming/image_2025-05-25_114302850.png?updatedAt=1748144586681)
+##### [midnight/onyx image available here](https://ik.imagekit.io/zapgaming/image_2025-05-27_160358518.png?updatedAt=1748333041367)
 
 
 
